@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 800">
+	<defs>
+		<set attributeName="visibility" to="visible" xlink:href="#ruby2" begin="ruby1.click"/>
+		<set attributeName="visibility" to="hidden" xlink:href="#ruby1" begin="ruby1.click"/>
+		<set attributeName="visibility" to="visible" xlink:href="#ruby3" begin="ruby2.click"/>
+		<set attributeName="visibility" to="hidden" xlink:href="#ruby2" begin="ruby2.click"/>
+		<set attributeName="visibility" to="visible" xlink:href="#ruby4" begin="ruby3.click"/>
+		<set attributeName="visibility" to="hidden" xlink:href="#ruby3" begin="ruby3.click"/>
+		<set attributeName="visibility" to="visible" xlink:href="#ruby1" begin="ruby4.click"/>
+		<set attributeName="visibility" to="hidden" xlink:href="#ruby4" begin="ruby4.click"/>
+	</defs>
+	<g transform="translate(400) scale(2)">
+		<image id="ruby1" y="10" x="10" xlink:href="../gifs/rubyjpex.gif" height="33" width="140">
+			<desc>Ruby text for the shinkanzen</desc>
+		</image>
+		<image id="ruby2" visibility="hidden" y="10" x="10" xlink:href="../gifs/rubyjpex2.gif" height="49" width="149">
+			<desc>Ruby text for the shinkanzen, including the latin version</desc>
+		</image>
+		<image id="ruby3" visibility="hidden" y="10" x="10" xlink:href="../gifs/rubyjpex3.gif" height="46" width="131">
+			<desc>W3C Associate chairman</desc>
+		</image>
+		<image id="ruby4" visibility="hidden" y="10" x="10" xlink:href="../gifs/bopomofo.gif" height="42" width="138">
+			<desc>Bopomofo</desc>
+		</image>
+	</g>
+	<g transform="translate(80,300)">
+		<text>
+			<tspan x="0" dy="0" class="major">&#8226; Same text in two different encoding</tspan>
+			<tspan x="0" dy="40" class="major">&#8226; Very widespread in Asian texts</tspan>
+			<tspan x="30" dy="40" class="minor">(eg, in Japan the upper part helps in the pronunciation of the Chinese characters)</tspan>
+			<tspan x="0" dy="50" class="major">Encoding looks like:</tspan>
+			<tspan x="30" dy="40" class="minor code">&lt;ruby&gt;</tspan>
+			<tspan x="60" dy="40" class="minor code">&lt;rb&gt;WWW&lt;/rb&gt;</tspan>
+			<tspan x="60" dy="40" class="minor code">&lt;rb&gt;World Wide Web&lt;/rb&gt;</tspan>
+			<tspan x="30" dy="40" class="minor code">&lt;/ruby&gt;</tspan>
+		</text>
+	</g>
+</svg>

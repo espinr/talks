@@ -1,0 +1,103 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- Generator: Mayura Draw 3.6 -->
+<svg xml:space="preserve" viewBox="0 0 608 336">
+<desc>Reification.pdx</desc>
+ <rect width="608" height="336" class="background" />
+<path class="grayish" style="stroke:none"
+d="M11.744 96.225
+c-3.035 19.563 1.606 63.326 5.184 82.079
+3.043 15.949 9.709 52.166 21.6 66.527
+10.386 12.544 38.801 25.938 53.567 29.376
+28.428 6.619 89.588 4.7 117.503 -5.184
+17.594 -6.23 45.511 -34.683 59.615 -44.063
+8.993 -5.981 29.191 -21.216 40.608 -24.192
+15.239 -3.972 48.018 -3.291 63.071 1.728
+18.187 6.064 45.282 36.946 62.207 44.063
+15.013 6.313 50.763 11.49 66.527 12.096
+11.745 0.451 38.52 -0.83 50.111 -5.184
+9.983 -3.75 29.123 -15.327 35.424 -25.056
+7.8 -12.044 9.435 -40.292 10.368 -52.703
+1.697 -22.582 0.341 -75.156 -4.32 -97.631
+-2.426 -11.698 -6.167 -37.858 -18.144 -47.519
+-26.959 -21.746 -86.937 -15.504 -113.183 -17.28
+-48.331 -3.27 -162.77 3.3 -210.813 3.456
+-19.885 0.065 -67.291 -2.148 -87.263 -0.864
+-15.771 1.014 -52.711 2.975 -68.255 5.184
+-13.587 1.93 -28.009 -8.111 -59.615 12.96
+-1.428 0.952 -13.092 13.51 -19.008 28.512
+-4.825 12.235 -4.077 26.563 -5.184 33.696 z
+"/>
+<ellipse class="lightGreenish" style="stroke:none" transform="matrix(1 0 0 -1 103.8 797.3)" cx="41.935" cy="732.47" rx="115.455" ry="27.609"/>
+<text transform="matrix(1 0 0 1 11.77 -650.2)" class="reddish"><tspan x="60.613" y="723.275">TheWebPage</tspan></text>
+<rect class="lightGreenish" transform="matrix(1 0 0 -1 -338 961)" x="381.107" y="734.776" width="170.854" height="31.585"/>
+<text transform="matrix(1 0 0 1 -358.9 -508.2)" class="reddish"><tspan x="408.976" y="726.991">Bob Hopgood</tspan></text>
+<path class="yellowish" style="stroke-width:3"
+d="M400.681 169.603
+l62.065 31.165
+"/>
+<path class="yellowish" style="stroke:none"
+d="M462.746 200.768
+l-0.673 1.341
+-27.494 -5.413
+8.077 -16.086
+20.763 18.818
+z"/>
+<text transform="matrix(1 0 0 1 28.67 -501.6)" class="reddish"><tspan x="292.855" y="742.784">s:says</tspan></text>
+<rect class="lightGreenish" transform="matrix(1 0 0 -1 -138.4 1061)" x="381.107" y="734.776" width="158.854" height="31.585"/>
+<text transform="matrix(1 0 0 1 -159.3 -408)" class="reddish"><tspan x="408.976" y="726.991">David Duce</tspan></text>
+<ellipse class="lightGreenish" style="stroke:none" transform="matrix(1 0 0 -1 40.2 863.3)" cx="274.276" cy="707.836" rx="105.101" ry="19.706"/>
+<ellipse class="lightGreenish" style="stroke:none" transform="matrix(1 0 0 -1 194.7 773.8)" cx="274.276" cy="707.836" rx="112.117" ry="19.55"/>
+<text transform="matrix(1 0 0 1 104.1 -668.5)" class="reddish"><tspan x="292.855" y="742.784">rdf:Statement</tspan></text>
+<path class="yellowish" style="stroke-width:3"
+d="M314.572 185.648
+l-0.432 101.519
+"/>
+<path class="yellowish" style="stroke:none"
+d="M314.14 287.167
+l-1.5 -0.006
+-7.385 -27.032
+18 0.077
+-7.615 26.968
+z"/>
+<ellipse class="lightGreenish" style="stroke:none" transform="matrix(1 0 0 -1 222.2 928.5)" cx="274.276" cy="707.836" rx="73.312" ry="17.106"/>
+<text transform="matrix(1 0 0 1 156.3 -513.8)" class="reddish"><tspan x="292.855" y="742.784">s:creator</tspan></text>
+<path class="yellowish" style="stroke-width:3"
+d="M210.461 165.345
+l-95.903 24.192
+"/>
+<path class="yellowish" style="stroke:none"
+d="M114.558 189.536
+l-0.367 -1.454
+24.345 -13.876
+4.403 17.453
+-28.014 -0.668
+z"/>
+<path class="yellowish" style="stroke-width:3"
+d="M341.356 131.649
+l70.415 -38.016
+"/>
+<path class="yellowish" style="stroke:none"
+d="M411.771 93.633
+l0.713 1.32
+-20.196 19.426
+-8.551 -15.839
+27.322 -6.227
+z"/>
+<path class="yellowish" style="stroke-width:3"
+d="M290.812 131.649
+l-97.631 -38.016
+"/>
+<path class="yellowish" style="stroke:none"
+d="M193.181 93.633
+l0.544 -1.398
+27.881 2.808
+-6.531 16.773
+-22.439 -16.786
+z"/>
+<text transform="matrix(1 0 0 1 141.6 -564.8)" class="reddish"><tspan x="292.855" y="742.784">rdf:predicate</tspan></text>
+<text transform="matrix(1 0 0 1 -54.05 -633.1)" class="reddish"><tspan x="292.855" y="742.784">rdf:subject</tspan></text>
+<text transform="matrix(1 0 0 1 -211.3 -575.2)" class="reddish"><tspan x="292.855" y="742.784">rdf:object</tspan></text>
+<text transform="matrix(1 0 0 1 110.1 -621)" class="reddish"><tspan x="292.855" y="742.784">rdf:type</tspan></text>
+</svg>

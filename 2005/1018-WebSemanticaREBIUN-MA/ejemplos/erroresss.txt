@@ -1,0 +1,1 @@
+[22-Oct-2005 23:45:22] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in F:\htdocs\w3c\Presentaciones\2005\1018-WebSemanticaREBIUN-MA\ejemplos\FoaF_explorer.html on line 223

@@ -1,0 +1,198 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg viewBox="0 0 922 576">
+  <title>Many namespaces...</title>
+	<desc>Slide showing the reason why using namespaces: top row contains three xml examples; the middle
+	one should use elements from the other two. Low opacity rectangles show the specific examples.
+	The bottom line on the figure is the same as top left and right, but with the use of
+	namespaces.</desc> 
+  <rect width="922" height="576" class="background" />
+  <g transform="scale(0.85) translate(0,-120)">
+    <g transform="translate(0,110)">
+      <g transform="translate(10,10)">
+			  <desc>Application 1</desc>
+        <rect class="empty" width="250" height="280" />
+        <text x="200" y="30" class="onBackground">SR</text>
+        <text x="10" y="20" class="limish" style="font-size:16">&lt;studentset&gt;</text>
+
+        <text x="10" y="50" class="limish" style="font-size:16">
+        &lt;student_record&gt;</text>
+
+        <text x="10" y="80" class="limish" style="font-size:16">
+        &lt;student&gt;Fred Smith&lt;/student&gt;</text>
+
+        <rect class="whitish" style="stroke:none;fill-opacity:0.3"
+        x="10" y="60" width="240" height="30" />
+
+        <text x="10" y="110" class="limish" style="font-size:16">
+        &lt;age&gt;19&lt;/age&gt;</text>
+
+        <text x="10" y="140" class="limish" style="font-size:16">
+        &lt;sex&gt;male&lt;/sex&gt;</text>
+
+        <text x="10" y="170" class="limish" style="font-size:16">
+        &lt;nationality&gt;UK&lt;/nationality&gt;</text>
+
+        <text x="10" y="200" class="limish" style="font-size:16">
+        &lt;/student_record&gt;</text>
+
+        <text x="10" y="230" class="limish" style="font-size:16">- -
+        -</text>
+
+        <text x="10" y="260" class="limish" style="font-size:16">
+        &lt;/studentset&gt;</text>
+      </g>
+
+      <g transform="translate(650,10)">
+        <rect class="empty"
+        width="300" height="230" />
+        <desc>Application 2</desc>
+        <text x="200" y="30" class="onBackground">CSR</text>
+
+        <text x="10" y="20" class="reddish" style="font-size:16">
+        &lt;year_two&gt;</text>
+
+        <text x="10" y="50" class="reddish" style="font-size:16">
+        &lt;comp_sci paper="cs203"&gt;</text>
+
+        <rect class="yellowish" style="stroke:none;fill-opacity:0.4"
+        x="10" y="30" width="210" height="30" />
+
+        <text x="10" y="80" class="reddish" style="font-size:16">
+        &lt;prereq paper="cs105"/&gt;</text>
+
+        <text x="10" y="110" class="reddish" style="font-size:16">
+        &lt;exam_date&gt;15.01.00&lt;/exam_date&gt;</text>
+
+        <text x="10" y="140" class="reddish" style="font-size:16">
+        &lt;/comp_sci&gt;</text>
+
+        <text x="10" y="170" class="reddish" style="font-size:16">- -
+        -</text>
+
+        <text x="10" y="200" class="reddish" style="font-size:16">
+        &lt;/year_two&gt;</text>
+      </g>
+
+      <g transform="translate(270,10)">
+			  <desc>Application 3, which would use elements from applications 1 and 2</desc>
+        <rect class="empty" width="340" height="270" />
+
+        <text x="200" y="30" class="onBackground">My Exam</text>
+
+        <text x="10" y="20" class="yellowish" style="font-size:16">
+        &lt;exam paper="cs203"&gt;</text>
+
+        <rect style="fill:yellow;stroke:none;fill-opacity:0.3"
+        x="10" y="0" width="180" height="30" />
+
+        <text x="10" y="50" class="yellowish" style="font-size:16">
+        &lt;student&gt;Fred Smith&lt;/student&gt;</text>
+
+        <rect class="whitish" style="stroke:none;fill-opacity:0.3"
+        x="10" y="30" width="240" height="30" />
+
+        <text x="10" y="80" class="yellowish" style="font-size:16">
+        &lt;qapair number="3" &gt;</text>
+
+        <text x="10" y="110" class="yellowish" style="font-size:16">
+        &lt;question&gt;Who is the last King of England</text>
+
+        <text x="10" y="140" class="yellowish" style="font-size:16">
+        &lt;/question&gt;</text>
+
+        <text x="10" y="170" class="yellowish" style="font-size:16">
+        &lt;answer&gt;George VI&lt;/answer&gt;</text>
+
+        <text x="10" y="200" class="yellowish" style="font-size:16">
+        &lt;/qapair&gt;</text>
+
+        <text x="10" y="230" class="yellowish" style="font-size:16">- -
+        -</text>
+
+        <text x="10" y="260" class="yellowish" style="font-size:16">
+        &lt;/exam&gt;</text>
+      </g>
+
+      <text x="300" y="305" class="yellowish" style="font-size:24">
+      Solution: give each namespace a unique prefix</text>
+
+      <line class="arrow" x1="210" y1="250" x2="210" y2="310" />
+
+      <g transform="translate(210,310)">
+        <g transform="rotate(90)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <g transform="translate(10,310)">
+        <rect class="empty" width="400" height="280" />
+        <desc>Same as Application 1 but with namespaces</desc>
+        <text x="10" y="20" class="limish" style="font-size:16">
+        &lt;sr:studentset xmlns:sr="http://brnl.ac.uk/strcs"
+        &gt;</text>
+
+        <text x="10" y="50" class="limish" style="font-size:16">
+        &lt;sr:student_record&gt;</text>
+
+        <text x="10" y="80" class="limish" style="font-size:16">
+        &lt;sr:student&gt;Fred Smith&lt;/sr:student&gt;</text>
+
+        <text x="10" y="110" class="limish" style="font-size:16">
+        &lt;sr:age&gt;19&lt;/sr:age&gt;</text>
+
+        <text x="10" y="140" class="limish" style="font-size:16">
+        &lt;sr:sex&gt;male&lt;/sr:sex&gt;</text>
+
+        <text x="10" y="170" class="limish" style="font-size:16">
+        &lt;sr:nationality&gt;UK&lt;/sr:nationality&gt;</text>
+
+        <text x="10" y="200" class="limish" style="font-size:16">
+        &lt;/sr:student_record&gt;</text>
+
+        <text x="10" y="230" class="limish" style="font-size:16">- -
+        -</text>
+
+        <text x="10" y="260" class="limish" style="font-size:16">
+        &lt;/sr:studentset&gt;</text>
+      </g>
+
+      <line class="arrow" x1="880" y1="200" x2="880" y2="320" />
+
+      <g transform="translate(880,320)">
+        <g transform="rotate(90)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <g transform="translate(520,320)">
+        <rect class="empty" width="440" height="220" />
+        <desc>Same as Application 2 but with namespaces</desc>
+
+        <text x="10" y="20" class="reddish" style="font-size:16">
+        &lt;csr:year_two xmlns:csr="http://brnl.ac.uk/csrcns"
+        &gt;</text>
+
+        <text x="10" y="50" class="reddish" style="font-size:16">
+        &lt;csr:comp_sci paper="cs203"&gt;</text>
+
+        <text x="10" y="80" class="reddish" style="font-size:16">
+        &lt;csr:prereq paper="cs105"/&gt;</text>
+
+        <text x="10" y="110" class="reddish" style="font-size:16">
+        &lt;csr:exam_date&gt;15.01.00&lt;/csr:exam_date&gt;</text>
+
+        <text x="10" y="140" class="reddish" style="font-size:16">
+        &lt;/csr:comp_sci&gt;</text>
+
+        <text x="10" y="170" class="reddish" style="font-size:16">- -
+        -</text>
+
+        <text x="10" y="200" class="reddish" style="font-size:16">
+        &lt;/csr:year_two&gt;</text>
+      </g>
+    </g>
+  </g>
+</svg>
+

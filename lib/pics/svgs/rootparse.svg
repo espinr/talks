@@ -1,0 +1,56 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -10 1000 850">    
+			 <text class="minorT centre" x="500" y="30">root</text>
+			 <text class="minorT centre" x="500" y="130">cd</text>
+			 <line x1="500" x2="500" y1="35" y2="100"/>
+			 <text class="minorT centre" x="100" y="230">artist</text>
+			 <line x1="500" x2="100" y1="135" y2="200"/>
+			 <text class="minorT centre" x="100" y="330"><tspan class="yellowish">Aatobou, Najat</tspan></text>
+			 <line x1="100" x2="100" y1="235" y2="300"/>
+			 <text class="minorT centre" x="250" y="230">title</text>
+			 <line x1="500" x2="250" y1="135" y2="200"/>
+			 <text class="minorT centre" x="250" y="430"><tspan class="yellowish">The Voice of the Atlas</tspan></text>
+			 <line x1="250" x2="250" y1="235" y2="400"/>
+			 <text class="minorT centre" x="400" y="230">catalog</text>
+			 <line x1="500" x2="400" y1="135" y2="200"/>
+			 <text class="minorT centre" x="400" y="330"><tspan class="yellowish">CDORBD 069</tspan></text>
+			 <line x1="400" x2="400" y1="235" y2="300"/>
+			 <text class="minorT centre" x="550" y="230">time</text>
+			 <line x1="500" x2="550" y1="135" y2="200"/>
+			 <text class="minorT centre" x="550" y="430"><tspan class="yellowish">61.15</tspan></text>
+			 <line x1="550" x2="550" y1="235" y2="400"/>
+			 <text class="minorT centre" x="700" y="230">filed</text>
+			 <line x1="500" x2="700" y1="135" y2="200"/>
+			 <text class="minorT centre" x="700" y="330"><tspan class="yellowish">C05 World</tspan></text>
+			 <line x1="700" x2="700" y1="235" y2="300"/>
+			 <text class="minorT centre" x="850" y="230">playlist</text>
+			 <line x1="500" x2="850" y1="135" y2="200"/>
+			 <text class="minorT centre" x="100" y="580">work</text>
+			 <polyline points="850 235 850 480 100 480 100 550"/>
+			 <text class="minorT centre" x="100" y="680"><tspan class="yellowish">Baghi narajah</tspan></text>
+     <line x1="100" x2="100" y1="585" y2="650"/>
+			 <text class="minorT centre" x="250" y="580">work</text>
+     <line x1="250" x2="250" y1="480" y2="550"/>
+			 <text class="minorT centre" x="250" y="780"><tspan class="yellowish">Finetriki</tspan></text>
+     <line x1="250" x2="250" y1="585" y2="750"/>
+			 <text class="minorT centre" x="400" y="580">work</text>
+     <line x1="400" x2="400" y1="480" y2="550"/>
+			 <text class="minorT centre" x="400" y="680"><tspan class="yellowish">Shouffi rhirou</tspan></text>
+     <line x1="400" x2="400" y1="585" y2="650"/>
+			 <text class="minorT centre" x="550" y="580">work</text>
+     <line x1="550" x2="550" y1="480" y2="550"/>
+			 <text class="minorT centre" x="550" y="780"><tspan class="yellowish">Lila ya s'haba</tspan></text>
+     <line x1="550" x2="550" y1="585" y2="750"/>
+			 <text class="minorT centre" x="700" y="580">work</text>
+     <line x1="700" x2="700" y1="480" y2="550"/>
+			 <text class="minorT centre" x="700" y="680"><tspan class="yellowish">Ouardatte lajnane</tspan></text>
+     <line x1="700" x2="700" y1="585" y2="650"/>
+			 <text class="minorT centre" x="850" y="580">work</text>
+     <line x1="850" x2="850" y1="480" y2="550"/>
+			 <text class="minorT centre" x="850" y="780"><tspan class="yellowish">Ditih</tspan></text>
+     <line x1="850" x2="850" y1="585" y2="750"/>
+</svg>
+ 
+ 

@@ -1,0 +1,294 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 950 576" onload="test(evt)">
+  <title>Examples for XSLT Transforms</title>
+	<desc>The same XML fragment (displayed in its own empty box) transformed into different
+	html fragments using various xslt transformations. Each xslt example is in its own box, with
+	a name which is also a link to the "real" output.</desc>
+	<script type="text/ecmascript"><![CDATA[
+	  function test(evt)
+	  {
+			 var change = false;
+			 var svgdoc;
+			 try {
+			   change = window.isXMLOK();
+				 svgdoc = window.document.embeds[0].getSVGDocument();
+				 var aobj;
+				 aobj = svgdoc.getElementById("frahcd7");
+				 aobj.setAttribute("xlink:href","../xmls/frahcd7.xml");
+				 aobj = svgdoc.getElementById("frahcd8");
+				 aobj.setAttribute("xlink:href","../xmls/frahcd8.xml");
+				 aobj = svgdoc.getElementById("frahcd4");
+				 aobj.setAttribute("xlink:href","../xmls/frahcd4.xml");
+				 aobj = svgdoc.getElementById("frahcd14");
+				 aobj.setAttribute("xlink:href","../xmls/frahcd14.xml");
+				 aobj = svgdoc.getElementById("frahcd5");
+				 aobj.setAttribute("xlink:href","../xmls/frahcd5.xml");
+			 } catch( e ) {
+			 }
+	  }
+	  ]]>
+	</script>
+	
+  <rect width="950" height="576" class="background" />
+  <defs>
+    <style type="text/css">
+      <![CDATA[
+		  text {font-size:16;}
+      ]]>
+    </style>
+  </defs>
+
+  <g transform="scale(0.9) translate(0,-100)">
+
+    <g transform="translate(0,110)">
+      <g transform="translate(10,0)">
+        <rect class="empty" width="305" height="340" />
+        <text x="10" y="20" class="darkYellowish">
+        &lt;cd&gt;</text>
+        <text x="10" y="45" class="darkYellowish">
+        &lt;artist&gt;Aatabou, Najat&lt;/artist&gt;</text>
+				
+        <text x="10" y="70" class="darkYellowish">
+        &lt;title&gt;The Voice of the Atlas&lt;/title&gt;</text>
+				
+        <text x="10" y="95" class="darkYellowish">
+        &lt;label&gt;&lt;/label&gt;</text>
+
+        <text x="10" y="120" class="darkYellowish">
+        &lt;catalog&gt;CDORBD 069&lt;/catalog&gt;</text>
+
+        <text x="10" y="145" class="darkYellowish">
+        &lt;time&gt;61.15&lt;/time&gt;</text>
+
+        <text x="10" y="170" class="darkYellowish">
+        &lt;filed&gt;C05 World&lt;/filed&gt;</text>
+
+        <text x="10" y="195" class="darkYellowish">
+        &lt;playlist&gt;</text>
+
+        <text x="20" y="220" class="darkYellowish">
+        &lt;work&gt;Baghi narajah&lt;/work&gt;</text>
+
+        <text x="20" y="245" class="darkYellowish">
+        &lt;work&gt;Finetriki&lt;/work&gt;</text>
+
+        <text x="20" y="270" class="darkYellowish">-
+        - -</text>
+
+        <text x="10" y="295" class="darkYellowish">
+        &lt;/playlist&gt;</text>
+
+        <text x="10" y="320" class="darkYellowish">
+        &lt;/cd&gt;</text>
+      </g>
+
+      <g transform="translate(10,345)">
+        <a id="test" xlink:href="../xmls/frahcd.xml">
+          <rect class="empty" width="305" height="40" />
+          <text x="10" y="20" class="onBackgroundMinor" style="font-size:16">The
+          CD collection in XML (just as is)</text>
+        </a>
+      </g>
+
+      <g transform="translate(10,420)">
+        <a id="frahcd7" xlink:href="../xmls/frahcd7.htm">
+          <rect class="empty" width="305" height="200" />
+
+          <text x="150" y="175" class="onBackgroundMinor">
+          Artists Only</text>
+
+          <text x="10" y="20" class="reddish">
+          &lt;xsl:template match="/" &gt;</text>
+
+          <text x="10" y="45" class="whitish">
+          &lt;html&gt;</text>
+
+          <text x="10" y="70" class="reddish">
+          &lt;xsl:for-each select="cdlist/cd/artist"&gt;</text>
+
+          <text x="20" y="95" class="whitish">
+          &lt;h3&gt;Artist:</text>
+
+          <text x="20" y="120" class="reddish">
+          &lt;xsl:value-of select="." /&gt;<tspan class="whitish">&lt;/h3&gt;</tspan></text>
+
+          <text x="10" y="145" class="reddish">
+          &lt;/xsl:for-each&gt;</text>
+
+          <text x="10" y="170" class="whitish">
+          &lt;/html&gt;</text>
+
+          <text x="10" y="195" class="reddish">
+          &lt;/xsl:template&gt;</text>
+        </a>
+      </g>
+
+      <g transform="translate(335,10)">
+        <a id="frahcd8" xlink:href="../xmls/frahcd8.htm">
+          <rect class="empty" width="340" height="380" />
+
+          <text x="160" y="360" class="onBackgroundMinor">
+          With Playlist</text>
+
+          <text x="10" y="20" class="reddish">
+          &lt;xsl:template match="/" &gt;</text>
+
+          <text x="10" y="45" class="reddish">
+          &lt;xsl:for-each select="cdlist/cd"&gt;</text>
+
+          <text x="20" y="70" class="whitish">
+          &lt;h1&gt; <tspan class="reddish">&lt;xsl:value-of
+          select="artist"/&gt;</tspan>&lt;/h1&gt;</text>
+
+          <text x="20" y="95" class="whitish">
+          &lt;h2&gt;<tspan class="reddish">&lt;xsl:value-of
+          select="title"/&gt;</tspan>&lt;/h2&gt;</text>
+
+          <text x="20" y="120" class="whitish">
+          &lt;h3&gt;Label:<tspan class="reddish">&lt;xsl:value-of
+          select="label"/&gt;</tspan></text>
+
+          <text x="20" y="145" class="whitish">
+          Catalog:<tspan class="reddish">&lt;xsl:value-of select="catalog"/&gt;</tspan></text>
+
+          <text x="20" y="170" class="whitish">
+          Time:<tspan class="reddish">&lt;xsl:value-of
+          select="time"/&gt;</tspan>&lt;/h3&gt;</text>
+
+          <text x="20" y="195" class="whitish">
+          &lt;h4 &gt;Playlist&lt;/h4&gt;</text>
+
+          <text x="20" y="220" class="whitish">
+          &lt;ul&gt;</text>
+
+          <text x="20" y="245" class="reddish">
+          &lt;xsl:for-each select="playlist/work"&gt;</text>
+
+          <text x="30" y="270" class="whitish">
+          &lt;li&gt;<tspan class="reddish">&lt;xsl:value-of select="."
+          /&gt;</tspan>&lt;/li&gt;</text>
+
+          <text x="20" y="295" class="reddish">
+          &lt;/xsl:for-each&gt;</text>
+
+          <text x="20" y="320" class="whitish">
+          &lt;/ul&gt;</text>
+
+          <text x="10" y="345" class="reddish">
+          &lt;/xsl:for-each&gt;</text>
+
+          <text x="10" y="370" class="reddish">
+          &lt;/xsl:template&gt;</text>
+        </a>
+      </g>
+<!--
+      <g transform="translate(685,10)">
+        <a id="frahcd2" xlink:href="../xmls/frahcd2.htm">
+          <rect class="empty" width="340" height="30" />
+
+          <text x="20" y="25" class="onBackgroundMinor">
+          Without Tracks</text>
+        </a>
+      </g>
+
+      <g transform="translate(685,45)">
+        <a id="frahcd3" xlink:href="../xmls/frahcd3.htm">
+          <rect class="empty" width="340" height="30" />
+
+          <text x="20" y="25" class="onBackgroundMinor">As a
+          Table</text>
+        </a>
+      </g>
+-->
+      <g transform="translate(685,10)">
+        <a id="frahcd4" xlink:href="../xmls/frahcd4.htm">
+          <rect class="empty" width="340" height="80" />
+
+          <text x="200" y="60" class="onBackgroundMinor">
+          Sorted</text>
+
+          <text x="10" y="20" class="reddish">
+          &lt;xsl:for-each select="cdlist/cd" &gt;</text>
+
+          <text x="10" y="45" class="reddish">
+          &lt;xsl:sort select="title"&gt;</text>
+
+          <text x="10" y="60" class="whitish">-
+          - - -</text>
+
+          <text x="10" y="75" class="reddish">
+          &lt;/xsl:for-each &gt;</text>
+        </a>
+      </g>
+
+			<g transform="translate(685,130)">
+        <a id="frahcd14" xlink:href="../xmls/frahcd14.htm">
+          <rect class="empty" width="340" height="220" />
+
+          <text x="10" y="210" class="onBackgroundMinor">
+          Who sings 'Sweet Lorraine'?</text>
+
+          <text x="10" y="20" class="reddish">
+          &lt;xsl:for-each select="cdlist/cd/work" &gt;</text>
+
+          <text x="10" y="45" class="reddish">
+          &lt;xsl:choose&gt;</text>
+
+          <text x="20" y="70" class="reddish">
+          &lt;xsl:when test=". = 'Sweet Lorraine'" &gt;</text>
+
+          <text x="30" y="95" class="whitish">
+          &lt;td&gt;<tspan class="reddish">&lt;xsl:value-of</tspan></text>
+					
+          <text x="60" y="120" class="reddish">
+          select="ancestor::cd/artist" /&gt;<tspan class="whitish">&lt;/td&gt;</tspan></text>
+					
+					
+          <text x="30" y="135" class="whitish">- - - -</text>
+					
+					<text x="20" y="150" class="reddish">&lt;/xsl:when&gt;</text>
+
+					<text x="10" y="175" class="reddish">&lt;/xsl:choose&gt;</text>
+        </a>
+      </g>
+
+      <g transform="translate(335,420)">
+        <a id="frahcd5" xlink:href="../xmls/frahcd5.htm">
+          <rect class="empty" width="545" height="200" />
+
+          <text x="360" y="140" class="onBackgroundMinor">
+          Color Coded</text>
+
+          <text x="10" y="20" class="reddish">
+          &lt;xsl:attribute name="style"&gt;<tspan class="whitish">color:</tspan></text>
+
+          <text x="20" y="45" class="reddish">
+          &lt;xsl:choose&gt;</text>
+
+          <text x="30" y="70" class="reddish">
+          &lt;xsl:when test="filed[. = 'C05 World']"&gt;
+          <tspan class="whitish">white</tspan>&lt;/xsl:when&gt;</text>
+
+          <text x="30" y="95" class="reddish">
+          &lt;xsl:when test="filed[. = 'C06 Country']"&gt;
+          <tspan class="whitish">yellow</tspan>&lt;/xsl:when&gt;</text>
+
+          <text x="20" y="120" class="reddish">
+          &lt;/xsl:choose&gt;</text>
+
+          <text x="10" y="145" class="reddish">
+          &lt;/xsl:attribute&gt;</text>
+
+          <text x="10" y="170" class="whitish">
+          &lt;td&gt;<tspan class="reddish">&lt;xsl:value-of
+          select="artist"/&gt;</tspan>&lt;/td&gt;</text>
+
+          <text x="10" y="195" class="whitish">- - -</text>
+        </a>
+      </g>
+    </g>
+  </g>
+</svg>
+

@@ -1,0 +1,151 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg viewBox="0 0 800 600" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <desc>A schematic overview of the XMLP/Soap architecture</desc>
+  <g transform="translate(0 20)">
+    <rect width="922" height="530" class="background"/>
+    <defs>
+      <path id="arrowhead" class="arrow" d="M0,-5 l 10 5 l -10 5 z"/>
+    </defs>
+    <g transform="translate(60 0)">
+      <desc>Three boxes, each with internal blocks (labelled differently). The blocks are connected through horizontal arrows, some of them crossing the intermediate box, some of them stopping at the middle box, etc. Each of the arrows is described separately.</desc>
+      <g id="firstBox" transform="translate(20 0)">
+        <text style="text-size:70%; text-anchor:middle" x="50">Application 1<tspan x="50" dy="23">(Sender)</tspan>
+        </text>
+        <g transform="translate(0 40)">
+          <rect width="100" height="130" class="yellowish"/>
+          <g transform="translate(10,10)">
+            <rect width="80" height="20" class="lightGreenish"/>
+            <text style="text-size:50%; text-anchor:middle" x="40" y="18">block a</text>
+          </g>
+          <g transform="translate(10,40)">
+            <rect width="80" height="20" class="blueish"/>
+            <text style="text-size:50%; text-anchor:middle" x="40" y="18">block b</text>
+          </g>
+          <g transform="translate(10,70)">
+            <rect width="80" height="20" class="limish"/>
+            <text style="text-size:50%; text-anchor:middle" x="40" y="18">block c</text>
+          </g>
+        </g>
+      </g>
+      <g id="secondBox" transform="translate(320 0)">
+        <text style="text-size:70%; text-anchor:middle" x="50">Application 2<tspan x="50" dy="23">(Sender &amp; Reciever)</tspan>
+        </text>
+        <g transform="translate(0 40)">
+          <rect width="100" height="130" class="yellowish"/>
+          <g transform="translate(10,40)">
+            <rect width="80" height="20" class="blueish"/>
+            <text style="text-size:50%; text-anchor:middle" x="40" y="18">block b</text>
+          </g>
+          <g transform="translate(10,70)">
+            <rect width="80" height="20" class="limish"/>
+            <text style="text-size:50%; text-anchor:middle" x="40" y="18">block c</text>
+          </g>
+          <g transform="translate(10,100)">
+            <rect width="80" height="20" class="darkYellowish"/>
+            <text style="text-size:50%; text-anchor:middle" x="40" y="18">block d</text>
+          </g>
+        </g>
+      </g>
+      <g id="thirdBox" transform="translate(620 0)">
+        <text style="text-size:70%; text-anchor:middle" x="50">Application 3<tspan x="50" dy="23">(Receiver)</tspan>
+        </text>
+        <g transform="translate(0 40)">
+          <rect width="100" height="130" class="yellowish"/>
+          <g transform="translate(10,10)">
+            <rect width="80" height="20" class="lightGreenish"/>
+            <text style="text-size:50%; text-anchor:middle" x="40" y="18">block a</text>
+          </g>
+          <g transform="translate(10,40)">
+            <rect width="80" height="20" class="blueish"/>
+            <text style="text-size:50%; text-anchor:middle" x="40" y="18">block b</text>
+          </g>
+          <g transform="translate(10,100)">
+            <rect width="80" height="20" class="darkYellowish"/>
+            <text style="text-size:50%; text-anchor:middle" x="40" y="18">block d</text>
+          </g>
+        </g>
+      </g>
+      <g>
+        <desc>Arrow connecting the first block in the first box to the first block in the third box</desc>
+        <line class="arrow" x1="110" y1="60" x2="630" y2="60" style="stroke-width:1"/>
+        <use xlink:href="#arrowhead" transform="translate(620 60)"/>
+      </g>
+      <g>
+        <desc>Arrow connecting the first block in the first box to the first block in the second box</desc>
+        <line class="arrow" x1="110" y1="90" x2="330" y2="90" style="stroke-width:1"/>
+        <use xlink:href="#arrowhead" transform="translate(320 90)"/>
+      </g>
+      <g>
+        <desc>Arrow connecting the first block in the second box to the second block in the second box</desc>
+        <line class="arrow" x1="410" y1="90" x2="630" y2="90" style="stroke-width:1"/>
+        <use xlink:href="#arrowhead" transform="translate(620 90)"/>
+      </g>
+      <g>
+        <desc>Arrow connecting the third block in the first box to the third block in the second box</desc>
+        <line class="arrow" x1="110" y1="120" x2="330" y2="120" style="stroke-width:1"/>
+        <use xlink:href="#arrowhead" transform="translate(320 120)"/>
+      </g>
+      <g>
+        <desc>Arrow connecting the fourth block in the second box to the fourth block in the second box</desc>
+        <line class="arrow" x1="410" y1="150" x2="630" y2="150" style="stroke-width:1"/>
+        <use xlink:href="#arrowhead" transform="translate(620 150)"/>
+      </g>
+      <text class="darkYellowish" style="text-size:80%; text-anchor:middle" x="360" y="200">
+        <tspan>Transfer data blocks in XML through HTTP, RPC, ...</tspan>
+        <tspan x="360" dy="25">(includes data serialization, protocol bindings,...)</tspan>
+      </text>
+    </g>
+    <g transform="translate(160,290)">
+      <svg width="800" height="280" viewBox="0 0 1200 600">
+        <desc>
+        An XMLP Envelope with explanation text
+      </desc>
+        <defs>
+          <g id="block">
+            <rect width="300" height="40" class="lightGreenish"/>
+            <text class="onBackground centre" x="150" y="30">XMLP/SOAP Block</text>
+          </g>
+          <text id="dot" class="onBackground centre">.</text>
+          <g id="blocks">
+            <rect width="400" height="250" class="yellowish"/>
+            <use xlink:href="#block" transform="translate(50,50)"/>
+            <use xlink:href="#dot" transform="translate(200,120)"/>
+            <use xlink:href="#dot" transform="translate(200,150)"/>
+            <use xlink:href="#dot" transform="translate(200,180)"/>
+            <use xlink:href="#block" transform="translate(50,200)"/>
+          </g>
+          <g id="header">
+            <use xlink:href="#blocks"/>
+            <text class="onBackground centre" x="200" y="30">XMLP/SOAP Header</text>
+          </g>
+          <g id="body">
+            <use xlink:href="#blocks"/>
+            <text class="onBackground centre" x="200" y="30">XMLP/SOAP Body</text>
+          </g>
+        </defs>
+        <rect width="500" height="600" class="darkYellowish"/>
+        <text class="onBackground centre" x="250" y="30">XMLP/SOAP Envelope</text>
+        <use xlink:href="#header" transform="translate(50,50)"/>
+        <g transform="translate(530 80)">
+          <text class="onBackground">
+            <tspan x="30" dy="0">Used for, eg,:</tspan>
+            <tspan x="60" dy="40">Authentication, Payments</tspan>
+            <tspan x="60" dy="40">Control of intermediaries</tspan>
+            <tspan x="30" dy="40">Attributes:</tspan>
+            <tspan x="60" dy="40" class="code">mustUnderstand</tspan>
+            <tspan x="60" dy="40" class="code">actor</tspan>
+          </text>
+        </g>
+        <use xlink:href="#body" transform="translate(50,320)"/>
+        <g transform="translate(530 400)">
+          <text class="onBackground">
+            <tspan x="30" dy="0">Application data</tspan>
+            <tspan x="60" dy="40">(in application namespace!)</tspan>
+          </text>
+        </g>
+      </svg>
+    </g>
+  </g>
+</svg>

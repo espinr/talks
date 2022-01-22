@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-2 -2 940 240">
+  <desc/>
+  <defs>
+   <path id="arrowhead" class="yellowish" d="M0 0 L -10 10 L -10 -10 z"/>
+   <path id="arrowhead2" class="reddish" d="M0 0 L -10 10 L -10 -10 z"/>
+	  <g id="arrow">
+	    <line x1="0" y1="0" x2="330" y2="0" class="yellowish" style="stroke-width:3"/>
+	    <use xlink:href="#arrowhead" x="330" y="0"/>
+	  </g>
+	  <g id="arrow2">
+	    <line x1="0" y1="0" x2="330" y2="0" class="reddish" style="stroke-dasharray: 10, 10, 10, 10; stroke-width:3"/>
+	    <use xlink:href="#arrowhead2" x="330" y="0"/>
+	  </g>
+	  <g id="proxy">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="darkBlueish" style="text-anchor:end" x="300" y="-10">ccpp-proxy:proxyProfile</text>
+	  </g> 
+	  <g id="client">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="darkBlueish" style="text-anchor:end" x="300" y="-10">ccpp-proxy:next-Profile</text>
+	  </g> 
+	  <g id="component">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="darkBlueish" style="text-anchor:end" x="300" y="-10">ccpp:component</text>
+	  </g> 
+	  <g id="default">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="darkBlueish" style="text-anchor:end" x="300" y="-10">ccpp:default</text>
+	  </g> 
+	  <g id="rdfType">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="darkBlueish" style="text-anchor:end" x="300" y="-10">rdf:type</text>
+	  </g> 
+	  <g id="display">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="yellowish" style="text-anchor:end" x="300" y="-10">display</text>
+	  </g> 
+	  <g id="name">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="yellowish" style="text-anchor:end" x="300" y="-10">name</text>
+	  </g> 
+	  <g id="version">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="yellowish" style="text-anchor:end" x="300" y="-10">version</text>
+	  </g> 
+	  <g id="vendor">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="yellowish" style="text-anchor:end" x="300" y="-10">vendor</text>
+	  </g> 
+
+	  <!-- ============================================================================ -->
+    <g id="resource">
+      <ellipse class="lightGreenish" style="stroke:none" cx="0" cy="0" rx="130" ry="20"/>
+    </g>
+    <g id="resource2">
+      <ellipse class="whitish" style="stroke:none" cx="0" cy="0" rx="130" ry="20"/>
+    </g>
+    <g id="literal">
+      <rect class="lightGreenish" style="stroke:none" x="-130" y="-20" width="260" height="40"/>
+    </g>
+    <g id="My" transform="translate(130,20)">
+      <use xlink:href="#resource"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">Request Profile</text>
+    </g>
+    <!-- ============================================================================ -->
+    <g id="R_TH" transform="translate(130,20)">
+      <use xlink:href="#resource"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">Proxy Profile</text>
+    </g>
+    <g id="R_TS" transform="translate(130,20)">
+      <use xlink:href="#resource"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">Terminal Software</text>
+    </g>
+    <g id="R_TB" transform="translate(130,20)">
+      <use xlink:href="#resource"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">Client Profile</text>
+    </g>
+    <!-- ============================================================================ -->
+    <g id="R_HP" transform="translate(130,20)">
+      <use xlink:href="#resource"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">Hardware Platform</text>
+    </g>
+    <g id="L_320" transform="translate(130,20)">
+      <use xlink:href="#literal"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">320x200</text>
+    </g>
+    <g id="R_SP" transform="translate(130,20)">
+      <use xlink:href="#resource"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">Software Platform</text>
+    </g>
+    <g id="L_Epoc" transform="translate(130,20)">
+      <use xlink:href="#literal"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">EPOC</text>
+    </g>
+    <g id="L_20" transform="translate(130,20)">
+      <use xlink:href="#literal"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">2.0</text>
+    </g>
+    <g id="R_Default" transform="translate(130,20)">
+      <use xlink:href="#resource2"/>
+      <text class="reddish" style="text-anchor:middle; fill:black" x="0" y="5">Default</text>
+    </g>
+    <g id="R_Browser" transform="translate(130,20)">
+      <use xlink:href="#resource"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">BrowserUA</text>
+    </g>
+
+  </defs>
+  <g transform="scale(0.6)">
+    <use xlink:href="#My" transform="translate(0,0)"/>
+    <use xlink:href="#proxy" transform="translate(130,60)"/>
+    <use xlink:href="#client" transform="translate(130,160)"/>
+    <use xlink:href="#proxy" transform="translate(590,240)"/>
+    <use xlink:href="#client" transform="translate(590,340)"/>
+	   <line x1="130" y1="40" x2="130" y2="160" class="yellowish" style="stroke-width:3"/>
+	   <line x1="590" y1="140" x2="590" y2="340" class="yellowish" style="stroke-width:3"/>
+    <g transform="translate(460,40)">
+      <use xlink:href="#R_TH"/>
+      <use xlink:href="#arrow2" transform="translate(260,20)"/>
+      <use xlink:href="#My" transform="translate(0,100)"/>
+    </g>
+    <g transform="translate(920,220)">
+      <use xlink:href="#R_TH"/>
+      <use xlink:href="#arrow2" transform="translate(260,20)"/>
+      <use xlink:href="#R_TB" transform="translate(0,100)"/>
+      <use xlink:href="#arrow2" transform="translate(260,120)"/>
+    </g>
+  </g>
+</svg>

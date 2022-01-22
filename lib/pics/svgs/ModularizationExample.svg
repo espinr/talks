@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 768" xml:space="preserve">
+	<title>Slide showing XHTML modularization with real XML Schema examples</title>
+	<metadata>
+		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:axsvg="http://www.w3.org/2001/svgRdf/axsvg-schema.rdf#">
+			<rdf:Description rdf:ID="#FullSlide">
+				<desc>This is the full slide</desc>
+				<axsvg:Contains>
+					<rdf:Bag>
+						<rdf:li rdf:resource="#Example"/>
+						<rdf:li rdf:resource="#bullets"/>
+					</rdf:Bag>
+				</axsvg:Contains>
+			</rdf:Description>
+			<rdf:Description rdf:ID="#Example">
+				<axsvg:OnTop rdf:resource="#bullets"/>
+				<axsvg:Contains>
+					<rdf:Bag>
+						<rdf:li rdf:resource="#left-side"/>
+						<rdf:li rdf:resource="#right-side"/>
+						<rdf:li rdf:resource="connections"/>
+					</rdf:Bag>
+				</axsvg:Contains>
+			</rdf:Description>
+			<rdf:Description rdf:resource="#left-side">
+				<axsvg:Contains>
+					<rdf:Bag>
+						<rdf:li rdf:resource="#m1"/>
+						<rdf:li rdf:resource="#m-img"/>
+						<rdf:li rdf:resource="#m3"/>
+						<rdf:li rdf:resource="#mn"/>
+					</rdf:Bag>
+				</axsvg:Contains>
+				<axsvg:LabelledBy rdf:resource="#l1"/>
+			</rdf:Description>
+			<rdf:About rdf:resource="m-img">
+				<axsvg:LabelledBy rdf:resource="#img-module"/>
+			</rdf:About>
+			<rdf:Description rdf:resource="#right-side">
+				<axsvg:Contains>
+					<rdf:Bag>
+						<rdf:li rdf:resource="#m-hub"/>
+						<rdf:li rdf:resource="#m-private-hub"/>
+					</rdf:Bag>
+				</axsvg:Contains>
+				<axsvg:LabelledBy rdf:resource="#l2"/>
+			</rdf:Description>
+			<rdf:Description rdf:resource="#m-hub">
+				<rdf:LabelledBy rdf:resource="#hub"/>
+			</rdf:Description>
+			<rdf:Description rdf:resource="#m-private-hub">
+				<rdf:LabelledBy rdf:resource="#private-hub"/>
+			</rdf:Description>
+			<rdf:Description rdf:resource="#connections">
+				<axsvg:Contains>
+					<rdf:Bag>
+						<rdf:li rdf:resource="c1"/>
+						<rdf:li rdf:resource="c2"/>
+						<rdf:li rdf:resource="c3"/>
+						<rdf:li rdf:resource="c4"/>
+						<rdf:li rdf:resource="c5"/>
+					</rdf:Bag>
+				</axsvg:Contains>
+			</rdf:Description>
+			<rdf:Description rdf:resource="c1">
+				<rdf:Connects>
+					<rdf:Seq>
+						<rdf:li rdf:resource="#m1"/>
+						<rdf:li rdf:resource="m-hub"/>
+					</rdf:Seq>
+				</rdf:Connects>
+			</rdf:Description>
+			<rdf:Description rdf:resource="c2">
+				<rdf:Connects>
+					<rdf:Seq>
+						<rdf:li rdf:resource="#m-img"/>
+						<rdf:li rdf:resource="m-hub"/>
+					</rdf:Seq>
+				</rdf:Connects>
+			</rdf:Description>
+			<rdf:Description rdf:resource="c3">
+				<rdf:Connects>
+					<rdf:Seq>
+						<rdf:li rdf:resource="#mn"/>
+						<rdf:li rdf:resource="m-hub"/>
+					</rdf:Seq>
+				</rdf:Connects>
+			</rdf:Description>
+			<rdf:Description rdf:resource="c4">
+				<rdf:Connects>
+					<rdf:Seq>
+						<rdf:li rdf:resource="#m-img"/>
+						<rdf:li rdf:resource="m-private-hub"/>
+					</rdf:Seq>
+				</rdf:Connects>
+			</rdf:Description>
+			<rdf:Description rdf:resource="c5">
+				<rdf:Connects>
+					<rdf:Seq>
+						<rdf:li rdf:resource="#mn"/>
+						<rdf:li rdf:resource="m-private-hub"/>
+					</rdf:Seq>
+				</rdf:Connects>
+			</rdf:Description>
+			<rdf:Description rdf:about="#bullets">
+				<axsvg:Text>true</axsvg:Text>
+			</rdf:Description>
+		</rdf:RDF>
+	</metadata>
+	<defs>
+		<marker id="Triangle1" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="strokeWidth" markerWidth="4" markerHeight="3" orient="auto">
+			<path d="M 0 0 L 10 5 L 0 10 z" class="reddish"/>
+		</marker>
+		<marker id="Triangle2" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="strokeWidth" markerWidth="4" markerHeight="3" orient="auto">
+			<path d="M 0 0 L 10 5 L 0 10 z" class="greenish"/>
+		</marker>
+		<g id="img-module">
+			<text class="major">Module for <tspan class="code">img</tspan>:</text>
+			<text class="minor code" y="10">
+				<tspan x="0" dy="25">&lt;xsd:schema ....&gt;</tspan>
+				<tspan x="0" dy="25">    &lt;xsd:attributeGroup name="<tspan class="pinkish">image.attlist</tspan>"&gt;</tspan>
+				<tspan x="0" dy="25" class="reddish">        &lt;xsd:attributeGroup ref="Common.attrib"/&gt;</tspan>
+				<tspan x="0" dy="25">        &lt;xsd:attribute name="src" type="URI" use="required"/&gt;</tspan>
+				<tspan x="0" dy="25">        &lt;xsd:attribute name="alt" type="Text"/&gt;</tspan>
+				<tspan x="0" dy="25">        ...</tspan>
+				<tspan x="0" dy="25">    &lt;/xsd:attributeGroup&gt;</tspan>
+				<tspan x="0" dy="25"/>
+				<tspan x="0" dy="25">    &lt;xsd:complexType name="<tspan class="darkBlueish">image.type</tspan>"&gt;</tspan>
+				<tspan x="0" dy="25">        &lt;xsd:attributeGroup ref="<tspan class="pinkish">image.attlist</tspan>"/&gt;</tspan>
+				<tspan x="0" dy="25">    &lt;/xsd:complexType&gt;</tspan>
+				<tspan x="0" dy="25">    &lt;xsd:element name="img" type="<tspan class="darkBlueish">image.type</tspan>"/&gt;</tspan>
+				<tspan x="0" dy="25">&lt;/xsd:schema&gt;</tspan>
+			</text>
+		</g>
+		<g id="hub">
+			<text class="major">A (simplified) XHTML "hub":</text>
+			<text class="minor code" y="10">
+				<tspan x="0" dy="25" class="reddish">&lt;xsd:include schemaLocation="req/framework/xhtml-attribs-1.xsd"/&gt;</tspan>
+				<tspan x="0" dy="25">...</tspan>
+				<tspan x="0" dy="25">&lt;xsd:include schemaLocation="opt/xhtml-image-1.xsd"/&gt;</tspan>
+				<tspan x="0" dy="25">...</tspan>
+				<tspan x="0" dy="25">&lt;xsd:element name="p"&gt;</tspan>
+				<tspan x="0" dy="25">   &lt;xsd:choice minOccurs="0" maxOccurs="unbounded"&gt;</tspan>
+				<tspan x="0" dy="25">      ...</tspan>
+				<tspan x="0" dy="25">      &lt;xsl:element ref="img"/&gt;</tspan>
+				<tspan x="0" dy="25">   &lt;/xsd:choice&gt;</tspan>
+				<tspan x="0" dy="25">&lt;/xsd:element&gt;</tspan>
+			</text>
+		</g>
+		<g id="private-hub">
+			<text class="major">A modified XHTML "hub":</text>
+			<text class="minor code" y="10">
+				<tspan x="0" dy="25" class="reddish">&lt;xsd:include schemaLocation="req/framework/xhtml-attribs-1.xsd"/&gt;</tspan>
+				<tspan x="0" dy="25">...</tspan>
+				<tspan x="0" dy="25" class="greenish">&lt;xsd:attributeGroup name="my.image.attlist"&gt;</tspan>
+				<tspan x="0" dy="25" class="greenish">  &lt;attribute name="author" type="xsd:string"/&gt;</tspan>
+				<tspan x="0" dy="25" class="greenish">&lt;/xsd:attributeGroup></tspan>
+				<tspan x="0" dy="25" class="greenish">&lt;xsd:redefine schemaLocation="opt/xhtml-image-1.xsd"&gt;</tspan>
+				<tspan x="0" dy="25" class="greenish">  &lt;xsd:attributeGroup name="image.attlist"&gt;</tspan>
+				<tspan x="0" dy="25" class="greenish" font-style="italic">     &lt;xsd:extension base="image.attlist"&gt;</tspan>
+				<tspan x="0" dy="25" class="greenish" font-style="italic">         &lt;attributeGroup ref="my.image.attlist"/&gt;</tspan>
+				<tspan x="0" dy="25" class="greenish" font-style="italic">     &lt;/xsd:extension&gt;</tspan>
+				<tspan x="0" dy="25" class="greenish">  &lt;/xsd:attributeGroup&gt;</tspan>
+				<tspan x="0" dy="25" class="greenish">&lt;/xsd:redefine&gt;</tspan>
+				<tspan x="0" dy="25">...</tspan>
+				<tspan x="0" dy="25">&lt;xsd:include schemaLocation="opt/xhtml-image-1.xsd"/&gt;</tspan>
+				<tspan x="0" dy="25">...</tspan>
+				<tspan x="0" dy="25">&lt;xsd:element name="p"&gt;</tspan>
+				<tspan x="0" dy="25">   &lt;xsd:choice minOccurs="0" maxOccurs="unbounded"&gt;</tspan>
+				<tspan x="0" dy="25">      ...</tspan>
+				<tspan x="0" dy="25">      &lt;xsl:element ref="img"/&gt;</tspan>
+				<tspan x="0" dy="25">   &lt;/xsd:choice&gt;</tspan>
+				<tspan x="0" dy="25">&lt;/xsd:element&gt;</tspan>
+			</text>
+		</g>
+	</defs>
+	<text class="major" style="text-anchor:middle" x="150" y="40" id="l1">XHTML Modules</text>
+	<g id="left-side" transform="translate(20 70)"> <!-- 30 -->
+		<desc>Contains a set of rectangles, representing modules; one of the rectangles actually has textual content in it, namely an XML code</desc>
+		<g id="m1" transform="translate(0 20)">
+			<desc>Empty rectangle, representing a module</desc>
+			<rect width="280" height="30" class="table"/>
+			<g transform="translate(10 15) scale(0.4)">
+				<text class="major">Module 1</text>
+			</g>
+		</g>
+		<g id="m-img" transform="translate(0 70)">
+			<desc>Rectangle, representing an image module, with textual information</desc>
+			<rect width="280" height="160" class="table"/>
+			<use xlink:href="#img-module" transform="translate(10 15) scale(0.4)"/>
+		</g>
+		<g id="m3" transform="translate(0 250)">
+			<desc>Empty rectangle, representing a module</desc>
+			<rect width="280" height="30" class="table"/>
+			<g transform="translate(10 15) scale(0.4)">
+				<text class="major">Module 3</text>
+			</g>
+		</g>
+		<text class="major" x="20" y="300">...</text>
+		<g id="mn" transform="translate(0 320)">
+			<desc>Empty rectangle, representing a module</desc>
+			<rect width="280" height="30" class="table"/>
+			<g transform="translate(10 15) scale(0.4)">
+				<text class="major">Module N</text>
+			</g>
+		</g>
+	</g>
+	<text class="major" style="text-anchor:middle" x="855" y="40" id="l2">XHTML Language</text>
+	<g id="righ-side" transform="translate(700 60)">
+		<g id="m-hub" transform="translate(0 0)">
+			<desc>Extract for a modularization "hub", eg, for XHTML</desc>
+			<rect width="310" height="130" class="table"/>
+			<use xlink:href="#hub" transform="translate(10 15) scale(0.4)"/>
+		</g>
+		<g id="m-private-hub" transform="translate(0 180)">
+			<desc>Extract for a modularization "hub", also including private extensions</desc>
+			<rect width="310" height="240" class="table"/>
+			<use xlink:href="#private-hub" transform="translate(10 15) scale(0.4)"/>
+		</g>
+	</g>
+	<g id="connections" transform="translate(0 40)">
+		<line id="#c1" x1="300" x2="700" y1="65" y2="50" marker-end="url(#Triangle1)"/>
+		<line id="#c2" x1="300" x2="700" y1="170" y2="55" marker-end="url(#Triangle1)"/>
+		<line id="#c3" x1="300" x2="700" y1="365" y2="60" marker-end="url(#Triangle1)"/>
+		<line id="#c4" x1="300" x2="700" y1="170" y2="295" class="greenish" marker-end="url(#Triangle2)"/>
+		<line id="#c5" x1="300" x2="700" y1="295" y2="300" class="greenish" marker-end="url(#Triangle2)"/>
+	</g>
+	<g id="bullets" transform="translate(100,560)">
+		<text>
+			<tspan class="major" x="0" y="0">&#8226; Users can also define their "own" XHTML dialect</tspan>
+			<tspan class="major" x="0" dy="40">&#8226; The methodology is not bound to XHTML</tspan>
+			<tspan class="minor reddish" x="40" dy="30" font-style="italic">&#183; users can also use it for their own XML dialects!</tspan>
+		</text>
+	</g>
+</svg>

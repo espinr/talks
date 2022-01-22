@@ -1,0 +1,3015 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="754.0"
+   height="445.0"
+   id="svg3276"
+   sodipodi:version="0.32"
+   inkscape:version="0.43"
+   sodipodi:docname="DevicesAnimated.svg"
+   sodipodi:docbase="D:\documentos\w3c\Presentaciones\pics\svgs">
+  <defs
+     id="defs3999" />
+  <sodipodi:namedview
+     inkscape:window-height="867"
+     inkscape:window-width="1053"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:zoom="0.7554073"
+     inkscape:cx="477.88853"
+     inkscape:cy="106.44812"
+     inkscape:window-x="26"
+     inkscape:window-y="26"
+     inkscape:current-layer="svg3276" />
+  <title
+     id="title3278" />
+  <desc
+     id="desc3280">SVG Statistical Chart</desc>
+  <metadata
+     id="metadata3282">
+    <rdf:RDF>
+      <rdf:Description
+         rdf:about="">
+        <dc:title />
+        <dc:subject />
+        <dc:creator />
+        <dc:publisher />
+        <dc:description>SVG Statistical Chart</dc:description>
+        <dc:date />
+        <dc:language>en</dc:language>
+        <dc:rights />
+        <dc:contributor />
+        <dc:coverage />
+        <dc:type />
+        <dc:format />
+        <dc:identifier />
+        <dc:source />
+        <dc:relation />
+      </rdf:Description>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <text
+     x="156.75003"
+     y="42.143402"
+     font-weight="bold"
+     font-size="24"
+     id="text3286"
+     style="font-size:38.26012421px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial Black"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png">Base de Dispositivos Móviles</text>
+  <rect
+     id="rect3290"
+     style="fill:#0000ff;stroke:#000000"
+     height="15.977277"
+     width="15.906251"
+     y="196.89667"
+     x="790.8551"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72" />
+  <text
+     style="font-size:19.92858887px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial Narrow"
+     id="text3292"
+     font-size="10"
+     y="212.40021"
+     x="816.53186"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">WAP 1.x</text>
+  <rect
+     id="rect3294"
+     style="fill:#ff0000;stroke:#000000"
+     height="15.977277"
+     width="15.906251"
+     y="220.86259"
+     x="790.8551"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72" />
+  <text
+     style="font-size:19.92858887px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial Narrow"
+     id="text3296"
+     font-size="10"
+     y="236.31279"
+     x="816.53186"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">WAP 2.x/XHTML</text>
+  <rect
+     id="rect3298"
+     style="fill:#32cd32;stroke:#000000"
+     height="15.977277"
+     width="15.906251"
+     y="244.82852"
+     x="790.8551"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72" />
+  <text
+     style="font-size:19.92858887px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial Narrow"
+     id="text3300"
+     font-size="10"
+     y="260.22534"
+     x="816.53186"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">Terminales con WAP (total)</text>
+  <rect
+     id="rect3302"
+     style="fill:#ffd700;stroke:#000000"
+     height="15.977277"
+     width="15.906251"
+     y="268.79443"
+     x="790.8551"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72" />
+  <text
+     style="font-size:19.92858887px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial Narrow"
+     id="text3304"
+     font-size="10"
+     y="284.13834"
+     x="816.53186"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">Portátiles(total)</text>
+  <rect
+     id="rect3306"
+     style="fill:#778899;stroke:#000000"
+     height="15.977277"
+     width="15.906251"
+     y="292.76035"
+     x="790.8551"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72" />
+  <text
+     style="font-size:19.92858887px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Arial Narrow"
+     id="text3308"
+     font-size="10"
+     y="308.05093"
+     x="816.53186"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">Portátiles con WiFi (total)</text>
+  <text
+     x="133.01736"
+     y="583.22772"
+     font-size="9.0"
+     id="text3312"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">2001</text>
+  <text
+     x="212.72601"
+     y="583.22772"
+     font-size="9.0"
+     id="text3314"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">2002</text>
+  <text
+     x="292.43469"
+     y="583.22772"
+     font-size="9.0"
+     id="text3316"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">2003</text>
+  <text
+     x="372.14331"
+     y="583.22772"
+     font-size="9.0"
+     id="text3318"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">2004</text>
+  <text
+     x="451.85196"
+     y="583.22772"
+     font-size="9.0"
+     id="text3320"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">2005</text>
+  <text
+     x="531.56055"
+     y="583.22772"
+     font-size="9.0"
+     id="text3322"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">2006</text>
+  <text
+     x="611.26904"
+     y="583.22772"
+     font-size="9.0"
+     id="text3324"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">2007</text>
+  <text
+     x="690.9776"
+     y="583.22772"
+     font-size="9.0"
+     id="text3326"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">2008</text>
+  <text
+     x="62.050972"
+     y="569.49469"
+     font-size="9.0"
+     id="text3328"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">0.0</text>
+  <text
+     x="62.050972"
+     y="521.66992"
+     font-size="9.0"
+     id="text3330"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">135</text>
+  <text
+     x="62.050972"
+     y="473.84482"
+     font-size="9.0"
+     id="text3332"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">270</text>
+  <text
+     x="62.050972"
+     y="426.01965"
+     font-size="9.0"
+     id="text3334"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">405</text>
+  <text
+     x="62.050972"
+     y="378.19406"
+     font-size="9.0"
+     id="text3336"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">540</text>
+  <text
+     x="62.050972"
+     y="330.3689"
+     font-size="9.0"
+     id="text3338"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">675</text>
+  <text
+     x="62.050972"
+     y="282.54376"
+     font-size="9.0"
+     id="text3340"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">810</text>
+  <text
+     x="62.050972"
+     y="234.71884"
+     font-size="9.0"
+     id="text3342"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">945</text>
+  <text
+     x="43.602947"
+     y="186.89346"
+     font-size="9.0"
+     id="text3344"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">1.080</text>
+  <text
+     x="43.602947"
+     y="139.0683"
+     font-size="9.0"
+     id="text3346"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">1.220</text>
+  <text
+     x="43.602947"
+     y="91.243149"
+     font-size="9.0"
+     id="text3348"
+     style="font-size:17.53741455px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;font-family:Courier New"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">1.350</text>
+  <line
+     x1="111.36271"
+     y1="75.469383"
+     x2="111.36271"
+     y2="572.36267"
+     id="line3350"
+     style="stroke:#000000;stroke-width:3.18834496"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72" />
+  <line
+     x1="103.40958"
+     y1="564.37402"
+     x2="757.15649"
+     y2="564.37402"
+     id="line3352"
+     style="stroke:#000000;stroke-width:3.18834496"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72" />
+  <text
+     x="758.84479"
+     y="595.0014"
+     font-weight="bold"
+     font-size="12.0"
+     id="text3355"
+     style="font-size:17.53741264px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#808080;font-family:Arial Black"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">años</text>
+  <text
+     x="3.2073281"
+     y="59.359703"
+     font-weight="bold"
+     font-size="12.0"
+     id="text3357"
+     style="font-size:17.53741264px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#808080;font-family:Arial Black"
+     transform="scale(0.997775,1.00223)"
+     sodipodi:linespacing="125%"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">millones</text>
+  <g
+     id="horizontal_grid"
+     transform="matrix(1.590625,0,0,1.597728,111.3627,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3362"
+       y2="285"
+       x2="406"
+       y1="285"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3364"
+       y2="270"
+       x2="406"
+       y1="270"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3366"
+       y2="255"
+       x2="406"
+       y1="255"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3368"
+       y2="240"
+       x2="406"
+       y1="240"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3370"
+       y2="225"
+       x2="406"
+       y1="225"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3372"
+       y2="210"
+       x2="406"
+       y1="210"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3374"
+       y2="195"
+       x2="406"
+       y1="195"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3376"
+       y2="180"
+       x2="406"
+       y1="180"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3378"
+       y2="165"
+       x2="406"
+       y1="165"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3380"
+       y2="150"
+       x2="406"
+       y1="150"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3382"
+       y2="135"
+       x2="406"
+       y1="135"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3384"
+       y2="120"
+       x2="406"
+       y1="120"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3386"
+       y2="105"
+       x2="406"
+       y1="105"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3388"
+       y2="90"
+       x2="406"
+       y1="90"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3390"
+       y2="75"
+       x2="406"
+       y1="75"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3392"
+       y2="60"
+       x2="406"
+       y1="60"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3394"
+       y2="45"
+       x2="406"
+       y1="45"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3396"
+       y2="30"
+       x2="406"
+       y1="30"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3398"
+       y2="15"
+       x2="406"
+       y1="15"
+       x1="1" />
+    <line
+       style="stroke:#e7e7e7;stroke-width:1;stroke-dasharray:none"
+       id="line3400"
+       y2="0"
+       x2="406"
+       y1="0"
+       x1="1" />
+  </g>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="260"
+     sodipodi:cx="0"
+     style="fill:#0000ff;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="260"
+     cx="0"
+     id="punto00"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3404"> WAP 1.x = 180.0%</desc>
+    <animate
+       id="animate3406"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="0.1s"
+       attributeName="r" />
+    <set
+       id="set3408"
+       end="0.1s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="230"
+     sodipodi:cx="50"
+     style="fill:#0000ff;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="230"
+     cx="50"
+     id="punto01"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3411"> WAP 1.x = 315.0%</desc>
+    <animate
+       id="animate3413"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="0.1s"
+       attributeName="r" />
+    <set
+       id="set3415"
+       end="0.1s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#0000ff;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="452.53317"
+     x2="230.65955"
+     y1="500.465"
+     x1="151.12827"
+     id="linea01"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3418"> WAP 1.x = </desc>
+    <animate
+       id="animate3420"
+       to="230.0"
+       from="260.0"
+       dur="0.3s"
+       begin="0.1s"
+       attributeName="y2" />
+    <animate
+       id="animate3422"
+       to="50.0"
+       from="0.0"
+       dur="0.3s"
+       begin="0.1s"
+       attributeName="x2" />
+    <set
+       id="set3424"
+       end="0.1s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="191.77777"
+     sodipodi:cx="100"
+     style="fill:#0000ff;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="191.77777"
+     cx="100"
+     id="punto02"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3427"> WAP 1.x = 487.0%</desc>
+    <animate
+       id="animate3429"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="0.4s"
+       attributeName="r" />
+    <set
+       id="set3431"
+       end="0.4s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#0000ff;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="391.46445"
+     x2="310.1908"
+     y1="452.53317"
+     x1="230.65955"
+     id="linea02"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3434"> WAP 1.x = </desc>
+    <animate
+       id="animate3436"
+       to="191.77777777777777"
+       from="230.0"
+       dur="0.3s"
+       begin="0.4s"
+       attributeName="y2" />
+    <animate
+       id="animate3438"
+       to="100.0"
+       from="50.0"
+       dur="0.3s"
+       begin="0.4s"
+       attributeName="x2" />
+    <set
+       id="set3440"
+       end="0.4s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="168.88889"
+     sodipodi:cx="150"
+     style="fill:#0000ff;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="168.88889"
+     cx="150"
+     id="punto03"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3443"> WAP 1.x = 590.0%</desc>
+    <animate
+       id="animate3445"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="0.7s"
+       attributeName="r" />
+    <set
+       id="set3447"
+       end="0.7s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#0000ff;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="354.89423"
+     x2="389.72208"
+     y1="391.46445"
+     x1="310.1908"
+     id="linea03"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3450"> WAP 1.x = </desc>
+    <animate
+       id="animate3452"
+       to="168.88888888888889"
+       from="191.77777777777777"
+       dur="0.3s"
+       begin="0.7s"
+       attributeName="y2" />
+    <animate
+       id="animate3454"
+       to="150.0"
+       from="100.0"
+       dur="0.3s"
+       begin="0.7s"
+       attributeName="x2" />
+    <set
+       id="set3456"
+       end="0.7s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="186"
+     sodipodi:cx="200"
+     style="fill:#0000ff;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="186"
+     cx="200"
+     id="punto04"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3459"> WAP 1.x = 513.0%</desc>
+    <animate
+       id="animate3461"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="1.0s"
+       attributeName="r" />
+    <set
+       id="set3463"
+       end="1.0s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#0000ff;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="382.23315"
+     x2="469.25333"
+     y1="354.89423"
+     x1="389.72208"
+     id="linea04"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3466"> WAP 1.x = </desc>
+    <animate
+       id="animate3468"
+       to="186.0"
+       from="168.88888888888889"
+       dur="0.3s"
+       begin="1.0s"
+       attributeName="y2" />
+    <animate
+       id="animate3470"
+       to="200.0"
+       from="150.0"
+       dur="0.3s"
+       begin="1.0s"
+       attributeName="x2" />
+    <set
+       id="set3472"
+       end="1.0s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="214.22223"
+     sodipodi:cx="250"
+     style="fill:#0000ff;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="214.22223"
+     cx="250"
+     id="punto05"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3475"> WAP 1.x = 386.0%</desc>
+    <animate
+       id="animate3477"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="1.3s"
+       attributeName="r" />
+    <set
+       id="set3479"
+       end="1.3s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#0000ff;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="427.32458"
+     x2="548.78461"
+     y1="382.23315"
+     x1="469.25333"
+     id="linea05"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3482"> WAP 1.x = </desc>
+    <animate
+       id="animate3484"
+       to="214.22222222222223"
+       from="186.0"
+       dur="0.3s"
+       begin="1.3s"
+       attributeName="y2" />
+    <animate
+       id="animate3486"
+       to="250.0"
+       from="200.0"
+       dur="0.3s"
+       begin="1.3s"
+       attributeName="x2" />
+    <set
+       id="set3488"
+       end="1.3s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="254"
+     sodipodi:cx="300"
+     style="fill:#0000ff;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="254"
+     cx="300"
+     id="punto06"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3491"> WAP 1.x = 207.0%</desc>
+    <animate
+       id="animate3493"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="1.6s"
+       attributeName="r" />
+    <set
+       id="set3495"
+       end="1.6s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#0000ff;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="490.87863"
+     x2="628.31586"
+     y1="427.32458"
+     x1="548.78461"
+     id="linea06"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3498"> WAP 1.x = </desc>
+    <animate
+       id="animate3500"
+       to="254.0"
+       from="214.22222222222223"
+       dur="0.3s"
+       begin="1.6s"
+       attributeName="y2" />
+    <animate
+       id="animate3502"
+       to="300.0"
+       from="250.0"
+       dur="0.3s"
+       begin="1.6s"
+       attributeName="x2" />
+    <set
+       id="set3504"
+       end="1.6s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="271.55554"
+     sodipodi:cx="350"
+     style="fill:#0000ff;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="271.55554"
+     cx="350"
+     id="punto07"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3507"> WAP 1.x = 128.0%</desc>
+    <animate
+       id="animate3509"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="1.9s"
+       attributeName="r" />
+    <set
+       id="set3511"
+       end="1.9s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#0000ff;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="518.92761"
+     x2="707.84711"
+     y1="490.87863"
+     x1="628.31586"
+     id="linea07"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3514"> WAP 1.x = </desc>
+    <animate
+       id="animate3516"
+       to="271.55555555555554"
+       from="254.0"
+       dur="0.3s"
+       begin="1.9s"
+       attributeName="y2" />
+    <animate
+       id="animate3518"
+       to="350.0"
+       from="300.0"
+       dur="0.3s"
+       begin="1.9s"
+       attributeName="x2" />
+    <set
+       id="set3520"
+       end="1.9s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="300"
+     sodipodi:cx="0"
+     style="fill:#ff0000;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="300"
+     cx="0"
+     id="punto10"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3523"> WAP 2.x/XHTML = 0.0%</desc>
+    <animate
+       id="animate3525"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="2.2s"
+       attributeName="r" />
+    <set
+       id="set3527"
+       end="2.2s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="297.77777"
+     sodipodi:cx="50"
+     style="fill:#ff0000;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="297.77777"
+     cx="50"
+     id="punto11"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3530"> WAP 2.x/XHTML = 10.0%</desc>
+    <animate
+       id="animate3532"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="2.2s"
+       attributeName="r" />
+    <set
+       id="set3534"
+       end="2.2s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#ff0000;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="560.82361"
+     x2="230.65955"
+     y1="564.37402"
+     x1="151.12827"
+     id="linea11"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3537"> WAP 2.x/XHTML = </desc>
+    <animate
+       id="animate3539"
+       to="297.77777777777777"
+       from="300.0"
+       dur="0.3s"
+       begin="2.2s"
+       attributeName="y2" />
+    <animate
+       id="animate3541"
+       to="50.0"
+       from="0.0"
+       dur="0.3s"
+       begin="2.2s"
+       attributeName="x2" />
+    <set
+       id="set3543"
+       end="2.2s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="280.66666"
+     sodipodi:cx="100"
+     style="fill:#ff0000;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="280.66666"
+     cx="100"
+     id="punto12"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3546"> WAP 2.x/XHTML = 87.0%</desc>
+    <animate
+       id="animate3548"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="2.5s"
+       attributeName="r" />
+    <set
+       id="set3550"
+       end="2.5s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#ff0000;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="533.48468"
+     x2="310.1908"
+     y1="560.82361"
+     x1="230.65955"
+     id="linea12"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3553"> WAP 2.x/XHTML = </desc>
+    <animate
+       id="animate3555"
+       to="280.6666666666667"
+       from="297.77777777777777"
+       dur="0.3s"
+       begin="2.5s"
+       attributeName="y2" />
+    <animate
+       id="animate3557"
+       to="100.0"
+       from="50.0"
+       dur="0.3s"
+       begin="2.5s"
+       attributeName="x2" />
+    <set
+       id="set3559"
+       end="2.5s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="250.22223"
+     sodipodi:cx="150"
+     style="fill:#ff0000;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="250.22223"
+     cx="150"
+     id="punto13"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3562"> WAP 2.x/XHTML = 224.0%</desc>
+    <animate
+       id="animate3564"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="2.8s"
+       attributeName="r" />
+    <set
+       id="set3566"
+       end="2.8s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#ff0000;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="484.84277"
+     x2="389.72208"
+     y1="533.48468"
+     x1="310.1908"
+     id="linea13"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3569"> WAP 2.x/XHTML = </desc>
+    <animate
+       id="animate3571"
+       to="250.22222222222223"
+       from="280.6666666666667"
+       dur="0.3s"
+       begin="2.8s"
+       attributeName="y2" />
+    <animate
+       id="animate3573"
+       to="150.0"
+       from="100.0"
+       dur="0.3s"
+       begin="2.8s"
+       attributeName="x2" />
+    <set
+       id="set3575"
+       end="2.8s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="186"
+     sodipodi:cx="200"
+     style="fill:#ff0000;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="186"
+     cx="200"
+     id="punto14"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3578"> WAP 2.x/XHTML = 513.0%</desc>
+    <animate
+       id="animate3580"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="3.1s"
+       attributeName="r" />
+    <set
+       id="set3582"
+       end="3.1s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#ff0000;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="382.23315"
+     x2="469.25333"
+     y1="484.84277"
+     x1="389.72208"
+     id="linea14"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3585"> WAP 2.x/XHTML = </desc>
+    <animate
+       id="animate3587"
+       to="186.0"
+       from="250.22222222222223"
+       dur="0.3s"
+       begin="3.1s"
+       attributeName="y2" />
+    <animate
+       id="animate3589"
+       to="200.0"
+       from="150.0"
+       dur="0.3s"
+       begin="3.1s"
+       attributeName="x2" />
+    <set
+       id="set3591"
+       end="3.1s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="124.44444"
+     sodipodi:cx="250"
+     style="fill:#ff0000;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="124.44444"
+     cx="250"
+     id="punto15"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3594"> WAP 2.x/XHTML = 790.0%</desc>
+    <animate
+       id="animate3596"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="3.4s"
+       attributeName="r" />
+    <set
+       id="set3598"
+       end="3.4s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#ff0000;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="283.88409"
+     x2="548.78461"
+     y1="382.23315"
+     x1="469.25333"
+     id="linea15"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3601"> WAP 2.x/XHTML = </desc>
+    <animate
+       id="animate3603"
+       to="124.44444444444446"
+       from="186.0"
+       dur="0.3s"
+       begin="3.4s"
+       attributeName="y2" />
+    <animate
+       id="animate3605"
+       to="250.0"
+       from="200.0"
+       dur="0.3s"
+       begin="3.4s"
+       attributeName="x2" />
+    <set
+       id="set3607"
+       end="3.4s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="66"
+     sodipodi:cx="300"
+     style="fill:#ff0000;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="66"
+     cx="300"
+     id="punto16"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3610"> WAP 2.x/XHTML = 1053.0%</desc>
+    <animate
+       id="animate3612"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="3.7s"
+       attributeName="r" />
+    <set
+       id="set3614"
+       end="3.7s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#ff0000;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="190.50578"
+     x2="628.31586"
+     y1="283.88409"
+     x1="548.78461"
+     id="linea16"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3617"> WAP 2.x/XHTML = </desc>
+    <animate
+       id="animate3619"
+       to="66.0"
+       from="124.44444444444446"
+       dur="0.3s"
+       begin="3.7s"
+       attributeName="y2" />
+    <animate
+       id="animate3621"
+       to="300.0"
+       from="250.0"
+       dur="0.3s"
+       begin="3.7s"
+       attributeName="x2" />
+    <set
+       id="set3623"
+       end="3.7s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="26"
+     sodipodi:cx="350"
+     style="fill:#ff0000;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="26"
+     cx="350"
+     id="punto17"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3626"> WAP 2.x/XHTML = 1233.0%</desc>
+    <animate
+       id="animate3628"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="4.0s"
+       attributeName="r" />
+    <set
+       id="set3630"
+       end="4.0s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#ff0000;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="126.59668"
+     x2="707.84711"
+     y1="190.50578"
+     x1="628.31586"
+     id="linea17"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3633"> WAP 2.x/XHTML = </desc>
+    <animate
+       id="animate3635"
+       to="26.0"
+       from="66.0"
+       dur="0.3s"
+       begin="4.0s"
+       attributeName="y2" />
+    <animate
+       id="animate3637"
+       to="350.0"
+       from="300.0"
+       dur="0.3s"
+       begin="4.0s"
+       attributeName="x2" />
+    <set
+       id="set3639"
+       end="4.0s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="260"
+     sodipodi:cx="0"
+     style="fill:#32cd32;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="260"
+     cx="0"
+     id="punto20"
+     transform="matrix(2.013262,0,0,1.827542,151.9735,24.84452)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3642"> Terminales con WAP (total) = 180.0%</desc>
+    <animate
+       id="animate3644"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="4.3s"
+       attributeName="r" />
+    <set
+       id="set3646"
+       end="4.3s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="228.88889"
+     sodipodi:cx="50"
+     style="fill:#32cd32;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="228.88889"
+     cx="50"
+     id="punto21"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3649"> Terminales con WAP (total) = 320.0%</desc>
+    <animate
+       id="animate3651"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="4.3s"
+       attributeName="r" />
+    <set
+       id="set3653"
+       end="4.3s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#32cd32;stroke-width:3.04931903;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="450.7579"
+     x2="230.65955"
+     y1="500.465"
+     x1="151.12827"
+     id="linea21"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3656"> Terminales con WAP (total) = </desc>
+    <animate
+       id="animate3658"
+       to="228.88888888888889"
+       from="260.0"
+       dur="0.3s"
+       begin="4.3s"
+       attributeName="y2" />
+    <animate
+       id="animate3660"
+       to="50.0"
+       from="0.0"
+       dur="0.3s"
+       begin="4.3s"
+       attributeName="x2" />
+    <set
+       id="set3662"
+       end="4.3s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="171.33333"
+     sodipodi:cx="100"
+     style="fill:#32cd32;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="171.33333"
+     cx="100"
+     id="punto22"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3665"> Terminales con WAP (total) = 579.0%</desc>
+    <animate
+       id="animate3667"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="4.6s"
+       attributeName="r" />
+    <set
+       id="set3669"
+       end="4.6s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#32cd32;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="358.79977"
+     x2="310.1908"
+     y1="450.7579"
+     x1="230.65955"
+     id="linea22"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3672"> Terminales con WAP (total) = </desc>
+    <animate
+       id="animate3674"
+       to="171.33333333333334"
+       from="228.88888888888889"
+       dur="0.3s"
+       begin="4.6s"
+       attributeName="y2" />
+    <animate
+       id="animate3676"
+       to="100.0"
+       from="50.0"
+       dur="0.3s"
+       begin="4.6s"
+       attributeName="x2" />
+    <set
+       id="set3678"
+       end="4.6s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="116.22222"
+     sodipodi:cx="150"
+     style="fill:#32cd32;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="116.22222"
+     cx="150"
+     id="punto23"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3681"> Terminales con WAP (total) = 827.0%</desc>
+    <animate
+       id="animate3683"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="4.9s"
+       attributeName="r" />
+    <set
+       id="set3685"
+       end="4.9s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#32cd32;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="270.74722"
+     x2="389.72208"
+     y1="358.79977"
+     x1="310.1908"
+     id="linea23"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3688"> Terminales con WAP (total) = </desc>
+    <animate
+       id="animate3690"
+       to="116.22222222222223"
+       from="171.33333333333334"
+       dur="0.3s"
+       begin="4.9s"
+       attributeName="y2" />
+    <animate
+       id="animate3692"
+       to="150.0"
+       from="100.0"
+       dur="0.3s"
+       begin="4.9s"
+       attributeName="x2" />
+    <set
+       id="set3694"
+       end="4.9s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="75.777779"
+     sodipodi:cx="200"
+     style="fill:#32cd32;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="75.777779"
+     cx="200"
+     id="punto24"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3697"> Terminales con WAP (total) = 1009.0%</desc>
+    <animate
+       id="animate3699"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="5.2s"
+       attributeName="r" />
+    <set
+       id="set3701"
+       end="5.2s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#32cd32;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="206.12802"
+     x2="469.25333"
+     y1="270.74722"
+     x1="389.72208"
+     id="linea24"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3704"> Terminales con WAP (total) = </desc>
+    <animate
+       id="animate3706"
+       to="75.77777777777777"
+       from="116.22222222222223"
+       dur="0.3s"
+       begin="5.2s"
+       attributeName="y2" />
+    <animate
+       id="animate3708"
+       to="200.0"
+       from="150.0"
+       dur="0.3s"
+       begin="5.2s"
+       attributeName="x2" />
+    <set
+       id="set3710"
+       end="5.2s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="41.333332"
+     sodipodi:cx="250"
+     style="fill:#32cd32;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="41.333332"
+     cx="250"
+     id="punto25"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3713"> Terminales con WAP (total) = 1164.0%</desc>
+    <animate
+       id="animate3715"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="5.5s"
+       attributeName="r" />
+    <set
+       id="set3717"
+       end="5.5s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#32cd32;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="151.09517"
+     x2="548.78461"
+     y1="206.12802"
+     x1="469.25333"
+     id="linea25"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3720"> Terminales con WAP (total) = </desc>
+    <animate
+       id="animate3722"
+       to="41.333333333333314"
+       from="75.77777777777777"
+       dur="0.3s"
+       begin="5.5s"
+       attributeName="y2" />
+    <animate
+       id="animate3724"
+       to="250.0"
+       from="200.0"
+       dur="0.3s"
+       begin="5.5s"
+       attributeName="x2" />
+    <set
+       id="set3726"
+       end="5.5s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="25.555555"
+     sodipodi:cx="300"
+     style="fill:#32cd32;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="25.555555"
+     cx="300"
+     id="punto26"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3729"> Terminales con WAP (total) = 1235.0%</desc>
+    <animate
+       id="animate3731"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="5.8s"
+       attributeName="r" />
+    <set
+       id="set3733"
+       end="5.8s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#32cd32;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="125.88657"
+     x2="628.31586"
+     y1="151.09517"
+     x1="548.78461"
+     id="linea26"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3736"> Terminales con WAP (total) = </desc>
+    <animate
+       id="animate3738"
+       to="25.555555555555543"
+       from="41.333333333333314"
+       dur="0.3s"
+       begin="5.8s"
+       attributeName="y2" />
+    <animate
+       id="animate3740"
+       to="300.0"
+       from="250.0"
+       dur="0.3s"
+       begin="5.8s"
+       attributeName="x2" />
+    <set
+       id="set3742"
+       end="5.8s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="0"
+     sodipodi:cx="350"
+     style="fill:#32cd32;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="0"
+     cx="350"
+     id="punto27"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3745"> Terminales con WAP (total) = 1350.0%</desc>
+    <animate
+       id="animate3747"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="6.1s"
+       attributeName="r" />
+    <set
+       id="set3749"
+       end="6.1s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#32cd32;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="85.055763"
+     x2="707.84711"
+     y1="125.88657"
+     x1="628.31586"
+     id="linea27"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3752"> Terminales con WAP (total) = </desc>
+    <animate
+       id="animate3754"
+       to="-0.0"
+       from="25.555555555555543"
+       dur="0.3s"
+       begin="6.1s"
+       attributeName="y2" />
+    <animate
+       id="animate3756"
+       to="350.0"
+       from="300.0"
+       dur="0.3s"
+       begin="6.1s"
+       attributeName="x2" />
+    <set
+       id="set3758"
+       end="6.1s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="296.66666"
+     sodipodi:cx="0"
+     style="fill:#ffd700;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="296.66666"
+     cx="0"
+     id="punto30"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3761"> Portátiles(total) = 15.0%</desc>
+    <animate
+       id="animate3763"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="6.4s"
+       attributeName="r" />
+    <set
+       id="set3765"
+       end="6.4s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="289.33334"
+     sodipodi:cx="50"
+     style="fill:#ffd700;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="289.33334"
+     cx="50"
+     id="punto31"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3768"> Portátiles(total) = 48.0%</desc>
+    <animate
+       id="animate3770"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="6.4s"
+       attributeName="r" />
+    <set
+       id="set3772"
+       end="6.4s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#ffd700;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="547.33173"
+     x2="230.65955"
+     y1="559.04834"
+     x1="151.12827"
+     id="linea31"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3775"> Portátiles(total) = </desc>
+    <animate
+       id="animate3777"
+       to="289.3333333333333"
+       from="296.6666666666667"
+       dur="0.3s"
+       begin="6.4s"
+       attributeName="y2" />
+    <animate
+       id="animate3779"
+       to="50.0"
+       from="0.0"
+       dur="0.3s"
+       begin="6.4s"
+       attributeName="x2" />
+    <set
+       id="set3781"
+       end="6.4s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="285.11111"
+     sodipodi:cx="100"
+     style="fill:#ffd700;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="285.11111"
+     cx="100"
+     id="punto32"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3784"> Portátiles(total) = 67.0%</desc>
+    <animate
+       id="animate3786"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="6.7s"
+       attributeName="r" />
+    <set
+       id="set3788"
+       end="6.7s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#ffd700;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="540.58569"
+     x2="310.1908"
+     y1="547.33173"
+     x1="230.65955"
+     id="linea32"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3791"> Portátiles(total) = </desc>
+    <animate
+       id="animate3793"
+       to="285.1111111111111"
+       from="289.3333333333333"
+       dur="0.3s"
+       begin="6.7s"
+       attributeName="y2" />
+    <animate
+       id="animate3795"
+       to="100.0"
+       from="50.0"
+       dur="0.3s"
+       begin="6.7s"
+       attributeName="x2" />
+    <set
+       id="set3797"
+       end="6.7s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="282.44446"
+     sodipodi:cx="150"
+     style="fill:#ffd700;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="282.44446"
+     cx="150"
+     id="punto33"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3800"> Portátiles(total) = 79.0%</desc>
+    <animate
+       id="animate3802"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="7.0s"
+       attributeName="r" />
+    <set
+       id="set3804"
+       end="7.0s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#ffd700;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="536.32513"
+     x2="389.72208"
+     y1="540.58569"
+     x1="310.1908"
+     id="linea33"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3807"> Portátiles(total) = </desc>
+    <animate
+       id="animate3809"
+       to="282.44444444444446"
+       from="285.1111111111111"
+       dur="0.3s"
+       begin="7.0s"
+       attributeName="y2" />
+    <animate
+       id="animate3811"
+       to="150.0"
+       from="100.0"
+       dur="0.3s"
+       begin="7.0s"
+       attributeName="x2" />
+    <set
+       id="set3813"
+       end="7.0s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="276.66666"
+     sodipodi:cx="200"
+     style="fill:#ffd700;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="276.66666"
+     cx="200"
+     id="punto34"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3816"> Portátiles(total) = 105.0%</desc>
+    <animate
+       id="animate3818"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="7.3s"
+       attributeName="r" />
+    <set
+       id="set3820"
+       end="7.3s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#ffd700;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="527.09375"
+     x2="469.25333"
+     y1="536.32513"
+     x1="389.72208"
+     id="linea34"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3823"> Portátiles(total) = </desc>
+    <animate
+       id="animate3825"
+       to="276.6666666666667"
+       from="282.44444444444446"
+       dur="0.3s"
+       begin="7.3s"
+       attributeName="y2" />
+    <animate
+       id="animate3827"
+       to="200.0"
+       from="150.0"
+       dur="0.3s"
+       begin="7.3s"
+       attributeName="x2" />
+    <set
+       id="set3829"
+       end="7.3s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="268.22223"
+     sodipodi:cx="250"
+     style="fill:#ffd700;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="268.22223"
+     cx="250"
+     id="punto35"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3832"> Portátiles(total) = 143.0%</desc>
+    <animate
+       id="animate3834"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="7.6s"
+       attributeName="r" />
+    <set
+       id="set3836"
+       end="7.6s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#ffd700;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="513.60193"
+     x2="548.78461"
+     y1="527.09375"
+     x1="469.25333"
+     id="linea35"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3839"> Portátiles(total) = </desc>
+    <animate
+       id="animate3841"
+       to="268.22222222222223"
+       from="276.6666666666667"
+       dur="0.3s"
+       begin="7.6s"
+       attributeName="y2" />
+    <animate
+       id="animate3843"
+       to="250.0"
+       from="200.0"
+       dur="0.3s"
+       begin="7.6s"
+       attributeName="x2" />
+    <set
+       id="set3845"
+       end="7.6s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="262"
+     sodipodi:cx="300"
+     style="fill:#ffd700;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="262"
+     cx="300"
+     id="punto36"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3848"> Portátiles(total) = 171.0%</desc>
+    <animate
+       id="animate3850"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="7.9s"
+       attributeName="r" />
+    <set
+       id="set3852"
+       end="7.9s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#ffd700;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="503.66046"
+     x2="628.31586"
+     y1="513.60193"
+     x1="548.78461"
+     id="linea36"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3855"> Portátiles(total) = </desc>
+    <animate
+       id="animate3857"
+       to="262.0"
+       from="268.22222222222223"
+       dur="0.3s"
+       begin="7.9s"
+       attributeName="y2" />
+    <animate
+       id="animate3859"
+       to="300.0"
+       from="250.0"
+       dur="0.3s"
+       begin="7.9s"
+       attributeName="x2" />
+    <set
+       id="set3861"
+       end="7.9s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="257.11111"
+     sodipodi:cx="350"
+     style="fill:#ffd700;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="257.11111"
+     cx="350"
+     id="punto37"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3864"> Portátiles(total) = 193.0%</desc>
+    <animate
+       id="animate3866"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="8.2s"
+       attributeName="r" />
+    <set
+       id="set3868"
+       end="8.2s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#ffd700;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="495.8493"
+     x2="707.84711"
+     y1="503.66046"
+     x1="628.31586"
+     id="linea37"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3871"> Portátiles(total) = </desc>
+    <animate
+       id="animate3873"
+       to="257.1111111111111"
+       from="262.0"
+       dur="0.3s"
+       begin="8.2s"
+       attributeName="y2" />
+    <animate
+       id="animate3875"
+       to="350.0"
+       from="300.0"
+       dur="0.3s"
+       begin="8.2s"
+       attributeName="x2" />
+    <set
+       id="set3877"
+       end="8.2s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="300"
+     sodipodi:cx="0"
+     style="fill:#778899;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="300"
+     cx="0"
+     id="punto40"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3880"> Portátiles con WiFi (total) = 0.0%</desc>
+    <animate
+       id="animate3882"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="8.5s"
+       attributeName="r" />
+    <set
+       id="set3884"
+       end="8.5s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="298.88889"
+     sodipodi:cx="50"
+     style="fill:#778899;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="298.88889"
+     cx="50"
+     id="punto41"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3887"> Portátiles con WiFi (total) = 5.0%</desc>
+    <animate
+       id="animate3889"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="8.5s"
+       attributeName="r" />
+    <set
+       id="set3891"
+       end="8.5s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#778899;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="562.59888"
+     x2="230.65955"
+     y1="564.37402"
+     x1="151.12827"
+     id="linea41"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3894"> Portátiles con WiFi (total) = </desc>
+    <animate
+       id="animate3896"
+       to="298.8888888888889"
+       from="300.0"
+       dur="0.3s"
+       begin="8.5s"
+       attributeName="y2" />
+    <animate
+       id="animate3898"
+       to="50.0"
+       from="0.0"
+       dur="0.3s"
+       begin="8.5s"
+       attributeName="x2" />
+    <set
+       id="set3900"
+       end="8.5s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="297.77777"
+     sodipodi:cx="100"
+     style="fill:#778899;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="297.77777"
+     cx="100"
+     id="punto42"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3903"> Portátiles con WiFi (total) = 10.0%</desc>
+    <animate
+       id="animate3905"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="8.8s"
+       attributeName="r" />
+    <set
+       id="set3907"
+       end="8.8s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#778899;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="560.82361"
+     x2="310.1908"
+     y1="562.59888"
+     x1="230.65955"
+     id="linea42"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3910"> Portátiles con WiFi (total) = </desc>
+    <animate
+       id="animate3912"
+       to="297.77777777777777"
+       from="298.8888888888889"
+       dur="0.3s"
+       begin="8.8s"
+       attributeName="y2" />
+    <animate
+       id="animate3914"
+       to="100.0"
+       from="50.0"
+       dur="0.3s"
+       begin="8.8s"
+       attributeName="x2" />
+    <set
+       id="set3916"
+       end="8.8s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="294.44446"
+     sodipodi:cx="150"
+     style="fill:#778899;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="294.44446"
+     cx="150"
+     id="punto43"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3919"> Portátiles con WiFi (total) = 25.0%</desc>
+    <animate
+       id="animate3921"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="9.1s"
+       attributeName="r" />
+    <set
+       id="set3923"
+       end="9.1s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#778899;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="555.49786"
+     x2="389.72208"
+     y1="560.82361"
+     x1="310.1908"
+     id="linea43"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3926"> Portátiles con WiFi (total) = </desc>
+    <animate
+       id="animate3928"
+       to="294.44444444444446"
+       from="297.77777777777777"
+       dur="0.3s"
+       begin="9.1s"
+       attributeName="y2" />
+    <animate
+       id="animate3930"
+       to="150.0"
+       from="100.0"
+       dur="0.3s"
+       begin="9.1s"
+       attributeName="x2" />
+    <set
+       id="set3932"
+       end="9.1s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="286.22223"
+     sodipodi:cx="200"
+     style="fill:#778899;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="286.22223"
+     cx="200"
+     id="punto44"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3935"> Portátiles con WiFi (total) = 62.0%</desc>
+    <animate
+       id="animate3937"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="9.4s"
+       attributeName="r" />
+    <set
+       id="set3939"
+       end="9.4s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#778899;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="542.36096"
+     x2="469.25333"
+     y1="555.49786"
+     x1="389.72208"
+     id="linea44"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3942"> Portátiles con WiFi (total) = </desc>
+    <animate
+       id="animate3944"
+       to="286.22222222222223"
+       from="294.44444444444446"
+       dur="0.3s"
+       begin="9.4s"
+       attributeName="y2" />
+    <animate
+       id="animate3946"
+       to="200.0"
+       from="150.0"
+       dur="0.3s"
+       begin="9.4s"
+       attributeName="x2" />
+    <set
+       id="set3948"
+       end="9.4s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="280.22223"
+     sodipodi:cx="250"
+     style="fill:#778899;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="280.22223"
+     cx="250"
+     id="punto45"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3951"> Portátiles con WiFi (total) = 89.0%</desc>
+    <animate
+       id="animate3953"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="9.7s"
+       attributeName="r" />
+    <set
+       id="set3955"
+       end="9.7s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#778899;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="532.7746"
+     x2="548.78461"
+     y1="542.36096"
+     x1="469.25333"
+     id="linea45"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3958"> Portátiles con WiFi (total) = </desc>
+    <animate
+       id="animate3960"
+       to="280.22222222222223"
+       from="286.22222222222223"
+       dur="0.3s"
+       begin="9.7s"
+       attributeName="y2" />
+    <animate
+       id="animate3962"
+       to="250.0"
+       from="200.0"
+       dur="0.3s"
+       begin="9.7s"
+       attributeName="x2" />
+    <set
+       id="set3964"
+       end="9.7s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="272.66666"
+     sodipodi:cx="300"
+     style="fill:#778899;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="272.66666"
+     cx="300"
+     id="punto46"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3967"> Portátiles con WiFi (total) = 123.0%</desc>
+    <animate
+       id="animate3969"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="10.0s"
+       attributeName="r" />
+    <set
+       id="set3971"
+       end="10.0s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#778899;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="520.70282"
+     x2="628.31586"
+     y1="532.7746"
+     x1="548.78461"
+     id="linea46"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3974"> Portátiles con WiFi (total) = </desc>
+    <animate
+       id="animate3976"
+       to="272.6666666666667"
+       from="280.22222222222223"
+       dur="0.3s"
+       begin="10.0s"
+       attributeName="y2" />
+    <animate
+       id="animate3978"
+       to="300.0"
+       from="250.0"
+       dur="0.3s"
+       begin="10.0s"
+       attributeName="x2" />
+    <set
+       id="set3980"
+       end="10.0s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+  <circle
+     sodipodi:ry="2"
+     sodipodi:rx="2"
+     sodipodi:cy="267.11111"
+     sodipodi:cx="350"
+     style="fill:#778899;stroke-width:1.50025523;stroke-miterlimit:4;stroke-dasharray:none"
+     r="2"
+     cy="267.11111"
+     cx="350"
+     id="punto47"
+     transform="matrix(1.590625,0,0,1.597728,151.1283,85.05576)"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3983"> Portátiles con WiFi (total) = 148.0%</desc>
+    <animate
+       id="animate3985"
+       to="2"
+       from="0"
+       dur="0.3s"
+       begin="10.3s"
+       attributeName="r" />
+    <set
+       id="set3987"
+       end="10.3s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </circle>
+  <line
+     style="stroke:#778899;stroke-width:2.3916657;stroke-miterlimit:4;stroke-dasharray:none"
+     y2="511.82663"
+     x2="707.84711"
+     y1="520.70282"
+     x1="628.31586"
+     id="linea47"
+     inkscape:export-filename="D:\documentos\w3c\Presentaciones\pics\Devices_stats.png"
+     inkscape:export-xdpi="72"
+     inkscape:export-ydpi="72">
+    <desc
+       id="desc3990"> Portátiles con WiFi (total) = </desc>
+    <animate
+       id="animate3992"
+       to="267.1111111111111"
+       from="272.6666666666667"
+       dur="0.3s"
+       begin="10.3s"
+       attributeName="y2" />
+    <animate
+       id="animate3994"
+       to="350.0"
+       from="300.0"
+       dur="0.3s"
+       begin="10.3s"
+       attributeName="x2" />
+    <set
+       id="set3996"
+       end="10.3s"
+       begin="0s"
+       to="hidden"
+       attributeType="CSS"
+       attributeName="visibility" />
+  </line>
+</svg>

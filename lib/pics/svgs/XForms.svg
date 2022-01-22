@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 900">
+    <title/>
+    <desc>
+        <!-- put a description here -->
+    </desc>
+    <defs>
+        <filter id="effect">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+            <feOffset in="blur" dx="6" dy="6" result="offsetBlur"/>
+            <feSpecularLighting in="blur" surfaceScale="8" specularConstant="1" specularExponent="10" result="specOut">
+                <fePointLight x="-5000" y="-10000" z="5000"/>
+            </feSpecularLighting>
+            <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+            <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
+            <feMerge>
+                <feMergeNode in="offsetBlur"/>
+                <feMergeNode in="litPaint"/>
+            </feMerge>
+        </filter>
+        <path id="inward" d="M 0 0 h 230 v 30 a 30,30 0 1,1 0,60 v 30 h -230 z" filter="url(#effect)"/>
+        <path id="outward" d="M 0 0 v 30 a 30,30 0 1,1 0,60 v 30 h 230 v -120 z" filter="url(#effect)"/>
+        <g id="model" class="whitish">
+            <use xlink:href="#inward"/>
+            <text class="onBackground centre" y="50" x="120">XForms<tspan x="120" dy="40">Model</tspan>
+            </text>
+        </g>
+        <g id="xhtml" class="blueish">
+            <use xlink:href="#outward"/>
+            <text class="onBackground centre" y="70" x="130">XHTML</text>
+        </g>
+        <g id="wml" class="lightGreenish">
+            <use xlink:href="#outward"/>
+            <text class="onBackground centre" y="70" x="130">WML</text>
+        </g>
+        <g id="svg" class="limish">
+            <use xlink:href="#outward"/>
+            <text class="onBackground centre" y="70" x="130">SVG</text>
+        </g>
+        <g id="others" class="pinkish">
+            <use xlink:href="#outward" transform="translate(20,20)"/>
+            <use xlink:href="#outward" transform="translate(10,10)"/>
+            <use xlink:href="#outward"/>
+            <text class="onBackground" style="text-anchor:middle" y="50" x="130">Proprietary<tspan x="150" dy="40" style="text-anchor:middle">Formats</tspan>
+            </text>
+        </g>
+        <g id="alternatives">
+            <ellipse rx="250" ry="400" cx="250" cy="300" class="darkYellowish" filter="url(#effect)"/>
+            <text class="onBackground" x="400" y="50" style="writing-mode: tb; glyph-orientation-vertical:0">User Interface</text>
+            <g transform="translate(100,10)">
+                <use xlink:href="#xhtml"/>
+                <use xlink:href="#svg" transform="translate(0,150)"/>
+                <use xlink:href="#wml" transform="translate(0,300)"/>
+                <use xlink:href="#others" transform="translate(0,450)"/>
+            </g>
+        </g>
+    </defs>
+    <g transform="translate(0,120)">
+        <use xlink:href="#model" transform="translate(0,230)"/>
+        <use xlink:href="#alternatives" transform="translate(300)"/>
+    </g>
+</svg>

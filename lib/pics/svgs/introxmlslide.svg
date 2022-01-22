@@ -1,0 +1,203 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg width="922" height="590">
+  <title>Extra facilities creep in to HTML...</title>
+	<desc>A schematic view of an html with a head and body</desc>
+  <rect width="922" height="590" class="background" />
+  <g transform="scale(0.9) translate(0,-100)">
+    <g transform="translate(10,100)">
+      <g transform="translate(10,40)">
+        <rect width="120" height="30" />
+        <text x="10" y="24"> &lt;html&gt;</text>
+      </g>
+      <g transform="translate(60,80)">
+			  <desc>'head' part; includes a box for metadata and a comment: remained fairly static over the years</desc>
+        <rect class="yellowish" width="880" height="150" />
+        <g transform="translate(10,10)">
+          <rect width="120" height="30" />
+          <text x="10" y="24">&lt;head&gt;</text>
+        </g>
+        <g transform="translate(10,110)">
+          <rect width="120" height="30" />
+          <text x="10" y="24">&lt;/head&gt;</text>
+        </g>
+        <g transform="translate(100,60)">
+          <rect width="120" height="30" />
+          <text x="60" y="24" class="centre">Metadata</text>
+        </g>
+        <text x="280" y="80">Remained fairly static over the years</text>
+      </g>
+
+      <g transform="translate(60,260)">
+			  <desc>'body' part, with various facilities creeping in (image, forms, tables, frames). 
+				Finally a separate table refers to the submittors of XML</desc>
+				
+        <rect class="greenish" width="940" height="300" />
+
+        <g transform="translate(10,10)">
+          <rect width="120" height="30" />
+          <text x="10" y="24">&lt;body&gt;</text>
+        </g>
+
+        <g transform="translate(10,260)">
+          <rect width="120" height="30" />
+          <text x="10" y="24">&lt;/body&gt;</text>
+        </g>
+
+        <g transform="translate(100,115)">
+          <rect  width="140" height="30" />
+          <text x="70" y="24" class="centre">Markup</text>
+        </g>
+
+        <g transform="translate(230,80)">
+          <rect width="140" height="30" />
+          <text x="70" y="24" class="centre">
+          &lt;img:92&gt;</text>
+        </g>
+
+        <g transform="translate(320,105)">
+          <rect width="140" height="30" />
+
+          <text x="70" y="24" class="centre">
+          &lt;table:93&gt;</text>
+        </g>
+
+        <g transform="translate(410,130)">
+          <rect width="140" height="30" />
+
+          <text x="70" y="24" class="centre">
+          &lt;form:94&gt;</text>
+        </g>
+
+        <g transform="translate(500,155)">
+          <rect width="140" height="30" />
+
+          <text x="70" y="24" class="centre">
+          &lt;frame:95&gt;</text>
+        </g>
+
+        <g transform="translate(350,20)">
+          <rect width="250" height="60" />
+          <text x="10" y="24">and Styling via elements</text>
+          <text x="10" y="54">and attributes</text>
+        </g>
+
+        <g transform="translate(310,210)">
+          <rect width="350" height="60" />
+          <text x="10" y="24" class="greenish">1996: Separate Style from Content</text>
+          <text x="10" y="54" class="greenish">1998: HTML 4.0 and CSS</text>
+        </g>
+
+        <g transform="translate(640,20)">
+          <rect width="220" height="60" />
+          <text x="110" y="24" class="centre reddish">User Demand for</text>
+          <text x="110" y="54" class="centre reddish">Personalised Markup</text>
+        </g>
+
+        <g transform="translate(670,90)">
+          <g transform="scale(0.4)">
+            <rect class="table" width="550" height="470" />
+            <g transform="translate(5,0)">
+              <text y="24" class="left">1997</text>
+
+              <text y="44" class="left">DHTML</text>
+
+              <text y="64" class="left">CDF</text>
+
+              <text y="84" class="left">XML</text>
+
+              <text y="104" class="left">HDML</text>
+
+              <text y="124" class="left">Meta Content</text>
+
+              <text y="144" class="left">OSD</text>
+
+              <text y="164" class="left">XSL</text>
+
+              <text y="184" class="left">WIDL</text>
+
+              <text y="224" style="color:red" class="left">
+              Submitted by:</text>
+
+              <text y="244" style="color:red" class="left">
+              Microsoft, Marimba, DataChannel,CNET,
+              Vignette</text>
+
+              <text y="264" style="color:red" class="left">
+              Alcatel, ArborText, Autodesk, GMD, SAIC/Bellcore,
+              NEC</text>
+
+              <text y="284" style="color:red" class="left">
+              ATandT, Inso, MacroMedia,</text>
+
+              <text y="304" style="color:red" class="left">
+              GEMPLUS, webMethods, Visio,</text>
+
+              <text y="324" style="color:red" class="left">
+              Mitsubishi, HP, FSTC, JetForm, Access,
+              Toyota,</text>
+
+              <text y="344" style="color:red" class="left">Sun,
+              CCLRC, IBM, Sharp, Aplix, Ericcson,</text>
+
+              <text y="364" style="color:red" class="left">
+              Tandem, INRIA ,Veo, Cisco, Fujitsu,</text>
+
+              <text y="384" style="color:red" class="left">
+              Netscape, Adobe, UWI, Excosoft</text>
+            </g>
+
+            <g transform="translate(140,0)">
+              <text y="24" class="left">1998</text>
+
+              <text y="44" class="left">XML Styling</text>
+
+              <text y="64" class="left">XML Schemas</text>
+
+              <text y="84" class="left">Web Collections</text>
+
+              <text y="104" class="left">Compact HTML</text>
+
+              <text y="124" class="left">Web Schematics</text>
+
+              <text y="144" class="left">PGML</text>
+
+              <text y="164" class="left">Web Broker</text>
+
+              <text y="184" class="left">VML</text>
+            </g>
+
+            <g transform="translate(300,0)">
+              <text y="24" class="left">SDML</text>
+
+              <text y="44" class="left">Action Sheets</text>
+
+              <text y="64" class="left">DCD</text>
+
+              <text y="84" class="left">XML-QL</text>
+
+              <text y="104" class="left">OO XML Schema</text>
+
+              <text y="124" class="left">XFDL</text>
+
+              <text y="144" class="left">HTML Components</text>
+
+              <text y="164" class="left">ICE</text>
+
+              <text y="184" class="left">STTS3</text>
+
+              <text y="204" class="left">DrawML</text>
+            </g>
+          </g>
+        </g>
+      </g>
+
+      <g transform="translate(10,570)">
+        <rect width="120" height="30" />
+        <text x="10" y="24">&lt;/html&gt;</text>
+      </g>
+    </g>
+  </g>
+</svg>
+

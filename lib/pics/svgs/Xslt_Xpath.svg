@@ -1,0 +1,153 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- Generator: Mayura Draw 3.6, seriously reedited by hand through IH. -->
+<svg  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 774 449">
+  <title>Necessity of having xpath</title>
+  <desc>A switch between a simple xslt tree traversal and a complex one, to illustrate the necessity of Xpath.
+  The slide is two images overlaid (clicking on one gets to the other and vice versa): one which shows a simple
+  tree transformation referring to local nodes only (around the current node) while the other
+  refers to other parts of the source tree for the sake of the transformation.</desc>
+
+  <!-- Animation is very simple in this case: you can click to any visible entity on the screen -->
+	<!-- and the images will swap -->
+  <rect class="background" width="774" height="449" />
+	<defs>
+	    <desc>Two animation pairs, switching between two overlaid images ("SimpleCase" and "ComplexCase", respectively)</desc>
+	    <set xlink:href="#SimpleCase" attributeType="CSS" attributeName="visibility" to="hidden"
+       begin="SimpleCase.click" fill="freeze" />
+	    <set xlink:href="#ComplexCase" attributeType="CSS" attributeName="visibility" to="visible"
+       begin="SimpleCase.click" fill="freeze" />
+
+	    <set xlink:href="#SimpleCase" attributeType="CSS" attributeName="visibility" to="visible"
+       begin="ComplexCase.click" fill="freeze" />
+	    <set xlink:href="#ComplexCase" attributeType="CSS" attributeName="visibility" to="hidden"
+       begin="ComplexCase.click" fill="freeze" />
+	</defs>
+	
+	<defs>
+	    <ellipse id="TargetNode" class="reddish" style="stroke:none" cx="36" cy="57" rx="4.243" ry="4.243" />
+	    <ellipse id="TargetEtc" class="reddish" style="stroke:none" cx="138" cy="81" rx="1" ry="1" />
+	    <ellipse id="SourceNode" class="greenish" style="stroke:none" cx="36" cy="57" rx="4.243" ry="4.243" />
+	    <ellipse id="SourceEtc" class="greenish" style="stroke:none" cx="138" cy="81" rx="1" ry="1" />
+			<g id="SourceTree">
+        <path class="yellowish" d="M89.5 66 l96 -48 "/>
+        <path class="yellowish" d="M215.5 174 l0 -54 "/>
+        <path class="yellowish" d="M215.5 120 l0 -54 "/>
+        <path class="yellowish" d="M281.5 66 l-96 -48 "/>
+        <path class="yellowish" d="M215.5 66 l-30 -48 "/>
+        <path class="yellowish" d="M155.5 66 l30 -48 "/>
+        <path class="yellowish" d="M119.5 120 l-30 -54 "/>
+        <path class="yellowish" d="M53.5 120 l36 -54 "/>
+        <use xlink:href="#SourceNode" transform="matrix(0 2 2 0 71.5 -54)"/>
+        <use xlink:href="#SourceNode" transform="matrix(0 2 2 0 5.5 48)"/>
+        <use xlink:href="#SourceNode" transform="matrix(0 2 2 0 -60.5 48)"/>
+        <use xlink:href="#SourceNode" transform="matrix(0 2 2 0 101.5 -6)"/>
+        <use xlink:href="#SourceNode" transform="matrix(0 2 2 0 41.5 -6)"/>
+        <use xlink:href="#SourceNode" transform="matrix(0 2 2 0 -24.5 -6)"/>
+        <use xlink:href="#SourceNode" transform="matrix(0 2 2 0 167.5 -6)"/>
+        <use xlink:href="#SourceNode" transform="matrix(0 2 2 0 101.5 102)"/>
+        <use xlink:href="#SourceNode" transform="matrix(0 2 2 0 101.5 48)"/>
+        <use xlink:href="#SourceEtc" transform="matrix(0 2 2 0 227.5 -210)"/>
+        <use xlink:href="#SourceEtc" transform="matrix(0 2 2 0 173.5 -210)"/>
+        <use xlink:href="#SourceEtc" transform="matrix(0 2 2 0 -126.5 -210)"/>
+			</g>
+
+      <g id="TargetTree">
+        <path class="blueish" d="M613 117 l-78 48"/>
+        <path class="blueish" d="M613 117 l78 48"/>
+        <path class="blueish" d="M613 117 l0 48 "/>
+        <path class="blueish" d="M535 165 l30 54 "/>
+        <path class="blueish" d="M505 219 l0 54 "/>
+        <path class="blueish" d="M535 165 l-30 54 "/>
+        <use xlink:href="#TargetNode" transform="matrix(0 2 2 0 499 45)"/>
+        <use xlink:href="#TargetNode" transform="matrix(0 2 2 0 577 93)"/>
+        <use xlink:href="#TargetNode" transform="matrix(0 2 2 0 391 201)"/>
+        <use xlink:href="#TargetNode" transform="matrix(0 2 2 0 451 147)"/>
+        <use xlink:href="#TargetNode" transform="matrix(0 2 2 0 391 147)"/>
+        <use xlink:href="#TargetNode" transform="matrix(0 2 2 0 499 93)"/>
+        <use xlink:href="#TargetNode" transform="matrix(0 2 2 0 421 93)"/>
+        <use xlink:href="#TargetEtc" transform="matrix(0 2 2 0 313 -111)"/>
+        <use xlink:href="#TargetEtc" transform="matrix(0 2 2 0 265 -111)"/>
+        <use xlink:href="#TargetEtc" transform="matrix(0 2 2 0 601 -111)"/>
+      </g>
+
+      <g id="ExtraTarget">
+        <path class="blueish" d="M691 165 l-45 54 "/>
+        <path class="blueish" d="M691 165 l-12 54 "/>
+        <path class="blueish" d="M691 165 l21 54 "/>
+        <path class="blueish" d="M691 165 l51 51 "/>
+        <use xlink:href="#TargetNode" transform="matrix(0 2 2 0 577 93)"/>
+        <use xlink:href="#TargetNode" transform="matrix(0 2 2 0 532 147)"/>
+        <use xlink:href="#TargetNode" transform="matrix(0 2 2 0 631 147)"/>
+        <use xlink:href="#TargetNode" transform="matrix(0 2 2 0 598 147)"/>
+        <use xlink:href="#TargetNode" transform="matrix(0 2 2 0 565 147)"/>
+      </g>
+  
+      <g id="Legend">
+        <rect class="empty" transform="matrix(0 1 1 0 -89 237)" x="72" y="99" width="33" height="33"/>
+        <text class="normal whitish" transform="matrix(1 0 0 1 58 334.3)"><tspan x="0" y="0">&#34;Current&#34; node</tspan></text>
+      </g>
+			
+  		<g id="Transformation">
+    	  <use xlink:href="#SourceTree"/>
+    	  <use xlink:href="#TargetTree"/>
+    	  <use xlink:href="#Legend"/>
+  		</g>
+	</defs>
+
+  <g id="SimpleCase" style="visibility:visible">
+	  <use xlink:href="#Transformation"/>
+		<g>
+		  <desc>An empty rectangle put on the current node, an ellipse on the group of source and target nodes and an arrow
+			connecting the two. This time, the source node set is "around" from the current node's position</desc> 
+      <rect class="empty"  transform="matrix(0 1 1 0 -26 -21)" x="72" y="99" width="33" height="33"/>
+      <ellipse class="emptyGray" transform="matrix(0 1 1 0 1 36)" cx="63" cy="87" rx="59.397" ry="50.912"/>
+      <ellipse class="emptyGray" transform="matrix(0 1 1 0 451 165)" cx="63" cy="87" rx="89.095" ry="63.64"/>
+      <path class="grayish" style="fill:none;stroke-width:2 "
+      d="M136 165
+      c16.178 21.633 23.678 30.633 30 36
+      10.643 9.035 38.215 24.769 51 30
+      10.691 4.374 36.807 10.104 48 12
+      14.993 2.54 50.779 5.873 66 6
+      18.654 0.156 62.568 -4.294 81 -6
+      9.248 -0.856 22.748 -2.356 54 -6
+      "/>
+      <path class="grayish"
+      d="M466 237
+      l0.11 0.994
+      -17.338 6.957
+      -1.325 -11.927
+      18.442 2.982
+      z"/>
+		</g>
+    <text class="normal whitish" transform="matrix(1 0 0 1 22 436.3)"><tspan x="0" y="0">Simple case: XSLT uses the immediate &#34;surroundings&#34; of the current node</tspan></text>
+  </g>
+	<g id="ComplexCase" style="visibility:hidden">
+	  <use xlink:href="#Transformation"/>
+	  <use xlink:href="#ExtraTarget"/>
+		<g>
+		  <desc>An empty rectangle put on the current node, an ellipse on the group of source and target nodes and an arrow
+			connecting the two. This time, the source node set is "far away" from the current node's position</desc> 
+      <rect class="empty" transform="matrix(0 1 1 0 100 87)" x="72" y="99" width="33" height="33"/>
+      <ellipse class="emptyGray" transform="matrix(0 1 1 0 109 3)" cx="63" cy="87" rx="25.456" ry="144.25"/>
+      <ellipse class="emptyGray" transform="matrix(0 1 1 0 607 159)" cx="63" cy="87" rx="25.456" ry="67.882"/>
+      <path class="grayish" style="fill:none;stroke-width:2 "
+      d="M214 171
+      c39 -9 78.707 -3 87 -3
+      12 0 45.807 4.104 57 6
+      14.993 2.54 30 6 48 9
+      18.401 3.067 48 6 69 9
+      9.194 1.313 111 12 144 21
+      "/>
+      <path class="grayish"
+      d="M619 213
+      l-0.193 0.981
+      -18.626 1.44
+      2.311 -11.775
+      16.7 8.372
+      z"/>
+		</g>
+    <text class="normal whitish" transform="matrix(1 0 0 1 -419 404.6)"><tspan x="441" y="31.71">Complex case: XSLT uses the other areas of the source tree (eg, list of figures)</tspan></text>
+	</g>
+</svg>

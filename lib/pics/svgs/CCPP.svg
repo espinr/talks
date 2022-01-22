@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -10 510 400">
+	<desc/>
+	<defs>
+		<path id="arrowhead" class="arrow" d="M0 10 L 10 0 L 0 -10 z"/>
+		<g id="exchange">
+			<line x1="0" y1="0" x2="300" y2="0" class="arrow"/>
+			<use xlink:href="#arrowhead" transform="translate(290,0)"/>
+			<line x1="0" y1="20" x2="300" y2="20" class="arrow"/>
+			<use xlink:href="#arrowhead" transform="translate(8,20) rotate(180)"/>
+			<text class="reddish" style="text-anchor:middle" x="150" y="-10">Request with <tspan class="darkBlueish" style="stroke:none">CC/PP Profile</tspan>
+			</text>
+		</g>
+		<g id="exchangePDA">
+			<use xlink:href="#exchange"/>
+			<text class="greenish" style="text-anchor:middle" x="150" y="40">XHTML Basic</text>
+		</g>
+		<g id="exchangeScreen">
+			<use xlink:href="#exchange"/>
+			<text class="greenish" style="text-anchor:middle" x="150" y="40">XHTML</text>
+		</g>
+		<g id="exchangePhone">
+			<use xlink:href="#exchange"/>
+			<text class="greenish" style="text-anchor:middle" x="150" y="40">WML</text>
+		</g>
+	</defs>
+	<g transform="scale(0.87)">
+		<image width="300" height="190" transform="translate(0,0) scale(0.3)" xlink:href="../pngs/revo.png">
+			<desc>Image of a Psion Revo (PDA)</desc>
+		</image>
+		<use xlink:href="#exchangePDA" x="100" y="28"/>
+		<image width="140" height="120" transform="translate(-5,150) scale(0.7)" xlink:href="../pngs/workstation.png">
+			<desc>Image of a standard desktop workstation</desc>
+		</image>
+		<use xlink:href="#exchangeScreen" x="100" y="178"/>
+		<image width="37" height="86" transform="translate(30,300)" xlink:href="../jpgs/indexp2.jpg">
+			<desc>Image of a simple (Nokia) phone</desc>
+		</image>
+		<use xlink:href="#exchangePhone" x="100" y="328"/>
+		<rect width="100" height="400" y="0" x="410" class="yellowish"/>
+		<text class="greenish" style="text-anchor:middle" x="460" y="190">(Origin)</text>
+		<text class="greenish" style="text-anchor:middle" x="460" y="210">Server</text>
+	</g>
+
+</svg>

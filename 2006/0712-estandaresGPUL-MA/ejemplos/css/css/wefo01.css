@@ -1,0 +1,111 @@
+/* Los estilos básicos */
+body {
+	margin: 0;
+	font:100%/1.7 Arial, Verdana, Helvetica, Geneva, sans-serif;
+	background-color: #fff;
+	color: #585858;
+	min-height: 100%;
+}
+a img {
+	border: none;
+}
+img {
+	border: 1px #585858 solid;
+}
+a {
+	text-decoration: none;
+	border-bottom: 1px #4D5373 dashed;
+	color: #4D5373;
+	background-color: #fff;
+}
+a:link, a:visited {
+	color: #4D5373;
+	background-color: transparent;
+}
+a:hover, a:active {
+	color: #222;
+	background-color: transparent;
+}
+abbr, acronym {
+	cursor: help;
+}
+.invisible {
+	display: none;
+}
+.subrayado {
+	text-decoration: underline;
+}
+.right {
+	text-align: right;
+}
+.center {
+	text-align: center;
+}
+h2 {
+	background-color: #fff;
+	/*color: #185068;*/
+	color: #3B1587;
+	font-size: 2em;
+	font-weight: bolder;
+	line-height:1.1;
+	letter-spacing: 0.1em;
+}
+h3 {
+	background-color: #fff;
+	/*color: #6C4A52;*/
+	color: #585858;
+	font-weight: bolder;
+	letter-spacing: 0.2em;
+	border-bottom: medium #f1f1f1 solid;
+	margin-top: 2em;
+}
+/* Si tiene enlaces los h3, los muestra igual que los h3 */
+h3 a, h3 a:link, h3 a:visited {
+	background-color: #fff;
+	color: #585858;
+	border-bottom: none;
+}
+h3 a:hover, h3 a:active {
+	background-color: #fff;
+	color: #000;
+}
+p {
+	text-align: justify;
+}
+.irrelevante {
+	font-size: 90%;
+	font-style: italic;		
+}
+em {
+	font-weight: bolder;
+}
+.linkActivo {
+	font-weight: bolder;
+}
+address {
+	padding: 0.5em 0 0 1em;
+}
+dl dt {
+	margin-top: 1em;
+}
+li {
+	list-style: square;
+}
+ul {
+    margin-left: 0;
+}
+
+/* ------------- El selector del idioma -------------- */
+.selector-idioma {
+	position: absolute;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	height: 2em;	
+	text-align: center;	
+	right: 0;
+	border-left: 1px #fff solid;
+}
+
+
+

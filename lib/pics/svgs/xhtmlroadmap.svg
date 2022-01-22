@@ -1,0 +1,174 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 780 580">
+    <title>XHTML Roadmap</title>
+    <style type="text/css">
+        line.arrow, polyline.arrowLine { marker-end: url(#Triangle); stroke-width: 3 }
+    </style>
+    <desc>Various blocks, referring to XHTML related developments, lined up with corresponding dates and arrows connecting the blocks to represent the progression.
+    </desc>
+    <defs>
+        <rect class="yellowish" id="SmallModule" width="15" height="40" />
+        <marker id="Triangle" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="strokeWidth" markerWidth="5" markerHeight="4" orient="auto">
+            <path class="arrow" d="M 0 0 L 10 5 L 0 10 z"/>
+        </marker>
+    </defs>
+    <g transform="scale(0.9) translate(0,-100) translate(30,110)">    
+        <a xlink:href="http://www.w3.org/TR/html401/">
+            <g>
+                <desc>HTML 4.01 block</desc>
+                <g transform="translate(255,10)">
+                    <rect class="yellowish" width="110" height="40" />
+                    <text x="5" y="30">HTML 4.01</text>
+                </g>
+                <text class="limish" x="245" y="38" style="text-anchor: end">Available</text>
+            </g>
+        </a>
+        <g>
+            <desc>Arrow connecting HTML 4.01 to XHTML 1.0</desc>
+            <line class="arrow" x1="300" y1="50" x2="300" y2="97" />
+        </g>
+    
+        <a xlink:href="http://www.w3.org/TR/xhtml1/">
+            <g>
+                <desc>XHTML 1.0 block with characterization</desc>
+                <g transform="translate(250,100)">
+                    <rect class="yellowish" width="120" height="40" />
+                    <text x="5" y="30">XHTML 1.0</text>
+                </g>
+                <text x="240" y="120" class="normal" style="text-anchor: end">Reformulate HTML as XML</text>
+                <text class="limish" x="240" y="140" style="text-anchor: end">Available</text>
+            </g>
+        </a>
+        <g>
+            <desc>Arrow connecting XHTML 1.0 to the collection of modules</desc>				 
+            <line class="arrow" x1="300" y1="140" x2="300" y2="187" />
+        </g>
+    
+        <a xlink:href="http://www.w3.org/TR/xhtml-modularization/">
+            <g>
+                <desc>All the little modules in a row</desc>
+                <use transform="translate(200,190)" xlink:href="#SmallModule"/>
+                <use transform="translate(220,190)" xlink:href="#SmallModule"/>
+                <use transform="translate(240,190)" xlink:href="#SmallModule"/>
+                <use transform="translate(260,190)" xlink:href="#SmallModule"/>
+                <use transform="translate(280,190)" xlink:href="#SmallModule"/>
+                <use transform="translate(300,190)" xlink:href="#SmallModule"/>
+                <use transform="translate(320,190)" xlink:href="#SmallModule"/>
+                <use transform="translate(340,190)" xlink:href="#SmallModule"/>
+                <use transform="translate(360,190)" xlink:href="#SmallModule"/>
+                <use transform="translate(380,190)" xlink:href="#SmallModule"/>
+                <use transform="translate(400,190)" xlink:href="#SmallModule"/>
+                <use transform="translate(420,190)" xlink:href="#SmallModule"/>
+                <use transform="translate(440,190)" xlink:href="#SmallModule"/>
+                <text x="-20" y="205" class="normal">XHTML Modularization</text>
+                <text class="limish" x="110" y="230">Available</text>
+            </g>
+        </a>
+    
+        <g>
+            <desc>Arrow connecting the modules to XHTML Basic</desc>
+            <line class="arrow" x2="150" y2="350" x1="240" y1="227" />
+        </g>
+    
+        <a xlink:href="http://www.w3.org/TR/xhtml-basic/">
+            <desc>XHTML Basic block, with characterization</desc>
+            <g transform="translate(-30,0)">
+                <g transform="translate(100,350)">
+                    <rect class="yellowish" width="132" height="40" />
+                    <text x="3" y="26">XHTML Basic</text>
+                </g>                
+                <text class="limish" x="14" y="380">Available</text>
+                <text class="normal" x="100" y="420">Basic</text>
+                <text class="normal" x="100" y="450">Tables</text>
+                <text class="normal" x="100" y="480">Forms</text>
+                <text class="normal" x="100" y="520">No Scripts</text>
+                <text class="normal" x="100" y="550">No Frames</text>
+            </g>
+        </a>
+    
+        <a xlink:href="http://www.w3.org/TR/ruby/">
+            <g>
+                <desc>Ruby block (added to the list of modules)</desc>
+                <g transform="translate(460,190)">
+                    <rect class="yellowish" width="65" height="40" />
+                </g>  
+                <text x="468" y="218">Ruby</text>
+            </g>
+        </a>
+            
+        <line class="arrow" x1="300" y1="230" x2="300" y2="277" />
+    
+        <a xlink:href="http://www.w3.org/TR/xhtml11/">
+            <g>
+                <desc>XHTML 1.1 block</desc>
+                <g transform="translate(240,280)">
+                    <rect class="yellowish" width="120" height="40" />
+                    <text x="8" y="26">XHTML 1.1</text>
+                </g>
+                <text x="370" y="295" class="normal">No deprecated features</text>
+                <text class="limish" x="370" y="320">Available</text>
+            </g>
+        </a>
+    
+            
+        <g transform="translate(-100,180)">
+            <desc>"New modules" block (for XForms and Events)</desc>
+            <a xlink:href="http://www.w3.org/TR/xforms/">
+                <g transform="translate(470,190)">
+                    <rect class="yellowish" width="81" height="40" />
+                </g>  
+                <text x="475" y="218">XForms</text>
+            </a>
+            <a xlink:href="http://www.w3.org/TR/xhtml-events/">
+                <g transform="translate(560,190)">
+                    <rect class="yellowish" width="78" height="40" />
+                </g>  
+                <text x="570" y="218">Events</text>
+            </a>
+            <text class="limish" x="695" y="205" style="text-anchor:middle">Drafts<tspan x="695" dy="20">available</tspan></text>
+        </g>
+        
+        <g transform="translate(180,180)">
+            <g transform="translate(470,190)">
+                <rect class="yellowish" width="88" height="40" />
+            </g>
+            <text x="475" y="218">XFrames</text>
+        </g>
+        
+        <g>
+            <desc>Arrows leading "out" of the XFrames block and the XForm/XEvent block, plus the textual comment</desc>
+            <line class="arrow" x1="694" x2="694" y1="415" y2="477"/> 
+            <line class="arrow" x1="450" x2="690" y1="415" y2="477"/> 
+            <text class="normal" style="text-anchor:middle" x="692" y="500">(General XML Modules)</text>
+        </g>
+        <g>
+            <desc>Polyline starting from the top down to frames</desc>
+            <polyline class="arrowLine" points="380 120 692 200 692 367" style="fill:none"/>
+        </g>
+    
+        <g>
+            <desc>Connect XHTML 1.1 to XHTML 2.0</desc>
+            <line class="arrow" x1="300" y1="320" x2="300" y2="467" />
+        </g>
+    
+        <g>
+            <desc>Arrow connecting the XForm/XEvent block to XHTML 2.0</desc>
+            <line class="arrow" x1="450" y1="415" x2="360" y2="464" />
+        </g>
+            
+        <g>
+            <desc>XHTML 2.0 block</desc>
+            <g transform="translate(240,470)">
+                <rect class="yellowish" width="120" height="40" />
+                <text x="4" y="25">XHTML 2.0</text>
+            </g>
+            <text x="300" y="530" class="normal" style="text-anchor:middle">Modern HTML
+            <tspan dy="25" x="300">100% XML</tspan>
+            <tspan class="limish" dy="25" x="300">Draft available</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
+

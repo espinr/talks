@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 800">
+	<g transform="translate(-50,30)" id="tspanSlide">
+		<text>
+			<tspan dy="0" x="0" class="major">Structure (<tspan class="code">head</tspan>)</tspan>
+			<tspan dy="50" x="0" class="major">Text (<tspan class="code">p</tspan>)</tspan>
+			<tspan dy="50" x="0" class="major">Hypertext (<tspan class="code">a</tspan>)</tspan>
+			<tspan dy="50" x="0" class="major">List (<tspan class="code">ul</tspan>)</tspan>
+			<tspan dy="50" x="0" class="major">Applet (<tspan class="code">applet</tspan>)</tspan>
+			<tspan dy="50" x="0" class="major">Presentation (<tspan class="code">strong</tspan>)</tspan>
+			<tspan dy="50" x="0" class="major">Bi-directional Text (<tspan class="code">bdo</tspan>)</tspan>
+			<tspan dy="50" x="0" class="major">Basic Forms (<tspan class="code">input</tspan>)</tspan>
+			<tspan dy="50" x="0" class="major">Full Forms</tspan>
+			<tspan dy="50" x="0" class="major">Basic Tables (<tspan class="code">table</tspan>)</tspan>
+			<tspan dy="50" x="0" class="major">Tables (<tspan class="code">colgroup</tspan>)</tspan>
+			<tspan dy="50" x="0" class="major">Image (<tspan class="code">img</tspan>)</tspan>
+			<tspan dy="50" x="0" class="major">Server-side map</tspan>
+			<tspan dy="50" x="0" class="major">Client-side map</tspan>
+		</text>
+		<g transform="translate(600)">
+			<text>
+				<tspan dy="0" x="0" class="major">Object (<tspan class="code">object</tspan>)</tspan>
+				<tspan dy="50" x="0" class="major">Frames (<tspan class="code">frameset</tspan>)</tspan>
+				<tspan dy="50" x="0" class="major">Target (<tspan class="code">target="..."</tspan>)</tspan>
+				<tspan dy="50" x="0" class="major">Iframe</tspan>
+				<tspan dy="50" x="0" class="major">Intrinsic Events (<tspan class="code">onLoad="..."</tspan>)</tspan>
+				<tspan dy="50" x="0" class="major">Metainformation (<tspan class="code">script</tspan>)</tspan>
+				<tspan dy="50" x="0" class="major">Scripting  (<tspan class="code">bdo</tspan>)</tspan>
+				<tspan dy="50" x="0" class="major">Stylesheet (<tspan class="code">style</tspan>)</tspan>
+				<tspan dy="50" x="0" class="major">Style Attribute (<tspan class="code">style="..."</tspan>)</tspan>
+				<tspan dy="50" x="0" class="major">Link  (<tspan class="code">link</tspan>)</tspan>
+				<tspan dy="50" x="0" class="major">Base (<tspan class="code">base</tspan>)</tspan>
+				<tspan dy="50" x="0" class="major">Name Identification (<tspan class="code">name="..."</tspan>)</tspan>
+				<tspan dy="50" x="0" class="major">Legacy (<tspan class="code">center</tspan>)</tspan>
+				<tspan dy="50" x="0" class="major">Ruby (Asian markup)</tspan>
+			</text>
+		</g>
+	</g>
+</svg>

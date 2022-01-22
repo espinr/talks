@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- Last revised: $Date: 2003/10/24 18:14:40 $ -->
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 800">
+	<title>XML Signature Processes...</title>
+    <defs>
+        <marker id="RedTriangle" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="5" orient="auto">
+            <path class="reddish" d="M 0 0 L 10 5 L 0 10 z"/>
+        </marker>
+        <marker id="GrayTriangle" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="5" orient="auto">
+            <path class="grayish" d="M 0 0 L 10 5 L 0 10 z"/>
+        </marker>
+        <ellipse class="yellowish" style="stroke-width:1" id="Step" ry="50" rx="150">
+            <desc>basic ellipse background for the processing steps</desc>
+        </ellipse>
+        <g id="transforms">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="-8">Apply transformations
+              <tspan x="0" dy="30"  class="centre minor" >(C14N, XSLT, XPath,...)</tspan>
+            </text>
+        </g>
+        <g id="get">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="6">Get (XML) data</text>
+        </g>
+        <g id="digest">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="6">Generate digest</text>
+        </g>
+        <g id="digest2">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="-8">Generate digest and
+            <tspan x="0" dy="30"  class="centre minor" >compare to stored</tspan></text>
+        </g>
+        <g id="c14n">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="-8">Canonicalize
+              <tspan x="0" dy="30" class="code">SignedInfo</tspan>
+            </text>
+        </g>
+        <g id="sign">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="-8">Sign
+              <tspan x="0" dy="30" class="code">SignedInfo</tspan>
+            </text>
+        </g>
+        <g id="check">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="-8">Check signature of
+            <tspan x="0" dy="30" class="code">SignedInfo</tspan>
+            </text>
+        </g>
+        <g id="nextStep">
+            <line y1="50" y2="100" class="reddish" marker-end="url(#RedTriangle)"/>
+        </g>
+    </defs>
+    <g transform="translate(0,50)">
+        <g transform="translate(230)" id="Sign">
+            <use xlink:href="#get" transform="translate(0,30)"/>
+            <use xlink:href="#transforms" transform="translate(0,180)"/>
+            <use xlink:href="#digest" transform="translate(0,330)"/>
+            <use xlink:href="#c14n" transform="translate(0,480)"/>
+            <use xlink:href="#sign" transform="translate(0,630)"/>
+            <use xlink:href="#nextStep" transform="translate(0,30)"/>
+            <use xlink:href="#nextStep" transform="translate(0,180)"/>
+            <use xlink:href="#nextStep" transform="translate(0,330)"/>
+            <use xlink:href="#nextStep" transform="translate(0,480)"/>
+            <path style="stroke:red; fill: none; stroke-width:3" marker-end="url(#RedTriangle)" d="M-150 330 h-50 v-300 h50"/>
+            <text class="centre major" y="740" x="0">Sign an XML document</text>
+        </g>
+        <g transform="translate(850)" id="Check">
+            <use xlink:href="#get" transform="translate(0,30)"/>
+            <use xlink:href="#transforms" transform="translate(0,180)"/>
+            <use xlink:href="#digest2" transform="translate(0,330)"/>
+            <use xlink:href="#c14n" transform="translate(0,480)"/>
+            <use xlink:href="#check" transform="translate(0,630)"/>
+            <use xlink:href="#nextStep" transform="translate(0,30)"/>
+            <use xlink:href="#nextStep" transform="translate(0,180)"/>
+            <use xlink:href="#nextStep" transform="translate(0,330)"/>
+            <use xlink:href="#nextStep" transform="translate(0,480)"/>
+            <path style="stroke:red; fill: none; stroke-width:3" marker-end="url(#RedTriangle)" d="M150 330 h50 v-300 h-50"/>
+            <text class="centre major" y="740" x="0">Check a signature</text>
+        </g>
+        <line x1="550" x2="550" y1="-50" y2="760"/>
+     </g>
+</svg>
+
+

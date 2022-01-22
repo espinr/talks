@@ -1,0 +1,239 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 922 576">
+  <title>Namespace challenge</title>
+	<desc>Describing the problem solved by namespaces: Application 3 wants to use the
+	elements and/or the attributes of Applications 1 and 2.</desc>
+  <rect width="1000" height="576" class="background" />
+  <g transform="scale(0.9) translate(-10,-120)">
+    <defs>
+		  <desc>Various combination of elements. Classes reddish/pinkish belong to appl. 1, 
+			yellowish/darkyellowish to appl. 2, and greenish/limish to application 3. Then
+			there is a combination of the various elements as separate symbols.
+			</desc>
+      <symbol id="elementapp1">
+        <rect width="100" height="25" class="reddish" />
+        <rect x="100" width="200" height="25" class="pinkish" />
+        <rect x="300" width="70" height="25" class="reddish" />
+        <text x="05" y="20">&lt;</text>
+        <text x="290" y="20">&gt;</text>
+      </symbol>
+
+      <symbol id="elementapp2">
+        <rect width="100" height="25" class="yellowish" />
+        <rect x="100" width="200" height="25" class="darkYellowish" />
+        <rect x="300" width="70" height="25" class="yellowish" />
+        <text x="05" y="20">&lt;</text>
+        <text x="290" y="20">&gt;</text>
+      </symbol>
+
+      <symbol id="elementapp3">
+        <rect width="100" height="25" class="greenish" />
+        <rect x="100" width="200" height="25" class="limish" />
+        <rect x="300" width="70" height="25" class="greenish" />
+        <text x="05" y="20">&lt;</text>
+        <text x="290" y="20">&gt;</text>
+      </symbol>
+
+      <symbol id="elementapp4">
+        <rect width="100" height="25" class="reddish" />
+        <rect x="100" width="200" height="25" class="limish" />
+        <rect x="300" width="70" height="25" class="reddish" />
+        <text x="05" y="20">&lt;</text>
+        <text x="290" y="20">&gt;</text>
+      </symbol>
+
+      <symbol id="elementapp5">
+        <rect width="100" height="25" class="yellowish" />
+        <rect x="100" width="200" height="25" class="pinkish" />
+        <rect x="300" width="70" height="25" class="yellowish" />
+        <text x="05" y="20">&lt;</text>
+        <text x="290" y="20">&gt;</text>
+      </symbol>
+
+      <symbol id="elementapp6">
+        <rect width="100" height="25" class="greenish" />
+        <rect x="100" width="200" height="25" class="darkYellowish" />
+        <rect x="300" width="70" height="25" class="greenish" />
+        <text x="05" y="20">&lt;</text>
+        <text x="290" y="20">&gt;</text>
+      </symbol>
+
+      <symbol id="elementapp7">
+        <rect width="100" height="25" class="greenish" />
+        <rect x="100" width="100" height="25" class="pinkish" style="stroke:none" />
+        <rect x="200" width="100" height="25" class="darkYellowish" style="stroke:none" />
+        <rect x="300" width="70" height="25" class="greenish" />
+        <text x="05" y="20">&lt;</text>
+        <text x="290" y="20">&gt;</text>
+      </symbol>
+    </defs>
+
+    <g transform="translate(10,110)">
+      <g transform="translate(10,10)">
+			  <desc>Application 1: uses symbols of application 1 only, filling it with elements and attributes.</desc>
+        <text x="50" y="30" class="onBackground">Application 1</text>
+
+        <g transform="translate(50,50)">
+          <use xlink:href="#elementapp1" />
+          <text x="20" y="20">aa</text>
+          <text x="110" y="20">AA1=".."</text>
+          <text x="200" y="20">AA2=".."</text>
+          <text x="305" y="20">&lt;/aa&gt;</text>
+        </g>
+
+        <g transform="translate(50,75)">
+          <use xlink:href="#elementapp1" />
+          <text x="20" y="20">bb</text>
+          <text x="110" y="20">BB1=".."</text>
+          <text x="200" y="20">BB2=".."</text>
+          <text x="305" y="20">&lt;/bb&gt;</text>
+        </g>
+
+        <g transform="translate(50,100)">
+          <use xlink:href="#elementapp1" />
+          <text x="20" y="20">cc</text>
+          <text x="110" y="20">CC1=".."</text>
+          <text x="200" y="20">CC2=".."</text>
+          <text x="305" y="20">&lt;/cc&gt;</text>
+        </g>
+
+        <g transform="translate(50,125)">
+          <use xlink:href="#elementapp1" />
+          <text x="20" y="20">dd</text>
+          <text x="110" y="20">DD1=".."</text>
+          <text x="200" y="20">DD2=".."</text>
+          <text x="305" y="20">&lt;/dd&gt;</text>
+        </g>
+
+        <g transform="translate(50,150)">
+          <use xlink:href="#elementapp1" />
+          <text x="20" y="20">ee</text>
+          <text x="110" y="20">EE1=".."</text>
+          <text x="200" y="20">EE2=".."</text>
+          <text x="305" y="20">&lt;/ee&gt;</text>
+        </g>
+      </g>
+
+      <g transform="translate(510,10)">
+        <text x="50" y="30" class="onBackground">Application 2</text>
+			  <desc>Application 2: uses symbols of application 2 only, filling it with elements and attributes.</desc>
+
+        <g transform="translate(50,50)">
+          <use xlink:href="#elementapp2" />
+          <text x="20" y="20">vv</text>
+          <text x="110" y="20">VV1=".."</text>
+          <text x="200" y="20">VV2=".."</text>
+          <text x="305" y="20">&lt;/vv&gt;</text>
+        </g>
+
+        <g transform="translate(50,75)">
+          <use xlink:href="#elementapp2" />
+          <text x="20" y="20">ww</text>
+          <text x="110" y="20">WW1=".."</text>
+          <text x="200" y="20">WW2=".."</text>
+          <text x="305" y="20">&lt;/ww&gt;</text>
+        </g>
+
+        <g transform="translate(50,100)">
+          <use xlink:href="#elementapp2" />
+          <text x="20" y="20">xx</text>
+          <text x="110" y="20">XX1=".."</text>
+          <text x="200" y="20">XX2=".."</text>
+          <text x="305" y="20">&lt;/xx&gt;</text>
+        </g>
+
+        <g transform="translate(50,125)">
+          <use xlink:href="#elementapp2" />
+          <text x="20" y="20">yy</text>
+          <text x="110" y="20">YY1=".."</text>
+          <text x="200" y="20">YY2=".."</text>
+          <text x="305" y="20">&lt;/yy&gt;</text>
+        </g>
+
+        <g transform="translate(50,150)">
+          <use xlink:href="#elementapp2" />
+          <text x="20" y="20">zz</text>
+          <text x="110" y="20">ZZ1=".."</text>
+          <text x="200" y="20">ZZ2=".."</text>
+          <text x="305" y="20">&lt;/zz&gt;</text>
+        </g>
+      </g>
+
+      <line class="arrow" x1="220" y1="200" x2="300" y2="350" />
+
+      <g transform="translate(300,350)">
+        <g transform="rotate(60)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <line class="arrow" x1="720" y1="200" x2="640" y2="350" />
+
+      <g transform="translate(640,350)">
+        <g transform="rotate(120)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <g transform="translate(260,350)">
+			 <desc>Application 3: uses all possible mixtures of elements and attributes.</desc>
+        <text x="120" y="30" class="onBackground">Application 3</text>
+        <g transform="translate(50,50)">
+          <use xlink:href="#elementapp3" />
+          <text x="20" y="20">pp</text>
+          <text x="110" y="20">PP1=".."</text>
+          <text x="200" y="20">PP2=".."</text>
+          <text x="305" y="20">&lt;/pp&gt;</text>
+        </g>
+
+        <g transform="translate(50,75)">
+          <use xlink:href="#elementapp4" />
+          <text x="20" y="20">cc</text>
+          <text x="110" y="20">QQ1=".."</text>
+          <text x="200" y="20">QQ2=".."</text>
+          <text x="305" y="20">&lt;/cc&gt;</text>
+        </g>
+
+        <g transform="translate(50,100)">
+          <use xlink:href="#elementapp5" />
+          <text x="20" y="20">xx</text>
+          <text x="110" y="20">EE1=".."</text>
+          <text x="200" y="20">EE2=".."</text>
+          <text x="305" y="20">&lt;/xx&gt;</text>
+        </g>
+
+        <g transform="translate(50,125)">
+          <use xlink:href="#elementapp6" />
+          <text x="20" y="20">ss</text>
+          <text x="110" y="20">VV1=".."</text>
+          <text x="200" y="20">VV2=".."</text>
+          <text x="305" y="20">&lt;/ss&gt;</text>
+        </g>
+
+        <g transform="translate(50,150)">
+          <use xlink:href="#elementapp7" />
+          <text x="20" y="20">tt</text>
+          <text x="110" y="20">DD1=".."</text>
+          <text x="200" y="20">YY2=".."</text>
+          <text x="305" y="20">&lt;/tt&gt;</text>
+        </g>
+
+        <g transform="translate(50,175)">
+          <use xlink:href="#elementapp3" />
+          <text x="20" y="20">uu</text>
+          <text x="110" y="20">UU1=".."</text>
+          <text x="200" y="20">UU2=".."</text>
+          <text x="305" y="20">&lt;/uu&gt;</text>
+        </g>
+      </g>
+
+      <text x="700" y="450" class="onBackgroundMinor">Third application uses</text>
+      <text x="700" y="480" class="onBackgroundMinor">elements and attributes</text>
+      <text x="700" y="510" class="onBackgroundMinor">from the other applications</text>
+      <text x="700" y="540" class="onBackgroundMinor">and also defines its own</text>
+    </g>
+  </g>
+</svg>
+

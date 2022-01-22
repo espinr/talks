@@ -1,0 +1,75 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xml:space="preserve" viewBox="0 0 580 204">
+<desc>Bag.pdx</desc>
+  <rect width="580" height="204" class="background" />
+
+<ellipse class="lightGreenish" style="stroke:none" transform="matrix(1 0 0 -1 83.45 775.9)" cx="41.935" cy="732.47" rx="115.455" ry="27.609"/>
+<text transform="matrix(1 0 0 1 -8.598 -671.6)" class="reddish"><tspan x="60.613" y="723.275">TheWebPage</tspan></text>
+<rect class="lightGreenish" transform="matrix(1 0 0 -1 23.53 848)" x="381.107" y="734.776" width="169.854" height="31.585"/>
+<text transform="matrix(1 0 0 1 2.623 -621.2)" class="reddish"><tspan x="408.976" y="726.991">Bob Hopgood</tspan></text>
+<path class="yellowish" style="stroke-width:3"
+d="M156.54 75.628
+l55.153 33.757
+"/>
+<path class="yellowish" style="stroke:none"
+d="M211.693 109.385
+l-0.783 1.279
+-26.944 -7.698
+9.397 -15.353
+19.114 20.492
+z"/>
+<text transform="matrix(1 0 0 1 -96.24 -656.9)" class="reddish"><tspan x="292.855" y="742.784">creator</tspan></text>
+<rect class="lightGreenish" transform="matrix(1 0 0 -1 23.53 888.6)" x="381.107" y="734.776" width="169.854" height="31.585"/>
+<text transform="matrix(1 0 0 1 2.623 -580.6)" class="reddish"><tspan x="408.976" y="726.991">David Duce</tspan></text>
+<ellipse class="lightGreenish" style="stroke:none" transform="matrix(1 0 0 -1 -45.83 845.4)" cx="274.276" cy="707.836" rx="105.101" ry="19.706"/>
+<path class="yellowish" style="stroke-width:3"
+d="M338.247 137.106
+l57.476 -0.073
+"/>
+<path class="yellowish" style="stroke:none"
+d="M395.723 137.032
+l0.002 1.5
+-26.99 7.534
+-0.023 -18
+27.01 7.466
+z"/>
+<path class="yellowish" style="stroke-width:3"
+d="M313.644 156.04
+l82.079 19.872
+"/>
+<path class="yellowish" style="stroke:none"
+d="M395.723 175.912
+l-0.353 1.458
+-28.007 0.936
+4.236 -17.495
+24.477 13.643
+z"/>
+<rect class="lightGreenish" transform="matrix(1 0 0 -1 23.53 929.1)" x="381.107" y="734.776" width="169.854" height="31.585"/>
+<text transform="matrix(1 0 0 1 2.623 -540.2)" class="reddish"><tspan x="408.976" y="726.991">Ivan Herman</tspan></text>
+<ellipse class="lightGreenish" style="stroke:none" transform="matrix(1 0 0 -1 213.2 731.7)" cx="274.276" cy="707.836" rx="79.421" ry="13.44"/>
+<text transform="matrix(1 0 0 1 156 -712.3)" class="darkBlueish"><tspan x="292.855" y="742.784">rdf:bag</tspan></text>
+<path class="yellowish" style="stroke-width:3"
+d="M313.849 121.517
+l82.737 -24.228
+"/>
+<path class="yellowish" style="stroke:none"
+d="M396.587 97.289
+l0.422 1.44
+-23.804 14.786
+-5.059 -17.275
+28.02 -0.39
+z"/>
+<path class="yellowish" style="stroke-width:3"
+d="M290.748 116.729
+l123.119 -79.055
+"/>
+<path class="yellowish" style="stroke:none"
+d="M413.867 37.674
+l0.81 1.262
+-18.667 20.899
+-9.726 -15.146
+26.772 -8.277
+z"/>
+</svg>

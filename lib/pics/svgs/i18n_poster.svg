@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="-35 -20 690 640" xml:lang="en" id="i18Top">
+  <style type="text/css">
+     text.i18n, tspan.i18n { 
+        font-size:18; font-family: Arial Unicode MS, sans-serif;
+     }
+     text.zh-hans, tspan.zh-hans { 
+        font-size:18; font-family: SimSun, Arial Unicode MS, sans-serif;
+     }
+     text.zh-hant, tspan.zh-hant { 
+        font-size:18; font-family: MingLiU, Arial Unicode MS, sans-serif;
+     }
+     text.ko, tspan.ko { 
+        font-size:18; font-family: Gulim, Arial Unicode MS, sans-serif;
+     }
+  </style>
+  <title>Internationalisation poster for W3C Offices</title>
+  <desc>The same text (the W3C motto) repeated in a number of languages, using Unicode</desc>
+  <text>
+   <tspan x="15" dy="15" style="fill:red" class="i18n">English: <tspan xml:lang="en">Leading the Web to its Full Potential&#8230;</tspan></tspan>
+   <tspan x="15" dy="30" style="fill:rgb(0,0,200)" class="i18n">Catalan: <tspan xml:lang="ca">Duent la Web al seu ple potencial&#8230;</tspan></tspan>
+   <tspan x="15" dy="30" style="fill:black" class="i18n">Dutch: <tspan xml:lang="nl">Het Web tot zijn volle potentieel ontwikkelen&#8230;</tspan></tspan>
+   <tspan x="15" dy="30" style="fill:red" class="i18n">French: <tspan xml:lang="fr">Amener le Web vers son plein potentiel&#8230;</tspan></tspan>
+   <tspan x="15" dy="30" style="fill:green" class="i18n">German: <tspan xml:lang="de">Alle Möglichkeiten des Web erschließen&#8230;</tspan></tspan>
+   <tspan x="15" dy="30" style="fill:orange" class="i18n">Greek: <tspan xml:lang="gr">Οδηγώντας τον παγκόμιο ιστό στο μέγιστο των δυνατοτήτων του&#8230;</tspan></tspan>
+   <tspan x="15" dy="30" style="fill:rgb(0,0,100)" class="i18n">Hungarian: <tspan xml:lang="hu">Hogy kihasználhassuk a Web nyújtotta összes lehetőséget&#8230;</tspan></tspan>
+   <tspan x="15" dy="30" style="fill:rgb(100,0,0)" class="i18n">Italian: <tspan xml:lang="it">Sviluppare al massimo il potenziale del Web&#8230;</tspan></tspan>
+   <tspan x="15" dy="30" style="fill:rgb(0,100,0)" class="i18n">Chinese:<tspan xml:lang="zh-hans" class="zh-hans"> 引发网络的全部潜能&#8230;</tspan></tspan>
+   <tspan x="15" dy="30" style="fill:rgb(10,10,200)" class="i18n">Korean: <tspan xml:lang="kr" class="ko">웹의 모든 잠재력을 이끌어 내기 위하여&#8230;</tspan></tspan>
+   <tspan x="15" dy="30" style="fill:rgb(200,10,10)" class="i18n">Portuguese: <tspan xml:lang="pt">Levando a Web em direcção ao seu potencial màximo&#8230;</tspan></tspan>
+   <tspan x="15" dy="30" style="fill:rgb(10,200,10)" class="i18n">Russian: <tspan xml:lang="ru">Pаскрывая весь потенциал Сети&#8230;</tspan></tspan>
+   <tspan x="15" dy="30" style="fill:navy" class="i18n">Spanish: <tspan xml:lang="es">Guiando la web hacia su máximo potencial&#8230;</tspan></tspan>
+   <tspan x="15" dy="30" style="fill:rgb(100,100,200)" class="i18n">Swedish: <tspan xml:lang="sv">Se till att Webben når sin fulla potential&#8230;</tspan></tspan>
+   <tspan x="15" dy="30" style="fill:black" class="i18n">Finnish: <tspan xml:lang="fi">Ohjaamassa Webin kehittymist&#228; t&#228;yteen mittaansa&#8230;</tspan></tspan>
+   <tspan x="15" dy="30"  style="fill:rgb(10,10,200)" class="i18n">
+    Hebrew: <tspan xml:lang="he">&#1500;&#1492;&#1493;&#1489;&#1497;&#1500;	
+    &#1488;&#1514; &#1492;&#1512;&#1513;&#1514;	
+    &#1500;&#1502;&#1497;&#1510;&#1493;&#1497; 
+    &#1492;&#1508;&#1493;&#1496;&#1504;&#1510;&#1497;&#1488;&#1500;
+		&#1513;&#1500;&#1492;<tspan style="unicode-bidi:bidi-override">&#8230;</tspan></tspan>
+   </tspan>
+  </text>
+  <text x="15" y="495" style="fill:red" class="i18n" >
+    Arabic:<tspan style="font-family: serif" xml:lang="ar"> لإيصال الشبكة المعلوماتية إلىأقصى إمكانياتها<tspan style="unicode-bidi:bidi-override">&#8230;</tspan></tspan></text>
+  <text x="635" y="0" style="glyph-orientation-vertical:0deg; fill:rgb(0,200,200); writing-mode:tb" class="i18n">
+		<tspan style="glyph-orientation-vertical:90deg" >Chinese:</tspan> <tspan xml:lang="zh-hant" class="zh-hant">引發網絡的全部潛能&#8942;</tspan>
+  </text>
+  <text x="-20" y="0" style="fill:rgb(200,0,0); writing-mode:tb; glyph-orientation-vertical:0deg" class="i18n">
+		<tspan style="glyph-orientation-vertical:90deg">Japanese:</tspan> <tspan xml:lang="ja">Webの可能性を最大限に導き出すために&#8942;</tspan>
+  </text>
+</svg>

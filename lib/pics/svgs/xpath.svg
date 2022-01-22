@@ -1,0 +1,168 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg viewBox="0 0 768 600">
+  <title>XPath Nomenclature</title>
+
+  <desc>Explanations of terms like parent, sibling, etc. by
+  drawing a tree with the node denoted as "current" in the middle
+  and labeling all other nodes with the appropriate terms.</desc>
+
+  <rect width="768px" height="576px" class="background" />
+
+  <g transform="scale(0.8)">
+	  <g>
+		  <desc>Separate rectangle as a legend for some terms used</desc>
+      <rect class="yellowish" x="10" y="20" width="150" height="200" />
+      <g transform="translate(20,50)">		  
+        <text x="0" y="0">Terms used:</text>
+        <text x="20" y="40" class="reddish">ancestor</text>
+        <text x="20" y="80"  class="limish">descendant</text>
+        <text x="20" y="120" class="greenish">preceding</text>
+        <text x="20" y="160" class="blueish">following</text>
+      </g>
+		</g>
+
+    <g transform="translate(480,20)">
+		  <desc>An ancestor node</desc>
+      <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40" />
+      <text x="-40" y="44" style="color:red">ancestor</text>
+    </g>
+		
+		<g>
+		  <desc>Edge connecting the ancestor node to the parent node and the parent node itself</desc>
+      <line x1="480" y1="100" x2="480" y2="140" class="reddish" />
+      <g transform="translate(480,140)">
+        <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40"/>
+        <text x="-34" y="44">parent</text>
+      </g>
+		</g>
+
+		<g>
+		  <desc>An edge connecting the ancestor to a 'precede' node, and the precede node itself</desc>
+      <line x1="460" y1="98" x2="240" y2="140" class="greenish"/>
+      <g transform="translate(240,140)">
+        <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40"/>
+        <text x="-34" y="44" class="greenish">precede</text>
+      </g>
+		</g>
+
+		<g>
+		  <desc>Two edges connecting the 'precede' node to two other
+			preceding nodes (prec_a and prec_b)</desc>
+			
+      <line x1="230" y1="218" x2="120" y2="240" class="greenish" />
+      <g transform="translate(120,240)">
+        <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40"/>
+        <text x="-38" y="44" class="greenish">prec_a</text>
+      </g>
+  
+      <line x1="240" y1="220" x2="240" y2="240" class="greenish" />
+      <g transform="translate(240,240)">
+        <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40"/>
+        <text x="-38" y="44" class="greenish">prec_b</text>
+      </g>
+		</g>
+
+		<g>
+		  <desc>Edge connecting the paren node to a sibling of current and the node itself;
+			this sibling precedes the current node </desc>
+      <line x1="470" y1="218" x2="360" y2="300" class="greenish" />
+      <g transform="translate(360,300)">
+        <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40"/>
+        <text x="-38" y="44" class="greenish">sibl_a</text>
+      </g>
+		</g>
+
+		<g>
+		  <desc>Edge connecting the paren node to a sibling of current and the node itself;
+			this sibling follows the current node </desc>
+      <line x1="490" y1="218" x2="600" y2="300" class="blueish" />
+      <g transform="translate(600,300)">
+        <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40"/>
+        <text x="-38" y="44" class="blueish">sibl_b</text>
+      </g>
+		</g>
+
+		<g>
+		  <desc>Edge connecting the ancestor node to a follow node</desc>
+      <line x1="500" y1="98" x2="720" y2="140" class="blueish" />
+      <g transform="translate(720,140)">
+        <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40"/>
+        <text x="-34" y="44" class="blueish">follow</text>
+      </g>
+		</g>
+
+		<g>
+		  <desc>Two edges and nodes connecting the follow to two other following nodes (children of
+			'follow'</desc>
+      <line x1="720" y1="220" x2="720" y2="240" class="blueish"/>
+  
+      <g transform="translate(720,240)">
+        <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40"/>
+        <text x="-38" y="44" class="blueish">follow_a</text>
+      </g>
+  
+      <line x1="730" y1="218" x2="840" y2="240" class="blueish" />
+      <g transform="translate(840,240)">
+        <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40"/>
+        <text x="-38" y="44" class="blueish">follow_b</text>
+      </g>
+		</g>
+
+		<g>
+		  <desc>Edge connecting the parent node to the current and the current node itself</desc>
+      <line x1="480" y1="220" x2="480" y2="320" class="reddish" />  
+      <g transform="translate(480,320)">
+        <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40"/>
+        <text x="-34" y="44" class="pinkish">current</text>
+      </g>
+		</g>
+
+		<g>
+		  <desc>Three immediate children nodes of the current node with the edges connecting them to 
+			the current node</desc>
+      <line x1="480" y1="400" x2="480" y2="460" class="limish" />
+      <g transform="translate(480,460)">
+        <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40"/>
+        <text x="-34" y="44" class="limish">child_b</text>
+      </g>
+  
+      <line x1="480" y1="398" x2="360" y2="460" class="limish" />
+      <g transform="translate(360,460)">
+        <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40"/>
+        <text x="-34" y="44" class="limish">child_a</text>
+      </g>
+  
+      <line x1="480" y1="398" x2="600" y2="460" class="limish" /> 
+      <g transform="translate(600,460)">
+        <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40"/>
+        <text x="-34" y="44" class="limish">child_c</text>
+      </g>
+		</g>
+		
+		<g>
+		  <desc>child_b is also the root for three more descendent nodes, with the edges connecting
+			them to child_b</desc>
+  
+      <line x1="480" y1="540" x2="480" y2="600" class="limish" />
+      <g transform="translate(480,600)">
+        <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40"/>
+        <text x="-34" y="44" class="limish">desc_b</text>
+      </g>
+  
+      <line x1="480" y1="538" x2="360" y2="600" class="limish" />
+      <g transform="translate(360,600)">
+        <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40"/>
+        <text x="-34" y="44" class="limish">desc_a</text>
+      </g>
+  
+      <line x1="480" y1="538" x2="600" y2="600" class="limish" />  
+      <g transform="translate(600,600)">
+        <ellipse class="yellowish" cx="0" cy="40" rx="50" ry="40"/>
+        <text x="-34" y="44" class="limish">desc_c</text>
+      </g>
+		</g>
+  </g>
+</svg>
+

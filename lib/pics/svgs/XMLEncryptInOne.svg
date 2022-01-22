@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- Last revised: $Date: 2003/10/24 18:14:40 $ -->
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 800">
+	<title>XML Signature Processes...</title>
+    <defs>
+        <marker id="RedTriangle" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="5" orient="auto">
+            <path class="reddish" d="M 0 0 L 10 5 L 0 10 z"/>
+        </marker>
+        <marker id="GrayTriangle" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="5" orient="auto">
+            <path class="grayish" d="M 0 0 L 10 5 L 0 10 z"/>
+        </marker>
+        <ellipse class="yellowish" style="stroke-width:1" id="Step" ry="50" rx="155">
+            <desc>basic ellipse background for the processing steps</desc>
+        </ellipse>
+        <g id="select">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="6">Select encryption method
+            </text>
+        </g>
+        <g id="select2">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="6">Identify encryption method
+            </text>
+        </g>
+        <g id="get">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="-7">Identify XML element or
+            <tspan x="0" dy="30"  class="centre minor" >element content</tspan></text>
+        </g>
+        <g id="get2">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="6">Identify encrypted data
+            </text>
+        </g>
+        <g id="encrypt">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="6">Encrypt data</text>
+        </g>
+        <g id="base64">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="-8">Encode result into
+            <tspan x="0" dy="30" class="centre minor" >base64 format</tspan>
+            </text>
+        </g>
+        <g id="base64-2">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="6">Decode base64 content
+            </text>
+        </g>
+        <g id="decode">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="6">Decode data
+            </text>
+        </g>
+        <g id="replace">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="-8">Replace element or
+              <tspan x="0" dy="30"  class="centre minor">content into XML</tspan>
+            </text>
+        </g>
+        <g id="reconstruct">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="6">Reconstruct original XML
+            </text>
+        </g>
+        <g id="nextStep">
+            <line y1="50" y2="100" class="reddish" marker-end="url(#RedTriangle)"/>
+        </g>
+    </defs>
+    <g transform="translate(0,50)">
+        <g transform="translate(230)" id="Encode">
+            <use xlink:href="#get" transform="translate(0,30)"/>
+            <use xlink:href="#select" transform="translate(0,180)"/>
+            <use xlink:href="#encrypt" transform="translate(0,330)"/>
+            <use xlink:href="#base64" transform="translate(0,480)"/>
+            <use xlink:href="#replace" transform="translate(0,630)"/>
+            <use xlink:href="#nextStep" transform="translate(0,30)"/>
+            <use xlink:href="#nextStep" transform="translate(0,180)"/>
+            <use xlink:href="#nextStep" transform="translate(0,330)"/>
+            <use xlink:href="#nextStep" transform="translate(0,480)"/>
+            <text class="centre major" y="740" x="0">Encode</text>
+        </g>
+        <g transform="translate(850)" id="Decode">
+            <use xlink:href="#get2" transform="translate(0,30)"/>
+            <use xlink:href="#select2" transform="translate(0,180)"/>
+            <use xlink:href="#base64-2" transform="translate(0,330)"/>
+            <use xlink:href="#decode" transform="translate(0,480)"/>
+            <use xlink:href="#reconstruct" transform="translate(0,630)"/>
+            <use xlink:href="#nextStep" transform="translate(0,30)"/>
+            <use xlink:href="#nextStep" transform="translate(0,180)"/>
+            <use xlink:href="#nextStep" transform="translate(0,330)"/>
+            <use xlink:href="#nextStep" transform="translate(0,480)"/>
+            <text class="centre major" y="740" x="0">Decode</text>
+        </g>
+        <line x1="550" x2="550" y1="-50" y2="760"/>
+     </g>
+</svg>
+
+

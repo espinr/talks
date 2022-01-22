@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 800">
+  <desc>Formatting objects explained</desc>
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:axsvg="http://www.w3.org/2001/svgRdf/axsvg-schema.rdf#">
+      <rdf:Description rdf:ID="FullSlide">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#Explanation"/>
+            <rdf:li rdf:resource="#Schematics"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <rdf:Description rdf:about="#Explanation">
+        <axsvg:Text>true</axsvg:Text>
+        <axsvg:OnTop rdf:resource="#Schematics"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#Schematics">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#xmlDoc"/>
+            <rdf:li rdf:resource="#XSLTBox"/>
+            <rdf:li rdf:resource="#FOBox"/>
+            <rdf:li rdf:resource="#printBox"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <rdf:Description rdf:about="#xmlDoc">
+        <axsvg:IsAnchor>true</axsvg:IsAnchor>
+        <axsvg:LabelledBy rdf:resource="#XMLLabel"/>
+        <axsvg:AtLeft rdf:resource="#XSLTBox"/>
+        <axsvg:IsConnected rdf:resource="#XSLTBox"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#XSLTBox">
+        <axsvg:IsAnchor>true</axsvg:IsAnchor>
+        <axsvg:LabelledBy rdf:resource="#XSLTLabel"/>
+        <axsvg:AtLeft rdf:resource="#FOBox"/>
+        <axsvg:IsConnected rdf:resource="#FOBox"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#FOBox">
+        <axsvg:IsAnchor>true</axsvg:IsAnchor>
+        <axsvg:LabelledBy rdf:resource="#FOLabel"/>
+        <axsvg:AtLeft rdf:resource="#PrintBox"/>
+        <axsvg:IsConnected rdf:resource="#PrintBox"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#PrintBox">
+        <axsvg:IsAnchor>true</axsvg:IsAnchor>
+        <axsvg:LabelledBy rdf:resource="#PrintLabel"/>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <text id="Explanation">
+    <tspan class="major" x="0" y="40">&#8226; An XML vocabulary for high level page description</tspan>
+    <tspan class="major" x="0" y="80">&#8226; Uses an extended page layout model</tspan>
+    <tspan class="minor" x="20" y="120">&#183; Pages can be "infinitely long"</tspan>
+    <tspan class="major" x="0" y="170">&#8226; An FO application consists of:</tspan>
+    <tspan class="minor" x="20" y="210">&#183; Layout master: defines the pages used </tspan>
+    <tspan class="minor" x="40" y="250">&#183; first page, last page, others; margin, border, page size</tspan>
+    <tspan class="minor" x="20" y="290">&#183; Page sequences: the real content in terms of blocks, inlines, tables, list blocks, etc.</tspan>
+    <tspan class="major" x="0" y="340">&#8226; Uses all CSS2 properties and more!</tspan>
+  </text>
+  <g transform="translate(-10 100)">
+    <svg width="1000" viewBox="0 0 800 150">
+      <title>Schematic view of an XSLT and FO process</title>
+      <desc>Boxes with arrows: XML to a box on XSLT, which also inputs from a box with XSLT Definition and XPath;
+	this box points to an FO output, which in turns points at a PDF box.</desc>
+      <g transform="scale(0.9) translate(0,-200)" id="Schematics">
+        <g transform="translate(10,110)">
+          <a xlink:href="../xmls/frahcd.xml">
+            <g transform="translate(10,160)" id="xmlDoc">
+              <rect class="yellowish" width="180" height="70"/>
+              <text x="10" y="40" id="XMLLabel">XML Document</text>
+            </g>
+          </a>
+          <line class="arrow" x1="190" y1="195" x2="230" y2="195"/>
+          <g transform="translate(230,195)">
+            <g transform="rotate(0)">
+              <path class="arrow" d="M0,0l-10-10v20z"/>
+            </g>
+          </g>
+          <a xlink:href="../xmls/frahcdToFO.xsl">
+            <g transform="translate(230,160)" id="XSLTBox">
+              <rect class="yellowish" width="180" height="70"/>
+              <text id="XSLTLabel">
+                <tspan x="10" y="30">XSLT</tspan>
+                <tspan x="10" y="60">Transformation</tspan>
+              </text>
+            </g>
+          </a>
+          <line class="arrow" x1="410" y1="195" x2="460" y2="195"/>
+          <g transform="translate(460,195)">
+            <g transform="rotate(0)">
+              <path class="arrow" d="M0,0l-10-10v20z"/>
+            </g>
+          </g>
+          <a xlink:href="../xmls/frahcdToFO-display.xml">
+            <g transform="translate(460,160)" id="FOBox">
+              <rect class="yellowish" width="150" height="70"/>
+              <text x="20" y="40" id="FOLabel">FO Objects</text>
+            </g>
+          </a>
+          <line class="arrow" x1="610" y1="195" x2="670" y2="195"/>
+          <g transform="translate(670,195)">
+            <g transform="rotate(0)">
+              <path class="arrow" d="M0,0l-10-10v20z"/>
+            </g>
+          </g>
+          <a xlink:href="../xmls/frahcdToFO.pdf">
+            <g transform="translate(670,160)" id="PrintBox">
+              <rect class="yellowish" width="180" height="70"/>
+              <text id="PrintLabel">
+                <tspan x="20" y="30" class="reddish">Printout</tspan>
+                <tspan x="20" y="60" class="reddish">(eg PDF)</tspan>
+              </text>
+            </g>
+          </a>
+        </g>
+      </g>
+    </svg>
+  </g>
+</svg>

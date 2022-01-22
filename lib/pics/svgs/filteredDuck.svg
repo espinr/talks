@@ -1,0 +1,84 @@
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xml:space="preserve" viewBox="0 0 1000 650" preserveAspectRatio="xMidYMin">
+<!-- **************  Screen Display Area  ******************** -->
+  <rect class="background" width="1000" height="650" />
+  <style type="text/css"><![CDATA[
+     path.duck { stroke:none; fill:red; }
+     feSpecularLighting { lighting-color:yellow }
+  ]]></style>
+
+  <defs>
+    <filter id="MyFilter">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+
+      <feOffset in="blur" dx="6" dy="6" result="offsetBlur" />
+
+      <feSpecularLighting in="blur" surfaceScale="8"
+        specularConstant="1" specularExponent="10" result="specOut">
+          <fePointLight x="-5000" y="-10000" z="5000" />
+      </feSpecularLighting>
+
+      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
+
+      <feComposite in="SourceGraphic" in2="specOut"
+       operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint" />
+
+      <feMerge>
+        <feMergeNode in="offsetBlur" />
+        <feMergeNode in="litPaint" />
+      </feMerge>
+    </filter>
+
+    <filter id="MySimpleFilter">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+      <feOffset in="blur" dx="4" dy="4" result="offsetBlur" />
+    </filter>
+
+    <filter id="MySimpleFilter2">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+
+      <feSpecularLighting in="blur" surfaceScale="8"
+        specularConstant="1" specularExponent="10" result="specOut">
+          <fePointLight x="-5000" y="-10000" z="5000" />
+      </feSpecularLighting>
+
+      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut" />
+
+      <feComposite in="SourceGraphic" in2="specOut"
+       operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint" />
+    </filter>
+  </defs>
+	
+	<defs>
+	 <g transform="translate(10,-190)" id="theDuck" >
+      <path class="duck" d="M 0 312
+      c 40 48 120 -32 160 -6
+      c 0 0 5 4 10 -3 c 10 -103 50 -83 90 -42
+      c 0 0 20 12 30 7 c -2 12 -18 17 -40 17
+      c -55 -2 -40 25 -20 35 c 30 20 35 65 -30 71
+      c -50 4 -170 4 -200 -79 z"/>
+		</g>
+	
+	</defs>
+  <g transform="scale(0.85)">
+  	<g transform="translate(10,250)">
+  	  <text x="80" class="onBackgroundMinor">Original image</text>
+  		<use xlink:href="#theDuck"/>
+  	</g>
+  	
+  	<g transform="translate(400,30)">
+  	  <text x="0" class="onBackgroundMinor">Blur the alpha channel and offset</text>
+  		<use xlink:href="#theDuck" style="filter:url(#MySimpleFilter)"/>
+  	</g>
+  	<g transform="translate(400,500)">
+  	  <text x="60" class="onBackgroundMinor">Lighting effects</text>
+  		<use xlink:href="#theDuck" style="filter:url(#MySimpleFilter2)"/>
+  	</g>
+  	<g transform="translate(800,250)">
+  	  <text x="80" class="onBackgroundMinor" >Final image</text>
+  		<use xlink:href="#theDuck"  style="filter:url(#MyFilter)"/>
+  	</g>
+	</g>
+</svg>
+

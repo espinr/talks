@@ -1,0 +1,211 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN"
+  "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+<svg  width="850" height="700" >
+<defs>
+<style type="text/css">
+<![CDATA[
+rect {stroke:black;fill:white;}
+line {stroke:red;stroke-width:4}
+rect.box {stroke:none;fill:rgb(140, 189, 237)}
+text {font-family:Arial;font-size:18}
+]]>
+</style>
+</defs>
+
+<!-- **************  Screen Display Area  ******************** -->
+<g transform="translate(40,0) scale(0.8);">
+  <text x="150" y="50" style="font-size:48; color:red">Negotiation</text>
+  
+  <g transform="translate(40,130)">
+  
+  <g transform="translate(0,0)">
+  
+  <g transform="translate(0,0)">
+  <rect style="fill:white;"  width="70" height="100"/>
+  <text x="10" y="20" style="color:blue;">HTML</text>
+  <text x="10" y="40" style="color:blue;">Doc</text>
+  <text x="10" y="60" style="color:blue;">V1</text>
+  </g>
+  
+  <g transform="translate(10,70)">
+  <rect style="fill:#EEEEAA;"  width="70" height="100"/>
+  <text x="10" y="20" style="color:brown;">Doc</text>
+  <text x="10" y="40" style="color:brown;">V1</text>
+  <text x="10" y="60" style="color:brown;">Profile</text>
+  </g>
+  
+  </g>
+  
+  <g transform="translate(110,0)">
+  
+  <g transform="translate(0,0)">
+  <rect style="fill:white;"  width="70" height="100"/>
+  <text x="10" y="20" style="color:blue;">HTML</text>
+  <text x="10" y="40" style="color:blue;">Doc</text>
+  <text x="10" y="60" style="color:blue;">V2</text>
+  </g>
+  
+  <g transform="translate(10,70)">
+  <rect style="fill:#EEEEAA;"  width="70" height="100"/>
+  <text x="10" y="20" style="color:brown;">Doc</text>
+  <text x="10" y="40" style="color:brown;">V2</text>
+  <text x="10" y="60" style="color:brown;">Profile</text>
+  </g>
+  
+  </g>
+  
+  <g transform="translate(220,0)">
+  
+  <g transform="translate(0,0)">
+  <rect style="fill:white;"  width="70" height="100"/>
+  <text x="10" y="20" style="color:blue;">HTML</text>
+  <text x="10" y="40" style="color:blue;">Doc</text>
+  <text x="10" y="60" style="color:blue;">V3</text>
+  </g>
+  
+  <g transform="translate(10,70)">
+  <rect style="fill:#EEEEAA;"  width="70" height="100"/>
+  <text x="10" y="20" style="color:brown;">Doc</text>
+  <text x="10" y="40" style="color:brown;">V3</text>
+  <text x="10" y="60" style="color:brown;">Profile</text>
+  </g>
+  
+  </g>
+  
+  </g>
+  
+  
+  <g transform="translate(620,130)">
+  
+  
+  <g transform="translate(100,0)">
+  <rect style="fill:#EEEEAA;"  width="100" height="70"/>
+  <text x="10" y="20" style="color:red;">Device A</text>
+  <text x="10" y="40" style="color:red;">Profile</text>
+  </g>
+  
+  <g transform="translate(70,50)">
+  <rect style="fill:#EEEEAA;"  width="100" height="70"/>
+  <text x="10" y="20" style="color:red;">Device B</text>
+  <text x="10" y="40" style="color:red;">Profile</text>
+  </g>
+  
+  <g transform="translate(40,100)">
+  <rect style="fill:#EEEEAA;"  width="100" height="70"/>
+  <text x="10" y="20" style="color:red;">Device C</text>
+  <text x="10" y="40" style="color:red;">Profile</text>
+  </g>
+  
+  
+  <g transform="translate(10,150)">
+  <rect style="fill:#EEEEAA;"  width="100" height="70"/>
+  <text x="10" y="20" style="color:red;">Device D</text>
+  <text x="10" y="40" style="color:red;">Profile</text>
+  </g>
+  
+  </g>
+  
+  
+  
+  
+  <line x1="250" y1="330" x2="350" y2="440" style="stroke:lime"/>
+  <g transform="translate(350,440)">
+  <g transform="rotate(40)">
+  <line x1="0" y1="0" x2="-10" y2="-10"  style="stroke:lime"/>
+  <line x1="0" y1="0" x2="-10" y2="10"  style="stroke:lime"/>
+  </g>
+  </g>
+  
+  
+  
+  
+  <line x1="640" y1="360" x2="500" y2="440" style="stroke:lime"/>
+  <g transform="translate(500,440)">
+  <g transform="rotate(140)">
+  <line x1="0" y1="0" x2="-10" y2="-10"  style="stroke:lime"/>
+  <line x1="0" y1="0" x2="-10" y2="10"  style="stroke:lime"/>
+  </g>
+  </g>
+  
+  
+  <g transform="translate(240,440)">
+  <rect style="fill:white;"  width="360" height="30"/>
+  <text x="60" y="20" style="color:blue;">Negotiate appropriate content</text>
+  </g>
+  
+  <g transform="translate(170,540)">
+  <rect style="fill:white;"  width="140" height="30"/>
+  <text x="30" y="20" style="color:blue;">Transform</text>
+  </g>
+  
+  <g transform="translate(350,540)">
+  <rect style="fill:white;"  width="140" height="30"/>
+  <text x="30" y="20" style="color:blue;">Style</text>
+  </g>
+  
+  <g transform="translate(530,540)">
+  <rect style="fill:white;"  width="140" height="30"/>
+  <text x="30" y="20" style="color:blue;">Pass On</text>
+  </g>
+  
+  <line x1="420" y1="470" x2="240" y2="540" style="stroke:lime"/>
+  <g transform="translate(240,540)">
+  <g transform="rotate(155)">
+  <line x1="0" y1="0" x2="-10" y2="-10"  style="stroke:lime"/>
+  <line x1="0" y1="0" x2="-10" y2="10"  style="stroke:lime"/>
+  </g>
+  </g>
+  
+  <line x1="420" y1="470" x2="420" y2="540" style="stroke:lime"/>
+  <g transform="translate(420,540)">
+  <g transform="rotate(90)">
+  <line x1="0" y1="0" x2="-10" y2="-10"  style="stroke:lime"/>
+  <line x1="0" y1="0" x2="-10" y2="10"  style="stroke:lime"/>
+  </g>
+  </g>
+  
+  <line x1="420" y1="470" x2="600" y2="540" style="stroke:lime"/>
+  <g transform="translate(600,540)">
+  <g transform="rotate(25)">
+  <line x1="0" y1="0" x2="-10" y2="-10"  style="stroke:lime"/>
+  <line x1="0" y1="0" x2="-10" y2="10"  style="stroke:lime"/>
+  </g>
+  </g>
+  
+  
+  
+  <line x1="240" y1="570" x2="240" y2="620" style="stroke:lime"/>
+  <g transform="translate(240,620)">
+  <g transform="rotate(90)">
+  <line x1="0" y1="0" x2="-10" y2="-10"  style="stroke:lime"/>
+  <line x1="0" y1="0" x2="-10" y2="10"  style="stroke:lime"/>
+  </g>
+  </g>
+  
+  <line x1="420" y1="570" x2="420" y2="620" style="stroke:lime"/>
+  <g transform="translate(420,620)">
+  <g transform="rotate(90)">
+  <line x1="0" y1="0" x2="-10" y2="-10"  style="stroke:lime"/>
+  <line x1="0" y1="0" x2="-10" y2="10"  style="stroke:lime"/>
+  </g>
+  </g>
+  
+  <line x1="600" y1="570" x2="600" y2="620" style="stroke:lime"/>
+  <g transform="translate(600,620)">
+  <g transform="rotate(90)">
+  <line x1="0" y1="0" x2="-10" y2="-10"  style="stroke:lime"/>
+  <line x1="0" y1="0" x2="-10" y2="10"  style="stroke:lime"/>
+  </g>
+  </g>
+  
+  
+  
+  <image x="225" y="620" width="37" height="86" xlink:href="../jpgs/indexp2.jpg" />
+  <image x="390" y="620" width="92" height="58" xlink:href="../gifs/prtapic.gif" />
+  <image x="570" y="620" width="56" height="56" xlink:href="../pngs/smac.png" />
+</g>
+
+</svg>
+ 
+ 

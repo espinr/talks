@@ -1,0 +1,96 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="../../svgs/slide.css" ?>
+<svg viewBox="0 0 1000 600" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <!-- ********** shape definitions ********** -->
+
+  <defs>
+  
+	<!-- exported from Coral as .AI then exported from Ilustrator as .SVG -->
+
+	<!-- i)	Changed layer 1 group to my shape definition -->
+	<!-- ii)	prefix class & gradient names with shape name hyphenated	-->
+	<!-- iii)	correct class added to paths without class (classes added to groups don't seem to be inherrited by children -->
+	<!-- iv)	remove unnessasary duplicate gradients -->
+
+	<style type="text/css">
+	<![CDATA[
+		.blade-st0{fill-rule:nonzero;fill:url(#blade-gradient);stroke:#000000;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:3.962;}
+	]]>
+	</style>
+
+	<symbol id="fan-blade">
+		<g transform="translate(10 100)">
+			<radialGradient id="blade-gradient" gradientUnits="userSpaceOnUse" cx="55" cy="-10" r="85" fx="25" fy="0" gradientTransform="rotate(20)">
+				<stop offset="0%" style="stop-color:#fff878" />
+				<stop offset="0.5" style="stop-color:#efdf60" />
+				<stop offset="100%" style="stop-color:#af9f20" />
+			</radialGradient>
+			<path class="blade-st0" d="M -8,0 c 0,0 -9,-75.248 27,-85.998 s 81,0 99,75.249 s -90,-32.25 -99,10.75"/>
+		</g>
+	</symbol>
+
+	<symbol id="fan" >
+		<g transform="translate(110 110)">
+			<use x="0" y="0" xlink:href="#fan-blade" transform="rotate(0) translate(-10 -100)"/>
+			<use x="0" y="0" xlink:href="#fan-blade" transform="rotate(240) translate(-10 -100)"/>
+			<use x="0" y="0" xlink:href="#fan-blade" transform="rotate(120) translate(-10 -100)"/>
+		</g>
+	</symbol>
+
+	<symbol id="fan-on" >
+		<g transform="translate(120 120)">
+			<g transform="rotate(0)">
+				<use x="0" y="0" xlink:href="#fan-blade" transform="rotate(0) translate(-10 -100)"/>
+				<use x="0" y="0" xlink:href="#fan-blade" transform="rotate(240) translate(-10 -100)"/>
+				<use x="0" y="0" xlink:href="#fan-blade" transform="rotate(120) translate(-10 -100)"/>
+				<animateTransform attributeName="transform" attributeType="XML" type="rotate" from="360" to="0" dur="2s" repeatCount="indefinite" fill="freeze" /> 
+			</g>
+		</g>
+	</symbol>
+	<symbol id="status">
+		<rect width="30" height="30" />	
+	</symbol>
+
+	<symbol id="status-on">
+		<rect width="30" height="30" />
+		<g>
+			<rect width="30" height="30" style="fill:red;" />
+			<animateColor attributeName="visibility" attributeType="CSS" values="hidden;visible;" calcMode="discrete" begin="0s" dur="1s" repeatCount="indefinite" fill="freeze" /> 
+		</g>
+	</symbol>
+
+	<style type="text/css">
+	<![CDATA[
+		.droplet-st0{fill:#FFFFFF;fill-opacity:0.75;}
+		.droplet-st1{fill:#B5ffff;stroke:#457faf;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;fill-opacity:0.75;}
+	]]>
+	</style>
+
+	<symbol id="drip">
+		<path class="droplet-st1" d="M19.463,69.009c10.269-0.07,19.042-7.772,19.042-18.611c0-18.826-17.614-30.451-19.042-50.348C17.967,19.946,0.495,31.57,0.495,50.397c0,10.839,8.771,18.541,18.968,18.611z"/>
+		<path class="droplet-st0" d="M10.197,33.53c-8.629,14.833-3.708,29.023,8.201,32.089C8.842,53.14,10.339,50.002,19.61,34.385c-5.491,3.209-7.13,1.64-9.413-0.855v0.001z"/>
+	</symbol>
+	<g id="droplet">
+		<use xlink:href="#drip" transform="scale(0.1 0.1)"/>
+	</g>
+	<symbol id="droplet-on">
+		<use xlink:href="#drip" />
+		<animateTransform additive="sum" attributeName="transform" attributeType="XML" type="translate"
+			 dur="4s" values="20  0  ;0 0;0 25;0 75;0 175;0 375;-60  430;20   440;" keytimes="0;0.125;0.25;0.375;0.5;0.625;0.75;1.0;" fill="freeze" repeatCount="indefinite"/> 
+		<animateTransform additive="sum" attributeName="transform" attributeType="XML" type="scale"
+			 dur="4s" values="0.1 0.1;1 1;1  1;1  1;1   1;1   1;4 0.25;0.1 0.1;" keytimes="0;0.125;0.25;0.375;0.5;0.625;0.75;1.0;" fill="freeze" repeatCount="indefinite"/> 
+	</symbol>
+
+  </defs>
+
+	<!-- ********** diagram ********** -->
+
+	<g id="." transform="translate(0 20)" >
+		<use class="fans" transform="translate(150 50) scale(0.5 0.5)" xlink:href="#fan-on" />
+		<use class="defrost" transform="translate(50 0) scale(1.0 1.0)" xlink:href="#droplet-on" />
+		<use class="defrost" transform="translate(150 0) scale(1.0 1.0)" xlink:href="#droplet-on" />
+		<use class="defrost" transform="translate(250 0) scale(1.0 1.0)" xlink:href="#droplet-on" />
+	</g>
+
+</svg>

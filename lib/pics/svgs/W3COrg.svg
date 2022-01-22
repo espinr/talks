@@ -1,0 +1,2181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:ivan="urn:ivan-herman.net#GroupOverview"
+     xmlns:svg="http://www.w3.org/2000/svg"
+     onload="init(evt)"
+     a:scriptImplementation="Adobe"
+     viewBox="-10 -100 1380 1170">
+   <title>Organizational chart of W3C in a tabular form</title>
+   <metadata>
+      <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/"
+               xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+               xmlns:contact="http://www.w3.org/2000/10/swap/pim/contact#"
+               xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+         <rdf:Description rdf:about="">
+            <dc:title xml:lang="en">Organizational chart of W3C in a tabular form</dc:title>
+            <dc:creator>
+               <contact:Person>
+                  <contact:fullName>Ivan Herman</contact:fullName>
+                  <contact:organization>W3C - World Wide Web Consortium</contact:organization>
+                  <contact:emailAddress>ivan@w3.org</contact:emailAddress>
+               </contact:Person>
+            </dc:creator>
+            <dc:format>image/svg+xml</dc:format>
+            <dc:publisher xml:lang="en">W3C - World Wide Web Consortium</dc:publisher>
+            <dc:language>en</dc:language>
+            <dc:rights rdf:resource="http://www.w3.org/Consortium/Legal/copyright-documents"/>
+         </rdf:Description>
+      </rdf:RDF>
+   </metadata>
+   <g transform="translate(830,600)">
+      <desc>Statistics</desc>
+      <text class="legend" x="0" y="0">Number of Activities: 23</text>
+      <text class="legend" x="0" y="30">Number of Working Groups: 46</text>
+      <text class="legend" x="0" y="60">Number of Interest Groups: 13</text>
+      <text class="legend" x="0" y="90">Number of Coordination Groups: 5</text>
+   </g>
+   <use xlink:href="#w3clogo" y="-70"/>
+   <text class="title" x="685" y="-40">W3C Groups and their Dependencies</text>
+   <desc>Coloumns correspond to Domain, with Activities and Groups indented</desc>
+   <script type="text/ecmascript" a:scriptImplementation="Adobe">               
+               var svgdoc;            // Top level SVG document
+               var deps = new Array();
+               var infs;
+               // Just the initialization function, setting the global variables
+               function init(evt) {
+                   svgdoc = evt.currentTarget.ownerDocument;
+                   depG   = svgdoc.getElementById("Dependencies");
+                   infG   = svgdoc.getElementById("Influences");                   
+                   dd = depG.childNodes;                   
+                   for( var i = 0; i &lt; dd.length; i++ ) {
+                       n = dd.item(i);
+                       if( n.nodeName == 'g' ) {
+                           deps.push(n);
+                       }
+                   }
+                   dd = infG.childNodes;                   
+                   for( var i = 0; i &lt; dd.length; i++ ) {
+                       n = dd.item(i);
+                       if( n.nodeName == 'g' ) {
+                           deps.push(n);
+                       }
+                   }
+               }       
+               // There seems to be a timing problem with ASV6
+               function turnLinesOff() {
+                   di = deps.length;
+                   for( var i = 0; i &lt; di; i++ ) {
+                       deps[i].setAttributeNS(null,"visibility","hidden");
+                   }
+               }
+               // Turn the group of lines on and off...
+               function doOnMouseOver(evt) {
+                   turnLinesOff();
+                   var target = evt.currentTarget;
+                   var id = target.getAttributeNS(null,"id");
+                   var lines = svgdoc.getElementById(id + "_D");
+                   lines.setAttributeNS(null,"visibility","visible");
+                   lines = svgdoc.getElementById(id + "_I");
+                   lines.setAttributeNS(null,"visibility","visible");
+               }
+               function doOnMouseOut(evt) {
+                   turnLinesOff();
+               }              
+            </script>
+   <style type="text/css">
+                 text.legend   { font-family:Bitstream Vera Sans; font-size: 16px; fill: black; font-weight: bold; text-anchor: start  }
+                 text.title    { font-family:Bitstream Vera Sans; font-size: 46px; fill: black; stroke:none; text-anchor: middle; }
+            	 rect.domain   { fill: navajowhite; stroke: inherit }
+            	 text.domain   { font-size:17px; fill: black; font-weight: bold; 
+				 				 font-family:Bitstream Vera Sans;  stroke:none; text-anchor: middle; } 
+            	 rect.activity { fill: tan; stroke: inherit; }
+            	 text.activity { font-size:15px; fill: black; font-weight: bold;
+				 				  font-family:Bitstream Vera Sans;  stroke:none; text-anchor: middle;} 
+            	 rect.wg    { fill: darksalmon; stroke: inherit }
+            	 text.wg    { font-size:13px; fill: black; font-weight: bold;
+				 				font-family:Bitstream Vera Sans;  stroke:none; text-anchor: middle; }
+            	 rect.ig    { fill: khaki; stroke: inherit }
+            	 text.ig    { font-size:13px; fill: black; font-weight: bold;
+				              font-family:Bitstream Vera Sans;  stroke:none; text-anchor: middle;}
+            	 rect.cg    { fill: peachpuff; stroke: inherit }
+            	 text.cg    { font-size:13px; fill: black; font-weight: bold;
+				 				font-family:Bitstream Vera Sans;  stroke:none; text-anchor: middle; }
+            	 path          { stroke-width: 1px; stroke: black; fill: none }
+            	 use.new       { stroke: red; stroke-width:3  } 
+                polyline.dependency, path.dependency { stroke-width: 2.5px; stroke: red; marker-mid:url(#DepArrow) }
+                path.DependenciesA    { stroke: none; fill: red }            	   
+                polyline.influence, path.influence{ stroke-width: 2.5px; stroke: blue; marker-mid:url(#InflArrow) }            	   
+                path.InfluencesA      { stroke: none; fill: blue }            	   
+	          </style>
+   <defs>
+      <g id="w3clogo">
+         <svg height="51" width="90" viewBox="0 0 90 51">
+            <g>
+               <path style="fill:black"
+                     d="M74.5,.2l0.8,5.1l-3,5.6c0,0-1.13-2.39-3-3.7                               c-1.6-1.1-2.6-1.4-4.2-1c-2.1,0.4-4.4,2.9-5.4,5.9                               c-1.2,3.6-1.2,5.4-1.3,7c-0.07,2.6,0.3,4.14,0.3,4.1                               s-1.8-3.3-1.8-8.1c0.01-3.5,0.6-6.6,2.2-9.7                               c1.41-2.7,3.5-4.4,5.4-4.5c1.9-0.2,3.4,0.7,4.6,1.7                               c1.2,1,2.5,3.3,2.5,3.4z"/>
+               <path style="fill:black"
+                     d="M74.9,28.8c0,0-1.3,2.3-2.1,3.2c-.8.9-2.3,2.5-4.1,3.3                               c-1.8.8-2.7.9-4.5,0.8c-1.8-.2-3.4-1.2-4-1.6s-2-1.7-2.9-2.9                               c-.8-1.2-2.1-3.5-2.1-3.5s.7,2.4,1.2,3.3c.3.6,1.1,2.3,2.2,3.9                               c1.1,1.4,3.1,3.9,6.3,4.4c3.1,.6,5.3-.9,5.8-1.2c.5-.3,1.7-1.3,2.4-2.1                               c.7-.8,1.4-1.8,1.8-2.4c.3-.4,0.7-1.3.7-1.3z"/>
+               <path style="fill:#0C479D"
+                     d="M20.7,0.43l7.1,24.1l7.1-24.1h5.1l-11.7,39.6                               h-.5l-7.35-24.5l-7.35,24.5h-.5l-11.7-39.6h5.1l7.1,24.1l4.8-16.2l-2.3-7.9z"/>
+               <path style="fill:#0C479D"
+                     d="M54.6,27.3c0,3.6-1,6.6-2.9,9                               c-1.9,2.4-4.4,3.7-7.4,3.7c-2.3,0-4.3-0.7-5.9-2.2                               c-1.7-1.4-2.9-3.4-3.8-5.9l4-1.7c.6,1.5,1.4,2.7,2.3,3.5                               c1,.9,2.1,1.3,3.4,1.3c1.4,0,2.5-.8,3.5-2.3                               c.9-1.5,1.4-3.4,1.4-5.5c0-2.4-.5-4.2-1.5-5.5                               c-1.2-1.5-3-2.3-5.5-2.3h-2v-2.3l6.8-11.8h-8.2l-2.3,3.9                               h-1.5v-8.7h19.1v2.4l-7.2,12.5c2.5.8,4.5,2.3,5.8,4.4                               c1.3,2.1,2,4.7,1.9,7.5z"/>
+               <text x="78" y="10"
+                     style="font-size:13;font-family:Arial, Helvetica, sans-serif; text-anchor: start">®</text>
+            </g>
+         </svg>
+      </g>
+      <!--
+Bitstream Vera Fonts Copyright
+
+The fonts have a generous copyright, allowing derivative works (as
+long as "Bitstream" or "Vera" are not in the names), and full
+redistribution (so long as they are not *sold* by themselves). They
+can be be bundled, redistributed and sold with any software.
+
+The fonts are distributed under the following copyright:
+
+Copyright
+=========
+
+Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved. Bitstream
+Vera is a trademark of Bitstream, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the fonts accompanying this license ("Fonts") and associated
+documentation files (the "Font Software"), to reproduce and distribute
+the Font Software, including without limitation the rights to use,
+copy, merge, publish, distribute, and/or sell copies of the Font
+Software, and to permit persons to whom the Font Software is furnished
+to do so, subject to the following conditions:
+
+The above copyright and trademark notices and this permission notice
+shall be included in all copies of one or more of the Font Software
+typefaces.
+
+The Font Software may be modified, altered, or added to, and in
+particular the designs of glyphs or characters in the Fonts may be
+modified and additional glyphs or characters may be added to the
+Fonts, only if the fonts are renamed to names not containing either
+the words "Bitstream" or the word "Vera".
+
+This License becomes null and void to the extent applicable to Fonts
+or Font Software that has been modified and is distributed under the
+"Bitstream Vera" names.
+
+The Font Software may be sold as part of a larger software package but
+no copy of one or more of the Font Software typefaces may be sold by
+itself.
+
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL
+BITSTREAM OR THE GNOME FOUNDATION BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL,
+OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT
+SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.
+
+Except as contained in this notice, the names of Gnome, the Gnome
+Foundation, and Bitstream Inc., shall not be used in advertising or
+otherwise to promote the sale, use or other dealings in this Font
+Software without prior written authorization from the Gnome Foundation
+or Bitstream Inc., respectively. For further information, contact:
+fonts at gnome dot org.
+	   
+	   --><font horiz-adv-x="1038">
+         <font-face font-family="Bitstream Vera Sans" units-per-em="2048"
+                    panose-1="2 11 6 3 3 3 4 11 2 4"
+                    ascent="1901"
+                    descent="-483"
+                    alphabetic="0"/>
+         <missing-glyph horiz-adv-x="650"/>
+         <glyph unicode=" " glyph-name="space" horiz-adv-x="651"/>
+         <glyph unicode="!" glyph-name="exclam" horiz-adv-x="821"
+                d="M453 1493H655L528 838L438 481H276L326 838L453 1493ZM213 254H416L367 0H162L213 254Z"/>
+         <glyph unicode="&#34;" glyph-name="quotedbl" horiz-adv-x="942"
+                d="M367 1493V938H197V1493H367ZM745 1493V938H575V1493H745Z"/>
+         <glyph unicode="#" glyph-name="numbersign" horiz-adv-x="1716"
+                d="M897 1470L793 1055H1085L1190 1470H1350L1247 1055H1583L1544 901H1208L1126 567H1466L1430 414H1087L983 0H823L926 414H633L530 0H369L473 414H143L180 567H510L594 901H258L297 1055H633L735    1470H897ZM1047 901H756L672 567H965L1047 901Z"/>
+         <glyph unicode="$" glyph-name="dollar" horiz-adv-x="1303"
+                d="M600 145Q739 151 820 215T901 383Q901 467 850 513T684 578L600 145ZM700 1180Q568 1166 493 1102T418 938Q418 868 465 829T621 770L700 1180ZM1167 1262L1133 1081Q1047 1127 964 1152T801 1179L717    752Q901 723 997 637T1094 416Q1094 241 951 127T571 0L512 -301H412L471 0Q355 3 253 26T68 92L102 276Q194 214 294 180T500 142L588 598Q399 634 313 708T227 909Q227 1075 364 1190T727 1323L774 1556H874L830 1323Q920 1320 1005 1305T1167 1262Z"/>
+         <glyph unicode="%" glyph-name="percent" horiz-adv-x="1946"
+                d="M481 707Q345 707 266 795T186 1036Q186 1252 302 1386T604 1520Q740 1520 819 1431T899 1188Q899 974 783 841T481 707ZM739 1182Q739 1287 700 1340T584 1393Q472 1393 409 1296T346 1026Q346    934 386 884T502 834Q609 834 674 929T739 1182ZM1599 446Q1599 553 1561 606T1446 659Q1335 659 1272 562T1208 291Q1208 198 1248 148T1364 98Q1471 98 1535 193T1599 446ZM1343 -29Q1207 -29 1128 60T1049 301Q1049 517 1164 650T1466 784Q1602 784 1680 696T1759    455Q1759 240 1644 106T1343 -29ZM1683 1520L449 -29H289L1524 1520H1683Z"/>
+         <glyph unicode="&amp;" glyph-name="ampersand" horiz-adv-x="1597"
+                d="M967 260L541 803Q420 715 358 616T295 414Q295 287 380 210T608 133Q702 133 793 165T967 260ZM1507 801Q1462 642 1389 510T1212 270L1421 0H1169L1063 139Q957 56 835 14T580 -29Q359    -29 228 80T96 369Q96 523 188 660T463 913Q432 959 418 1006T403 1108Q403 1176 426 1237T492 1348Q561 1430 665 1475T889 1520Q967 1520 1046 1502T1206 1448L1171 1266Q1096 1313 1022 1337T877 1362Q753 1362 676 1298T598 1133Q598 1089 617 1046T705 915L1112    395Q1187 474 1240 576T1321 801H1507Z"/>
+         <glyph unicode="'" glyph-name="quotesingle" horiz-adv-x="563"
+                d="M367 1493V938H197V1493H367Z"/>
+         <glyph unicode="(" glyph-name="parenleft" horiz-adv-x="799"
+                d="M874 1554Q609 1223 479 926T348 352Q348 194 386 39T500 -270H340Q248 -98 203 64T158 383Q158 680 295 971T711 1554H874Z"/>
+         <glyph unicode=")" glyph-name="parenright" horiz-adv-x="799"
+                d="M-127 -270Q139 61 269 358T399 932Q399 1090 362 1245T248 1554H408Q500 1381 545 1220T590 903Q590 605 452 312T37 -270H-127Z"/>
+         <glyph unicode="*" glyph-name="asterisk" horiz-adv-x="1024"
+                d="M963 1247L604 1053L963 858L905 760L569 963V586H455V963L119 760L61 858L420 1053L61 1247L119 1346L455 1143V1520H569V1143L905 1346L963 1247Z"/>
+         <glyph unicode="+" glyph-name="plus" horiz-adv-x="1716"
+                d="M942 1284V727H1499V557H942V0H774V557H217V727H774V1284H942Z"/>
+         <glyph unicode="," glyph-name="comma" horiz-adv-x="651"
+                d="M184 254H395L362 82L135 -238H6L150 82L184 254Z"/>
+         <glyph unicode="-" glyph-name="hyphen" horiz-adv-x="739"
+                d="M125 643H664L633 479H92L125 643Z"/>
+         <glyph unicode="." glyph-name="period" horiz-adv-x="651"
+                d="M168 254H379L330 0H119L168 254Z"/>
+         <glyph unicode="/" glyph-name="slash" horiz-adv-x="690"
+                d="M696 1493H874L27 -190H-150L696 1493Z"/>
+         <glyph unicode="0" glyph-name="zero" horiz-adv-x="1303"
+                d="M782 1520Q985 1520 1092 1385T1200 997Q1200 805 1150 616T1008 276Q915 126 790 49T512 -29Q316 -29 209 107T102 494Q102 684 153 874T297 1214Q389 1364 512 1442T782 1520ZM770 1360Q694 1360    626 1320T502 1200Q410 1068 356 871T301 465Q301 300 359 216T532 131Q612 131 680 171T803 291Q894 422 947 619T1001 1026Q1001 1191 943 1275T770 1360Z"/>
+         <glyph unicode="1" glyph-name="one" horiz-adv-x="1303"
+                d="M133 170H463L686 1319L313 1247L348 1421L719 1493H922L664 170H993L961 0H100L133 170Z"/>
+         <glyph unicode="2" glyph-name="two" horiz-adv-x="1303"
+                d="M944 721L299 168H1012L977 0H8L41 170L715 748Q850 865 906 953T963 1135Q963 1232 895 1293T717 1354Q622 1354 506 1320T258 1221L295 1421Q419 1470 532 1495T741 1520Q937 1520 1056 1416T1176    1143Q1176 1029 1119 926T944 721Z"/>
+         <glyph unicode="3" glyph-name="three" horiz-adv-x="1303"
+                d="M324 1456Q434 1488 537 1504T741 1520Q939 1520 1055 1432T1171 1196Q1171 1051 1080 947T827 805Q953 769 1012 693T1071 492Q1071 372 1014 267T848 86Q766 28 652 0T389 -29Q295 -29 199 -11T4    45L41 236Q135 184 230 159T426 133Q623 133 745 234T868 498Q868 602 790 658T567 715H393L424 879H608Q774 879 869 955T965 1161Q965 1255 895 1306T698 1358Q602 1358 502 1338T293 1276L324 1456Z"/>
+         <glyph unicode="4" glyph-name="four" horiz-adv-x="1303"
+                d="M881 1493H1135L944 520H1157L1124 352H911L844 0H643L711 352H37L76 547L881 1493ZM899 1317L233 520H743L899 1317Z"/>
+         <glyph unicode="5" glyph-name="five" horiz-adv-x="1303"
+                d="M1190 1493L1159 1325H541L469 956Q515 971 562 978T659 985Q866 985 986 874T1106 573Q1106 440 1045 318T870 104Q790 40 675 6T422 -29Q332 -29 238 -13T41 35L78 223Q170 178 262 156T449 133Q644    133 771 250T899 543Q899 673 816 745T582 817Q503 817 418 799T242 743L387 1493H1190Z"/>
+         <glyph unicode="6" glyph-name="six" horiz-adv-x="1303"
+                d="M940 553Q940 680 875 753T698 827Q543 827 438 708T332 412Q332 280 396 206T575 131Q731 131 835 253T940 553ZM1212 1458L1178 1274Q1120 1312 1045 1332T885 1352Q678 1352 553 1222T365 815Q438    900 534 943T743 987Q926 987 1034 882T1143 598Q1143 452 1090 327T934 106Q864 41 771 6T573 -29Q367 -29 248 102T129 461Q129 673 183 869T336 1210Q439 1362 585 1441T909 1520Q987 1520 1063 1505T1212 1458Z"/>
+         <glyph unicode="7" glyph-name="seven" horiz-adv-x="1303"
+                d="M262 1493H1284L1266 1407L412 0H190L997 1323H229L262 1493Z"/>
+         <glyph unicode="8" glyph-name="eight" horiz-adv-x="1303"
+                d="M911 453Q911 566 832 637T625 709Q469 709 368 616T266 379Q266 265 343 198T553 131Q710 131 810 222T911 453ZM1014 1149Q1014 1244 944 1302T758 1360Q621 1360 533 1283T444 1090Q444 990 513    929T698 868Q836 868 925 947T1014 1149ZM877 786Q990 743 1050 656T1110 446Q1110 239 950 105T537 -29Q322 -29 195 76T68 358Q68 518 177 642T461 801Q356 837 301 912T246 1096Q246 1277 396 1398T778 1520Q971 1520 1092 1422T1214 1171Q1214 1039 1124 936T877    786Z"/>
+         <glyph unicode="9" glyph-name="nine" horiz-adv-x="1303"
+                d="M90 33L127 217Q185 179 259 159T418 139Q625 139 751 270T940 678Q866 593 769 549T559 504Q377 504 270 609T162 893Q162 1039 215 1164T371 1384Q441 1450 533 1485T729 1520Q936 1520 1056 1389T1176    1030Q1176 819 1121 622T967 281Q863 129 717 50T393 -29Q316 -29 240 -14T90 33ZM362 940Q362 813 428 739T606 664Q761 664 866 783T971 1079Q971 1211 906 1285T727 1360Q572 1360 467 1239T362 940Z"/>
+         <glyph unicode=":" glyph-name="colon" horiz-adv-x="690"
+                d="M313 1059H524L475 805H264L313 1059ZM156 254H367L317 0H106L156 254Z"/>
+         <glyph unicode=";" glyph-name="semicolon" horiz-adv-x="690"
+                d="M180 254H391L356 82L131 -238H2L145 82L180 254ZM336 1059H547L498 805H287L336 1059Z"/>
+         <glyph unicode="&lt;" glyph-name="less" horiz-adv-x="1716"
+                d="M1499 1008L467 641L1499 276V94L217 559V725L1499 1190V1008Z"/>
+         <glyph unicode="=" glyph-name="equal" horiz-adv-x="1716"
+                d="M217 930H1499V762H217V930ZM217 522H1499V352H217V522Z"/>
+         <glyph unicode="&gt;" glyph-name="greater" horiz-adv-x="1716"
+                d="M217 1008V1190L1499 725V559L217 94V276L1247 641L217 1008Z"/>
+         <glyph unicode="?" glyph-name="question" horiz-adv-x="1087"
+                d="M510 254L461 0H258L307 254H510ZM289 1407Q391 1464 492 1492T700 1520Q861 1520 954 1445T1047 1241Q1047 1138 994 1048T819 860L715 776Q631 710 603 663T557 524L532 401H342L373 555Q391    649 430 714T580 872L686 961Q770 1031 804 1084T838 1194Q838 1270 784 1313T633 1356Q553 1356 455 1321T252 1219L289 1407Z"/>
+         <glyph unicode="@" glyph-name="at" horiz-adv-x="2048"
+                d="M1253 238Q1184 164 1104 126T936 88Q789 88 693 187T596 438Q596 658 744 822T1092 987Q1184 987 1256 947T1368 836L1395 967H1538L1395 229Q1572 257 1686 409T1800 770Q1800 1003 1635 1150T1208    1298Q1030 1298 864 1236T571 1059Q426 925 345 749T264 389Q264 128 438 -42T883 -213Q1012 -213 1137 -170T1399 -33L1481 -147Q1346 -249 1190 -301T868 -354Q546 -354 333 -140T119 401Q119 626 223 836T516 1200Q655 1314 835 1377T1204 1440Q1525 1440 1735    1251T1946 778Q1946 483 1743 287T1223 84L1253 238ZM1094 846Q953 846 855 735T756 467Q756 355 813 292T971 229Q1113 229 1209 343T1305 623Q1305 725 1248 785T1094 846Z"/>
+         <glyph unicode="A" glyph-name="A" horiz-adv-x="1401"
+                d="M754 1493H983L1260 0H1049L987 383H315L104 0H-109L754 1493ZM827 1294L408 551H956L827 1294Z"/>
+         <glyph unicode="B" glyph-name="B" horiz-adv-x="1405"
+                d="M346 1493H862Q1072 1493 1176 1415T1280 1180Q1280 1036 1191 932T956 805Q1080 777 1142 698T1204 487Q1204 262 1038 131T582 0H55L346 1493ZM395 713L289 166H614Q797 166 896 250T995 487Q995 605    930 659T719 713H395ZM514 1327L426 877H727Q888 877 978 947T1069 1141Q1069 1238 1008 1282T813 1327H514Z"/>
+         <glyph unicode="C" glyph-name="C" horiz-adv-x="1430"
+                d="M1423 1378L1382 1165Q1286 1262 1179 1309T946 1356Q775 1356 646 1274T422 1024Q362 916 331 796T299 553Q299 349 404 242T711 135Q850 135 978 179T1227 313L1180 74Q1061 23 940 -3T696 -29Q409    -29 248 127T86 561Q86 739 147 911T324 1225Q446 1376 602 1448T967 1520Q1095 1520 1209 1485T1423 1378Z"/>
+         <glyph unicode="D" glyph-name="D" horiz-adv-x="1577"
+                d="M346 1493H780Q1126 1493 1302 1347T1479 911Q1479 720 1412 544T1227 246Q1108 122 925 61T492 0H55L346 1493ZM516 1327L291 166H555Q894 166 1080 361T1266 911Q1266 1126 1146 1226T770 1327H516Z"/>
+         <glyph unicode="E" glyph-name="E" horiz-adv-x="1294"
+                d="M346 1493H1290L1257 1323H514L428 881H1141L1108 711H395L291 170H1051L1018 0H55L346 1493Z"/>
+         <glyph unicode="F" glyph-name="F" horiz-adv-x="1178"
+                d="M346 1493H1202L1169 1323H514L428 883H1020L987 713H395L256 0H55L346 1493Z"/>
+         <glyph unicode="G" glyph-name="G" horiz-adv-x="1587"
+                d="M1118 223L1196 614H864L895 780H1425L1296 123Q1163 50 1006 11T690 -29Q409 -29 251 127T92 561Q92 792 188 1000T455 1348Q562 1435 689 1477T971 1520Q1111 1520 1239 1485T1485 1378L1444 1163Q1354    1257 1233 1306T975 1356Q816 1356 695 1296T479 1108Q398 1000 352 854T305 555Q305 346 412 241T731 135Q837 135 936 157T1118 223Z"/>
+         <glyph unicode="H" glyph-name="H" horiz-adv-x="1540"
+                d="M346 1493H549L430 881H1163L1282 1493H1485L1194 0H991L1130 711H397L258 0H55L346 1493Z"/>
+         <glyph unicode="I" glyph-name="I" horiz-adv-x="604"
+                d="M346 1493H549L258 0H55L346 1493Z"/>
+         <glyph unicode="J" glyph-name="J" horiz-adv-x="604"
+                d="M342 1493H545L274 104Q221 -167 96 -288T-256 -410H-336L-303 -240H-240Q-105 -240 -35 -163T72 104L342 1493Z"/>
+         <glyph unicode="K" glyph-name="K" horiz-adv-x="1343"
+                d="M346 1493H549L426 864L1210 1493H1479L592 780L1241 0H995L399 727L258 0H55L346 1493Z"/>
+         <glyph unicode="L" glyph-name="L" horiz-adv-x="1141"
+                d="M344 1493H547L291 168H1018L985 0H55L344 1493Z"/>
+         <glyph unicode="M" glyph-name="M" horiz-adv-x="1767"
+                d="M346 1493H649L823 487L1401 1493H1712L1421 0H1225L1479 1309L893 287H696L506 1313L252 0H55L346 1493Z"/>
+         <glyph unicode="N" glyph-name="N" horiz-adv-x="1532"
+                d="M346 1493H618L1030 213L1280 1493H1477L1186 0H913L502 1288L252 0H55L346 1493Z"/>
+         <glyph unicode="O" glyph-name="O" horiz-adv-x="1612"
+                d="M934 1356Q768 1356 641 1276T420 1030Q360 925 329 807T297 569Q297 361 396 248T678 135Q842 135 970 216T1190 459Q1251 567 1283 685T1315 922Q1315 1129 1215 1242T934 1356ZM672 -29Q397 -29 240    134T82 580Q82 742 143 911T313 1212Q440 1367 596 1443T940 1520Q1214 1520 1372 1359T1530 918Q1530 746 1470 580T1298 279Q1170 123 1016 47T672 -29Z"/>
+         <glyph unicode="P" glyph-name="P" horiz-adv-x="1235"
+                d="M346 1493H813Q1017 1493 1124 1398T1231 1120Q1231 874 1073 737T629 600H375L258 0H55L346 1493ZM516 1327L408 766H662Q834 766 926 854T1018 1106Q1018 1211 956 1269T780 1327H516Z"/>
+         <glyph unicode="Q" glyph-name="Q" horiz-adv-x="1612"
+                d="M739 -27Q728 -28 716 -28T680 -29Q400 -29 242 131T84 575Q84 742 144 910T313 1212Q438 1366 594 1443T940 1520Q1214 1520 1372 1359T1530 918Q1530 617 1365 367T934 14L1137 -264H911L739 -27ZM934    1356Q768 1356 641 1276T420 1030Q360 925 329 807T297 569Q297 361 396 248T678 135Q842 135 970 216T1190 459Q1251 567 1283 685T1315 922Q1315 1129 1215 1242T934 1356Z"/>
+         <glyph unicode="R" glyph-name="R" horiz-adv-x="1423"
+                d="M516 1327L414 797H674Q827 797 921 881T1016 1102Q1016 1211 953 1269T770 1327H516ZM887 717Q951 702 993 643T1092 408L1219 0H1006L889 383Q844 531 785 581T604 631H381L258 0H55L346 1493H801Q1008    1493 1118 1400T1229 1130Q1229 974 1135 860T887 717Z"/>
+         <glyph unicode="S" glyph-name="S" horiz-adv-x="1300"
+                d="M1235 1444L1196 1247Q1095 1301 996 1328T803 1356Q622 1356 515 1277T408 1067Q408 995 447 957T651 874L772 844Q977 791 1057 710T1137 481Q1137 255 960 113T492 -29Q373 -29 253 -6T12 66L53 274Q164    205 275 170T498 135Q687 135 801 219T915 438Q915 528 870 574T674 659L553 690Q346 744 271 814T195 1012Q195 1235 366 1377T813 1520Q920 1520 1025 1501T1235 1444Z"/>
+         <glyph unicode="T" glyph-name="T" horiz-adv-x="1251"
+                d="M121 1493H1384L1352 1323H819L563 0H360L616 1323H88L121 1493Z"/>
+         <glyph unicode="U" glyph-name="U" horiz-adv-x="1499"
+                d="M317 1493H520L344 586Q333 525 329 486T324 416Q324 278 401 207T627 135Q820 135 927 241T1081 586L1257 1493H1460L1280 561Q1221 259 1056 115T604 -29Q380 -29 250 83T119 389Q119 424 124 467T139    561L317 1493Z"/>
+         <glyph unicode="V" glyph-name="V" horiz-adv-x="1401"
+                d="M422 0L160 1493H358L575 209L1300 1493H1520L657 0H422Z"/>
+         <glyph unicode="W" glyph-name="W" horiz-adv-x="2025"
+                d="M197 1493H393L465 223L1028 1493H1253L1327 223L1884 1493H2089L1425 0H1171L1102 1245L543 0H289L197 1493Z"/>
+         <glyph unicode="X" glyph-name="X" horiz-adv-x="1403"
+                d="M281 1493H485L741 954L1204 1493H1440L825 780L1196 0H993L692 629L147 0H-88L610 803L281 1493Z"/>
+         <glyph unicode="Y" glyph-name="Y" horiz-adv-x="1251"
+                d="M129 1493H346L625 879L1157 1493H1384L707 711L569 0H367L504 711L129 1493Z"/>
+         <glyph unicode="Z" glyph-name="Z" horiz-adv-x="1403"
+                d="M268 1493H1440L1411 1339L254 170H1206L1174 0H-45L-16 154L1141 1323H236L268 1493Z"/>
+         <glyph unicode="[" glyph-name="bracketleft" horiz-adv-x="799"
+                d="M436 1556H860L831 1413H592L293 -127H532L506 -270H82L436 1556Z"/>
+         <glyph unicode="\" glyph-name="backslash" horiz-adv-x="690"
+                d="M344 1493L537 -190H369L174 1493H344Z"/>
+         <glyph unicode="]" glyph-name="bracketright" horiz-adv-x="799"
+                d="M700 1556L346 -270H-78L-51 -127H188L487 1413H250L276 1556H700Z"/>
+         <glyph unicode="^" glyph-name="asciicircum" horiz-adv-x="1716"
+                d="M956 1493L1499 936H1298L858 1331L418 936H217L760 1493H956Z"/>
+         <glyph unicode="_" glyph-name="underscore" horiz-adv-x="1024"
+                d="M1044 -340V-483H-20V-340H1044Z"/>
+         <glyph unicode="`" glyph-name="grave" horiz-adv-x="1024"
+                d="M586 1638L795 1264H641L389 1638H586Z"/>
+         <glyph unicode="a" glyph-name="a" horiz-adv-x="1255"
+                d="M1100 639L975 0H791L825 170Q744 70 641 21T410 -29Q267 -29 176 58T84 283Q84 479 240 593T672 707H928L938 756Q940 764 941 773T942 803Q942 892 870 941T666 991Q576 991 482 968T287 899L319 1069Q423    1108 522 1127T715 1147Q913 1147 1016 1061T1120 811Q1120 778 1115 734T1100 639ZM901 563H717Q491 563 383 503T274 315Q274 227 329 177T483 127Q633 127 745 234T893 522L901 563Z"/>
+         <glyph unicode="b" glyph-name="b" horiz-adv-x="1300"
+                d="M1014 684Q1014 829 948 911T764 993Q679 993 605 952T475 831Q417 748 384 639T350 420Q350 282 415 204T596 125Q683 125 757 165T887 285Q944 367 979 476T1014 684ZM442 950Q510 1042 612 1094T827    1147Q999 1147 1100 1031T1202 717Q1202 555 1143 403T973 133Q901 55 807 13T610 -29Q501 -29 421 21T291 170L258 0H74L377 1556H561L442 950Z"/>
+         <glyph unicode="c" glyph-name="c" horiz-adv-x="1126"
+                d="M1098 1077L1061 895Q995 943 921 967T766 991Q678 991 599 960T465 872Q379 785 332 668T285 426Q285 275 360 201T590 127Q666 127 751 150T930 219L895 37Q815 4 731 -12T557 -29Q334 -29 214 82T94    401Q94 575 156 721T342 985Q426 1065 539 1106T786 1147Q864 1147 941 1130T1098 1077Z"/>
+         <glyph unicode="d" glyph-name="d" horiz-adv-x="1300"
+                d="M856 168Q782 71 681 21T457 -29Q289 -29 192 85T94 399Q94 565 153 715T324 985Q398 1064 491 1105T686 1147Q794 1147 876 1095T1004 946L1124 1556H1309L1006 0H821L856 168ZM285 432Q285 287 350    206T532 125Q618 125 691 166T821 289Q880 373 914 483T948 700Q948 839 883 917T702 995Q615 995 540 954T412 836Q354 753 320 643T285 432Z"/>
+         <glyph unicode="e" glyph-name="e" horiz-adv-x="1260"
+                d="M985 660Q988 676 989 693T991 727Q991 849 920 920T725 991Q588 991 483 905T324 659L985 660ZM1145 516H289Q283 478 281 456T279 418Q279 279 364 203T606 127Q726 127 833 154T1032 233L997 51Q898    11 793 -9T578 -29Q345 -29 220 82T94 399Q94 574 156 724T340 993Q418 1067 525 1107T754 1147Q944 1147 1056 1033T1169 727Q1169 681 1163 629T1145 516Z"/>
+         <glyph unicode="f" glyph-name="f" horiz-adv-x="721"
+                d="M979 1556L950 1403H774Q674 1403 629 1364T561 1219L541 1120H844L817 977H514L324 0H139L330 977H154L180 1120H356L371 1198Q409 1396 504 1476T805 1556H979Z"/>
+         <glyph unicode="g" glyph-name="g" horiz-adv-x="1300"
+                d="M1221 1120L1030 139Q975 -146 820 -286T401 -426Q304 -426 221 -412T66 -367L100 -188Q168 -232 244 -253T406 -274Q581 -274 693 -179T842 96L858 180Q781 92 679 46T459 0Q289 0 192 112T94 422Q94    577 153 725T319 989Q390 1065 484 1106T682 1147Q795 1147 879 1095T1004 946L1036 1120H1221ZM944 709Q944 845 880 919T698 993Q625 993 559 964T446 883Q370 797 328 681T285 440Q285 302 349 228T535 154Q710 154 827 312T944 709Z"/>
+         <glyph unicode="h" glyph-name="h" horiz-adv-x="1298"
+                d="M1141 676L1010 0H825L956 669Q965 716 970 752T975 809Q975 893 922 940T774 987Q626 987 518 887T377 621L256 0H72L375 1556H559L440 944Q510 1038 619 1092T848 1147Q996 1147 1077 1067T1159 842Q1159    806 1155 765T1141 676Z"/>
+         <glyph unicode="i" glyph-name="i" horiz-adv-x="569"
+                d="M375 1556H559L514 1323H330L375 1556ZM291 1120H475L256 0H72L291 1120Z"/>
+         <glyph unicode="j" glyph-name="j" horiz-adv-x="569"
+                d="M297 1120H481L260 -20L259 -25Q222 -216 174 -287Q129 -354 43 -390T-162 -426H-231L-201 -270H-154Q-46 -270 -1 -225T76 -20L297 1120ZM383 1556H567L522 1323H338L383 1556Z"/>
+         <glyph unicode="k" glyph-name="k" horiz-adv-x="1186"
+                d="M375 1556H559L383 649L1014 1120H1253L549 584L1063 0H840L362 547L256 0H72L375 1556Z"/>
+         <glyph unicode="l" glyph-name="l" horiz-adv-x="569"
+                d="M375 1556H559L256 0H72L375 1556Z"/>
+         <glyph unicode="m" glyph-name="m" horiz-adv-x="1995"
+                d="M1839 676L1708 0H1524L1653 670Q1661 713 1665 744T1669 797Q1669 887 1619 937T1479 987Q1345 987 1240 887T1104 625L981 0H797L928 670Q936 707 940 738T944 795Q944 886 894 936T756 987Q620 987    515 887T379 625L256 0H72L291 1120H475L440 946Q515 1044 615 1095T831 1147Q953 1147 1031 1083T1126 905Q1210 1023 1320 1085T1554 1147Q1698 1147 1776 1064T1855 829Q1855 796 1851 757T1839 676Z"/>
+         <glyph unicode="n" glyph-name="n" horiz-adv-x="1298"
+                d="M1141 676L1010 0H825L956 669Q965 716 970 752T975 809Q975 893 922 940T774 987Q626 987 519 889T379 621L256 0H72L289 1120H473L436 944Q513 1041 621 1094T848 1147Q996 1147 1077 1067T1159 842Q1159    806 1155 765T1141 676Z"/>
+         <glyph unicode="o" glyph-name="o" horiz-adv-x="1253"
+                d="M520 -29Q323 -29 209 92T94 424Q94 546 133 672T236 885Q335 1019 457 1083T733 1147Q924 1147 1041 1028T1159 717Q1159 584 1120 452T1018 233Q920 99 798 35T520 -29ZM285 430Q285 278 348 203T541    127Q726 127 847 288T969 698Q969 843 904 917T713 991Q609 991 528 943T383 795Q336 721 311 626T285 430Z"/>
+         <glyph unicode="p" glyph-name="p" horiz-adv-x="1300"
+                d="M1016 690Q1016 837 952 915T768 993Q686 993 612 951T479 829Q422 750 388 638T354 416Q354 276 418 201T600 125Q687 125 761 166T889 285Q946 367 981 478T1016 690ZM446 950Q520 1047 620 1097T844    1147Q1016 1147 1111 1035T1206 719Q1206 553 1147 403T977 133Q903 54 810 13T614 -29Q495 -29 414 20T293 168L178 -426H-6L295 1120H479L446 950Z"/>
+         <glyph unicode="q" glyph-name="q" horiz-adv-x="1300"
+                d="M854 168Q780 71 680 21T457 -29Q287 -29 191 85T94 401Q94 563 153 714T324 985Q396 1063 489 1105T686 1147Q810 1147 890 1098T1006 950L1038 1118H1223L924 -422H739L854 168ZM285 428Q285 280 347    203T526 125Q700 125 823 291T946 696Q946 840 883 916T700 993Q613 993 539 953T410 834Q352 752 319 642T285 428Z"/>
+         <glyph unicode="r" glyph-name="r" horiz-adv-x="842"
+                d="M913 950Q885 965 849 973T772 981Q625 981 515 870T369 571L256 0H72L291 1120H475L440 946Q513 1043 614 1095T831 1147Q861 1147 890 1144T948 1132L913 950Z"/>
+         <glyph unicode="s" glyph-name="s" horiz-adv-x="1067"
+                d="M1024 1087L989 913Q916 953 835 973T668 993Q523 993 440 944T356 809Q356 710 550 657Q565 653 572 651L631 633Q815 582 876 526T938 373Q938 195 797 83T426 -29Q337 -29 239 -12T23 41L59 231Q160    179 258 152T446 125Q581 125 665 183T750 330Q750 426 528 485L509 490L446 506Q306 543 241 603T176 758Q176 937 310 1042T676 1147Q767 1147 853 1132T1024 1087Z"/>
+         <glyph unicode="t" glyph-name="t" horiz-adv-x="803"
+                d="M866 1120L838 977H471L352 369Q346 335 343 312T340 276Q340 212 378 183T502 154H688L657 0H481Q317 0 237 64T156 258Q156 281 159 308T168 369L287 977H131L160 1120H313L375 1438H559L498 1120H866Z"/>
+         <glyph unicode="u" glyph-name="u" horiz-adv-x="1298"
+                d="M137 444L268 1120H453L322 451Q312 402 308 367T303 309Q303 224 355 178T502 131Q650 131 758 231T899 500L1022 1120H1206L989 0H805L842 176Q764 78 657 25T428 -29Q281 -29 199 51T117 276Q117 306    122 351T137 444Z"/>
+         <glyph unicode="v" glyph-name="v" horiz-adv-x="1212"
+                d="M147 1120H342L506 168L1042 1120H1237L600 0H352L147 1120Z"/>
+         <glyph unicode="w" glyph-name="w" horiz-adv-x="1675"
+                d="M174 1120H356L403 219L821 1120H1034L1096 219L1493 1120H1677L1165 0H950L895 928L467 0H250L174 1120Z"/>
+         <glyph unicode="x" glyph-name="x" horiz-adv-x="1212"
+                d="M1229 1120L715 571L1030 0H819L582 444L170 0H-53L498 590L205 1120H416L631 715L1006 1120H1229Z"/>
+         <glyph unicode="y" glyph-name="y" horiz-adv-x="1212"
+                d="M508 -104Q380 -319 300 -372T94 -426H-51L-20 -272H86Q163 -272 217 -230T338 -66L395 41L147 1120H342L528 262L1042 1120H1235L508 -104Z"/>
+         <glyph unicode="z" glyph-name="z" horiz-adv-x="1075"
+                d="M238 1120H1112L1079 952L236 147H932L903 0H-6L27 168L870 973H209L238 1120Z"/>
+         <glyph unicode="|" glyph-name="bar" horiz-adv-x="690" d="M430 1565V-483H260V1565H430Z"/>
+         <glyph unicode="~" glyph-name="asciitilde" horiz-adv-x="1716"
+                d="M1499 817V639Q1394 560 1305 526T1118 492Q1008 492 862 551Q851 555 846 557Q839 560 824 565Q669 627 575 627Q487 627 401 589T217 467V645Q322 724 411 758T598 793Q708 793 855 733Q865    729 870 727Q878 724 892 719Q1047 657 1141 657Q1227 657 1311 695T1499 817Z"/>
+      </font>
+      <marker id="DepArrow" viewBox="0 0 10 10" refY="5" markerWidth="8" markerHeight="5"
+              orient="auto">
+         <path class="DependenciesA" d="M 10 0 L 0 5 10 10 z"/>
+      </marker>
+      <marker id="InflArrow" viewBox="0 0 10 10" refY="5" markerWidth="8" markerHeight="5"
+              orient="auto">
+         <path class="InfluencesA" d="M 0 0 L 10 5 0 10 z"/>
+      </marker>
+      <rect width="180" height="25" class="activity" id="activityBase"/>
+      <rect width="160" height="20" class="wg" id="wgBase"/>
+      <rect width="160" height="20" class="ig" id="igBase"/>
+      <rect width="160" height="20" class="cg" id="cgBase"/>
+      <g id="activity">
+         <desc>Rectangle for an activity, plus the small horizontal line on the left</desc>
+         <use xlink:href="#activityBase"/>
+         <path d="M0 12.5 h-20"/>
+      </g>
+      <g id="wg">
+         <desc>Rectangle for a working group, plus the small horizontal line on the left</desc>
+         <use xlink:href="#wgBase"/>
+         <path d="M0 10 h-10"/>
+      </g>
+      <g id="cg">
+         <desc>Rectangle for an interest group, plus the small horizontal line on the left</desc>
+         <use xlink:href="#cgBase"/>
+         <path d="M0 10 h-10"/>
+      </g>
+      <g id="ig">
+         <desc>Rectangle for a coordination group, plus the small horizontal line on the left</desc>
+         <use xlink:href="#igBase"/>
+         <path d="M0 10 h-10"/>
+      </g>
+      <g id="domain">
+         <desc>Rectangle for a domain, plus the small vertical line on the top</desc>
+         <rect width="210" height="25" class="domain"/>
+         <path d="M105,0 v-10"/>
+      </g>
+   </defs>
+   <!--Add the dependencies and others here--><g id="Dependencies" class="Dependencies">
+      <g id="DOM_D" visibility="hidden"/>
+      <g id="DOM_DOM_IG_D" visibility="hidden"/>
+      <g id="XML_D" visibility="hidden"/>
+      <g id="XML_EXI_WG_D" visibility="hidden">
+         <polyline class="dependency" points="150 177.5 147 168.5 135 132.5"/>
+      </g>
+      <g id="XML_XSL_WG_D" visibility="hidden">
+         <polyline class="dependency" points="150 207.5 207 276.5 435 552.5"/>
+         <path class="dependency" d="M150,207.5A31.499999999999996,90,1,0,0,150,387.5"/>
+         <polyline class="dependency" points="150 207.5 375 231.5 1275 327.5"/>
+         <path class="dependency" d="M150,207.5A15.749999999999998,45,1,0,0,150,297.5"/>
+         <path class="dependency" d="M150,207.5A55.125,157.5,1,0,0,150,522.5"/>
+         <polyline class="dependency" points="150 207.5 203 303.5 415 687.5"/>
+      </g>
+      <g id="XML_SML_WG_D" visibility="hidden">
+         <path class="dependency" d="M150,237.5A36.75,105,1,0,0,150,447.5"/>
+      </g>
+      <g id="XML_XML_CG_D" visibility="hidden"/>
+      <g id="XML_Core_WG_D" visibility="hidden">
+         <polyline class="dependency" points="150 297.5 375 303.5 1275 327.5"/>
+         <path class="dependency" d="M150,297.5A39.375,112.5,1,0,0,150,522.5"/>
+      </g>
+      <g id="XML_Plenary_IG_D" visibility="hidden"/>
+      <g id="XML_Processing_WG_D" visibility="hidden">
+         <path class="dependency" d="M150,357.5A5.25,15,1,0,0,150,387.5"/>
+         <path class="dependency" d="M150,357.5A26.25,75,1,0,0,150,207.5"/>
+         <path class="dependency" d="M150,357.5A10.5,30,1,0,0,150,297.5"/>
+         <path class="dependency" d="M150,357.5A15.749999999999998,45,1,0,0,150,447.5"/>
+      </g>
+      <g id="XML_Query_WG_D" visibility="hidden">
+         <path class="dependency" d="M150,387.5A10.5,30,1,0,0,150,447.5"/>
+         <path class="dependency" d="M150,387.5A31.499999999999996,90,1,0,0,150,207.5"/>
+         <path class="dependency" d="M150,387.5A15.749999999999998,45,1,0,0,150,297.5"/>
+         <path class="dependency" d="M150,387.5A23.625,67.5,1,0,0,150,522.5"/>
+      </g>
+      <g id="XML_Schema_IG_D" visibility="hidden"/>
+      <g id="XML_Schema_WG_D" visibility="hidden">
+         <polyline class="dependency" points="150 447.5 203 495.5 415 687.5"/>
+         <path class="dependency" d="M150,447.5A68.25,195,1,0,0,150,837.5"/>
+         <path class="dependency" d="M150,447.5A10.5,30,1,0,0,150,387.5"/>
+         <path class="dependency" d="M150,447.5A42,120,1,0,0,150,207.5"/>
+         <polyline class="dependency" points="150 447.5 375 423.5 1275 327.5"/>
+         <path class="dependency" d="M150,447.5A26.25,75,1,0,0,150,297.5"/>
+      </g>
+      <g id="I18N_D" visibility="hidden"/>
+      <g id="I18N_I18N_Arch_WG_D" visibility="hidden"/>
+      <g id="I18N_I18N_Core_WG_D" visibility="hidden">
+         <polyline class="dependency" points="150 552.5 147 570.5 135 642.5"/>
+         <polyline class="dependency" points="150 552.5 207 552.5 435 552.5"/>
+         <path class="dependency" d="M150,552.5A60.37499999999999,172.5,1,0,0,150,207.5"/>
+         <path class="dependency" d="M150,552.5A49.875,142.5,1,0,0,150,267.5"/>
+         <polyline class="dependency" points="150 552.5 375 507.5 1275 327.5"/>
+         <polyline class="dependency" points="150 552.5 263 537.5 715 477.5"/>
+         <polyline class="dependency" points="150 552.5 319 519.5 995 387.5"/>
+      </g>
+      <g id="I18N_I18N_IG_D" visibility="hidden"/>
+      <g id="I18N_I18N_Tag_Set_WG_D" visibility="hidden">
+         <polyline class="dependency" points="150 612.5 375 555.5 1275 327.5"/>
+         <path class="dependency" d="M150,612.5A10.5,30,1,0,0,150,552.5"/>
+      </g>
+      <g id="Web_Services_D" visibility="hidden"/>
+      <g id="Web_Services_Semantic_WS_IG_D" visibility="hidden">
+         <polyline class="dependency" points="150 687.5 147 576.5 135 132.5"/>
+         <polyline class="dependency" points="150 687.5 259 612.5 695 312.5"/>
+         <polyline class="dependency" points="150 687.5 147 645.5 135 477.5"/>
+      </g>
+      <g id="Web_Services_WS_CG_D" visibility="hidden">
+         <polyline class="dependency" points="150 717.5 263 681.5 715 537.5"/>
+         <path class="dependency" d="M150,717.5A78.75,225,1,0,0,150,267.5"/>
+      </g>
+      <g id="Web_Services_Choreogr__WG_D" visibility="hidden">
+         <polyline class="dependency" points="150 747.5 375 663.5 1275 327.5"/>
+         <polyline class="dependency" points="150 747.5 259 624.5 695 132.5"/>
+         <polyline class="dependency" points="150 747.5 259 660.5 695 312.5"/>
+         <polyline class="dependency" points="150 747.5 203 735.5 415 687.5"/>
+      </g>
+      <g id="Web_Services_WS_Policy_D" visibility="hidden"/>
+      <g id="Web_Services_Databinding_WG_D" visibility="hidden">
+         <path class="dependency" d="M150,807.5A62.99999999999999,180,1,0,0,150,447.5"/>
+         <path class="dependency" d="M150,807.5A10.5,30,1,0,0,150,747.5"/>
+      </g>
+      <g id="Web_Services_XML_Protocol_WG_D" visibility="hidden">
+         <polyline class="dependency" points="150 837.5 319 717.5 995 237.5"/>
+         <polyline class="dependency" points="150 837.5 259 732.5 695 312.5"/>
+         <polyline class="dependency" points="150 837.5 139 672.5 95 12.5"/>
+         <path class="dependency" d="M150,837.5A68.25,195,1,0,0,150,447.5"/>
+         <path class="dependency" d="M150,837.5A94.5,270,1,0,0,150,297.5"/>
+      </g>
+      <g id="Graphics_D" visibility="hidden"/>
+      <g id="Graphics_SVG_WG_D" visibility="hidden">
+         <polyline class="dependency" points="430 102.5 375 186.5 155 522.5"/>
+         <path class="dependency" d="M430,102.5A78.75,225,1,0,0,430,552.5"/>
+         <path class="dependency" d="M430,102.5A91.875,262.5,1,0,0,430,627.5"/>
+         <polyline class="dependency" points="430 102.5 543 129.5 995 237.5"/>
+         <polyline class="dependency" points="430 102.5 599 147.5 1275 327.5"/>
+         <polyline class="dependency" points="430 102.5 375 141.5 155 297.5"/>
+         <polyline class="dependency" points="430 102.5 375 123.5 155 207.5"/>
+         <polyline class="dependency" points="430 102.5 427 219.5 415 687.5"/>
+      </g>
+      <g id="Graphics_WebCGM_D" visibility="hidden">
+         <polyline class="dependency" points="430 132.5 375 126.5 155 102.5"/>
+         <path class="dependency" d="M430,132.5A18.375,52.5,1,0,0,430,237.5"/>
+         <path class="dependency" d="M430,132.5A55.125,157.5,1,0,0,430,447.5"/>
+         <polyline class="dependency" points="430 132.5 375 210.5 155 522.5"/>
+         <polyline class="dependency" points="430 132.5 599 171.5 1275 327.5"/>
+      </g>
+      <g id="HTML_Activity_D" visibility="hidden"/>
+      <g id="HTML_Activity_HTML_WG_D" visibility="hidden">
+         <path class="dependency" d="M430,207.5A5.25,15,1,0,0,430,237.5"/>
+         <path class="dependency" d="M430,207.5A36.75,105,1,0,0,430,417.5"/>
+         <polyline class="dependency" points="430 207.5 375 270.5 155 522.5"/>
+         <path class="dependency" d="M430,207.5A60.37499999999999,172.5,1,0,0,430,552.5"/>
+         <polyline class="dependency" points="430 207.5 599 231.5 1275 327.5"/>
+      </g>
+      <g id="HTML_Activity_Hypertext_CG_D" visibility="hidden"/>
+      <g id="HTML_Activity_XHTML2_WG_D" visibility="hidden">
+         <path class="dependency" d="M430,267.5A10.5,30,1,0,0,430,207.5"/>
+         <path class="dependency" d="M430,267.5A49.875,142.5,1,0,0,430,552.5"/>
+         <path class="dependency" d="M430,267.5A13.125,37.5,1,0,0,430,342.5"/>
+         <path class="dependency" d="M430,267.5A31.499999999999996,90,1,0,0,430,447.5"/>
+         <polyline class="dependency" points="430 267.5 543 261.5 995 237.5"/>
+         <polyline class="dependency" points="430 267.5 487 327.5 715 567.5"/>
+         <polyline class="dependency" points="430 267.5 599 279.5 1275 327.5"/>
+         <polyline class="dependency" points="430 267.5 375 318.5 155 522.5"/>
+         <polyline class="dependency" points="430 267.5 427 351.5 415 687.5"/>
+      </g>
+      <g id="Math_D" visibility="hidden"/>
+      <g id="Math_Math_WG_D" visibility="hidden">
+         <polyline class="dependency" points="430 342.5 371 285.5 135 57.5"/>
+         <polyline class="dependency" points="430 342.5 483 336.5 695 312.5"/>
+         <polyline class="dependency" points="430 342.5 375 315.5 155 207.5"/>
+         <polyline class="dependency" points="430 342.5 371 300.5 135 132.5"/>
+         <polyline class="dependency" points="430 342.5 543 321.5 995 237.5"/>
+         <polyline class="dependency" points="430 342.5 599 339.5 1275 327.5"/>
+         <path class="dependency" d="M430,342.5A42,120,1,0,0,430,102.5"/>
+         <polyline class="dependency" points="430 342.5 375 378.5 155 522.5"/>
+         <path class="dependency" d="M430,342.5A36.75,105,1,0,0,430,552.5"/>
+      </g>
+      <g id="Rich_Web_Client_D" visibility="hidden"/>
+      <g id="Rich_Web_Client_CDF_WG_D" visibility="hidden">
+         <polyline class="dependency" points="430 417.5 427 471.5 415 687.5"/>
+         <polyline class="dependency" points="430 417.5 543 411.5 995 387.5"/>
+         <path class="dependency" d="M430,417.5A31.499999999999996,90,1,0,0,430,237.5"/>
+         <polyline class="dependency" points="430 417.5 543 381.5 995 237.5"/>
+         <polyline class="dependency" points="430 417.5 427 393.5 415 297.5"/>
+         <polyline class="dependency" points="430 417.5 599 399.5 1275 327.5"/>
+         <path class="dependency" d="M430,417.5A55.125,157.5,1,0,0,430,102.5"/>
+         <polyline class="dependency" points="430 417.5 375 438.5 155 522.5"/>
+         <path class="dependency" d="M430,417.5A36.75,105,1,0,0,430,627.5"/>
+         <path class="dependency" d="M430,417.5A23.625,67.5,1,0,0,430,552.5"/>
+      </g>
+      <g id="Rich_Web_Client_Web_API_WG_D" visibility="hidden">
+         <path class="dependency" d="M430,447.5A5.25,15,1,0,0,430,477.5"/>
+         <polyline class="dependency" points="430 447.5 375 462.5 155 522.5"/>
+         <polyline class="dependency" points="430 447.5 599 423.5 1275 327.5"/>
+         <path class="dependency" d="M430,447.5A60.37499999999999,172.5,1,0,0,430,102.5"/>
+         <polyline class="dependency" points="430 447.5 539 369.5 975 57.5"/>
+      </g>
+      <g id="Rich_Web_Client_APP_Formats_WG_D" visibility="hidden">
+         <polyline class="dependency" points="430 477.5 375 486.5 155 522.5"/>
+         <path class="dependency" d="M430,477.5A5.25,15,1,0,0,430,447.5"/>
+         <polyline class="dependency" points="430 477.5 599 447.5 1275 327.5"/>
+         <path class="dependency" d="M430,477.5A65.625,187.5,1,0,0,430,102.5"/>
+         <polyline class="dependency" points="430 477.5 539 393.5 975 57.5"/>
+      </g>
+      <g id="Style_D" visibility="hidden"/>
+      <g id="Style_CSS_WG_D" visibility="hidden">
+         <polyline class="dependency" points="430 552.5 375 501.5 155 297.5"/>
+         <path class="dependency" d="M430,552.5A13.125,37.5,1,0,0,430,627.5"/>
+         <polyline class="dependency" points="430 552.5 543 489.5 995 237.5"/>
+         <polyline class="dependency" points="430 552.5 599 507.5 1275 327.5"/>
+         <path class="dependency" d="M430,552.5A78.75,225,1,0,0,430,102.5"/>
+         <polyline class="dependency" points="430 552.5 543 519.5 995 387.5"/>
+         <polyline class="dependency" points="430 552.5 375 546.5 155 522.5"/>
+      </g>
+      <g id="Synchr__Multidimedia_D" visibility="hidden"/>
+      <g id="Synchr__Multidimedia_SYMM_WG_D" visibility="hidden">
+         <path class="dependency" d="M430,627.5A13.125,37.5,1,0,0,430,552.5"/>
+         <path class="dependency" d="M430,627.5A68.25,195,1,0,0,430,237.5"/>
+         <polyline class="dependency" points="430 627.5 543 549.5 995 237.5"/>
+         <polyline class="dependency" points="430 627.5 599 567.5 1275 327.5"/>
+         <path class="dependency" d="M430,627.5A91.875,262.5,1,0,0,430,102.5"/>
+         <polyline class="dependency" points="430 627.5 375 543.5 155 207.5"/>
+         <path class="dependency" d="M430,627.5A5.25,15,1,0,0,430,657.5"/>
+         <polyline class="dependency" points="430 627.5 375 606.5 155 522.5"/>
+      </g>
+      <g id="Synchr__Multidimedia_TT_WG_D" visibility="hidden">
+         <path class="dependency" d="M430,657.5A18.375,52.5,1,0,0,430,552.5"/>
+         <path class="dependency" d="M430,657.5A5.25,15,1,0,0,430,627.5"/>
+         <polyline class="dependency" points="430 657.5 599 591.5 1275 327.5"/>
+         <path class="dependency" d="M430,657.5A97.125,277.5,1,0,0,430,102.5"/>
+         <polyline class="dependency" points="430 657.5 375 630.5 155 522.5"/>
+      </g>
+      <g id="XForms_Activity_D" visibility="hidden"/>
+      <g id="XForms_Activity_Forms_WG_D" visibility="hidden">
+         <path class="dependency" d="M430,732.5A31.499999999999996,90,1,0,0,430,552.5"/>
+         <path class="dependency" d="M430,732.5A81.375,232.5,1,0,0,430,267.5"/>
+         <path class="dependency" d="M430,732.5A18.375,52.5,1,0,0,430,627.5"/>
+         <polyline class="dependency" points="430 732.5 375 675.5 155 447.5"/>
+         <polyline class="dependency" points="430 732.5 599 651.5 1275 327.5"/>
+         <polyline class="dependency" points="430 732.5 483 612.5 695 132.5"/>
+         <polyline class="dependency" points="430 732.5 543 663.5 995 387.5"/>
+         <path class="dependency" d="M430,732.5A110.25,315,1,0,0,430,102.5"/>
+         <polyline class="dependency" points="430 732.5 375 690.5 155 522.5"/>
+      </g>
+      <g id="Patent_Policy_D" visibility="hidden"/>
+      <g id="Patent_Policy_PP_IG_D" visibility="hidden"/>
+      <g id="Privacy_D" visibility="hidden"/>
+      <g id="Privacy_PLING_IG_D" visibility="hidden"/>
+      <g id="Security_Activity_D" visibility="hidden"/>
+      <g id="Security_Activity_WSC_WG_D" visibility="hidden">
+         <polyline class="dependency" points="710 252.5 655 297.5 435 477.5"/>
+         <polyline class="dependency" points="710 252.5 655 249.5 435 237.5"/>
+         <polyline class="dependency" points="710 252.5 655 291.5 435 447.5"/>
+         <polyline class="dependency" points="710 252.5 823 273.5 1275 357.5"/>
+      </g>
+      <g id="Security_Activity_XML_SEC_WG_D" visibility="hidden">
+         <polyline class="dependency" points="710 282.5 599 285.5 155 297.5"/>
+      </g>
+      <g id="Semantic_Web_D" visibility="hidden"/>
+      <g id="Semantic_Web_GRDDL_WG_D" visibility="hidden">
+         <path class="dependency" d="M710,357.5A36.75,105,1,0,0,710,567.5"/>
+      </g>
+      <g id="Semantic_Web_SW_IG_D" visibility="hidden">
+         <path class="dependency" d="M710,387.5A31.499999999999996,90,1,0,0,710,567.5"/>
+      </g>
+      <g id="Semantic_Web_OWL_WG_D" visibility="hidden">
+         <path class="dependency" d="M710,417.5A15.749999999999998,45,1,0,0,710,507.5"/>
+         <path class="dependency" d="M710,417.5A31.499999999999996,90,1,0,0,710,597.5"/>
+         <path class="dependency" d="M710,417.5A26.25,75,1,0,0,710,567.5"/>
+         <polyline class="dependency" points="710 417.5 599 423.5 155 447.5"/>
+         <path class="dependency" d="M710,417.5A36.75,105,1,0,0,710,627.5"/>
+         <path class="dependency" d="M710,417.5A21,60,1,0,0,710,537.5"/>
+      </g>
+      <g id="Semantic_Web_POWDER_WG_D" visibility="hidden">
+         <polyline class="dependency" points="710 447.5 595 384.5 135 132.5"/>
+         <path class="dependency" d="M710,447.5A10.5,30,1,0,0,710,507.5"/>
+         <path class="dependency" d="M710,447.5A21,60,1,0,0,710,567.5"/>
+         <polyline class="dependency" points="710 447.5 767 378.5 995 102.5"/>
+         <polyline class="dependency" points="710 447.5 819 402.5 1255 222.5"/>
+      </g>
+      <g id="Semantic_Web_RDF_DA_WG_D" visibility="hidden">
+         <polyline class="dependency" points="710 477.5 595 477.5 135 477.5"/>
+         <polyline class="dependency" points="710 477.5 599 459.5 155 387.5"/>
+         <polyline class="dependency" points="710 477.5 599 423.5 155 207.5"/>
+      </g>
+      <g id="Semantic_Web_RIF_WG_D" visibility="hidden">
+         <polyline class="dependency" points="710 507.5 599 495.5 155 447.5"/>
+         <polyline class="dependency" points="710 507.5 599 483.5 155 387.5"/>
+         <path class="dependency" d="M710,507.5A5.25,15,1,0,0,710,477.5"/>
+         <polyline class="dependency" points="710 507.5 599 447.5 155 207.5"/>
+      </g>
+      <g id="Semantic_Web_SW_CG_D" visibility="hidden">
+         <polyline class="dependency" points="710 537.5 595 456.5 135 132.5"/>
+         <polyline class="dependency" points="710 537.5 595 558.5 135 642.5"/>
+         <polyline class="dependency" points="710 537.5 823 495.5 1275 327.5"/>
+      </g>
+      <g id="Semantic_Web_SWD_WG_D" visibility="hidden">
+         <polyline class="dependency" points="710 567.5 599 558.5 155 522.5"/>
+         <path class="dependency" d="M710,567.5A10.5,30,1,0,0,710,507.5"/>
+         <path class="dependency" d="M710,567.5A31.499999999999996,90,1,0,0,710,387.5"/>
+      </g>
+      <g id="Semantic_Web_SWEO_IG_D" visibility="hidden">
+         <polyline class="dependency" points="710 597.5 763 489.5 975 57.5"/>
+         <path class="dependency" d="M710,597.5A36.75,105,1,0,0,710,387.5"/>
+         <path class="dependency" d="M710,597.5A5.25,15,1,0,0,710,627.5"/>
+      </g>
+      <g id="Semantic_Web_SW_HCLS_IG_D" visibility="hidden">
+         <path class="dependency" d="M710,627.5A21,60,1,0,0,710,507.5"/>
+      </g>
+      <g id="MWI_D" visibility="hidden"/>
+      <g id="MWI_MW_BP_WG_D" visibility="hidden">
+         <polyline class="dependency" points="990 102.5 879 129.5 435 237.5"/>
+         <polyline class="dependency" points="990 102.5 879 165.5 435 417.5"/>
+         <path class="dependency" d="M990,102.5A23.625,67.5,1,0,0,990,237.5"/>
+         <polyline class="dependency" points="990 102.5 1047 147.5 1275 327.5"/>
+         <polyline class="dependency" points="990 102.5 879 207.5 435 627.5"/>
+      </g>
+      <g id="MWI_DD_WG_D" visibility="hidden">
+         <polyline class="dependency" points="990 132.5 879 153.5 435 237.5"/>
+      </g>
+      <g id="MWI_TS_WG_D" visibility="hidden">
+         <polyline class="dependency" points="990 162.5 879 177.5 435 237.5"/>
+         <polyline class="dependency" points="990 162.5 879 213.5 435 417.5"/>
+         <polyline class="dependency" points="990 162.5 879 150.5 435 102.5"/>
+         <polyline class="dependency" points="990 162.5 879 240.5 435 552.5"/>
+      </g>
+      <g id="Multimodal_Int__D" visibility="hidden"/>
+      <g id="Multimodal_Int__MM_Int__WG_D" visibility="hidden">
+         <polyline class="dependency" points="990 237.5 931 252.5 695 312.5"/>
+         <polyline class="dependency" points="990 237.5 879 321.5 435 657.5"/>
+         <polyline class="dependency" points="990 237.5 879 300.5 435 552.5"/>
+         <polyline class="dependency" points="990 237.5 823 357.5 155 837.5"/>
+         <polyline class="dependency" points="990 237.5 879 243.5 435 267.5"/>
+         <polyline class="dependency" points="990 237.5 879 273.5 435 417.5"/>
+         <polyline class="dependency" points="990 237.5 819 318.5 135 642.5"/>
+         <path class="dependency" d="M990,237.5A0,0,1,0,0,990,237.5"/>
+         <polyline class="dependency" points="990 237.5 879 315.5 435 627.5"/>
+         <polyline class="dependency" points="990 237.5 1047 255.5 1275 327.5"/>
+         <polyline class="dependency" points="990 237.5 879 210.5 435 102.5"/>
+         <path class="dependency" d="M990,237.5A26.25,75,1,0,0,990,387.5"/>
+         <polyline class="dependency" points="990 237.5 823 294.5 155 522.5"/>
+         <polyline class="dependency" points="990 237.5 875 327.5 415 687.5"/>
+      </g>
+      <g id="UbiWeb_Appl__D" visibility="hidden"/>
+      <g id="UbiWeb_Appl__UbiWeb_Appl__WG_D" visibility="hidden">
+         <polyline class="dependency" points="990 312.5 987 288.5 975 192.5"/>
+         <polyline class="dependency" points="990 312.5 935 306.5 715 282.5"/>
+         <polyline class="dependency" points="990 312.5 879 291.5 435 207.5"/>
+         <polyline class="dependency" points="990 312.5 879 360.5 435 552.5"/>
+         <polyline class="dependency" points="990 312.5 879 303.5 435 267.5"/>
+         <polyline class="dependency" points="990 312.5 879 297.5 435 237.5"/>
+         <polyline class="dependency" points="990 312.5 879 333.5 435 417.5"/>
+         <polyline class="dependency" points="990 312.5 879 339.5 435 447.5"/>
+         <polyline class="dependency" points="990 312.5 879 375.5 435 627.5"/>
+         <polyline class="dependency" points="990 312.5 1047 315.5 1275 327.5"/>
+         <polyline class="dependency" points="990 312.5 935 300.5 715 252.5"/>
+         <path class="dependency" d="M990,312.5A31.499999999999996,90,1,0,0,990,132.5"/>
+         <path class="dependency" d="M990,312.5A13.125,37.5,1,0,0,990,387.5"/>
+         <polyline class="dependency" points="990 312.5 879 270.5 435 102.5"/>
+         <polyline class="dependency" points="990 312.5 823 354.5 155 522.5"/>
+         <polyline class="dependency" points="990 312.5 875 387.5 415 687.5"/>
+      </g>
+      <g id="Voice_Browser_D" visibility="hidden"/>
+      <g id="Voice_Browser_Voice_Browser_WG_D" visibility="hidden">
+         <polyline class="dependency" points="990 387.5 931 372.5 695 312.5"/>
+         <polyline class="dependency" points="990 387.5 879 420.5 435 552.5"/>
+         <polyline class="dependency" points="990 387.5 823 477.5 155 837.5"/>
+         <polyline class="dependency" points="990 387.5 879 363.5 435 267.5"/>
+         <polyline class="dependency" points="990 387.5 879 393.5 435 417.5"/>
+         <polyline class="dependency" points="990 387.5 819 438.5 135 642.5"/>
+         <path class="dependency" d="M990,387.5A26.25,75,1,0,0,990,237.5"/>
+         <polyline class="dependency" points="990 387.5 879 435.5 435 627.5"/>
+         <polyline class="dependency" points="990 387.5 1047 375.5 1275 327.5"/>
+         <polyline class="dependency" points="990 387.5 879 330.5 435 102.5"/>
+         <polyline class="dependency" points="990 387.5 823 414.5 155 522.5"/>
+         <polyline class="dependency" points="990 387.5 875 447.5 415 687.5"/>
+      </g>
+      <g id="Intl__Program_Office_D" visibility="hidden"/>
+      <g id="Intl__Program_Office_E_O_WG_D" visibility="hidden"/>
+      <g id="Intl__Program_Office_R_D_IG_D" visibility="hidden"/>
+      <g id="Intl__Program_Office_WAI_CG_D" visibility="hidden"/>
+      <g id="Intl__Program_Office_WAI_IG_D" visibility="hidden"/>
+      <g id="Technical_D" visibility="hidden"/>
+      <g id="Technical_ATAG_WG_D" visibility="hidden"/>
+      <g id="Technical_ER_WG_D" visibility="hidden">
+         <path class="dependency" d="M1270,297.5A18.375,52.5,1,0,0,1270,192.5"/>
+         <path class="dependency" d="M1270,297.5A5.25,15,1,0,0,1270,267.5"/>
+         <path class="dependency" d="M1270,297.5A34.125,97.5,1,0,0,1270,102.5"/>
+         <path class="dependency" d="M1270,297.5A10.5,30,1,0,0,1270,357.5"/>
+         <path class="dependency" d="M1270,297.5A15.749999999999998,45,1,0,0,1270,387.5"/>
+      </g>
+      <g id="Technical_PF_WG_D" visibility="hidden"/>
+      <g id="Technical_UAAG_WG_D" visibility="hidden"/>
+      <g id="Technical_WCAG_WG_D" visibility="hidden">
+         <path class="dependency" d="M1270,387.5A34.125,97.5,1,0,0,1270,192.5"/>
+      </g>
+   </g>
+   <g id="Influences" class="Influences">
+      <g id="DOM_I" visibility="hidden">
+         <polyline class="influence" points="130 57.5 218.5 143 425 342.5"/>
+      </g>
+      <g id="DOM_DOM_IG_I" visibility="hidden">
+         <polyline class="influence" points="150 102.5 232.5 111.5 425 132.5"/>
+      </g>
+      <g id="XML_I" visibility="hidden">
+         <polyline class="influence" points="130 132.5 134.5 146 145 177.5"/>
+         <polyline class="influence" points="130 132.5 134.5 299 145 687.5"/>
+         <polyline class="influence" points="130 132.5 218.5 195.5 425 342.5"/>
+         <polyline class="influence" points="130 132.5 302.5 227 705 447.5"/>
+         <polyline class="influence" points="130 132.5 302.5 254 705 537.5"/>
+      </g>
+      <g id="XML_EXI_WG_I" visibility="hidden"/>
+      <g id="XML_XSL_WG_I" visibility="hidden">
+         <path class="influence" d="M150,207.5A26.25,75,1,0,0,150,357.5"/>
+         <path class="influence" d="M150,207.5A31.499999999999996,90,1,0,0,150,387.5"/>
+         <path class="influence" d="M150,207.5A42,120,1,0,0,150,447.5"/>
+         <path class="influence" d="M150,207.5A60.37499999999999,172.5,1,0,0,150,552.5"/>
+         <polyline class="influence" points="150 207.5 232.5 176 425 102.5"/>
+         <polyline class="influence" points="150 207.5 232.5 248 425 342.5"/>
+         <polyline class="influence" points="150 207.5 232.5 333.5 425 627.5"/>
+         <polyline class="influence" points="150 207.5 316.5 288.5 705 477.5"/>
+         <polyline class="influence" points="150 207.5 316.5 297.5 705 507.5"/>
+      </g>
+      <g id="XML_SML_WG_I" visibility="hidden"/>
+      <g id="XML_XML_CG_I" visibility="hidden">
+         <path class="influence" d="M150,267.5A49.875,142.5,1,0,0,150,552.5"/>
+         <path class="influence" d="M150,267.5A78.75,225,1,0,0,150,717.5"/>
+      </g>
+      <g id="XML_Core_WG_I" visibility="hidden">
+         <path class="influence" d="M150,297.5A15.749999999999998,45,1,0,0,150,207.5"/>
+         <path class="influence" d="M150,297.5A10.5,30,1,0,0,150,357.5"/>
+         <path class="influence" d="M150,297.5A15.749999999999998,45,1,0,0,150,387.5"/>
+         <path class="influence" d="M150,297.5A26.25,75,1,0,0,150,447.5"/>
+         <path class="influence" d="M150,297.5A94.5,270,1,0,0,150,837.5"/>
+         <polyline class="influence" points="150 297.5 232.5 239 425 102.5"/>
+         <polyline class="influence" points="150 297.5 232.5 374 425 552.5"/>
+         <polyline class="influence" points="150 297.5 316.5 293 705 282.5"/>
+      </g>
+      <g id="XML_Plenary_IG_I" visibility="hidden"/>
+      <g id="XML_Processing_WG_I" visibility="hidden"/>
+      <g id="XML_Query_WG_I" visibility="hidden">
+         <path class="influence" d="M150,387.5A31.499999999999996,90,1,0,0,150,207.5"/>
+         <path class="influence" d="M150,387.5A5.25,15,1,0,0,150,357.5"/>
+         <path class="influence" d="M150,387.5A10.5,30,1,0,0,150,447.5"/>
+         <polyline class="influence" points="150 387.5 316.5 414.5 705 477.5"/>
+         <polyline class="influence" points="150 387.5 316.5 423.5 705 507.5"/>
+      </g>
+      <g id="XML_Schema_IG_I" visibility="hidden"/>
+      <g id="XML_Schema_WG_I" visibility="hidden">
+         <path class="influence" d="M150,447.5A36.75,105,1,0,0,150,237.5"/>
+         <path class="influence" d="M150,447.5A15.749999999999998,45,1,0,0,150,357.5"/>
+         <path class="influence" d="M150,447.5A10.5,30,1,0,0,150,387.5"/>
+         <path class="influence" d="M150,447.5A62.99999999999999,180,1,0,0,150,807.5"/>
+         <path class="influence" d="M150,447.5A68.25,195,1,0,0,150,837.5"/>
+         <polyline class="influence" points="150 447.5 232.5 533 425 732.5"/>
+         <polyline class="influence" points="150 447.5 316.5 438.5 705 417.5"/>
+         <polyline class="influence" points="150 447.5 316.5 465.5 705 507.5"/>
+      </g>
+      <g id="I18N_I" visibility="hidden">
+         <polyline class="influence" points="130 477.5 134.5 540.5 145 687.5"/>
+         <polyline class="influence" points="130 477.5 302.5 477.5 705 477.5"/>
+      </g>
+      <g id="I18N_I18N_Arch_WG_I" visibility="hidden">
+         <path class="influence" d="M150,522.5A55.125,157.5,1,0,0,150,207.5"/>
+         <path class="influence" d="M150,522.5A39.375,112.5,1,0,0,150,297.5"/>
+         <path class="influence" d="M150,522.5A23.625,67.5,1,0,0,150,387.5"/>
+         <polyline class="influence" points="150 522.5 232.5 396.5 425 102.5"/>
+         <polyline class="influence" points="150 522.5 232.5 405.5 425 132.5"/>
+         <polyline class="influence" points="150 522.5 232.5 428 425 207.5"/>
+         <polyline class="influence" points="150 522.5 232.5 446 425 267.5"/>
+         <polyline class="influence" points="150 522.5 232.5 468.5 425 342.5"/>
+         <polyline class="influence" points="150 522.5 232.5 491 425 417.5"/>
+         <polyline class="influence" points="150 522.5 232.5 500 425 447.5"/>
+         <polyline class="influence" points="150 522.5 232.5 509 425 477.5"/>
+         <polyline class="influence" points="150 522.5 232.5 531.5 425 552.5"/>
+         <polyline class="influence" points="150 522.5 232.5 554 425 627.5"/>
+         <polyline class="influence" points="150 522.5 232.5 563 425 657.5"/>
+         <polyline class="influence" points="150 522.5 232.5 585.5 425 732.5"/>
+         <polyline class="influence" points="150 522.5 316.5 536 705 567.5"/>
+         <polyline class="influence" points="150 522.5 400.5 437 985 237.5"/>
+         <polyline class="influence" points="150 522.5 400.5 459.5 985 312.5"/>
+         <polyline class="influence" points="150 522.5 400.5 482 985 387.5"/>
+      </g>
+      <g id="I18N_I18N_Core_WG_I" visibility="hidden">
+         <path class="influence" d="M150,552.5A10.5,30,1,0,0,150,612.5"/>
+      </g>
+      <g id="I18N_I18N_IG_I" visibility="hidden"/>
+      <g id="I18N_I18N_Tag_Set_WG_I" visibility="hidden"/>
+      <g id="Web_Services_I" visibility="hidden">
+         <polyline class="influence" points="130 642.5 134.5 615.5 145 552.5"/>
+         <polyline class="influence" points="130 642.5 302.5 611 705 537.5"/>
+         <polyline class="influence" points="130 642.5 386.5 521 985 237.5"/>
+         <polyline class="influence" points="130 642.5 386.5 566 985 387.5"/>
+      </g>
+      <g id="Web_Services_Semantic_WS_IG_I" visibility="hidden"/>
+      <g id="Web_Services_WS_CG_I" visibility="hidden"/>
+      <g id="Web_Services_Choreogr__WG_I" visibility="hidden">
+         <path class="influence" d="M150,747.5A10.5,30,1,0,0,150,807.5"/>
+      </g>
+      <g id="Web_Services_WS_Policy_I" visibility="hidden"/>
+      <g id="Web_Services_Databinding_WG_I" visibility="hidden"/>
+      <g id="Web_Services_XML_Protocol_WG_I" visibility="hidden">
+         <path class="influence" d="M150,837.5A68.25,195,1,0,0,150,447.5"/>
+         <polyline class="influence" points="150 837.5 400.5 657.5 985 237.5"/>
+         <polyline class="influence" points="150 837.5 400.5 702.5 985 387.5"/>
+      </g>
+      <g id="Graphics_I" visibility="hidden"/>
+      <g id="Graphics_SVG_WG_I" visibility="hidden">
+         <path class="influence" d="M430,102.5A42,120,1,0,0,430,342.5"/>
+         <path class="influence" d="M430,102.5A55.125,157.5,1,0,0,430,417.5"/>
+         <path class="influence" d="M430,102.5A60.37499999999999,172.5,1,0,0,430,447.5"/>
+         <path class="influence" d="M430,102.5A65.625,187.5,1,0,0,430,477.5"/>
+         <path class="influence" d="M430,102.5A78.75,225,1,0,0,430,552.5"/>
+         <path class="influence" d="M430,102.5A91.875,262.5,1,0,0,430,627.5"/>
+         <path class="influence" d="M430,102.5A97.125,277.5,1,0,0,430,657.5"/>
+         <path class="influence" d="M430,102.5A110.25,315,1,0,0,430,732.5"/>
+         <polyline class="influence" points="430 102.5 596.5 120.5 985 162.5"/>
+         <polyline class="influence" points="430 102.5 596.5 143 985 237.5"/>
+         <polyline class="influence" points="430 102.5 596.5 165.5 985 312.5"/>
+         <polyline class="influence" points="430 102.5 596.5 188 985 387.5"/>
+      </g>
+      <g id="Graphics_WebCGM_I" visibility="hidden"/>
+      <g id="HTML_Activity_I" visibility="hidden"/>
+      <g id="HTML_Activity_HTML_WG_I" visibility="hidden">
+         <path class="influence" d="M430,207.5A10.5,30,1,0,0,430,267.5"/>
+         <polyline class="influence" points="430 207.5 596.5 239 985 312.5"/>
+      </g>
+      <g id="HTML_Activity_Hypertext_CG_I" visibility="hidden">
+         <path class="influence" d="M430,237.5A18.375,52.5,1,0,0,430,132.5"/>
+         <path class="influence" d="M430,237.5A5.25,15,1,0,0,430,207.5"/>
+         <path class="influence" d="M430,237.5A31.499999999999996,90,1,0,0,430,417.5"/>
+         <path class="influence" d="M430,237.5A68.25,195,1,0,0,430,627.5"/>
+         <polyline class="influence" points="430 237.5 512.5 242 705 252.5"/>
+         <polyline class="influence" points="430 237.5 596.5 197 985 102.5"/>
+         <polyline class="influence" points="430 237.5 596.5 206 985 132.5"/>
+         <polyline class="influence" points="430 237.5 596.5 215 985 162.5"/>
+         <polyline class="influence" points="430 237.5 596.5 260 985 312.5"/>
+      </g>
+      <g id="HTML_Activity_XHTML2_WG_I" visibility="hidden">
+         <path class="influence" d="M430,267.5A81.375,232.5,1,0,0,430,732.5"/>
+         <polyline class="influence" points="430 267.5 596.5 258.5 985 237.5"/>
+         <polyline class="influence" points="430 267.5 596.5 281 985 312.5"/>
+         <polyline class="influence" points="430 267.5 596.5 303.5 985 387.5"/>
+      </g>
+      <g id="Math_I" visibility="hidden">
+         <polyline class="influence" points="410 297.5 414.5 333.5 425 417.5"/>
+      </g>
+      <g id="Math_Math_WG_I" visibility="hidden">
+         <path class="influence" d="M430,342.5A13.125,37.5,1,0,0,430,267.5"/>
+      </g>
+      <g id="Rich_Web_Client_I" visibility="hidden"/>
+      <g id="Rich_Web_Client_CDF_WG_I" visibility="hidden">
+         <path class="influence" d="M430,417.5A36.75,105,1,0,0,430,207.5"/>
+         <polyline class="influence" points="430 417.5 596.5 323 985 102.5"/>
+         <polyline class="influence" points="430 417.5 596.5 341 985 162.5"/>
+         <polyline class="influence" points="430 417.5 596.5 363.5 985 237.5"/>
+         <polyline class="influence" points="430 417.5 596.5 386 985 312.5"/>
+         <polyline class="influence" points="430 417.5 596.5 408.5 985 387.5"/>
+      </g>
+      <g id="Rich_Web_Client_Web_API_WG_I" visibility="hidden">
+         <path class="influence" d="M430,447.5A55.125,157.5,1,0,0,430,132.5"/>
+         <path class="influence" d="M430,447.5A31.499999999999996,90,1,0,0,430,267.5"/>
+         <path class="influence" d="M430,447.5A5.25,15,1,0,0,430,477.5"/>
+         <polyline class="influence" points="430 447.5 512.5 389 705 252.5"/>
+         <polyline class="influence" points="430 447.5 596.5 407 985 312.5"/>
+      </g>
+      <g id="Rich_Web_Client_APP_Formats_WG_I" visibility="hidden">
+         <path class="influence" d="M430,477.5A5.25,15,1,0,0,430,447.5"/>
+         <polyline class="influence" points="430 477.5 512.5 410 705 252.5"/>
+      </g>
+      <g id="Style_I" visibility="hidden"/>
+      <g id="Style_CSS_WG_I" visibility="hidden">
+         <polyline class="influence" points="430 552.5 344.5 449 145 207.5"/>
+         <polyline class="influence" points="430 552.5 344.5 552.5 145 552.5"/>
+         <path class="influence" d="M430,552.5A78.75,225,1,0,0,430,102.5"/>
+         <path class="influence" d="M430,552.5A60.37499999999999,172.5,1,0,0,430,207.5"/>
+         <path class="influence" d="M430,552.5A49.875,142.5,1,0,0,430,267.5"/>
+         <path class="influence" d="M430,552.5A36.75,105,1,0,0,430,342.5"/>
+         <path class="influence" d="M430,552.5A23.625,67.5,1,0,0,430,417.5"/>
+         <path class="influence" d="M430,552.5A13.125,37.5,1,0,0,430,627.5"/>
+         <path class="influence" d="M430,552.5A18.375,52.5,1,0,0,430,657.5"/>
+         <path class="influence" d="M430,552.5A31.499999999999996,90,1,0,0,430,732.5"/>
+         <polyline class="influence" points="430 552.5 596.5 435.5 985 162.5"/>
+         <polyline class="influence" points="430 552.5 596.5 458 985 237.5"/>
+         <polyline class="influence" points="430 552.5 596.5 480.5 985 312.5"/>
+         <polyline class="influence" points="430 552.5 596.5 503 985 387.5"/>
+      </g>
+      <g id="Synchr__Multidimedia_I" visibility="hidden"/>
+      <g id="Synchr__Multidimedia_SYMM_WG_I" visibility="hidden">
+         <path class="influence" d="M430,627.5A91.875,262.5,1,0,0,430,102.5"/>
+         <path class="influence" d="M430,627.5A36.75,105,1,0,0,430,417.5"/>
+         <path class="influence" d="M430,627.5A13.125,37.5,1,0,0,430,552.5"/>
+         <path class="influence" d="M430,627.5A5.25,15,1,0,0,430,657.5"/>
+         <path class="influence" d="M430,627.5A18.375,52.5,1,0,0,430,732.5"/>
+         <polyline class="influence" points="430 627.5 596.5 470 985 102.5"/>
+         <polyline class="influence" points="430 627.5 596.5 510.5 985 237.5"/>
+         <polyline class="influence" points="430 627.5 596.5 533 985 312.5"/>
+         <polyline class="influence" points="430 627.5 596.5 555.5 985 387.5"/>
+      </g>
+      <g id="Synchr__Multidimedia_TT_WG_I" visibility="hidden">
+         <path class="influence" d="M430,657.5A5.25,15,1,0,0,430,627.5"/>
+         <polyline class="influence" points="430 657.5 596.5 531.5 985 237.5"/>
+      </g>
+      <g id="XForms_Activity_I" visibility="hidden">
+         <polyline class="influence" points="410 687.5 330.5 543.5 145 207.5"/>
+         <polyline class="influence" points="410 687.5 330.5 615.5 145 447.5"/>
+         <polyline class="influence" points="410 687.5 330.5 705.5 145 747.5"/>
+         <polyline class="influence" points="410 687.5 414.5 512 425 102.5"/>
+         <polyline class="influence" points="410 687.5 414.5 561.5 425 267.5"/>
+         <polyline class="influence" points="410 687.5 414.5 606.5 425 417.5"/>
+         <polyline class="influence" points="410 687.5 582.5 552.5 985 237.5"/>
+         <polyline class="influence" points="410 687.5 582.5 575 985 312.5"/>
+         <polyline class="influence" points="410 687.5 582.5 597.5 985 387.5"/>
+      </g>
+      <g id="XForms_Activity_Forms_WG_I" visibility="hidden"/>
+      <g id="Patent_Policy_I" visibility="hidden"/>
+      <g id="Patent_Policy_PP_IG_I" visibility="hidden"/>
+      <g id="Privacy_I" visibility="hidden">
+         <polyline class="influence" points="690 132.5 526.5 317 145 747.5"/>
+         <polyline class="influence" points="690 132.5 610.5 312.5 425 732.5"/>
+      </g>
+      <g id="Privacy_PLING_IG_I" visibility="hidden"/>
+      <g id="Security_Activity_I" visibility="hidden"/>
+      <g id="Security_Activity_WSC_WG_I" visibility="hidden">
+         <polyline class="influence" points="710 252.5 792.5 270.5 985 312.5"/>
+      </g>
+      <g id="Security_Activity_XML_SEC_WG_I" visibility="hidden">
+         <polyline class="influence" points="710 282.5 792.5 291.5 985 312.5"/>
+      </g>
+      <g id="Semantic_Web_I" visibility="hidden">
+         <polyline class="influence" points="690 312.5 526.5 425 145 687.5"/>
+         <polyline class="influence" points="690 312.5 526.5 443 145 747.5"/>
+         <polyline class="influence" points="690 312.5 526.5 470 145 837.5"/>
+         <polyline class="influence" points="690 312.5 610.5 321.5 425 342.5"/>
+         <polyline class="influence" points="690 312.5 778.5 290 985 237.5"/>
+         <polyline class="influence" points="690 312.5 778.5 335 985 387.5"/>
+      </g>
+      <g id="Semantic_Web_GRDDL_WG_I" visibility="hidden"/>
+      <g id="Semantic_Web_SW_IG_I" visibility="hidden">
+         <path class="influence" d="M710,387.5A31.499999999999996,90,1,0,0,710,567.5"/>
+         <path class="influence" d="M710,387.5A36.75,105,1,0,0,710,597.5"/>
+      </g>
+      <g id="Semantic_Web_OWL_WG_I" visibility="hidden"/>
+      <g id="Semantic_Web_POWDER_WG_I" visibility="hidden"/>
+      <g id="Semantic_Web_RDF_DA_WG_I" visibility="hidden">
+         <polyline class="influence" points="710 477.5 540.5 500 145 552.5"/>
+         <path class="influence" d="M710,477.5A5.25,15,1,0,0,710,507.5"/>
+      </g>
+      <g id="Semantic_Web_RIF_WG_I" visibility="hidden">
+         <path class="influence" d="M710,507.5A15.749999999999998,45,1,0,0,710,417.5"/>
+         <path class="influence" d="M710,507.5A10.5,30,1,0,0,710,447.5"/>
+         <path class="influence" d="M710,507.5A10.5,30,1,0,0,710,567.5"/>
+         <path class="influence" d="M710,507.5A21,60,1,0,0,710,627.5"/>
+      </g>
+      <g id="Semantic_Web_SW_CG_I" visibility="hidden">
+         <polyline class="influence" points="710 537.5 540.5 591.5 145 717.5"/>
+         <path class="influence" d="M710,537.5A21,60,1,0,0,710,417.5"/>
+      </g>
+      <g id="Semantic_Web_SWD_WG_I" visibility="hidden">
+         <polyline class="influence" points="710 567.5 624.5 477.5 425 267.5"/>
+         <path class="influence" d="M710,567.5A36.75,105,1,0,0,710,357.5"/>
+         <path class="influence" d="M710,567.5A31.499999999999996,90,1,0,0,710,387.5"/>
+         <path class="influence" d="M710,567.5A26.25,75,1,0,0,710,417.5"/>
+         <path class="influence" d="M710,567.5A21,60,1,0,0,710,447.5"/>
+      </g>
+      <g id="Semantic_Web_SWEO_IG_I" visibility="hidden">
+         <path class="influence" d="M710,597.5A31.499999999999996,90,1,0,0,710,417.5"/>
+      </g>
+      <g id="Semantic_Web_SW_HCLS_IG_I" visibility="hidden">
+         <path class="influence" d="M710,627.5A36.75,105,1,0,0,710,417.5"/>
+         <path class="influence" d="M710,627.5A5.25,15,1,0,0,710,597.5"/>
+      </g>
+      <g id="MWI_I" visibility="hidden">
+         <polyline class="influence" points="970 57.5 806.5 174.5 425 447.5"/>
+         <polyline class="influence" points="970 57.5 806.5 183.5 425 477.5"/>
+         <polyline class="influence" points="970 57.5 890.5 219.5 705 597.5"/>
+      </g>
+      <g id="MWI_MW_BP_WG_I" visibility="hidden">
+         <polyline class="influence" points="990 102.5 904.5 206 705 447.5"/>
+      </g>
+      <g id="MWI_DD_WG_I" visibility="hidden">
+         <path class="influence" d="M990,132.5A31.499999999999996,90,1,0,0,990,312.5"/>
+      </g>
+      <g id="MWI_TS_WG_I" visibility="hidden"/>
+      <g id="Multimodal_Int__I" visibility="hidden">
+         <polyline class="influence" points="970 192.5 974.5 228.5 985 312.5"/>
+      </g>
+      <g id="Multimodal_Int__MM_Int__WG_I" visibility="hidden">
+         <polyline class="influence" points="990 237.5 736.5 417.5 145 837.5"/>
+         <polyline class="influence" points="990 237.5 820.5 197 425 102.5"/>
+         <polyline class="influence" points="990 237.5 820.5 246.5 425 267.5"/>
+         <polyline class="influence" points="990 237.5 820.5 269 425 342.5"/>
+         <polyline class="influence" points="990 237.5 820.5 291.5 425 417.5"/>
+         <polyline class="influence" points="990 237.5 820.5 332 425 552.5"/>
+         <polyline class="influence" points="990 237.5 820.5 354.5 425 627.5"/>
+         <path class="influence" d="M990,237.5A23.625,67.5,1,0,0,990,102.5"/>
+         <path class="influence" d="M990,237.5A0,0,1,0,0,990,237.5"/>
+         <path class="influence" d="M990,237.5A26.25,75,1,0,0,990,387.5"/>
+      </g>
+      <g id="UbiWeb_Appl__I" visibility="hidden"/>
+      <g id="UbiWeb_Appl__UbiWeb_Appl__WG_I" visibility="hidden"/>
+      <g id="Voice_Browser_I" visibility="hidden"/>
+      <g id="Voice_Browser_Voice_Browser_WG_I" visibility="hidden">
+         <polyline class="influence" points="990 387.5 736.5 437 145 552.5"/>
+         <polyline class="influence" points="990 387.5 820.5 396.5 425 417.5"/>
+         <polyline class="influence" points="990 387.5 820.5 437 425 552.5"/>
+         <polyline class="influence" points="990 387.5 820.5 491 425 732.5"/>
+         <path class="influence" d="M990,387.5A26.25,75,1,0,0,990,237.5"/>
+         <path class="influence" d="M990,387.5A13.125,37.5,1,0,0,990,312.5"/>
+      </g>
+      <g id="Intl__Program_Office_I" visibility="hidden"/>
+      <g id="Intl__Program_Office_E_O_WG_I" visibility="hidden">
+         <path class="influence" d="M1270,102.5A34.125,97.5,1,0,0,1270,297.5"/>
+      </g>
+      <g id="Intl__Program_Office_R_D_IG_I" visibility="hidden"/>
+      <g id="Intl__Program_Office_WAI_CG_I" visibility="hidden"/>
+      <g id="Intl__Program_Office_WAI_IG_I" visibility="hidden">
+         <path class="influence" d="M1270,192.5A18.375,52.5,1,0,0,1270,297.5"/>
+         <path class="influence" d="M1270,192.5A34.125,97.5,1,0,0,1270,387.5"/>
+      </g>
+      <g id="Technical_I" visibility="hidden">
+         <polyline class="influence" points="1250 222.5 1086.5 290 705 447.5"/>
+      </g>
+      <g id="Technical_ATAG_WG_I" visibility="hidden">
+         <path class="influence" d="M1270,267.5A5.25,15,1,0,0,1270,297.5"/>
+      </g>
+      <g id="Technical_ER_WG_I" visibility="hidden"/>
+      <g id="Technical_PF_WG_I" visibility="hidden">
+         <polyline class="influence" points="1270 327.5 932.5 291.5 145 207.5"/>
+         <polyline class="influence" points="1270 327.5 932.5 318.5 145 297.5"/>
+         <polyline class="influence" points="1270 327.5 932.5 363.5 145 447.5"/>
+         <polyline class="influence" points="1270 327.5 932.5 395 145 552.5"/>
+         <polyline class="influence" points="1270 327.5 932.5 413 145 612.5"/>
+         <polyline class="influence" points="1270 327.5 932.5 453.5 145 747.5"/>
+         <polyline class="influence" points="1270 327.5 1016.5 260 425 102.5"/>
+         <polyline class="influence" points="1270 327.5 1016.5 269 425 132.5"/>
+         <polyline class="influence" points="1270 327.5 1016.5 291.5 425 207.5"/>
+         <polyline class="influence" points="1270 327.5 1016.5 309.5 425 267.5"/>
+         <polyline class="influence" points="1270 327.5 1016.5 332 425 342.5"/>
+         <polyline class="influence" points="1270 327.5 1016.5 354.5 425 417.5"/>
+         <polyline class="influence" points="1270 327.5 1016.5 363.5 425 447.5"/>
+         <polyline class="influence" points="1270 327.5 1016.5 372.5 425 477.5"/>
+         <polyline class="influence" points="1270 327.5 1016.5 395 425 552.5"/>
+         <polyline class="influence" points="1270 327.5 1016.5 417.5 425 627.5"/>
+         <polyline class="influence" points="1270 327.5 1016.5 426.5 425 657.5"/>
+         <polyline class="influence" points="1270 327.5 1016.5 449 425 732.5"/>
+         <polyline class="influence" points="1270 327.5 1100.5 390.5 705 537.5"/>
+         <polyline class="influence" points="1270 327.5 1184.5 260 985 102.5"/>
+         <polyline class="influence" points="1270 327.5 1184.5 300.5 985 237.5"/>
+         <polyline class="influence" points="1270 327.5 1184.5 323 985 312.5"/>
+         <polyline class="influence" points="1270 327.5 1184.5 345.5 985 387.5"/>
+      </g>
+      <g id="Technical_UAAG_WG_I" visibility="hidden">
+         <polyline class="influence" points="1270 357.5 1100.5 326 705 252.5"/>
+         <path class="influence" d="M1270,357.5A10.5,30,1,0,0,1270,297.5"/>
+      </g>
+      <g id="Technical_WCAG_WG_I" visibility="hidden">
+         <path class="influence" d="M1270,387.5A15.749999999999998,45,1,0,0,1270,297.5"/>
+      </g>
+   </g>
+   
+   
+   
+   
+   
+   <g id="allDomains">
+      <path d="M105,-10 h1120">
+         <desc>The horizontal line connecting all domains</desc>
+      </path>
+      <g transform="translate(0,0)">
+         <desc>Architecture Domain</desc>
+         <a xlink:href="http://www.w3.org/Architecture/Overview.html">
+            <g>
+               <desc>The domain rectangle itself</desc>
+               <use xlink:href="#domain"/>
+               <text x="105" y="19" class="domain">Architecture</text>
+            </g>
+         </a>
+         <g transform="translate(40,45)">
+            <desc>DOM Activity</desc>
+            <a xlink:href="http://www.w3.org/DOM/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)" id="DOM">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">DOM</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/DOM/Group/IG">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)" id="DOM_DOM_IG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#ig"/>
+                     <text x="80" y="15" class="ig">DOM IG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V55">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <g transform="translate(40,120)">
+            <desc>XML Activity</desc>
+            <a xlink:href="http://www.w3.org/XML/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)" id="XML">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">XML</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/XML/EXI/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)" id="XML_EXI_WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">EXI WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/Style/XSL/Group/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)" id="XML_XSL_WG"
+                     transform="translate(0,30)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">XSL WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/XML/SML/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)" id="XML_SML_WG"
+                     transform="translate(0,60)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">SML WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/XML/Group/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)" id="XML_XML_CG"
+                     transform="translate(0,90)">
+                     <use xlink:href="#cg"/>
+                     <text x="80" y="15" class="cg">XML CG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/XML/Group/Core">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="XML_Core_WG"
+                     transform="translate(0,120)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">Core WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/XML/Group/Plenary">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="XML_Plenary_IG"
+                     transform="translate(0,150)">
+                     <use xlink:href="#ig"/>
+                     <text x="80" y="15" class="ig">Plenary IG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/XML/Processing/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="XML_Processing_WG"
+                     transform="translate(0,180)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">Processing WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/XML/Query/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="XML_Query_WG"
+                     transform="translate(0,210)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">Query WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2003/09/xmlap/xml-schema-ig-charter.html">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="XML_Schema_IG"
+                     transform="translate(0,240)">
+                     <use xlink:href="#ig"/>
+                     <text x="80" y="15" class="ig">Schema IG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/XML/Schema">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="XML_Schema_WG"
+                     transform="translate(0,270)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">Schema WG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V325">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <g transform="translate(40,465)">
+            <desc>I18N Activity</desc>
+            <a xlink:href="http://www.w3.org/International/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)" id="I18N">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">I18N</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/International/arch/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="I18N_I18N_Arch_WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">I18N Arch WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/International/core/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="I18N_I18N_Core_WG"
+                     transform="translate(0,30)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">I18N Core WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2006/10/i18n-recharter/ig-charter">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="I18N_I18N_IG"
+                     transform="translate(0,60)">
+                     <use xlink:href="#ig"/>
+                     <text x="80" y="15" class="ig">I18N IG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/International/its/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="I18N_I18N_Tag_Set_WG"
+                     transform="translate(0,90)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">I18N Tag Set WG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V145">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <g transform="translate(40,630)">
+            <desc>Web Services Activity</desc>
+            <a xlink:href="http://www.w3.org/2002/ws/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                  id="Web_Services">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">Web Services</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/2002/ws/swsig/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Web_Services_Semantic_WS_IG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#ig"/>
+                     <text x="80" y="15" class="ig">Semantic WS IG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2002/ws/cg/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Web_Services_WS_CG"
+                     transform="translate(0,30)">
+                     <use xlink:href="#cg"/>
+                     <text x="80" y="15" class="cg">WS CG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2002/ws/chor/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Web_Services_Choreogr__WG"
+                     transform="translate(0,60)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">Choreogr. WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2002/ws/policy/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Web_Services_WS_Policy"
+                     transform="translate(0,90)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">WS Policy</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2002/ws/databinding/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Web_Services_Databinding_WG"
+                     transform="translate(0,120)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">Databinding WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2000/xp/Group/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Web_Services_XML_Protocol_WG"
+                     transform="translate(0,150)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">XML Protocol WG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V205">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <path d="M20 25 V642.5">
+            <desc>The vertical line connecting all activities to their domain</desc>
+         </path>
+      </g>
+      <g transform="translate(280,0)">
+         <desc>Interaction Domain</desc>
+         <a xlink:href="http://www.w3.org/Interaction/Overview.html">
+            <g>
+               <desc>The domain rectangle itself</desc>
+               <use xlink:href="#domain"/>
+               <text x="105" y="19" class="domain">Interaction</text>
+            </g>
+         </a>
+         <g transform="translate(40,45)">
+            <desc>Graphics Activity</desc>
+            <a xlink:href="http://www.w3.org/Graphics/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)" id="Graphics">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">Graphics</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/Graphics/SVG/Group/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Graphics_SVG_WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">SVG WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/Graphics/WebCGM/WG/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Graphics_WebCGM"
+                     transform="translate(0,30)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">WebCGM</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V85">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <g transform="translate(40,150)">
+            <desc>HTML Activity Activity</desc>
+            <a xlink:href="http://www.w3.org/MarkUp/Activity">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                  id="HTML_Activity">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">HTML Activity</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/html/wg/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="HTML_Activity_HTML_WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">HTML WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/MarkUp/CoordGroup/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="HTML_Activity_Hypertext_CG"
+                     transform="translate(0,30)">
+                     <use xlink:href="#cg"/>
+                     <text x="80" y="15" class="cg">Hypertext CG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/MarkUp/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="HTML_Activity_XHTML2_WG"
+                     transform="translate(0,60)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">XHTML2 WG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V115">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <g transform="translate(40,285)">
+            <desc>Math Activity</desc>
+            <a xlink:href="http://www.w3.org/Math/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)" id="Math">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">Math</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/Math/Group/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Math_Math_WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">Math WG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V55">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <g transform="translate(40,360)">
+            <desc>Rich Web Client Activity</desc>
+            <a xlink:href="http://www.w3.org/2006/rwc/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                  id="Rich_Web_Client">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">Rich Web Client</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/2004/CDF/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Rich_Web_Client_CDF_WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">CDF WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2006/webapi/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Rich_Web_Client_Web_API_WG"
+                     transform="translate(0,30)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">Web API WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2006/appformats/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Rich_Web_Client_APP_Formats_WG"
+                     transform="translate(0,60)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">APP Formats WG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V115">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <g transform="translate(40,495)">
+            <desc>Style Activity</desc>
+            <a xlink:href="http://www.w3.org/Style/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)" id="Style">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">Style</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/Style/CSS/members">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Style_CSS_WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">CSS WG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V55">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <g transform="translate(40,570)">
+            <desc>Synchr. Multidimedia Activity</desc>
+            <a xlink:href="http://www.w3.org/AudioVideo/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                  id="Synchr__Multidimedia">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">Synchr. Multidimedia</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/AudioVideo/Group/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Synchr__Multidimedia_SYMM_WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">SYMM WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/AudioVideo/TT/Group/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Synchr__Multidimedia_TT_WG"
+                     transform="translate(0,30)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">TT WG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V85">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <g transform="translate(40,675)">
+            <desc>XForms Activity Activity</desc>
+            <a xlink:href="http://www.w3.org/MarkUp/Forms/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                  id="XForms_Activity">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">XForms Activity</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/MarkUp/Forms/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="XForms_Activity_Forms_WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">Forms WG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V55">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <path d="M20 25 V687.5">
+            <desc>The vertical line connecting all activities to their domain</desc>
+         </path>
+      </g>
+      <g transform="translate(560,0)">
+         <desc>Technology &amp; Society Domain</desc>
+         <a xlink:href="http://www.w3.org/TandS/Overview.html">
+            <g>
+               <desc>The domain rectangle itself</desc>
+               <use xlink:href="#domain"/>
+               <text x="105" y="19" class="domain">Technology &amp; Society</text>
+            </g>
+         </a>
+         <g transform="translate(40,45)">
+            <desc>Patent Policy Activity</desc>
+            <a xlink:href="http://www.w3.org/2004/pp/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                  id="Patent_Policy">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">Patent Policy</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/2004/pp/psig/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Patent_Policy_PP_IG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#ig"/>
+                     <text x="80" y="15" class="ig">PP IG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V55">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <g transform="translate(40,120)">
+            <desc>Privacy Activity</desc>
+            <a xlink:href="http://www.w3.org/Privacy/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)" id="Privacy">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">Privacy</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/Policy/pling/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Privacy_PLING_IG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#ig"/>
+                     <text x="80" y="15" class="ig">PLING IG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V55">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <g transform="translate(40,195)">
+            <desc>Security Activity Activity</desc>
+            <a xlink:href="http://www.w3.org/Security/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                  id="Security_Activity">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">Security Activity</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/2006/WSC/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Security_Activity_WSC_WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">WSC WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2007/xmlsec/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Security_Activity_XML_SEC_WG"
+                     transform="translate(0,30)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">XML SEC WG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V85">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <g transform="translate(40,300)">
+            <desc>Semantic Web Activity</desc>
+            <a xlink:href="http://www.w3.org/2001/sw/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                  id="Semantic_Web">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">Semantic Web</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/2001/sw/grddl-wg/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Semantic_Web_GRDDL_WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">GRDDL WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2001/sw/interest/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Semantic_Web_SW_IG"
+                     transform="translate(0,30)">
+                     <use xlink:href="#ig"/>
+                     <text x="80" y="15" class="ig">SW IG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2007/OWL/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Semantic_Web_OWL_WG"
+                     transform="translate(0,60)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">OWL WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2007/powder/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Semantic_Web_POWDER_WG"
+                     transform="translate(0,90)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">POWDER WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2001/sw/DataAccess/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Semantic_Web_RDF_DA_WG"
+                     transform="translate(0,120)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">RDF DA WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2005/rules/wg">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Semantic_Web_RIF_WG"
+                     transform="translate(0,150)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">RIF WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2001/sw/CG/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Semantic_Web_SW_CG"
+                     transform="translate(0,180)">
+                     <use xlink:href="#cg"/>
+                     <text x="80" y="15" class="cg">SW CG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2006/07/SWD/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Semantic_Web_SWD_WG"
+                     transform="translate(0,210)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">SWD WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2001/sw/sweo/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Semantic_Web_SWEO_IG"
+                     transform="translate(0,240)">
+                     <use xlink:href="#ig"/>
+                     <text x="80" y="15" class="ig">SWEO IG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2001/sw/hcls/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Semantic_Web_SW_HCLS_IG"
+                     transform="translate(0,270)">
+                     <use xlink:href="#ig"/>
+                     <text x="80" y="15" class="ig">SW HCLS IG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V325">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <path d="M20 25 V312.5">
+            <desc>The vertical line connecting all activities to their domain</desc>
+         </path>
+      </g>
+      <g transform="translate(840,0)">
+         <desc>Ubiquitous Web Domain</desc>
+         <a xlink:href="http://www.w3.org/UbiWeb/Overview.html">
+            <g>
+               <desc>The domain rectangle itself</desc>
+               <use xlink:href="#domain"/>
+               <text x="105" y="19" class="domain">Ubiquitous Web</text>
+            </g>
+         </a>
+         <g transform="translate(40,45)">
+            <desc>MWI Activity</desc>
+            <a xlink:href="http://www.w3.org/Mobile/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)" id="MWI">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">MWI</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/2005/MWI/BPWG/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="MWI_MW_BP_WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">MW BP WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2005/MWI/DDWG/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)" id="MWI_DD_WG"
+                     transform="translate(0,30)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">DD WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/2005/MWI/Tests/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)" id="MWI_TS_WG"
+                     transform="translate(0,60)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">TS WG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V115">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <g transform="translate(40,180)">
+            <desc>Multimodal Int. Activity</desc>
+            <a xlink:href="http://www.w3.org/2002/mmi/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                  id="Multimodal_Int_">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">Multimodal Int.</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/2002/mmi/Group/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Multimodal_Int__MM_Int__WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">MM Int. WG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V55">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <g transform="translate(40,255)">
+            <desc>UbiWeb Appl. Activity</desc>
+            <a xlink:href="http://www.w3.org/2007/uwa/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                  id="UbiWeb_Appl_">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">UbiWeb Appl.</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/2007/uwa/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="UbiWeb_Appl__UbiWeb_Appl__WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">UbiWeb Appl. WG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V55">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <g transform="translate(40,330)">
+            <desc>Voice Browser Activity</desc>
+            <a xlink:href="http://www.w3.org/Voice/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                  id="Voice_Browser">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">Voice Browser</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/Voice/Group/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Voice_Browser_Voice_Browser_WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">Voice Browser WG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V55">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <path d="M20 25 V342.5">
+            <desc>The vertical line connecting all activities to their domain</desc>
+         </path>
+      </g>
+      <g transform="translate(1120,0)">
+         <desc>Web Accessibility Domain</desc>
+         <a xlink:href="http://www.w3.org/WAI/Overview.html">
+            <g>
+               <desc>The domain rectangle itself</desc>
+               <use xlink:href="#domain"/>
+               <text x="105" y="19" class="domain">Web Accessibility</text>
+            </g>
+         </a>
+         <g transform="translate(40,45)">
+            <desc>Intl. Program Office Activity</desc>
+            <a xlink:href="http://www.w3.org/WAI/IPO/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                  id="Intl__Program_Office">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">Intl. Program Office</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/WAI/EO/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Intl__Program_Office_E_O_WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">E&amp;O WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/WAI/RD/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Intl__Program_Office_R_D_IG"
+                     transform="translate(0,30)">
+                     <use xlink:href="#ig"/>
+                     <text x="80" y="15" class="ig">R&amp;D IG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/WAI/CG/Group/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Intl__Program_Office_WAI_CG"
+                     transform="translate(0,60)">
+                     <use xlink:href="#cg"/>
+                     <text x="80" y="15" class="cg">WAI CG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/WAI/IG/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Intl__Program_Office_WAI_IG"
+                     transform="translate(0,90)">
+                     <use xlink:href="#ig"/>
+                     <text x="80" y="15" class="ig">WAI IG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V145">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <g transform="translate(40,210)">
+            <desc>Technical Activity</desc>
+            <a xlink:href="http://www.w3.org/WAI/Technical/">
+               <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)" id="Technical">
+                  <desc>The activity rectangle</desc>
+                  <use xlink:href="#activity"/>
+                  <text x="90" y="19" class="activity">Technical</text>
+                  
+               </g>
+            </a>
+            <g transform="translate(20,45)">
+               <desc>All the groups</desc>
+               <a xlink:href="http://www.w3.org/WAI/AU/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Technical_ATAG_WG"
+                     transform="translate(0,0)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">ATAG WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/WAI/ER/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Technical_ER_WG"
+                     transform="translate(0,30)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">ER WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/WAI/PF/Group/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Technical_PF_WG"
+                     transform="translate(0,60)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">PF WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/WAI/UA/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Technical_UAAG_WG"
+                     transform="translate(0,90)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">UAAG WG</text>
+                     
+                  </g>
+               </a>
+               <a xlink:href="http://www.w3.org/WAI/GL/">
+                  <g onmouseover="doOnMouseOver(evt)" onmouseout="doOnMouseOut(evt)"
+                     id="Technical_WCAG_WG"
+                     transform="translate(0,120)">
+                     <use xlink:href="#wg"/>
+                     <text x="80" y="15" class="wg">WCAG WG</text>
+                     
+                  </g>
+               </a>
+            </g>
+            <path d="M10 25V175">
+               <desc>The vertical line connecting all groups to their activity</desc>
+            </path>
+         </g>
+         <path d="M20 25 V222.5">
+            <desc>The vertical line connecting all activities to their domain</desc>
+         </path>
+      </g>
+      <g transform="translate(1120, 420)">
+         <desc>Technical Architecture Group</desc>
+         <a xlink:href="http://www.w3.org/2001/tag/">
+            <g transform="translate(40,45)">
+               <use xlink:href="#wgBase"/>
+               <text x="90" y="15" class="wg">Technical Arch.</text>
+            </g>
+         </a>
+      </g>
+      <g transform="translate(1120,455)">
+         <desc>Incubators</desc>
+         <a xlink:href="http://www.w3.org/2005/Incubator/">
+            <g transform="translate(40,45)">
+               <use xlink:href="#activityBase"/>
+               <text x="90" y="19" class="activity">Incubator</text>
+            </g>
+         </a>
+      </g>
+      <g transform="translate(830, 730)" class="Legend">
+         <desc>Legend</desc>
+         <g class="Dependencies">
+            <text class="legend" x="0" y="5">A</text>
+            <polyline points="20 0 100 0 190 0" class="dependency"/>
+            <text class="legend" x="200" y="5">B: </text>
+            <text class="legend" x="230" y="5">A depends on B</text>
+         </g>
+         <g transform="translate(0,30)" class="Influences">
+            <text class="legend" x="0" y="5">A</text>
+            <polyline points="20 0 100 0 190 0" class="influence"/>
+            <text class="legend" x="200" y="5">B: </text>
+            <text class="legend" x="230" y="5">A influences B</text>
+         </g>
+         <text class="legend" y="60">
+            <tspan x="0" dy="0">Move the cursor over the groups to see the relationships</tspan>
+            <tspan x="0" dy="25">Data are based on public group charters</tspan>
+         </text>
+      </g>
+   </g>
+</svg>

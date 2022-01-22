@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="no"?>
+<svg  xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-5 0 155 50">
+	<defs>
+		<set attributeName="visibility" to="visible" xlink:href="#ruby2" begin="ruby1.click"/>
+		<set attributeName="visibility" to="hidden" xlink:href="#ruby1" begin="ruby1.click"/>
+		<set attributeName="visibility" to="visible" xlink:href="#ruby3" begin="ruby2.click"/>
+		<set attributeName="visibility" to="hidden" xlink:href="#ruby2" begin="ruby2.click"/>
+		<set attributeName="visibility" to="visible" xlink:href="#ruby4" begin="ruby3.click"/>
+		<set attributeName="visibility" to="hidden" xlink:href="#ruby3" begin="ruby3.click"/>
+		<set attributeName="visibility" to="visible" xlink:href="#ruby1" begin="ruby4.click"/>
+		<set attributeName="visibility" to="hidden" xlink:href="#ruby4" begin="ruby4.click"/>
+	</defs>
+  <image id="ruby1" xlink:href="../gifs/rubyjpex.gif" height="33" width="140">
+    <desc>Ruby text for the shinkanzen</desc>
+  </image>
+  <image id="ruby2" visibility="hidden" xlink:href="../gifs/rubyjpex2.gif" height="49" width="149">
+    <desc>Ruby text for the shinkanzen, including the latin version</desc>
+  </image>
+  <image id="ruby3" visibility="hidden" xlink:href="../gifs/rubyjpex3.gif" height="46" width="131">
+    <desc>W3C Associate chairman</desc>
+  </image>
+  <image id="ruby4" visibility="hidden" xlink:href="../gifs/bopomofo.gif" height="42" width="138">
+      <desc>Bopomofo</desc>
+  </image>
+</svg>

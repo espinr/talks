@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="754.0" height="445.0">
+<title></title>
+<desc>SVG Statistical Chart</desc>
+<metadata>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc ="http://purl.org/dc/elements/1.1/"> 
+<rdf:Description rdf:about="">
+<dc:title></dc:title>
+<dc:subject></dc:subject>
+<dc:creator></dc:creator>
+<dc:publisher></dc:publisher>
+<dc:description>SVG Statistical Chart</dc:description>
+<dc:date></dc:date>
+<dc:language>en</dc:language>
+<dc:rights></dc:rights>
+<dc:contributor></dc:contributor>
+<dc:coverage></dc:coverage>
+<dc:type></dc:type>
+<dc:format></dc:format>
+<dc:identifier></dc:identifier>
+<dc:source></dc:source>
+<dc:relation></dc:relation>
+</rdf:Description>
+</rdf:RDF>
+</metadata>
+<g id="all" transform="translate(60.0,0.0)">
+ <g id="name" transform="translate(10,40)">
+<text x="0" y="0" fill="black" font-weight="bold" font-family="Courier New" font-size="24">Base de Dispositivos Móviles</text>
+</g>
+
+<g id="screem" transform="translate(20,60.0)">
+<g id="legend" transform="translate(0,10)">
+ <rect   x="471.0" y="80.0" width="10" height="10" style="stroke:black;fill:#0000FF"/>
+<text   x="486.0" y="90.0" fill="black" font-family="Courier New" font-size="10">WAP 1.x</text>
+<rect   x="471.0" y="95.0" width="10" height="10" style="stroke:black;fill:#FF0000"/>
+<text   x="486.0" y="105.0" fill="black" font-family="Courier New" font-size="10">WAP 2.x/XHTML</text>
+<rect   x="471.0" y="110.0" width="10" height="10" style="stroke:black;fill:#32CD32"/>
+<text   x="486.0" y="120.0" fill="black" font-family="Courier New" font-size="10">Terminales con WAP (total)</text>
+<rect   x="471.0" y="125.0" width="10" height="10" style="stroke:black;fill:#FFD700"/>
+<text   x="486.0" y="135.0" fill="black" font-family="Courier New" font-size="10">Portátiles(total)</text>
+<rect   x="471.0" y="140.0" width="10" height="10" style="stroke:black;fill:#778899"/>
+<text   x="486.0" y="150.0" fill="black" font-family="Courier New" font-size="10">Portátiles con WiFi (total)</text>
+
+</g>
+<g id="representacion" transform="translate(10,20)">
+ <g id="axes">
+<text x="25.0" y="310.0" fill="black" font-family="Courier New" font-size="9.0">2001</text>
+<text x="75.0" y="310.0" fill="black" font-family="Courier New" font-size="9.0">2002</text>
+<text x="125.0" y="310.0" fill="black" font-family="Courier New" font-size="9.0">2003</text>
+<text x="175.0" y="310.0" fill="black" font-family="Courier New" font-size="9.0">2004</text>
+<text x="225.0" y="310.0" fill="black" font-family="Courier New" font-size="9.0">2005</text>
+<text x="275.0" y="310.0" fill="black" font-family="Courier New" font-size="9.0">2006</text>
+<text x="325.0" y="310.0" fill="black" font-family="Courier New" font-size="9.0">2007</text>
+<text x="375.0" y="310.0" fill="black" font-family="Courier New" font-size="9.0">2008</text>
+<text x="-47" y="304.0" fill="black" font-family="Courier New" font-size="9.0">0.0</text>
+<text x="-47" y="274.0" fill="black" font-family="Courier New" font-size="9.0">135</text>
+<text x="-47" y="244.0" fill="black" font-family="Courier New" font-size="9.0">270</text>
+<text x="-47" y="214.0" fill="black" font-family="Courier New" font-size="9.0">405</text>
+<text x="-47" y="184.0" fill="black" font-family="Courier New" font-size="9.0">540</text>
+<text x="-47" y="154.0" fill="black" font-family="Courier New" font-size="9.0">675</text>
+<text x="-47" y="124.0" fill="black" font-family="Courier New" font-size="9.0">810</text>
+<text x="-47" y="94.0" fill="black" font-family="Courier New" font-size="9.0">945</text>
+<text x="-47" y="64.0" fill="black" font-family="Courier New" font-size="9.0">1.08E3</text>
+<text x="-47" y="34.0" fill="black" font-family="Courier New" font-size="9.0">1.22E3</text>
+<text x="-47" y="4.0" fill="black" font-family="Courier New" font-size="9.0">1.35E3</text>
+<line x1="0" y1="-6.0" x2="0" y2="305.0" stroke="black" stroke-width="2"/>
+<line x1="-5" y1="300.0" x2="406.0" y2="300.0" stroke="black" stroke-width="2"/>
+</g>
+
+<g id="axisTitle" transform="translate(0,10)">
+ <text x="406.0" y="310.0" fill="grey" font-weight="bold" font-family="Courier New" font-size="12.0">años</text>
+<text x="-68" y="-26.0" fill="grey" font-weight="bold" font-family="Courier New" font-size="12.0">millones</text>
+
+</g>
+<g id="draware" transform="translate(0,0)">
+ <g id="grid" transform="translate(0,0)">
+<g id="horizontal_grid" transform="translate(0,0)">
+<line x1="1" y1="285.0" x2="406.0" y2="285.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="270.0" x2="406.0" y2="270.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="255.0" x2="406.0" y2="255.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="240.0" x2="406.0" y2="240.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="225.0" x2="406.0" y2="225.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="210.0" x2="406.0" y2="210.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="195.0" x2="406.0" y2="195.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="180.0" x2="406.0" y2="180.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="165.0" x2="406.0" y2="165.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="150.0" x2="406.0" y2="150.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="135.0" x2="406.0" y2="135.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="120.0" x2="406.0" y2="120.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="105.0" x2="406.0" y2="105.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="90.0" x2="406.0" y2="90.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="75.0" x2="406.0" y2="75.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="60.0" x2="406.0" y2="60.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="45.0" x2="406.0" y2="45.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="30.0" x2="406.0" y2="30.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="15.0" x2="406.0" y2="15.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+<line x1="1" y1="0.0" x2="406.0" y2="0.0" stroke="#111111" stroke-width="1"  stroke-dasharray= " 7.5 , 3.75 "  />
+</g>
+</g>
+
+ <g id="data" transform="translate(25.0,0)">
+<circle id="punto00" cx="0.0" cy="260.0" r="2" style="fill:#0000FF;opacity:1.0"> <desc> WAP 1.x = 180.0%</desc>
+</circle>
+<circle id="punto01" cx="50.0" cy="230.0" r="2" style="fill:#0000FF;opacity:1.0"> <desc> WAP 1.x = 315.0%</desc>
+</circle>
+<line id="linea01" x1="0.0" y1="260.0" x2="50.0" y2="230.0" style="stroke:#0000FF;opacity:1.0"> <desc> WAP 1.x = </desc>
+</line>
+<circle id="punto02" cx="100.0" cy="191.77777777777777" r="2" style="fill:#0000FF;opacity:1.0"> <desc> WAP 1.x = 487.0%</desc>
+</circle>
+<line id="linea02" x1="50.0" y1="230.0" x2="100.0" y2="191.77777777777777" style="stroke:#0000FF;opacity:1.0"> <desc> WAP 1.x = </desc>
+</line>
+<circle id="punto03" cx="150.0" cy="168.88888888888889" r="2" style="fill:#0000FF;opacity:1.0"> <desc> WAP 1.x = 590.0%</desc>
+</circle>
+<line id="linea03" x1="100.0" y1="191.77777777777777" x2="150.0" y2="168.88888888888889" style="stroke:#0000FF;opacity:1.0"> <desc> WAP 1.x = </desc>
+</line>
+<circle id="punto04" cx="200.0" cy="186.0" r="2" style="fill:#0000FF;opacity:1.0"> <desc> WAP 1.x = 513.0%</desc>
+</circle>
+<line id="linea04" x1="150.0" y1="168.88888888888889" x2="200.0" y2="186.0" style="stroke:#0000FF;opacity:1.0"> <desc> WAP 1.x = </desc>
+</line>
+<circle id="punto05" cx="250.0" cy="214.22222222222223" r="2" style="fill:#0000FF;opacity:1.0"> <desc> WAP 1.x = 386.0%</desc>
+</circle>
+<line id="linea05" x1="200.0" y1="186.0" x2="250.0" y2="214.22222222222223" style="stroke:#0000FF;opacity:1.0"> <desc> WAP 1.x = </desc>
+</line>
+<circle id="punto06" cx="300.0" cy="254.0" r="2" style="fill:#0000FF;opacity:1.0"> <desc> WAP 1.x = 207.0%</desc>
+</circle>
+<line id="linea06" x1="250.0" y1="214.22222222222223" x2="300.0" y2="254.0" style="stroke:#0000FF;opacity:1.0"> <desc> WAP 1.x = </desc>
+</line>
+<circle id="punto07" cx="350.0" cy="271.55555555555554" r="2" style="fill:#0000FF;opacity:1.0"> <desc> WAP 1.x = 128.0%</desc>
+</circle>
+<line id="linea07" x1="300.0" y1="254.0" x2="350.0" y2="271.55555555555554" style="stroke:#0000FF;opacity:1.0"> <desc> WAP 1.x = </desc>
+</line>
+<circle id="punto10" cx="0.0" cy="300.0" r="2" style="fill:#FF0000;opacity:1.0"> <desc> WAP 2.x/XHTML = 0.0%</desc>
+</circle>
+<circle id="punto11" cx="50.0" cy="297.77777777777777" r="2" style="fill:#FF0000;opacity:1.0"> <desc> WAP 2.x/XHTML = 10.0%</desc>
+</circle>
+<line id="linea11" x1="0.0" y1="300.0" x2="50.0" y2="297.77777777777777" style="stroke:#FF0000;opacity:1.0"> <desc> WAP 2.x/XHTML = </desc>
+</line>
+<circle id="punto12" cx="100.0" cy="280.6666666666667" r="2" style="fill:#FF0000;opacity:1.0"> <desc> WAP 2.x/XHTML = 87.0%</desc>
+</circle>
+<line id="linea12" x1="50.0" y1="297.77777777777777" x2="100.0" y2="280.6666666666667" style="stroke:#FF0000;opacity:1.0"> <desc> WAP 2.x/XHTML = </desc>
+</line>
+<circle id="punto13" cx="150.0" cy="250.22222222222223" r="2" style="fill:#FF0000;opacity:1.0"> <desc> WAP 2.x/XHTML = 224.0%</desc>
+</circle>
+<line id="linea13" x1="100.0" y1="280.6666666666667" x2="150.0" y2="250.22222222222223" style="stroke:#FF0000;opacity:1.0"> <desc> WAP 2.x/XHTML = </desc>
+</line>
+<circle id="punto14" cx="200.0" cy="186.0" r="2" style="fill:#FF0000;opacity:1.0"> <desc> WAP 2.x/XHTML = 513.0%</desc>
+</circle>
+<line id="linea14" x1="150.0" y1="250.22222222222223" x2="200.0" y2="186.0" style="stroke:#FF0000;opacity:1.0"> <desc> WAP 2.x/XHTML = </desc>
+</line>
+<circle id="punto15" cx="250.0" cy="124.44444444444446" r="2" style="fill:#FF0000;opacity:1.0"> <desc> WAP 2.x/XHTML = 790.0%</desc>
+</circle>
+<line id="linea15" x1="200.0" y1="186.0" x2="250.0" y2="124.44444444444446" style="stroke:#FF0000;opacity:1.0"> <desc> WAP 2.x/XHTML = </desc>
+</line>
+<circle id="punto16" cx="300.0" cy="66.0" r="2" style="fill:#FF0000;opacity:1.0"> <desc> WAP 2.x/XHTML = 1053.0%</desc>
+</circle>
+<line id="linea16" x1="250.0" y1="124.44444444444446" x2="300.0" y2="66.0" style="stroke:#FF0000;opacity:1.0"> <desc> WAP 2.x/XHTML = </desc>
+</line>
+<circle id="punto17" cx="350.0" cy="26.0" r="2" style="fill:#FF0000;opacity:1.0"> <desc> WAP 2.x/XHTML = 1233.0%</desc>
+</circle>
+<line id="linea17" x1="300.0" y1="66.0" x2="350.0" y2="26.0" style="stroke:#FF0000;opacity:1.0"> <desc> WAP 2.x/XHTML = </desc>
+</line>
+<circle id="punto20" cx="0.0" cy="260.0" r="2" style="fill:#32CD32;opacity:1.0"> <desc> Terminales con WAP (total) = 180.0%</desc>
+</circle>
+<circle id="punto21" cx="50.0" cy="228.88888888888889" r="2" style="fill:#32CD32;opacity:1.0"> <desc> Terminales con WAP (total) = 320.0%</desc>
+</circle>
+<line id="linea21" x1="0.0" y1="260.0" x2="50.0" y2="228.88888888888889" style="stroke:#32CD32;opacity:1.0"> <desc> Terminales con WAP (total) = </desc>
+</line>
+<circle id="punto22" cx="100.0" cy="171.33333333333334" r="2" style="fill:#32CD32;opacity:1.0"> <desc> Terminales con WAP (total) = 579.0%</desc>
+</circle>
+<line id="linea22" x1="50.0" y1="228.88888888888889" x2="100.0" y2="171.33333333333334" style="stroke:#32CD32;opacity:1.0"> <desc> Terminales con WAP (total) = </desc>
+</line>
+<circle id="punto23" cx="150.0" cy="116.22222222222223" r="2" style="fill:#32CD32;opacity:1.0"> <desc> Terminales con WAP (total) = 827.0%</desc>
+</circle>
+<line id="linea23" x1="100.0" y1="171.33333333333334" x2="150.0" y2="116.22222222222223" style="stroke:#32CD32;opacity:1.0"> <desc> Terminales con WAP (total) = </desc>
+</line>
+<circle id="punto24" cx="200.0" cy="75.77777777777777" r="2" style="fill:#32CD32;opacity:1.0"> <desc> Terminales con WAP (total) = 1009.0%</desc>
+</circle>
+<line id="linea24" x1="150.0" y1="116.22222222222223" x2="200.0" y2="75.77777777777777" style="stroke:#32CD32;opacity:1.0"> <desc> Terminales con WAP (total) = </desc>
+</line>
+<circle id="punto25" cx="250.0" cy="41.333333333333314" r="2" style="fill:#32CD32;opacity:1.0"> <desc> Terminales con WAP (total) = 1164.0%</desc>
+</circle>
+<line id="linea25" x1="200.0" y1="75.77777777777777" x2="250.0" y2="41.333333333333314" style="stroke:#32CD32;opacity:1.0"> <desc> Terminales con WAP (total) = </desc>
+</line>
+<circle id="punto26" cx="300.0" cy="25.555555555555543" r="2" style="fill:#32CD32;opacity:1.0"> <desc> Terminales con WAP (total) = 1235.0%</desc>
+</circle>
+<line id="linea26" x1="250.0" y1="41.333333333333314" x2="300.0" y2="25.555555555555543" style="stroke:#32CD32;opacity:1.0"> <desc> Terminales con WAP (total) = </desc>
+</line>
+<circle id="punto27" cx="350.0" cy="-0.0" r="2" style="fill:#32CD32;opacity:1.0"> <desc> Terminales con WAP (total) = 1350.0%</desc>
+</circle>
+<line id="linea27" x1="300.0" y1="25.555555555555543" x2="350.0" y2="-0.0" style="stroke:#32CD32;opacity:1.0"> <desc> Terminales con WAP (total) = </desc>
+</line>
+<circle id="punto30" cx="0.0" cy="296.6666666666667" r="2" style="fill:#FFD700;opacity:1.0"> <desc> Portátiles(total) = 15.0%</desc>
+</circle>
+<circle id="punto31" cx="50.0" cy="289.3333333333333" r="2" style="fill:#FFD700;opacity:1.0"> <desc> Portátiles(total) = 48.0%</desc>
+</circle>
+<line id="linea31" x1="0.0" y1="296.6666666666667" x2="50.0" y2="289.3333333333333" style="stroke:#FFD700;opacity:1.0"> <desc> Portátiles(total) = </desc>
+</line>
+<circle id="punto32" cx="100.0" cy="285.1111111111111" r="2" style="fill:#FFD700;opacity:1.0"> <desc> Portátiles(total) = 67.0%</desc>
+</circle>
+<line id="linea32" x1="50.0" y1="289.3333333333333" x2="100.0" y2="285.1111111111111" style="stroke:#FFD700;opacity:1.0"> <desc> Portátiles(total) = </desc>
+</line>
+<circle id="punto33" cx="150.0" cy="282.44444444444446" r="2" style="fill:#FFD700;opacity:1.0"> <desc> Portátiles(total) = 79.0%</desc>
+</circle>
+<line id="linea33" x1="100.0" y1="285.1111111111111" x2="150.0" y2="282.44444444444446" style="stroke:#FFD700;opacity:1.0"> <desc> Portátiles(total) = </desc>
+</line>
+<circle id="punto34" cx="200.0" cy="276.6666666666667" r="2" style="fill:#FFD700;opacity:1.0"> <desc> Portátiles(total) = 105.0%</desc>
+</circle>
+<line id="linea34" x1="150.0" y1="282.44444444444446" x2="200.0" y2="276.6666666666667" style="stroke:#FFD700;opacity:1.0"> <desc> Portátiles(total) = </desc>
+</line>
+<circle id="punto35" cx="250.0" cy="268.22222222222223" r="2" style="fill:#FFD700;opacity:1.0"> <desc> Portátiles(total) = 143.0%</desc>
+</circle>
+<line id="linea35" x1="200.0" y1="276.6666666666667" x2="250.0" y2="268.22222222222223" style="stroke:#FFD700;opacity:1.0"> <desc> Portátiles(total) = </desc>
+</line>
+<circle id="punto36" cx="300.0" cy="262.0" r="2" style="fill:#FFD700;opacity:1.0"> <desc> Portátiles(total) = 171.0%</desc>
+</circle>
+<line id="linea36" x1="250.0" y1="268.22222222222223" x2="300.0" y2="262.0" style="stroke:#FFD700;opacity:1.0"> <desc> Portátiles(total) = </desc>
+</line>
+<circle id="punto37" cx="350.0" cy="257.1111111111111" r="2" style="fill:#FFD700;opacity:1.0"> <desc> Portátiles(total) = 193.0%</desc>
+</circle>
+<line id="linea37" x1="300.0" y1="262.0" x2="350.0" y2="257.1111111111111" style="stroke:#FFD700;opacity:1.0"> <desc> Portátiles(total) = </desc>
+</line>
+<circle id="punto40" cx="0.0" cy="300.0" r="2" style="fill:#778899;opacity:1.0"> <desc> Portátiles con WiFi (total) = 0.0%</desc>
+</circle>
+<circle id="punto41" cx="50.0" cy="298.8888888888889" r="2" style="fill:#778899;opacity:1.0"> <desc> Portátiles con WiFi (total) = 5.0%</desc>
+</circle>
+<line id="linea41" x1="0.0" y1="300.0" x2="50.0" y2="298.8888888888889" style="stroke:#778899;opacity:1.0"> <desc> Portátiles con WiFi (total) = </desc>
+</line>
+<circle id="punto42" cx="100.0" cy="297.77777777777777" r="2" style="fill:#778899;opacity:1.0"> <desc> Portátiles con WiFi (total) = 10.0%</desc>
+</circle>
+<line id="linea42" x1="50.0" y1="298.8888888888889" x2="100.0" y2="297.77777777777777" style="stroke:#778899;opacity:1.0"> <desc> Portátiles con WiFi (total) = </desc>
+</line>
+<circle id="punto43" cx="150.0" cy="294.44444444444446" r="2" style="fill:#778899;opacity:1.0"> <desc> Portátiles con WiFi (total) = 25.0%</desc>
+</circle>
+<line id="linea43" x1="100.0" y1="297.77777777777777" x2="150.0" y2="294.44444444444446" style="stroke:#778899;opacity:1.0"> <desc> Portátiles con WiFi (total) = </desc>
+</line>
+<circle id="punto44" cx="200.0" cy="286.22222222222223" r="2" style="fill:#778899;opacity:1.0"> <desc> Portátiles con WiFi (total) = 62.0%</desc>
+</circle>
+<line id="linea44" x1="150.0" y1="294.44444444444446" x2="200.0" y2="286.22222222222223" style="stroke:#778899;opacity:1.0"> <desc> Portátiles con WiFi (total) = </desc>
+</line>
+<circle id="punto45" cx="250.0" cy="280.22222222222223" r="2" style="fill:#778899;opacity:1.0"> <desc> Portátiles con WiFi (total) = 89.0%</desc>
+</circle>
+<line id="linea45" x1="200.0" y1="286.22222222222223" x2="250.0" y2="280.22222222222223" style="stroke:#778899;opacity:1.0"> <desc> Portátiles con WiFi (total) = </desc>
+</line>
+<circle id="punto46" cx="300.0" cy="272.6666666666667" r="2" style="fill:#778899;opacity:1.0"> <desc> Portátiles con WiFi (total) = 123.0%</desc>
+</circle>
+<line id="linea46" x1="250.0" y1="280.22222222222223" x2="300.0" y2="272.6666666666667" style="stroke:#778899;opacity:1.0"> <desc> Portátiles con WiFi (total) = </desc>
+</line>
+<circle id="punto47" cx="350.0" cy="267.1111111111111" r="2" style="fill:#778899;opacity:1.0"> <desc> Portátiles con WiFi (total) = 148.0%</desc>
+</circle>
+<line id="linea47" x1="300.0" y1="272.6666666666667" x2="350.0" y2="267.1111111111111" style="stroke:#778899;opacity:1.0"> <desc> Portátiles con WiFi (total) = </desc>
+</line>
+</g>
+
+</g>
+</g>
+</g>
+</g>
+</svg>
+

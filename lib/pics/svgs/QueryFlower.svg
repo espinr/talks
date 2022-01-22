@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 750 400">
+    <desc>
+        <!-- put a description here -->
+    </desc>
+    <defs>
+        <marker id="Triangle" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="5" orient="auto">
+            <path class="arrow" d="M 0 0 L 10 5 L 0 10 z"/>
+        </marker>
+    </defs>
+    <g transform="translate(10,20)">
+    <g>
+        <text x="60" y="5" class="normal">for <tspan class="reddish">var</tspan> in <tspan class="reddish">expression</tspan>
+        </text>
+        <text class="normal" x="85" y="40">let var := <tspan class="reddish">expr</tspan>
+        </text>
+        <text  class="normal" x="350" y="40">where <tspan class="reddish">expr</tspan>
+        </text>
+        <text  class="normal" x="550" y="5">return <tspan class="reddish">expr</tspan>
+        </text>
+        <line x2="50"/>
+        <line x1="250" x2="540"/>
+        <line x1="660" x2="700" marker-end="url(#Triangle)"/>
+        <line x1="700" x2="700" y1="-15" y2="15"/>
+        <line x1="0" x2="0" y1="-15" y2="15"/>
+        <path class="arrowLine" fill="none" d="M 280 0 v -30 h -250 v 30" marker-end="url(#Triangle)"/>
+        <path class="arrowLine" fill="none" d="M40 0 v 35 h 25"/>
+        <path class="arrowLine" fill="none" d="M270 0 v 35 h -25"/>
+        <path class="arrowLine" fill="none" d="M315 0 v 35 h 25"/>
+        <path class="arrowLine" fill="none" d="M480 0 v 35 h -25"/>
+    </g>
+    <g transform="translate(50,100)">
+        <text class="special">
+            <tspan x="0"><tspan class="reddish">for</tspan> and <tspan class="reddish">let</tspan> clauses</tspan>
+            <tspan x="0" dy="35">generate a list of</tspan>
+            <tspan x="0" dy="35">variable bindings</tspan>
+            <tspan x="0" dy="35">preserving document</tspan>
+            <tspan x="0" dy="35">order.</tspan>
+            <tspan x="0" dy="35">
+                <tspan class="reddish">let</tspan> binds a variable</tspan>
+            <tspan x="0" dy="35">to an expression.</tspan>
+        </text>
+    </g>
+    <g transform="translate(320,100)">
+        <text class="special">
+            <tspan x="0"><tspan class="reddish">where</tspan> applies </tspan>
+            <tspan x="0" dy="35">a predicate, </tspan>
+            <tspan x="0" dy="35">eliminating some</tspan>
+            <tspan x="0" dy="35">of the bindings.</tspan>
+        </text>
+    </g>
+    <g transform="translate(550,100)">
+        <text class="special">
+            <tspan x="0"><tspan class="reddish">return</tspan> is executed </tspan>
+            <tspan x="0" dy="35">for each surviging</tspan>
+            <tspan x="0" dy="35">bindings, generating</tspan>
+            <tspan x="0" dy="35">an ordered list of</tspan>
+            <tspan x="0" dy="35">output.</tspan>
+        </text>
+    </g>
+    </g>
+</svg>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg viewBox="0 0 450 450">
+  <style type="text/css"><![CDATA[
+    text { fill:black; stroke: none }
+  ]]></style>
+  <!--======================================================================-->
+  <!--=  Copyright 2000 World Wide Web Consortium, (Massachusetts          =-->
+  <!--=  Institute of Technology, Institut National de Recherche en        =-->
+  <!--=  Informatique et en Automatique, Keio University). All Rights      =-->
+  <!--=  Reserved. See http://www.w3.org/Consortium/Legal/.                =-->
+  <!--======================================================================-->
+  <!-- ===================================================================== -->
+  <!--                                                                       -->
+  <!-- text-i18n-BE-09.svg                                                   -->
+  <!--                                                                       -->
+  <!-- Test various aspects of internationalized text, including             -->
+  <!-- left-to-right, right-to-left, top-to-bottom, and the                  -->
+  <!-- following properties: 'writing-mode',                                 -->
+  <!-- 'glyph-orientation-vertical', 'glyph-orientation-horizontal',         -->
+  <!-- 'direction' and 'unicode-bidi'.                                       -->
+  <!--                                                                       -->
+  <!-- Author : Jon Ferraiolo 06-Aug-2000                                    -->
+  <!--                                                                       -->
+  <!-- History:                                                              -->
+  <!--  06-Aug-2000, JF: Serial#1 created.                                   -->
+  <!--  19-Aug-2000, LH: fix missing </g>.                                   -->
+  <!--                                                                       -->
+  <!-- ===================================================================== -->
+  <!--======================================================================-->
+  <!--= Note. After October 2000, revision history is kept as CVS 'commit' =-->
+  <!--= log messages, and therefore is no longer in the preceding preamble.=-->
+  <!--======================================================================-->
+  <desc id="test-desc">Slide showing various aspects of internationalized text, including left-to-right,
+      right-to-left, top-to-bottom, and the following properties: 'writing-mode',
+      'glyph-orientation-vertical', 'glyph-orientation-horizontal', 'direction' and 'unicode-bidi'.
+      The text content are in Polish, Russion, Greek, Hebrew, Yiddish, Chinese, Japanese, Hebrew again, 
+      and chinese and japanese written top to bottom.
+    </desc>
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:axsvg="http://www.w3.org/2001/svgRdf/axsvg-schema.rdf#">
+      <rdf:Description rdf:about="#test-body-content">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#Horizontal"/>
+            <rdf:li rdf:resource="#ChinJap"/>
+            <rdf:li rdf:resource="#hebr"/>
+            <rdf:li rdf:resource="#ChinJap2"/>
+            <rdf:li rdf:resource="#Arabic"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <rdf:Description rdf:about="#Horizontal">
+        <axsvg:Text>true</axsvg:Text>
+      </rdf:Description>
+      <rdf:Description rdf:about="#ChinJap">
+        <axsvg:Text>true</axsvg:Text>
+        <axsvg:Under rdf:resource="#Horizontal"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#Arabic">
+        <axsvg:Text>true</axsvg:Text>
+        <axsvg:Under rdf:resource="#ChinJap"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#hebr">
+        <axsvg:Text>true</axsvg:Text>
+        <axsvg:Under rdf:resource="#Arabic"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#ChinJap2">
+        <axsvg:Text>true</axsvg:Text>
+        <axsvg:AtRight>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#Horizontal"/>
+            <rdf:li rdf:resource="#ChinJap"/>
+            <rdf:li rdf:resource="#hebr"/>
+            <rdf:li rdf:resource="#Arabic"/>
+          </rdf:Bag>
+        </axsvg:AtRight>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <style type="text/css">
+      text {fill:#0C469C; stroke:none }
+  </style>
+  <!--======================================================================-->
+  <!--Content of Test Case follows...                  =====================-->
+  <!--======================================================================-->
+  <g id="test-body-content">
+    <g style="font-size:14; font-family:'LucidaSansUnicode','MS-Gothic'" id="Horizontal">
+      <desc>Examples for horizontal writing, with writing direction depending on the language</desc>
+      <text x="10" y="60">Polish: Mogę jeść szkło, i mi nie szkodzi.</text>
+      <text x="10" y="90">Russian: Я могу есть стекло, это мне не вредит.</text>
+      <text x="10" y="120" style="font-size:11">Greek: Μπορώ να φάω σπασμένα γυαλιά χωρίς να πάθω τίποτα.</text>
+      <text x="10" y="150">Text "אני יכול לאכול זכוכית וזה לא מזיק לי" is in Hebrew</text>
+      <text x="10" y="180">Yiddish: איך קען עסן גלאָז און עס טוט מיר נישט װײ.</text>
+    </g>
+    <g style="font-size:14; font-family:'MS-Gothic','LucidaSansUnicode'" id="ChinJap">
+      <desc>Chinese and Japanese examples written horizontally</desc>
+      <text x="10" y="210">Chinese:我能吞下玻璃而不伤身体。</text>
+      <text x="10" y="240" style="font-size:12">Japanese: 私はガラスを食べられます。それは私を傷つけません。</text>
+    </g>
+    <text x="10" y="270" id="Arabic">
+      <tspan>Arabic: </tspan>
+      <tspan>&#1573;&#1610;&#1601;&#1575;&#1606;  &#1607;&#1610;&#1585;&#1605;&#1575;&#1606;</tspan>
+    </text>
+    <text style="font-family:Helvetica;font-size:12;fill:red" x="10" y="320">unicode-bidi:bidi-override. First, direction:ltr, then direction:rtl.</text>
+    <g style="font-size:14;font-family:'LucidaSansUnicode','MS-Gothic'" id="hebr">
+      <desc>Text written in hebrew with bidirectional control</desc>
+      <text x="10" y="350" style="unicode-bidi:bidi-override;direction:ltr">Text "אני יכול לאכול זכוכית וזה לא מזיק לי" is in Hebrew</text>
+      <text x="10" y="380" style="unicode-bidi:bidi-override;direction:rtl">Text "אני יכול לאכול זכוכית וזה לא מזיק לי" is in Hebrew</text>
+    </g>
+    <g style="font-size:14;font-family:'MS-Gothic','LucidaSansUnicode';writing-mode:tb" id="ChinJap2">
+      <desc>Chinese and Japanese text written top to bottom</desc>
+      <text x="390" y="10">This text "我能吞下玻璃而不伤身体。" is in Chinese</text>
+      <text x="410" y="10">Japanese: 私はガラスを食べられます。それは私を傷つけません。</text>
+      <text x="430" y="10" style="glyph-orientation-vertical:0; font-size:12">Japanese: 私はガラスを食べられます。それは私を傷つけません。</text>
+    </g>
+  </g>
+</svg>

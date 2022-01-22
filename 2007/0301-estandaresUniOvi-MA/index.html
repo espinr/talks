@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Estándares en la Web</title>
+    <link href="http://purl.org/dc" rel="schema.dc" />
+    <meta content="Estándares en la Web" name="dc.title" />
+    <meta content="http://www.w3c.es/Personal/Martin/foaf.rdf" name="dc.creator" />
+    <meta content="2006-10-20" name="dc.date" />
+    <meta content="W3C Oficina Española" name="dc.publisher" />
+    <meta content="http://www.w3.org/Consortium/Legal/copyright-documents" name="dc.rights" />
+    <meta name="copyright" content="Copyright 2006 W3C Oficina Española" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="../../lib/Slidy/css/show.css" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="../../lib/Slidy/css/w3c-blue.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../lib/Slidy/css/print.css" />
+    <script type="text/javascript" src="../../lib/Slidy/js/slidy.js">
+    </script>
+    <style type="text/css">
+        .center {
+            text-align: center;
+        }
+        
+        .imagen-left {
+            float: left;
+        }
+        
+        .imagen-right {
+            float: right;
+            margin-right: 1em;
+            clear: both;
+        }
+        
+        dl {
+            margin-left: 2em;
+        }
+        
+        strong {
+            color: #B22222;
+        }
+        
+        p.cita-right {
+            float: right;
+            width: 15em;
+            margin-right: 1em;
+            background-color: #FFD700;
+            padding: 0.5em;
+        }
+        
+        p.cita-right cite {
+            font-weight: bold;
+        }
+        
+        samp {
+            color: Green;
+            font-weight: bold;
+        }
+        
+        h1 {
+            clear: both;
+        }
+        
+        ul.ejemplo-i18n li {
+            font-size: 80%;
+            margin: 0;
+            background: transparent;
+        }
+        
+        ul.ejemplo-i18n li:before {
+            content: "[" attr(lang) "] : ";
+            color: grey;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <img id="head-icon" alt="Gráfico con 4 cuadrados coloreados" src="../../lib/Slidy/img/icon-blue.png" /> <object id="head-logo" title="W3C logo" type="image/svg+xml" data="../../lib/Slidy/img/w3c-logo-blue.svg">
+  <img alt="W3C logo" id="head-logo-fallback"
+  src="../../lib/Slidy/img/w3c-logo-blue.gif" /></object>
+    </div>
+    <!-- La principal -->
+
+    <div class="slide cover">
+        <img src="../../lib/Slidy/img/keys.jpg" alt="Imagen de la portada (teclas W3C)" class="cover" /><br />
+
+
+        <h1>Estándares en la Web</h1>
+
+        <p><strong>Universidad de Oviedo</strong>, Mieres</p>
+
+        <p><a href="http://www.w3c.es/Personal/Martin" title="Página personal de Martín Álvarez Espinar">Martín Álvarez
+Espinar</a> - <a href="http://www.w3c.es" title="Página principal de la Oficina W3C España">Oficina W3C España</a></p>
+    </div>
+    <!-- Fin de la diapo principal -->
+
+    <!-- =========================================== -->
+    <div class="slide">
+        <h1>¿Qué es el <span xml:lang="en">World Wide Web Consortium?</span></h1>
+
+        <p><img class="imagen-right" alt="El mundo interconectado mediante la web" src="img/globe.png" /></p>
+        <ul>
+            <li>Organismo <strong>neutro</strong> que desarrolla estándares para la Web
+            </li>
+            <li>Fundado en 1994 por el creador de la Web <a href="http://www.w3.org/People/Berners-Lee/" title="Información sobre Tim Berners-Lee">Tim Berners-Lee</a></li>
+            <li><a href="http://www.w3.org/2003/02/W3COrg.svg" title="Gráfico sobre las actividades y grupos del W3C">Actividades y
+    Grupos del W3C</a>
+                <ul>
+                    <li>400 <a href="http://www.w3.org/Consortium/Member/List" title="Lista de Miembros" hreflang="en">miembros</a></li>
+                    <li>más de 60 personas en el <a href="http://www.w3.org/People/" title="Miembros del Team" hreflang="en"><span
+        xml:lang="en">Team</span></a></li>
+                    <li>más de 40 Grupos de Trabajo (con cerca de 750 investigadores)</li>
+                </ul>
+            </li>
+            <li>Crea:
+                <ul>
+                    <li>especificaciones (XML, RDF, SMIL, XHTML, SVG ...)</li>
+                    <li>directrices (WACG, ATAG ...)</li>
+                    <li>herramientas (Validadores, Amaya, Jigsaw ...)·</li>
+                </ul>
+            </li>
+        </ul>
+        <blockquote>
+            <p>Recomendaciones tecnológicas <strong>abiertas</strong> del W3C, probablemente con la <a href="http://www.w3.org/Consortium/Patent-Policy/" hreflang="en-us">política de patentes</a> más <strong>transparente</strong> en Internet</p>
+        </blockquote>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Realmente <span xml:lang="en" style="font-style:italic">WorldWide</span></h1>
+        <div style="text-align:center">
+            <object width="90%" height="65.00%" type="image/svg+xml" data="img/WorldMapW3C.svg" title="El mundo, con puntos que indican las sedes centrales y las oficinas">
+  <div style="text-align:center">
+  <img src="img/WorldMapW3C.png"
+  alt="El mundo, con puntos que indican las sedes centrales y las oficinas" /></div>
+</object>
+        </div>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Origen de la Web</h1>
+        <ul>
+            <li>Tim Berners-Lee en 1989 realizó un modelo acerca de la gestión de información del CERN</li>
+
+            <li>Solución basada en un sistema distribuido de <em>hipertexto</em></li>
+        </ul>
+
+        <p class="center"><img alt="Propuesta de Gestión de la Información de Tim Berners-Lee" src="img/proposal_tim.gif" /></p>
+
+        <p class="center"><span xml:lang="en-us">Information Management: A Proposal,
+Tim Berners-Lee, CERN, March 1989, May 1990</span>, <a hreflang="en-us" href="http://www.w3.org/History/1989/proposal.html">http://www.w3.org/History/1989/proposal.html</a></p>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Los fundamentos de la Web</h1>
+        <ul>
+            <li>La Web se basa en una gran <strong>diversidad de tecnologías</strong></li>
+            <li>Ninguna tecnología puede pretender cubrir todas las necesidades de la Web</li>
+            <li>La <em>construcción</em> de los cimientos de la Web requiere seguir un
+                <strong>proceso claro y efectivo</strong></li>
+            <li>Es imprescindible asegurar la <em>interoperabilidad</em> de las tecnologías
+            </li>
+            <li><strong>La Web debe ser universal y para todo el mundo</strong></li>
+            <li>La Web evoluciona hacia la Semántica</li>
+        </ul>
+
+        <blockquote>
+            <p>Recomendaciones tecnológicas abiertas del W3C, probablemente con la <a href="http://www.w3.org/Consortium/Patent-Policy/" hreflang="en-us">política de patentes</a> más
+                <strong>transparente</strong> en Internet</p>
+        </blockquote>
+    </div>
+
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Tecnologías y Áreas</h1>
+        <div class="center"><object title="Pila de las tecnologías de W3C, vete a http://www.w3.org/Consortium/techstack-desc.html para más detalles" data="img/tech-stack.svg" height="75.00%" width="90%" type="image/svg+xml" class="svg">
+  <img src="img/tech-stack.png"
+  alt="Pila de las tecnologías de W3C, vete a http://www.w3.org/Consortium/techstack-desc.html para más detalles"
+  /></object></div>
+    </div>
+
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Del SGML al HTML</h1>
+
+        <p>Standard Generalized Markup Language</p>
+        <ul>
+            <li>Raices de finales de los 60</li>
+            <li>SGML es un sistema diseñado para crear <strong>formatos de documentos</strong> a través de su marcado <strong>estructural</strong>.
+                <li>SGML hace hincapié <strong>únicamente</strong> en la estructura del documento</li>
+                <li>Este sistema ya tenía estructura de documento jerárquica y definiciones de tipos de documentos</li>
+        </ul>
+        <pre style="margin-left:4em;">
+&lt;anthology&gt;
+      &lt;poem&gt;&lt;title&gt;The SICK ROSE&lt;/title&gt;
+         &lt;stanza&gt;
+              &lt;line&gt;O Rose thou art sick.&lt;/line&gt;
+              &lt;line&gt;The invisible worm,&lt;/line&gt;
+              &lt;line&gt;That flies in the night&lt;/line&gt;
+              &lt;line&gt;In the howling storm:&lt;/line&gt;
+         &lt;/stanza&gt;
+         &lt;stanza&gt;
+              &lt;line&gt;Has found out thy bed&lt;/line&gt;
+              &lt;line&gt;Of crimson joy:&lt;/line&gt;
+              &lt;line&gt;And his dark secret love&lt;/line&gt;
+              &lt;line&gt;Does thy life destroy.&lt;/line&gt;
+         &lt;/stanza&gt;
+      &lt;/poem&gt; 
+&lt;/anthology&gt;
+</pre>
+    </div>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Evolución del HTML</h1>
+        <p>HTML (HyperText Markup Language). Usado para publicación de documentos en la Web desde 1990</p>
+        <ul>
+            <li>Aplicación de SGML</li>
+            <li>Semántica genérica que permite representar documentos <strong>estructurados</strong> textuales o gráficos</li>
+        </ul>
+
+        <p>1990: Tim Berners-Lee crea El Navegador <strong>WorldWideWeb</strong> (<a href="img/screensnap2_24c.gif" title="pantalla del navegador WorldWideWeb">pantalla1</a>, <a href="img/tims_editor.png" title="pantalla del navegador WorldWideWeb en blanco en grises">pantalla2</a>)</p>
+
+        <p><strong>HTML 2.0</strong> estableció el estándar para las características básicas de HTML</p>
+        <ul>
+            <li>Especificación de 1995</li>
+            <li>Tim Berners-Lee y Dan Connolly</li>
+            <li>Grupo de trabajo de HTML del IETF (Internet Engineering Task Force)</li>
+        </ul>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>HTML 3.0</h1>
+        <ul>
+            <li>Borrador en marzo de 1995</li>
+            <li>Extensión de las características de HTML 2.0 para soportar <strong>tablas, flujos de texto alrededor de las imágenes y fórmulas</strong> matemáticas</li>
+            <li>Gran diferencia entre las versiones
+                <ul>
+                    <li>La estandarización y el desarrollo de toda la propuesta parecía poco manejable</li>
+                    <li>Surge la especificación <strong>HTML 3.2</strong></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>HTML 3.2</h1>
+        <ul>
+            <li>Sustituye a HTML 2.0</li>
+            <li>Recomendación para HTML en <strong>enero de 1997</strong></li>
+
+            <li>IBM, Microsoft, Netscape Communications Corporation, Novell, SoftQuad, Spyglass, y Sun Microsystems</li>
+
+            <li>Incluye soporte para tablas, applets, flujos de texto alrededor de las imágenes, subíndices o superíndices</li>
+        </ul>
+    </div>
+
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>HTML 4.0</h1>
+        <ul>
+            <li>Recomendación para HTML en <strong>diciembre de 1997</strong></li>
+
+            <li>Opciones de soporte para multimedia,</li>
+            <li>Lenguajes de scripting</li>
+            <li>Hojas de estilo</li>
+            <li>Facilidades para la impresión</li>
+            <li>Documentos más accesibles para usuarios con discapacidades</li>
+            <li>Internacionalización</li>
+            <li>...</li>
+        </ul>
+
+        <p>HTML 4.01 (Diciembre de 1999)</p>
+        <ul>
+            <li>Se incluyen correcciones a errores detectados en la versión anterior</li>
+            <li>La recomendación establece que los agentes que soporten este lenguaje, deben admitir a las versiones anteriores</li>
+            <li>La creación de nuevos elementos de marcado han llevado a <strong>grandes problemas de interoperabilidad</strong></li>
+        </ul>
+    </div>
+
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>XHTML 1.0</h1>
+        <ul>
+            <li><strong>Diciembre de 1999</strong></li>
+
+            <li>Reformulación de varios documentos que definen HTML 4, como una aplicación XML 1.0</li>
+            <li>Semántica de elementos idéntica a la de HTML 4</li>
+            <li>Es creada para mejorar la interoperabilidad</li>
+            <li>Mejora las capacidades de transformación de la representación del contenido y un escalado de las funcionalidades</li>
+        </ul>
+    </div>
+
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Actualidad del XHTML y Futuro</h1>
+        <p>XHTML Basic</p>
+        <ul>
+            <li>Para clientes con limitaciones</li>
+            <li>
+                <ul>
+                    <li>CHTML (Compact HTML)</li>
+                    <li>WML (Wireless Markup Language)</li>
+                    <li>Otras propuestas</li>
+                </ul>
+            </li>
+        </ul>
+        <p>XHTML 1.1 (Recomendación Mayo de 2001)</p>
+
+        <p>Futuro inmediato: XHTML2, HTML5?</p>
+    </div>
+
+
+
+    <!-- ====================================================================== -->
+
+
+    <div class="slide">
+        <h1>Base arquitectónica de la Web</h1>
+        <ul>
+            <li><strong>XML</strong> es una <strong>tecnología clave para asegurar la interoperabilidad...</strong></li>
+            <li>...pero él solo no es suficiente, además necesitamos:
+                <ul>
+                    <li>tipos de datos y validación (DTDs, Schemas, ... )</li>
+                    <li>combinar especificaciones XML (NameSpaces)</li>
+                    <li>utilizar enlaces (XLink, XBase, ... )</li>
+                    <li>componer y descomponer (XInclude, Fragments, ... )</li>
+                    <li>hacer referencia al contenido de datos de XML (XPath, Query, ... )</li>
+                    <li>transformar (XSLT)</li>
+                    <li>seguridad y encriptación (Signature, Encryption, ... )</li>
+                    <li>interacción (DOM, Events, ... )</li>
+                    <li>...</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Tecnologías y Áreas</h1>
+        <div class="center"><object title="Pila de las tecnologías de W3C, vete a http://www.w3.org/Consortium/techstack-desc.html para más detalles" data="img/tech-stack.svg" height="75.00%" width="90%" type="image/svg+xml" class="svg">
+  <img src="img/tech-stack.png"
+  alt="Pila de las tecnologías de W3C, vete a http://www.w3.org/Consortium/techstack-desc.html para más detalles"
+  /></object></div>
+    </div>
+
+
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Objetivos presentes y futuros</h1>
+        <ul>
+            <li><strong>Una Web universal</strong></li>
+            <li>Accesible desde cualquier lugar</li>
+            <li>La Web como Base de Conocimiento y Servicios</li>
+            <li>Una Web de Confianza</li>
+            <li>Mejorarla mediante la Experiencia de Usuario</li>
+        </ul>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Una Web universal</h1>
+
+        <p>Una Web para tod@s, <em>sin tener en cuenta</em>...</p>
+        <ul>
+            <li><strong>...características de los dispositivos de acceso</strong>
+                <ul>
+                    <li>PCs, teléfonos, TVs, PDAs, ...</li>
+                    <li>pequeño ancho de banda, pantalla pequeña, pantallas con colores limitados,...
+                    </li>
+                    <li>sin sonido, sin pantalla,...</li>
+                </ul>
+            </li>
+            <li><strong>...discapacidades de los usuarios</strong>
+                <ul>
+                    <li>color o ceguera, ...</li>
+                    <li>dificultades de manejo de teclados, ratón, ...</li>
+                    <li>dislexia, dificultades cognitivas o neurológicas, ...</li>
+                </ul>
+            </li>
+            <li><strong>...diferencias culturales, geográficas o
+    lingüísticas</strong>
+                <ul>
+                    <li>sentidos de escritura, ...</li>
+                    <li>formato de fechas, números de teléfono, códigos postales, elementos numerados, identificadores,...</li>
+                    <li>diferentes tipos de teclados, ...</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>¿Cómo se consigue esta Universalidad?</h1>
+        <div style="text-align:center">
+            <object title="Pila de las tecnologías, sólo visible la parte de las tecnologías horizontales" data="img/stack-horizontal.svg" height="75.00%" width="90%" type="image/svg+xml" class="svg">
+  <img  src="img/stack-horizontal.png"  alt="Pila de las tecnologías, sólo visible la parte de las tecnologías horizontales" /></object>
+        </div>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Accesibilidad</h1>
+        <p>Es la <strong>posibilidad de que un sitio Web pueda ser visitado y utilizado de forma satisfactoria por el mayor número posible de personas</strong>, independientemente de las limitaciones personales que tengan o de las derivadas de su entorno.</p>
+        <p><strong>Diseñar para usuarios con discapacidad en un entorno ordinario es
+igual que diseñar para personas sin discapacidad en entornos
+extraordinarios</strong></p>
+        <blockquote>
+            <p><em>Tu usuario más importante es ciego</em>. La mitad de las visitas a tu sitio vienen de Google, y Google sólo ve lo que un ciego puede ver. Si tu sitio no es accesible, tendrás menos visitas. Fin de la historia.<br />
+                <a href="http://www.w3.org/People/all#steven" hreflang="en">Steven
+  Pemberton</a></p>
+        </blockquote>
+    </div>
+
+    <!-- =========================================== -->
+    <div class="slide">
+        <h1>I18n (Internacionalización)</h1>
+
+        <ul class="ejemplo-i18n">
+            <li xml:lang="gl" lang="gl">Guiando a web ata o seu máximo potencial…</li>
+            <li xml:lang="en" lang="en">Leading the Web to its Full Potential…</li>
+            <li xml:lang="ca" lang="ca">Duent la Web al seu ple potencial…</li>
+            <li xml:lang="nl" lang="nl">Het Web tot zijn volle potentieel ontwikkelen…</li>
+            <li xml:lang="fr" lang="fr">Amener le Web vers son plein potentiel…</li>
+            <li xml:lang="de" lang="de">Alle Möglichkeiten des Web erschließen…</li>
+
+            <li xml:lang="el" lang="el">Οδηγώντας τον παγκόμιο ιστό στο μέγιστο των δυνατοτήτων του…</li>
+            <li xml:lang="hu" lang="hu">Hogy kihasználhassuk a Web nyújtotta összes lehetőséget…</li>
+            <li xml:lang="hi" lang="hi">वेब की सम्पूर्ण क्षमता के उपयोग की दिशा में अग्रणी…</li>
+            <li xml:lang="it" lang="it">Sviluppare al massimo il potenziale del Web…</li>
+            <li xml:lang="zh-hans" lang="zh-hans">引发网络的全部潜能…</li>
+            <li xml:lang="ko" lang="ko" class="ko">웹의 모든 잠재력을 이끌어 내기 위하여…</li>
+
+            <li xml:lang="pt" lang="pt">Levando a Web em direcção ao seu potencial màximo…</li>
+            <li xml:lang="ru" lang="ru">Pаскрывая весь потенциал Сети…</li>
+            <li xml:lang="es" lang="es">Guiando la web hacia su máximo potencial…</li>
+            <li xml:lang="sv" lang="sv">Se till att Webben når sin fulla potential…</li>
+            <li xml:lang="fi" lang="fi">Ohjaamassa Webin kehittymistä täyteen mittaansa…</li>
+            <li xml:lang="ja" lang="ja">Webの可能性を最大限に導き出すために⋮</li>
+
+            <li class="ar" xml:lang="ar" lang="ar" dir="rtl">لإيصال الشبكة المعلوماتية إلىأقصى إمكانياتها…</li>
+
+            <li xml:lang="he" lang="he" style="direction:rtl" dir="rtl">להוביל את הרשת למיצוי הפוטנציאל שלה…</li>
+            <li xml:lang="zh-hant" lang="zh-hant" class="zh-hant">引發網絡的全部潛能⋮</li>
+        </ul>
+        <p class="center">Importancia del <a href="encoding.html" title="Ejemplo similar al de esta página pero con el encoding cambiado de UTF-8 a ISO-8859-1">juego de caracteres elegido</a></p>
+    </div>
+
+
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Objetivos presentes y futuros</h1>
+        <ul>
+            <li>Una Web universal</li>
+            <li><strong>Accesible desde cualquier lugar</strong></li>
+            <li>La Web como Base de Conocimiento y Servicios</li>
+            <li>Una Web de Confianza</li>
+            <li>Mejorarla mediante la Experiencia de Usuario</li>
+        </ul>
+    </div>
+
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Una Web Ubícua: ¿Movilidad?</h1>
+        <p class="center">
+            <img src="img/etuktuk.jpg" width="900" alt="Vehículo usado en el proyecto e tuk tuk para llevar la Internet a lugares en vía de desarrollo" />
+            <a href="http://www.etuktuk.net" xml:lang="en" title="The e tuk tuk project for Mobile Internet">the e tuk tuk project</a></p>
+    </div>
+
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Una Web Ubícua: Movilidad</h1>
+        <ul>
+            <li>Actualmente W3C se centra en dispositivos móviles con acceso a la Web</li>
+            <li>Características de la Movilidad:
+                <ul>
+                    <li><strong>Mercado extremadamente dinámico</strong>
+                        <ul>
+                            <li><strong>245 Millones de unidades vendidas</strong> el último <strong>trimestre</strong> de 2005</li>
+                            <li>Se estiman ventas de 930 Millones de unidades en 2006</li>
+                        </ul>
+                    </li>
+                    <li>Número muy grande de <strong>potenciales usuarios</strong>
+                        <ul>
+                            <li>Estimación de <em>500 Millones de usuarios sólo China en 2007</em></li>
+                            <li>En el futuro: un ordenador por familia, pero <em>uno (o más) teléfonos móviles por persona</em></li>
+                            <li>En <em>países en vías de desarrollo</em> para muchas personas es la única forma de acceder a Internet</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>La estandarización es importante</h1>
+        <p>¡Ahora <strong>más que nunca</strong>!</p>
+        <div style="text-align:center">
+            <img src="img/mobilechristmas2004.jpg" alt="Muchos dispositivos móviles de diversos tipos" />
+        </div>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Promoviendo esa ubicuidad mediante...</h1>
+        <p class="imagen-right"><img src="img/small-P800.jpg" alt="Dispositivo móvil con un gráfico SVG" /><br/>
+            <img src="img/small-9210.jpg" alt="Dispositivo móvil con un gráfico SVG" />
+        </p>
+        <ul>
+            <li><strong>XHTML</strong> Basic (XTHML simplificado) + <strong>CSS</strong></li>
+            <li><strong>SVG</strong> (Gráficos Vectoriales)</li>
+            <li><strong>XForms</strong></li>
+            <li>(<strong>MWI</strong>) Iniciativa de Web Móvil
+                <blockquote>Haciendo el acceso a la Web desde un dispositivo móvil tan simple, fácil y adecuado como el acceso a la Web desde un dispositivo de escritorio.</blockquote>
+                <ul>
+                    <li>Buenas prácticas</li>
+                    <li>Descripción de Dispositivo</li>
+                    <li>...</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Objetivos presentes y futuros</h1>
+        <ul>
+            <li>Una Web universal</li>
+            <li>Accesible desde cualquier lugar</li>
+            <li><strong>La Web como Base de Conocimiento y Servicios</strong></li>
+            <li>Una Web de Confianza</li>
+            <li>Mejorarla mediante la Experiencia de Usuario</li>
+        </ul>
+    </div>
+
+
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Web como Base de Conocimiento</h1>
+        <ul>
+            <li><strong>Acceso a la información</strong> de forma eficiente</li>
+            <li><strong>Búsquedas</strong> avanzadas eficientes</li>
+            <li><strong>Combinación de los datos</strong> en la Web
+                <ul>
+                    <li>Búsquedas en librerías digitales con <strong>múltiples formatos</strong></li>
+                    <li><strong>Distintas bases de datos</strong> de una misma organización</li>
+                    <li>Bases de datos de distintas organizaciones</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <!-- =========================================== -->
+
+
+    <div class="slide">
+        <h1>Lenguaje de Personas, no para Máquinas</h1>
+        <ul>
+            <li>La Web se escribe con <strong>lenguaje natural</strong></li>
+            <li>Con la Web tradicional, no es posible una capacidad de razonamiento en las máquinas</li>
+            <li><strong>Ambigüedad</strong></li>
+
+            <li>Las máquinas <strong>no comprenden</strong> el texto que incluimos
+            </li>
+        </ul>
+        <pre style="margin-left:3em;"><code>
+&lt;h1&gt;
+   &lt;img width=&quot;279&quot; height=&quot;52&quot; src=&quot;/img/eslogo-20030729.png&quot; 
+         alt=&quot;Oficina española del W3C&quot;/&gt;
+&lt;/h1&gt;
+</code></pre>
+        <p class="center"><img src="img/w3c-home.jpg" style="border: 1px #000 solid" alt="Página principal de W3C Oficina Española" /></p>
+
+    </div>
+
+
+    <!-- =========================================== -->
+
+    <div class="slide">
+        <h1>Evolución de la Web Tradicional...</h1>
+        <ul>
+            <li>Los humanos podemos entenderlo (más o menos)</li>
+        </ul>
+
+        <p class="center"><img alt="Representación de la Web tradicional como un conjunto de enlaces a documentos" src="img/OldWebLinks.png" /></p>
+    </div>
+
+    <!-- =========================================== -->
+
+    <div class="slide">
+        <h1>... a la Web Semántica</h1>
+        <ul>
+            <li>Lo entendemos nosotros y las máquinas</li>
+        </ul>
+
+        <p class="center"><img alt="Relaciones entre recursos que tienen incluida semántica" src="img/SemWebRelations.png" /></p>
+    </div>
+
+    <!-- =========================================== -->
+
+    <div class="slide">
+        <h1>Web Semántica</h1>
+        <ul>
+            <li><strong>La Web de los Datos</strong></li>
+            <li>Estándares para cosas, conceptos, relaciones y descripciones enlazadas en la Web</li>
+            <li>Facilita el <em>entendimiento</em>, <em>búsqueda</em>,
+                <em>reutilización</em>, <em>difusión</em>, <em>agregación</em> y
+                <em>ampliación</em> de la información</li>
+            <li><strong>Exposición de los datos ocultos</strong> (metadatos) en los documentos, servidores y bases de datos</li>
+        </ul>
+
+        <p class="center"><img alt="Representación de tres nodos (logo de RDF)" src="img/rdfwrap2.png" /></p>
+    </div>
+
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Finalidad: evitar la desesperación del usuario</h1>
+        <ul>
+            <li>Búsquedas infructuosas de recursos (ambigüedades)</li>
+        </ul>
+        <p class="center"><img src="img/chips_flickr.jpg" alt="Captura de pantalla del resultado de una búsqueda de la etiqueta chips en Flickr" /></p>
+    </div>
+
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Ejemplos de Aplicación</h1>
+
+        <p class="imagen-right"><img src="./img/vodafone.jpg" alt="Pantalla de Vodafone Live" /></p>
+        <ul>
+            <li><a href="http://www.foaf-project.org/"><acronym
+    title="Friend Of A Friend" xml:lang="en">FOAF</acronym></a>
+                <ul>
+
+                    <li><a href="http://xml.mfd-consult.dk/foaf/explorer/" title="Proyecto FOAF Explorer">FOAF Explorer</a> (<a href="http://xml.mfd-consult.dk/foaf/explorer/?foaf=http%3A%2F%2Fwww.w3c.es%2FPersonal%2FMartin%2Ffoaf.rdf" title="Ejemplo de FOAF Explorer con la información de Martín Álvarez">Ejemplo</a>)...</li>
+
+                </ul>
+            </li>
+            <li><a href="http://www.w3.org/2005/ajar/tab" title="Proyecto Tabulator" hreflang="en">Tabulator</a></li>
+            <li><a href="http://usefulinc.com/doap"><acronym
+    title="Description of a Project" xml:lang="en">DOAP</acronym></a></li>
+            <li>Directorio Medioambiental <a href="http://www.swed.org.uk/swed/index.html">SWED</a></li>
+            <li><a href="http://simile.mit.edu/">SIMILE</a>
+                <ul>
+                    <li>Aumentar la interoperabilidad entre los recursos, vocabularios/ontologías/esquemas, metadatos y servicios</li>
+                </ul>
+            </li>
+            <li><a href="http://www.sculpteurweb.org/">The SCULPTEUR R&amp;D
+  Project</a></li>
+            <li>Portales
+                <ul>
+
+                    <li>Vodafone Live
+                        <ul>
+                            <li>Basado en RDF - Mejoradas las búsquedas</li>
+                            <li>Incremento de las descargas de tonos 20% en 2 meses</li>
+                        </ul>
+                    </li>
+                    <li>Portal de Nokia</li>
+                </ul>
+
+            </li>
+        </ul>
+    </div>
+
+    <!-- =========================================== -->
+
+    <div class="slide">
+        <h1>Web como Base de Servicios</h1>
+        <ul>
+            <li>Estándares que fomenten la interoperabilidad entre las máquinas
+                <ul>
+                    <li><strong>Servicios</strong> en la Web</li>
+                    <li>Los <strong>proveedores</strong> exponen los servicios como procedimientos</li>
+                    <li>Los usuarios (<strong>consumidores</strong>) pueden llamar a estas funciones a través de la Web</li>
+                </ul>
+            </li>
+            <p class="center"><img src="img/WSExample.png" alt="ejemplo de Servicios Web en  una aplicación de una agencia de viajes" width="700" height="400" /></p>
+        </ul>
+    </div>
+
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Objetivos presentes y futuros</h1>
+        <ul>
+            <li>Una Web universal</li>
+            <li>Accesible desde cualquier lugar</li>
+            <li>La Web como Base de Conocimiento y Servicios</li>
+            <li><strong>Una Web de Confianza</strong></li>
+            <li>Mejorarla mediante la Experiencia de Usuario</li>
+        </ul>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Una Web de confianza</h1>
+        <p>Promover tecnologías que permitan...</p>
+        <ul>
+            <li>...la existencia de <strong>responsabilidad</strong> de los usuarios</li>
+            <li>...seguridad</li>
+            <li>...confianza</li>
+            <li>...confidencialidad</li>
+        </ul>
+        <p>Con el fin de <strong>fomentar un entorno más colaborativo</strong></p>
+        <ul>
+            <li>Plataforma para el Preferencias de Privacidad (P3P)
+                <ul>
+                    <li>Ejemplo de fichero <a href="http://privacy.yahoo.com/us/w3c/p3p_us.xml" title="Fichero p3p del Centro de políticas de privacidad de Yahoo!">p3p.xml</a> (<a href="http://privacy.yahoo.com/privacy/es/groups/" title="Centro de privacidad de Yahoo en España">Centro de Privacidad</a>)
+                        de Yahoo!</li>
+                </ul>
+            </li>
+            <li>Seguridad XML</li>
+        </ul>
+
+    </div>
+
+    <!-- =========================================== -->
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (1)</h1>
+
+        <p class="center"><img src="img/sws_01.png" alt="Un cliente se informa de la política de privacidad de un servicio" /></p>
+        <ul>
+            <li>Cliente:
+                <ul>
+                    <li><strong>Entrada para ver una película</strong></li>
+                    <li>¿Me fio de este Servicio?</li>
+                    <li>¿Cuál es tu política de protección de datos?</li>
+                    <li>Si te doy mi dirección de correo, ¿cómo la vas a tratar?</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- =========================================== -->
+
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (2)</h1>
+
+        <p class="center"><img src="img/sws_02.png" alt="Un servicio ofrece su política de tratamiento de datos" /></p>
+        <ul>
+            <li>Servicio Entradas:
+                <ul>
+                    <li>Esta es mi <strong>Política de Privacidad</strong></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- =========================================== -->
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (3)</h1>
+
+        <p class="center"><img src="img/sws_03.png" alt="Cliente solicita una película" /></p>
+        <ul>
+            <li>Cliente:
+                <ul>
+                    <li>Me identifico</li>
+                    <li>Quiero ver cierta película</li>
+                    <li>Tengo preferencias (situación de la sala, butaca, precios, etc.)
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- =========================================== -->
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (4)</h1>
+
+        <p class="center"><img src="img/sws_04.png" alt="El servicio de venta de entradas solicita información sobre la película" /></p>
+        <ul>
+            <li>Obtención de datos de la película
+                <ul>
+                    <li>Datos informativos</li>
+                    <li>Calificación moral</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- =========================================== -->
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (5)</h1>
+
+        <p class="center"><img src="img/sws_05.png" alt="Consulta a un servicio certificador de identidad, información del cliente" /></p>
+        <ul>
+            <li>¿El cliente es quien dice ser?</li>
+            <li>¿Qué edad tiene?</li>
+        </ul>
+    </div>
+
+    <!-- =========================================== -->
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (6)</h1>
+
+        <p class="center"><img src="img/sws_06.png" alt="Aplicación de reglas para determinar si un usuario puede ver una película o no por la edad" /></p>
+        <ul>
+            <li>Reglas respecto al contenido semántico</li>
+            <li>Manejadas por varios sistemas</li>
+        </ul>
+    </div>
+
+    <!-- =========================================== -->
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (7)</h1>
+
+        <p class="center"><img src="img/sws_07.png" alt="Solicitud de disponibilidad de la película en varios cines" /></p>
+        <ul>
+            <li>Varios cines, varias salas, varias sesiones</li>
+            <li>Descubrimiento de los servicios en función de la semántica</li>
+        </ul>
+    </div>
+
+    <!-- =========================================== -->
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (8)</h1>
+
+        <p class="center"><img src="img/sws_08.png" alt="Los cines sirven sus disponibilidades de las películas" /></p>
+        <ul>
+            <li>Butacas disponibles, precios, salas, ect.</li>
+        </ul>
+    </div>
+
+    <!-- =========================================== -->
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (9)</h1>
+
+        <p class="center"><img src="img/sws_09.png" alt="El servicio sirve las entradas" /></p>
+        <ul>
+            <li>Selección de la entrada en función de las preferencias</li>
+        </ul>
+    </div>
+
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Objetivos presentes y futuros</h1>
+        <ul>
+            <li>Una Web universal</li>
+            <li>Accesible desde cualquier lugar</li>
+            <li>La Web como Base de Conocimiento y Servicios</li>
+            <li>Una Web de Confianza</li>
+            <li><strong>Mejorarla mediante la Experiencia de Usuario</strong></li>
+        </ul>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Mejora con la Experiencia de Usuario</h1>
+        <ul>
+            <li>Actividad de <a href="http://www.w3.org/2006/rwc/" title="Portada del sitio de la Actividad de Clientes Web Enriquecidos">Clientes Web Enriquecidos</a></li>
+            <li>La Web como un <strong>entorno de aplicaciones independientes de la plataforma</strong></li>
+            <li>Aplicaciones de todo tipo y numerosos formularios
+                <ul>
+                    <li><em>XForms</em> fomenta la <strong>usabilidad</strong> y <strong>simplicidad</strong> de tratamiento de los datos</li>
+                </ul>
+            </li>
+            <li>Varios grupos...
+                <ul>
+                    <li>Documentos Compuestos</li>
+                    <li>APIs y formatos para Aplicaciones Web</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Documentos Compuestos</h1>
+        <ul>
+            <li>Mejoras en la diversidad de contenido
+                <ul>
+                    <li><a href="http://www.w3.org/MarkUp/">XHTML</a>, <a href="http://www.w3.org/Graphics/SVG/">SVG</a>, <a href="http://www.w3.org/AudioVideo/">SMIL</a> y <a href="http://www.w3.org/MarkUp/Forms/">XForms</a></li>
+                </ul>
+            </li>
+            <li>y en la <strong>usabilidad</strong> en general</li>
+        </ul>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>APIs y formatos para Aplicaciones Web</h1>
+        <ul>
+            <li>Lenguajes para aplicaciones Web (Formatos de Aplicaciones Web)
+                <ul>
+                    <li>Especificación de un formato declarativo para interfaces de usuario</li>
+                    <li>La especificación de XBL2 (XML Binding Language)</li>
+                </ul>
+            </li>
+            <li>Interfaces de programación para desarrollo de Aplicaciones Web
+                <ul>
+                    <li>Una API para Funcionalidad HTTP
+                        <ul>
+                            <li>Interfaz <code>XMLHttpRequest</code> (componente esencial de AJAX)</li>
+                        </ul>
+                    </li>
+                    <li>API para interfaces de cliente
+                        <ul>
+                            <li>El objeto <code>Window</code> de los navegadores modernos</li>
+                        </ul>
+
+                    </li>
+                    <li>DOM 3</li>
+                    <li>Eventos temporizados</li>
+                    <li>Almacenamiento persistente en el cliente</li>
+                    <li>Especificación para <span xml:lang="en">Drag and Drop</span></li>
+                    <li>Monitorización de procesos de descarga de recursos</li>
+                    <li>...</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    -->
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Y mucho más...</h1>
+        <div class="center"><object title="Pila de las tecnologías de W3C, vete a http://www.w3.org/Consortium/techstack-desc.html para más detalles" data="img/tech-stack.svg" height="75.00%" width="90%" type="image/svg+xml" class="svg">
+  <img src="img/tech-stack.png"
+  alt="Pila de las tecnologías de W3C, vete a http://www.w3.org/Consortium/techstack-desc.html para más detalles"
+  /></object></div>
+    </div>
+
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Buenas prácticas</h1>
+        <p>Al construir un sitio web</p>
+        <ul>
+            <li>Separación de <strong>contenido/presentación</strong> (<a href="ejemplos/css/index.html" title="Ejemplo de separación de contenido y presentación en la que aparece una página sin estilos">ejemplo XHTML+CSS</a>)</li>
+            <li>Aplicar formato con <strong>semántica</strong> (estructura del contenido, URIs, etc.)</li>
+            <li>Tener en cuenta la <strong>accesibilidad</strong></li>
+            <li>Utilizar las <strong>herramientas de validación</strong></li>
+            <li><strong>Pensar en todos</strong> los posibles usuarios y dispositivos que puedan acceder</li>
+            <li><strong>Internacionalización</strong></li>
+        </ul>
+    </div>
+
+    <!-- =========================================== -->
+
+    <div class="slide">
+        <h1>¿Qué conseguimos?</h1>
+        <p>Con esto...</p>
+        <ul>
+            <li>Mejora la <strong>usabilidad</strong></li>
+            <li>Mejora la <strong>indexación</strong></li>
+            <li><strong>Simplificación</strong> del desarrollo</li>
+            <li>Mejora semántica y de <strong>estructuración</strong> de contenidos</li>
+            <li>Eficiencia en la <strong>gestión de contenidos</strong></li>
+            <li><strong>Independencia de dispositivo y multimodalidad</strong></li>
+        </ul>
+    </div>
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>¿Por qué funcionan los estándares Web?</h1>
+        <ul>
+            <li>Ahorro de costes
+                <ul>
+                    <li>Cooperación con los mejores expertos de la Web - ahorro de consultorías
+                    </li>
+                    <li>Compartir inversión I+D: más allá de los recursos una sola organización
+                    </li>
+                    <li>Intercambio de ideas y experiencias</li>
+
+                    <li>Las mejores especificaciones gracias a una amplia revisión</li>
+                    <li>Libres de derechos</li>
+                    <li>Compartir el coste de las pruebas de desarrollo</li>
+                </ul>
+            </li>
+            <li>Aumento de beneficios
+                <ul>
+                    <li>Los estándares abiertos aumentan la innovación y la competencia
+                    </li>
+
+                    <li>Incremento del crecimiento gracias a la confianza del mercado</li>
+                    <li>Los clientes tienen más confianza - no están sujetos a soluciones propietarias
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Proceso de los documentos</h1>
+        <div style="text-align:center">
+            <object width="90%" height="75%" type="image/svg+xml" data="img/documentProcess.svg" title="Proceso que siguen los documentos en el W3C hasta llegar a recomendación"></object>
+        </div>
+    </div>
+
+    <!-- =========================================== -->
+
+    <div class="slide">
+        <h1>Más información</h1>
+        <dl>
+            <dt>Esta presentación está en</dt>
+            <dd><a href="https://espinr.github.io/talks/2007/0301-estandaresUniOvi-MA">http://www.w3c.es/Presentaciones/2007/0301-estandaresUniOvi-MA</a></dd>
+            <dt>Guías Breves de Tecnologías W3C</dt>
+            <dd><a href="http://www.w3c.es/divulgacion/guiasbreves/">http://www.w3c.es/divulgacion/guiasbreves/</a></dd>
+            <dt>Guías de Referencia</dt>
+            <dd>
+                <ul>
+                    <li>(CSS) <a href="http://www.w3c.es/Divulgacion/GuiasReferencia/CSS21">http://www.w3c.es/Divulgacion/GuiasReferencia/CSS21</a></li>
+                    <li>(HTML) <a href="http://www.w3c.es/Divulgacion/GuiasReferencia/XHTML1/">http://www.w3c.es/Divulgacion/GuiasReferencia/XHTML1</a></li>
+                </ul>
+            </dd>
+            <dt>Oficina Española del W3C</dt>
+            <dd><a href="http://www.w3c.es">http://www.w3c.es</a></dd>
+            <dt>Escríbeme</dt>
+            <dd><a href="mailto:mlvarez@w3.org">mlvarez@w3.org</a></dd>
+        </dl>
+    </div>
+</body>
+
+</html>

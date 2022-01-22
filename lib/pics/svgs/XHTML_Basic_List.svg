@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 800">
+<g transform="translate(-50,30)">
+<text>
+<tspan dy="0" x="0" class="major">&#8226; The first "real" XHTML family member</tspan>
+<tspan dy="50" x="0" class="major">&#8226; Designed for small devices (WML-2)</tspan>
+<tspan dy="50" x="0" class="major">&#8226; The first "real" XHTML family member</tspan>
+<tspan dy="50" x="0" class="major">&#8226; First implementations have already been announced!</tspan>
+<tspan dy="50" x="0" class="major">&#8226; XHTML Basic modules:</tspan>
+</text>
+</g>
+	<g transform="translate(0,290)" id="tspanSlide">
+		<text>
+			<tspan dy="0" x="0" class="major">Structure (<tspan class="code">head</tspan>)</tspan>
+			<tspan dy="50" x="0" class="major">Text (<tspan class="code">p</tspan>)</tspan>
+			<tspan dy="50" x="0" class="major">Hypertext (<tspan class="code">a</tspan>)</tspan>
+			<tspan dy="50" x="0" class="major">List (<tspan class="code">ul</tspan>)</tspan>
+			<tspan dy="50" x="0" class="major">Basic Forms (<tspan class="code">input</tspan>)</tspan>
+			<tspan dy="50" x="0" class="major">Basic Tables (<tspan class="code">table</tspan>)</tspan>
+		</text>
+		<g transform="translate(600)">
+			<text>
+				<tspan dy="0" x="0" class="major">Object (<tspan class="code">object</tspan>)</tspan>
+				<tspan dy="50" x="0" class="major">Image (<tspan class="code">img</tspan>)</tspan>
+				<tspan dy="50" x="0" class="major">Metainformation (<tspan class="code">meta</tspan>)</tspan>
+				<tspan dy="50" x="0" class="major">Link  (<tspan class="code">link</tspan>)</tspan>
+				<tspan dy="50" x="0" class="major">Base (<tspan class="code">base</tspan>)</tspan>
+			</text>
+		</g>
+	</g>
+</svg>

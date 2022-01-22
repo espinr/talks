@@ -1,0 +1,94 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN"
+  "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+<svg width="750" height="400" viewBox="0 0 750 400">
+  <title><!-- put your title here --></title>
+  <desc><!-- put a description here --></desc>
+	<rect width="750" height="400" class="background" />
+	<defs>
+	  <path id="arrowhead"  d="M0 0 L 10 10 L -10 10 z"/>
+		<rect id="wallet" class="yellowish" width="100" height="40" />
+		<g id="wallets">
+		  <desc>Three boxes, each with the "wallet X" text in them</desc>
+    	<use xlink:href="#wallet"/>
+    	<text class="centre reddish" x="50" y="28">Wallet 1</text>
+			<g transform="translate(0,50)">
+      	<use xlink:href="#wallet"/>
+      	<text class="centre reddish" x="50" y="28">Wallet 2</text>
+			</g>		  
+			<g transform="translate(0,100)">
+      	<use xlink:href="#wallet"/>
+      	<text class="centre reddish" x="50" y="28">Wallet 3</text>
+			</g>		  
+		</g>
+		
+  </defs>
+
+	<g>
+  	<desc>Customer's side</desc>	
+  	<text class="centre  listMajor" x="237" y="30">Customer's Side</text> 
+  	
+  	<use transform="translate(10,150)" xlink:href="#wallets"/>
+  	
+    <g transform="translate(210,100)">
+  	  <desc>Central box denoting the user agent, consisting of a per free link handler and the browser.
+  		A double-headed arrow connects the two.
+  		</desc>
+  	  <rect class="yellowish" width="200" height="250" />
+  		<text class="centre reddish" x="100" y="30">User agent</text>
+  		<g transform="translate(20,40)">
+  		  <rect class="darkYellowish" width="160" height="80" rx="10" ry="10" />
+  			<text class="centre greenish" x="80" y="30">Per Free Link</text>
+  			<text class="centre greenish" x="80" y="60">Handler</text>
+  		</g>
+  		<g transform="translate(100,121)">
+  		  <use class="greenish" style="stroke:none" xlink:href="#arrowhead"/>
+  		</g>
+  		<line x1="100" y1="121" x2="100" y2="179" class="greenish" />
+  		<g transform="translate(100,179) rotate(180)">
+  		  <use class="greenish" style="stroke:none" xlink:href="#arrowhead"/>
+  		</g>
+  		<g transform="translate(20,180)">
+  		  <rect class="grayish" width="160" height="40" rx="10" ry="10" />
+  			<text class="centre reddish" x="80" y="25">Browser</text>
+  		</g>
+    </g>
+  
+  	<g>
+  	  <desc>Set of arrows connecting the wallets to the per free link handler</desc>
+    	<use transform="translate(230,180) rotate(97.12)" class="greenish" style="stroke:none" xlink:href="#arrowhead"/>
+    	<use transform="translate(110,165) rotate(-82.87)" class="greenish" style="stroke:none" xlink:href="#arrowhead"/>
+    	<path class="greenish" d="M230,180 L110,165" style="stroke-width:2"/>
+    		
+    	<use transform="translate(230,180) rotate(73.74)" class="greenish" style="stroke:none" xlink:href="#arrowhead"/>
+    	<use transform="translate(110,215) rotate(-106.26)" class="greenish" style="stroke:none" xlink:href="#arrowhead"/>
+    	<path class="greenish" d="M230,180 L110,215" style="stroke-width:2"/>
+    
+    	<use transform="translate(230,180) rotate(54.69)" class="greenish" style="stroke:none" xlink:href="#arrowhead"/>
+    	<use transform="translate(110,265) rotate(-125.31)" class="greenish" style="stroke:none" xlink:href="#arrowhead"/>
+    	<path class="greenish" d="M230,180 L110,265" style="stroke-width:2"/>
+    </g>
+	</g>
+
+	<path class="whitish" d="M475,80 l0,300"/>
+
+	<g>
+	  <desc>Merchant's side</desc>
+    <text class="centre listMajor" x="620" y="30">Merchant's Side</text> 
+    <g transform="translate(560,150)">
+  	  <rect class="yellowish" width="160" height="80" rx="20" ry="20" />
+  		<text class="centre reddish" x="80" y="50">HTTP Server</text>
+    </g>
+	</g>
+	
+	<g>
+	  <desc>Arrow connecting the merchant's side with the free link handler</desc>
+    <use transform="translate(390,180) rotate(-86.63)" class="reddish" style="stroke:none" xlink:href="#arrowhead"/>
+    <path class="reddish" d="M390,180 L560,190" style="stroke-width:2"/>
+	</g>
+
+
+</svg>
+

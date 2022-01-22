@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="no"?>
+<svg>
+<rect fill="red" x="10" y="50" width="350" height="175" >
+<animate attributeName="width" from="350" to="100" begin="0s" dur="10s" fill="freeze"/>
+<animate attributeName="height" from="175" to="350" begin="2s" dur="8s" fill="freeze"/>
+</rect>
+</svg>

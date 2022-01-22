@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" viewBox="0 0 1100 740" >
+  <defs>
+    <style type="text/css"><![CDATA[
+      rect.main   { stroke: none; fill:lightGray; filter:url(#effect)}
+      rect.soap   { stroke: black; fill: white; filter:url(#effect) }
+      rect.back   { stroke: none;  fill: #044b04;filter:url(#effect) }
+      text        { font-family: Georgia, Verdana, Trebuchet, Arial, Helvetica, sans-serif;
+                    text-anchor: middle; stroke:none; fill:black }
+      text.major  { font-size:32 }
+      text.minor  { font-size:22 }
+      text.lr-box {writing-mode:tb; glyph-orientation-vertical: 0}
+      text.bck-box {writing-mode:tb; glyph-orientation-vertical: 90; fill: white; font-size:25}
+      ]]>
+    </style>
+    <filter id="effect">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+        <feOffset in="blur" dx="4" dy="4" result="offsetBlur"/>
+        <feMerge>
+            <feMergeNode in="offsetBlur"/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+    </filter>
+    <rect id="lr-box" height="700" width="120" class="main"/>
+    <g id="l-box">
+        <use xlink:href="#lr-box"/>
+        <text x="60" y="350" class="major lr-box">SECURITY</text>
+    </g>
+    <g id="r-box">
+        <use xlink:href="#lr-box"/>
+        <text x="60" y="350" class="major lr-box">MANAGEMENT</text>
+    </g>
+    <g id="b-box">
+        <rect class="main" height="140" width="780"/>
+        <text class="major" x="390" y="55">Communications</text>
+        <text class="minor" x="390" y="105">HTTP, SMTP, FTP, IIOP, ...</text>
+    </g>
+    <text id="bck-t" class="major bck-box" x="0" y="0">Base Technologies: XML, DTD, Schema, ...</text>
+    <g id="background">
+        <rect class="back" height="540" width="780"/>
+        <use xlink:href="#bck-t" transform="translate(50,270)"/>
+        <use xlink:href="#bck-t" transform="translate(730,270)"/>
+    </g>
+    <g id="soapR">
+        <rect class="soap" height="70" width="480"/>
+    </g>
+    <g id="soap">
+        <use xlink:href="#soapR"/>
+        <text class="major" x="240" y="40">SOAP</text>
+    </g>
+    <g id="soap-ext">
+        <use xlink:href="#soapR"/>
+        <text class="major" x="240" y="33">SOAP Extensions</text>
+        <text class="minor" x="240" y="60">Reliability, Correlation, Transactions, ...</text>
+    </g>
+    <g id="mess">
+        <rect class="main" height="250" width="580"/>
+        <text class="major" x="265" y="50">Messages</text>
+        <use xlink:href="#soap" transform="translate(50,170)"/>
+        <use xlink:href="#soap-ext" transform="translate(50,90)"/>
+    </g>
+    <g id="p-d">
+        <rect class="main" height="120" width="580"/>
+    </g>
+    <g id="process">
+        <use xlink:href="#p-d"/>
+        <text class="major" x="265" y="45">Processes</text>
+        <text class="minor" x="265" y="80">Discovery, Aggregation, Choreography</text>
+    </g>
+    <g id="descr">
+        <use xlink:href="#p-d"/>
+        <text class="major" x="265" y="45">Description</text>
+        <text class="minor" x="265" y="80">Web Services Description (WSDL)</text>
+    </g>
+    <g id="ws">
+       <use xlink:href="#process" transform="translate(0,10)"/>
+       <use xlink:href="#descr" transform="translate(0,140)"/>
+       <use xlink:href="#mess" transform="translate(0,270)"/>
+    </g>
+	</defs>
+  <g transform="translate(20,20)">
+     <use xlink:href="#l-box" transform="translate(0,0)"/>
+     <use xlink:href="#r-box" transform="translate(940,0)"/>
+     <use xlink:href="#b-box" transform="translate(140,560)"/>
+     <use xlink:href="#background" transform="translate(140)"/>
+     <use xlink:href="#ws" transform="translate(240,10)"/>
+  </g>
+</svg>

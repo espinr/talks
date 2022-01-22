@@ -1,0 +1,213 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 830 650">
+  <title>Web CGM File structure</title>
+  <desc>This is a hierarchical representation of a WebCGM structure</desc>
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:axsvg="http://www.w3.org/2001/svgRdf/axsvg-schema.rdf#">
+      <rdf:Description rdf:about="#SlideContent">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#MetafileStructure"/>
+            <rdf:li rdf:resource="#PictureDetails"/>
+            <rdf:li rdf:resource="#PictureBody"/>
+            <rdf:li rdf:resource="#SymbolLibraries"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <rdf:Description rdf:about="#MetafileStructure">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#BeginMetafile"/>
+            <rdf:li rdf:resource="#MetafileDescriptor"/>
+            <rdf:li rdf:resource="#Picture1"/>
+            <rdf:li rdf:resource="#Picture2"/>
+            <rdf:li rdf:resource="#PictureN"/>
+            <rdf:li rdf:resource="#EndMetafile"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+        <axsvg:OnTop rdf:resource="#PictureDetails"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#Picture1">
+        <axsvg:ExpandsTo rdf:resource="#PictureDetails"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#PictureDetails">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#BeginPicture"/>
+            <rdf:li rdf:resource="#PictureDescriptor"/>
+            <rdf:li rdf:resource="#PictureProperties"/>
+            <rdf:li rdf:resource="#PictureBody"/>
+            <rdf:li rdf:resource="#EndPicture"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+        <axsvg:PointsTo rdf:resource="#Picture1"/>
+        <axsvg:OnTop rdf:resource="#PictureBodyDetails"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#PictureBody">
+        <axsvg:ExpandsTo rdf:resource="#PictureBodyDetails"/>
+      </rdf:Description>
+      <rdf:Description about="#PictureBodyDetails">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#BeginPictureBody"/>
+            <rdf:li rdf:resource="#GraphicsPrimitives"/>
+            <rdf:li rdf:resource="#EndPictureBody"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+        <axsvg:PointsTo rdf:resource="#PictureBody"/>
+        <axsvg:OnTop rdf:resource="#SymbolLibraries"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#SymbolLibraries">
+        <axsvg:PointsTo rdf:resource="#GraphicsPrimitives"/>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <defs>
+    <style type="text/css"><![CDATA[
+     rect {stroke:black;fill:white;}
+     rect.box {stroke:none;fill:rgb(140, 189, 237)}
+    ]]></style>
+  </defs>
+  <!-- **************  Screen Display Area  ******************** -->
+  <g transform="translate(10,100)" id="SlideContent">
+    <desc>The file structure of a full WebCGM file</desc>
+    <g transform="translate(20,20)" id="MetafileStructure">
+      <desc>A series of labelled boxes</desc>
+      <text class="minor" x="10" y="-10">Metafile</text>
+      <g transform="translate(0,0)" id="BeginMetafile">
+        <desc>A box labelled "Begin Metafile"</desc>
+        <rect style="fill:yellow;" width="120" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">Begin Metafile</text>
+      </g>
+      <g transform="translate(125,0)" id="MetafileDescriptor">
+        <desc>A labelled box "Metafile Descriptor"</desc>
+        <rect style="fill:yellow;" width="150" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">Metafile Descriptor</text>
+      </g>
+      <g transform="translate(280,0)" id="Picture1">
+        <desc>A labelled box "Picture 1"</desc>
+        <rect style="fill:yellow;" width="100" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">Picture 1</text>
+      </g>
+      <g transform="translate(385,0)" id="Picture2">
+        <desc>A labelled box "Picture 2"</desc>
+        <rect style="fill:yellow;" width="100" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">Picture 2</text>
+      </g>
+      <g transform="translate(490,0)">
+        <rect style="fill:yellow;" width="60" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">- - - </text>
+      </g>
+      <g transform="translate(555,0)" id="PictureN">
+        <desc>A labelled box "Picture n"</desc>
+        <rect style="fill:yellow;" width="100" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">Picture n</text>
+      </g>
+      <g transform="translate(660,0)" id="EndMetafile">
+        <desc>A labelled box "End Metafile"</desc>
+        <rect style="fill:yellow;" width="110" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">End Metafile</text>
+      </g>
+    </g>
+    <line x1="300" y1="60" x2="20" y2="140"/>
+    <line x1="400" y1="60" x2="710" y2="140"/>
+    <g transform="translate(20,140)" id="PictureDetails">
+      <desc>A series of labelled boxes</desc>
+      <text class="minor" x="10" y="-10">Picture</text>
+      <g transform="translate(0,0)" id="BeginPicture">
+        <desc>A labelled box "Begin Picture"</desc>
+        <rect style="fill:yellow;" width="120" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">Begin Picture</text>
+      </g>
+      <g transform="translate(125,0)" id="PictureDescriptor">
+        <desc>A labelled box "Picture Descriptor"</desc>
+        <rect style="fill:yellow;" width="150" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">Picture Descriptor</text>
+      </g>
+      <g transform="translate(280,0)" id="PictureProperties">
+        <desc>A labelled box "Begin Properties"</desc>
+        <rect style="fill:yellow;" width="150" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">Picture Properties</text>
+      </g>
+      <g transform="translate(435,0)" id="PictureBody">
+        <desc>A labelled box "Begin Body"</desc>
+        <rect style="fill:yellow;" width="150" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">Picture Body</text>
+      </g>
+      <g transform="translate(590,0)" id="EndPicture">
+        <desc>A labelled box "End Picture"</desc>
+        <rect style="fill:yellow;" width="100" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">End Picture</text>
+      </g>
+    </g>
+    <line x1="455" y1="180" x2="20" y2="280"/>
+    <line x1="605" y1="180" x2="790" y2="280"/>
+    <g transform="translate(20,280)" id="PictureBodyDetails">
+      <desc>A series of labelled boxes</desc>
+      <text class="minor" x="10" y="-10">Picture Body</text>
+      <g transform="translate(0,0)" id="BeginPictureBody">
+        <desc>A labelled box "Begin Picture Body"</desc>
+        <rect style="fill:yellow;" width="160" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">Begin Picture Body</text>
+      </g>
+      <g transform="translate(165,0)" id="GraphicsPrimitives">
+        <desc>A box labelled with with graphics primitives</desc>
+        <rect style="fill:yellow;" width="450" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">Control, Graphical Primitive, Attribute Elements, Groups</text>
+      </g>
+      <g transform="translate(620,0)" id="EndPictureBody">
+        <desc>A labelled box "End Picture Body"</desc>
+        <rect style="fill:yellow;" width="150" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">End Picture Body</text>
+      </g>
+    </g>
+    <g transform="translate(20,420)" id="SymbolLibraries">
+      <desc>A series of labelled boxes, much like a full metafile</desc>
+      <text class="minor" x="10" y="-10">Symbol Libraries</text>
+      <g transform="translate(0,0)">
+        <rect style="fill:white;" width="120" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">Begin Metafile</text>
+      </g>
+      <g transform="translate(125,0)">
+        <rect style="fill:white;" width="150" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">Metafile Descriptor</text>
+      </g>
+      <g transform="translate(280,0)">
+        <rect style="fill:white;" width="100" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">Picture 1</text>
+      </g>
+      <g transform="translate(385,0)">
+        <rect style="fill:white;" width="100" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">Picture 2</text>
+      </g>
+      <g transform="translate(490,0)">
+        <rect style="fill:white;" width="60" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">- - - </text>
+      </g>
+      <g transform="translate(555,0)">
+        <rect style="fill:white;" width="100" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">Picture n</text>
+      </g>
+      <g transform="translate(660,0)">
+        <rect style="fill:white;" width="110" height="40"/>
+        <text class="normal" x="10" y="30" style="font-size:15">End Metafile</text>
+      </g>
+    </g>
+    <line x1="350" y1="420" x2="380" y2="320"/>
+    <g transform="translate(380,320)">
+      <g transform="rotate(-80)">
+        <line x1="0" y1="0" x2="-10" y2="-10"/>
+        <line x1="0" y1="0" x2="-10" y2="10"/>
+      </g>
+    </g>
+    <line x1="450" y1="420" x2="430" y2="320"/>
+    <g transform="translate(430,320)">
+      <g transform="rotate(-110)">
+        <line x1="0" y1="0" x2="-10" y2="-10"/>
+        <line x1="0" y1="0" x2="-10" y2="10"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1220 915">
+	<desc>
+    Wrapper around a photograph showing the addresses on an iPAQ display
+	</desc>
+	<svg height="895" y="10" viewBox="0 0 570 760">
+		<image xlink:href="../pngs/AddressesOnSony.png" width="570" height="760"/>
+	</svg>
+</svg>

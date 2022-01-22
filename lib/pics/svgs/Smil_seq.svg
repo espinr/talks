@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="no"?>
+<!-- Generator: Mayura Draw 3.6 -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20000303 Stylable//EN"
+  "http://www.w3.org/TR/2000/03/WD-SVG-20000303/DTD/svg-20000303-stylable.dtd" [
+	<!ENTITY st0 "stroke:#000000;stroke-width:1;fill:#ff3366">
+	<!ENTITY st1 "stroke:#eef21f;stroke-width:2;fill:#ff3366">
+	<!ENTITY stt0 "fill:#fafafa; font-family:Arial; font-size:24; text-anchor:middle">
+	<!ENTITY stt1 "fill:#fafafa; font-family:Arial; font-size:24; text-anchor:start">
+]>
+<svg xml:space="preserve" width="679" height="123" viewBox="0 0 679 123">
+<desc>Smil_seq.pdx</desc>
+<rect style="&st0;" transform="matrix(0 1 1 0 -149.3 -37.8)" x="48.126" y="159.608" width="32.449" height="322.083"/>
+<text transform="matrix(1 0 0 1 30.77 -176.3)" style="&stt0;"><tspan x="140.557" y="211.198">Video &#34;Joe&#34;</tspan></text>
+<rect style="&st0;" transform="matrix(0 1 1 0 184.2 -37.8)" x="48.126" y="159.608" width="32.449" height="322.083"/>
+<text transform="matrix(1 0 0 1 364.3 -176.3)" style="&stt0;"><tspan x="140.557" y="211.198">Text &#34;Joe&#34;</tspan></text>
+<path style="&st1;"
+d="M11.491 75.225
+l658.587 0
+"/>
+<path style="stroke:none;fill:#eef21f"
+d="M670.078 75.225
+l0 1
+-18 5
+0 -12
+18 5
+z"/>
+<text transform="matrix(1 0 0 1 -126.8 49.19)" style="&stt1;"><tspan x="138.261" y="59.771">0 sec</tspan></text>
+</svg>

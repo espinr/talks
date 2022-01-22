@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN"
+      "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Nuevos lenguajes de modelado y estándares para la codificación de lenguajes documentales. OWL y SKOS-Core</title>
+    <link href="http://purl.org/dc" rel="schema.dc" />
+    <meta content="Nuevos lenguajes de modelado y estándares para la codificación  de lenguajes documentales. OWL y SKOS-Core" name="dc.title" />
+    <meta content="Martín Álvarez" name="dc.creator" />
+    <meta content="2005-12-12" name="dc.date" />
+    <meta content="W3C Oficina Española" name="dc.publisher" />
+    <meta content="http://www.w3.org/Consortium/Legal/copyright-documents" name="dc.rights" />
+    <meta name="copyright" content="Copyright 2005 W3C Oficina Española" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="../../lib/Slidy/css/show.css" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="../../lib/Slidy/css/w3c-blue.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../lib/Slidy/css/print.css" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="../../lib/Slidy/css/slidy-toc.css" />
+    <script type="text/javascript" src="../../lib/Slidy/js/slidy.js">
+    </script>
+    <script type="text/javascript" src="../../lib/Slidy/js/slidy-toc.js">
+    </script>
+    <style type="text/css">
+        .center {
+            text-align: center;
+        }
+        
+        .imagen-left {
+            float: left;
+        }
+        
+        .imagen-right {
+            float: right;
+            margin-right: 1em;
+        }
+        
+        dl {
+            margin-left: 2em;
+        }
+        
+        strong {
+            color: #B22222;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <img id="head-icon" alt="Grfico con 4 cuadrados coloreados" src="../../lib/Slidy/img/icon-blue.png" /> <object id="head-logo" title="W3C logo" type="image/svg+xml" data="../../lib/Slidy/img/w3c-logo-blue.svg">
+  <img alt="W3C logo" id="head-logo-fallback"
+  src="../../lib/Slidy/img/w3c-logo-blue.gif" /></object>
+    </div>
+    <!-- La principal -->
+
+    <div class="slide cover">
+        <img src="../../lib/Slidy/img/keys.jpg" alt="Imagen de la portada (teclas W3C)" class="cover" /><br />
+
+
+        <h1>Nuevos lenguajes de modelado y estándares para la codificación de lenguajes documentales. <acronym title="Web Ontology Lenguage" xml:lang="en">OWL</acronym> y <span xml:lang="en"><acronym
+title="Simple Knowledge Organisation System">SKOS</acronym>-Core</span></h1>
+
+        <p><a title="Programa del seminario" href="http://www.sedic.es/gt_normalizacion_web-semantica05.htm"><strong>Uso
+de Lenguajes Documentales en la Web Semántica</strong></a> - <a title="Página principal de SEDIC" href="http://www.sedic.es">SEDIC</a></p>
+
+        <p><a href="http://www.w3c.es/Personal/Martin" title="Página personal de Martín Álvarez Espinar">Martín Álvarez
+Espinar</a></p>
+    </div>
+    <!-- Fin de la diapo principal -->
+    <!--div class="slide">
+<h1>Uso de Lenguajes Documentales en la Web</h1>
+<p>Seminario <a title="Programa del seminario"
+href="http://www.sedic.es/gt_normalizacion_web-semantica05.htm">Uso de
+Lenguajes Documentales en la <strong>Web Semántica</strong></a> - SEDIC
+(Grupo NORMAWEB)</p>
+<p>Madrid, 12 de diciembre de 2005 <br />
+Centro de Información y Documentación Científica - CSIC</p>
+</div-->
+
+    <div class="slide">
+        <h1>Mecanismos básicos en Web Semántica</h1>
+        <ul>
+            <li><strong>RDF</strong> (Infraestructura para Definición de Recursos)
+                <ul>
+                    <li>Modelo simple para la representación de los
+                        <strong>metadatos</strong></li>
+                </ul>
+            </li>
+            <li><strong>Ontologías</strong>
+                <ul>
+                    <li>Definen términos y relaciones</li>
+                    <li>Lenguajes de Ontologías:
+                        <ul>
+                            <li>RDF-Schema</li>
+                            <li>OWL</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Reglas de <strong>búsqueda y consulta</strong></li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>RDF (Resource Description Framework)</h1>
+        <ul>
+            <li>Permite definir información sobre <strong>cualquier
+  dominio</strong></li>
+            <li>Todo lo que se describen son recursos (identificados por URIs)</li>
+            <li>Es un gráfico</li>
+            <li>Definido como una tripleta (s,p,o)
+                <ul>
+                    <li><strong>Sujeto</strong> - Recurso (http://www.w3c.es/Personal/Martin)
+                    </li>
+                    <li><strong>Predicado</strong> - Propiedad (creador)</li>
+                    <li><strong>Objeto</strong> - Literal ("Martín Álvarez")</li>
+                </ul>
+            </li>
+            <li><code>&lt;sujeto&gt; TIENE &lt;predicado&gt; CUYO VALOR ES
+    &lt;objeto&gt;</code>
+                <ul>
+                    <li>http://www.w3c.es/Personal/Martin <strong>TIENE un</strong> creator
+                        <strong>cuyo valor es</strong> Martín Álvarez</li>
+                </ul>
+                <p class="center"><img src="./img/rdf-basic0.png" alt="Ejemplo de tripleta RDF: Martín Álvarez es el creador de un recurso" /></p>
+            </li>
+        </ul>
+    </div>
+    <!--div class="slide">
+<h1><acronym title="Resource Description Framework"
+xml:lang="en">RDF</acronym>/<acronym title="Extensible Markup Language"
+xml:lang="en">XML</acronym></h1>
+<ul>
+  <li>Utiliza el Lenguaje de Marcado Extensible (<strong>XML</strong>) para
+    la codificación</li>
+  <li><strong>Facilita</strong> la creación e intercambio de los
+  metadatos</li>
+  <li>Debemos pensar en los gráficos</li>
+</ul>
+
+<p class="center"><img src="./img/rdf-basic1.png"
+alt="Descripción de los metadatos de una página web, en un gráfico." /></p>
+<pre>&lt;rdf:RDF&gt;
+    &lt;rdf:Description about="http://www.w3c.es/Personal/Martin"&gt;
+         &lt;s:tipo&gt;text/html&lt;/s:tipo&gt;
+         &lt;s:fecha&gt;2005-10-01&lt;/s:fecha&gt;
+         &lt;s:titulo&gt;Página personal de Martín Álvarez&lt;/s:titulo&gt;
+    &lt;/rdf:Description&gt;
+&lt;/rdf:RDF&gt;</pre>
+</div-->
+
+    <div class="slide">
+        <h1>Ejemplo de <acronym title="Resource Description Framework" xml:lang="en">RDF</acronym></h1>
+
+        <p class="imagen-right"><img src="./img/rdf-basic2.png" alt="Ejemplo de tripleta RDF: Martín Álvarez es el creador de un recurso. Con más propiedades" /></p>
+        <ul>
+            <li><strong>Extensibilidad</strong> incremental</li>
+            <li><strong>Relacionarse</strong> con otros recursos</li>
+            <li>"<strong>Mezclar</strong>" definiciones
+                <ul>
+                    <li>Nodos sujeto y objeto con el mismo URI</li>
+                </ul>
+            </li>
+            <li>Proporcionar múltiples presentaciones aprovechando el trabajo de otros
+            </li>
+        </ul>
+    </div>
+    <!--div class="slide">
+<h1>Ejemplo de <acronym title="Resource Description Framework"
+xml:lang="en">RDF</acronym></h1>
+
+<p class="imagen-right"><img src="./img/rdf-coleccion.png"
+alt="Ejemplo de gráfico en RDF en el que se muestra una colección de miembros de un equipo"
+/></p>
+<ul>
+  <li>Descripción de <strong>colecciones</strong></li>
+</ul>
+</div-->
+
+    <div class="slide">
+        <h1>Por qué usar ontologías</h1>
+        <ul>
+            <li>Necesitamos definir vocabularios (<strong>términos</strong>) para usarlos en estas sentencias</li>
+            <li><strong>Descripción formal</strong> de un dominio
+                <ul>
+                    <li>Definición de clases, propiedades y relaciones entre ellas</li>
+                </ul>
+            </li>
+            <li>Interoperabilidad semántica
+                <ul>
+                    <li>Integración entre metadatos de <strong>distintos
+        vocabularios/esquemas</strong></li>
+                    <li>Facilita y ofrece mayor precisión ante búsquedas de información
+                        <ul>
+                            <li>Portales (reglas de categorización para los recursos)</li>
+                            <li>Colecciones multimedia (medios no textuales)</li>
+                            <li>Sitios web corporativos (organización taxonómica de documentos)
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Relaciona recursos, servicios, dispositivos, bases de datos a través de la asociación de las estructuras del conocimiento y su
+                        <strong>combinación</strong>.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>RDF Schema</h1>
+
+        <p class="imagen-right"><img src="./img/rdfs-basic0.png" alt="Ejemplo de tres clases definidas en RDF Schema: Equipo, persona y recurso" /></p>
+        <ul>
+            <li>RDF Schema es un <em>Lenguaje de Descripción de Vocabularios</em></li>
+            <li><strong><em>Modelo de datos</em></strong> para RDF</li>
+            <li>Permite enriquecer las <strong>descripciones semánticas</strong> (procesables por las máquinas)
+                <ul>
+                    <li>Clases / subclases</li>
+                    <li>Relaciones entre las clases y propiedades</li>
+                    <li>Descripciones para los humanos (etiquetas, descripciones, etc.)</li>
+                </ul>
+            </li>
+            <li>Facilita la <em>combinación de sentencias RDF</em>, a través de los URIs
+            </li>
+            <li>Ofrece <em>la base para poder realizar razonamientos</em> o deducciones sobre nueva información</li>
+            <li>Básicamente permite definir clases y propiedades e indica cómo se pueden usar en conjunto</li>
+        </ul>
+    </div>
+    <!--div class="slide">
+<h1>RDF Schema: definición de clases</h1>
+
+<p><img src="./img/rdfs-vehiculos.png"
+alt="Ejemplo de clases definidas en RDF Schema sobre vehículos" /></p>
+</div-->
+    <!--div class="slide">
+<h1>RDF Schema: definición de clases (Vista RDF/XML)</h1>
+<pre><code>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE rdf:RDF [&lt;!ENTITY xsd "http://www.w3.org/2001/XMLSchema#"&gt;]&gt;
+&lt;rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xml:base="http://example.org/schemas/vehicles"&gt;
+
+    &lt;rdfs:Class rdf:ID="MotorVehicle"/&gt;
+
+    &lt;rdfs:Class rdf:ID="PassengerVehicle"&gt;
+         &lt;rdfs:subClassOf rdf:resource="#MotorVehicle"/&gt;
+    &lt;/rdfs:Class&gt;
+
+    &lt;rdfs:Class rdf:ID="Truck"&gt;
+         &lt;rdfs:subClassOf rdf:resource="#MotorVehicle"/&gt;
+    &lt;/rdfs:Class&gt;
+
+    &lt;rdfs:Class rdf:ID="Van"&gt;
+         &lt;rdfs:subClassOf rdf:resource="#MotorVehicle"/&gt;
+    &lt;/rdfs:Class&gt;
+
+    &lt;rdfs:Class rdf:ID="MiniVan"&gt;
+         &lt;rdfs:subClassOf rdf:resource="#Van"/&gt;
+         &lt;rdfs:subClassOf rdf:resource="#PassengerVehicle"/&gt;
+    &lt;/rdfs:Class&gt;
+
+&lt;/rdf:RDF&gt;</code></pre>
+</div-->
+    <!--div class="slide">
+<h1>RDF Schema: definición de propiedades (Vista RDF/XML)</h1>
+<pre><code>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE rdf:RDF [&lt;!ENTITY xsd "http://www.w3.org/2001/XMLSchema#"&gt;]&gt;
+&lt;rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xml:base="http://example.org/schemas/vehicles"&gt;
+
+    &lt;rdf:Property rdf:ID="color"/&gt;
+
+    &lt;rdf:Property rdf:ID="make"/&gt;
+
+    &lt;rdf:Property rdf:ID="model"/&gt;
+&lt;/rdf:RDF&gt;</code></pre>
+<ul>
+  <li>¿Probemas?</li>
+</ul>
+</div-->
+    <!--div class="slide">
+<h1>RDF Schema: definición de propiedades (Vista RDF/XML) 2</h1>
+<pre><code>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE rdf:RDF [&lt;!ENTITY xsd "http://www.w3.org/2001/XMLSchema#"&gt;]&gt;
+&lt;rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xml:base="http://example.org/schemas/vehicles"&gt;
+
+    &lt;rdf:Property rdf:ID="color"&gt;
+        &lt;rdfs:label xml:lang="<strong>en-us</strong>"&gt;color&lt;/rdfs:label&gt;
+        &lt;rdfs:label xml:lang="<strong>en-uk</strong>"&gt;colour&lt;/rdfs:label&gt;
+        &lt;rdfs:label xml:lang="<strong>es</strong>"&gt;color&lt;/rdfs:label&gt;
+    &lt;/rdf:Property&gt;
+&lt;/rdf:RDF&gt;</code></pre>
+<ul>
+  <li>Debes pensar siempre en las <strong>máquinas</strong> y en los
+    <strong>humanos</strong></li>
+</ul>
+</div-->
+
+    <div class="slide">
+        <h1>Limitaciones de RDF Schema</h1>
+        <ul>
+            <li>No indica la <strong>cardinalidad</strong>
+                <ul>
+                    <li>Un libro: ¿Puede tener más de un autor? ¿Puede no tener ninguno?
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Tipos</strong> de datos</li>
+            <li>Restricciones de rangos simples para las propiedades</li>
+            <li>No se pueden derivar tipos por <strong>unión o
+  intersección</strong></li>
+            <li>Necesidad de relaciones de clases o propiedades más ricas
+                <ul>
+                    <li>Características de las propiedades</li>
+                </ul>
+            </li>
+            <li>...</li>
+            <li>Surgen <strong>extensiones <a
+    href="http://www.w3.org/TR/daml+oil-reference"
+    title="Referencia de DAML+OIL" xml:lang="en"
+    hreflang="en">DAML+OIL</a></strong></li>
+        </ul>
+    </div>
+    <!--div class="slide">
+<h1><acronym title="DARPA Agent Markup Language" xml:lang="en">DAML</acronym>
++ <acronym title="Ontology Inferecence Layer" xml:lang="en">OIL</acronym></h1>
+<ul>
+  <li><acronym title="Defense Advanced Research Projects Agency"
+    xml:lang="en">DARPA</acronym> Agent Markup Language
+    <ul>
+      <li>Lenguaje de marcado semántico para recursos Web</li>
+      <li>Definición de ontologías</li>
+      <li>Comienza en el 2000</li>
+      <li>Soluciona las carencias detectadas</li>
+      <li>Ejemplo: Un macho es un animal y no puede ser una hembra
+        <pre>&lt;daml:Class rdf:ID="Macho"&gt;
+    &lt;rdfs:subClassOf rdf:resource="#Animal"/&gt;
+    &lt;daml:disjointWith rdf:resource="#Hembra"/&gt;
+&lt;/daml:Class&gt;		</pre>
+      </li>
+    </ul>
+  </li>
+  <li>Ontology Inference Layer
+    <ul>
+      <li>Permite realizar inferencias sobre el conocimiento</li>
+      <li>Razonamiento gracias a las descripciones lógicas</li>
+      <li><a href="http://www.w3.org/TR/daml+oil-reference"
+        hreflang="en">DAML+OIL</a> Marzo de 2001</li>
+    </ul>
+  </li>
+</ul>
+</div-->
+
+    <div class="slide">
+        <h1><acronym title="Web Ontology Language">OWL</acronym></h1>
+        <ul>
+            <li><strong>Lenguaje de Ontologías Web</strong> (Recomendación Febrero 2004)
+            </li>
+            <li>Se basa en RDF Schema</li>
+            <li>Añade más vocabulario para describir las clases y las propiedades</li>
+            <li>Los lenguajes anteriores estaban destinados a comunidades específicas
+                <ul>
+                    <li>Comercio Electrónico</li>
+                    <li>Entornos científicos</li>
+                </ul>
+            </li>
+            <li><a href="http://www.w3.org/2004/OWL/" hreflang="en">OWL</a> <strong>se
+    adapta</strong> a la arquitectura de la WWW y a la Web Semántica</li>
+            <li>Los sistemas que usan DAML, OIL, DAML+OIL están migrando a OWL
+                <ul>
+                    <li>Muchas herramientas que lo realizan sencillamente</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Necesidad de Ontologías en OWL</h1>
+        <ul>
+            <li>RDF Schema es útil pero no lo podemos utilizar para resolver ciertas tareas
+            </li>
+            <li>Aplicaciones complejas pueden necesitar más funcionalidad
+                <ul>
+                    <li>¿Puede un programa <strong>razonar</strong> acerca de ciertos términos?
+                        <ul>
+                            <li>p.e., "si A es menor que B y B es menor que C, ¿es A menor que C?"
+                            </li>
+                            <li>Es <strong>obvio para los humanos</strong> pero no para las máquinas...
+                            </li>
+                            <li>Los programas deberían poder deducir estas sentencias</li>
+                        </ul>
+                    </li>
+                    <li>Si alguien define un <strong>conjunto de términos: ¿son estos
+        idénticos?</strong>
+                        <ul>
+                            <li>Obviamente, puede aplicarse en el contexto de internacionalización
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Construir clases, no solo nombrarlas</li>
+                    <li>Restringir el rango de las propiedades</li>
+                    <li>etc.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>¿Por qué "OWL" y no "WOL"</h1>
+
+        <p class="imagen-right"><img src="./img/WinnieAndOwl.png" alt="Winnie the Pooh y Owl" /></p>
+        <ul>
+            <li>Algunas leyendas urbanas...
+                <ul>
+                    <li>p.e., referencia a Owl de Winnie the Pooh, que deletreaba mal su nombre como "WOL"</li>
+                </ul>
+            </li>
+            <li>Una referencia a un <a href="http://lists.w3.org/Archives/Public/www-webont-wg/2001Dec/0169.html">proyecto
+    de IA</a> de mediados de los 70 de Bill Martin llamado "<span xml:lang="en">One World Language</span>"
+                <ul>
+                    <li>Un intento de un lenguaje de Representación del Conocimiento y su ontología asociada, que intentaba ser un lenguaje universal para codificar significados en las máquinas</li>
+                </ul>
+            </li>
+            <li><cite>"Why not be inconsistent in at least one aspect of a language
+    which is all about consistency"</cite> (Guus Schreiber)</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Componentes de una ontologías OWL</h1>
+
+        <p class="imagen-right"><img src="./img/owl-componentes-1.png" alt="Clase Persona con dos individuos y una relación entre ellos" /></p>
+        <ul>
+            <li>Clases</li>
+            <li>Propiedades</li>
+            <li>Individuos</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Componentes de una ontologías OWL</h1>
+
+        <p class="imagen-right"><img src="./img/owl-componentes-2.png" alt="Clase Persona con dos individuos y una relación con individuos de la clase Mascota" /></p>
+    </div>
+
+    <div class="slide">
+        <h1>Componentes de una ontologías OWL</h1>
+
+        <p class="imagen-right"><img src="./img/owl-componentes-3.png" alt="Individuos de la clase Organización asociados a un individuo de la clase Persona" /></p>
+    </div>
+
+    <div class="slide">
+        <h1>Componentes de una ontologías OWL</h1>
+
+        <p class="imagen-right"><img src="./img/owl-componentes-4.png" alt="Relación entre individuos de las clases: Persona, Mascota, Organización y País" /></p>
+    </div>
+
+    <div class="slide">
+        <h1>Clases en OWL</h1>
+
+        <p class="imagen-right"><img src="./img/owl-clases.png" alt="Diagrama con la definición de las clases OWL" /></p>
+        <ul>
+            <li>En RDF Schema ya podían definirse subclases, pero con OWL:</li>
+            <li>Pueden <strong>construirse</strong> clases de otras existentes previamente
+                <ul>
+                    <li>Enumerarlas en su contenido</li>
+                    <li>A través de intersección, unión, complementarios</li>
+                    <li>A través de restricciones apropiadas</li>
+                </ul>
+            </li>
+            <li>OWL introduce <code>Class</code> y <code>Thing</code> para diferenciar las <strong>clases</strong> y los <strong>individuos</strong></li>
+        </ul>
+    </div>
+    <!--div class="slide">
+<h1>Necesidad de enumeración</h1>
+<ul>
+  <li>Podemos definir <code>tipoGrafico</code> mediante tipos XML Schema</li>
+  <li>Sería mejor hacerlo mediante RDF</li>
+</ul>
+
+<p><img class="center" src="./img/owl-clases.png"
+alt="Diagrama con la definición de las clases OWL" /></p>
+</div-->
+    <!--div class="slide">
+<h1>Necesidad de enumeración</h1>
+<ul>
+  <li>El contenido es explícitamente listado gracias a OWL</li>
+</ul>
+
+<p class="center"><img src="./img/owl-enumeracion.png"
+alt="Diagrama con la definición de enumeración de clases OWL" /></p>
+</div-->
+    <!--div class="slide">
+<h1>Enumeración de clases con OWL (RDF/XML)</h1>
+<ul>
+  <li>Definición usando XML</li>
+</ul>
+<pre>   <code>&lt;rdf:Property rdf:ID="TipoGrafico"&gt;
+     &lt;rdf:range&gt;
+         &lt;owl:Class&gt;
+<strong>             &lt;owl:oneOf rdf:parseType="Collection"&gt;
+                 &lt;owl:Thing rdf:ID="Barras"/&gt;
+                 &lt;owl:Thing rdf:ID="Sectorial"/&gt;
+                 &lt;owl:Thing rdf:ID="Lineas"/&gt;
+                 &#x2026;
+             &lt;/owl:oneOf&gt;</strong>
+         &lt;/owl:Class&gt;
+     &lt;/rdf:range&gt;
+  &lt;/rdf:Property&gt;</code></pre>
+</div-->
+
+    <div class="slide">
+        <h1>Operandos de conjuntos sobre clases</h1>
+
+        <p><img class="imagen-right" src="./img/owl-union.png" alt="Diagrama con la definición de unión de clases con OWL" /></p>
+        <ul>
+            <li>Unión de conjuntos mediante <code><strong>unionOf</strong></code></li>
+        </ul>
+        <!--pre><code>&lt;owl:Class rdf:ID="DescriptorVino"&gt;</code><strong><code>
+    &lt;owl:unionOf rdf:parseType="Collection"&gt;
+        &lt;owl:Class rdf:about="#SaborVino"/&gt;
+        &lt;owl:Class rdf:about="#ColorVino"/&gt;
+    &lt;/owl:unionOf&gt;</code></strong><code>&lt;/owl:Class&gt;</code></pre-->
+        <ul>
+            <li>Otras posibilidades: <code><strong>intersectionOf</strong></code> y
+                <strong><code>complementOf</code></strong></li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Clases disjuntas</h1>
+        <ul>
+            <li><code><strong>owl:disjointWith</strong></code></li>
+            <li>Una instancia de una clase no puede pertenecer simultáneamente a otra clase
+            </li>
+            <li>p.e., ontología de comida: Definición de <strong>Carne</strong></li>
+        </ul>
+
+        <p class="imagen-right"><img src="./img/owl-disjunto.png" alt="Definición de una clase mediante disjunciones con OWL" /></p>
+        <!--pre><code>&lt;owl:Class rdf:ID="Carne"&gt;
+    &lt;rdfs:subClassOf rdf:resource="#Comestible"/&gt;
+    <strong>&lt;owl:disjointWith rdf:resource="#Pescado"/&gt;
+    &lt;owl:disjointWith rdf:resource="#Marisco"/&gt;
+    &lt;owl:disjointWith rdf:resource="#Postre"/&gt;
+    &lt;owl:disjointWith rdf:resource="#Fruta"/&gt;</strong>
+&lt;/owl:Class&gt;</code></pre-->
+        <ul>
+            <li>Nota: Sólo se realiza el aserto sobre la clase <strong>Carne</strong>
+                <ul>
+                    <li>No se conoce si <strong>Pescado</strong> es disjunto a
+                        <strong>Marisco</strong></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Restricciones de propiedades</h1>
+        <ul>
+            <li>Las clases pueden crearse mediante la restricción del
+                <strong>comportamiento</strong> en esa clase</li>
+            <li>Limitación específica del rango</li>
+            <li>Las restricciones pueden ser:
+                <ul>
+                    <li>De <strong>valores</strong>
+                        <ul>
+                            <li>...<strong>todos</strong> los valores deben ser de cierta clase
+                            </li>
+                            <li>...<strong>al menos un</strong> valor debe ser de cierta clase
+                            </li>
+                        </ul>
+                    </li>
+                    <li>De <strong>cardinalidad</strong> (p.e., ¿cuántas veces puede usarse una propiedad en una instancia?)
+                        <ul>
+                            <li>cardinalidad <strong>máxima</strong></li>
+                            <li>cardinalidad <strong>mínima</strong></li>
+                            <li>cardinalidad <strong>exacta</strong></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--div class="slide">
+<h1>Restricciones de propiedades (cont.)</h1>
+<ul>
+  <li><code><strong>owl:Restriction</strong></code> define un nodo vacío con
+    restricciones
+    <ul>
+      <li>Debe indicarse la propiedad a la que se refiere la restricción</li>
+      <li>Define la restricción</li>
+    </ul>
+  </li>
+  <li>Se pueden hacer subclases de este nodo,</li>
+  <li>...usar otras restricciones de propiedades (intersección, unión,
+    complemento) o</li>
+  <li>...declarar simplemente la clase que sea igual a este</li>
+</ul>
+</div-->
+
+    <div class="slide">
+        <h1>Ejemplo de restricción de propiedades</h1>
+        <ul>
+            <li>Un <strong><code>Zumo</code></strong> es un
+                <code>LíquidoPotable</code> que está hecho <strong>al menos</strong> por 1 pieza de fruta</li>
+        </ul>
+
+        <p class="imagen-right"><img src="./img/owl-restriccion.png" alt="Definición de restricciones para propiedades OWL" /></p>
+        <!--pre><code>&lt;owl:Class rdf:ID="Zumo"&gt;
+    &lt;rdfs:subClassOf rdf:resource="#LiquidoPotable"/&gt;
+    &lt;rdfs:subClassOf&gt;
+        &lt;<strong>owl:Restriction</strong>&gt;
+            &lt;<strong>owl:onProperty</strong> rdf:resource="#hechoDeFruta"/&gt;
+                &lt;<strong>owl:minCardinality</strong>
+                  rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"&gt;1&lt;/<strong>owl:minCardinality</strong>&gt;
+        &lt;/<strong>owl:Restriction</strong>&gt;
+    &lt;/rdfs:subClassOf&gt;
+&lt;/owl:Class&gt;</code></pre-->
+        <ul>
+            <li>Otras restricciones: <code>allValuesFrom</code>,
+                <code>someValuesFrom</code> y <code>hasValue</code></li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Caracterización de propiedades</h1>
+        <ul>
+            <li>En RDF Schema las propiedades se restringen mediante rango (
+                <code>range</code>) y dominio (<code>domain</code>)</li>
+            <li>En OWL, se puede caracterizar el <strong>comportamiento</strong>
+                <ul>
+                    <li>Propiedad transitiva, simétrica, funcional, etc.</li>
+                </ul>
+            </li>
+            <li>OWL distingue las propiedades de <strong>datos</strong>
+                <ul>
+                    <li><code>DatatypeProperty</code> se refiere a rangos sobre literales de RDF o de tipos simples en XML Schema</li>
+                </ul>
+            </li>
+            <li>Muy útil para aplicaciones basadas en ontologías</li>
+        </ul>
+        <!--p class="center"><img src="./img/owl-propiedades.png"
+alt="Definición de las propiedades en OWL" /></p-->
+    </div>
+    <!--div class="slide">
+<h1>Ejemplo de caracterización</h1>
+<ul>
+  <li>Ejemplo de propiedad simétrica sobre ciudades</li>
+</ul>
+</div-->
+
+    <div class="slide">
+        <h1>Necesidades adicionales</h1>
+        <ul>
+            <li>Las ontologías pueden llegar a ser <strong>muy grandes</strong>
+                <ul>
+                    <li>Necesitan cuidados especiales</li>
+                    <li>Pueden componerse en <strong>varios módulos</strong></li>
+                    <li>Pueden provenir de varios lugares y deben ser integrados</li>
+                </ul>
+            </li>
+            <li>Las ontologías están en la web
+                <ul>
+                    <li>Las aplicaciones usan varias, <strong>diferentes
+        ontologías</strong></li>
+                    <li>Utilizar la misma ontología pero en <strong>distintos
+        idiomas</strong></li>
+                    <li><strong>Equivalencias y relaciones entre términos</strong></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Equivalencias</h1>
+        <ul>
+            <li>Entre clases y propiedades
+                <ul>
+                    <li><code>equivalentClass</code> y <code>equivalentProperty</code></li>
+                </ul>
+            </li>
+            <li>Entre individuos
+                <ul>
+                    <li><code>sameAs</code></li>
+                    <li><code>differentFrom</code>, <code>AllDifferent</code></li>
+                </ul>
+            </li>
+        </ul>
+
+        <p class="center"><img src="./img/owl-traduccionClase.png" alt="Definición de dos clases equivalentes en OWL" /></p>
+    </div>
+
+    <div class="slide">
+        <h1>Control de versiones y anotaciones</h1>
+        <ul>
+            <li>La clase owl:Ontology permite "documentar" y asociarla con otras ontologías
+                <ul>
+                    <li><code>owl:imports</code></li>
+                    <li><code>owl:versionInfo, owl:priorVersion</code></li>
+                    <li><code>owl:backwardCompatibleWith, owl:incompatibleWith</code></li>
+                    <li><code>rdfs:label, rdfs:comment</code></li>
+                </ul>
+            </li>
+            <li>Control de versiones obsoletas
+                <ul>
+                    <li><code>owl:DeprecatedClass</code> y
+                        <code>owl:DeprecatedProperty</code></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Lenguajes OWL</h1>
+        <ul>
+            <li>3 Sublenguajes con <strong>expresividad creciente</strong></li>
+            <li><strong>OWL Lite</strong>
+                <ul>
+                    <li>Para usuarios que necesitan principalmente una clasificación jerarquizada y restricciones sencillas</li>
+                    <li>Sólo permite expresar cardinalidad para valores 0 o 1</li>
+                </ul>
+            </li>
+            <li><strong>OWL DL</strong> (Description Logics)
+                <ul>
+                    <li>Máxima expresividad</li>
+                    <li>Manteniendo la computación completa (se garantiza la computación para todas las conclusiones) y decidible (tiempo finito)</li>
+                    <li>Admite todas las construcciones del lenguaje OWL pero con ciertas restricciones
+                    </li>
+                </ul>
+            </li>
+            <li><strong>OWL Full</strong>
+                <ul>
+                    <li>Máxima expresividad y libertad sintáctica de RDF</li>
+                    <li>No ofrece garantías de computación</li>
+                    <li>Es improbable que un software pueda soportar el razonamiento completo para cada característica de OWL Full</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--div class="slide">
+<h1>OWL: Lite, DL o Full</h1>
+
+<p class="imagen-right"><img src="./img/sublenguajesOWL.png"
+alt="Cada ontología OWL válida es una ontología válida OWL DL y ésta es ontología válida OWL FULL"
+/></p>
+<ul>
+  <li>OWL Full puede verse como una extensión de RDF</li>
+  <li>OWL Lite y DL pueden verse como extensiones de un RDF limitado</li>
+  <li>Las ontologías grandes pueden seguir creciendo pero...
+    <ul>
+      <li>El razonamiento puede ser un problema</li>
+      <li>Los sistemas DL trabajan ya con valores en torno a los 100K
+        conceptos
+        <ul>
+          <li>Aunque tienen una estructura simple</li>
+        </ul>
+      </li>
+      <li>Pequeñas ontologías OWL pueden llevarnos a aplicaciones muy
+      útiles</li>
+    </ul>
+  </li>
+</ul>
+</div-->
+    <!-- div class="slide">
+<h1>OWL... ¿Lite, DL o Full?</h1>
+
+<p class="imagen-right"><img src="./img/sublenguajesOWL.png"
+alt="Cada ontología OWL válida es una ontología válida OWL DL y ésta es ontología válida OWL FULL"
+/></p>
+<ul>
+  <li>Depende del alcance de la aplicación</li>
+  <li>Elegir la capa que se necesite</li>
+  <li>Las aplicaciones deben incluir módulos a un razonador general
+    <ul>
+      <li>El módulo extra "conoce" las especificaciones de la aplicación</li>
+      <li>Es un complemento al razonador general</li>
+    </ul>
+  </li>
+  <li>...</li>
+  <li>Pero no estamos <strong>obligados</strong> a usar OWL para ser buenos
+    ciudadanos (de la Web Semántica)
+    <ul>
+      <li>Ver RSS</li>
+    </ul>
+  </li>
+</ul>
+</div-->
+
+    <div class="slide">
+        <h1>¿Usar ontologías OWL?</h1>
+        <ul>
+            <li>Una aplicación basada completamente en ontologías es un
+                <strong>sistema muy complejo</strong>
+                <ul>
+                    <li>Muy tediosa la implementación</li>
+                    <li>Requiere muchos recursos el funcionamiento</li>
+                </ul>
+            </li>
+            <li><strong>No todas las aplicaciones necesitan ontologías con
+  OWL</strong></li>
+            <li>Puede llegar a complicar demasiado el sistema</li>
+        </ul>
+    </div>
+    <!--div class="slide">
+<h1>Ontologías Existentes</h1>
+<ul>
+  <li>Repositorios de Ontologías
+    <ul>
+      <li><a href="http://www.schemaweb.info/">SchemaWeb</a></li>
+      <li><a href="http://www.daml.org/ontologies/">DAML Ontology
+      Library</a></li>
+    </ul>
+  </li>
+</ul>
+</div-->
+
+    <div class="slide">
+        <h1><acronym title="Simple Knowledge Organisation Systems" xml:lang="en">SKOS</acronym> Core</h1>
+        <ul>
+            <li>Simple <strong>Knowledge Organisation</strong> System(s)</li>
+            <li>Objetivo:
+                <p>Infrastructura <strong>simple</strong>, <strong>flexible</strong>,
+                    <strong>extensible</strong> para representar (de forma que las
+                    <strong>máquinas lo entiendan</strong>)</p>
+                <ul>
+                    <li>Tesauros</li>
+                    <li>Esquemas de clasificación</li>
+                    <li>Taxonomías</li>
+                    <li>Listas de encabezamientos de materia</li>
+                    <li>Otros tipos de "vocabulario controlado"</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>La base de SKOS Core</h1>
+        <ul>
+            <li>SKOS Core es una aplicación RDF
+                <ul>
+                    <li>Recordando...</li>
+                    <li>RDF es un mecanismo de representación formal de cosas, sus propiedades, relaciones entre ellas, y categorías (clases)</li>
+                </ul>
+            </li>
+            <li>Clases RDF y Propiedades RDFS</li>
+            <li>Es usado para describir <strong>Conceptos</strong> y <strong>Esquemas
+    de Conceptos</strong></li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Concepto</h1>
+        <ul>
+            <li>Definiciones (<acronym title="Real Academia Española">RAE</acronym>):
+                <ul>
+                    <li>Idea que concibe o forma el entendimiento</li>
+                    <li>Pensamiento expresado con palabras</li>
+                </ul>
+            </li>
+            <li>Por ejemplo, una <strong>unidad de significado</strong></li>
+            <li>Es la unidad que compone los Esquemas de Conceptos</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Representación del concepto</h1>
+        <ul>
+            <li><strong>skos:Concept</strong> es una clase que indica que un
+                <strong>recurso es un <em>recurso conceptual</em></strong></li>
+            <li>Elementos:
+                <p class="imagen-right"><img src="./img/skos-concepto.png" alt="Elementos básicos en SKOS Core" /></p>
+                <ul>
+                    <li>Recursos</li>
+                    <li>Propiedades</li>
+                    <li>Clases</li>
+                    <li>Sentencias</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Esquema de Conceptos</h1>
+        <ul>
+            <li>Un conjunto de conceptos,
+                <ul>
+                    <li>Opcionalmente incluye <strong>sentencias sobre las relaciones
+        semánticas</strong> entre los conceptos</li>
+                </ul>
+            </li>
+            <li>P.e.
+                <ul>
+                    <li>Tesauro</li>
+                    <li>Esquema de clasificación</li>
+                    <li>Taxonomía</li>
+                    <li>Terminología</li>
+                    <li>Epígrafes</li>
+                    <li>... otros vocabularios controlados</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo de entradas en un glosario (1)</h1>
+        <dl>
+            <dt>Hoja</dt>
+            <dd><strong>(i)</strong> Cada una de las láminas, generalmente verdes, planas y delgadas, de que se visten los vegetales, unidas al tallo o a las ramas por el pecíolo o, a veces, por una parte basal alargada, en las que principalmente se realizan
+                las funciones de transpiración y fotosíntesis. <strong>(ii)</strong> Cada una de las capas delgadas en que se suele dividir la masa; como en los hojaldres</dd>
+            <dt>Raíz</dt>
+            <dd><strong>(i)</strong> Órgano que crece en dirección inversa a la del tallo, carece de hojas e, introducido en tierra o en otros cuerpos, absorbe de estos o de aquella las materias necesarias para el crecimiento y desarrollo del vegetal y le
+                sirve de sostén.
+                <strong>(ii)</strong> Bien inmueble, finca, tierra, edificio, etc.</dd>
+            <dt>Tallo</dt>
+            <dd><strong>(i)</strong> Órgano que se prolonga en sentido contrario al de la raíz y sirve de sustentáculo a las hojas, flores y frutos en las plantas. <strong>(ii)</strong> Renuevo de las plantas</dd>
+            <dt>...</dt>
+        </dl>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo de entradas en un glosario (2)</h1>
+
+        <p class="center"><img src="./img/skos-glosario1.png" alt="Glosario modelado con SKOS Core" /></p>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo de entradas en un glosario (3)</h1>
+
+        <p class="center"><img src="./img/skos-glosario3.png" alt="Glosario modelado con SKOS Core" /></p>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo de taxonomía</h1>
+
+        <p class="imagen-right"><img src="./img/skos-taxonomia.png" alt="Ejemplo de representación de taxonomías mediante SKOS" /></p>
+        <ul>
+            <li>dmoz
+                <ul>
+                    <li>Arte
+                        <ul>
+                            <li>Literatura</li>
+                            <li>Arquitectura</li>
+                            <li>...</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo de tesauro (1)</h1>
+        <!--ul>
+  <li>Tesauro <a title="Página principal del tesauro Eurovoc"
+    href="http://europa.eu.int/celex/eurovoc/">Eurovoc</a></li>
+</ul-->
+        <dl>
+            <dt>Término</dt>
+            <dd>bioética</dd>
+            <dt>Usado por</dt>
+            <dd>ética médica</dd>
+            <dt>Términos relacionados</dt>
+            <dd>biología; deontología profesional; embrión y feto; ética; ingeniería genética...</dd>
+            <dt>Término específico</dt>
+            <dd>comercio de órganos</dd>
+            <dt>Término genérico</dt>
+            <dd>vida social</dd>
+            <dt>Notas del ámbito</dt>
+            <dd>Aspectos éticos de técnicas que involucra la intervención de los humanos en procesos biológicos</dd>
+        </dl>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo de tesauro (2)</h1>
+
+        <p class="imagen-right"><img src="./img/skos-tesauro.png" alt="Ejemplo de representación de un tesauro mediante SKOS" /></p>
+        <!-- dl>
+  <dt>Término</dt>
+    <dd>bioética</dd>
+  <dt><abbr title="Used For" xml:lang="en">UF</abbr></dt>
+    <dd>ética médica</dd>
+  <dt><abbr title="Related Term" xml:lang="en">RT</abbr></dt>
+    <dd>biología; deontología profesional; embrión y feto; ética; ingeniería
+      genética...</dd>
+  <dt><abbr title="Narrower Term" xml:lang="en">NT</abbr></dt>
+    <dd>comercio de órganos</dd>
+  <dt><abbr title="Broader Term" xml:lang="en">BT</abbr></dt>
+    <dd>vida social</dd>
+  <dt><abbr title="Scope Notes" xml:lang="en">SN</abbr></dt>
+    <dd>Aspectos éticos de técnicas que involucra la intervención de los
+      humanos en procesos biológicos</dd>
+</dl -->
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo de esquema de clasificación (Biblioteca <abbr title="Banco de España">BDE</abbr>)</h1>
+
+        <p class="imagen-right"><img src="./img/skos-esquema.png" alt="Ejemplo de representación de un esquema de clasificación mediante SKOS" /></p>
+        <ul>
+            <li>14. Economía de la empresa
+                <ul>
+                    <li>142. Estructura y funcionamiento de la empresa
+                        <ul>
+                            <li>1421. Dirección de empresas
+                                <ul>
+                                    <li>14211. Técnicas de gestión de empresas: decisiones</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo de indexado de materias</h1>
+        <ul>
+            <li>Ornitología</li>
+        </ul>
+
+        <p class="center"><img src="./img/skos-ornitologia.png" alt="Ejemplo de representación de un índice de materias mediante SKOS" /></p>
+    </div>
+
+    <div class="slide">
+        <h1>Relaciones con las ontologías RDFS/OWL</h1>
+        <ul>
+            <li><strong>Diferencias</strong> entre SKOS Core y otras aplicaciones RDF como <acronym title="Friend Of A Friend" xml:lang="en">FOAF</acronym>
+                <ul>
+                    <li>En términos de lo que permiten modelar</li>
+                </ul>
+            </li>
+            <li>SKOS Core permite modelar <strong>conceptos</strong> / FOAF permite modelar <strong>objetos</strong> (personas, lugares, etc.)</li>
+        </ul>
+
+        <p class="center"><img src="./img/skos-foaf.png" alt="Ejemplo de relación de SKOS con FOAF" /></p>
+    </div>
+
+    <div class="slide">
+        <h1>Otras características</h1>
+        <ul>
+            <li>Etiquetado <strong>multilingüe</strong></li>
+            <li>Etiquetado <strong>simbólico</strong></li>
+            <li>Anotaciones / <strong>Documentación</strong></li>
+            <li>Ofrece soporte para <strong>colecciones</strong></li>
+            <li>Esquemas conceptuales</li>
+            <li><strong>Extensible</strong></li>
+            <li>Por supuesto que se pueden <strong>usar propiedades y clases de otros
+    vocabularios RDF</strong>
+                <ul>
+                    <li>Téminos <strong>DCMI</strong> (Dublin Core Metadata Initiative),
+                        <strong>FOAF</strong> (Friend Of A Friend), <strong>DOAP</strong> (Description Of A Project), etc.</li>
+                </ul>
+                <p></p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Dónde está SKOS Core</h1>
+
+        <p class="center"><img src="./img/skos-overview.png" alt="Vista global de SKOS" /></p>
+        <ul>
+            <li>SKOS Core complementa a OWL</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Más información</h1>
+        <dl>
+            <dt>Esta presentación está en</dt>
+            <dd><a href="https://espinr.github.io/talks/2005/1212-OWLSkosSEDIC-MA">http://www.w3c.es/Presentaciones/2005/1212-OWLSkosSEDIC-MA</a></dd>
+            <dt>Página principal de OWL, dentro de la Actividad de Web Semántica en
+  el W3C</dt>
+            <dd><a href="http://www.w3.org/2004/OWL">http://www.w3.org/2004/OWL</a></dd>
+            <dt>Página principal de SKOS Core</dt>
+            <dd><a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a></dd>
+            <dt>Oficina Española del W3C</dt>
+            <dd><a href="http://www.w3c.es">http://www.w3c.es</a></dd>
+            <dt>Escríbeme</dt>
+            <dd><a href="mailto:mlvarez@w3.org">mlvarez@w3.org</a></dd>
+        </dl>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 568">
+	<title>
+		General Principles of Device Independence Activities
+	</title>
+	<desc>The slides describes the general principles of the DI activities, with than adaptation process being influenced by content, and the selection or adaptation rules.</desc>
+	<metadata>
+		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:axsvg="http://www.w3.org/2001/svgRdf/axsvg-schema.rdf#">
+			<rdf:Description rdf.ID="FullSlide">
+				<axsvg:Contains>
+					<rdf:Bag>
+						<rdf:li rdf:resource="#application"/>
+						<rdf:li rdf:resource="#adaptation"/>
+						<rdf:li rdf:resource="#selection"/>
+						<rdf:li rdf:resource="#uri"/>
+						<rdf:li rdf:resource="#deliveryContext"/>
+						<rdf:li rdf:resource="#cloud"/>
+					</rdf:Bag>
+				</axsvg:Contains>
+			</rdf:Description>
+			<rdf:Description rdf:about="#application">
+				<rdf:Contains rdf:resource="#content"/>
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+			<rdf:Description rdf:about="#content">
+				<axsvg:Labelled>true</axsvg:Labelled>
+				<axsvg:IsConnected rdf:resource="#adaptation"/>
+			</rdf:Description>
+			<rdf:Description rdf:about="#selection">
+				<axsvg:Labelled>true</axsvg:Labelled>
+				<axsvg:IsConnected rdf:resource="#adaptation"/>
+			</rdf:Description>
+			<rdf:Description rdf:about="#adaptation">
+				<axsvg:Labelled>true</axsvg:Labelled>
+				<axsvg:IsConnected rdf:resource="#cloud"/>
+			</rdf:Description>
+			<rdf:Description rdf:about="#cloud">
+				<axsvg:LabelledBy rdf:resource="#cloudLabel"/>
+				<axsvg:IsConnected rdf:resource="#adaptation"/>
+			</rdf:Description>
+			<rdf:Description rdf:about="#connectionCloudToAdaptation">
+				<axsvg:Connects>
+					<rdf:Seq>
+						<rdf:li rdf:resource="#cloud"/>
+						<rdf:li rdf:resource="#adaptation"/>
+					</rdf:Seq>
+				</axsvg:Connects>
+			</rdf:Description>
+			<rdf:Description rdf:about="#connectionAdaptationToCloud">
+				<axsvg:Connects>
+					<rdf:Seq>
+						<rdf:li rdf:resource="#adaptation"/>
+						<rdf:li rdf:resource="#cloud"/>
+					</rdf:Seq>
+				</axsvg:Connects>
+			</rdf:Description>
+			<rdf:Description rdf:about="#uri">
+				<axsvg:Labelled>true</axsvg:Labelled>
+				<axsvg:IsConnected rdf:resource="#connectionCloudToAdaptation"/>
+			</rdf:Description>
+			<rdf:Description rdf:about="#deliveryContext">
+				<axsvg:Labelled>true</axsvg:Labelled>
+				<axsvg:IsConnected rdf:resource="#connectionCloudToAdaptation"/>
+			</rdf:Description>
+			<rdf:Description rdf:about="#presentationData">
+				<axsvg:Labelled>true</axsvg:Labelled>
+				<axsvg:IsConnected rdf:resource="#connectionAdaptationToCloud"/>
+			</rdf:Description>
+		</rdf:RDF>
+	</metadata>
+	<style type="text/css"><![CDATA[
+     path.cloud {stroke-width:2; fill:none;}
+     path.arrowWithHead, line.arrowWithHead { marker-end:url(#Triangle) }
+     line.greenArrowWithHead { marker-end:url(#TriangleGreen); opacity: 0.6 }
+     path.greenArrowWithHead { opacity: 0.7 }
+   ]]></style>
+	<defs>
+		<marker id="Triangle" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" markerWidth="4" markerHeight="5" orient="auto">
+			<desc>Arrowhead</desc>
+			<path class="arrow" fill="red" d="M 0 0 L 10 5 L 0 10 z"/>
+		</marker>
+		<marker id="TriangleGreen" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" markerWidth="4" markerHeight="5" orient="auto">
+			<desc>Green Arrowhead</desc>
+			<path class="greenarrow greenArrowWithHead " fill="red" d="M 0 0 L 10 5 L 0 10 z"/>
+		</marker>
+		<path id="cloud" class="cloud greenish" transform="scale(1,1.6) translate(-200,-210)" d="M232 131 c-17.052 9.211 -23.802 14.461 -27 21 -4.862 9.941 -5.153 28.986 0 39 3.41 6.626 17.59 8.374 21 15 0 0 0 0 0 0 M220 182 c-2.416 10.212 -3.166 14.712 -3 18 0.416 8.218 1.46 25.752 9 33 8.823 8.481 29.8 7.952 39 9 1.552 0.177 3.802 0.177 9 0 M229 146 c-7.113 -19.247 -7.863 -28.247 -3 -36 7.5 -11.956 29.463 -12.875 39 -15 9.61 -2.141 31.052 -7.084 42 -3 7.722 2.881 17.935 13.6 21 21 1.238 2.99 0 9.266 0 12 0 1.025 0 2.525 0 6 M319 122 c20.526 -1.885 29.526 -1.885 36 0 9.379 2.731 26.795 12.859 33 21 6.473 8.492 13.109 27.998 12 39 -1.021 10.136 -20.36 31.235 -18 33 0.2 0.149 0.95 -0.601 3 -3 M385 200 c6.919 15.86 8.419 23.36 6 30 -4.05 11.118 -18.692 22.141 -30 24 -10.335 1.7 -26.188 -3.928 -33 -12 -6.507 -7.711 -13.574 -23.925 -6 -33 0.508 -0.609 1.258 -0.609 3 0 M256 230 c8.258 13.339 12.758 18.589 18 21 11.371 5.23 34.113 3.489 45 0 6.244 -2.001 16.477 -11.169 21 -15 0.558 -0.472 1.308 -1.222 3 -3 "/>
+		<g id="selection">
+			<rect width="150" height="140" rx="20" ry="20" class="blueish dashed"/>
+			<text x="75" class="minor" style="text-anchor:middle">
+				<tspan x="75" dy="40">selection or</tspan>
+				<tspan x="75" dy="40">adaptation</tspan>
+				<tspan x="75" dy="40">rules</tspan>
+			</text>
+		</g>
+		<g id="adaptation">
+			<rect width="150" height="100" class="yellowish"/>
+			<text x="75" class="minor" style="text-anchor:middle">
+				<tspan x="75" dy="40">adaptation</tspan>
+				<tspan x="75" dy="40">process</tspan>
+			</text>
+		</g>
+		<g id="content">
+			<rect width="150" height="100" rx="20" ry="20" class="whitish dashed"/>
+			<text x="75" class="minor" style="text-anchor:middle">
+				<tspan x="75" dy="60">content</tspan>
+			</text>
+		</g>
+		<g id="application">
+			<rect width="170" height="200" class="empty dashed"/>
+			<text class="minor" style="text-anchor:middle" x="85" y="20">application</text>
+			<use xlink:href="#content" transform="translate(10,80)"/>
+		</g>
+		<g id="uri">
+			<rect width="150" height="120" rx="20" ry="20" class="empty"/>
+			<text x="75" class="minor" style="text-anchor:middle">
+				<tspan x="75" dy="30">URI</tspan>
+				<tspan x="75" dy="40">(web page</tspan>
+				<tspan x="75" dy="40">identifier)</tspan>
+			</text>
+		</g>
+		<g id="presentationData">
+			<rect width="150" height="70" rx="20" ry="20" class="empty"/>
+			<text x="75" class="minor" style="text-anchor:middle">
+				<tspan x="75" dy="30">presentation</tspan>
+				<tspan x="75" dy="30">data</tspan>
+			</text>
+		</g>
+		<g id="deliveryContext">
+			<rect width="150" height="70" rx="20" ry="20" class="empty dashed"/>
+			<text x="75" class="minor" style="text-anchor:middle">
+				<tspan x="75" dy="30">delivery</tspan>
+				<tspan x="75" dy="30">context</tspan>
+			</text>
+		</g>
+		<path id="WebPath" d="M200 100 c20 -50  180 -50 300 30"/>
+	</defs>
+	<!-- first all the boxes -->
+	<use xlink:href="#application" transform="translate(20,200)"/>
+	<use xlink:href="#adaptation" transform="translate(240,280)"/>
+	<use xlink:href="#selection" transform="translate(240,50)"/>
+	<use xlink:href="#uri" transform="translate(450,20)"/>
+	<use xlink:href="#deliveryContext" transform="translate(530,160)"/>
+	<use xlink:href="#presentationData" transform="translate(540,400)"/>
+	<use xlink:href="#cloud" transform="translate(800,370) scale(1.1)"/>
+	<text id="cloudLabel" class="major" transform="translate(590,80)">
+		<textPath startOffset="0%" xlink:href="#WebPath">World Wide Web</textPath>
+	</text>
+	<!-- now the horizontal arrows -->
+	<line class="arrow arrowWithHead dashed" x1="180" y1="330" x2="240" y2="330"/>
+	<line class="arrow arrowWithHead " x2="390" y2="310" x1="800" y1="310"/>
+	<line id="connectionCloudToAdaptation" class="arrow arrowWithHead " x1="390" y1="350" x2="820" y2="350"/>
+	<line id="connectionAdaptationToCloud" class="arrow arrowWithHead dashed" x1="315" y1="190" x2="315" y2="280"/>
+	<!-- The other arrows -->
+	<line class="greenarrow greenArrowWithHead " x1="515" y1="140" x2="505" y2="310"/>
+	<line class="greenarrow greenArrowWithHead  dashed" x1="600" y1="230" x2="620" y2="310"/>
+	<line class="greenarrow greenArrowWithHead " x1="620" y1="400" x2="600" y2="350"/>
+	<image x="830" y="180" width="92" height="58" xlink:href="../jpgs/prtapic.gif"/>
+	<image x="890" y="260" width="56" height="56" xlink:href="../pngs/smac.png"/>
+	<image x="880" y="350" width="37" height="86" xlink:href="../jpgs/indexp2.jpg"/>
+</svg>

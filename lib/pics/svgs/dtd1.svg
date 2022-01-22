@@ -1,0 +1,95 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN"
+  "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+<svg  width="960px" height="720px" >
+<defs>
+<style type="text/css">
+<![CDATA[
+rect {stroke:black;fill:white;}
+line {stroke:red;stroke-width:2}
+rect.box {stroke:none;fill:rgb(140, 189, 237)}
+text {font-family:Arial;font-size:20}
+
+]]>
+</style>
+</defs>
+
+<!-- **************  Screen Display Area  ******************** -->
+
+<!-- <rect style="fill:#bbffbb"  width="960" height="720"/> -->
+
+
+
+
+
+
+
+<g transform="translate(10,20)">
+<rect width="350" height="40"/>
+<text x="10" y="24"  style="color:black">&lt;?xml version="1.0"?></text>
+</g>
+
+<g transform="translate(10,70)">
+<rect width="450" height="40"/>
+<text x="10" y="24"  style="color:black">&lt;!DOCTYPE RootName SYSTEM "thedtd.dtd" > </text>
+</g>
+
+
+<g transform="translate(400,20)">
+<rect width="350" height="40"/>
+<text x="10" y="24"  style="color:red">Document Type Definition</text>
+</g>
+
+
+
+<g transform="translate(30,120)">
+
+
+<rect style="fill:yellow"  width="650" height="420"/>
+
+
+<g transform="translate(10,10)">
+<rect width="420" height="40"/>
+<text x="10" y="24"  style="color:blue">&lt;! ELEMENT ElementName ContentSpec ></text>
+</g>
+
+<g transform="translate(30,60)">
+<rect width="560" height="40"/>
+<text x="10" y="24"  style="color:blue">&lt;! ATTLIST ElementName AttName AttType AttDefaultDecl ></text>
+</g>
+
+<g transform="translate(10,110)">
+<rect width="420" height="40"/>
+<text x="10" y="24"  style="color:blue">&lt;! ELEMENT ElementName ContentSpec  ></text>
+</g>
+
+<g transform="translate(30,160)">
+<rect width="560" height="40"/>
+<text x="10" y="24"  style="color:blue">&lt;! ATTLIST ElementName AttName AttType AttDefaultDecl   ></text>
+</g>
+
+<g transform="translate(30,210)">
+<rect width="560" height="40"/>
+<text x="10" y="24"  style="color:blue">&lt;! ATTLIST ElementName AttName AttType AttDefaultDecl  ></text>
+</g>
+
+<g transform="translate(10,290)">
+<rect width="420" height="40"/>
+<text x="10" y="24"  style="color:red">&lt;!ENTITY EntityName "ReplacementText" ></text>
+</g>
+
+<g transform="translate(10,340)">
+<rect width="560" height="40"/>
+<text x="10" y="24"  style="color:red">&lt;!NOTATION NotationName SYSTEM NotationURI ></text>
+</g>
+
+</g>
+
+
+
+
+
+
+</svg>
+ 
+ 

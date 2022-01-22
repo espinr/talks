@@ -1,0 +1,379 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1010 810">
+	<title>Visual overview of the various w3c domains and activities</title>
+	<desc>A rough visual overview of the various activities, as a set of recursive ellipses.
+	      Ellipses are used to separate domains, included ellipses for activities, etc.</desc>
+	<!-- There are too many specialized styles here to burden the 'central' style file
+	     The slide looks o.k. on light background, too, provided the text.centre style is 
+	     correctly set in the included style sheet.
+  -->
+	<style type="text/css"><![CDATA[
+     rect       {stroke:black;fill:white;}
+     line       {stroke:red;stroke-width:2}
+     rect.box   {stroke:none;fill:rgb(140, 189, 237)}
+     
+     text        {font-family:Arial, Helvetica, sans-serif;  fill:#0C469C; stroke:none}
+	  text.centre {text-anchor:middle; stroke:none; fill:green}
+    
+    .domain {stroke:none;fill:yellow;}
+    .act    {stroke:none;fill:cyan;} 			 		 		   /* Activity */
+    .ig     {stroke:none;fill:darkseagreen;}				   /* Interest Group */
+    .wg     {stroke:none;fill:lavender;}					   /* Working Group */
+    .wgig   {stroke:none;fill:darkkhaki;}					   /* Working and Interest Group */		
+    .coo    {stroke:none;fill:red;fill-opacity:0.1}      /* Coordination Group */
+
+    text.s1  {font-size:18;text-anchor:middle}
+    text.s2  {font-size:12;text-anchor:middle}
+    text.s3  {font-size:12;text-anchor:middle}
+    text.coo {color: white; fill-opacity: 1; fill:red; font-weight: bold}
+    path.s5  {fill:blue;fill-opacity:0.15}
+    ]]></style>
+	<!-- For some reasons, the animation does not work. Maybe a plugin problem? Has to be tested
+	     again with the final version of the plugin -->
+	<defs>
+		<set xlink:href="#CoordinationGroups" attributeType="CSS" attributeName="visibility" to="visible" begin="Legend.click" fill="freeze"/>
+		<set xlink:href="#CoordinationGroups" attributeType="CSS" attributeName="visibility" to="visible" begin="Title.click" fill="freeze"/>
+		<set xlink:href="#CoordinationGroups" attributeType="CSS" attributeName="visibility" to="hidden" begin="CoordinationGroups.click" fill="freeze"/>
+	</defs>
+	<g id="Main">
+		<g transform="translate(443,325)" id="Title">
+        <svg viewBox="0 0 90 51" width="90" height="51">
+  <path d="M74.5,.2l0.8,5.1l-3,5.6c0,0-1.13-2.39-3-3.7c-1.6-1.1-2.6-1.4-4.2-1c-2.1,0.4-4.4,2.9-5.4,5.9c-1.2,3.6-1.2,5.4-1.3,7c-0.07,2.6,0.3,4.14,0.3,4.1s-1.8-3.3-1.8-8.1c0.01-3.5,0.6-6.6,2.2-9.7c1.41-2.7,3.5-4.4,5.4-4.5c1.9-0.2,3.4,0.7,4.6,1.7c1.2,1,2.5,3.3,2.5,3.4z"/>
+  <path d="M74.9,28.8c0,0-1.3,2.3-2.1,3.2c-.8.9-2.3,2.5-4.1,3.3c-1.8.8-2.7.9-4.5,0.8c-1.8-.2-3.4-1.2-4-1.6s-2-1.7-2.9-2.9c-.8-1.2-2.1-3.5-2.1-3.5s.7,2.4,1.2,3.3c.3.6,1.1,2.3,2.2,3.9c1.1,1.4,3.1,3.9,6.3,4.4c3.1,.6,5.3-.9,5.8-1.2c.5-.3,1.7-1.3,2.4-2.1c.7-.8,1.4-1.8,1.8-2.4c.3-.4,0.7-1.3.7-1.3z"/>
+  <path style="fill:#0C479D" d="M20.7,0.43l7.1,24.1l7.1-24.1h5.1l-11.7,39.6h-.5l-7.35-24.5l-7.35,24.5h-.5l-11.7-39.6h5.1l7.1,24.1l4.8-16.2l-2.3-7.9z"/>
+  <path style="fill:#0C479D" d="M54.6,27.3c0,3.6-1,6.6-2.9,9c-1.9,2.4-4.4,3.7-7.4,3.7c-2.3,0-4.3-0.7-5.9-2.2c-1.7-1.4-2.9-3.4-3.8-5.9l4-1.7c.6,1.5,1.4,2.7,2.3,3.5c1,.9,2.1,1.3,3.4,1.3c1.4,0,2.5-.8,3.5-2.3c.9-1.5,1.4-3.4,1.4-5.5c0-2.4-.5-4.2-1.5-5.5c-1.2-1.5-3-2.3-5.5-2.3h-2v-2.3l6.8-11.8h-8.2l-2.3,3.9h-1.5v-8.7h19.1v2.4l-7.2,12.5c2.5.8,4.5,2.3,5.8,4.4c1.3,2.1,2,4.7,1.9,7.5z"/>
+  <text x="78" y="10" style="font-size:13">&#174;</text>
+        </svg>
+		</g>
+		<!-- ************** Architecture ****************-->
+		<g class="arch" transform="translate(500,110)">
+			<desc>Architecture domain</desc>
+			<ellipse class="domain" rx="250" ry="100"/>
+			<text class="s1" y="75" x="-100">Architecture</text>
+			<g transform="translate(60,-75)">
+				<ellipse class="act" rx="30" ry="15"/>
+				<text class="s2" y="2">Jigsaw</text>
+			</g>
+			<g transform="translate(-90,-70)">
+				<ellipse class="act" rx="30" ry="15"/>
+				<text class="s2" y="3">URI</text>
+			</g>
+			<g transform="translate(0,62)">
+				<ellipse class="act" rx="30" ry="20"/>
+				<ellipse class="wg" rx="25" ry="15"/>
+				<text class="s3" y="2">DOM</text>
+			</g>
+			<g transform="translate(-120,0)">
+				<ellipse class="act" rx="90" ry="50"/>
+				<text class="s2">
+					<tspan x="-55">Web</tspan>
+					<tspan x="-55" dy="10">Services</tspan>
+				</text>
+				<g transform="translate(-20,-28)">
+					<ellipse class="wg" rx="45" ry="15"/>
+					<text class="s3" y="2">XML Protocol</text>
+				</g>
+				<g transform="translate(35,0)">
+					<ellipse class="wg" rx="45" ry="15"/>
+					<text class="s3" y="2">Architecture</text>
+				</g>
+				<g transform="translate(-20,28)">
+					<ellipse class="wg" rx="40" ry="15"/>
+					<text class="s3" y="2">Description</text>
+				</g>
+			</g>
+			<g transform="translate(100,0)">
+				<ellipse class="act" rx="100" ry="55"/>
+				<text class="s2">XML</text>
+				<g transform="translate(-20,-35)">
+					<ellipse class="wg" rx="30" ry="15"/>
+					<text class="s3" y="2">Core</text>
+				</g>
+				<g transform="translate(65,-15)">
+					<ellipse class="wg" rx="25" ry="15"/>
+					<text class="s3" y="2">Linking</text>
+				</g>
+				<g transform="translate(-60,0)">
+					<ellipse class="wg" rx="30" ry="15"/>
+					<text class="s3" y="2">Schema</text>
+				</g>
+				<g transform="translate(15,35)">
+					<ellipse class="wg" rx="30" ry="15"/>
+					<text class="s3" y="2">Query</text>
+				</g>
+			</g>
+		</g>
+		<!-- **************T and S ****************-->
+		<g class="ts" transform="translate(730,610)">
+			<desc>Technology &amp; Society domain</desc>
+			<ellipse class="domain" rx="250" ry="145"/>
+			<text class="s1" x="0" y="-100">Technology &amp; Society</text>
+			<g transform="translate(-125,-40)">
+				<ellipse class="act" rx="100" ry="55"/>
+				<text class="s2" x="14" y="-22">Semantic Web</text>
+				<g transform="translate(-48,0)">
+					<ellipse class="wg" rx="40" ry="15"/>
+					<text class="s3" y="2">RDF Core</text>
+				</g>
+				<g transform="translate(0,37)">
+					<ellipse class="ig" rx="25" ry="12"/>
+					<text class="s3" y="3">RDF</text>
+				</g>
+				<g transform="translate(43,0)">
+					<ellipse class="wg" rx="40" ry="15"/>
+					<text class="s3" y="3">Ontology</text>
+				</g>
+			</g>
+			<g transform="translate(-165,50)">
+				<ellipse class="act" rx="40" ry="25"/>
+				<ellipse class="wg" rx="35" ry="20"/>
+				<text class="s3" y="-8">XML</text>
+				<text class="s3" y="8">Encryption</text>
+			</g>
+			<g transform="translate(-75,50)">
+				<ellipse class="act" rx="40" ry="25"/>
+				<ellipse class="wg" rx="35" ry="20"/>
+				<text class="s3" y="-7">XML</text>
+				<text class="s3" y="8">Signature</text>
+			</g>
+			<g transform="translate(0,110)">
+				<ellipse class="act" rx="45" ry="27"/>
+				<ellipse class="wg" rx="40" ry="22"/>
+				<text class="s2" y="-8">XML Key</text>
+				<text class="s2" y="8">Management</text>
+			</g>
+			<g transform="translate(110,0)">
+				<ellipse class="act" rx="130" ry="40"/>
+				<text class="s2" x="-2" y="4">Privacy</text>
+				<g transform="translate(75,0)">
+					<ellipse class="wg" rx="50" ry="20"/>
+					<text y="-4" class="s3">P3P Policy &amp;</text>
+					<text y="10" class="s3"> Outreach</text>
+				</g>
+				<g transform="translate(-70,0)">
+					<ellipse class="wg" rx="40" ry="25"/>
+					<text y="-8" class="s3">P3P</text>
+					<text y="8" class="s3">Specification</text>
+				</g>
+			</g>
+		</g>
+		<!-- ************** WAI****************-->
+		<g class="wai" transform="translate(250,610)">
+			<desc>WAI</desc>
+			<ellipse class="domain" rx="200" ry="160"/>
+			<text class="s1" transform="translate(-115,20)">
+				<tspan x="0" dy="0">Web Accessibility</tspan>
+				<tspan x="0" dy="20">Initiative (WAI)</tspan>
+			</text>
+			<g transform="translate(0,90)">
+				<ellipse class="act" rx="120" ry="50"/>
+				<text class="s2" transform="translate(-38,-30)">
+					<tspan x="0">International</tspan>
+					<tspan x="0" dy="10">Program Office</tspan>
+				</text>
+				<g transform="translate(-45,10)">
+					<ellipse class="wg" rx="65" ry="25"/>
+					<text class="s3" y="3">Education &amp; Outreach</text>
+				</g>
+				<g transform="translate(55,-20)">
+					<ellipse class="ig" rx="30" ry="15"/>
+					<text class="s3" y="3">Interest</text>
+				</g>
+				<g transform="translate(55,20)">
+					<ellipse class="ig" rx="30" ry="15"/>
+					<text class="s3" y="3">R &amp; D</text>
+				</g>
+			</g>
+			<g transform="translate(0,-65)">
+				<ellipse class="act" rx="160" ry="70"/>
+				<text class="s2" y="3">Technical</text>
+				<g transform="translate(45,-40)">
+					<ellipse class="wg" rx="50" ry="20"/>
+					<text class="s3" y="2">Authoring Tools</text>
+				</g>
+				<g transform="translate(115,-5)">
+					<ellipse class="wg" rx="40" ry="20"/>
+					<text class="s3" y="2">User Agent</text>
+				</g>
+				<g transform="translate(40,43)">
+					<ellipse class="wg" rx="40" ry="20"/>
+					<text class="s3" y="2">Web Content</text>
+				</g>
+				<g transform="translate(-70,30)">
+					<ellipse class="wg" rx="60" ry="20"/>
+					<text class="s3" y="-1">Evaluation &amp; Repair</text>
+					<text class="s3" y="15">Tools</text>					
+				</g>
+				<g transform="translate(-70,-30)">
+					<ellipse class="wg" rx="60" ry="20"/>
+					<text class="s3" y="2">Protocols &amp; Formats</text>
+				</g>
+			</g>
+		</g>
+		<!-- ************** Document Formats ****************-->
+		<g class="ui" transform="translate(210,300)">
+			<desc>Document Formats</desc>
+			<ellipse class="domain" rx="210" ry="130"/>
+			<text x="-35" y="-20" class="s1">Document Formats</text>
+			<g transform="translate(-115,-65)">
+				<ellipse class="act" rx="55" ry="20"/>
+				<ellipse class="wg" rx="50" ry="15"/>
+				<text class="s2" y="3">Graphics (SVG)</text>
+			</g>
+			<g transform="translate(40,-80)">
+				<ellipse class="act" rx="60" ry="20"/>
+				<ellipse class="wg" rx="55" ry="15"/>
+				<text class="s2" x="0" y="2">HTML</text>
+			</g>
+			<g transform="translate(120,0)">
+				<ellipse class="act" rx="65" ry="40"/>
+				<text class="s2" y="2">Internationalization</text>
+				<g transform="translate(0,-25)">
+				  <ellipse class="wg" rx="20" ry="10"/>
+				  <text class="s2" y="3">I18N</text>
+				</g>
+				<g transform="translate(0,25)">
+				  <ellipse class="ig" rx="20" ry="10"/>
+				  <text class="s2" y="3">I18N</text>
+				</g>
+			</g>
+			<g transform="translate(50,90)">
+				<ellipse class="act" rx="30" ry="20"/>
+				<ellipse class="wg" rx="25" ry="15"/>
+				<text class="s2" y="3">Math</text>
+			</g>
+			<g transform="translate(-10,110)">
+				<ellipse class="act" rx="30" ry="15"/>
+				<text class="s2" y="3">Amaya</text>
+			</g>
+			<g transform="translate(-75,40)">
+				<ellipse class="act" rx="100" ry="40"/>
+				<text class="s2" y="-20">Style</text>
+				<g transform="translate(-50,0)">
+					<ellipse class="wg" rx="30" ry="15"/>
+					<text class="s3" y="3">XSL</text>
+				</g>
+				<g transform="translate(50,0)">
+					<ellipse class="wg" rx="30" ry="15"/>
+					<text class="s3" y="3">CSS</text>
+				</g>
+			</g>
+		</g>
+		<!-- ************** Interactive Devices ****************-->
+		<g class="ui" transform="translate(790,295)">
+			<desc>Interaction</desc>
+			<ellipse class="domain" rx="210" ry="128"/>
+			<text x="-5" y="30" class="s1">Interaction</text>
+			<g transform="translate(150,30)">
+				<ellipse class="wg" rx="30" ry="15"/>
+				<text class="s3" y="3">XForms</text>
+			</g>
+			<g transform="translate(-55,-45)">
+				<ellipse class="act" rx="110" ry="45"/>
+				<text class="s2" x="-20" y="-20">Device Independence</text>
+				<g transform="translate(-77,10)">
+					<ellipse class="wg" rx="23" ry="10"/>
+					<text class="s3" y="4">DI</text>
+				</g>
+				<g transform="translate(60,0)">
+					<ellipse class="ig" rx="45" ry="18"/>
+					<text class="s3" y="3">Mobile Access</text>
+				</g>
+				<g transform="translate(-10,20)">
+					<ellipse class="wg" rx="30" ry="15"/>
+					<text class="s3" y="3">CC/PP</text>
+				</g>
+			</g>
+			<g transform="translate(-25,80)">
+				<ellipse class="act" rx="85" ry="20"/>
+				<ellipse class="ig" rx="80" ry="15"/>
+				<text class="s2" y="3">Synchronized Multimedia</text>
+			</g>
+			<g transform="translate(130,-35)">
+				<ellipse class="act" rx="50" ry="20"/>
+				<ellipse class="wg" rx="45" ry="15"/>
+				<text class="s2" y="2">Voice Browser</text>
+			</g>
+		</g>
+		<g id="Legend" transform="translate(470,390)">
+			<g transform="scale(0.1)">
+				<rect x="-10" y="-10" style="fill:yellow" height="125" width="320"/>
+				<g transform="translate(0,0)">
+					<rect class="act" width="30" height="30"/>
+					<text x="35" y="25" style="font-size:24">Activity</text>
+				</g>
+				<g transform="translate(0,35)">
+					<rect class="ig" width="30" height="30"/>
+					<text x="35" y="25" style="font-size:24">Interest Group</text>
+				</g>
+				<g transform="translate(0,70)">
+					<rect class="wg" width="30" height="30"/>
+					<text x="35" y="25" style="font-size:24">Working Group</text>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g>
+		<desc>Activities outside a specific domain</desc>
+		<g transform="translate(490,270)">
+			<ellipse class="act" rx="60" ry="30"/>
+			<text class="s2" y="3">Quality Assurance</text>
+		</g>
+		<g transform="translate(490,470)">
+			<ellipse class="wg" rx="60" ry="30"/>
+			<text class="s2" y="3">Patent Policy</text>
+		</g>
+	</g>
+	<g>
+		<desc>Coordination groups as separate, overlapping ellipses</desc>
+		<g id="CoordinationGroups" style="visibility:hidden">
+			<g transform="translate(500,300)">
+				<desc>XML Coordination group</desc>
+				<ellipse class="coo" rx="230" ry="170"/>
+				<text x="80" y="-135" class="centre coo">XML</text>
+				<text x="80" y="-105" class="centre coo">Coordination Group</text>
+			</g>
+			<g transform="translate(300,300)">
+				<desc>Hypertext Coordination Group</desc>
+				<g transform="rotate(15)">
+					<ellipse class="coo" rx="240" ry="100"/>
+					<text x="-30" y="-10" class="centre coo">Hypertext Coordination Group</text>
+				</g>
+			</g>
+			<g transform="translate(500,250)">
+				<desc>Web Services Coordination Group</desc>
+				<g transform="rotate(50)">
+					<ellipse class="coo" rx="240" ry="100"/>
+					<text x="-30" y="-10" class="centre coo">Web Services Coordination Group</text>
+				</g>
+			</g>
+			<g transform="translate(220,350)">
+				<desc>WAI Coordination Group</desc>
+				<g transform="rotate(-30)">
+					<g transform="translate(100,200)">
+						<ellipse class="coo" rx="340" ry="100"/>
+						<text x="-50" y="-10" class="centre coo">WAI Coordination Group</text>
+					</g>
+				</g>
+			</g>
+			<g transform="translate(440,290)">
+				<desc>Metadata Coordination Group</desc>
+				<g transform="rotate(30)">
+					<g transform="translate(250,0)">
+						<ellipse class="coo" rx="340" ry="100"/>
+						<text x="-50" y="-10" class="centre coo">Semantic Web Coordination Group</text>
+					</g>
+				</g>
+			</g>
+			<g transform="translate(440,290)">
+				<desc>P3P Coordination Group</desc>
+				<g transform="rotate(50)">
+					<g transform="translate(250,0)">
+						<ellipse class="coo" rx="340" ry="100"/>
+						<text x="-50" y="-10" class="centre coo">P3P Coordination Group</text>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,507 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 920 510">
+    <title>Overview of the major W3C Recs</title>
+    <desc>A set of boxes for each of the major recs.</desc>
+    <metadata>
+        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:axsvg="http://www.w3.org/2001/svgRdf/axsvg-schema.rdf#">
+            <!-- Overall -->
+            <rdf:Description rdf:ID="#FullSlide">
+                <desc>Description of the full slide content</desc>
+                <axsvg:Contains>
+                    <rdf:Bag>
+                        <rdf:li rdf:resource="#MiddleBlock"/>
+                    </rdf:Bag>
+                </axsvg:Contains>
+            </rdf:Description>
+            <rdf:Description rdf:about="#stamp">
+                <axsvg:InFrontOf rdf:resource="#FullSlide"/>
+                <axsvg:Text>true</axsvg:Text>
+                <axsvg:AnimatedBy rdf:resource="#Stamping"/>
+            </rdf:Description>
+            <rdf:Descritpion rdf:ID="#Stamping">
+                <desc>Switches the visibility on or off on user click</desc>
+                <rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#AnimationDescription"/>
+                <rdf:AnimationSubject rdf:resource="#stamp"/>
+                <rdf:AnimationBegins>User clicks on the lower right hand corner of the architecture block</rdf:AnimationBegins>
+            </rdf:Descritpion>
+            <rdf:Description rdf:ID="#MiddleBlock">
+                <axsvg:InPosition>M</axsvg:InPosition>
+                <axsvg:Contains>
+                    <rdf:Bag>
+                        <rdf:li rdf:resource="#Architecture"/>
+                        <rdf:li rdf:resource="#TopBlock"/>
+                    </rdf:Bag>
+                </axsvg:Contains>
+            </rdf:Description>
+            <rdf:Description rdf:ID="#TopBlock">
+                <axsvg:OnTop rdf:resource="#Architecture"/>
+                <axsvg:Contains>
+                    <rdf:Bag>
+                        <rdf:li rdf:resource="#DocumentFormats"/>
+                        <rdf:li rdf:resource="#Interaction"/>
+                        <rdf:li rdf:resource="#TechnologyAndSociety"/>
+                    </rdf:Bag>
+                </axsvg:Contains>
+            </rdf:Description>
+            <!-- Architecture part -->
+            <rdf:Description rdf:about="#Architecture">
+                <axsvg:Shape>rectangle</axsvg:Shape>
+                <axsvg:LabelledBy>Architecture: XML and DOM</axsvg:LabelledBy>
+                <axsvg:Contains>
+                    <rdf:Bag>
+                        <rdf:li rdf:resource="#BottomRow"/>
+                        <rdf:li rdf:resource="#MiddleRow"/>
+                        <rdf:li rdf:resource="#TopRow"/>
+                    </rdf:Bag>
+                </axsvg:Contains>
+            </rdf:Description>
+            <rdf:Description rdf:about="#BottomRow">
+                <axsvg:Contains>
+                    <rdf:Bag>
+                        <rdf:li rdf:resource="#XML"/>
+                        <rdf:li rdf:resource="#DTD"/>
+                        <rdf:li rdf:resource="#Schemas"/>
+                        <rdf:li rdf:resource="#Namespaces"/>
+                        <rdf:li rdf:resource="#Infoset"/>
+                    </rdf:Bag>
+                </axsvg:Contains>
+            </rdf:Description>
+            <rdf:Description rdf:about="#MiddleRow">
+                <axsvg:OnTop rdf:resource="#BottomRow"/>
+                <axsvg:Contains>
+                    <rdf:Bag>
+                        <rdf:li rdf:resource="#Fragments"/>
+                        <rdf:li rdf:resource="#XSL"/>
+                        <rdf:li rdf:resource="#DOM"/>
+                        <rdf:li rdf:resource="#XLink"/>
+                        <rdf:li rdf:resource="#XBase"/>
+                    </rdf:Bag>
+                </axsvg:Contains>
+            </rdf:Description>
+            <rdf:Description rdf:about="#TopRow">
+                <axsvg:OnTop rdf:resource="#MiddleRow"/>
+                <axsvg:Contains>
+                    <rdf:Bag>
+                        <rdf:li rdf:resource="#XInclude"/>
+                        <rdf:li rdf:resource="#Query"/>
+                        <rdf:li rdf:resource="#XMLP"/>
+                        <rdf:li rdf:resource="#WSDL"/>
+                    </rdf:Bag>
+                </axsvg:Contains>
+            </rdf:Description>
+            <rdf:Description rdf:about="#DocumentFormats">
+                <axsvg:Contains>
+                    <rdf:Bag>
+                        <rdf:li rdf:resource="#XHTML"/>
+                        <rdf:li rdf:resource="#MathML"/>
+                        <rdf:li rdf:resource="#SVG"/>
+                        <rdf:li rdf:resource="#CSS"/>
+                    </rdf:Bag>
+                </axsvg:Contains>
+            </rdf:Description>
+            <rdf:Description rdf:about="#Interaction">
+                <axsvg:Contains>
+                    <rdf:Bag>
+                        <rdf:li rdf:resource="#SMIL"/>
+                        <rdf:li rdf:resource="#XForms"/>
+                        <rdf:li rdf:resource="#CCPP"/>
+                        <rdf:li rdf:resource="#Voice"/>
+                        <rdf:li rdf:resource="#Speech"/>
+                    </rdf:Bag>
+                </axsvg:Contains>
+            </rdf:Description>
+            <rdf:Description rdf:about="#TechnologyAndSociety">
+                <axsvg:Contains>
+                    <rdf:Bag>
+                        <rdf:li rdf:resource="#KeyManagement"/>
+                        <rdf:li rdf:resource="#XMLSignature"/>
+                        <rdf:li rdf:resource="#XMLEncryption"/>
+                        <rdf:li rdf:resource="#P3P"/>
+                        <rdf:li rdf:resource="#RDF"/>
+                        <rdf:li rdf:resource="#WebOnt"/>
+                    </rdf:Bag>
+                </axsvg:Contains>
+            </rdf:Description>
+            <!-- Internationalization -->
+            <rdf:Description rdf:about="#Internationalization">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:AtRight rdf:resource="#MiddleBlock"/>
+            </rdf:Description>
+            <!-- WAI -->
+            <rdf:Description rdf:about="#WebAccessibility">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:AtLeft rdf:resource="#MiddleBlock"/>
+            </rdf:Description>
+            <rdf:Description rdf:about="#Infoset">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#XInclude">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#Query">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#XMLP">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#Fragments">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#XSL">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#DOM">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#XLink">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#XBase">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#WSDL">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#XML">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#DTD">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#Schemas">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#Namespaces">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <!-- Document Formats -->
+            <rdf:Description rdf:about="#XHTML">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#MathML">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#SVG">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#CSS">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <!-- Interaction -->
+            <rdf:Description rdf:about="#SMIL">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#XForms">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#CCPP">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#Voice">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#Speech">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <!-- T and S -->
+            <rdf:Description rdf:about="#KeyManagement">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#XMLSignature">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#XMLEncryption">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#P3P">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#RDF">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+            <rdf:Description rdf:about="#WebOnt">
+                <axsvg:Labelled>true</axsvg:Labelled>
+                <axsvg:Shape>rectangle</axsvg:Shape>
+            </rdf:Description>
+        </rdf:RDF>
+    </metadata>
+    <defs>
+        <set xlink:href="#stamp" attributeType="CSS" attributeName="visibility" to="visible" begin="stampOn.click" fill="freeze"/>
+        <set xlink:href="#stampOff" attributeType="CSS" attributeName="visibility" to="visible" begin="stampOn.click" fill="freeze"/>
+        <set xlink:href="#stampOn" attributeType="CSS" attributeName="visibility" to="hidden" begin="stampOn.click" fill="freeze"/>
+        <set xlink:href="#stamp" attributeType="CSS" attributeName="visibility" to="hidden" begin="stampOff.click" fill="freeze"/>
+        <set xlink:href="#stampOff" attributeType="CSS" attributeName="visibility" to="hidden" begin="stampOff.click" fill="freeze"/>
+        <set xlink:href="#stampOn" attributeType="CSS" attributeName="visibility" to="visible" begin="stampOff.click" fill="freeze"/>
+        <filter id="effect">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+            <feOffset in="blur" dx="4" dy="4" result="offsetBlur"/>
+            <feMerge>
+                <feMergeNode in="offsetBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <style type="text/css"><![CDATA[
+        text.stamp, tspan.stamp {fill:red; stroke:red; font-size:60; text-anchor:middle; opacity:0.7 }
+        rect.stamp {fill:none; stroke:red; opacity:0.7  }
+        rect.yellowish, rect.whitish { filter: url(#effect) }
+    ]]></style>
+    <!--  ************************** Architecture ******************************-->
+    <g transform="scale(0.9) translate(100,350)" id="Architecture">
+        <desc>Architecture domain recs</desc>
+        <rect class="arc" width="825" height="190"/>
+        <!-- this is a trick to get the interaction on the stamps; it is not visible to the user! -->
+        <rect class="arc" width="100" height="100" x="725" y="90" id="stampOn" style="visibility:visible"/>
+        <rect class="arc" width="100" height="100" x="725" y="90" id="stampOff" style="visibility:hidden"/>
+        <text x="100" y="180" class="major">Architecture: XML and DOM</text>
+        <!-- Bottom row -->
+        <g transform="translate(68,0)" id="BottomRow">
+            <desc>Bottom row of the architectural recs</desc>
+            <g transform="translate(10,100)" id="XML">
+                <rect class="yellowish" width="100" height="30"/>
+                <text x="50" y="24" class="rec">XML 1.0</text>
+            </g>
+            <g transform="translate(120,100)" id="DTD">
+                <rect class="yellowish" width="120" height="30"/>
+                <text x="60" y="24" class="rec">XML DTD</text>
+            </g>
+            <g transform="translate(250,100)" id="Schemas">
+                <rect class="yellowish" width="150" height="30"/>
+                <text x="75" y="24" class="rec">XML Schema</text>
+            </g>
+            <g transform="translate(410,100)" id="Namespaces">
+                <rect class="yellowish" width="150" height="30"/>
+                <text x="75" y="24" class="rec">Namespaces</text>
+            </g>
+            <g transform="translate(570,100)" id="Infoset">
+                <rect class="yellowish" width="120" height="30"/>
+                <text x="60" y="24" class="rec" text-align="middle">XML Infoset</text>
+            </g>
+        </g>
+        <!-- Middle row -->
+        <g transform="translate(50,0)" id="MiddleRow">
+            <desc>Middle row of the architectural recs</desc>
+            <g transform="translate(0,60)" id="Fragments">
+                <rect class="yellowish" width="160" height="30"/>
+                <text x="80" y="24" class="cprec">XML Fragments</text>
+            </g>
+            <g transform="translate(170,60)" id="XSL">
+                <rect class="yellowish" width="200" height="30"/>
+                <text x="100" y="24" class="rec">
+                    <tspan class="rec">XSL/XSLT/XPath 1.0</tspan>
+                </text>
+            </g>
+            <g transform="translate(380,60)" id="DOM">
+                <rect class="yellowish" width="90" height="30"/>
+                <text x="45" y="24" class="rec">DOM 1,2</text>
+            </g>
+            <g transform="translate(480,60)" id="XLink">
+                <rect class="yellowish" width="140" height="30"/>
+                <text x="70" y="24" class="rec">XLink/XPointer</text>
+            </g>
+            <g transform="translate(630,60)" id="XBase">
+                <rect class="yellowish" width="110" height="30"/>
+                <text x="55" y="24" class="rec">XML Base</text>
+            </g>
+        </g>
+        <!-- Top row -->
+        <g transform="translate(45,0)" id="TopRow">
+            <desc>Middle row of the architectural recs</desc>
+            <g transform="translate(0,20)" id="XInclude">
+                <rect class="yellowish" width="100" height="30"/>
+                <text x="50" y="24" class="cprec">XInclude</text>
+            </g>
+            <g transform="translate(110,20)" id="Query">
+                <rect class="whitish" width="120" height="30"/>
+                <text x="60" y="24" class="wd">XML Query</text>
+            </g>
+            <g transform="translate(240,20)" id="XSL">
+                <rect class="whitish" width="150" height="30"/>
+                <text x="75" y="24" class="wd">
+                    XSLT/XPath 2.0
+                </text>
+            </g>
+            <g transform="translate(400,20)" id="XMLP">
+                <rect class="whitish" width="130" height="30"/>
+                <text x="65" y="24" class="wd">SOAP 1.2</text>
+            </g>
+            <g transform="translate(540,20)" id="WSDL">
+                <rect class="whitish" width="130" height="30"/>
+                <text x="65" y="24" class="wd">Web Services</text>
+            </g>
+            <g transform="translate(680,20)" id="DOM">
+                <rect class="whitish" width="70" height="30"/>
+                <text x="35" y="24" class="wd">DOM 3</text>
+            </g>
+        </g>
+    </g>
+    <!--  ************************** Document Formats ******************************-->
+    <g transform="translate(90,00)" id="DocumentFormats">
+        <desc>Document Formats Domain recs</desc>
+        <rect class="df" width="234" height="310"/>
+        <text x="10" y="30" class="major">
+            <tspan x="10" dy="0">Document</tspan>
+            <tspan x="30" dy="30">Formats</tspan>
+        </text>
+        <g transform="translate(0,10)">
+            <g transform="translate(10,60)" id="XHTML">
+                <rect class="yellowish" width="160" height="30"/>
+                <text x="80" y="24" class="rec">XHTML 1.0, 1.1</text>
+            </g>
+            <g transform="translate(10,100)" id="XHTML">
+                <rect class="whitish" width="160" height="30"/>
+                <text x="80" y="24" class="wd">XHTML 2.0</text>
+            </g>
+            <g transform="translate(10,140)" id="MathML">
+                <rect class="yellowish" width="160" height="30"/>
+                <text x="80" y="24" class="rec">MathML</text>
+            </g>
+            <g transform="translate(10,180)" id="SVG">
+                <rect class="yellowish" width="160" height="30"/>
+                <text x="80" y="24" class="rec">SVG 1.0, 1.1</text>
+            </g>
+            <g transform="translate(10,220)" id="SVG1_1">
+                <rect class="whitish" width="160" height="30"/>
+                <text x="80" y="24" class="wd">SVG 1.2, 2.0</text>
+            </g>
+            <g transform="translate(10,260)" id="CSS">
+                <rect class="yellowish" width="160" height="30"/>
+                <text x="80" y="24" class="rec">CSS</text>
+            </g>
+        </g>
+    </g>
+    <!--  ************************** Interaction ******************************-->
+    <g transform="translate(344,0)" id="Interaction">
+        <desc>Interaction recs</desc>
+        <rect class="id" width="234" height="310"/>
+        <text x="10" y="40" class="major">
+            <tspan x="10" dy="0">Interaction</tspan>
+        </text>
+        <g transform="translate(0,10)">
+            <g transform="translate(10,60)" id="SMIL">
+                <rect class="yellowish" width="140" height="30"/>
+                <text x="70" y="24" class="rec">SMIL</text>
+            </g>
+            <g transform="translate(10,100)" id="XForms">
+                <rect class="yellowish" width="140" height="30"/>
+                <text x="70" y="24" class="cprec">XForms</text>
+            </g>
+            <g transform="translate(10,140)" id="CCPP">
+                <rect class="yellowish" width="140" height="30"/>
+                <text x="70" y="24" class="cprec">CC/PP</text>
+            </g>
+            <g transform="translate(10,180)" id="Voice">
+                <rect class="whitish" width="140" height="30"/>
+                <text x="70" y="24" class="wd">VoiceXML</text>
+            </g>
+            <g transform="translate(10,220)" id="Speech">
+                <rect class="whitish" width="140" height="30"/>
+                <text x="70" y="24" class="wd">Speech</text>
+            </g>
+        </g>
+    </g>
+    <!--  ************************** T and S ******************************-->
+    <g transform="translate(598,0)" id="TechnologyAndSociety">
+        <desc>Technology and Society domain recs</desc>
+        <rect class="ts" width="234" height="310"/>
+        <text x="10" y="30" class="major">
+            <tspan x="10" dy="0">Technology &amp;</tspan>
+            <tspan x="30" dy="30">Society</tspan>
+        </text>
+        <g transform="translate(0,10)">
+            <g transform="translate(10,60)" id="XMLSignature">
+                <rect class="yellowish" width="190" height="30"/>
+                <text x="95" y="24" class="rec">Signatures</text>
+            </g>
+            <g transform="translate(10,100)" id="XMLEncryption">
+                <rect class="yellowish" width="190" height="30"/>
+                <text x="95" y="24" class="rec">Encryption</text>
+            </g>
+            <g transform="translate(10,140)" id="KeyManagement">
+                <rect class="whitish" width="190" height="30"/>
+                <text x="95" y="24" class="wd">Key Management</text>
+            </g>
+            <g transform="translate(10,180)" id="P3P">
+                <rect class="yellowish" width="190" height="30"/>
+                <text x="95" y="24" class="rec">P3P</text>
+            </g>
+            <g transform="translate(10,220)" id="RDF">
+                <rect class="yellowish" width="190" height="30"/>
+                <text x="95" y="24" class="rec">RDF
+                </text>
+            </g>
+            <g transform="translate(10,260)" id="WebOnt">
+                <rect class="whitish" width="190" height="30"/>
+                <text x="95" y="24" class="wd">RDFS, OWL</text>
+            </g>
+        </g>
+    </g>
+    <!--  **************************** WAI ************************ -->
+    <!--
+    <g transform="translate(848,0)" id="WebAccessibility">
+        <rect class="ac" width="55" height="485"/>
+        <defs>
+            <path id="acbase" d="M 18 25 L 18 440"/>
+        </defs>
+        <text class="major">
+            <textPath xlink:href="#acbase" startOffset="10%">Web Accessibility Initiative</textPath>
+        </text>
+    </g>
+    <g transform="translate(20,0)" id="Internationalization">
+        <rect class="in" width="55" height="485"/>
+        <defs>
+            <path id="inbase" d="M 35 390 L 35 4"/>
+        </defs>
+        <text class="major">
+            <textPath xlink:href="#inbase">Internationalization</textPath>
+        </text>
+    </g>
+    -->
+    <defs>
+        <filter id="Dilate">
+            <desc>Just a small filter to make the 'stamp' effect more realistic...</desc>
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+        </filter>
+    </defs>
+    <g transform="translate(200,60) rotate(20)" id="stamp" style="visibility:hidden" filter="url(#Dilate)">
+        <desc>A stamp-like figure the activities which 'supervise' all others</desc>
+        <rect class="stamp" width="600" height="320" y="-60" rx="20" ry="20"/>
+        <text class="stamp">
+            <tspan x="300" y="0">Accessibility</tspan>
+            <tspan x="300" dy="60">Internationalization</tspan>
+            <tspan x="300" dy="60">Device Independence</tspan>
+            <tspan x="300" dy="60">Quality Assurance</tspan>
+            <tspan x="300" dy="60">Technical Architecture</tspan>
+        </text>
+    </g>
+</svg>

@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- Generator: Mayura Draw 3.6 -->
+<svg xml:space="preserve" viewBox="0 0 583 74">
+<desc>BasicModel.pdx</desc>
+<ellipse class="lightGreenish" style="stroke:none" transform="matrix(1 0 0 -1 83.9 769.2)" cx="41.935" cy="732.47" rx="115.455" ry="27.609"/>
+<text transform="translate(30) matrix(1 0 0 1 -8.142 -678.2)" class="reddish"><tspan x="60.613" y="723.275">Resource</tspan></text>
+<rect class="lightGreenish" transform="matrix(1 0 0 -1 26.09 787.3)" x="381.107" y="734.776" width="166.854" height="31.585"/>
+<text transform="translate(50) matrix(1 0 0 1 5.183 -681.9)" class="reddish"><tspan x="408.976" y="726.991">Value</tspan></text>
+<path class="yellowish" style="stroke-width:3"
+d="M250.696 37.502
+l149.564 0
+"/>
+<path class="yellowish" style="stroke:none"
+d="M400.26 37.502
+l0 1.5
+-27 7.5
+0 -18
+27 7.5
+z"/>
+<text transform="matrix(1 0 0 1 -5.929 -712.4)" class="reddish"><tspan x="292.855" y="742.784">Property</tspan></text>
+</svg>

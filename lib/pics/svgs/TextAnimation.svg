@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="no"?>
+<svg height="180" width="320" >
+<g>
+<defs>
+	<filter id="f1" x="0" y="0" width="320" height="180">
+	<feDiffuseLighting in="SourceGraphic" result="lamp" lightColor="white" diffuseConstant=".85" surfaceScale="10" resultScale=".2" >
+		<feSpotLight x="50" y="150" z="10" pointsAtX="150" pointsAtY="80" pointsAtZ="0" specularExponent="10">
+			<animate attributeName="pointsAtX" values="-40;80;-40" dur="4s" repeatCount="indefinite"/>
+		</feSpotLight>		
+		<animateColor attributeName="lightColor" values="white;lime;green;white;lime" dur="4s" repeatCount="indefinite"/>
+	</feDiffuseLighting>
+	
+	<feDiffuseLighting in="SourceGraphic"  lightColor="white"  diffuseConstant=".65" surfaceScale="10" resultScale=".2" >
+		<feSpotLight x="250" y="150" z="10" pointsAtX="150" pointsAtY="80" pointsAtZ="0" specularExponent="10">
+			<animate attributeName="pointsAtX" values="200;350;200" dur="4s" repeatCount="indefinite"/>
+		</feSpotLight>		
+		<animateColor attributeName="lightColor" values="white;red;green;red;white" begin=".1s" dur="4.5s" repeatCount="indefinite"/>
+	</feDiffuseLighting>
+	
+	<feComposite in2="lamp" result="lamp" operator="arithmetic" k2="1" k3="1"/>
+	<feDiffuseLighting in="SourceGraphic" result="lamp3" lightColor="white" diffuseConstant=".65" surfaceScale="10" resultScale=".2">
+		<feSpotLight x="150" y="150" z="10" pointsAtX="150" pointsAtY="80" pointsAtZ="0" specularExponent="10">
+			<animate attributeName="pointsAtX" values="0;300;0" dur="8s" repeatCount="indefinite"/>
+		</feSpotLight>
+		<animateColor attributeName="lightColor" values="white;red;white;red;white" begin=".2" dur="3s" repeatCount="indefinite"/>
+	</feDiffuseLighting>
+	
+	<feComposite in2="lamp" result="lamp" operator="arithmetic" k2="1" k3="1"/>
+	<feDiffuseLighting in="SourceGraphic" result="lamp4" lightColor="red" diffuseConstant=".65" surfaceScale="10" resultScale=".2" >
+		<feSpotLight x="152" y="150" z="10" pointsAtX="150" pointsAtY="80" pointsAtZ="0"
+		 specularExponent="10">
+			<animate attributeName="pointsAtX" values="300;0;300" dur="8s" repeatCount="indefinite"/>
+		</feSpotLight>
+		<animateColor attributeName="lightColor" values="red;white;green;white;red" begin=".3s" dur="5s" repeatCount="indefinite"/>
+	</feDiffuseLighting>
+	
+	<feComposite in2="lamp" result="lamp" operator="arithmetic" k2="1" k3="1"/>
+	</filter>
+</defs>
+
+<text style=" fill:red;stroke-width:4;stroke:red;font-size:96;filter:url(#f1);"
+  x="0" y="100"> W 3 C </text>
+<circle style="fill:blue" cx="50" cy="150" r="4"/>
+<circle style="fill:red"  cx="150" cy="150" r="4"/>
+<circle style="fill:pink" cx="154" cy="150" r="4"/>
+<circle style="fill:green" cx="250" cy="150" r="4"/>
+</g>
+</svg>
+

@@ -1,0 +1,107 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN"
+  "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+<svg  width="960px" height="720px" >
+<defs>
+<style type="text/css">
+<![CDATA[
+rect {stroke:black;fill:white;}
+line {stroke:red;stroke-width:2}
+rect.box {stroke:none;fill:rgb(140, 189, 237)}
+text {font-family:Arial;font-size:20}
+
+]]>
+</style>
+</defs>
+
+<!-- **************  Screen Display Area  ******************** -->
+
+<!-- <rect style="fill:#bbffbb"  width="960" height="720"/> -->
+
+
+
+
+
+
+
+<g transform="translate(10,20)">
+<rect width="350" height="40"/>
+<text x="10" y="24"  style="color:black">&lt;?xml version="1.0"?></text>
+</g>
+
+<g transform="translate(10,70)">
+<rect width="350" height="40"/>
+<text x="10" y="24"  style="color:black">&lt;!DOCTYPE exam [ </text>
+</g>
+
+
+<g transform="translate(400,20)">
+<rect width="350" height="40"/>
+<text x="10" y="24"  style="color:red">Document Type Definition</text>
+</g>
+
+
+
+<g transform="translate(30,120)">
+
+
+<rect style="fill:yellow"  width="500" height="360"/>
+
+
+<g transform="translate(10,10)">
+<rect width="380" height="40"/>
+<text x="10" y="24"  style="color:blue">&lt;!ELEMENT exam (student , qapair*) ></text>
+</g>
+
+<g transform="translate(30,60)">
+<rect width="440" height="40"/>
+<text x="10" y="24"  style="color:blue">&lt;!ATTLIST exam paper CDATA #REQUIRED></text>
+</g>
+
+<g transform="translate(10,110)">
+<rect width="380" height="40"/>
+<text x="10" y="24"  style="color:blue">&lt;!ELEMENT student (#PCDATA) ></text>
+</g>
+
+<g transform="translate(10,160)">
+<rect width="380" height="40"/>
+<text x="10" y="24"  style="color:blue">&lt;!ELEMENT qapair (question,answer) ></text>
+</g>
+
+<g transform="translate(30,210)">
+<rect width="460" height="40"/>
+<text x="10" y="24"  style="color:blue">&lt;!ATTLIST qapair number CDATA #REQUIRED></text>
+</g>
+
+<g transform="translate(10,260)">
+<rect width="380" height="40"/>
+<text x="10" y="24"  style="color:blue">&lt;!ELEMENT question (#PCDATA) ></text>
+</g>
+
+<g transform="translate(10,310)">
+<rect width="380" height="40"/>
+<text x="10" y="24"  style="color:blue">&lt;!ELEMENT answer (#PCDATA) ></text>
+</g>
+
+</g>
+
+
+<g transform="translate(10,500)">
+<rect width="150" height="40"/>
+<text x="10" y="24"  style="color:black">] ></text>
+</g>
+
+<g transform="matrix(1 0 0 1 800 300)">
+<a xlink:href="../svgs/tomorrow.svg">
+<path style="stroke:none;fill:#3717ff"
+d="M 10 0 L 20 10, 15 10, 15 13, 5 13,5 10, 0 10,10 0 z" />
+</a>
+</g>
+
+
+
+</svg>
+ 
+ 

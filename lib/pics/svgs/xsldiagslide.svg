@@ -1,0 +1,113 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg viewBox="0 0 800 400">
+  <title>Schematic view of an XSLT Transformation process</title>
+	<desc>Boxes with arrows: XML to a box on XSLT, which also inputs from a box with XSLT Definition and XPath;
+	this box points to an XML output, which in turns points at an XSL FO box. The XML output box has also
+	a back link to the beginning</desc>
+  <rect width="800" height="400" class="background" />
+  <g transform="scale(0.9) translate(0,-120)">
+    <g transform="translate(10,110)">
+      <g transform="translate(230,10)">
+        <rect class="yellowish" width="180" height="70" />
+        <text x="10" y="30" class="reddish">XSLT Definition</text>
+        <text x="10" y="60" class="reddish">XPath Pattern</text>
+      </g>
+
+      <line class="arrow" x1="320" y1="80" x2="320" y2="160" />
+
+      <g transform="translate(320,160)">
+        <g transform="rotate(90)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <g transform="translate(10,160)">
+        <rect class="yellowish" width="180" height="70" />
+        <text x="10" y="40">XML
+        Document</text>
+      </g>
+
+      <line class="arrow" x1="190" y1="195" x2="230" y2="195" />
+
+      <g transform="translate(230,195)">
+        <g transform="rotate(0)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <g transform="translate(230,160)">
+        <rect class="yellowish" width="180" height="70" />
+
+        <text x="10" y="30">XSLT</text>
+
+        <text x="10" y="60">
+        Transformation</text>
+      </g>
+
+      <line class="arrow" x1="410" y1="195" x2="460" y2="195" />
+
+      <g transform="translate(460,195)">
+        <g transform="rotate(0)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <g transform="translate(460,160)">
+        <rect class="yellowish" width="150" height="70" />
+
+        <text x="10" y="30">Result</text>
+
+        <text x="10" y="60">Tree</text>
+      </g>
+
+      <line class="arrow" x1="610" y1="195" x2="670" y2="195" />
+
+      <g transform="translate(670,195)">
+        <g transform="rotate(0)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <g transform="translate(670,160)">
+        <rect class="yellowish" width="180" height="70" />
+
+        <text x="10" y="30" class="reddish">XSL-FO</text>
+        <text x="10" y="60" class="reddish">
+        Formatting</text>
+      </g>
+
+      <line class="arrow" x1="535" y1="230" x2="535" y2="270" />
+
+      <g transform="translate(535,270)">
+        <g transform="rotate(90)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <g transform="translate(460,270)">
+        <rect class="yellowish" width="180" height="140" />
+
+        <text x="10" y="30">XML</text>
+
+        <text x="10" y="60">XSL</text>
+
+        <text x="10" y="90">(X)HTML</text>
+
+        <text x="10" y="120">Documents</text>
+      </g>
+
+      <line x1="460" y1="340" x2="100" y2="340" />
+
+      <line class="arrow" x1="100" y1="340" x2="100" y2="230" />
+
+      <g transform="translate(100,230)">
+        <g transform="rotate(270)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
+

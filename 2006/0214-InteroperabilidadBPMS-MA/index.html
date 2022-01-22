@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN"
+      "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Interoperabilidad al Cubo</title>
+    <link href="http://purl.org/dc" rel="schema.dc" />
+    <meta content="Interoperabilidad al Cubo" name="dc.title" />
+    <meta content="Martín Álvarez" name="dc.creator" />
+    <meta content="2005-02-14" name="dc.date" />
+    <meta content="W3C Oficina Española" name="dc.publisher" />
+    <meta content="http://www.w3.org/Consortium/Legal/copyright-documents" name="dc.rights" />
+    <meta name="copyright" content="Copyright 2006 W3C Oficina Española" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="../../lib/Slidy/css/show.css" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="../../lib/Slidy/css/w3c-blue.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../lib/Slidy/css/print.css" />
+    <script type="text/javascript" src="../../lib/Slidy/js/slidy.js">
+    </script>
+    <style type="text/css">
+        .center {
+            text-align: center;
+        }
+        
+        .imagen-left {
+            float: left;
+        }
+        
+        .imagen-right {
+            float: right;
+            margin-right: 1em;
+            clear: both;
+        }
+        
+        dl {
+            margin-left: 2em;
+        }
+        
+        strong {
+            color: #B22222;
+        }
+        
+        p.cita-right {
+            float: right;
+            width: 15em;
+            margin-right: 1em;
+            background-color: #FFD700;
+            padding: 0.5em;
+        }
+        
+        p.cita-right cite {
+            font-weight: bold;
+        }
+        
+        samp {
+            color: Green;
+            font-weight: bold;
+        }
+        
+        h1 {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <img id="head-icon" alt="Grfico con 4 cuadrados coloreados" src="../../lib/Slidy/img/icon-blue.png" /> <object id="head-logo" title="W3C logo" type="image/svg+xml" data="../../lib/Slidy/img/w3c-logo-blue.svg">
+  <img alt="W3C logo" id="head-logo-fallback"
+  src="../../lib/Slidy/img/w3c-logo-blue.gif" /></object>
+    </div>
+    <!-- La principal -->
+
+    <div class="slide cover">
+        <img src="../../lib/Slidy/img/keys.jpg" alt="Imagen de la portada (teclas W3C)" class="cover" /><br />
+
+
+        <h1>Interoperabilidad<sup>3</sup></h1>
+
+        <p><a title="Página principal del congreso" href="http://iitgroup.com/BPMS2006"><strong>II Congreso Nacional <acronym
+title="Business Process Management Systems">BPMS</acronym> 2006</strong></a> - <a title="Página principal del Club BPM" href="http://www.club-bpm.com">Club <acronym
+title="Business Process Management Systems">BPM</acronym></a></p>
+
+        <p><a href="http://www.w3c.es/Personal/Martin" title="Página personal de Martín Álvarez Espinar">Martín Álvarez
+Espinar</a> - <a href="http://www.w3c.es" title="Página principal de la Oficina en España del W3C">Oficina Española
+W3C</a></p>
+    </div>
+    <!-- Fin de la diapo principal -->
+
+    <div class="slide">
+        <h1>Interoperabilidad<sup>3</sup></h1>
+
+        <p><a title="Página principal del congreso" href="http://iitgroup.com/BPMS2006"><strong>II Congreso Nacional <acronym
+title="Business Process Management Systems">BPMS</acronym> 2006</strong></a> - <a title="Página principal del Club BPM" href="http://www.club-bpm.com">Club <acronym
+title="Business Process Management Systems">BPM</acronym></a></p>
+
+        <p>Madrid, 14 y 15 de Febrero de 2006 <br /> Centro de Congresos Príncipe Felipe (Hotel Auditorium)</p>
+    </div>
+
+    <div class="slide">
+        <h1>¿Qué es el W3C?</h1>
+
+        <p><img class="imagen-right" alt="El mundo interconectado mediante la web" src="img/globe.png" /></p>
+        <ul>
+            <li>World Wide Wide Consortium</li>
+            <li>Fundado en 1994 por el creador de la Web Tim Berners-Lee</li>
+            <li>Organismo <strong>neutro</strong> que desarrolla estándares para la Web
+            </li>
+            <li>Misión del W3C: <em>"Guiar la Web hacia su máximo potencial"</em></li>
+            <li>Construcción de una infraestructura para dirigir las necesidades técnicas y sociales de la Web</li>
+            <li>(<a href="http://www.w3.org/2003/02/W3COrg.svg">Actividades y Grupos
+    del W3C</a>)</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>La Web Tradicional</h1>
+        <ul>
+            <li>Los estándares Web llevan a Internet la interoperabilidad a
+                <strong>nivel de documento</strong>
+                <ul>
+                    <li>HTTP provee un protocolo simple</li>
+                    <li>Las URI ofrecen localizadores e identificadores únicos</li>
+                    <li>HTML permite enlazar entre partes de documentos</li>
+                </ul>
+            </li>
+            <li>Formas estándares globales para identificar y recuperar documentos...
+                <p>... revolucionaron los negocios</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>XML</h1>
+        <pre class="imagen-right">&lt;Persona&gt;
+  &lt;Nombre&gt;Martín Álvarez&lt;/Nombre&gt;
+  &lt;Dirección&gt;
+      Oficina W3C España,
+      Parque Científico-Tecnológico
+  &lt;/Dirección&gt;
+  &lt;Ciudad&gt;Gijón&lt;/Ciudad&gt;
+  &lt;CodigoPostal&gt;33203&lt;/CodigoPostal&gt;
+  &lt;Pais&gt;España&lt;/Pais&gt;
+  &lt;Tel tipo="oficina"&gt;+34 984390616&lt;/Tel&gt;
+  &lt;Fax&gt;+34 984390612&lt;/Fax&gt;
+  &lt;Email&gt;mlvarez@w3.org&lt;/Email&gt;
+ &lt;Notas&gt;Responsable Técnico&lt;/Notas&gt;
+&lt;/Persona&gt;</pre>
+        <ul>
+            <li>Primera recomendación (XML 1.0) publicada en Febrero de
+                <strong>1998</strong></li>
+            <li>Ideado para:
+                <ul>
+                    <li>Representación e</li>
+                    <li>Intercambio de Datos</li>
+                </ul>
+            </li>
+            <li>Es el primer paso para la interoperabilidad
+                <ul>
+                    <li>Diferentes sistemas compartiendo información</li>
+                </ul>
+            </li>
+            <li><strong>Base</strong> para muchas tecnologías</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>XML y Servicios Web: Interoperabilidad<sup>1</sup></h1>
+
+        <p class="cita-right"><cite>The need for Web Services standards is becoming
+more and more important as we automate the use of so many Web services
+applications</cite> <br />
+            <span class="autor">Tim Berners-Lee, Director del W3C</span></p>
+
+        <p class="imagen-right"><img src="img/servicios-web00.png" alt="Representación de conexión entre un servicio web y una aplicación" /></p>
+        <ul>
+            <li><strong>Programas en la Web</strong>
+                <ul>
+                    <li>Servicio Web: Permite <strong>interoperación entre máquinas sobre
+        una red</strong>
+                        <ul>
+                            <li>Diferentes aplicaciones / diferentes plataformas</li>
+                        </ul>
+                        <ul>
+                            <li>Tiene una interface bien definida</li>
+                            <li>Tienen un comportamiento previamente definido</li>
+                            <li>Típicamente, los envíos se realizan usando HTTP con XML</li>
+                        </ul>
+                    </li>
+                    <li>Estándares para los <strong>interfaces</strong> de los programas e
+                        <strong>interacciones</strong> entre estos</li>
+                    <li>Facilitan la prestación y el uso de los servicios (y de los datos que proveen)</li>
+                </ul>
+            </li>
+            <li>Los Servicios Web <strong>se basan en XML</strong> para estructurar la información
+                <ul>
+                    <li>Homogeneidad para facilitar la comprensión de las máquinas</li>
+                    <li>Diferentes plataformas / marcos de trabajo</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Servicios Web</h1>
+
+        <p class="imagen-right"><img src="img/wsa-stack.png" alt="Pila de las tecnologías básicas relacionadas con los Servicios Web" /></p>
+        <ul>
+            <li><strong>Tecnologías</strong> de Servicios Web
+                <ul>
+                    <li>Protocolo Esencial
+                        <ul>
+                            <li>Transmisiones de los mensajes (SOAP 1.2)</li>
+                            <li>Direccionamiento (Web Services Addressing)</li>
+                            <li>Optimizaciones en la transmisión (<acronym title="Message Transmission Optimization Mechanism" xml:lang="en-us">MTOM</acronym>, <acronym title="XML-binary Optimized Packaging" xml:lang="en-us">XOP</acronym>)</li>
+                        </ul>
+                    </li>
+                    <li>Extensión
+                        <ul>
+                            <li>Representación de los recursos (<acronym title="Resource Representation SOAP Header Block" xml:lang="en-us">RRSHB</acronym>)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Descripción</strong> de Servicios Web
+                <ul>
+                    <li>Web Services Description (WSDL 2.0)</li>
+                    <li>Coreografías de Servicios Web (<abbr title="Web Services Choreography Description" xml:lang="en">WS-CDL</abbr> 1.0)</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Extensiones de los Servicios Web</h1>
+        <ul>
+            <li><strong>Internacionalización</strong> (<abbr title="Web Services Internationalization" xml:lang="en"><a
+    href="http://www.w3.org/TR/ws-i18n/">WS-I18N</a></abbr>)
+                <ul>
+                    <li>Operaciones internacionalizadas y localizadas</li>
+                    <li>Negociación de preferencias locales e internacionales</li>
+                </ul>
+            </li>
+            <li>Ejemplo:
+                <ul>
+                    <li>Soporte de múltiples preferencias internacionales y modelos de identificadores locales</li>
+                    <li>Extracción de noticias de una base de datos en forma legible para personas
+                        <ol>
+                            <li>"<samp>Theater Center News</samp>: The date of the last version of this document was <samp>3/20/2003</samp>. A copy can be obtained for <samp>$5.000,00</samp> or <samp>123.400,57</samp> Russian <samp>roubles (</samp><span xml:lang="ru"><samp>рубль</samp></span><samp>)</samp>.
+                                We would like to acknowledge contributions by the following authors (in alphabetical order): <samp>Bishop Avery, Felt Doug, Freytag
+            Asmus, Mader Eric</samp>."</li>
+                            <li>"<samp>Theatre Centre News</samp>: The date of the last version of this document was <samp>20/3/2003</samp>. A copy can be obtained for <samp>$5,000.00</samp> or <samp>123,400.57</samp> Russian <samp>rubles (RUB)</samp>. We
+                                would like to acknowledge contributions by the following authors (in alphabetical order):
+                                <samp>Avery Bishop, Asmus Freytag, Doug Felt, Eric
+          Mader</samp>."</li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Otras Tecnologías Relacionadas</h1>
+        <ul>
+            <li><strong>Privacidad</strong>
+                <ul>
+                    <li>Platform for Privacy Preferences (<a href="http://www.w3.org/P3P"><abbr
+        title="The Platform for Privacy Preferences" xml:lang="en">P3P</abbr>
+        1.1</a>)</li>
+                    <li><a href="http://www.yahoo.com">Yahoo.com</a>
+                        <ul>
+                            <li><a href="ejemplos/yahoo/index.html">Declaración completa</a> de la política</li>
+                            <li>
+                                <!--a href="http://privacy.yahoo.com/us/w3c/p3p_us.xml">p3p.xml</a-->
+                                <a href="ejemplos/yahoo/p3p_us.xml">p3p.xml</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Seguridad</strong>
+                <ul>
+                    <li>Encriptación de la información
+                        <ul>
+                            <li><a href="http://www.w3.org/Encryption">XML Encryption</a></li>
+                        </ul>
+                    </li>
+                    <li>Firma y validación
+                        <ul>
+                            <li><a href="http://www.w3.org/2001/XKMS">XML Key Management
+            (XKMS)</a></li>
+                            <li><a href="http://www.w3.org/Signature">XML Signature</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>...</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>De la Web de Documentos a la Web de Datos y Servicios</h1>
+        <ul>
+            <li>Los recientes y futuros estándares de W3C están enfocados a
+                <ul>
+                    <li><strong>Extender la Web</strong> para incluir más <strong>recursos
+        que puedan entender las máquinas</strong></li>
+                    <li>Activar una <strong>interoperabilidad (sintáctica y
+        semántica)</strong> entre recursos que <strong>sabemos</strong> que son interoperables</li>
+                    <li>Activar una interoperabilidad entre recursos que <strong>no sabemos
+        aún</strong> si son interoperables</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Web Semántica: Interoperabilidad<sup>2</sup></h1>
+        <ul>
+            <li>Web Semántica: <strong>La Web de los Datos</strong></li>
+            <li>Estándares para cosas, conceptos, relaciones y descripciones enlazadas en la Web</li>
+            <li>Facilita el <em>entendimiento</em>, <em>búsqueda</em>,
+                <em>reutilización</em>, <em>difusión</em>, <em>agregación</em> y
+                <em>ampliación</em> de la información</li>
+            <li><strong>Exposición de los datos ocultos</strong> en los documentos, servidores y bases de datos</li>
+        </ul>
+
+        <p class="center"><img alt="Representación de tres nodos (logo de RDF)" src="img/rdfwrap2.png" /></p>
+    </div>
+
+    <div class="slide">
+        <h1>Evolución de la Web Tradicional...</h1>
+        <ul>
+            <li>Los humanos podemos entenderlo (más o menos)</li>
+        </ul>
+
+        <p class="center"><img alt="Representación de la Web tradicional como un conjunto de enlaces a documentos" src="img/OldWebLinks.png" /></p>
+    </div>
+
+    <div class="slide">
+        <h1>... a la Web Semántica</h1>
+        <ul>
+            <li>Lo entendemos nosotros y las máquinas</li>
+        </ul>
+
+        <p class="center"><img alt="Relaciones entre recursos que tienen incluida semántica" src="img/SemWebRelations.png" /></p>
+    </div>
+
+    <div class="slide">
+        <h1>Materializando la Web Semántica</h1>
+        <ul>
+            <li>Provee <strong>mecanismos</strong> específicos para las máquinas:
+                <ul>
+                    <li>Evita la ambigüedad en la <strong>identificación</strong> (URI)
+                    </li>
+                    <li>Expresar los datos y los <strong>metadatos</strong> (RDF)</li>
+                    <li>Modelar <strong>ontologías</strong> (OWL)</li>
+                    <li>Expresa reglas, permite búsquedas, establece lógica, comprobaciones, certificados de confianza (en progreso)</li>
+                </ul>
+            </li>
+            <li>Resultado:
+                <ul>
+                    <li>Hacer accesible lo que quieras, donde quieras, dentro de una misma empresa o entre varias</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Aplicaciones de la Web Semántica</h1>
+        <ul>
+            <li>Áreas pioneras en el uso de la Web Semántica
+                <ul>
+                    <li>Integración de empresas</li>
+                    <li>Gestión documental</li>
+                    <li>Ciencias de la vida</li>
+                    <li>Información personal y de consumidores</li>
+                </ul>
+            </li>
+            <li><strong>Actualización de las organizaciones</strong>
+                <ul>
+                    <li>Vodafone Live!, <a href="http://www.alphaworks.ibm.com/topics/semantics">IBM</a>, <a href="http://www.oracle.com/technology/tech/semantic_technologies/index.html">Oracle</a>,
+                        <a href="http://www.adobe.com/products/xmp/">Adobe</a>, <a href="http://sw.nokia.com/">Nokia</a>, <a href="http://www.hpl.hp.com/semweb/">HP</a>, <a href="http://www.labs.fujitsu.com/en/techinfo/okar/sw/">Fujitsu</a> y muchas otras</li>
+                </ul>
+            </li>
+            <li>Actualmente, los trabajos se centran en las <strong>Consultas</strong> y en las <strong>Buenas Prácticas</strong></li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Reglas</h1>
+        <ul>
+            <li>Elemento clave para la Web Semántica</li>
+            <li>Facilita la <strong>integración, derivación, y
+    transformación</strong> de los datos de <strong>diferentes
+    fuentes</strong> de una forma distribuida, escalable, y transparente</li>
+            <li>Tratamiento de las reglas como datos, publicados en la Web, usando
+                <strong>URIs</strong></li>
+            <li>Las URIs sirven de <strong>enlace entre distintos sistemas de
+    conocimiento</strong></li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Por qué usar Reglas</h1>
+        <ul>
+            <li>Razones <strong>Técnicas</strong>
+                <ul>
+                    <li>Evitar colisiones</li>
+                    <li>Beneficios de la construcción de una infraestructura de red global
+                    </li>
+                    <li>Permitir la combinación de reglas</li>
+                </ul>
+            </li>
+            <li>Razones <strong>Sociales</strong>
+                <ul>
+                    <li>Muchas perspectivas / Muchos backgrounds</li>
+                    <li>Discusiones variadas</li>
+                    <li>Minimiza los potenciales malentendidos</li>
+                </ul>
+            </li>
+            <li>Expecialmente, en las <strong>reglas de negocio</strong>
+                <ul>
+                    <li>Establecer/Cambiar las políticas de negocio de forma sencilla, ágil, con bajo coste</li>
+                    <li>Al estar separadas del código, los analistas (no los programadores) pueden modificar las reglas ante ciertas circunstancias del negocio
+                        <ul>
+                            <li>Cambios en las regulaciones</li>
+                            <li>Cambios en las políticas internas</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--div class="slide">
+<h1>Web de Reglas</h1>
+<ul>
+  <li>Las cosas simples deberían hacerse simples</li>
+  <li>Las complejas deberían simplificarse e ir haciéndolas crecer</li>
+  <li>Todo esto puede conectarse específicamente con otros estándares
+    <ul>
+      <li>P3P / Appel</li>
+      <li>CC/PP</li>
+      <li>Servicios Web Semánticos</li>
+      <li>...</li>
+    </ul>
+  </li>
+</ul>
+</div-->
+
+    <div class="slide">
+        <h1>¿Lenguaje de Reglas Estándar?</h1>
+        <ul>
+            <li>Menor coste y riesgo</li>
+            <li>Mejora la calidad mediante la especialización
+                <ul>
+                    <li>Herramientas de autor</li>
+                    <li>Soporte para diferentes entornos</li>
+                </ul>
+            </li>
+            <li>El software adquirido por la organización puede integrarse de forma sencilla si está basado en estándares</li>
+            <li>El cliente final puede integrarlo fácilmente con sus aplicaciones</li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Lecciones Aprendidas</h1>
+        <ul>
+            <li><strong xml:lang="en">Data is King!</strong> Liberando los datos de las aplicaciones
+            </li>
+            <li>Permitir una <strong>flexibilidad y personalización</strong> de productos / servicios de información</li>
+            <li><strong>Integración de datos</strong> a la medida</li>
+            <li>Las cosas cambian, la planificación mejora los costes</li>
+            <li>Mejora de los costes incrementalmente para solucionar problemas con soluciones abiertas.</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Servicios Web Semánticos: Operabilidad<sup>3</sup></h1>
+        <ul>
+            <li>Intraestructura para especificar <strong>Semántica en los Servicios
+    Web</strong>
+                <ul>
+                    <li>Ontologías para describir los Servicios Web</li>
+                    <li>Razonamiento basado en la semántica
+                        <ul>
+                            <li>Composición</li>
+                            <li>Descubrimiento</li>
+                            <li>Elección</li>
+                            <li>Control de versiones</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Semántica en las Descripciones de los Servicios Web</h1>
+
+        <p class="imagen-right"><img src="img/wsdl.png" alt="Descripción de los Servicios Web" /></p>
+        <ul>
+            <li>Los Servicios Web sólo definían a nivel sintáctico sus interfaces
+            </li>
+            <li>Descripción semántica de forma que las máquinas puedan entender
+                <ul>
+                    <li><strong>Lo que pretende realizar un servicio</strong></li>
+                    <li><strong>Los tipos de datos que serán manejados</strong></li>
+                </ul>
+            </li>
+            <li>Descripciones de alto nivel que permitirían descubrir y componer los servicios de forma sencilla</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>La Importancia de la Semántica</h1>
+        <ul>
+            <li>Ejemplos de uso:
+                <ul>
+                    <li><strong>Conexión</strong> de dos servicios asegurándose que entienden el <strong>mismo idioma</strong>
+                        <ul>
+                            <li>Paso de una fecha entre empresas en distintos paises</li>
+                        </ul>
+                    </li>
+                    <li><strong>Mezcla de datos</strong> de distintas fuentes
+                        <ul>
+                            <li><span xml:lang="en">Title</span>, <span xml:lang="fr">Titre</span> y Título</li>
+                        </ul>
+                    </li>
+                    <li>De una gran lista de servicios, <strong>seleccionar
+        exactamente</strong> el que el hace lo que el usuario demanda</li>
+                    <li><strong>Recuperaciones automáticas ante fallos</strong></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (1)</h1>
+
+        <p class="center"><img src="img/sws_01.png" alt="Un cliente se informa de la política de privacidad de un servicio" /></p>
+        <ul>
+            <li>Cliente:
+                <ul>
+                    <li><strong>Entrada para ver una película</strong></li>
+                    <li>¿Me fio de este Servicio?</li>
+                    <li>¿Cuál es tu política de protección de datos?</li>
+                    <li>Si te doy mi dirección de correo, ¿cómo la vas a tratar?</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (2)</h1>
+
+        <p class="center"><img src="img/sws_02.png" alt="Un servicio ofrece su política de tratamiento de datos" /></p>
+        <ul>
+            <li>Servicio Entradas:
+                <ul>
+                    <li>Esta es mi <strong>Política de Privacidad</strong></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (3)</h1>
+
+        <p class="center"><img src="img/sws_03.png" alt="Cliente solicita una película" /></p>
+        <ul>
+            <li>Cliente:
+                <ul>
+                    <li>Me identifico</li>
+                    <li>Quiero ver cierta película</li>
+                    <li>Tengo preferencias (situación de la sala, butaca, precios, etc.)
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (4)</h1>
+
+        <p class="center"><img src="img/sws_04.png" alt="El servicio de venta de entradas solicita información sobre la película" /></p>
+        <ul>
+            <li>Obtención de datos de la película
+                <ul>
+                    <li>Datos informativos</li>
+                    <li>Calificación moral</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (5)</h1>
+
+        <p class="center"><img src="img/sws_05.png" alt="Consulta a un servicio certificador de identidad, información del cliente" /></p>
+        <ul>
+            <li>¿El cliente es quíén dice que és?</li>
+            <li>¿Qué edad tiene?</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (6)</h1>
+
+        <p class="center"><img src="img/sws_06.png" alt="Aplicación de reglas para determinar si un usuario puede ver una película o no por la edad" /></p>
+        <ul>
+            <li>Reglas respecto al contenido semántico</li>
+            <li>Manejadas por varios sistemas</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (7)</h1>
+
+        <p class="center"><img src="img/sws_07.png" alt="Solicitud de disponibilidad de la película en varios cines" /></p>
+        <ul>
+            <li>Varios cines, varias salas, varias sesiones</li>
+            <li>Descubrimiento de los servicios en función de la semántica</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (8)</h1>
+
+        <p class="center"><img src="img/sws_08.png" alt="Los cines sirven sus disponibilidades de las películas" /></p>
+        <ul>
+            <li>Butacas disponibles, precios, salas, ect.</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo Interoperabilidad (9)</h1>
+
+        <p class="center"><img src="img/sws_09.png" alt="El servicio sirve las entradas" /></p>
+        <ul>
+            <li>Selección de la entrada en función de las preferencias</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Tecnologías de Servicios Web Semánticos</h1>
+        <ul>
+            <li>Web Service Semantics (WSDL-S)</li>
+            <li>Semantic Web Services Framework (SWSF)</li>
+            <li><a href="http://www.w3.org/Submission/OWL-S" xml:lang="en-us" title="Marcado semántico para Servicios Web">OWL Web Ontology Language
+    for Services (OWL-S)</a> - Descripción de los servicios</li>
+            <li><a href="http://www.w3.org/2004/12/rules-ws/paper/44" xml:lang="en" title="Artículo presentado en el taller de W3C de abril de 2005">Lenguaje
+    de Modelado de Servicios Web (WSML)</a></li>
+            <li>...</li>
+            <li><a href="http://www.w3.org/Submission/2004/SUBM-SWRL-20040521" title="Envío de SWRL como propuesta de lenguaje a W3C">Lenguaje de
+    Reglas de Web Semántica (SWRL)</a>: OWL + RuleML</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Evolución lógica</h1>
+
+        <p class="imagen-right"><img src="img/xml2sws.png" alt="Evolución desde la Web inicial a los Servicios Web Semánticos" /></p>
+        <ul>
+            <li>Servicios Web = <strong>Programas</strong>
+                <ul>
+                    <li>Transmisión (SOAP)</li>
+                    <li>Descripción (WSDL)</li>
+                </ul>
+            </li>
+            <li>Web Semántica = <strong>Datos</strong>
+                <ul>
+                    <li>Bases de conocimiento</li>
+                    <li>Ontologías (OWL)</li>
+                    <li>Reglas</li>
+                    <li>Bases de Datos (<acronym title="Resource Description Framework" xml:lang="en">RDF</acronym>, <acronym title="SPARQL Protocol And RDF Query Language" xml:lang="en-us">SPARQL</acronym>)</li>
+                </ul>
+            </li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Web Services and Semantics (WS2) Project</h1>
+        <ul>
+            <li>Proyecto europeo</li>
+            <li>Promueve el uso y desarrollo de los Servicios Web, teniendo en cuenta los estándares relacionados</li>
+            <li>Comienza la integración de la Semántica en los Servicios Web</li>
+            <li>Seminario de W3C <em xml:lang="en"><a
+    href="http://www.w3.org/2006/03/ws2-seminar.html">Using Web services:
+    from infrastructure to semantics</a></em> (París, Marzo de 2006)
+                <ul>
+                    <li>Uso de los Servicios Web en la industria</li>
+                    <li>Visión de todas estas tecnologías en escenarios del "mundo real"
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Más información</h1>
+        <dl>
+            <dt>Esta presentación está en</dt>
+            <dd><a href="https://espinr.github.io/talks/2005/1212-OWLSkosSEDIC-MA">http://www.w3c.es/Presentaciones/2006/0214-InteroperabilidadBPMS-MA</a></dd>
+            <dt>Actividad de Servicios Web</dt>
+            <dd><a href="http://www.w3.org/2002/ws">http://www.w3.org/2002/ws</a></dd>
+            <dt>Actividad de Web Semántica</dt>
+            <dd><a href="http://www.w3.org/2001/sw">http://www.w3.org/2001/sw</a></dd>
+            <dt>Formato de Intercambio de Reglas</dt>
+            <dd><a href="http://www.w3.org/2005/rules">http://www.w3.org/2005/rules</a></dd>
+            <dt>Grupo de interés de los Servicios Web Semánticos</dt>
+            <dd><a href="http://www.w3.org/2002/ws/swsig/">http://www.w3.org/2002/ws/swsig</a></dd>
+            <dt>Oficina Española del W3C</dt>
+            <dd><a href="http://www.w3c.es">http://www.w3c.es</a></dd>
+            <dt>Escríbeme</dt>
+            <dd><a href="mailto:mlvarez@w3.org">mlvarez@w3.org</a></dd>
+        </dl>
+    </div>
+</body>
+
+</html>

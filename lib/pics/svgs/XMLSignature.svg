@@ -1,0 +1,90 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1100 800">
+    <defs>
+        <marker id="RedTriangle" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="5" orient="auto">
+            <path class="reddish" d="M 0 0 L 10 5 L 0 10 z"/>
+        </marker>
+        <marker id="GrayTriangle" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="5" orient="auto">
+            <path class="grayish" d="M 0 0 L 10 5 L 0 10 z"/>
+        </marker>
+        <ellipse class="yellowish" style="stroke-width:1" id="Step" ry="50" rx="150">
+            <desc>basic ellipse background for the processing steps</desc>
+        </ellipse>
+        <g id="transforms">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="-8">Apply transformations
+              <tspan x="0" dy="30" class="centre minor" >(C14N, XSLT, XPath,...)</tspan>
+            </text>
+        </g>
+        <g id="get">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="6">Get (XML) data</text>
+        </g>
+        <g id="digest">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="6">Generate digest</text>
+        </g>
+        <g id="c14n">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="-8">Canonicalize
+              <tspan x="0" dy="30" class="code">SignedInfo</tspan>
+            </text>
+        </g>
+        <g id="sign">
+            <use xlink:href="#Step"/>
+            <text class="centre minor" y="-8">Sign
+              <tspan x="0" dy="30" class="code">SignedInfo</tspan>
+            </text>
+        </g>
+        <g id="nextStep">
+            <line y1="50" y2="100" class="reddish" marker-end="url(#RedTriangle)"/>
+        </g>
+    </defs>
+    <g transform="translate(0,50)">
+        <g transform="translate(220)">
+            <use xlink:href="#get" transform="translate(0,30)"/>
+            <use xlink:href="#transforms" transform="translate(0,180)"/>
+            <use xlink:href="#digest" transform="translate(0,330)"/>
+            <use xlink:href="#c14n" transform="translate(0,480)"/>
+            <use xlink:href="#sign" transform="translate(0,630)"/>
+            <use xlink:href="#nextStep" transform="translate(0,30)"/>
+            <use xlink:href="#nextStep" transform="translate(0,180)"/>
+            <use xlink:href="#nextStep" transform="translate(0,330)"/>
+            <use xlink:href="#nextStep" transform="translate(0,480)"/>
+            <path style="stroke:red; fill: none; stroke-width:3" marker-end="url(#RedTriangle)" d="M-150 330 h-50 v-300 h50"/>
+        </g>
+        <g transform="translate(520)">
+            <text class="codeM">
+                <tspan x="0" y="30">&lt;Signature&gt;</tspan>
+                <tspan x="30" dy="35" class="reddish">&lt;SignedInfo&gt;</tspan>
+                <tspan x="60" dy="35">&lt;CanonicalizationMethod Algorithm="..."/&gt;</tspan>
+                <tspan x="60" dy="35">&lt;SignatureMethod Algorithm="..."/&gt;</tspan>
+                <tspan x="60" dy="35">&lt;Reference URI="..."&gt;</tspan>
+                <tspan x="90" dy="35">&lt;Transforms&gt;</tspan>
+                <tspan x="120" dy="35">&lt;Transform Algorithm="..."/&gt;</tspan>
+                <tspan x="120" dy="35">&lt;Transform Algorithm="..."/&gt;</tspan>
+                <tspan x="90" dy="35">&lt;/Transforms&gt;</tspan>
+                <tspan x="90" dy="35">&lt;DigestMethod Algorithm="..."/&gt;</tspan>
+                <tspan x="90" dy="35">&lt;DigestValue&gt;ABGTHI*^OM..&lt;/DigestValue&gt;</tspan>
+                <tspan x="60" dy="35">&lt;/Reference&gt;</tspan>
+                <tspan x="60" dy="35">&lt;Reference URI="..."&gt;</tspan>
+                <tspan x="90" dy="35">...</tspan>
+                <tspan x="60" dy="35">&lt;/Reference&gt;</tspan>
+                <tspan x="30" dy="35" class="reddish">&lt;/SignedInfo&gt;</tspan>
+                <tspan x="30" dy="35">&lt;SignatureValue&gt;*%KiTG)(YHC...&lt;/SignatureValue&gt;</tspan>
+                <tspan x="30" dy="35">&lt;KeyInfo&gt;&lt;KeyValue&gt;...&lt;/KeyValue&gt;&lt;/KeyInfo&gt;</tspan>
+                <tspan x="0" dy="35">&lt;/Signature&gt;</tspan>
+            </text>
+        </g>
+        <line x1="370" y1="30" x2="575" y2="160" class="grayish" marker-end="url(#GrayTriangle)"/>
+        <line x1="370" y1="180" x2="630" y2="230" class="grayish" marker-end="url(#GrayTriangle)"/>
+        <line x1="370" y1="180" x2="630" y2="265" class="grayish" marker-end="url(#GrayTriangle)"/>
+        <line x1="370" y1="330" x2="600" y2="335" class="grayish" marker-end="url(#GrayTriangle)"/>
+        <line x1="370" y1="330" x2="600" y2="370" class="grayish" marker-end="url(#GrayTriangle)"/>
+        <line x1="370" y1="480" x2="570" y2="95" class="grayish" marker-end="url(#GrayTriangle)"/>
+        <line x1="370" y1="630" x2="570" y2="125" class="grayish" marker-end="url(#GrayTriangle)"/>
+        <line x1="370" y1="630" x2="540" y2="580" class="grayish" marker-end="url(#GrayTriangle)"/>
+    </g>
+</svg>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 768">
+  <title>Examples of W3C logo through various filters</title>
+	<desc>
+		A number of filters are set for the W3C logo; each one is defined separately, but only the first is visible initially. Animation 'set' statements are set and one can step through those.
+	</desc>
+	<defs>
+		<filter id="3deffect">
+			<feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+			<feOffset in="blur" dx="6" dy="6" result="offsetBlur"/>
+			<feSpecularLighting in="blur" surfaceScale="8" specularConstant="1" specularExponent="10" result="specOut">
+				<fePointLight x="-5000" y="-10000" z="5000"/>
+			</feSpecularLighting>
+			<feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+			<feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
+			<feMerge>
+				<feMergeNode in="offsetBlur"/>
+				<feMergeNode in="litPaint"/>
+			</feMerge>
+		</filter>
+		<filter id="Dilate">
+			<feMorphology operator="dilate" in="SourceGraphic" radius="10"/>
+		</filter>
+		<filter id="Dilate1">
+			<feMorphology operator="erode" in="SourceGraphic" radius="10"/>
+		</filter>
+		<filter id="Turb" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+			<feTurbulence type="turbulence" baseFrequency="0.1" numOctaves="1" result="turb"/>
+			<feComposite in2="turb" in="SourceGraphic" operator="in"/>
+		</filter>
+		<filter id="Turb1" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+			<feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="1" result="turb"/>
+			<!-- k1="0" k2="1" k3="1" k4="0" -->
+			<feComposite in2="turb" in="SourceGraphic" operator="in"/>
+		</filter>
+		<filter id="Blur">
+			<feGaussianBlur id="blur-gauss" in="SourceGraphic" stdDeviation="10"/>
+		</filter>
+		<g id="W3C" transform="translate(200,150) scale(0.5)">
+			<svg viewBox="0 0 90 51">
+				<path d="M74.5,.2l0.8,5.1l-3,5.6c0,0-1.13-2.39-3-3.7c-1.6-1.1-2.6-1.4-4.2-1c-2.1,0.4-4.4,2.9-5.4,5.9c-1.2,3.6-1.2,5.4-1.3,7c-0.07,2.6,0.3,4.14,0.3,4.1s-1.8-3.3-1.8-8.1c0.01-3.5,0.6-6.6,2.2-9.7c1.41-2.7,3.5-4.4,5.4-4.5c1.9-0.2,3.4,0.7,4.6,1.7c1.2,1,2.5,3.3,2.5,3.4z"/>
+				<path d="M74.9,28.8c0,0-1.3,2.3-2.1,3.2c-.8.9-2.3,2.5-4.1,3.3c-1.8.8-2.7.9-4.5,0.8c-1.8-.2-3.4-1.2-4-1.6s-2-1.7-2.9-2.9c-.8-1.2-2.1-3.5-2.1-3.5s.7,2.4,1.2,3.3c.3.6,1.1,2.3,2.2,3.9c1.1,1.4,3.1,3.9,6.3,4.4c3.1,.6,5.3-.9,5.8-1.2c.5-.3,1.7-1.3,2.4-2.1c.7-.8,1.4-1.8,1.8-2.4c.3-.4,0.7-1.3.7-1.3z"/>
+				<path style="fill:#0C479D" d="M20.7,0.43l7.1,24.1l7.1-24.1h5.1l-11.7,39.6h-.5l-7.35-24.5l-7.35,24.5h-.5l-11.7-39.6h5.1l7.1,24.1l4.8-16.2l-2.3-7.9z"/>
+				<path style="fill:#0C479D" d="M54.6,27.3c0,3.6-1,6.6-2.9,9c-1.9,2.4-4.4,3.7-7.4,3.7c-2.3,0-4.3-0.7-5.9-2.2c-1.7-1.4-2.9-3.4-3.8-5.9l4-1.7c.6,1.5,1.4,2.7,2.3,3.5c1,.9,2.1,1.3,3.4,1.3c1.4,0,2.5-.8,3.5-2.3c.9-1.5,1.4-3.4,1.4-5.5c0-2.4-.5-4.2-1.5-5.5c-1.2-1.5-3-2.3-5.5-2.3h-2v-2.3l6.8-11.8h-8.2l-2.3,3.9h-1.5v-8.7h19.1v2.4l-7.2,12.5c2.5.8,4.5,2.3,5.8,4.4c1.3,2.1,2,4.7,1.9,7.5z"/>
+				<text x="78" y="10" style="font-size:13">&#174;</text>
+			</svg>
+		</g>
+	</defs>
+	<g>
+		<!-- your graphic here -->
+		<g id="W-3d"  visibility="visible">
+			<use xlink:href="#W3C" filter="url(#3deffect)"/>
+			<text class="major" x="30" y="30">Full 3D Effect (like before):</text>
+			<set attributeName="visibility" attributeType="XML" from="visible" to="hidden" begin="click"/>
+			<set xlink:href="#W-dilate" attributeName="visibility" attributeType="XML" from="hidden" to="visible" begin="click"/>
+		</g>
+		<g id="W-dilate"  visibility="hidden">
+			<text class="major" x="30" y="30">Delatation:</text>
+			<use xlink:href="#W3C" filter="url(#Dilate)"/>
+			<set attributeName="visibility" attributeType="XML" from="visible" to="hidden" begin="click"/>
+			<set xlink:href="#W-dilate1" attributeName="visibility" attributeType="XML" from="hidden" to="visible" begin="click"/>
+		</g>
+		<g id="W-dilate1" visibility="hidden">
+			<text class="major" x="30" y="30">Erosion:</text>
+			<use xlink:href="#W3C" filter="url(#Dilate1)"/>
+			<set attributeName="visibility" attributeType="XML" from="visible" to="hidden" begin="click"/>
+			<set xlink:href="#W-turb" attributeName="visibility" attributeType="XML" from="hidden" to="visible" begin="click"/>
+		</g>
+		<g id="W-turb" visibility="hidden">
+			<text class="major" x="30" y="30">Combination with the result of a turbulence function:</text>
+			<use xlink:href="#W3C" filter="url(#Turb)"/>
+			<set attributeName="visibility" attributeType="XML" from="visible" to="hidden" begin="click"/>
+			<set xlink:href="#W-turb1" attributeName="visibility" attributeType="XML" from="hidden" to="visible" begin="click"/>
+		</g>
+		<g id="W-turb1" visibility="hidden">
+			<text class="major" x="30" y="30">Another turbulence function:</text>
+			<use xlink:href="#W3C" filter="url(#Turb1)"/>
+			<set attributeName="visibility" attributeType="XML" from="visible" to="hidden" begin="click"/>
+			<set xlink:href="#W-blur" attributeName="visibility" attributeType="XML" from="hidden" to="visible" begin="click"/>
+		</g>
+		<g id="W-blur" visibility="hidden">
+			<text class="major" x="30" y="30">(Gaussian) blur:</text>
+			<use xlink:href="#W3C" filter="url(#Blur)"/>
+			<set attributeName="visibility" attributeType="XML" from="visible" to="hidden" begin="click"/>
+			<set xlink:href="#W-3d" attributeName="visibility" attributeType="XML" from="hidden" to="visible" begin="click"/>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+      "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>La Web de los Servicios y los Datos</title>
+    <link href="http://purl.org/dc" rel="schema.dc" />
+    <meta content="Estándares en la Web" name="dc.title" />
+    <meta content="http://www.w3c.es/Personal/Martin/foaf.rdf" name="dc.creator" />
+    <meta content="2006-10-20" name="dc.date" />
+    <meta content="W3C Oficina Española" name="dc.publisher" />
+    <meta content="http://www.w3.org/Consortium/Legal/copyright-documents" name="dc.rights" />
+    <meta name="copyright" content="Copyright 2007 Oficina W3C España" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="../../lib/Slidy/css/show.css" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="../../lib/Slidy/css/w3c-blue.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../lib/Slidy/css/print.css" />
+    <script type="text/javascript" src="../../lib/Slidy/js/slidy.js">
+    </script>
+    <style type="text/css">
+        .center {
+            text-align: center;
+        }
+        
+        .imagen-left {
+            float: left;
+        }
+        
+        .imagen-right {
+            float: right;
+            margin-right: 1em;
+            clear: both;
+        }
+        
+        dl {
+            margin-left: 2em;
+        }
+        
+        strong {
+            color: #B22222;
+        }
+        
+        p.cita-right {
+            float: right;
+            width: 15em;
+            margin-right: 1em;
+            background-color: #FFD700;
+            padding: 0.5em;
+        }
+        
+        p.cita-right cite {
+            font-weight: bold;
+        }
+        
+        samp {
+            color: Green;
+            font-weight: bold;
+        }
+        
+        h1 {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <img id="head-icon" alt="Gráfico con 4 cuadrados coloreados" src="../../lib/Slidy/img/icon-blue.png" /> <object id="head-logo" title="W3C logo" type="image/svg+xml" data="../../lib/Slidy/img/w3c-logo-blue.svg">
+  <img alt="W3C logo" id="head-logo-fallback"
+  src="../../lib/Slidy/img/w3c-logo-blue.gif" /> </object> </div>
+    <!-- La principal -->
+
+    <div class="slide cover">
+        <img src="../../lib/Slidy/img/keys.jpg" alt="Imagen de la portada (teclas W3C)" class="cover" /> <br />
+
+
+        <h1>La Web de los Servicios y los Datos</h1>
+
+        <p><a href="http://iitgroup.com/BPMS2007" title="Página principal del Congreso Nacional de BPMS del 2007">III Congreso
+Nacional de <acronym title="Business Process Management Systems"
+xml:lang="en">BPMS</acronym></a> (<a href="http://www.club-bpm.com" title="Página del Club BPM"><strong>Club <acronym
+title="Business Process Management"
+xml:lang="en">BPM</acronym></strong>)</a></p>
+
+        <p><a href="http://www.w3c.es/Personal/Martin" title="Página personal de Martín Álvarez Espinar">Martín Álvarez
+Espinar</a> - <a href="http://www.w3c.es" title="Página principal de la Oficina W3C España">Oficina W3C España</a>
+        </p>
+    </div>
+    <!-- Fin de la diapo principal -->
+    <!-- =========================================== -->
+
+    <div class="slide">
+        <h1>La Web de los Servicios y los Datos</h1>
+
+        <p><a href="http://iitgroup.com/BPMS2007" title="Página principal del Congreso Nacional de BPMS del 2007">III Congreso
+Nacional de <acronym title="Business Process Management Systems"
+xml:lang="en">BPMS</acronym></a></p>
+
+        <p>Organizado por <a href="http://www.club-bpm.com" title="Página del Club BPM"><strong>Club <acronym
+title="Business Process Management"
+xml:lang="en">BPM</acronym></strong></a></p>
+
+        <p>20 y 21 de Febrero de 2006</p>
+
+        <p>Centro de Congresos Príncipe Felipe, Hotel Auditorium (Madrid)</p>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>¿Qué es el W3C?</h1>
+
+        <p><img class="imagen-right" alt="El mundo interconectado mediante la web" src="img/globe.png" /></p>
+        <ul>
+            <li>World Wide Wide Consortium</li>
+            <li>Fundado en 1994 por el creador de la Web Tim Berners-Lee</li>
+            <li>Organismo <strong>neutro</strong> que desarrolla estándares para la Web
+            </li>
+            <li>Misión del W3C: <em>"Guiar la Web hacia su máximo potencial"</em></li>
+            <li>Construcción de una infraestructura para dirigir las necesidades técnicas y sociales de la Web</li>
+            <li>(<a href="http://www.w3.org/2003/02/W3COrg.svg">Actividades y Grupos
+    del W3C</a>)</li>
+        </ul>
+
+        <div class="notes">
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Evolución de la Web</h1>
+
+        <p class="center"><img src="img/tech-stack-history.png" alt="Pila de Evolución de la Web" longdesc="http://www.w3.org/Consortium/techstack-desc.html" /></p>
+
+        <div class="notes">
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Tecnologías adecuadas para los BPMS</h1>
+
+        <p class="center"><img src="img/stack-data-services-history.png" alt="Pila de Evolución de la Web con la actividad de Web Semántica de Servicios Web resaltados" longdesc="http://www.w3.org/Consortium/techstack-desc.html" /></p>
+
+        <div class="notes">
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>La Web inicial: La Web de Documentos</h1>
+
+        <p class="imagen-right" style="width:515px; margin:0;"><img alt="Propuesta de Gestión de la Información de Tim Berners-Lee" src="img/proposal_tim.gif" longdesc="http://www.w3.org/History/1989/proposal.html" /><br />
+            <span xml:lang="en-us" style="font-size:small">Information Management: A
+Proposal, Tim Berners-Lee, CERN, March 1989, May 1990</span></p>
+
+        <p>El <strong>Usuario</strong> consulta documentos (texto e imágenes)</p>
+        <ul>
+            <li>La Web vista como una gran enciclopedia</li>
+            <li>Casi <strong>sin interacción</strong> bidireccional entre
+                <strong>Personas</strong> y <strong>Máquinas</strong></li>
+            <li>Documentos enlazados entre sí mediante enlaces sintácticos</li>
+            <li>Éxito, gracias a la <strong>sencillez</strong> y al <strong>uso de
+    estándares</strong> </li>
+        </ul>
+
+        <div class="notes">
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+    <!--
+<div class="slide">
+<h1>XML: la base para la interoperabilidad</h1>
+<pre class="imagen-right">     &lt;Persona&gt;
+      &lt;Nombre&gt;Martín Álvarez&lt;/Nombre&gt;
+      &lt;Dirección&gt;
+          Oficina W3C España,
+          Parque Científico-Tecnológico
+      &lt;/Dirección&gt;
+      &lt;Ciudad&gt;Gijón&lt;/Ciudad&gt;
+    
+      &lt;CodigoPostal&gt;33203&lt;/CodigoPostal&gt;
+      &lt;Pais&gt;España&lt;/Pais&gt;
+      &lt;Tel tipo="oficina"&gt;+34 984390616&lt;/Tel&gt;
+      &lt;Fax&gt;+34 984390612&lt;/Fax&gt;
+    
+      &lt;Email&gt;mlvarez@w3.org&lt;/Email&gt;
+     &lt;Notas&gt;Responsable Técnico&lt;/Notas&gt;
+    &lt;/Persona&gt;</pre>
+<ul>
+  <li>XML 1.0 publicado en Febrero de <strong>1998</strong></li>
+  <li>Creado para las <strong>máquinas</strong>: 
+    <ul>
+      <li>Representación e</li>
+      <li>Intercambio de Datos</li>
+    </ul>
+  </li>
+  <li>Es el primer paso para la interoperabilidad 
+    <ul>
+      <li>Diferentes sistemas compartiendo información</li>
+    </ul>
+  </li>
+  <li><strong>Base</strong> para la mayoría de las tecnologías actuales</li>
+</ul>
+
+<div class="notes">
+</div>
+</div> -->
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Aplicaciones empresariales</h1>
+
+        <p>Las aplicaciones empresariales, se basan en <strong>servicios</strong>:</p>
+        <ul>
+            <li>internos en la propia organización</li>
+            <li>externos, hacia otras organizaciones</li>
+        </ul>
+
+        <p>Se busca una interoperabilidad entre distintos sistemas</p>
+        <ul>
+            <li><strong>Necesidad de estándares</strong></li>
+            <li>La Web es <strong>ubícua</strong> y <strong>universal</strong></li>
+            <li>El W3C pretende ofrecer esta interoperabilidad</li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>XML y Servicios Web: Interoperabilidad entre máquinas</h1>
+
+        <p class="cita-right"><cite>The need for Web Services standards is becoming
+more and more important as we automate the use of so many Web services
+applications</cite> <br />
+            <span class="autor">Tim Berners-Lee, Director del W3C</span></p>
+
+        <p class="imagen-right"><img src="img/servicios-web00.png" alt="Representación de conexión entre un servicio web y una aplicación" /></p>
+        <ul>
+            <li><strong>Programas en la Web</strong>
+                <ul>
+                    <li>Servicio Web: Permite <strong>interoperación entre máquinas sobre
+        una red</strong>
+                        <ul>
+                            <li>Diferentes aplicaciones / diferentes plataformas</li>
+                        </ul>
+                        <ul>
+                            <li>Tiene una interface bien definida</li>
+                            <li>Tienen un comportamiento previamente definido</li>
+                            <li>Típicamente, los envíos se realizan usando HTTP con XML</li>
+                        </ul>
+                    </li>
+                    <li>Estándares para los <strong>interfaces</strong> de los programas e
+                        <strong>interacciones</strong> entre estos</li>
+                    <li>Facilitan la prestación y el uso de los servicios (y de los datos que proveen)</li>
+                </ul>
+            </li>
+            <li>Los Servicios Web <strong>se basan en XML</strong> para estructurar la información
+                <ul>
+                    <li>Homogeneidad para facilitar la comprensión de las máquinas</li>
+                    <li>Diferentes plataformas / marcos de trabajo</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="notes">
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Tecnologías W3C de Servicios Web</h1>
+
+        <p class="imagen-right" style="margin:0"><img src="img/wsa-stack.png" alt="Pila de las tecnologías básicas relacionadas con los Servicios Web" /></p>
+        <ul>
+            <li>Protocolo Esencial
+                <ul>
+                    <li>Transmisiones de los mensajes (SOAP 1.2)</li>
+                    <li>Direccionamiento (Web Services Addressing)</li>
+                    <li>Optimizaciones en la transmisión (<acronym title="Message Transmission Optimization Mechanism" xml:lang="en-us">MTOM</acronym>, <acronym title="XML-binary Optimized Packaging" xml:lang="en-us">XOP</acronym>)</li>
+                </ul>
+            </li>
+            <li>Extensión
+                <ul>
+                    <li>Representación de los recursos (<acronym title="Resource Representation SOAP Header Block" xml:lang="en-us">RRSHB</acronym>)</li>
+                </ul>
+            </li>
+            <li><strong>Descripción</strong> de Servicios Web
+                <ul>
+                    <li>Web Services Description (WSDL 2.0)</li>
+                    <li>Coreografías de Servicios Web (<abbr title="Web Services Choreography Description" xml:lang="en">WS-CDL</abbr> 1.0)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="notes">
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Coreografía de Servicios Web</h1>
+        <ul>
+            <li>Lenguaje de Definición de Coreografías de Servicios Web (
+                <strong>WS-CDL 1.0</strong>)</li>
+            <li>Diferente terminología para definir patrones de uso y enlaces entre Servicios Web:
+                <ul>
+                    <li>Orquestación, Colaboración, Coordinación, Conversaciones,...</li>
+                </ul>
+            </li>
+            <li>W3C usa el término <strong>Coreografía</strong> para referirse a este ámbito
+            </li>
+            <li>Otras organizaciones trabajando sobre el área de lenguajes de coreografía:
+                <ul>
+                    <li>BPML por BPMI (OMG), organización con la que trabaja estrechamente el W3C</li>
+                    <li>BPSS (Business Process Specification Schema) por ebXML</li>
+                    <li>BPEL4WS de IBM/Microsoft/BEA</li>
+                    <li>y otras aproximaciones</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="notes">
+            <p>Although differing terminology is used in the industry, such as orchestration, collaboration, coordination, conversations, etc., the terms all share a common characteristic of describing linkages and usage patterns between Web services. We
+                use the term choreography as a label to denote this space.
+            </p>
+
+            <p>En abril de 2001, en un workshop de W3C sobre Servicios Web, se llevaron a cabo varias presentaciones que apuntaban la necesidad de crear y utilizar un lenguaje común para definir esta coreografía entre servicios web.</p>
+
+            <p>Hay muchas otras organizaciones trabajando sobre el área de lenguajes de coreografía, lo que denota el gran interés de la industria sobre este tema:
+            </p>
+            <ul>
+                <li>BPML producido por BPMI (OMG), organización con la que trabaja estrechamente W3C</li>
+                <li>BPSS (Business Process Specification Schema) por ebXML</li>
+                <li>BPEL4WS de IBM/Microsoft/BEA</li>
+            </ul>
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Extensiones de los Servicios Web</h1>
+        <ul>
+            <li><strong>Internacionalización</strong> (<abbr title="Web Services Internationalization" xml:lang="en"><a
+    href="http://www.w3.org/TR/ws-i18n/">WS-I18N</a></abbr>)
+                <ul>
+                    <li>Operaciones internacionalizadas y localizadas</li>
+                    <li>Negociación de preferencias locales e internacionales</li>
+                </ul>
+            </li>
+            <li>Ejemplo:
+                <ul>
+                    <li>Soporte de múltiples preferencias internacionales y modelos de identificadores locales</li>
+                    <li>Extracción de noticias de una base de datos en forma legible para personas
+                        <ol>
+                            <li>"<samp>Theater Center News</samp>: The date of the last version of this document was <samp>3/20/2003</samp>. A copy can be obtained for <samp>$5.000,00</samp> or <samp>123.400,57</samp> Russian <samp>roubles (</samp><span xml:lang="ru"><samp>рубль</samp></span><samp>)</samp>.
+                                We would like to acknowledge contributions by the following authors (in alphabetical order): <samp>Bishop Avery, Felt Doug, Freytag
+            Asmus, Mader Eric</samp>."</li>
+                            <li>"<samp>Theatre Centre News</samp>: The date of the last version of this document was <samp>20/3/2003</samp>. A copy can be obtained for <samp>$5,000.00</samp> or <samp>123,400.57</samp> Russian <samp>rubles (RUB)</samp>. We
+                                would like to acknowledge contributions by the following authors (in alphabetical order):
+                                <samp>Avery Bishop, Asmus Freytag, Doug Felt, Eric
+          Mader</samp>."</li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="notes">
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Otras Tecnologías Relacionadas</h1>
+        <ul>
+            <li><strong>Privacidad</strong> y <strong>Seguridad</strong>
+                <p>WS-Security</p>
+                <p>WS-Secure Conversation</p>
+                <p>WS-Security Policy</p>
+                <p>...</p>
+            </li>
+            <li>Tecnologías de otras organizaciones estandarizadoras</li>
+        </ul>
+
+        <div class="notes">
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>De la Web de Documentos a la Web de Datos</h1>
+        <ul>
+            <li>Los recientes y futuros estándares de W3C están enfocados a
+                <ul>
+                    <li><strong>Extender la Web</strong> para incluir más <strong>recursos
+        que puedan entender las máquinas</strong></li>
+                    <li>Activar una <strong>interoperabilidad (sintáctica y
+        semántica)</strong> entre recursos que <strong>sabemos</strong> que son interoperables</li>
+                    <li>Activar una interoperabilidad entre recursos que <strong>no sabemos
+        aún</strong> si son interoperables</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Evolución de la Web Tradicional...</h1>
+        <ul>
+            <li>Los humanos podemos entenderlo (más o menos)</li>
+        </ul>
+
+        <p class="center"><img alt="Representación de la Web tradicional como un conjunto de enlaces a documentos" src="img/OldWebLinks.png" /></p>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>... a la Web Semántica</h1>
+        <ul>
+            <li>Lo entendemos nosotros y las máquinas</li>
+        </ul>
+
+        <p class="center"><img alt="Relaciones entre recursos que tienen incluida semántica" src="img/SemWebRelations.png" /></p>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Semántica en las Descripciones de los Servicios Web</h1>
+
+        <p class="imagen-right"><img src="img/wsdl.png" alt="Descripción de los Servicios Web" /></p>
+        <ul>
+            <li>Los Servicios Web sólo definían a nivel sintáctico sus interfaces
+            </li>
+            <li>Descripción semántica de forma que las máquinas puedan entender
+                <ul>
+                    <li><strong>Lo que pretende realizar un servicio</strong></li>
+                    <li><strong>Los tipos de datos que serán manejados</strong></li>
+                </ul>
+            </li>
+            <li>Descripciones de alto nivel que permitirían descubrir y componer los servicios de forma sencilla</li>
+            <li>Anotaciones Semánticas para WSDL (<acronym title="Semantic Annotations for Web Services Description Language" xml:lang="en">SAWSDL</acronym>) - Candidada a Recomendación del W3C</li>
+        </ul>
+
+        <div class="notes">
+            <ul>
+                <li>Ejemplos de uso:
+                    <ul>
+                        <li><strong>Conexión</strong> de dos servicios asegurándose que entienden el <strong>mismo idioma</strong>
+                            <ul>
+                                <li>Paso de una fecha entre empresas en distintos paises</li>
+                            </ul>
+                        </li>
+                        <li><strong>Mezcla de datos</strong> de distintas fuentes
+                            <ul>
+                                <li><span xml:lang="en">Title</span>, <span xml:lang="fr">Titre</span> y Título</li>
+                            </ul>
+                        </li>
+                        <li>De una gran lista de servicios, <strong>seleccionar
+        exactamente</strong> el que el hace lo que el usuario demanda</li>
+                        <li><strong>Recuperaciones automáticas ante fallos</strong></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>El W3C se centra en los BPMS</h1>
+
+        <p><a href="http://www.w3.org/2006/10/wos-ec-cfp.html" xml:lang="en">W3C
+Workshop on Web of Services for <strong>Enterprise Computing</strong>
+(<acronym>WSEC</acronym>)</a><br /> 27 y 28 de febrero de 2007 (Bedford, Massachusetts)</p>
+
+        <p>Objetivos:</p>
+        <ul>
+            <li>Discutir y ofrecer recomendaciones al W3C, teniendo en cuenta las mejores aproximaciones para:
+                <ul>
+                    <li>facilitar las transacciones de negocios e interacciones entre sistemas anteriores a la Web</li>
+                    <li>dirigir las necesidades de interconectar servicios de intranet o de extranet
+                    </li>
+                    <li><strong>usando tecnologías Web</strong></li>
+                </ul>
+            </li>
+            <li>Recopilar ámplios casos de uso</li>
+            <li>Los casos de uso plantean <strong>necesidades específicas</strong>: seguridad, intercambio de mensajes, orquestación, <abbr title="etcétera">etc.</abbr></li>
+            <li>Comprobar si existen soluciones y especificaciones que se ajusten a esos casos de uso</li>
+        </ul>
+
+        <p>Resultados y conclusiones</p>
+        <ul>
+            <li>Creación de nuevos grupos del W3C</li>
+        </ul>
+
+        <div class="notes">
+            <ul>
+                <li>Casos de uso: Por ejemplo, servicios que proveen compañías bancarias o de seguros con tecnologías de hace 30 años; y otras compañías con pocos recursos heredados, que exponen sus servcios usando tecnologías de "Web 2.0".</li>
+                <li>El principal objetivo de este workshop es poner sobre la mesa el mayor número de casos de uso para determinar la complejidad y el ámbito sobre el que se está trabajando. Después se trata de comprobar si existen soluciones y especificaciones
+                    que permitan solucionar esos casos de uso.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Workshop on Web of Services for Enterprise Computing</h1>
+
+        <p>Temas que se plantean</p>
+        <ul>
+            <li>Nuevas consideraciones a tener en cuenta</li>
+            <li>¿Una Web o dos arquitecturas?</li>
+        </ul>
+
+        <p>Participantes:</p>
+        <ul>
+            <li>MITRE, BT, Yahoo, HP, BEA, FSTC (Financial Services Technology Consortium), Xerox, IBM, Progress Software,... y muchos más</li>
+        </ul>
+
+        <div class="notes">
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Aplicación: Interoperabilidad en la Administración</h1>
+
+        <p>Preocupación en la Administración ante la falta de interoperabilidad</p>
+        <ul>
+            <li>dentro de la propia Administración, y</li>
+            <li>entre varias Administraciones</li>
+        </ul>
+
+        <p>Existe voluntad e interés general por el uso de los <strong>estándares
+abiertos</strong></p>
+
+        <p><a href="http://www.w3c.es/Eventos/2007/eGov" title="Página principal del simposio"><span xml:lang="en">European W3C
+Symposium on eGovernment</span></a></p>
+        <ul>
+            <li>Objetivos
+                <ul>
+                    <li>Comprender las necesidades de la administración pública y de la ciudanía en relación a los servicios electrónicos ofrecidos por ésta
+                    </li>
+                    <li>Identificar aquellos aspectos que ponen en riesgo la interoperabilidad en la Web, y</li>
+                    <li>encontrar mecanismos para proporcionar servicios más eficaces mediante tecnologías Web</li>
+                </ul>
+            </li>
+            <li>Importancia de la <strong>colaboración de los Miembros</strong>
+                <ul>
+                    <li>Los <strong>primeros pasos son decisivos</strong> para determinar el rumbo a seguir</li>
+                    <li>Diversidad de opiniones</li>
+                    <li>Experiencias propias</li>
+                    <li>Beneficios recíprocos</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="notes">
+            <ul>
+                <li>Las administraciones pueden necesitar intercambiar datos entre distintos departamentos</li>
+                <li>Las administraciones pueden necesitar el intercambio de datos entre otras administraciones, incluso de distintos países, con distintos idiomas y procedimientos</li>
+                <li>Es importante contar con el mayor número de miembros colaborando porque así se ofrecen diferentes puntos de vista, y da mas riqueza a cualquier conocimiento de los temas tratados.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+
+    <div class="slide">
+        <h1>Muchas Gracias</h1>
+
+        <p>Más información:</p>
+        <dl>
+            <dt>Esta presentación está en</dt>
+            <dd><a href="https://espinr.github.io/talks/2007/0220-serviciosBPMS-MA">http://www.w3c.es/Presentaciones/2007/0220-serviciosBPMS-MA</a></dd>
+            <dt xml:lang="en">Workshop on Web of Services for Enterprise Computing</dt>
+            <dd><a href="http://www.w3.org/2006/10/wos-ec-cfp">http://www.w3.org/2006/10/wos-ec-cfp</a></dd>
+            <dt>Actividad de Servicios Web</dt>
+            <dd><a href="http://www.w3.org/2002/ws">http://www.w3.org/2002/ws</a></dd>
+            <dt>Actividad de Web Semántica</dt>
+            <dd><a href="http://www.w3.org/2001/sw">http://www.w3.org/2001/sw</a></dd>
+            <dt>Grupo de interés de los Servicios Web Semánticos</dt>
+            <dd><a href="http://www.w3.org/2002/ws/swsig/">http://www.w3.org/2002/ws/swsig</a></dd>
+            <dt>Oficina Española del W3C</dt>
+            <dd><a href="http://www.w3c.es">http://www.w3c.es</a></dd>
+            <dt>Escríbeme</dt>
+            <dd><a href="mailto:mlvarez@w3.org">mlvarez@w3.org</a></dd>
+        </dl>
+
+        <div class="notes">
+        </div>
+    </div>
+</body>
+
+</html>

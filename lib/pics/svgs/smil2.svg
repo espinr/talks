@@ -1,0 +1,98 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN"
+  "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+<svg width="750" height="600">
+  <defs>
+<style type="text/css">
+<![CDATA[
+rect {stroke:black;fill:white;}
+line {stroke:red;stroke-width:4}
+rect.box {stroke:none;fill:rgb(140, 189, 237)}
+text {font-family:Arial;font-size:24}
+]]>
+</style>
+  </defs>
+
+<!-- **************  Screen Display Area  ******************** -->
+  <g transform="translate(0,-30)">
+  <line x1="50" y1="50" x2="50" y2="600" />
+
+  <line x1="50" y1="600" x2="700" y2="600" />
+
+  <g transform="translate(50,100)">
+    <g transform="translate(0,0)">
+      <rect style="fill:white;" width="510" height="50" />
+
+      <text x="10" y="24" style="color:black;">Roadtrain Audio
+      Track</text>
+    </g>
+
+    <g transform="translate(10,60)">
+      <rect style="fill:yellow;" width="290" height="50" />
+
+      <text x="10" y="24" style="color:black;">Cairns Photos
+      Cycling</text>
+    </g>
+
+    <g transform="translate(20,120)">
+      <rect style="fill:white;" width="70" height="50" />
+
+      <text x="10" y="24" style="color:black;">Reef</text>
+    </g>
+
+    <g transform="translate(30,180)">
+      <rect style="fill:white;" width="430" height="50" />
+
+      <text x="10" y="24" style="color:black;">Nameplate Andy
+      Collins</text>
+    </g>
+
+    <g transform="translate(40,240)">
+      <rect style="fill:yellow;" width="150" height="50" />
+
+      <text x="10" y="24" style="color:black;">Andy
+      Collins</text>
+    </g>
+
+    <g transform="translate(50,300)">
+      <rect style="fill:white;" width="180" height="50" />
+
+      <text x="10" y="24" style="color:black;">Why he wrote
+      it</text>
+    </g>
+
+    <g transform="translate(80,360)">
+      <rect style="fill:yellow;" width="295" height="50" />
+
+      <text x="10" y="24" style="color:black;">CD Cover</text>
+    </g>
+
+    <g transform="translate(190,240)">
+      <rect style="fill:yellow;" width="280" height="50" />
+
+      <text x="10" y="24" style="color:black;">Road train
+      1</text>
+    </g>
+
+    <g transform="translate(385,420)">
+      <rect style="fill:white;" width="232" height="50" />
+
+      <text x="10" y="24" style="color:black;">train 2</text>
+    </g>
+
+    <g transform="translate(350,60)">
+      <rect style="fill:yellow;" width="140" height="50" />
+
+      <text x="10" y="24" style="color:black;">Bob</text>
+    </g>
+
+    <g transform="translate(390,360)">
+      <rect style="fill:yellow;" width="65" height="50" />
+
+      <text x="10" y="24" style="color:black;">End</text>
+    </g>
+
+  </g>
+  </g>
+</svg>
+

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 768">
+	<desc>
+    The slide contains four separate blocks: a block for the (X)HTML-CSS pair, a block for MathML, a block for SMIL and one for SVG/WebCGM. The goal is to get these blocks on the screen one by one (through a set of animation objects) to show the various "cool UI" features added to the W3C standard set
+  </desc>
+	<metadata>
+		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:axsvg="http://www.w3.org/2001/svgRdf/axsvg-schema.rdf#">
+			<rdf:Description rdf:ID="#fullSlide">
+				<desc>The elements in the animation sequence appear one-by-one, on user interaction. Initally, only the first element is visible</desc>
+				<rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#AnimationDescription"/>
+				<axsvg:Contains>
+					<rdf:Bag>
+						<rdf:li rdf:resource="#xhtml_d"/>
+						<rdf:li rdf:resource="#xforms_d"/>
+						<rdf:li rdf:resource="#mathml_d"/>
+						<rdf:li rdf:resource="#svg_d"/>
+						<rdf:li rdf:resource="#images_d"/>
+						<rdf:li rdf:resource="#voiceXML_d"/>
+					</rdf:Bag>
+				</axsvg:Contains>
+				<axsvg:AnimationSequence>
+					<rdf:Seq>
+						<rdf:li rdf:resource="#xhtml_d"/>
+						<rdf:li rdf:resource="#xforms_d"/>
+						<rdf:li rdf:resource="#mathml_d"/>
+						<rdf:li rdf:resource="#svg_d"/>
+						<rdf:li rdf:resource="#images_d"/>
+						<rdf:li rdf:resource="#voiceXML_d"/>
+					</rdf:Seq>
+				</axsvg:AnimationSequence>
+			</rdf:Description>
+			<rdf:Description rdf:about="#xhtml_d">
+				<axsvg:InPosition>S</axsvg:InPosition>
+				<axsvg:Contains>
+					<rdf:Bag>
+						<rdf:li rdf:resource="#xhtmlBox"/>
+						<rdf:li rdf:resource="#cssBox"/>
+					</rdf:Bag>
+				</axsvg:Contains>
+			</rdf:Description>
+			<rdf:Description rdf:resource="#xhtmlBox">
+				<axsvg:LabelledBy rdf:resource="#HTML"/>
+				<axsvg:IsConnected rdf:resource="#cssBox"/>
+				<axsvg:Shape>Rectangle</axsvg:Shape>
+			</rdf:Description>
+			<rdf:Description rdf:resource="#cssBox">
+				<axsvg:LabelledBy rdf:resource="#cssLabel"/>
+				<axsvg:IsConnected rdf:resource="#xhtmlBox"/>
+				<axsvg:Shape>Ellipse</axsvg:Shape>
+			</rdf:Description>
+			<rdf:Description rdf:About="#xforms_d">
+				<axsvg:InDirection>
+					<rdf:Description>
+						<axsvg:RelativeTo rdf:resource="#xhtml_d"/>
+						<axsvg:Direction>WNW</axsvg:Direction>
+						<rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#DirectionDescription"/>
+					</rdf:Description>
+				</axsvg:InDirection>
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+			<rdf:Description rdf:About="#mathML_d">
+				<axsvg:InDirection>
+					<rdf:Description>
+						<axsvg:RelativeTo rdf:resource="#xhtml"/>
+						<axsvg:Direction>NW</axsvg:Direction>
+						<rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#DirectionDescription"/>
+					</rdf:Description>
+				</axsvg:InDirection>
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+			<rdf:Description rdf:About="#svg_d">
+				<axsvg:InDirection>
+					<rdf:Description>
+						<axsvg:RelativeTo rdf:resource="#xhtml_d"/>
+						<axsvg:Direction>N</axsvg:Direction>
+						<rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#DirectionDescription"/>
+					</rdf:Description>
+				</axsvg:InDirection>
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+			<rdf:Description rdf:About="#images_d">
+				<axsvg:InDirection>
+					<rdf:Description>
+						<axsvg:RelativeTo rdf:resource="#xhtml_d"/>
+						<axsvg:Direction>NE</axsvg:Direction>
+						<rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#DirectionDescription"/>
+					</rdf:Description>
+				</axsvg:InDirection>
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+			<rdf:Description rdf:About="#voiceXML_d">
+				<axsvg:InDirection>
+					<rdf:Description>
+						<axsvg:RelativeTo rdf:resource="#xhtml_d"/>
+						<axsvg:Direction>E</axsvg:Direction>
+						<rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#DirectionDescription"/>
+					</rdf:Description>
+				</axsvg:InDirection>
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+		</rdf:RDF>
+	</metadata>
+	<defs>
+		<g id="form">
+			<rect style="stroke-width:1; stroke:blue" width="140" height="80"/>
+			<rect class="table" width="80" height="10" x="10" y="10"/>
+			<text style="font-size:8" x="12" y="17">Ivan Herman</text>
+			<rect class="table" width="10" height="10" x="100" y="10"/>
+			<line style="stroke-width:1" x1="100" y1="10" x2="110" y2="20"/>
+			<line style="stroke-width:1" x1="110" y1="10" x2="100" y2="20"/>
+			<rect class="table" width="80" height="10" x="10" y="30"/>
+			<text style="font-size:8" x="12" y="37">http://www.w3.org</text>
+			<rect class="table" width="80" height="10" x="10" y="50"/>
+			<text style="font-size:8" x="12" y="57">3.14157</text>
+			<rect class="table" style="stroke-width:1; stroke:blue" width="10" height="10" x="90" y="50"/>
+			<path d="M90 50 l 10 0 l -5 10z" style="fill:blue"/>
+		</g>
+	</defs>
+	<g transform="translate(400,600)" id="xhtml">
+		<desc>Schematic connection of an XHTML and a CSS image.</desc>
+		<rect width="120" height="150" class="yellowish" id="xhtmlBox"/>
+				<text class="normal centre" x="60" y="65">XHTML</text>
+				<text class="note centre" x="60" y="85">(Basic, 1.1,...)</text>
+			<ellipse rx="60" ry="40" cx="250" cy="70" class="yellowish" style="stroke-width:1" id="cssBox"/>
+			<text class="normal centre" x="250" y="75" id="cssLabel">CSS</text>
+		<line class="reddish" x1="120" y1="70" x2="190" y2="70" style="stroke-width:1"/>
+	</g>
+	<!-- ===== -->
+	<defs>
+  	<!-- ===== -->
+		<g id="xforms_d">
+			<desc>A very schematic image of forms: some block imitating a usual html form</desc>
+			<g transform="translate(40,400)">
+				<svg viewBox="0 0 780 441" width="200" height="200">
+                   <image xlink:href="../pngs/xforms.png" width="780" height="441"/>
+               </svg>
+           </g>
+
+           
+			<text class="major reddish" x="80" y="610">XForms</text>
+		</g>
+  	<!-- ===== -->
+		<g id="mathML_d">
+			<desc>MathML block; apart from a connecting line and a label, the block shows an svg element depicting a simple mathematical formula (roots of a quadratic equation)</desc>
+			<text class="major reddish" x="120" y="330">MathML</text>
+			<g transform="translate(-80,0)">
+				<svg width="500" height="500" viewBox="0 0 100.85352531171446 57.871591775">
+					<title>Custard SVG</title>
+					<desc>Copyright 2001, Schema Software, Inc. All rights reserved. SVG Generated from MathML 2 XML document, using XSLT 1.1.</desc>
+					<text class="mi1" x="20" y="31.1357958875" >x</text>
+					<text class="mo" x="27.666668" y="31.1357958875" >=</text>
+					<text class="mo" x="35.333336" y="25.499750000000002" >-</text>
+					<text class="mi1" x="39.830002856" y="25.499750000000002" >b</text>
+					<text class="mo" x="45.036668576" y="25.499750000000002" >±</text>
+					<use x="50.243334296" y="20.3597041125" width="5.269393575714459" height="7.156091775" style="stroke:#0C469C; stroke-width:0.284" xlink:href="#SquareRoot"/>
+					<line x1="55.24647787171446" y1="20.5017041125" x2="80.58727531171446" y2="20.5017041125" style="stroke:#0C469C; stroke-width:0.284"/>
+					<text class="mi1" x="55.24647787171446" y="26.57316376625" >b</text>
+					<text class="mne" x="59.50647787171446" y="22.940817966250002" >2</text>
+					<text class="mo" x="62.60060959171446" y="26.57316376625" >-</text>
+					<text class="mn" x="67.80727531171446" y="26.57316376625">4</text>
+					<text class="mi1" x="72.06727531171447" y="26.57316376625" >a</text>
+					<text class="mi1" x="76.32727531171446" y="26.57316376625" >c</text>
+					<line x1="35.583336" y1="28.9357958875" x2="80.60352531171446" y2="28.9357958875" style="stroke: #0C469C; stroke-width: 0.426"/>
+					<text class="mn" x="53.833430655857235" y="34.988545887499996" >2</text>
+					<text class="mi1" x="58.09343065585723" y="34.988545887499996" >a</text>
+					<defs>
+						<style type="text/css"><![CDATA[				
+							.mi1{  font-style: italic; font-size: 5 }
+							.mi2{  font-size: 5 }
+							.mo{  font-size: 5 }
+							.mn{  font-size: 5}
+							.mne{  font-size: 3}
+							.mtext{ font-size: 5 }				
+			        ]]></style>
+						<symbol id="SquareRoot" viewBox="0 0 421.429 572.321" preserveAspectRatio="xMinYMin meet">
+							<path style="fill:#0C469C" d="M0,359.821l73.214-36.606l112.5,220.535L403.571,0h17.857L192.857,572.321h-25L57.143,350.893L7.143,375L0,359.821z"/>
+						</symbol>
+					</defs>
+				</svg>
+			</g>
+		</g>
+  	<!-- ===== -->
+		<g id="svg_d">
+			<desc>SVG block; apart from a connection line and a label, the block contains an svg element for a bird</desc>
+			<g id="aero" transform="translate(400,20)">
+			  <image xlink:href="../SVG/svgsRef/Bird.svg" width="150" height="150"/>
+  			<text class="major reddish" x="50" y="190">SVG</text>
+			</g>
+		</g>
+  	<!-- ===== -->
+		<g id="images_d">
+			<desc>A multimedia block: apart from the connecting line and a label, the block contains an svg element showing three photographs of Amsterdam in a series</desc>
+			<g transform="translate(640,120)">
+				<svg width="400" height="400" viewBox="0 0 400 600">
+					<desc>Three images appear in the sequence on the slide, by fading in and out: all are images from the streets and canals of Amsterdam</desc>
+					<defs>
+						<animate id="firstOff" xlink:href="#firstImage" fill="freeze" attributeType="CSS" attributeName="opacity" from="1" to="0" begin="2;thirdOff.end+2s" dur="2"/>
+						<animate id="secondOn" xlink:href="#secondImage" fill="freeze" attributeType="CSS" attributeName="opacity" from="0" to="1" begin="firstOff.begin" dur="2"/>
+						<animate id="secondOff" xlink:href="#secondImage" fill="freeze" attributeType="CSS" attributeName="opacity" from="1" to="0" begin="secondOn.end+2s" dur="2"/>
+						<animate id="thirdOn" xlink:href="#thirdImage" fill="freeze" attributeType="CSS" attributeName="opacity" from="0" to="1" begin="secondOff.begin" dur="2"/>
+						<animate id="thirdOff" xlink:href="#thirdImage" fill="freeze" attributeType="CSS" attributeName="opacity" from="1" to="0" begin="thirdOn.end+2s" dur="2"/>
+						<animate id="firstOn" xlink:href="#firstImage" fill="freeze" attributeType="CSS" attributeName="opacity" from="0" to="1" begin="thirdOff.begin" dur="2"/>
+					</defs>
+					<image id="firstImage" style="opacity:1" transform="translate(0 90) scale(0.5)" xlink:href="../SVG/jpgs/Adam1.jpg" width="877" height="619">
+						<desc>Amsterdam image</desc>
+					</image>
+					<image id="secondImage" style="opacity:0" transform="translate(30,100) scale(0.5)" xlink:href="../SVG/jpgs/Adam2.jpg" width="800" height="553">
+						<desc>Amsterdam image</desc>
+					</image>
+					<image x="150" id="thirdImage" style="opacity:0" transform="scale(0.5)" xlink:href="../SVG/jpgs/Adam3.jpg" width="586" height="760">
+						<desc>Amsterdam image</desc>
+					</image>
+				</svg>
+			</g>
+			<text class="major reddish" x="820" y="420">SMIL</text>
+		</g>
+  	<!-- ===== -->
+		<g id="voiceXML_d" transform="translate(750,450)">
+		    <image xlink:href="../svgClipArt/ManOnPhone.svg" width="150" height="150"/>
+				 <text class="major reddish" x="10" y="180">VoiceXML</text>
+		</g>
+	</defs>
+  <g>
+  	<use xlink:href="#xforms_d"/>
+  	<use xlink:href="#mathML_d"/>
+  	<use xlink:href="#svg_d"/>
+  	<a xlink:href="../UIOverview/Examples/SMIL/Play.svg">
+  		<use xlink:href="#images_d"/>
+  	</a>
+   	<use xlink:href="#voiceXML_d"/>
+  </g>
+</svg>

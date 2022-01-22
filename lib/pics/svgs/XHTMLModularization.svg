@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet href="slide.css" type="text/css"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 800">
+  <desc>
+    <!-- put a description here -->
+  </desc>
+  <g transform="translate(0 40)">
+    <text class="major" x="0" y="0">&#8226; "Cut" functionalities into <tspan font-style="italic">modules</tspan>
+    </text>
+    <text class="major" x="0" y="40">&#8226; Define an application by combining modules (plus possibly others!)</text>
+    <text class="major" x="0" y="80">&#8226; Yield an XHTML "family" of languages</text>
+  </g>
+  <!-- If the use to external svg worked, this could be just a use! !@#$%^& -->
+  <g transform="translate(170 200)">
+    <svg xml:space="preserve" width="700" height="500" viewBox="0 0 511 337">
+      <desc>XHTMLModules.pdx</desc>
+      <rect width="511" height="337" class="background"/>
+      <style type="text/css"><![CDATA[
+.st2 {stroke-width:2;fill:none}
+.st3 {stroke-width:3;}
+.stt1 {font-family:Arial; font-size:24; text-anchor:start}
+]]></style>
+      <rect class="yellowish" transform="matrix(1 0 0 -1 -10.87 884.5)" x="78.059" y="753.377" width="10.745" height="47.938"/>
+      <rect class="yellowish" transform="matrix(1 0 0 -1 16.41 884.5)" x="78.059" y="753.377" width="10.745" height="47.938"/>
+      <rect class="yellowish" transform="matrix(1 0 0 -1 43.68 884.5)" x="78.059" y="753.377" width="10.745" height="47.938"/>
+      <rect class="yellowish" transform="matrix(1 0 0 -1 70.96 884.5)" x="78.059" y="753.377" width="10.745" height="47.938"/>
+      <rect class="yellowish" transform="matrix(1 0 0 -1 98.23 884.5)" x="78.059" y="753.377" width="10.745" height="47.938"/>
+      <rect class="yellowish" transform="matrix(1 0 0 -1 125.5 884.5)" x="78.059" y="753.377" width="10.745" height="47.938"/>
+      <rect class="yellowish" transform="matrix(1 0 0 -1 152.8 884.5)" x="78.059" y="753.377" width="10.745" height="47.938"/>
+      <rect class="yellowish" transform="matrix(1 0 0 -1 180.1 884.5)" x="78.059" y="753.377" width="10.745" height="47.938"/>
+      <rect class="yellowish" transform="matrix(1 0 0 -1 207.3 884.5)" x="78.059" y="753.377" width="10.745" height="47.938"/>
+      <rect class="yellowish" transform="matrix(1 0 0 -1 261.9 884.5)" x="78.059" y="753.377" width="10.745" height="47.938"/>
+      <rect class="yellowish" transform="matrix(1 0 0 -1 289.2 884.5)" x="78.059" y="753.377" width="10.745" height="47.938"/>
+      <rect class="yellowish" transform="matrix(1 0 0 -1 316.4 884.5)" x="78.059" y="753.377" width="10.745" height="47.938"/>
+      <text transform="matrix(1 0 0 1 -1.362 -636.1)" class="yellowish">
+        <tspan x="319.403" y="751.493">. . .</tspan>
+      </text>
+      <text transform="matrix(1 0 0 1 -43.93 -761.9)" class="yellowish stt1">
+        <tspan x="198.731" y="792.819">(XHTML) Modules</tspan>
+      </text>
+      <image x="0" y="0" width="92" height="58" transform="matrix(1 0 0 1 227.233 225.057)" xlink:href="../jpgs/prtapic.gif"/>
+      <image x="0" y="0" width="56" height="56" transform="matrix(1 0 0 1 55.3965 225.057)" xlink:href="../pngs/smac.png"/>
+      <image x="0" y="0" width="37" height="86" transform="matrix(1 0 0 1 426.069 200.057)" xlink:href="../jpgs/indexp2.jpg"/>
+      <ellipse class="emptyYellowish" transform="matrix(1 0 0 -1 116.4 919.6)" cx="65.662" cy="814.539" rx="142.603" ry="49.093"/>
+      <path class="st2 yellowish" d="M86.202 171.162
+l-5.786 40.499
+"/>
+      <path class="yellowish" d="M80.416 211.662
+l-0.99 -0.141
+-2.404 -18.526
+11.879 1.697
+-7.495 17.112
+z"/>
+      <ellipse class="emptyReddish st3" transform="matrix(1 0 0 -1 105.3 923.3)" cx="65.662" cy="814.539" rx="29.222" ry="57.275"/>
+      <ellipse class="emptyReddish st3" transform="matrix(1 0 0 -1 337.5 921.6)" cx="65.662" cy="814.539" rx="16.949" ry="40.326"/>
+      <path class="arrowLine" d="M186.211 161.244
+l78.519 51.244
+"/>
+      <path class="arrow" d="M264.73 212.488
+l-0.547 0.837
+-17.807 -5.651
+6.558 -10.049
+12.341 14.025
+z"/>
+      <path class="arrowLine" d="M388.708 153.805
+l-109.927 57.03
+"/>
+      <path class="arrow" d="M278.781 210.835
+l-0.461 -0.888
+13.675 -12.727
+5.526 10.652
+-18.28 3.851
+z"/>
+      <ellipse class="emptyBlueish" transform="matrix(1 0 0 -1 278.8 923.3)" cx="65.662" cy="814.539" rx="15.78" ry="37.988"/>
+      <path class="blueish" d="M356.473 145.54
+l85.958 65.295
+"/>
+      <path class="blueish" d="M442.431 210.835
+l-0.605 0.796
+-17.358 -6.906
+7.259 -9.556
+11.309 14.87
+z"/>
+      <text transform="matrix(1 0 0 1 -189 -472.4)" class="yellowish stt1">
+        <tspan x="198.731" y="792.819">Screen Browser</tspan>
+      </text>
+      <text transform="matrix(1 0 0 1 49.26 -470.8)" class="yellowish stt1">
+        <tspan x="198.731" y="792.819">PDA</tspan>
+      </text>
+      <text transform="matrix(1 0 0 1 216.1 -470.8)" class="yellowish stt1">
+        <tspan x="198.731" y="792.819">Phone</tspan>
+      </text>
+    </svg>
+  </g>
+</svg>

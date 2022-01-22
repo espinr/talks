@@ -1,0 +1,164 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- Generator: Mayura Draw 3.6 -->
+<svg viewBox="0 0 589 458"   xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Extended XLinks</title>
+  <desc>Slide representing the notions for extended links: remote and local resources and arcs.</desc>
+  <defs>
+	  <desc>Animation control: by clicking on the animation control discs, first the remote, then the
+		local resource and finally the arcs appear with a text on the bottom of the slide.</desc>
+    <!-- Put the remote resources on -->
+    <animate xlink:href="#RemoteResources"
+             attributeType="CSS" attributeName="opacity" from="0" to="1" dur="1s"
+             restart="never" fill="freeze" begin="c_remoteResources.click" />
+    <set xlink:href="#c_localResources" attributeType="CSS" attributeName="visibility" to="visible"
+      begin="c_remoteResources.click" fill="freeze" />
+
+    <!-- Put the local resource on -->
+    <animate xlink:href="#LocalResource"
+             attributeType="CSS" attributeName="opacity" from="0" to="1" dur="1s"
+             restart="never" fill="freeze" begin="c_localResources.click" />
+    <set xlink:href="#c_arcs" attributeType="CSS" attributeName="visibility" to="visible"
+      begin="c_localResources.click" fill="freeze" />
+  
+    <!-- Put the arcs on -->
+    <animate xlink:href="#Arcs"
+             attributeType="CSS" attributeName="opacity" from="0" to="1" dur="1s"
+             restart="never" fill="freeze" begin="c_arcs.click" />
+  </defs>
+  
+  <circle cx="575" cy="15" r="10" class="animationControl" id="c_remoteResources" />
+  <circle cx="575" cy="15" r="10" class="animationControl" style="visibility:hidden" id="c_localResources" />
+  <circle cx="575" cy="15" r="10" class="animationControl" style="visibility:hidden" id="c_arcs" />
+
+  <g id="CentralFigure" style="visibility:visible">
+    <path class="yellowish" 
+    d="M250 115 l-69 51 30 75 75 0 30 -75 -66 -51 z"/>
+    <text transform="matrix(1 0 0 1 -32.18 -383)" class="minor"><tspan x="228" y="557.28">extended</tspan></text>
+  </g>
+  <g id="RemoteResources" style="visibility:visible; opacity:0">
+	  <desc>Remote resources: a set of rectangles representing resources, all connected to the 
+		'extended' rectangle through an edge.</desc>
+    <text transform="matrix(1 0 0 1 -41 155.4)" class="minor whitish">
+      <tspan x="51" y="287.28">Remote resources...</tspan>
+    </text>
+    <rect class="darkYellowish" transform="matrix(1 0 0 -1 -33.5 760.4)" x="231" y="699" width="102" height="51"/>
+    <text transform="matrix(1 0 0 1 -35 -685.1)" class="minor" style="text-anchor:middle"><tspan x="283.5" y="716.28">remote</tspan><tspan x="283.5" y="742.28">resource</tspan></text>
+    <rect class="darkYellowish" transform="matrix(1 0 0 -1 100 1035)" x="231" y="699" width="102" height="51"/>
+    <text transform="matrix(1 0 0 1 98.5 -410.6)" class="minor" style="text-anchor:middle"><tspan x="283.5" y="716.28">remote</tspan><tspan x="283.5" y="742.28">resource</tspan></text>
+    <rect class="darkYellowish" transform="matrix(1 0 0 -1 -152 1035)" x="231" y="699" width="102" height="51"/>
+    <text transform="matrix(1 0 0 1 -153.5 -410.6)" class="minor" style="text-anchor:middle"><tspan x="283.5" y="716.28">remote</tspan><tspan x="283.5" y="742.28">resource</tspan></text>
+    <rect class="darkYellowish" transform="matrix(1 0 0 -1 -197 850.4)" x="231" y="699" width="102" height="51"/>
+    <text transform="matrix(1 0 0 1 -198.5 -595.1)" class="minor" style="text-anchor:middle"><tspan x="283.5" y="716.28">remote</tspan><tspan x="283.5" y="742.28">resource</tspan></text>
+    <rect class="darkYellowish" transform="matrix(1 0 0 -1 130 850.4)" x="231" y="699" width="102" height="51"/>
+    <text transform="matrix(1 0 0 1 128.5 -595.1)" class="minor" style="text-anchor:middle"><tspan x="283.5" y="716.28">remote</tspan><tspan x="283.5" y="742.28">resource</tspan></text>
+    <path class="darkYellowish" style="stroke-width:3"
+    d="M136 151
+    l45 15
+    "/>
+    <path class="darkYellowish" style="stroke-width:3"
+    d="M250 61
+    l0 54
+    "/>
+    <path class="darkYellowish" style="stroke-width:3"
+    d="M361 151
+    l-45 15
+    "/>
+    <path class="darkYellowish" style="stroke-width:3"
+    d="M181 286
+    l30 -45
+    "/>
+    <path class="darkYellowish" style="stroke-width:3"
+    d="M331 286
+    l-45 -45
+    "/>
+  </g>
+  <g id="LocalResource" style="visibility:visible; opacity:0">
+	  <desc>A box labeled local resource partly obscuring the central box, with an arc connecting the two</desc>
+    <text id="Text_local" transform="matrix(1 0 0 1 172 260.4)" class="minor whitish">
+      <tspan x="57" y="182.28">...local resources...</tspan>
+    </text>
+    <path class="darkYellowish" style="stroke-width:3; fill:none"
+    d="M313 178
+    c18.834 -5.958 27.084 -8.208 33 -9
+    3.459 -0.463 11.391 -1.093 15 0
+    5.206 1.576 14.399 8.223 18 12
+    2.912 3.054 7.843 10.823 9 15
+    0.992 3.582 1.918 11.164 0 15
+    -1.918 3.836 -8.604 7.594 -12 9
+    -4.802 1.989 -16.15 2.655 -21 3
+    -4.801 0.341 -21 0 -21 0
+    0 0 0 0 0 0
+    "/>
+    <rect class="darkYellowish" transform="matrix(1 0 0 -1 -14 751)" x="246" y="507" width="102" height="54"/>
+    <text transform="matrix(1 0 0 1 -44 -297.6)" class="minor" style="text-anchor:middle"><tspan x="328.5" y="512.28">local</tspan><tspan x="328.5" y="538.28">resource</tspan></text>
+  </g>
+  <g id="Arcs" style="visibility:visible; opacity:0">
+	  <desc>A set of arcs with arrows connecting some of the remote and the local resource among themselves</desc>
+    <text id="Text_arc" transform="matrix(1 0 0 1 364 350.4)" class="minor whitish">
+      <tspan x="72" y="92.28">...and arcs</tspan>
+    </text>
+    <path class="reddish" style="stroke-width:3; fill:none"
+    d="M70 97
+    c13.328 -22.011 20.078 -31.011 27 -36
+    21.404 -15.427 74.801 -29.073 99 -33
+    0 0 0 0 0 0
+    "/>
+    <path class="reddish" style="stroke-width:3; fill:none"
+    d="M466 154
+    c8.333 36.094 20.333 54.844 21 66
+    1.209 20.227 2.502 66.353 -6 87
+    -8.502 20.647 -35.88 55.489 -57 66
+    -33.493 16.668 -105.204 13.683 -138 9
+    -16.654 -2.378 -51.686 -15.315 -66 -24
+    -9.954 -6.04 -30 -21 -36 -33
+    0 0 0 0 0 0
+    "/>
+    <path class="reddish" style="stroke-width:3; fill:none"
+    d="M130 277
+    c12.511 -25.57 19.261 -36.07 27 -42
+    14.314 -10.967 49.962 -18.51 66 -21
+    0.695 -0.108 -3 0 3 0
+    6.708 0 0 0 0 0
+    "/>
+    <path class="reddish" style="stroke-width:3; fill:none"
+    d="M94 274
+    c-14.731 -40.556 -19.981 -58.556 -21 -72
+    -0.822 -10.85 -6.433 -34.114 6 -45
+    0 0 0 0 0 0
+    "/>
+    <path class="reddish" style="stroke-width:3; fill:none"
+    d="M181 22
+    l15 6
+    "/>
+    <path class="reddish" style="stroke-width:3; fill:none"
+    d="M187 40
+    l9 -12
+    "/>
+    <path class="reddish" style="stroke-width:3; fill:none"
+    d="M67 160
+    l12 -3
+    "/>
+    <path class="reddish" style="stroke-width:3; fill:none"
+    d="M79 157
+    l0 12
+    "/>
+    <path class="reddish" style="stroke-width:3; fill:none"
+    d="M184 325
+    l0 15
+    "/>
+    <path class="reddish" style="stroke-width:3; fill:none"
+    d="M184 325
+    l15 6
+    "/>
+    <path class="reddish" style="stroke-width:3; fill:none"
+    d="M217 205
+    l12 9
+    "/>
+    <path class="reddish" style="stroke-width:3; fill:none"
+    d="M217 223
+    l12 -9
+    "/>
+  </g>
+</svg>

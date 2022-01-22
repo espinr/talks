@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 800">
+  <title>Same example in DTD and Schema</title>
+  <desc>The same mockup example is shown in XML DTD and in XML Schemas side by side</desc>
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:axsvg="http://www.w3.org/2001/svgRdf/axsvg-schema.rdf#">
+      <rdf:Description rdf:about="#FullSlide">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#dtd"/>
+            <rdf:li rdf:resource="#schema"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <rdf:Description rdf:about="#dtd">
+        <axsvg:Text>true</axsvg:Text>
+        <axsvg:AtLeft rdf:resource="#schema"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#schema">
+        <axsvg:Text>true</axsvg:Text>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <style type="text/css">
+    .emph1 { fill:blue;}
+    .emph2 { fill:green;}
+    .emph3 { fill:navy;}
+    .emph4 { fill:orange;}
+    .emph5 { fill:red;}
+  </style>
+  <g id="FullSlide" transform="translate(0 100)">
+    <g id="dtd" transform="translate(0 160) scale(0.8)">
+      <desc>The example using an XML DTD</desc>
+      <rect x="-10" class="empty" width="580" height="290"/>
+      <text class="minor code">
+        <tspan x="0" dy="30">DOCTYPE <tspan class="emph5">exam</tspan> [</tspan>
+        <tspan x="20" dy="30">
+          <tspan class="emph5">&lt;!ELEMENT exam (student,qapair*)></tspan>
+        </tspan>
+        <tspan x="20" dy="30">
+          <tspan class="emph1">&lt;!ATTLIST exam paper CDATA #REQUIRED></tspan>
+        </tspan>
+        <tspan x="20" dy="30">
+          <tspan class="emph2">&lt;!ELEMENT student (#PCDATA)></tspan>
+        </tspan>
+        <tspan x="20" dy="30">
+          <tspan class="emph3">&lt;!ELEMENT qapair (question,answer)></tspan>
+        </tspan>
+        <tspan x="20" dy="30">
+          <tspan class="emph4">&lt;!ATTLIST qapair number CDATA #REQUIRED></tspan>
+        </tspan>
+        <tspan x="20" dy="30">&lt;!ELEMENT question (#PCDATA)></tspan>
+        <tspan x="20" dy="30">&lt;!ELEMENT answer (#PCDATA)></tspan>
+        <tspan x="0" dy="30">]></tspan>
+      </text>
+    </g>
+    <g transform="translate(500 0) scale(0.8)" id="schema">
+      <desc>The example using XML Schemas</desc>
+      <rect x="-10" class="empty" width="640" height="650"/>
+      <text class="minor code">
+        <tspan x="0" dy="30">&lt;schema></tspan>
+        <tspan x="20" dy="30">
+          <tspan class="emph5">&lt;element name="exam"></tspan>
+        </tspan>
+        <tspan x="40" dy="30">
+          <tspan class="emph5">&lt;complexType></tspan>
+        </tspan>
+        <tspan x="60" dy="30">
+          <tspan class="emph5">&lt;sequence></tspan>
+        </tspan>
+        <tspan x="80" dy="30">
+          <tspan class="emph2">&lt;element student type="string"/></tspan>
+        </tspan>
+        <tspan x="80" dy="30">
+          <tspan class="emph3">&lt;element qapair </tspan>
+        </tspan>
+        <tspan x="120" dy="30">
+          <tspan class="emph3">minOccurs="0" maxOccurs="unbounded"></tspan>
+        </tspan>
+        <tspan x="100" dy="30">
+          <tspan class="emph3">&lt;complexType></tspan>
+        </tspan>
+        <tspan x="120" dy="30">
+          <tspan class="emph3">&lt;sequence></tspan>
+        </tspan>
+        <tspan x="140" dy="30">              &lt;element question type="string"/></tspan>
+        <tspan x="140" dy="30">              &lt;element answer type="string"/></tspan>
+        <tspan x="120" dy="30">
+          <tspan class="emph3">&lt;/sequence></tspan>
+        </tspan>
+        <tspan x="100" dy="30">
+          <tspan class="emph3">&lt;/complexType></tspan>
+        </tspan>
+        <tspan x="100" dy="30">
+          <tspan class="emph4">&lt;attribute name="number"</tspan>
+        </tspan>
+        <tspan x="120" dy="30">
+          <tspan class="emph4">type="positiveInteger"/></tspan>
+        </tspan>
+        <tspan x="80" dy="30">
+          <tspan class="emph3">&lt;/element></tspan>
+        </tspan>
+        <tspan x="60" dy="30">
+          <tspan class="emph5">&lt;/sequence></tspan>
+        </tspan>
+        <tspan x="60" dy="30">
+          <tspan class="emph1">&lt;attribute name="paper" type="string"/></tspan>
+        </tspan>
+        <tspan x="40" dy="30">
+          <tspan class="emph5">&lt;/complexType></tspan>
+        </tspan>
+        <tspan x="20" dy="30">
+          <tspan class="emph5">&lt;element></tspan>
+        </tspan>
+        <tspan x="0" dy="30">&lt;/schema></tspan>
+      </text>
+    </g>
+  </g>
+</svg>

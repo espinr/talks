@@ -1,0 +1,86 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xml:space="preserve" width="400" height="200">
+<!-- Generator: Adobe Illustrator 8.0, SVG Export Plug-In 1.0x34 -->
+<style type="text/css"><![CDATA[
+ .st0 {fill:none}
+ .st1 {font-family:Helvetica}
+ .st2 {fill:#990000}
+ .st3 {fill:#9933FF}
+ .st4 {font-size:105;fill:#FFFFFF;stroke:#6633FF;stroke-miterlimit:4}
+ .st5 {fill:#FF0000}
+ .st6 {fill:#FF33FF}
+ .st7 {fill:#660000}
+ .st8 {fill:#6633FF}
+ .st9 {fill:#CC0000}
+ .st10 {fill:#CC33FF}
+ .st11 {fill:#000000}
+ .st12 {font-size:18;fill:#990000}
+ .st13 {font-size:50;fill:#FFFFFF;fill-opacity:.65;stroke:#CC0000;stroke-miterlimit:4}
+]]>
+</style>
+<defs>
+	<filter id="GroovyFilter" filterUnits="objectBoundingBox" x="-20%" y="-100%" width="140%" height="300%">
+		<!--Copyright 1999 Adobe Systems. You may copy, modify, and distribute this file, if you include this notice & do not charge for the distribution. This file is provided "AS-IS" without warranties of any kind, including any implied warranties.-->
+		<feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="2" result="groovy"/>
+		<feComposite in="groovy" in2="SourceAlpha" operator="in" result="CompSourceAlpha"/>
+		<feMerge>
+			<feMergeNode in="SourceGraphic"/>
+			<feMergeNode in="CompSourceAlpha"/>
+		</feMerge>
+	</filter>
+	<filter id="SpecFilter" filterUnits="objectBoundingBox" x="-25%" y="-25%" width="150%" height="150%">
+		<!--Copyright 1999 Adobe Systems. You may copy, modify, and distribute this file, if you include this notice & do not charge for the distribution. This file is provided "AS-IS" without warranties of any kind, including any implied warranties.-->
+		<feGaussianBlur in="SourceAlpha" stdDeviation="2" result="BlurAlpha"/>
+		<feSpecularLighting in="BlurAlpha" surfaceScale="5" specularConstant="1" specularExponent="10" lightColor="white" result="SpecularLightingExample">
+			<fePointLight x="-5000" y="-10000" z="20000"/>
+		</feSpecularLighting>
+		<feComposite in="SpecularLightingExample" in2="SourceAlpha" operator="in" result="SpecularOut"/>
+		<feComposite in="SourceGraphic" in2="SpecularOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
+	</filter>
+	<filter id="DropShadowFilter" filterUnits="objectBoundingBox" x="-50%" y="-50%" width="200%" height="200%">
+		<!--Copyright 1999 Adobe Systems. You may copy, modify, and distribute this file, if you include this notice & do not charge for the distribution. This file is provided "AS-IS" without warranties of any kind, including any implied warranties.-->
+		<feGaussianBlur in="SourceAlpha" stdDeviation="2" result="BlurAlpha"/>
+		<feOffset in="BlurAlpha" dx="4" dy="4" result="OffsetBlurAlpha"/>
+		<feMerge>
+			<feMergeNode in="OffsetBlurAlpha"/>
+			<feMergeNode in="SourceGraphic"/>
+		</feMerge>
+	</filter>
+</defs>
+<rect width="400" height="200" style="fill:#FDFED3;"/>
+<g id="frame">
+	<path d="M400.5,200.5H0.5V0.5h400v200z" class="st0"/>
+</g><!-- frame -->
+<g id="waves_fill">
+	<path d="M400.5,50.5c-0.119,0-0.232,0.005-0.351,0.005c-0.115,0-0.225-0.005-0.34-0.005h0.69z" class="st5"/>
+	<path d="M116.631,150.5c-16.386,0-30.077-3.079-42.067-8.145c16.271-6.967,29.222-17.701,41.537-29.413c12.578,11.712,25.843,22.446,42.333,29.413c-11.833,5.065-25.416,8.145-41.802,8.145z" class="st10"/>
+	<path d="M116.1,112.942c29.769-28.313,55.854-62.304,116.311-62.438c15.916,0.037,29.454,2.59,41.348,6.854c-50.843,17.859-70.435,65.776-115.326,84.997c-16.49-6.967-29.755-17.701-42.333-29.413z" class="st6"/>
+	<path d="M316.631,50.5c-0.119,0-0.232,0.005-0.351,0.005c-0.115,0-0.225-0.005-0.34-0.005h0.69z" class="st5"/>
+	<path d="M232.762,50.5c-0.119,0-0.232,0.005-0.351,0.005c-0.115,0-0.225-0.005-0.34-0.005h0.69z" class="st5"/>
+	<path d="M273.759,57.358c12.137-4.264,26.052-6.816,42.521-6.854c15.916,0.037,29.454,2.59,41.348,6.854c-16.755,5.886-30.12,15.032-42.109,25.346c-12.055-10.313-25.339-19.46-41.76-25.346z" class="st9"/>
+	<path d="M200.5,150.5c-16.386,0-30.077-3.079-42.067-8.145c44.892-19.221,64.483-67.138,115.326-84.997c16.421,5.886,29.705,15.032,41.76,25.346C281.539,111.937,258.565,150.5,200.5,150.5z" class="st5"/>
+	<path d="M400.5,83.671c-12.354-10.703-25.943-20.244-42.872-26.313c12.137-4.264,26.052-6.816,42.521-6.854c0.119,0,0.232,0.007,0.351,0.007v33.159z" class="st7"/>
+	<path d="M400.5,146.102c-36.77-10.913-57.762-40.106-84.981-63.397c11.989-10.313,25.354-19.46,42.109-25.346c16.929,6.068,30.519,15.609,42.872,26.313v62.431z" class="st2"/>
+	<path d="M74.563,142.355C44.236,129.542,24.829,103.975,0.5,83.06V50.5c58.667,0,85.134,34.074,115.6,62.442c-12.314,11.712-25.265,22.446-41.537,29.413z" class="st3"/>
+	<path d="M0.5,83.06c24.329,20.915,43.736,46.482,74.063,59.296c-11.833,5.065-25.416,8.145-41.802,8.145c-12.088,0-22.705-1.682-32.262-4.594V83.06z" class="st8"/>
+</g><!-- waves_fill -->
+<g id="SVG" style="filter:url(#GroovyFilter)">
+	<g>
+		<text x="170.482" y="130.402" class="st1 st4">SVG</text>
+	</g>
+</g><!-- SVG -->
+<g id="_x0031_00percent" style="filter:url(#DropShadowFilter)">
+	<g class="st1 st13">
+		<text transform="matrix(1.588 0 0 1 49.439 101.218) scale(1.5)">100%</text>
+	</g>
+</g><!-- _x0031_00percent -->
+<g id="superiorvectorgraphics" style="filter:url(#SpecFilter)">
+	<g>
+		<text transform="matrix(1.354 0 0 1 69.963 170)" class="st1 st12">Superior Vector Graphics</text>
+	</g>
+</g><!-- superiorvectorgraphics -->
+
+
+</svg>

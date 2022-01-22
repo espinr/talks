@@ -1,0 +1,80 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- Generator: Mayura Draw 3.6 -->
+<svg viewBox="0 0 544 439">
+	<path class="blueish" d="M10 249 l0 120 75 0 15 -15 0 -105 -90 0z"/>
+	<path class="whitish" d="M85 354 l0 15 15 -15 -15 0z"/>
+	<path class="blueish" d="M225.7 9 l0 120 75 0 15 -15 0 -105 -90 0z"/>
+	<path class="whitish" d="M300.7 114 l0 15 15 -15 -15 0 z"/>
+	<text transform="matrix(1 0 0 1 270.7 51.3)" class="minor" style="text-anchor:middle">
+		<tspan x="0" y="0">XSLT</tspan>
+		<tspan x="0" y="26">Style</tspan>
+		<tspan x="0" y="52">Sheet</tspan>
+	</text>
+	
+	<path class="blueish" d="M445 249 l0 120 75 0 15 -15 0 -105 -90 0z"/>
+	<path class="whitish" d="M520 354 l0 15 15 -15 -15 0 z"/>
+	<path class="reddish" d="M175 279 l-15 30 "/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 167.2 354.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<path class="reddish" d="M160 309 l-15 30 "/>
+	<path class="reddish" d="M160 309 l15 30 "/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 137.2 414.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 152.2 384.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 167.2 414.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<path class="reddish" d="M175 282 l15 27 "/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 182.2 384.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<path class="reddish" d="M385 264 l-30 30 "/>
+	<path class="reddish" d="M385 294 l-15 30 "/>
+	<path class="reddish" d="M400 324 l-15 30 "/>
+	<path class="reddish" d="M400 324 l15 30 "/>
+	<path class="reddish" d="M385 297 l15 27 "/>
+	<path class="reddish" d="M385 264 l30 30 "/>
+	<path class="reddish" d="M385 264 l0 30 "/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 377.2 339.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 407.2 429.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 377.2 429.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 362.2 399.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 407.2 369.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 377.2 369.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 347.2 369.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 392.2 399.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<path class="reddish" d="M263.19 168 l-30 30 "/>
+	<path class="reddish" d="M233.19 198 l0 30 "/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 225.4 303.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<path class="reddish" d="M263.2 168 l0 30 "/>
+	<path class="reddish" d="M263.2 168 l30 30 "/>
+	<path class="reddish" d="M293.2 198 l-15 30 "/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 270.4 303.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<path class="reddish" d="M293.2 198 l15 30 "/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 300.4 303.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 255.4 243.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 255.4 273.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 285.4 273.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<ellipse class="reddish" transform="matrix(0.1 0 0 -0.1 225.4 273.3)" cx="78" cy="753" rx="31.89" ry="31.89"/>
+	<text transform="matrix(1 0 0 1 55 304.3)" class="minor" style="text-anchor:middle">
+		<tspan x="0" y="0">XML</tspan>
+		<tspan x="0" y="26">Source</tspan>
+	</text>
+	<text transform="translate(35,-10) matrix(1 0 0 1 456 317.3)" class="minor" style="text-anchor:middle">
+		<tspan x="0" y="0">Result</tspan>
+		<tspan x="0" y="26" class="reddish" style="font-size:14">(eg, XHTML)</tspan>
+	</text>
+	<path class="reddish" d="M109 309 l39 0 "/>
+	<path class="reddish" d="M148 309 l0 0.5 -9 2.5 0 -6 9 2.5z"/>
+	<path class="reddish" d="M403 309 l39 0"/>
+	<path class="reddish" d="M442 309 l0 0.5 -9 2.5 0 -6 9 2.5z"/>
+	<path class="reddish" d="M270.7 138 l0 18"/>
+	<path class="reddish" d="M270.7 156 l-0.5 0 -2.5 -9 6 0 -2.5 9z"/>
+	<ellipse class="basic" style="stroke-width:1" transform="matrix(1 0 0 -1 -8.31 837)" cx="279" cy="528" rx="40.804" ry="40.804"/>
+	<text transform="matrix(1 0 0 1 270.7 375.7)" class="normal" style="text-anchor:middle">
+		<tspan x="0" y="0">Transformation</tspan>
+		<tspan x="0" y="26">Process</tspan>
+	</text>
+	<path class="reddish" d="M270.688 240 l0 39 "/>
+	<path class="reddish" d="M270.688 279 l-0.5 0 -2.5 -9 6 0 -2.5 9z"/>
+	<path class="reddish" d="M205 309 l45 0 "/>
+	<path class="reddish" d="M250 309 l0 0.5 -9 2.5 0 -6 9 2.5 z"/>
+	<path class="reddish" d="M292 309 l54 0"/>
+	<path transform="translate(105,0)" class="reddish" d="M250 309 l0 0.5 -9 2.5 0 -6 9 2.5 z "/>
+</svg>

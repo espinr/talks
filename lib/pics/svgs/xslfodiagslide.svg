@@ -1,0 +1,67 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg viewBox="0 0 800 150">
+  <title>Schematic view of an XSLT and FO process</title>
+	<desc>Boxes with arrows: XML to a box on XSLT, which also inputs from a box with XSLT Definition and XPath;
+	this box points to an FO output, which in turns points at a PDF box.</desc>
+  <rect width="800" height="150" class="background" />
+  <g transform="scale(0.9) translate(0,-200)">
+    <g transform="translate(10,110)">
+			<a xlink:href="../xmls/frahcd.xml">
+        <g transform="translate(10,160)">
+          <rect class="yellowish" width="180" height="70" />
+          <text x="10" y="40">XML Document</text>
+        </g>
+			</a>
+			
+      <line class="arrow" x1="190" y1="195" x2="230" y2="195" />
+
+      <g transform="translate(230,195)">
+        <g transform="rotate(0)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+			
+			<a xlink:href="../xmls/frahcdToFO.xsl">
+        <g transform="translate(230,160)">
+          <rect class="yellowish" width="180" height="70" />
+          <text x="10" y="30">XSLT</text>
+          <text x="10" y="60">Transformation</text>
+        </g>
+			</a>
+
+      <line class="arrow" x1="410" y1="195" x2="460" y2="195" />
+
+      <g transform="translate(460,195)">
+        <g transform="rotate(0)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+			<a xlink:href="../xmls/frahcdToFO-display.xml"> 
+        <g transform="translate(460,160)">
+          <rect class="yellowish" width="150" height="70" />
+          <text x="20" y="40">FO Objects</text>
+        </g>
+			</a>
+
+      <line class="arrow" x1="610" y1="195" x2="670" y2="195" />
+
+      <g transform="translate(670,195)">
+        <g transform="rotate(0)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+			<a xlink:href="../xmls/frahcdToFO.pdf"> 
+        <g transform="translate(670,160)">
+          <rect class="yellowish" width="180" height="70" />
+          <text x="20" y="30" class="reddish">Printout</text>
+          <text x="20" y="60" class="reddish">(eg PDF)</text>
+        </g>
+			</a>
+    </g>
+  </g>
+</svg>
+

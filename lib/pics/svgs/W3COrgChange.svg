@@ -1,0 +1,18 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-10 -20 1120 750">
+    <title>Organizational chart of W3C in 1997 and now. </title>
+    <desc>By clicking on the current version, it disappears and the other appears</desc>
+    <g id="org_1997" visibility="visible">
+        <image xlink:href="W3COrg1997.svg" width="1120" height="750" x="-10" y="-20">
+            <desc>Organizational chart of W3C in a tabular form. Coloumns correspond to Domain, with Activities and Groups indented.</desc>
+            <set attributeName="visibility" to="visible" begin="click" xlink:href="#org_now"/>
+            <set attributeName="visibility" to="hidden" begin="click" xlink:href="#org_1997"/>
+        </image>
+    </g>
+    <g id="org_now" visibility="hidden">
+        <image xlink:href="W3COrg.svg" width="1120" height="750" x="-10" y="-20">
+            <desc>Organizational chart of W3C in a tabular form for the year 1997. Coloumns correspond to Domain, with Activities and Groups indented.</desc>
+            <set attributeName="visibility" to="hidden" begin="click" xlink:href="#org_now"/>
+            <set attributeName="visibility" to="visible" begin="click" xlink:href="#org_1997"/>
+        </image>
+    </g>
+</svg>

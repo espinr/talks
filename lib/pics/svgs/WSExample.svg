@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1220 700" >
+  <style type="text/css">
+    line.arrow {
+					stroke-width:4 !important; 
+					marker-start:url(#ArrowBegin) !important; 
+					marker-end: url(#ArrowEnd) !important;
+			}
+    line.arrowwsdl {
+			    stroke: blue !important;
+					fill: none;
+					stroke-width:3 !important; 
+					marker-start:url(#ArrowBeginWSDL) !important; 
+					stroke-dasharray:15 10;
+			}
+			path.arrowwsdl {
+			    stroke: none !important;
+					fill: blue !important;
+			}
+			text.c, tspan.c { text-anchor:middle }			
+  </style>
+  <defs>
+  		<marker id="ArrowBegin" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" 
+			        markerWidth="8" markerHeight="5" orient="auto">
+				<desc>Arrowhead for the beginning of the line (a reversed triangle)</desc>
+  			<path class="arrow" d="M 10 0 L 0 5 L 10 10 z"/>
+  		</marker>
+  		<marker id="ArrowBeginWSDL" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" 
+			        markerWidth="8" markerHeight="5" orient="auto">
+				<desc>Arrowhead for the beginning of the line (a reversed triangle)</desc>
+  			<path class="arrowwsdl" d="M 10 0 L 0 5 L 10 10 z"/>
+  		</marker>
+  		<marker id="ArrowEnd" viewBox="0 0 10 10" refX="0" refY="5" markerUnits="strokeWidth" 
+			        markerWidth="8" markerHeight="5" orient="auto">
+				<desc>Arrowhead for the end of a line (a triangle)</desc>
+  			<path class="arrow" d="M 0 0 L 10 5 L 0 10 z"/>
+  		</marker>
+			<image id="user" width="150" height="150" xlink:href="UserMan.svg"/>
+			<g id="ClientApp">
+			   <rect class="yellowish" width="150" height="140"/>
+			   <rect class="blueish" width="10" height="30" x="150" y="55"/>				 
+				 <text class="minor c" x="75" y="60">Client<tspan class="minor c" x="75" dy="30">Appl.</tspan></text>
+			</g>
+			<g id="TravelWsdl">
+			    <rect class="blueish" style="stroke:none" width="70" height="90"/>
+					<text class="whitish c" x="35" y="35">Interf.<tspan class="whitish c" x="35" dy="20">desc.</tspan></text>
+			</g>
+			<g id="WSTravel">
+			   <rect class="blueish" width="150" height="140"/>
+			   <rect class="blueish" width="10" height="30" x="-10" y="55"/>				 
+			   <rect class="whitish" width="10" height="30" x="150" y="15"/>				 
+			   <rect class="lightGreenish" width="10" height="30" x="150" y="55"/>				 
+			   <rect class="darkYellowish" width="10" height="30" x="150" y="95"/>				 
+				 <text class="minor whitish c" x="75" y="40">Travel Agent 
+				 <tspan class="minor whitish c" x="75" dy="30">Web</tspan>
+				 <tspan class="minor whitish c" x="75" dy="30">Service</tspan></text>
+			</g>
+			<g id="CCWsdl">
+			    <rect class="whitish" style="stroke:none" width="70" height="90"/>
+					<text class="whitish c" x="35" y="35">Interf.<tspan class="whitish c" x="35" dy="20">desc.</tspan></text>
+			</g>
+			<g id="CC">
+			   <rect class="whitish" width="150" height="140"/>
+			   <rect class="whitish" width="10" height="30" x="-10" y="55"/>				 
+				 <text class="minor whitish c" x="75" y="40">Credit Card
+				 <tspan class="minor whitish c" x="75" dy="30">Web</tspan>
+				 <tspan class="minor whitish c" x="75" dy="30">Service</tspan></text>
+			</g>
+			<g id="HotelWsdl">
+			    <rect class="lightGreenish" style="stroke:none" width="70" height="90"/>
+					<text class="whitish c" x="35" y="35">Interf.<tspan class="whitish c" x="35" dy="20">desc.</tspan></text>
+			</g>
+			<g id="Hotel">
+			   <rect class="lightGreenish" width="150" height="140"/>
+			   <rect class="lightGreenish" width="10" height="30" x="-10" y="55"/>				 
+				 <text class="minor whitish c" x="75" y="40">Hotel
+				 <tspan class="minor whitish c" x="75" dy="30">Web</tspan>
+				 <tspan class="minor whitish c" x="75" dy="30">Service</tspan></text>
+			</g>
+			<g id="AirlineWsdl">
+			    <rect class="darkYellowish" style="stroke:none" width="70" height="90"/>
+					<text class="whitish c" x="35" y="35">Interf.<tspan class="whitish c" x="35" dy="20">desc.</tspan></text>
+			</g>
+			<g id="Airline">
+			   <rect class="darkYellowish" width="150" height="140"/>
+			   <rect class="darkYellowish" width="10" height="30" x="-10" y="55"/>				 
+				 <text class="minor whitish c" x="75" y="40">Airline
+				 <tspan class="minor whitish c" x="75" dy="30">Web</tspan>
+				 <tspan class="minor whitish c" x="75" dy="30">Service</tspan></text>
+			</g>
+  </defs>
+	 <use xlink:href="#user" transform="translate(20,300)"/>
+	 <g transform="translate(100,0)">
+  	 <use xlink:href="#ClientApp" transform="translate(100,300)"/>	 
+  	 <use xlink:href="#WSTravel" transform="translate(500,300)"/>
+  	 <line class="arrow" x1="285" y1="370" x2="465" y2="370"/>
+  	 <use xlink:href="#CC" transform="translate(800,50)"/>
+  	 <line class="arrow" x1="675" y1="315" x2="775" y2="135"/>
+  	 <use xlink:href="#Hotel" transform="translate(930,280)"/>
+  	 <line class="arrow" x1="685" y1="365" x2="895" y2="350"/>
+  	 <use xlink:href="#Hotel" transform="translate(900,300)"/>
+  	 <line class="arrow" x1="685" y1="375" x2="865" y2="370"/>
+  	 <use xlink:href="#Airline" transform="translate(830,520)"/>
+  	 <line class="arrow" x1="675" y1="415" x2="805" y2="575"/>
+  	 <use xlink:href="#Airline" transform="translate(800,550)"/>
+  	 <line class="arrow" x1="675" y1="425" x2="775" y2="605"/>
+  	 <use xlink:href="#TravelWsdl" transform="translate(350,200)"/>
+  	 <line class="arrowwsdl" x1="285" y1="340" x2="340" y2="300" />	 
+  	 <line class="arrowwsdl" x1="465" y1="340" x2="420" y2="300" />	
+  	 <use xlink:href="#CCWsdl" transform="translate(630,80)"/>
+  	 <line class="arrowwsdl" x1="660" y1="290" x2="680" y2="180" />	 
+  	 <line class="arrowwsdl" x1="755" y1="125" x2="710" y2="150" />	 
+  	 <use xlink:href="#HotelWsdl" transform="translate(760,230)"/>
+  	 <line class="arrowwsdl" x1="685" y1="348" x2="760" y2="330" />	 
+  	 <line class="arrowwsdl" x1="860" y1="340" x2="830" y2="330" />	 
+  	 <use xlink:href="#AirlineWsdl" transform="translate(600,550)"/>
+  	 <line class="arrowwsdl" x1="665" y1="450" x2="660" y2="535" />	 
+  	 <line class="arrowwsdl" x1="750" y1="615" x2="680" y2="590" />
+	 </g>	 
+</svg>

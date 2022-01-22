@@ -1,0 +1,134 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN"
+  "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg  width="1000" height="700" viewBox="0 0 1000 700" >
+<rect class="background" width="1000" height="700"/>
+<defs>
+<style type="text/css">
+<![CDATA[
+rect {stroke:black;fill:white;}
+line {stroke:red;stroke-width:4}
+rect.box {stroke:none;fill:rgb(140, 189, 237)}
+text {font-family:Arial;font-size:20}
+
+]]>
+</style>
+</defs>
+
+<!-- **************  Screen Display Area  ******************** -->
+
+<g transform="translate(0,-25)">
+
+<g transform="translate(10,40)">
+<rect style="fill:white;"  width="120" height="30"/>
+<text x="10" y="24" style="color:black;">&lt;smil></text>
+</g>
+
+<g transform="translate(60,80)">
+<rect style="fill:yellow"  width="880" height="200"/>
+
+<g transform="translate(10,10)">
+<rect style="fill:white;"  width="120" height="30"/>
+<text x="10" y="24" style="color:black;">&lt;head></text>
+</g>
+
+<g transform="translate(10,140)">
+<rect style="fill:white;"  width="120" height="30"/>
+<text x="10" y="24" style="color:black;">&lt;/head></text>
+</g>
+
+<g transform="translate(140,70)">
+<rect style="fill:white;"  width="120" height="30"/>
+<text x="10" y="24" style="color:red;">Layout</text>
+</g>
+<g transform="translate(280,30)">
+<rect style="fill:white;"  width="120" height="30"/>
+<text x="10" y="24" style="color:red;">&lt;layout></text>
+</g>
+<g transform="translate(280,110)">
+<rect style="fill:white;"  width="120" height="30"/>
+<text x="10" y="24" style="color:red;">&lt;region></text>
+</g>
+
+</g>
+
+<g transform="translate(60,300)">
+<rect style="fill:green"  width="880" height="350"/>
+
+<g transform="translate(10,10)">
+<rect style="fill:white;"  width="120" height="30"/>
+<text x="10" y="24" style="color:black;">&lt;body></text>
+</g>
+
+<g transform="translate(10,310)">
+<rect style="fill:white;"  width="120" height="30"/>
+<text x="10" y="24" style="color:black;">&lt;/body></text>
+</g>
+
+<g transform="translate(140,45)">
+<rect style="fill:white;"  width="180" height="40"/>
+<text x="10" y="24" style="color:blue;">Timing</text>
+</g>
+
+
+
+
+
+<g transform="translate(140,115)">
+<rect style="fill:white;"  width="180" height="40"/>
+<text x="10" y="24" style="color:red;">Linking</text>
+</g>
+
+
+<g transform="translate(140,185)">
+<rect style="fill:white;"  width="180" height="40"/>
+<text x="10" y="24" style="color:green;">Alternatives</text>
+</g>
+
+
+<g transform="translate(20,-50)">
+  <g transform="translate(350,80)">
+  <rect style="fill:white;"  width="150" height="40"/>
+  <text x="10" y="24" style="color:blue;">&lt;par></text>
+  </g>
+  <g transform="translate(400,115)">
+  <rect style="fill:white;"  width="150" height="40"/>
+  <text x="10" y="24" style="color:blue;">&lt;seq></text>
+  </g>
+</g>
+
+<g transform="translate(-70,-30) translate(450,150)">
+<rect style="fill:white;"  width="150" height="40"/>
+<text x="10" y="24" style="color:red;">&lt;a>&lt;anchor></text>
+</g>
+<g transform="translate(-120,0)">
+<g transform="translate(500,185)">
+<rect style="fill:white;"  width="150" height="40"/>
+<text x="10" y="24" style="color:green;">&lt;switch></text>
+</g>
+
+<g transform="translate(660,165)">
+<rect style="fill:white;"  width="210" height="80"/>
+<text x="10" y="24" style="color:green;">Load balancing</text>
+<text x="10" y="48" style="color:green;">Language selection</text>
+<text x="10" y="72" style="color:green;">Bandwidth selection</text>
+</g>
+</g>
+</g>
+
+
+<g transform="translate(10,660)">
+<rect style="fill:white;"  width="120" height="30"/>
+<text x="10" y="24" style="color:black;">&lt;/smil></text>
+</g>
+
+
+
+
+</g>
+
+</svg>
+ 
+ 

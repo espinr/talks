@@ -1,0 +1,315 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 843 578">
+	<title>Various XML recs working together</title>
+	<desc>A set of blocks referring to various xml recs: schemas, namespaces, linking, css, xsl, and dom.
+	A set of animation is defined to show these blocks step by step, the animation is controlled
+	via a set of circles of class 'animationControl'</desc>
+	<defs>
+		<!-- Change the DTDs to Schemas -->
+		<animate xlink:href="#text_Schemas" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="1s" restart="never" fill="freeze" begin="c_startXML.click"/>
+		<animate xlink:href="#text_DTD" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="1s" restart="never" fill="freeze" begin="c_startXML.click"/>
+		<set xlink:href="#c_text_Schemas" attributeType="CSS" attributeName="visibility" to="visible" begin="c_startXML.click" fill="freeze"/>
+		<!-- Add the embedded xmls -->
+		<animate xlink:href="#embeddedXML" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="1s" restart="never" fill="freeze" begin="c_text_Schemas.click"/>
+		<set xlink:href="#c_embeddedXML" attributeType="CSS" attributeName="visibility" to="visible" begin="c_text_Schemas.click" fill="freeze"/>
+		<!-- Add the namespaces -->
+		<animate xlink:href="#namespaces" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="1s" restart="never" fill="freeze" begin="c_embeddedXML.click"/>
+		<set xlink:href="#c_namespaces" attributeType="CSS" attributeName="visibility" to="visible" begin="c_embeddedXML.click" fill="freeze"/>
+		<!-- Add the second XML -->
+		<animate xlink:href="#secondXML" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="1s" restart="never" fill="freeze" begin="c_namespaces.click"/>
+		<set xlink:href="#c_secondXML" attributeType="CSS" attributeName="visibility" to="visible" begin="c_namespaces.click" fill="freeze"/>
+		<!-- Add the Xlink arrow -->
+		<animate xlink:href="#xlink" id="a_xlink" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="1s" restart="never" fill="freeze" begin="c_secondXML.click"/>
+		<set xlink:href="#c_xpointer" attributeType="CSS" attributeName="visibility" to="visible" begin="c_secondXML.click" fill="freeze"/>
+		<!-- Add the XPointer arrow -->
+		<animate xlink:href="#xpointer" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="1s" restart="never" fill="freeze" begin="a_xlink.end"/>
+		<!-- Add the CSS block -->
+		<animate xlink:href="#css" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="1s" restart="never" fill="freeze" begin="c_xpointer.click"/>
+		<set xlink:href="#c_css" attributeType="CSS" attributeName="visibility" to="visible" begin="c_xpointer.click" fill="freeze"/>
+		<!-- Add the XSLT block -->
+		<animate xlink:href="#xslt" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="1s" restart="never" fill="freeze" begin="c_css.click"/>
+		<set xlink:href="#c_xslt" attributeType="CSS" attributeName="visibility" to="visible" begin="c_css.click" fill="freeze"/>
+		<!-- Add the DOM block -->
+		<animate xlink:href="#dom" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="1s" restart="never" fill="freeze" begin="c_xslt.click"/>
+	</defs>
+	<switch>
+		<g requiredFeatures="org.w3c.svg.dynamic">
+			<circle cx="820" cy="20" r="5" class="animationControl" style="visibility:visible" id="c_startXML"/>
+			<circle cx="820" cy="20" r="5" class="animationControl" style="visibility:hidden" id="c_text_Schemas"/>
+			<circle cx="820" cy="20" r="5" class="animationControl" style="visibility:hidden" id="c_embeddedXML"/>
+			<circle cx="820" cy="20" r="5" class="animationControl" style="visibility:hidden" id="c_namespaces"/>
+			<circle cx="820" cy="20" r="5" class="animationControl" style="visibility:hidden" id="c_secondXML"/>
+			<circle cx="820" cy="20" r="5" class="animationControl" style="visibility:hidden" id="c_xlink"/>
+			<circle cx="820" cy="20" r="5" class="animationControl" style="visibility:hidden" id="c_xpointer"/>
+			<circle cx="820" cy="20" r="5" class="animationControl" style="visibility:hidden" id="c_css"/>
+			<circle cx="820" cy="20" r="5" class="animationControl" style="visibility:hidden" id="c_xslt"/>
+		</g>
+	</switch>
+	<!-- End of animation control -->
+	<g id="startXML">
+		<desc>Block representing basic XML</desc>
+		<rect class="yellowish" transform="matrix(0 1.3 1 0 -6 -173)" x="450" y="195" width="120" height="102"/>
+		<text transform="matrix(1 0 0 1.3 -276 219.4)" class="reddish" style="font-size:12">
+			<tspan x="489" y="190.14">&#60;...&#62;....&#60;/...&#62;</tspan>
+		</text>
+		<text transform="matrix(1 0 0 1.3 -297 208)" class="reddish" style="font-size:12">
+			<tspan x="489" y="190.14">&#60;...&#62;</tspan>
+		</text>
+		<text transform="matrix(1 0 0 1.3 -297 318.4)" class="reddish" style="font-size:12">
+			<tspan x="489" y="190.14">&#60;/...&#62;</tspan>
+		</text>
+		<path d="M189 443.2 l102 0"/>
+	</g>
+	<switch>
+		<g id="text_DTD" style="visibility:visible" transform="translate(10)" requiredFeatures="org.w3c.svg.dynamic">
+			<desc>DTD is placed at the start of the XML box</desc>
+			<text transform="matrix(1 0 0 1 -264 242.4)" class="reddish" style="text-anchor:middle">
+				<tspan x="495" y="196">DTD</tspan>
+			</text>
+		</g>
+	</switch>
+	<defs>
+		<g id="text_Schemas_d" transform="translate(18)">
+			<desc>As a result of animation, schemas replace the DTD</desc>
+			<text transform="matrix(1 0 0 1 -270 242.4) translate(495,194.28)" class="reddish" style="text-anchor:middle">Schema</text>
+		</g>
+	</defs>
+	<switch>
+		<use xlink:href="#text_Schemas_d" style="visibility:visible; opacity:0" id="text_Schemas" requiredFeatures="org.w3c.svg.dynamic"/>
+		<use xlink:href="#text_Schemas_d" id="text_Schemas2"/>
+	</switch>
+	<!-- ================= -->
+	<defs>
+		<g id="embeddedXML_d">
+			<desc>Two embedded xml block within the original one (need for namespaces)</desc>
+			<rect class="yellowish" transform="matrix(0 1 1 0 21 19)" x="450" y="195" width="36" height="36"/>
+			<text transform="matrix(1 0 0 1 -270 289.7)" class="reddish" style="font-size:12">
+				<tspan x="489" y="190.14">&#60;...&#62;</tspan>
+			</text>
+			<text transform="matrix(1 0 0 1 -270 313.7)" class="reddish" style="font-size:12">
+				<tspan x="489" y="190.14">&#60;/...&#62;</tspan>
+			</text>
+			<rect class="yellowish" transform="matrix(0 1 1 0 21 64)" x="450" y="195" width="36" height="36"/>
+			<text transform="matrix(1 0 0 1 -270 358.7)" class="reddish" style="font-size:12">
+				<tspan x="489" y="190.14">&#60;/...&#62;</tspan>
+			</text>
+			<text transform="matrix(1 0 0 1 -270 334.7)" class="reddish" style="font-size:12">
+				<tspan x="489" y="190.14">&#60;...&#62;</tspan>
+			</text>
+		</g>
+	</defs>
+	<switch>
+		<use xlink:href="#embeddedXML_d" id="embeddedXML" requiredFeatures="org.w3c.svg.dynamic" style="visibility:visible; opacity:0"/>
+		<use xlink:href="#embeddedXML_d" style="visibility:visible;"/>
+	</switch>
+	<!-- ================= -->
+	<defs>
+		<g id="namespaces_d">
+			<desc>Two separate boxes related to external DTD and Schemas, to show the role of namespaces</desc>
+			<rect class="yellowish" transform="matrix(0 1 1 0 -90 -44.6)" x="453" y="108" width="24" height="72"/>
+			<text transform="matrix(1 0 0 1 -439.7 325.4) translate(493.67,101.9)" class="centre reddish">
+				<tspan>DTD_a</tspan>
+			</text>
+			<rect class="yellowish" transform="matrix(0 1 1 0 -82.5 82.31)" x="453" y="91.5" width="23.101" height="109.5"/>
+			<text transform="matrix(1 0 0 1 -450 451.9) translate(513,101.9)" class="centre reddish">
+				<tspan>Schema _b</tspan>
+			</text>
+			<path class="yellowish dashed" d="M219 487 l-120 -60"/>
+			<path class="yellowish" style="stroke:none" d="M99 427
+    l0.224 -0.447
+    9.168 1.789
+    -2.683 5.367
+    -6.932 -6.261
+    z"/>
+			<path class="yellowish dashed" d="M219 529 l-96 18"/>
+			<path class="yellowish" style="stroke:none" d="M123 547
+    l-0.092 -0.491
+    8.385 -4.116
+    1.106 5.897
+    -9.307 -0.799
+    z"/>
+			<text transform="matrix(1 0 0 1 -471 477.9)" class="reddish">
+				<tspan x="501" y="16.536">Namespaces</tspan>
+			</text>
+		</g>
+	</defs>
+	<switch>
+		<use xlink:href="#namespaces_d" id="namespaces" requiredFeatures="org.w3c.svg.dynamic" style="visibility:visible; opacity:0"/>
+		<use xlink:href="#namespaces_d" style="visibility:visible;"/>
+	</switch>
+	<!-- ================= -->
+	<defs>
+		<g id="secondXML_d">
+			<desc>A second XML box, to use for linking</desc>
+			<rect class="yellowish" transform="matrix(0 1.3 1 0 237 -347)" x="468.462" y="195" width="101.538" height="102"/>
+			<text transform="matrix(1 0 0 1.3 -33 78.44)" class="reddish" style="font-size:12">
+				<tspan x="489" y="190.14">&#60;...&#62;....&#60;/...&#62;</tspan>
+			</text>
+			<text transform="matrix(1 0 0 1.3 -54 34.04)" class="reddish" style="font-size:12">
+				<tspan x="489" y="190.14">&#60;...&#62;</tspan>
+			</text>
+			<text transform="matrix(1 0 0 1.3 -54 144.4)" class="reddish" style="font-size:12">
+				<tspan x="489" y="190.14">&#60;/...&#62;</tspan>
+			</text>
+		</g>
+	</defs>
+	<switch>
+		<use xlink:href="#secondXML_d" id="secondXML" requiredFeatures="org.w3c.svg.dynamic" style="visibility:visible; opacity:0"/>
+		<use xlink:href="#secondXML_d" style="visibility:visible;"/>
+	</switch>
+	<!-- ================= -->
+	<defs>
+		<g id="xlink_d">
+			<desc>Arrow and label for xlink, showing the relationship between the original and the external xml block</desc>
+			<path class="yellowish" style="fill:none" d="M279 463
+    c30.002 -7.848 42.752 -12.348 51 -18
+    11.249 -7.708 30.3 -29.415 36 -42
+    6.557 -14.478 5.082 -48.751 9 -63
+    2.401 -8.732 8.489 -28.464 15 -36
+    4.381 -5.07 11.881 -9.57 30 -18
+    "/>
+			<path class="yellowish" style="stroke:none" d="M420 286
+    l0.454 0.891
+    -13.772 12.623
+    -5.445 -10.694
+    18.309 -3.711
+    z"/>
+			<text transform="matrix(1 0 0 1 -72 96.93)" class="listMinor yellowish" style="font-style:italic">
+				<tspan x="375" y="280.536">XLink</tspan>
+				<tspan x="430" y="330">XBase</tspan>
+			</text>
+		</g>
+	</defs>
+	<switch>
+		<use xlink:href="#xlink_d" id="xlink" requiredFeatures="org.w3c.svg.dynamic" style="visibility:visible; opacity:0"/>
+		<use xlink:href="#xlink_d" style="visibility:visible;"/>
+	</switch>
+	<!-- ================= -->
+	<defs>
+		<g id="xpointer_d">
+			<desc>Arrow and label for xpath, showing the role of xpath into the xml document</desc>
+			<path class="pinkish" style="fill:none" d="M480 277
+    c14.513 3.825 19.763 7.575 21 15
+    1.237 7.425 -2.513 12.675 -15 21
+    "/>
+			<path class="pinkish" style="stroke:none" d="M486 313
+    l-0.651 -0.759
+    10.415 -15.509
+    7.808 9.112
+    -16.922 7.916
+    z"/>
+			<text transform="matrix(1 0 0 1 198 -194.1)" class="listMinor pinkish" style="font-style:italic">
+				<tspan x="315" y="496.536">XPointer</tspan>
+			</text>
+		</g>
+	</defs>
+	<switch>
+		<use xlink:href="#xpointer_d" id="xpointer" requiredFeatures="org.w3c.svg.dynamic" style="visibility:visible; opacity:0"/>
+		<use xlink:href="#xpointer_d" style="visibility:visible;"/>
+	</switch>
+	<!-- ============= -->
+	<defs>
+		<g id="css_d">
+			<desc>A block showing css, symbolizing that one can output xml through css</desc>
+			<path class="whitish" style="fill:none" d="M564 211
+    c45 42 56.24 61.611 63 78
+    7.754 18.799 17.68 63.532 18 84
+    0.25 15.983 -6.777 51.148 -12 66
+    -6.375 18.129 -27.565 56.671 -39 72
+    -4.443 5.957 -11.943 13.457 -30 30
+    "/>
+			<rect class="whitish" transform="matrix(0 1 1 0 3 52)" x="258" y="654" width="129" height="177" rx="20" ry="20"/>
+			<text transform="matrix(1 0 0 1 315 -290.1)" style="font-style:italic">
+				<tspan x="357" y="649.536">bla bla</tspan>
+			</text>
+			<text transform="matrix(1 0 0 1 261 -267.6)" class="reddish">
+				<tspan x="429" y="659.28">bla bla</tspan>
+			</text>
+			<text transform="matrix(1 0 0 1 237 -242.1)">
+				<tspan x="438" y="667.536">bla bla</tspan>
+			</text>
+			<text transform="matrix(1 0 0 1 339 -344.1)" class="listMinor whitish" style="font-style:italic">
+				<tspan x="300" y="637.536">CSS</tspan>
+			</text>
+		</g>
+	</defs>
+	<switch>
+		<use xlink:href="#css_d" id="css" requiredFeatures="org.w3c.svg.dynamic" style="visibility:visible; opacity:0"/>
+		<use xlink:href="#css_d" style="visibility:visible;"/>
+	</switch>
+	<!-- ============= -->
+	<defs>
+		<g id="xslt_d">
+			<desc>A block showing xsl, symbolizing that one can output xml through xsl. The figure is more complex
+		than for css.</desc>
+			<path class="pinkish2" style="fill:none" d="M87 388
+    c9 -27 18 -63 30 -81
+    48.245 -72.367 86.763 -82.212 114 -99
+    17.02 -10.49 28.708 -19.012 54 -27
+    33.897 -10.705 51 -18 111 -21
+    "/>
+			<rect class="whitish" transform="matrix(0 1 1 0 -9 -140)" x="150" y="24" width="96" height="162" rx="20" ry="20"/>
+			<rect class="whitish" transform="matrix(0 1 1 0 -9 -140)" x="171" y="51" width="54" height="102"/>
+			<path d="M42 49
+    l102 0
+    "/>
+			<path d="M66 31
+    l0 54
+    "/>
+			<path d="M90 31
+    l0 54
+    "/>
+			<path d="M111 31
+    l0 54
+    "/>
+			<rect class="reddish" transform="matrix(0 1 1 0 -9 -140)" x="171" y="51" width="18" height="24"/>
+			<rect class="yellowish" transform="matrix(0 1 1 0 -9 -140)" x="189" y="51" width="36" height="24"/>
+			<rect class="greenish" transform="matrix(0 1 1 0 -9 -140)" x="189" y="99" width="36" height="21"/>
+			<rect class="whitish" transform="matrix(0 1 1 0 -33 31)" x="15" y="240" width="126" height="78"/>
+			<text transform="matrix(1 0 0 1 174 -158.1)" class="reddish" style="font-size:12">
+				<tspan x="42" y="226.536">&#60;...&#62;</tspan>
+			</text>
+			<text transform="matrix(1 0 0 1 96 -65.07)" class="reddish" style="font-size:12">
+				<tspan x="120" y="226.536">&#60;/...&#62;</tspan>
+			</text>
+			<text transform="matrix(1 0 0 1 -70 120.9)" class="listMinor pinkish2" style="font-style:italic">
+				<tspan x="114" y="70.536">XSL/XPath</tspan>
+			</text>
+		</g>
+	</defs>
+	<switch>
+		<use xlink:href="#xslt_d" id="xslt" requiredFeatures="org.w3c.svg.dynamic" style="visibility:visible; opacity:0"/>
+		<use xlink:href="#xslt_d" style="visibility:visible;"/>
+	</switch>
+	<!-- ============= -->
+	<defs>
+		<g id="domD">
+			<desc>A block symbolizing programmatic access to the xml content, to show dom.</desc>
+			<path class="pinkish" style="fill:none" d="M390 112
+    c64.538 8.956 92.288 14.206 111 21
+    11.356 4.123 32.722 11.15 54 24
+    27.073 16.349 54.47 39.617 66 51
+    "/>
+			<path class="pinkish" style="fill:none" d="M651 46
+    l105 72
+    -105 75
+    -105 -75
+    z"/>
+			<text transform="matrix(1 0 0 1 513 -598.8)" class="pinkish">
+				<tspan x="97" y="695.9">Javascript,</tspan>
+				<tspan x="97" y="717.9">Python,</tspan>
+				<tspan x="97" y="739.9">Java</tspan>
+				<tspan x="99" y="761.9">...</tspan>
+			</text>
+			<text transform="matrix(1 0 0 1 309 -566.1)" class="listMinor pinkish" style="font-style:italic">
+				<tspan x="162" y="676.536">DOM</tspan>
+			</text>
+		</g>
+	</defs>
+	<switch>
+		<use xlink:href="#domD" id="dom" requiredFeatures="org.w3c.svg.dynamic" style="visibility:visible; opacity:0"/>
+		<use xlink:href="#domD" style="visibility:visible;" id="dom2"/>
+	</switch>
+</svg>

@@ -1,0 +1,142 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20001102//EN"
+  "http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd">
+<svg  width="960px" height="720px" >
+<defs>
+<style type="text/css">
+<![CDATA[
+rect {stroke:black;fill:white;}
+line {stroke:red;stroke-width:4}
+rect.box {stroke:none;fill:rgb(140, 189, 237)}
+text {font-family:Arial;font-size:18}
+
+]]>
+</style>
+</defs>
+
+
+<defs>
+
+<symbol id="blocker" >
+<g  style="fill:red;stroke:black" >
+<path d="M0 0 L0 60 L80 90 L80 30Z"/>
+</g>
+</symbol>
+
+<symbol id="reddisc" >
+<g>
+<ellipse cx="30" cy="60" rx="30" ry="12" style="fill:white;stroke:black" />
+<rect x="0" y="20" width="60" height="40" style="fill:white;stroke:white" />
+<ellipse cx="30" cy="20" rx="30" ry="12" style="fill:red;stroke:black" />
+<line x1="0" y1="20" x2="0" y2="60" style="stroke:black;stroke-width:1" />
+<line x1="60" y1="20" x2="60" y2="60" style="stroke:black;stroke-width:1" />
+</g>		
+</symbol>
+
+<symbol id="greendisc" >
+<g>
+<ellipse cx="30" cy="60" rx="30" ry="12" style="fill:white;stroke:black" />
+<rect x="0" y="20" width="60" height="40" style="fill:white;stroke:white" />
+<ellipse cx="30" cy="20" rx="30" ry="12" style="fill:green;stroke:black" />
+<line x1="0" y1="20" x2="0" y2="60" style="stroke:black;stroke-width:1" />
+<line x1="60" y1="20" x2="60" y2="60" style="stroke:black;stroke-width:1" />
+</g>		
+</symbol>
+</defs>
+
+<!-- **************  Screen Display Area  ******************** -->
+<g transform="scale(0.75)">
+
+<rect style="fill:#bbffbb"  width="960" height="720"/>
+
+
+
+
+
+
+<text x="350" y="50" style="font-size:48">PICS</text>
+
+<text x="40" y="50" style="font-size:24">Parent selects</text>
+<text x="40" y="80" style="font-size:24">Rating System</text>
+
+<image x="200" y="20" width="152" height="441" xlink:href="../gifs/image003.gif" />
+
+
+
+
+<text x="620" y="70" style="font-size:24;color:red">Inappropriate</text>
+<text x="620" y="100" style="font-size:24;color:red">material</text>
+<use transform="translate(540,30)" xlink:href="#reddisc" />
+<use transform="translate(550,130)" xlink:href="#reddisc" />
+<use transform="translate(640,160)" xlink:href="#reddisc" />
+
+<text x="650" y="370" style="font-size:24;color:green">Appropriate</text>
+<text x="650" y="400" style="font-size:24;color:green">material</text>
+<use transform="translate(440,370)" xlink:href="#greendisc" />
+<use transform="translate(510,350)" xlink:href="#greendisc" />
+<use transform="translate(580,330)" xlink:href="#greendisc" />
+<use transform="translate(440,430)" xlink:href="#greendisc" />
+<use transform="translate(520,420)" xlink:href="#greendisc" />
+<use transform="translate(590,425)" xlink:href="#greendisc" />
+
+
+
+<image x="25" y="350" width="190" height="264" xlink:href="../gifs/image002.gif" />
+
+<line x1="220" y1="500" x2="380" y2="470" style="stroke:green"/>
+<g transform="translate(380,470)">
+<g transform="rotate(-10)">
+<line x1="0" y1="0" x2="-10" y2="-10"  style="stroke:green"/>
+<line x1="0" y1="0" x2="-10" y2="10"  style="stroke:green"/>
+</g>
+</g>
+
+<g transform="translate(220,500)">
+<g transform="rotate(170)">
+<line x1="0" y1="0" x2="-10" y2="-10"  style="stroke:green"/>
+<line x1="0" y1="0" x2="-10" y2="10"  style="stroke:green"/>
+</g>
+</g>
+
+<text x="240" y="540" style="font-size:24;color:green">Allows</text>
+
+
+
+<text x="350" y="160" style="font-size:24;color:red">Service A Labels</text>
+
+<use transform="translate(390,170)" xlink:href="#blocker" />
+
+
+<text x="495" y="275" style="font-size:24;color:red">Service B Labels</text>
+
+<use transform="translate(410,250)" xlink:href="#blocker" />
+
+
+
+<line x1="220" y1="480" x2="420" y2="320" style="stroke:red"/>
+<g transform="translate(420,320)">
+<g transform="rotate(-35)">
+<line x1="0" y1="0" x2="-10" y2="-10"  style="stroke:red"/>
+<line x1="0" y1="0" x2="-10" y2="10"  style="stroke:red"/>
+</g>
+</g>
+
+<g transform="translate(220,480)">
+<g transform="rotate(145)">
+<line x1="0" y1="0" x2="-10" y2="-10"  style="stroke:red"/>
+<line x1="0" y1="0" x2="-10" y2="10"  style="stroke:red"/>
+</g>
+</g>
+
+<g transform="translate(20 100)">
+<a xlink:href="../svgs/yesterday.svg">
+<path style="stroke:none;fill:#3717ff"
+d="M 10 0 L 20 10, 15 10, 15 13, 5 13,5 10, 0 10,10 0 z" />
+</a>
+</g>
+
+<text x="350" y="390" style="font-size:24;color:red">Blocks</text>
+</g>
+</svg>
+ 
+ 

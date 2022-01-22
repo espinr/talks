@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="no"?>
+<svg viewBox="0 0 541 320">
+	<style type="text/css">
+	.st0 {stroke:#000000;stroke-width:1;fill:#ccffcc}
+	.st1 {stroke:#000000;stroke-width:1;fill:#ccffff}
+	.st2 {stroke:#000000;stroke-width:1;fill:#ccffff}
+	.st3 {stroke:#000000;stroke-width:1;fill:#ffffcc}
+	.stt0 {fill:#ff2c4f; font-family:Arial; font-size:18; text-anchor:start}
+	.stt1 {fill:#cc00ff; font-family:'Arial Rounded MT Bold'; font-size:20; text-anchor:middle}
+</style>
+	<rect class="st0" transform="matrix(1 0 0 -1 -52.87 815)" x="63.359" y="504.61" width="521.85" height="301.245" rx="20" ry="20"/>
+	<rect class="st1" transform="matrix(1 0 0 -1 -96.94 812.4)" x="125.566" y="640.257" width="209.086" height="136.223" rx="20" ry="20"/>
+	<rect class="st2" transform="matrix(1 0 0 -1 -52.87 815)" x="315.644" y="528.802" width="248.829" height="254.013" rx="20" ry="20"/>
+	<rect class="st3" transform="matrix(1 0 0 -1 -85.7 862.5)" x="363.163" y="585.825" width="223.773" height="74.016" rx="20" ry="20"/>
+	<text transform="matrix(1 0 0 1 -87.43 -423.7)" class="stt0">
+		<tspan x="130.75" y="508.768">rdfs:Resource</tspan>
+		<tspan x="130.75" y="527.768">rdfs:Class</tspan>
+		<tspan x="130.75" y="546.768">rdf:Property</tspan>
+		<tspan x="130.75" y="565.768">rdfs:ConstraintProperty</tspan>
+		<tspan x="130.75" y="584.768">rdfs:Literal</tspan>
+	</text>
+	<text transform="matrix(1 0 0 1 149.7 -433.2)" class="stt0">
+		<tspan x="130.75" y="508.768">rdf:type</tspan>
+		<tspan x="130.75" y="527.768">rdfs:subClassOf</tspan>
+		<tspan x="130.75" y="546.768">rdfs:subPropertyOf</tspan>
+		<tspan x="130.75" y="565.768">rdfs:comment</tspan>
+		<tspan x="130.75" y="584.768">rdfs:label</tspan>
+		<tspan x="130.75" y="603.768">rdfs:seeAlso</tspan>
+		<tspan x="130.75" y="622.768">rdfs:isDefinedBy</tspan>
+	</text>
+	<text transform="matrix(1 0 0 1 155.8 -263.8)" class="stt0">
+		<tspan x="130.75" y="508.768">rdfs:range</tspan>
+		<tspan x="130.75" y="527.768">rdfs:domain</tspan>
+	</text>
+	<text transform="matrix(1 0 0 1 23.73 -423.4)" class="stt1">
+		<tspan x="247.677" y="451.13">Resource</tspan>
+	</text>
+	<text transform="matrix(1 0 0 1 -114.5 -392.6)" class="stt1">
+		<tspan x="247.677" y="451.13">Class</tspan>
+	</text>
+	<text transform="matrix(1 0 0 1 139.5 -396)" class="stt1">
+		<tspan x="247.677" y="451.13">Property</tspan>
+	</text>
+	<text transform="matrix(1 0 0 1 120 -229.3)" class="stt1">
+		<tspan x="269.347" y="451.13">ConstraintProperty</tspan>
+	</text>
+</svg>

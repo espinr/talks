@@ -1,0 +1,74 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg viewBox="0 -20 750 570">
+  <defs>
+    <style type="text/css"><![CDATA[
+ellipse {fill:none;stroke:yellow;stroke-width:2;}
+]]></style>
+  </defs>
+  <g transform="scale(0.9) translate(0,-100)">
+    <g transform="translate(40,110)">
+      <g transform="translate(0,100)">
+        <rect class="yellowish" width="70" height="50"/>
+        <text x="10" y="35" class="darkBlueish">User</text>
+      </g>
+      <line class="arrow" x1="70" y1="125" x2="120" y2="125"/>
+      <g transform="translate(120,125)">
+        <g transform="rotate(0)">
+          <path class="arrow" d="M0,0l-10-10v20z"/>
+        </g>
+      </g>
+      <g transform="translate(70,125)">
+        <g transform="rotate(180)">
+          <path class="arrow" d="M0,0l-10-10v20z"/>
+        </g>
+      </g>
+      <g transform="translate(120,60)">
+        <rect class="lightGreenish" width="130" height="130"/>
+        <text x="25" y="25" class="darkBlueish">Browser</text>
+        <rect x="10" y="30" class="yellowish" width="110" height="80"/>
+        <text x="30" y="75" class="darkBlueish">Agent</text>
+      </g>
+      <g transform="translate(620,85)">
+        <rect class="yellowish" width="125" height="80"/>
+        <text x="10" y="50" class="darkBlueish">Web Server</text>
+      </g>
+      <text class="normal" x="280" y="70">Via HTTP Extensions</text>
+      <text class="normal" x="280" y="100">Via HTML Header link elements</text>
+      <text class="normal" x="280" y="150">Site returns Policy with web page</text>
+      <line class="arrow" x1="250" y1="125" x2="620" y2="125"/>
+      <g transform="translate(620,125)">
+        <g transform="rotate(0)">
+          <path class="arrow" d="M0,0l-10-10v20z"/>
+        </g>
+      </g>
+      <g transform="translate(250,125)">
+        <g transform="rotate(180)">
+          <path class="arrow" d="M0,0l-10-10v20z"/>
+        </g>
+      </g>
+    </g>
+    <ellipse class="yellowish" cx="100" cy="400" rx="80" ry="60"/>
+    <text x="100" y="385" class="yellowish" style="text-anchor:middle;">User Privacy</text>
+    <text x="100" y="415" class="yellowish" style="text-anchor:middle;">Preferences</text>
+    <ellipse class="yellowish" cx="750" cy="400" rx="80" ry="60"/>
+    <text x="750" y="405" class="yellowish" style="text-anchor:middle">Site Policy</text>
+    <g transform="translate(230,350)">
+      <rect class="yellowish" width="400" height="110"/>
+      <text x="200" y="20" class="darkBlueish" style="text-anchor: middle" >P3P Vocabulary</text>
+      <text x="15" y="50" class="greenish">Who, What, What purpose,</text>
+      <text x="15" y="70" class="greenish">Recipents, Access, Retention,</text>
+      <text x="15" y="90" class="greenish">Disputes, Legal Entity</text>
+    </g>
+    <g transform="translate(230,490)">
+      <rect class="yellowish" width="400" height="170"/>
+      <text x="200" y="20" class="darkBlueish" style="text-anchor: middle" >P3P Basic Data Structures and Schema</text>
+      <text x="15" y="50" class="greenish">Dates, Names, Certificates,</text>
+      <text x="15" y="70" class="greenish">Telephones, Contact, Access Logs </text>
+      <text x="15" y="90" class="greenish">IP Addresses</text>
+      <text x="15" y="130" class="greenish">User, Third Party, Business,</text>
+      <text x="15" y="150" class="greenish">Dynamic</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg viewBox="-355 -250 710 520" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- width="710" height="500" -->
+	<defs>
+		<symbol id="whiteYellowBezier" overflow="visible">
+			<path style="stroke:black;fill:none;" d="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0">
+				<animate id="whiteYellowBezierAnim" attributeName="d" values="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0; M 0,0 C25,-10 75,-10 100,0" dur="5s" repeatCount="3"/>
+				<animate attributeName="stroke-width" values="1;3" dur="5s" repeatCount="3" />
+				<animate attributeName="stroke" values="white;yellow" dur="5s" repeatCount="3" />
+			</path>
+		</symbol>
+		<symbol id="yellowWhiteBezier" overflow="visible">
+			<path style="stroke:black;fill:none;" d="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0">
+				<animate attributeName="d" values="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0; M 0,0 C25,-10 75,-10 100,0" dur="5s" repeatCount="3"/>
+				<animate attributeName="stroke-width" values="1;3" dur="5s" repeatCount="3"/>
+				<animate attributeName="stroke" values="yellow;white" dur="5s" repeatCount="3"/>
+			</path>
+		</symbol>
+		<symbol id="whiteYellowBezierTimeShift" overflow="visible">
+			<path style="stroke:black;fill:none;" d="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0">
+				<animate id="whiteYellowBezierTimeShiftAnim" attributeName="d" values="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0; M 0,0 C25,-10 75,-10 100,0" dur="3.9s" repeatCount="4"/>
+				<animate attributeName="stroke-width" values="1;3" dur="3.9s" repeatCount="4"/>
+				<animate attributeName="stroke" values="white;yellow" dur="3.9s" repeatCount="4"/>
+			</path>
+		</symbol>
+		<symbol id="yellowWhiteBezierTimeShift" overflow="visible">
+			<path style="stroke:black;fill:none;" d="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0">
+				<animate attributeName="d" values="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0; M 0,0 C25,-10 75,-10 100,0" dur="4s" repeatCount="4"/>
+				<animate attributeName="stroke-width" values="1;3" dur="4s" repeatCount="4"/>
+				<animate attributeName="stroke" values="yellow;white" dur="4s" repeatCount="4"/>
+			</path>
+		</symbol>
+		<symbol id="redBezier" overflow="visible">
+			<path style="stroke:black;fill:none;" d="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0">
+				<animate id="redBezierAnim" attributeName="d" values="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0; M 0,0 C25,-10 75,-10 100,0" dur="6s" repeatCount="3"/>
+				<animate attributeName="stroke-width" values="1;3" dur="6s" repeatCount="3"/>
+				<animate attributeName="stroke" values="darkred;red" dur="6s" repeatCount="3"/>
+			</path>
+		</symbol>
+		<symbol id="greenBezier" overflow="visible">
+			<path style="stroke:black;fill:none;" d="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0">
+				<animate attributeName="d" values="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0; M 0,0 C25,-10 75,-10 100,0" dur="6s" repeatCount="3"/>
+				<animate attributeName="stroke-width" values="1;3" dur="6s" repeatCount="3"/>
+				<animate attributeName="stroke" values="darkgreen;lightgreen" dur="6s" repeatCount="3"/>
+			</path>
+		</symbol>
+		<symbol id="pinkBlueBezier" overflow="visible">
+			<path style="stroke:black;fill:none;" d="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0">
+				<animate attributeName="d" values="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0; M 0,0 C25,-10 75,-10 100,0" dur="5s" repeatCount="indefinite"/>
+				<animate attributeName="stroke-width" values="1;3" dur="5s" repeatCount="indefinite"/>
+				<animate attributeName="stroke" values="pink;lightblue" dur="5s" repeatCount="indefinite"/>
+			</path>
+		</symbol>
+		<symbol id="bluePinkBezier" overflow="visible">
+			<path style="stroke:black;fill:none;" d="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0">
+				<animate attributeName="d" values="M 0,0 C 0.25,-0.1 0.75,-0.1 1,0; M 0,0 C25,-10 75,-10 100,0" dur="5s" repeatCount="indefinite"/>
+				<animate attributeName="stroke-width" values="1;3" dur="5s" repeatCount="indefinite"/>
+				<animate attributeName="stroke" values="lightblue;pink" dur="5s" repeatCount="indefinite"/>
+			</path>
+		</symbol>
+		<symbol id="whiteYellowFireball" overflow="visible">
+			<use x="0" y="0" xlink:href="#whiteYellowBezier"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezier" transform="rotate(-15)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezier" transform="rotate(-30)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezier" transform="rotate(-45)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezier" transform="rotate(-60)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezier" transform="rotate(-75)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezier" transform="rotate(-90)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezier" transform="rotate(-105)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezier" transform="rotate(-120)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezier" transform="rotate(-135)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezier" transform="rotate(-150)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezier" transform="rotate(-165)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezier" transform="rotate(-180)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezier" transform="rotate(-195)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezier" transform="rotate(-210)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezier" transform="rotate(-225)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezier" transform="rotate(-240)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezier" transform="rotate(-255)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezier" transform="rotate(-270)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezier" transform="rotate(-285)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezier" transform="rotate(-300)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezier" transform="rotate(-315)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezier" transform="rotate(-330)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezier" transform="rotate(-345)"/>
+		</symbol>
+		<symbol id="whiteYellowFireballTimeShift" overflow="visible">
+			<use x="0" y="0" xlink:href="#whiteYellowBezierTimeShift"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezierTimeShift" transform="rotate(-15)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezierTimeShift" transform="rotate(-30)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezierTimeShift" transform="rotate(-45)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezierTimeShift" transform="rotate(-60)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezierTimeShift" transform="rotate(-75)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezierTimeShift" transform="rotate(-90)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezierTimeShift" transform="rotate(-105)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezierTimeShift" transform="rotate(-120)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezierTimeShift" transform="rotate(-135)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezierTimeShift" transform="rotate(-150)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezierTimeShift" transform="rotate(-165)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezierTimeShift" transform="rotate(-180)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezierTimeShift" transform="rotate(-195)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezierTimeShift" transform="rotate(-210)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezierTimeShift" transform="rotate(-225)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezierTimeShift" transform="rotate(-240)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezierTimeShift" transform="rotate(-255)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezierTimeShift" transform="rotate(-270)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezierTimeShift" transform="rotate(-285)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezierTimeShift" transform="rotate(-300)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezierTimeShift" transform="rotate(-315)"/>
+			<use x="0" y="0" xlink:href="#whiteYellowBezierTimeShift" transform="rotate(-330)"/>
+			<use x="0" y="0" xlink:href="#yellowWhiteBezierTimeShift" transform="rotate(-345)"/>
+		</symbol>
+		<symbol id="redGreenFireball" overflow="visible">
+			<use x="0" y="0" xlink:href="#redBezier"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-10)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-20)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-30)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-40)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-50)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-60)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-70)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-80)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-90)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-100)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-110)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-120)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-130)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-140)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-150)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-160)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-170)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-180)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-190)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-200)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-210)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-220)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-230)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-240)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-250)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-260)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-270)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-280)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-290)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-300)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-310)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-320)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-330)"/>
+			<use x="0" y="0" xlink:href="#redBezier" transform="rotate(-340)"/>
+			<use x="0" y="0" xlink:href="#greenBezier" transform="rotate(-350)"/>
+		</symbol>
+		<symbol id="pinkBlueFireball" overflow="visible">
+			<use x="0" y="0" xlink:href="#pinkBlueBezier"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-10)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-20)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-30)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-40)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-50)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-60)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-70)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-80)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-90)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-100)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-110)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-120)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-130)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-140)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-150)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-160)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-170)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-180)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-190)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-200)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-210)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-220)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-230)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-240)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-250)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-260)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-270)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-280)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-290)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-300)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-310)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-320)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-330)"/>
+			<use x="0" y="0" xlink:href="#pinkBlueBezier" transform="rotate(-340)"/>
+			<use x="0" y="0" xlink:href="#bluePinkBezier" transform="rotate(-350)"/>
+		</symbol>
+	</defs>
+  	<image x="-335" y="-250" width="667" height="500" xlink:href="../jpgs/Thessaloniki.jpg"/>
+	<use x="-200" y="-50" xlink:href="#whiteYellowFireball"/>
+	<use x="0" y="0" xlink:href="#whiteYellowFireballTimeShift" transform="translate(-100,-150),scale(0.8)"/>
+	<use x="0" y="0" xlink:href="#redGreenFireball" transform="translate(200,-150),scale(1.5)"/>
+	<use x="0" y="0" xlink:href="#pinkBlueFireball" transform="translate(-170,-200),scale(2)" opacity="0">
+		<animate attributeName="opacity" values="0;1" dur="5s" begin="whiteYellowBezierAnim.end;" fill="freeze"/>	
+	</use>
+	<use x="0" y="0" xlink:href="#pinkBlueFireball" transform="translate(250,-220),scale(1.5)" opacity="0">
+		<animate attributeName="opacity" values="0;1" dur="5s" begin="justAFlashAnim.end + 5s;" fill="freeze"/>	
+	</use>
+	<text id="SVG" x="40" y="-20" style="fill:yellow;font-size:25;font-weight:bold;text-anchor:middle;" opacity="0">
+http://www.w3.org/2001/Talks/IH-1310Thessaloniki/
+		<animate attributeName="opacity" values="0;0.9" dur="5s" begin="10s" fill="freeze"/>
+	</text>
+</svg>

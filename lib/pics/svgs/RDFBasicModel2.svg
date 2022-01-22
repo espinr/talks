@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- Generator: Mayura Draw 3.6 -->
+<svg xml:space="preserve" viewBox="0 0 554 247">
+<desc>BasicModel2.pdx</desc>
+  <rect width="554" height="247" class="background" />
+<ellipse class="lightGreenish" style="stroke:none" transform="matrix(1 0 0 -1 83.9 769.2)" cx="41.935" cy="732.47" rx="115.455" ry="27.609"/>
+<text transform="matrix(1 0 0 1 -8.142 -678.2)" class="reddish"><tspan x="60.613" y="723.275">TheWebPage</tspan></text>
+<rect class="lightGreenish" transform="matrix(1 0 0 -1 -204.3 971.9)" x="381.107" y="734.776" width="166.854" height="31.585"/>
+<text transform="matrix(1 0 0 1 -225.2 -497.4)" class="reddish"><tspan x="408.976" y="726.991">Bob Hopgood</tspan></text>
+<path class="yellowish" style="stroke-width:3"
+d="M245.123 43.076
+l114.263 31.585
+"/>
+<path class="yellowish" style="stroke:none"
+d="M359.386 74.661
+l-0.4 1.446
+-28.022 0.035
+4.796 -17.349
+24.026 14.423
+z"/>
+<text transform="matrix(1 0 0 1 4.29 -693.8)" class="reddish"><tspan x="292.855" y="742.784">creator</tspan></text>
+<rect class="lightGreenish" transform="matrix(1 0 0 -1 -2.912 971.9)" x="381.107" y="734.776" width="158.854" height="31.585"/>
+<text transform="matrix(1 0 0 1 -23.82 -497.4)" class="reddish"><tspan x="408.976" y="726.991">frah@w3.org</tspan></text>
+<ellipse class="lightGreenish" style="stroke:none" transform="matrix(1 0 0 -1 97.19 808.5)" cx="274.276" cy="707.836" rx="105.101" ry="19.706"/>
+<path class="yellowish" style="stroke-width:3"
+d="M409.55 125.29
+l46.448 65.492
+"/>
+<path class="yellowish" style="stroke:none"
+d="M455.999 190.782
+l-1.224 0.868
+-21.737 -17.685
+14.682 -10.413
+9.502 26.362
+z"/>
+<path class="yellowish" style="stroke-width:3"
+d="M321.298 124.825
+l-41.804 60.383
+"/>
+<path class="yellowish" style="stroke:none"
+d="M279.494 185.208
+l-1.233 -0.854
+9.202 -26.468
+14.799 10.246
+-21.535 17.93
+z"/>
+<text transform="matrix(1 0 0 1 -58.42 -591.5)" class="reddish"><tspan x="292.855" y="742.784">name</tspan></text>
+<text transform="matrix(1 0 0 1 142.2 -591.5)" class="reddish"><tspan x="292.855" y="742.784">email</tspan></text>
+</svg>

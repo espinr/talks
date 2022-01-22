@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 780 520">
+	<title>
+		Combination of XHTML and SMIL 2.0 modules to produce XHTML+SMIL
+	</title>
+	<desc>
+		The slide contains a block for XHTML and one for SMIL modules, respectively. Arrows indicate the various XHTML, resp. SMIL2.0, profiles, including XHTML+SMIL as a common "profile". Tha latter is also linked to demo HTML file.
+			</desc>
+	<metadata>
+		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:axsvg="http://www.w3.org/2001/svgRdf/axsvg-schema.rdf#">
+			<rdf:Description rdf:ID="#fullSlide">
+				<axsvg:Contains>
+					<rdf:Bag>
+						<rdf:li rdf:resource="#xhtml"/>
+						<rdf:li rdf:resource="#smil"/>
+						<rdf:li rdf:resource="#xhtmlBasic"/>
+						<rdf:li rdf:resource="#smilBasic"/>
+						<rdf:li rdf:resource="#smilFull"/>
+						<rdf:li rdf:resource="#XHTMLplusSMIL"/>
+					</rdf:Bag>
+				</axsvg:Contains>
+			</rdf:Description>
+			<rdf:Description rdf:about="#xhtml">
+				<axsvg:Labelled>true</axsvg:Labelled>
+				<axsvg:IsConnected>
+					<rdf:Bag>
+						<rdf:li rdf:resource="xhtml"/>
+						<rdf:li rdf:resource="XHTMLplusSMIL"/>
+					</rdf:Bag>
+				</axsvg:IsConnected>
+			</rdf:Description>
+			<rdf:Description rdf:about="#smil">
+				<axsvg:Labelled>yes</axsvg:Labelled>
+				<axsvg:IsConnected>
+					<rdf:Bag>
+						<rdf:li rdf:resource="smilBasic"/>
+						<rdf:li rdf:resource="smilFull"/>
+						<rdf:li rdf:resource="XHTMLplusSMIL"/>
+					</rdf:Bag>
+				</axsvg:IsConnected>
+			</rdf:Description>
+			<rdf:Description rdf:about="#xhtmlBasic">
+				<axsvg:Text>true</axsvg:Text>
+			</rdf:Description>
+			<rdf:Description rdf:about="#smilBasic">
+				<axsvg:Text>true</axsvg:Text>
+			</rdf:Description>
+			<rdf:Description rdf:about="#smilFull">
+				<axsvg:Text>true</axsvg:Text>
+			</rdf:Description>
+			<rdf:Description rdf:about="#XHTMLplusSMIL">
+				<axsvg:Labelled>true</axsvg:Labelled>
+				<axsvg:IsConvergencePoint>
+					<rdf:Bag>
+						<rdf:li rdf:resource="#xhtml"/>
+						<rdf:li rdf:resource="#smil"/>
+					</rdf:Bag>
+				</axsvg:IsConvergencePoint>
+				<axsvg:IsAnchor>true</axsvg:IsAnchor>
+			</rdf:Description>
+		</rdf:RDF>
+	</metadata>
+	<defs>
+		<marker id="Triangle" viewBox="0 0 10 10" refX="0" refY="5" markerUnits="strokeWidth" markerWidth="4" markerHeight="5" orient="auto">
+			<desc>Arrowhead</desc>
+			<path class="arrow" fill="red" d="M 0 0 L 10 5 L 0 10 z"/>
+		</marker>
+		<rect id="module" class="yellowish" width="10" height="47">
+			<desc>A small rectangle for a module</desc>
+		</rect>
+		<g id="modules">
+			<desc>Symbolic figure for a set of modules (a sequence of small rectangles)</desc>
+			<use xlink:href="#module"/>
+			<use xlink:href="#module" x="20"/>
+			<use xlink:href="#module" x="40"/>
+			<use xlink:href="#module" x="60"/>
+			<use xlink:href="#module" x="80"/>
+			<use xlink:href="#module" x="100"/>
+			<use xlink:href="#module" x="120"/>
+			<text class="minor" x="160" y="20">. . .</text>
+			<use xlink:href="#module" x="200"/>
+			<use xlink:href="#module" x="220"/>
+		</g>
+	</defs>
+	<g id="xhtml" transform="translate(80,50)">
+		<desc>XHTML Modules: set of module rectangles with two (more or less random) ellipses around a set of modules</desc>
+		<text class="normal" style="text-anchor:middle" x="115">XHTML</text>
+		<use xlink:href="#modules" y="30"/>
+		<ellipse class="emptyBlueish" rx="135" ry="50" cx="115" cy="55"/>
+		<ellipse class="emptyReddish" rx="100" ry="40" cx="160" cy="55"/>
+	</g>
+	<g id="smil" transform="translate(450,50)">
+		<desc>SMIL 2.0 Modules: set of module rectangles with three (more or less random) ellipses around a set of modules</desc>
+		<text class="normal" style="text-anchor:middle" x="115">SMIL 2.0</text>
+		<use xlink:href="#modules" y="30"/>
+		<ellipse class="emptyGray" rx="135" ry="50" cx="115" cy="55"/>
+		<ellipse class="emptyReddish" rx="75" ry="40" cx="50" cy="55"/>
+		<ellipse class="emptyYellowish" rx="100" ry="40" cx="160" cy="55"/>
+	</g>
+	<text id="xhtmlBasic" class="normal" x="20" y="350">XHTML Basic, 2.0, ...</text>
+	<text id="smilBasic" class="normal" x="500" y="300">SMIL 2.0 Basic</text>
+	<text id="smilFull" class="normal" x="600" y="220">SMIL 2.0 Profile</text>
+	<!-- Unfortunately, IE6 is still a bit uncertain about this; if I use this link it sometimes breaks IE. Too
+	dangereous for a presentation, so I took the link off. Sigh... -->
+	<!-- <a xlink:href="../smils/Budapest/Play.html"> -->
+		<g id="XHTMLplusSMIL" transform="translate(300,350)">
+			<rect width="150" height="30" class="yellowish"/>
+			<text class="normal" style="text-anchor:middle" x="75" y="23">XHTML+SMIL</text>
+		</g>
+	<!-- </a> -->
+	<g marker-end="url(#Triangle)">
+		<desc>Set of arrows</desc>
+		<line x1="120" y1="140" x2="80" y2="310">
+			<desc>Connecting the XHTML modules to "XHTML Basic, 2.0, ..."</desc>
+		</line>
+		<line x1="250" y1="140" x2="365" y2="330">
+			<desc>Connecting the XHTML modules to "XHTML + SMIL"</desc>
+		</line>
+		<line x1="480" y1="140" x2="380" y2="330">
+			<desc>Connecting the SMIL modules to "XHTML + SMIL"</desc>
+		</line>
+		<line x1="600" y1="140" x2="550" y2="270">
+			<desc>Connecting the SMIL 2 to "SMIL 2.0 Basic"</desc>
+		</line>
+		<line x1="610" y1="140" x2="650" y2="190">
+			<desc>Connecting the SMIL 2 to "SMIL 2.0 Profile"</desc>
+		</line>
+	</g>
+</svg>

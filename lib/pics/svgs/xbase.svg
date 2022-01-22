@@ -1,0 +1,100 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg viewBox="0 0 950 450">
+  <title>Showing XBase: left side an xml fragment, right side some explanation</title>
+  <g transform="scale(0.9) translate(0,-140)">
+    <g transform="translate(10,110)">
+      <g transform="translate(10,40)">
+        <rect class="empty" x="-10" width="500" height="480" />
+
+        <text class="whitish" y="30">&lt;?xml version="1.0"?&gt;</text>
+
+        <text class="whitish" y="60">&lt;html xmlns="http://www.w3.org/TR/xhtml1/strict"&gt;</text>
+        <text class="whitish" x="30" y="90">xml:base="http://somewhere.org"&gt;</text>
+        <text class="whitish" y="120">&lt;head&gt;</text>
+        <text class="whitish" y="150" x="30">&lt;title&gt;Virtual Library&lt;/title&gt;</text>
+        <text class="whitish" y="180">&lt;/head&gt;</text>
+        <text class="whitish" y="210">&lt;body&gt;</text>
+        <text class="whitish" y="240" x="30">&lt;p&gt;See &lt;a href="new.xml"&gt;what's new&lt;/a&gt;!&lt;/p&gt;</text>
+        <text class="whitish" y="270" x="30">&lt;p&gt;Check out the hot picks of the day!&lt;/p&gt;</text>
+        <text class="whitish" y="300" x="30">&lt;ol xml:base="/hotpicks"&gt;</text>
+        <text class="whitish" y="330" x="60">&lt;li&gt;&lt;a href="pick1.xml"&gt;Hot Pick #1&lt;/a&gt;&lt;/li&gt;</text>
+        <text class="whitish" y="360" x="60">&lt;li&gt;&lt;a href="pick2.xml"&gt;Hot Pick #2&lt;/a&gt;&lt;/li&gt;</text>
+        <text class="whitish" y="390" x="30">&lt;/ol&gt;</text>
+        <text class="whitish" y="420">&lt;/body&gt;</text>
+        <text class="whitish" y="450">&lt;/html&gt;</text>
+      </g>
+
+      <g transform="translate(530,160)">
+        <rect class="empty" x="-10" y="-30" width="350" height="70" />
+
+        <text class="whitish">"what's new" resolves to the URI</text>
+
+        <text class="whitish" y="30">"http://somewhere.org/new.xml"</text>
+      </g>
+
+      <g transform="translate(530,320)">
+        <rect class="empty" x="-10" y="-30" width="450" height="70" />
+
+        <text class="whitish">"Hot Pick #1" resolves to the URI</text>
+
+        <text class="whitish" y="30">
+        "http://somewhere.org/hotpicks/pick1.xml"</text>
+      </g>
+
+      <g transform="translate(530,460)">
+        <rect class="empty" x="-10" y="-30" width="450" height="70" />
+
+        <text class="whitish">"Hot Pick #2" resolves to the URI</text>
+
+        <text class="whitish" y="30">
+        "http://somewhere.org/hotpicks/pick2.xml"</text>
+      </g>
+
+      <line class="arrow" x1="520" y1="160" x2="400" y2="130" />
+
+      <g transform="translate(400,130)">
+        <g transform="rotate(210)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <line class="arrow" x1="520" y1="170" x2="400" y2="265" />
+
+      <g transform="translate(400,265)">
+        <g transform="rotate(135)">
+          <path class="arrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <line class="greenarrow" x1="520" y1="320" x2="320"
+      y2="330" />
+
+      <g transform="translate(320,330)">
+        <g transform="rotate(170)">
+          <path class="greenarrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <line class="greenarrow" x1="520" y1="330" x2="380"
+      y2="350" />
+
+      <g transform="translate(380,350)">
+        <g transform="rotate(170)">
+          <path class="greenarrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+
+      <line class="greenarrow" x1="520" y1="310" x2="360"
+      y2="140" />
+
+      <g transform="translate(360,140)">
+        <g transform="rotate(225)">
+          <path class="greenarrow" d="M0,0l-10-10v20z" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
+

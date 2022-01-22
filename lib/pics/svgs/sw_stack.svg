@@ -1,0 +1,225 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="300 0 800 500">
+	<title>Semantic Web stack</title>
+	<metadata>
+		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:axsvg="http://www.w3.org/2001/svgRdf/axsvg-schema.rdf#">
+			<rdf:Description rdf:about="#FullSlide">
+				<axsvg:Contains>
+					<rdf:Bag>
+						<rdf:li rdf:resource="#trust"/>
+						<rdf:li rdf:resource="#swStack"/>
+						<rdf:li rdf:resource="#encryptionPart"/>
+						<rdf:li rdf:resource="#xmlBasis"/>
+					</rdf:Bag>
+				</axsvg:Contains>
+			</rdf:Description>
+			<rdf:Description rdf:about="#trust">
+				<axsvg:Labelled>true</axsvg:Labelled>
+				<axsvg:OnTop>
+					<rdf:Sequence>
+						<rdf:li rdf:resource="#swStack"/>
+						<rdf:li rdf:resource="#encryptionPart"/>
+					</rdf:Sequence>
+				</axsvg:OnTop>
+			</rdf:Description>
+			<rdf:Description rdf:ID="#swStack">
+				<desc>This is stack of its constituents from top to bottom</desc>
+				<axsvg:Contains>
+					<rdf:Sequence>
+						<rdf:li rdf:resource="#proof"/>
+						<rdf:li rdf:resource="#logic"/>
+						<rdf:li rdf:resource="#rules"/>
+						<rdf:li rdf:resource="#ontology"/>
+						<rdf:li rdf:resource="#rdf-schema"/>
+						<rdf:li rdf:resource="#rdf"/>
+					</rdf:Sequence>
+				</axsvg:Contains>
+				<axsvg:AtLeft rdf:resource="#encryptionPart"/>
+				<axsvg:OnTop rdf:resource="#xmlBasis"/>
+			</rdf:Description>
+			<rdf:Description rdf:ID="#encryptionPart">
+				<axsvg:Contains>
+					<rdf:Sequence>
+						<rdf:li rdf:resource="#encryption"/>
+						<rdf:li rdf:resource="#signature"/>
+					</rdf:Sequence>
+				</axsvg:Contains>
+				<axsvg:OnTop rdf:resource="#xmlBasis"/>
+			</rdf:Description>
+			<rdf:Description rdf:ID="#xmlBasis">
+				<desc>Two rows, each having two elements of the constituents. These are at the bottom of the stack.</desc>
+				<axsvg:Contains>
+					<rdf:Sequence>
+						<rdf:li rdf:resource="#query"/>
+						<rdf:li rdf:resource="#xml-schema"/>
+						<rdf:li rdf:resource="#uri"/>
+						<rdf:li rdf:resource="#unicode"/>
+					</rdf:Sequence>
+				</axsvg:Contains>
+			</rdf:Description>
+			<rdf:Description rdf:about="#encryption">
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+			<rdf:Description rdf:about="#signature">
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+			<rdf:Description rdf:about="#proof">
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+			<rdf:Description rdf:about="#logic">
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+			<rdf:Description rdf:about="#rules">
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+			<rdf:Description rdf:about="#ontology">
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+			<rdf:Description rdf:about="#rdf-schema">
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+			<rdf:Description rdf:about="#rdf">
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+			<rdf:Description rdf:about="#query">
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+			<rdf:Description rdf:about="#xml-schema">
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+			<rdf:Description rdf:about="#uri">
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+			<rdf:Description rdf:about="#unicode">
+				<axsvg:Labelled>true</axsvg:Labelled>
+			</rdf:Description>
+		</rdf:RDF>
+	</metadata>
+	<style type="text/css"><![CDATA[
+       text.swst  { text-anchor:middle; font-size:30  }
+       text.exmp  { text-anchor:middle; font-size:25  }
+   ]]></style>
+	<defs>
+		<g id="encryption">
+			<rect width="310" height="40" class="darkYellowish"/>
+			<text class="swst  whitish" x="155" y="30">Encryption</text>
+		</g>
+		<g id="signature">
+			<rect width="310" height="40" class="darkYellowish"/>
+			<text class="swst  whitish" x="155" y="30">Signature</text>
+		</g>
+		<g id="trust">
+			<rect width="195" height="40" class="greenish"/>
+			<text class="swst  pinkish" x="97.5" y="30">Trust</text>
+		</g>
+		<g id="proof">
+			<rect width="140" height="40" class="blueish"/>
+			<text class="swst  whitish" x="70" y="30">Proof</text>
+		</g>
+		<g id="logic">
+			<rect width="180" height="40" class="yellowish"/>
+			<text class="swst  whitish" x="90" y="30">Logic</text>
+		</g>
+		<g id="rules">
+			<rect width="220" height="40" class="yellowish"/>
+			<text class="swst  whitish" x="110" y="30">Rules</text>
+		</g>
+		<g id="ontology">
+			<rect width="260" height="40" class="whitish"/>
+			<text class="swst  whitish" x="130" y="30">Ontology</text>
+		</g>
+		<g id="rdf-schema">
+			<rect width="300" height="40" class="whitish"/>
+			<text class="swst  whitish" x="150" y="30">RDF Schema</text>
+		</g>
+		<g id="rdf">
+			<rect width="340" height="40" class="whitish"/>
+			<text class="swst  whitish" x="170" y="30">RDF Model &amp; Syntax</text>
+		</g>
+		<g id="query">
+			<rect width="185" height="40" class="darkYellowish"/>
+			<text class="swst  whitish" x="92.5" y="30">XML Query</text>
+		</g>
+		<g id="xml-schema">
+			<rect width="185" height="40" class="darkYellowish"/>
+			<text class="swst  whitish" x="92.5" y="30">XML Schema</text>
+		</g>
+		<g id="xml">
+			<rect width="250" height="40" class="darkYellowish"/>
+			<text class="swst  whitish" x="125" y="30">XML</text>
+		</g>
+		<g id="namespaces">
+			<rect width="250" height="40" class="darkYellowish"/>
+			<text class="swst  whitish" x="125" y="30">Namespaces</text>
+		</g>
+		<g id="uri">
+			<rect width="272.5" height="40" class="limish"/>
+			<text class="swst" style="fill:white" x="125" y="30">URI</text>
+		</g>
+		<g id="unicode">
+			<rect width="272.5" height="40" class="limish"/>
+			<text class="swst" style="fill:white" x="125" y="30">Unicode</text>
+		</g>
+	</defs>
+	<g id="FullSlide" transform="translate(50,10)">
+		<desc>The important elements of a Semantic Web stack, piled on top of one another</desc>
+		<!-- your graphic here -->
+		<use xlink:href="#trust" transform="translate(700,0)"/>
+		<use xlink:href="#proof" transform="translate(660,45)"/>
+		<use xlink:href="#logic" transform="translate(620,90)"/>
+		<use xlink:href="#rules" transform="translate(580,135)"/>
+		<use xlink:href="#ontology" transform="translate(540,180)"/>
+		<use xlink:href="#rdf-schema" transform="translate(500,225)"/>
+		<use xlink:href="#rdf" transform="translate(460,270)"/>
+		<use xlink:href="#query" transform="translate(420,315)"/>
+		<use xlink:href="#xml-schema" transform="translate(615,315)"/>
+		<use xlink:href="#signature" transform="translate(810,355) rotate(-90)"/>
+		<use xlink:href="#encryption" transform="translate(855,355) rotate(-90)"/>
+		<use xlink:href="#xml" transform="translate(380,360)"/>
+		<use xlink:href="#namespaces" transform="translate(645,360)"/>
+		<use xlink:href="#uri" transform="translate(340,405)"/>
+		<use xlink:href="#unicode" transform="translate(622.5,405)"/>
+		<g transform="translate(25,50)">
+			<defs>
+				<path id="textCCPP" d="M400 250,A 50 60 0 0,1 460 200"/>
+			</defs>
+			<text class="exmp">
+				<textPath startOffset="50%" xlink:href="#textCCPP">CC/PP</textPath>
+			</text>
+		</g>
+		<g transform="translate(15,-40) rotate(4) translate(10,20)">
+			<defs>
+				<path id="P3P" d="M400 250,A 50 70 0 0,1 460 200"/>
+			</defs>
+			<text class="exmp">
+				<textPath startOffset="50%" xlink:href="#P3P">P3P</textPath>
+			</text>
+		</g>
+		<g transform="translate(350,130) rotate(50) translate(-400,-250)">
+			<defs>
+				<path id="Annotea" d="M400 250,A 100 100 0 0,1 500 200"/>
+			</defs>
+			<text class="exmp">
+				<textPath startOffset="50%" xlink:href="#Annotea">Annotea</textPath>
+			</text>
+		</g>
+		<g transform="translate(-30,-30) translate(430,100) rotate(80) translate(-400,-250)">
+			<defs>
+				<path id="DC" d="M400 250,A 120 120 0 0,1 550 200"/>
+			</defs>
+			<text class="reddish exmp">
+				<textPath startOffset="50%" xlink:href="#DC">Dublin Core</textPath>
+			</text>
+		</g>
+		<g transform="translate(470,60) rotate(90) translate(-400,-250)">
+			<defs>
+				<path id="RSS" d="M400 250,A 100 100 0 0,1 500 200"/>
+			</defs>
+			<text class="reddish exmp">
+				<textPath startOffset="50%" xlink:href="#RSS">RSS</textPath>
+			</text>
+		</g>
+	</g>
+</svg>

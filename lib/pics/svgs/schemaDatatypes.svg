@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 641.7 480.1" xml:space="preserve">
+	<style type="text/css">
+	<![CDATA[
+		.st0{stroke:#CC6635;}
+		.st1{fill:none;stroke:#CC6635;stroke-dasharray:4;}
+		.st2{fill:none;stroke:#CC6635;}
+		.st3{fill:#99FFFF;}
+		.st4{fill:#FFCCFF;}
+		.st5{fill:#FFFF99;}
+		.st6{fill:#CCCCFF;}
+		.st7{font-family:Arial, Helvetica, sans-serif}
+		.st8{fill:#000000;}
+		.st9{font-size:12;}
+		.st10{font-size:14;}
+		.st11{fill:none;stroke:#CC6635;stroke-dasharray:2 6 4 6;}
+		.st12{fill-rule:nonzero;clip-rule:nonzero;stroke:#000000;stroke-miterlimit:4;}
+		.st13{stroke:none;}
+	]]>
+	</style>
+	<g id="Layer_x0020_1" class="st12 st7 st9" transform="translate(15,10) scale(0.95)">
+		<g class="st13">
+			<g class="st5">
+				<g>
+					<path d="M353.8,99.2h-73.4V84.5h73.4v14.7z"/>
+					<text transform="matrix(1 0 0 1 284.9297 96.1421)"><tspan x="0" y="0" class="st8">gYearMonth</tspan></text>
+				</g>
+				<g>
+					<path d="M532.4,99.2h-36.9V84.5h36.9v14.7z"/>
+					<text transform="matrix(1 0 0 1 499.9131 96.1421)"><tspan x="0" y="0" class="st8">gDay</tspan></text>
+				</g>
+				<g>
+					<path d="M590.8,99.2h-49.4V84.5h49.4v14.7z"/>
+					<text transform="matrix(1 0 0 1 546.0518 96.1421)"><tspan x="0" y="0" class="st8">gMonth</tspan></text>
+				</g>
+				<g>
+					<path d="M485.4,99.2H415V84.5h70.4v14.7z"/>
+					<text transform="matrix(1 0 0 1 419.4873 96.1421)"><tspan x="0" y="0" class="st8">gMonthDay</tspan></text>
+				</g>
+				<g>
+					<path d="M403.9,99.2H363V84.5h40.9v14.7z"/>
+					<text transform="matrix(1 0 0 1 367.96 96.1421)"><tspan x="0" y="0" class="st8">gYear</tspan></text>
+				</g>
+				<g>
+					<path d="M269.8,99.2h-30.9V84.5h30.9v14.7z"/>
+					<text transform="matrix(1 0 0 1 242.6377 96.1421)"><tspan x="0" y="0" class="st8">date</tspan></text>
+				</g>
+				<g>
+					<path d="M229.8,99.2h-32.9V84.5h32.9v14.7z"/>
+					<text transform="matrix(1 0 0 1 201.9805 96.1421)"><tspan x="0" y="0" class="st8">time</tspan></text>
+				</g>
+				<g>
+					<path d="M187.3,99.2h-58.9V84.5h58.9v14.7z"/>
+					<text transform="matrix(1 0 0 1 133.0273 96.1421)"><tspan x="0" y="0" class="st8">dateTime</tspan></text>
+				</g>
+				<g>
+					<path d="M118.3,99.2H66.9V84.5h51.4v14.7z"/>
+					<text transform="matrix(1 0 0 1 70.8828 96.1421)"><tspan x="0" y="0" class="st8">duration</tspan></text>
+				</g>
+			</g>
+			<g class="st5">
+				<g>
+					<path d="M384.6,139h-45.4v-14.7h45.4V139z"/>
+					<text transform="matrix(1 0 0 1 343.8384 135.9658)"><tspan x="0" y="0" class="st8">double</tspan></text>
+				</g>
+				<g>
+					<path d="M582.2,139h-68.4v-14.7h68.4V139z"/>
+					<text transform="matrix(1 0 0 1 517.8877 135.9658)"><tspan x="0" y="0" class="st8">NOTATION</tspan></text>
+				</g>
+				<g>
+					<path d="M501,139h-50.4v-14.7H501V139z"/>
+					<text transform="matrix(1 0 0 1 455.1436 135.9658)"><tspan x="0" y="0" class="st8">QName</tspan></text>
+				</g>
+				<g>
+					<path d="M442.2,139h-47.4v-14.7h47.4V139z"/>
+					<text transform="matrix(1 0 0 1 398.4619 135.9658)"><tspan x="0" y="0" class="st8">anyURI</tspan></text>
+				</g>
+				<g>
+					<path d="M328.6,139h-30.9v-14.7h30.9V139z"/>
+					<text transform="matrix(1 0 0 1 301.4873 135.9658)"><tspan x="0" y="0" class="st8">float</tspan></text>
+				</g>
+				<g>
+					<path d="M287.5,139h-61.9v-14.7h61.9V139z"/>
+					<text transform="matrix(1 0 0 1 229.9072 135.9658)"><tspan x="0" y="0" class="st8">hexBinary</tspan></text>
+				</g>
+				<g>
+					<path d="M215.8,139h-81.9v-14.7h81.9V139z"/>
+					<text transform="matrix(1 0 0 1 138.1753 135.9658)"><tspan x="0" y="0" class="st8">base64Binary</tspan></text>
+				</g>
+				<g>
+					<path d="M124.6,139H73.2v-14.7h51.4V139z"/>
+					<text transform="matrix(1 0 0 1 77.2324 135.9658)"><tspan x="0" y="0" class="st8">boolean</tspan></text>
+				</g>
+			</g>
+			<g>
+				<g>
+					<path class="st5" d="M68.6,209.6H29.8v-14.7h38.9v14.7z"/>
+					<text transform="matrix(1 0 0 1 34.5254 206.5068)"><tspan x="0" y="0">string</tspan></text>
+				</g>
+				<g>
+					<path class="st6" d="M98.4,242.7H0V228h98.4v14.7z"/>
+					<text transform="matrix(1 0 0 1 4.1768 239.6729)"><tspan x="0" y="0">normalizedString</tspan></text>
+				</g>
+				<g>
+					<path class="st6" d="M69.1,286.7H29.3V272h39.9v14.7z"/>
+					<text transform="matrix(1 0 0 1 34.5195 283.6729)"><tspan x="0" y="0">token</tspan></text>
+				</g>
+				<g>
+					<path class="st6" d="M78.9,322.4H19.5v-14.7h59.4v14.7z"/>
+					<text transform="matrix(1 0 0 1 24.5059 319.3408)"><tspan x="0" y="0">language</tspan></text>
+				</g>
+				<g class="st6 st9">
+					<g>
+						<path d="M181.5,322.4h-40.4v-14.7h40.4v14.7z"/>
+						<text transform="matrix(1 0 0 1 145.2861 318.3408)"><tspan x="0" y="0" class="st8 st9">Name</tspan></text>
+					</g>
+					<g>
+						<path d="M189.5,359.9h-56.4v-14.7h56.4v14.7z"/>
+						<text transform="matrix(1 0 0 1 136.6201 356.8408)"><tspan x="0" y="0" class="st8 st9">NCName</tspan></text>
+					</g>
+					<g>
+						<g>
+							<path d="M97.5,394.9H79.6v-14.7h17.9v14.7z"/>
+							<text transform="matrix(0.999 -4.503189e-002 4.503189e-002 0.999 82.708 392.6074)"><tspan x="0" y="0" class="st8">ID</tspan></text>
+						</g>
+						<g>
+							<g>
+								<path d="M170.2,431.9h-50.9v-14.7h50.9v14.7z"/>
+								<text transform="matrix(1 -2.420348e-003 2.420348e-003 1 122.7993 428.9063)"><tspan x="0" y="0" class="st8">IDREFS</tspan></text>
+							</g>
+							<g>
+								<path d="M164.7,394.9h-39.9v-14.7h39.9v14.7z"/>
+								<text transform="matrix(1 -2.420348e-003 2.420348e-003 1 126.8013 391.8398)"><tspan x="0" y="0" class="st8">IDREF</tspan></text>
+							</g>
+							<path class="st1" d="M145,395v22.5"/>
+						</g>
+						<g>
+							<g>
+								<path d="M241.3,394.4h-56.4v-14.7h56.4v14.7z"/>
+								<text transform="matrix(1 0 0 1 191.729 391.3408)"><tspan x="0" y="0" class="st8 st9">ENTITY</tspan></text>
+							</g>
+							<g>
+								<path d="M243,431.4h-59.9v-14.7H243v14.7z"/>
+								<text transform="matrix(1 -2.420348e-003 2.420348e-003 1 186.0698 428.4063)"><tspan x="0" y="0" class="st8">ENTITIES</tspan></text>
+							</g>
+							<path class="st1" d="M213.6,396v20.5"/>
+						</g>
+					</g>
+					<path class="st2" d="M161.5,360v8H89v12"/>
+					<path class="st2" d="M161.5,368h50.8v11.8"/>
+					<path class="st2" d="M144.5,368v12"/>
+					<path class="st2" d="M161,323v22.5"/>
+				</g>
+				<g class="st6">
+					<g>
+						<path d="M322.5,322.2h-64.9v-14.7h64.9v14.7z"/>
+						<text transform="matrix(1 0 0 1 260.1567 319.1748)"><tspan x="0" y="0" class="st8">NMTOKEN</tspan></text>
+					</g>
+					<g>
+						<path d="M326.2,360.6h-72.4v-14.7h72.4v14.7z"/>
+						<text transform="matrix(1 0 0 1 256.1548 357.5068)"><tspan x="0" y="0" class="st8">NMTOKENS</tspan></text>
+					</g>
+					<path class="st1" d="M290,323.5v21.3"/>
+				</g>
+				<path class="st2" d="M49.2,209.5v18.7"/>
+				<path class="st2" d="M49.2,242.9v29.3"/>
+				<path class="st2" d="M49.2,286.9v20.7"/>
+				<path class="st2" d="M49.7,298.2H289v8.7"/>
+				<path class="st2" d="M161,307.5v-8.8"/>
+			</g>
+			<g>
+				<g>
+					<path class="st5" d="M470.5,174h-49.4v-14.7h49.4V174z"/>
+					<text transform="matrix(1 0 0 1 425.7412 170.9824)"><tspan x="0" y="0">decimal</tspan></text>
+				</g>
+				<g>
+					<path class="st6" d="M360.6,245.4H254.2v-14.7h106.4v14.7z"/>
+					<text transform="matrix(1 0 0 1 257.7407 241.8359)"><tspan x="0" y="0">nonPositiveInteger</tspan></text>
+				</g>
+				<g>
+					<path class="st6" d="M351.9,282.6H263v-14.7h88.9v14.7z"/>
+					<text transform="matrix(1 0 0 1 266.0757 279.0264)"><tspan x="0" y="0">negativeInteger</tspan></text>
+				</g>
+				<g>
+					<path class="st6" d="M596.1,245.4H486.7v-14.7h109.4v14.7z"/>
+					<text transform="matrix(1 0 0 1 488.9873 241.8506)"><tspan x="0" y="0">nonNegativeInteger</tspan></text>
+				</g>
+				<g>
+				</g>
+				<g>
+					<path class="st6" d="M413,246.4h-29.9v-14.7H413v14.7z"/>
+					<text transform="matrix(1 0 0 1 386.6768 242.9932)"><tspan x="0" y="0">long</tspan></text>
+				</g>
+				<g>
+					<path class="st6" d="M466.7,209.9h-41.9v-14.7h41.9v14.7z"/>
+					<text transform="matrix(1 0 0 1 427.4092 206.5)"><tspan x="0" y="0">integer</tspan></text>
+				</g>
+				<g class="st6">
+					<g>
+						<path d="M641.7,281.6h-88.9v-14.7h88.9v14.7z"/>
+						<text transform="matrix(1 0 0 1 558.1826 278.4092)"><tspan x="0" y="0" class="st8">positiveInteger</tspan></text>
+					</g>
+					<g>
+						<g>
+							<path d="M524.5,281.6h-83.4v-14.7h83.4v14.7z"/>
+							<text transform="matrix(1 0 0 1 445.0605 278.2021)"><tspan x="0" y="0" class="st8">unsignedLong</tspan></text>
+						</g>
+						<g>
+							<path d="M517.5,318.1h-69.4v-14.7h69.4v14.7z"/>
+							<text transform="matrix(1 0 0 1 451.7373 314.6436)"><tspan x="0" y="0" class="st8">unsignedInt</tspan></text>
+						</g>
+						<g>
+						</g>
+						<g>
+							<path d="M524.5,353.4h-83.4v-14.7h83.4v14.7z"/>
+							<text transform="matrix(1 0 0 1 444.0674 350.0029)"><tspan x="0" y="0" class="st8">unsignedShort</tspan></text>
+						</g>
+						<g>
+							<path d="M524.5,389.9h-83.4v-14.7h83.4v14.7z"/>
+							<text transform="matrix(1 0 0 1 446.4023 386.5029)"><tspan x="0" y="0" class="st8">unsignedByte</tspan></text>
+						</g>
+						<path class="st0" d="M480.4,282.2v20.5"/>
+						<path class="st0" d="M480.4,318.2v20.5"/>
+						<path class="st0" d="M480.9,354.2v21"/>
+					</g>
+				</g>
+				<g class="st6">
+					<g>
+						<path d="M416,318.1h-35.9v-14.7H416v14.7z"/>
+						<text transform="matrix(1 0 0 1 384.6816 314.6416)"><tspan x="0" y="0" class="st8">short</tspan></text>
+					</g>
+					<g>
+						<path d="M416,354.4h-35.9v-14.7H416v14.7z"/>
+						<text transform="matrix(1 0 0 1 386.6797 351.001)"><tspan x="0" y="0" class="st8">byte</tspan></text>
+					</g>
+					<g>
+						<path d="M407.5,281.9h-18.9v-14.7h18.9v14.7z"/>
+						<text transform="matrix(1 0 0 1 391.6836 278.501)"><tspan x="0" y="0" class="st8">int</tspan></text>
+					</g>
+					<path class="st2" d="M396.9,282v21.2"/>
+					<path class="st2" d="M396.9,319.2v20.5"/>
+				</g>
+				<path class="st2" d="M396.5,266.7v-19.4"/>
+				<path class="st2" d="M307.4,246.8v21.4"/>
+				<path class="st2" d="M541.8,246.3v9h-62.7v11"/>
+				<path class="st2" d="M541.8,255.2h54.3v11.5"/>
+				<path class="st2" d="M446.7,174.6V195"/>
+				<path class="st2" d="M446.7,210.4v9H307.3v11"/>
+				<path class="st2" d="M396.9,219.4v12.4"/>
+				<path class="st2" d="M446.7,219.4h95.1v11.9"/>
+			</g>
+			<g>
+				<path class="st3" d="M331.4,59.8h-90.2v-16h90.2v16z"/>
+				<text transform="matrix(1 0 0 1 244.5015 55.2588)"><tspan x="0" y="0">anySimpleType</tspan></text>
+			</g>
+			<g>
+				<path class="st3" d="M313.8,16.6h-56.5v-16h56.5v16z"/>
+				<text transform="matrix(1 0 0 1 262.0771 12)"><tspan x="0" y="0">anyType</tspan></text>
+			</g>
+			<g>
+				<path class="st4" d="M117.8,59.8H10.1V40h107.7v19.9z"/>
+				<text transform="matrix(1 0 0 1 15.999 52.9668)"><tspan x="0" y="0">all complex types</tspan></text>
+			</g>
+			<path class="st11" d="M59,40V25.5h223.9"/>
+			<path class="st2" d="M283.6,16.6V43"/>
+			<path class="st2" d="M284.4,60.6v13.8H49.8v120.7"/>
+			<path class="st2" d="M284.4,74.4h278.1v9.9"/>
+			<path class="st2" d="M91.1,74.4v9.9"/>
+			<path class="st2" d="M157.5,84.3v-9.2"/>
+			<path class="st2" d="M214.1,85.1v-9.9"/>
+			<path class="st2" d="M254.6,85.8V74.4"/>
+			<path class="st2" d="M316.5,85.1v-9.9"/>
+			<path class="st2" d="M383.7,84.3v-9.9"/>
+			<path class="st2" d="M447.1,85.1v-9.9"/>
+			<path class="st2" d="M515.1,85.1v-9.9"/>
+			<path class="st2" d="M49.8,113.3h500.1v9.9"/>
+			<path class="st2" d="M98.7,123.3v-9.9"/>
+			<path class="st2" d="M176.6,124v-10.7"/>
+			<path class="st2" d="M255.3,123.3v-9.2"/>
+			<path class="st2" d="M312.6,123.3v-9.9"/>
+			<path class="st2" d="M361.6,123.3v-9.9"/>
+			<path class="st2" d="M417.3,122.5v-9.2"/>
+			<path class="st2" d="M475.4,123.3v-9.2"/>
+			<path class="st2" d="M445.6,159.2v-45.8"/>
+		</g>
+		<g class="st13 st10">
+			<g>
+				<text transform="matrix(1 0 0 1 79.5938 475.5762)"><tspan x="0" y="0">&quot;Ur&quot; types</tspan></text>
+				<path class="st3" d="M73.5,480H52.8v-18.3h20.6V480z"/>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 198.0039 475.5762)"><tspan x="0" y="0">Built-in primitive types</tspan></text>
+				<path class="st5" d="M191.5,480h-20.6v-18.3h20.6V480z"/>
+			</g>
+			<g>
+				<text transform="matrix(1 0 0 1 396.7021 475.5762)"><tspan x="0" y="0">Built-in derived types</tspan></text>
+				<path class="st6" d="M387.2,480h-20.6v-18.3h20.6V480z"/>
+			</g>
+		</g>
+	</g>
+</svg>

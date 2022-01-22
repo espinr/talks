@@ -1,0 +1,488 @@
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/css" href="slide.css" ?> 
+<svg  viewBox="0 0 1050 640" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<style type="text/css">
+	text.subcode, tspan.subcode, text.code, tspan.code, text.medcode, tspan.medcode { font-size:15; }
+	text.minor, tspan.minor { font-size: 20 }
+</style>
+<rect class="background"  width="1023" height="640"/>
+<g transform="translate(0,10)">
+
+
+<g transform="translate(350,10)">
+<rect class="yellowish"  x="3" y="3" style="fill:grey" width="300" height="30"/>
+<rect class="yellowish"  width="300" height="30"/>
+<text class="minor centre"  x="150" y="24" >Evolution of HTML</text>
+</g>
+
+<g transform="translate(700,0)">
+<rect class="darkYellowish" style="opacity:0.6" width="300" height="150" rx="5" ry="5" />
+<text class="minor centre" x="150" y="24" >Discarded Elements</text>
+</g>
+
+<g transform="translate(700,160)">
+<rect class="darkYellowish" style="opacity:0.6" width="300" height="230" rx="5" ry="5" />
+<text class="minor centre" x="150" y="24" >Nonstandard Elements</text>
+<text id="t5non" style="display:none" class="code" x="10" y="30">
+<tspan class="subcode" x="10" dy="24">footnote fig math</tspan>
+<tspan class="subcode" x="10" dy="24">sound</tspan>
+</text>
+<text id="t6non" style="display:none" class="code" x="10" y="30">
+<tspan class="subcode" x="10" dy="24">footnote fig math</tspan>
+<tspan class="subcode" x="10" dy="24">sound <tspan style="fill:white">nobr</tspan> <tspan style="fill:yellow">wbr font basefont</tspan> bl</tspan>
+<tspan class="subcode" x="10" dy="24"><tspan style="fill:yellow">big small center blink</tspan></tspan>
+<tspan class="subcode" x="10" dy="24"><tspan style="fill:yellow">embed font form marc</tspan></tspan>
+</text>
+<text id="t7non" style="display:none" class="code" x="10" y="30">
+<tspan class="subcode" x="10" dy="24">footnote fig math</tspan>
+<tspan class="subcode" x="10" dy="24">sound <tspan style="fill:white">nobr</tspan> <tspan style="fill:yellow">wbr font basefont</tspan> bl</tspan>
+<tspan class="subcode" x="10" dy="24"><tspan style="fill:yellow">big small center blink</tspan></tspan>
+<tspan class="subcode" x="10" dy="24"><tspan style="fill:yellow">embed font form marc</tspan></tspan>
+<tspan class="subcode" x="10" dy="24"><tspan style="fill:white">bgsound</tspan> <tspan style="fill:yellow">keygen multicol spacer</tspan></tspan>
+
+</text>
+<text id="t8non" style="display:none" class="code" x="10" y="30">
+<tspan class="subcode" x="10" dy="24">footnote fig math</tspan>
+<tspan class="subcode" x="10" dy="24">sound <tspan style="fill:white">nobr</tspan> <tspan style="fill:yellow">wbr font basefont</tspan> bl</tspan>
+<tspan class="subcode" x="10" dy="24"><tspan style="fill:yellow">big small center blink</tspan></tspan>
+<tspan class="subcode" x="10" dy="24"><tspan style="fill:yellow">embed font form marc</tspan></tspan>
+<tspan class="subcode" x="10" dy="24"><tspan style="fill:white">bgsound</tspan> <tspan style="fill:yellow">keygen multicol spacer</tspan></tspan>
+<tspan class="subcode" x="10" dy="24"><tspan style="fill:white">marquee</tspan></tspan>
+</text>
+<text id="t9non" style="display:none" class="code" x="10" y="30">
+<tspan class="subcode" x="10" dy="24">footnote fig math</tspan>
+<tspan class="subcode" x="10" dy="24">sound <tspan style="fill:white">nobr</tspan> <tspan style="fill:yellow">wbr font basefont</tspan> bl</tspan>
+<tspan class="subcode" x="10" dy="24"><tspan style="fill:yellow">big small center blink</tspan></tspan>
+<tspan class="subcode" x="10" dy="24"><tspan style="fill:yellow">embed font form marc</tspan></tspan>
+<tspan class="subcode" x="10" dy="24"><tspan style="fill:white">bgsound</tspan> <tspan style="fill:yellow">keygen multicol spacer</tspan></tspan>
+<tspan class="subcode" x="10" dy="24"><tspan style="fill:white">marquee</tspan> <tspan style="fill:yellow">ilayer inlineinput layer</tspan></tspan>
+<tspan class="subcode" x="10" dy="24">trans acc rec</tspan>
+<tspan class="subcode" x="10" dy="24">warp shadow doom</tspan>
+
+</text>
+</g>
+
+
+<g id="str" transform="translate(50,10)" style="display:none">
+<rect class="lightGreenish" width="200" height="60" rx="5" ry="5" />
+<text class="minor centre" x="100" y="24" >Structure</text>
+<text id="t4str" style="display:none" class="medcode" x="10" y="45">html head body</text>
+</g>
+
+
+<g id="head" transform="translate(50,80)">
+<rect class="lightGreenish" width="200" height="80" rx="5" ry="5" />
+<text class="minor centre" x="100" y="24">Head</text>
+<text id="t1head"  class="code" x="10" y="45">title</text>
+<text id="t3head" style="display:none" class="code" x="10" y="45">title isindex</text>
+<text id="t4head" style="display:none" class="medcode" x="10" y="45">title isindex 
+<tspan x="10" dy="20">link base</tspan></text>
+<text id="t6head" style="display:none" class="medcode" x="10" y="45">title isindex meta
+<tspan x="10" dy="20">link base</tspan></text>
+<text id="t7head" style="display:none" class="subcode high" x="10" y="45">title meta link base</text>
+<text id="t7head3" style="display:none" class="subcode high" x="140" y="45">isindex</text>
+<text id="t7head2" style="display:none;fill:mediumvioletred" class="subcode" x="10" y="65">range spot style</text>
+<text id="t8head" style="display:none" class="subcode" x="10" y="65">style script</text>
+<text id="t9head" style="display:none" class="subcode" x="10" y="65">style script noscript</text>
+</g>
+
+<g id="sect" transform="translate(50,170)">
+<rect class="lightGreenish" width="200" height="60" rx="5" ry="5" />
+<text class="minor centre" x="100" y="24">Sections</text>
+<text id="t1sect" class="code" x="10" y="45">p h1 to h3</text>
+<text id="t2sect" style="display:none" class="code" x="10" y="45">p</text>
+<text id="t2sect2" style="display:none" class="code" x="40" y="45">h1 to h6</text>
+<text id="t10sect" style="display:none" class="code" x="40" y="45">section h</text>
+</g>
+
+<g id="list" transform="translate(50,240)">
+<rect class="lightGreenish" width="200" height="60" rx="5" ry="5" />
+<text class="minor centre" x="100" y="24">Lists</text>
+<text id="t1list" class="code" x="10" y="45">ul ol li dl dt dd</text>
+<text id="t3list" style="display:none" class="medcode" x="10" y="45">ul ol li dl dt dd </text>
+<text id="t3list2" style="display:none" class="medcode" x="120" y="45">menu dir</text>
+<text id="t10list" style="display:none" class="medcode" x="10" y="45">ul ol li dl dt dd nl label</text>
+</g>
+
+<g id="link" transform="translate(50,310)">
+<rect class="lightGreenish" width="200" height="60" rx="5" ry="5" />
+<text class="minor centre" x="100" y="24">Links</text>
+<text id="t1link" class="code" x="10" y="45">a</text>
+
+<text id="t8link" class="medcode" x="50" y="45">applet param</text>
+</g>
+
+<g id="pre" transform="translate(50,380)">
+<rect class="lightGreenish" width="200" height="60" rx="5" ry="5" />
+<text class="minor centre" x="100" y="24">Preformatted</text>
+<text id="t1pre" class="code" x="10" y="45">xmp listing</text>
+<text id="t2pre" class="medcode" style="display:none" x="10" y="45">xmp listing</text>
+<text id="t2predisc" class="medcode" style="display:none" x="100" y="45">plaintext</text>
+<text id="t4pre" class="medcode" style="display:none" x="10" y="45">pre</text>
+<text id="t4pre2" class="medcode" style="display:none" x="80" y="45">xmp listing</text>
+<text id="t10pre" class="medcode" style="display:none" x="10" y="45">pre blockcode</text>
+</g>
+
+<g id="emph" transform="translate(50,450)">
+<rect class="lightGreenish" width="200" height="140" rx="5" ry="5" />
+<text class="minor centre" x="100" y="24">Inline</text>
+<text id="t1emph" class="subcode" x="10" y="45">hp1 hp2</text>
+<text id="t4emph" class="subcode" style="display:none" x="10" y="45">em tt strong code b i
+<tspan x="10" dy="20">samp key kbd var dfn cite</tspan></text>
+<text id="t4emph2" class="subcode" style="display:none" x="160" y="45">u</text>
+<text id="t6emph2" class="subcode" style="display:none" x="140" y="45">b i</text>
+<text id="t6emph" class="subcode" style="display:none" x="10" y="45">em tt strong code
+<tspan x="10" dy="20">samp kbd var dfn cite</tspan></text>
+
+<text id="t7emph" class="subcode" style="display:none;fill:mediumvioletred" x="10" y="85">s big small sub sup
+<tspan x="10" dy="20">q lang acronym abbrev</tspan>
+<tspan x="10" dy="20">ins del au person</tspan></text>
+<text id="t8emph" class="subcode" style="display:none" x="10" y="85">sub sup abbr</text>
+<text id="t8emph3" class="subcode" style="display:none" x="110" y="85">big small</text>
+<text id="t8emph2" class="subcode" style="display:none" x="10" y="105">font basefont strike</text>
+
+
+<text id="t9emph" class="subcode" style="display:none" x="10" y="125">q span</text>
+<text id="t9emph2" class="subcode" style="display:none" x="60" y="125">acronym del ins bdo</text>
+<text id="t10emph" class="subcode" style="display:none" x="10" y="125">quote span</text>
+</g>
+
+<g id="img" transform="translate(300,100)"  style="display:none">
+<rect class="lightGreenish" width="200" height="60" rx="5" ry="5" />
+<text class="minor centre" x="100" y="24">Images</text>
+<text id="t4img" style="display:none" class="code" x="10" y="45">img</text>
+<text id="t8img" style="display:none" class="code" x="10" y="45">img map</text>
+<text id="t9img" style="display:none" class="subcode" x="10" y="45">object param</text>
+<text id="t9img2" style="display:none" class="subcode" x="100" y="45">img map area</text>
+<text id="t10img" style="display:none" class="subcode" x="10" y="45">object param standby</text>
+</g>
+
+<g id="special" transform="translate(300,170)"  style="display:none">
+<rect class="lightGreenish" width="200" height="80" rx="5" ry="5" />
+<text class="minor centre" x="100" y="24">Specials</text>
+<text id="t3special" style="display:none" class="code" x="10" y="45">address</text>
+<text id="t4special" style="display:none" class="medcode" x="10" y="45">address  blockquote</text>
+<text id="t7special" style="display:none;fill:mediumvioletred" class="medcode high" x="10" y="65">fn note math fig banner</text>
+</g>
+
+
+
+<g id="layout" transform="translate(300,260)"  style="display:none">
+<rect class="lightGreenish" width="200" height="60" rx="5" ry="5" />
+<text class="minor centre" x="100" y="24">Layout</text>
+<text id="t6layout" style="display:none" class="code" x="10" y="45">hr</text>
+<text id="t6layout2" style="display:none" class="code" x="40" y="45">br</text>
+</g>
+
+<g id="generic" transform="translate(300,330)"  style="display:none">
+<rect class="lightGreenish" width="200" height="60" rx="5" ry="5" />
+<text class="minor centre" x="100" y="24">Generic</text>
+<text id="t6generic" style="display:none" class="code" x="10" y="45">div</text>
+<text id="t8generic" style="display:none" class="code" x="80" y="45">center</text>
+</g>
+
+<g id="form" transform="translate(300,400)"  style="display:none">
+<rect class="lightGreenish" width="200" height="110" rx="5" ry="5" />
+<text class="minor centre" x="100" y="24">Forms</text>
+<text id="t6form" style="display:none" class="subcode" x="10" y="45">form input select<tspan x="10" dy="24">option textarea</tspan></text>
+<text id="t9form" style="display:none" class="subcode" x="10" y="45">form input select  fieldset
+<tspan x="10" dy="24">option textarea label legend</tspan>
+<tspan x="10" dy="24">optgroup button</tspan></text>
+</g>
+
+<g id="table" transform="translate(300,520)"  style="display:none">
+<rect class="lightGreenish" width="200" height="80" rx="5" ry="5" />
+<text class="minor centre" x="100" y="24">Tables</text>
+<text id="t7table" style="display:none" class="subcode" x="10" y="45">table caption<tspan x="10" dy="24">tr th td</tspan></text>
+<text id="t9table" style="display:none" class="subcode" x="10" y="45">table caption thead tbody<tspan x="10" dy="24">tfoot colgroup col tr th td</tspan></text>
+<text id="t10table" style="display:none" class="subcode" x="60" y="57">summary</text>
+</g>
+
+
+<g id="frame" transform="translate(510,100)"  style="display:none">
+<rect class="lightGreenish" width="180" height="80" rx="5" ry="5" />
+<text class="minor centre" x="90" y="24">Forms</text>
+<text id="t9frame" style="display:block" class="subcode" x="10" y="45">frame frameset<tspan x="10" dy="24">noframes</tspan></text>
+</g>
+
+
+
+
+<g id="t1" style="display:block" transform="translate(750,400)" cursor="pointer">
+<rect class="yellowish" width="200" height="40"/>
+<text class="minor centre" x="100" y="30" >December 1990</text>
+<text class="minor centre" x="100" y="80" >Tim's Test Page</text>
+</g>
+
+<g id="t2" style="display:none" transform="translate(750,400)" cursor="pointer">
+<rect class="yellowish" width="200" height="40"/>
+<text class="minor centre" x="100" y="30" >October 1991</text>
+<text class="minor centre" x="100" y="80" >Spec of X and line mode browsers</text>
+<text class="minor centre" x="100" y="110" >Tim suggests <tspan class="high">section</tspan> and <tspan class="high">h</tspan></text>
+</g>
+
+<g id="t3" style="display:none" transform="translate(750,400)" cursor="pointer">
+<rect class="yellowish" width="200" height="40"/>
+<text class="minor centre" x="100" y="30" >November 1992</text>
+<text class="minor centre" x="100" y="80" >Some Stability, Dan Connolly’s DTD</text>
+<text class="minor centre" x="100" y="110" >Then 1993:Mosaic</text>
+</g>
+
+<g id="t4" style="display:none" transform="translate(750,400)" cursor="pointer">
+<rect class="yellowish" width="200" height="40"/>
+<text class="minor centre" x="100" y="30" >June 1993</text>
+<text class="minor centre" x="100" y="80" >HTML 1.1 IEFT Draft Standard</text>
+<text class="minor centre" x="100" y="110" >Then 1994:Netscape, 1995:Microsoft</text>
+</g>
+
+<g id="t5" style="display:none" transform="translate(750,400)" cursor="pointer">
+<rect class="yellowish" width="200" height="40"/>
+<text class="minor centre" x="100" y="30" >1994</text>
+<text class="minor centre" x="100" y="80" >Browser Wars</text>
+</g>
+
+<g id="t6" style="display:none" transform="translate(750,400)" cursor="pointer">
+<rect class="yellowish" width="200" height="40"/>
+<text class="minor centre" x="100" y="30" >November 1995</text>
+<text class="minor centre" x="100" y="80" >HTML 2.0 (RFC)</text>
+<text class="minor centre" x="100" y="110" >The First HTML Standard</text>
+<text class="minor centre" x="100" y="140" >Browser Wars Continue</text>
+</g>
+
+
+
+
+
+<g id="t7" style="display:none" transform="translate(750,400)" cursor="pointer">
+<rect class="yellowish" width="200" height="40"/>
+<text class="minor centre" x="100" y="30" >1996</text>
+<text class="minor centre" x="100" y="80" >HTML 3.0 Abandoned</text>
+<text class="minor centre" x="100" y="110" >Overtaken by Events</text>
+<text class="minor centre" x="100" y="140" >Netscape want Forms</text>
+<text class="minor centre" x="100" y="170" >Tables Not Rich Enough</text>
+<text class="minor centre" x="100" y="200" >Styling not Element Soup!</text>
+</g>
+
+<g id="t8" style="display:none" transform="translate(750,400)" cursor="pointer">
+<rect class="yellowish" width="200" height="40"/>
+<text class="minor centre" x="100" y="30" >January 1997</text>
+<text class="minor centre" x="100" y="80" >W3C's HTML 3.2</text>
+<text class="minor centre" x="100" y="110" >Netscape and Microsoft Support</text>
+<text class="minor centre" x="100" y="140" >but extend</text>
+</g>
+
+<g id="t9" style="display:none" transform="translate(750,400)" cursor="pointer">
+<rect class="yellowish" width="200" height="40"/>
+<text class="minor centre" x="100" y="30" >December 1997</text>
+<text class="minor centre" x="100" y="80" >HTML 4.0</text>
+<text class="minor centre" x="100" y="110" >Netscape and Microsoft Support</text>
+</g>
+
+<g id="t10" style="display:none" transform="translate(750,400)" cursor="pointer">
+<rect class="yellowish" width="200" height="40"/>
+<text class="minor centre" x="100" y="30" >May 2001</text>
+<text class="minor centre" x="100" y="80" >XHTML 1.1</text>
+<text class="minor centre" x="100" y="110" >Modularised and Strict XHTML</text>
+</g>
+
+<g id="t11" style="display:none" transform="translate(750,400)">
+<rect class="yellowish" width="200" height="40"/>
+<text class="minor centre" x="100" y="30" >May 2003 (WD)</text>
+<text class="minor centre" x="100" y="80" >XHTML 2.0</text>
+<text class="minor centre" x="100" y="110" >Not backward Compatible</text>
+</g>
+
+ <defs>
+<set xlink:href="#t1" attributeType="CSS" attributeName="display" to="none" begin="t1.click"/>
+<set xlink:href="#t1sect" attributeType="CSS" attributeName="display" to="none" begin="t1.click"/>
+<set xlink:href="#t1pre" attributeType="CSS" attributeName="display" to="none" begin="t1.click"/>
+<set xlink:href="#t2" attributeType="CSS" attributeName="display" to="block" begin="t1.click"/>          
+<set xlink:href="#t2sect" attributeType="CSS" attributeName="display" to="block" begin="t1.click"/> 
+<set xlink:href="#t2sect2" attributeType="CSS" attributeName="display" to="block" begin="t1.click"/>         
+<set xlink:href="#t2pre" attributeType="CSS" attributeName="display" to="block" begin="t1.click"/>          
+<set xlink:href="#t2predisc" attributeType="CSS" attributeName="display" to="block" begin="t1.click"/>  
+
+<set xlink:href="#t2" attributeType="CSS" attributeName="display" to="none" begin="t2.click"/>
+<set xlink:href="#t1list" attributeType="CSS" attributeName="display" to="none" begin="t2.click"/>
+<set xlink:href="#t1head" attributeType="CSS" attributeName="display" to="none" begin="t2.click"/>
+
+<set xlink:href="#t3" attributeType="CSS" attributeName="display" to="block" begin="t2.click"/>          
+<set xlink:href="#t3list" attributeType="CSS" attributeName="display" to="block" begin="t2.click"/>          
+<set xlink:href="#t3list2" attributeType="CSS" attributeName="display" to="block" begin="t2.click"/>          
+<set xlink:href="#t3special" attributeType="CSS" attributeName="display" to="block" begin="t2.click"/>          
+<set xlink:href="#special" attributeType="CSS" attributeName="display" to="block" begin="t2.click"/>          
+<set xlink:href="#t3head" attributeType="CSS" attributeName="display" to="block" begin="t2.click"/>          
+
+
+
+
+<set xlink:href="#t3" attributeType="CSS" attributeName="display" to="none" begin="t3.click"/>
+<set xlink:href="#t2pre" attributeType="CSS" attributeName="display" to="none" begin="t3.click"/>
+<animate xlink:href="#t2predisc" attributeName="x" from="100" to="660" begin="t3.click" dur="2s" fill="freeze"/>
+<animate xlink:href="#t2predisc" attributeName="y" from="45" to="-340" begin="t3.click" dur="2s" fill="freeze"/>
+
+<set xlink:href="#t3head" attributeType="CSS" attributeName="display" to="none" begin="t3.click"/>
+<set xlink:href="#t3special" attributeType="CSS" attributeName="display" to="none" begin="t3.click"/>
+<animate xlink:href="#t1emph"  attributeName="x" from="10" to="660" begin="t3.click" dur="2s" fill="freeze"/>
+<animate xlink:href="#t1emph"  attributeName="y" from="45" to="-390" begin="t3.click" dur="2s" fill="freeze"/>
+
+<set xlink:href="#t4" attributeType="CSS" attributeName="display" to="block" begin="t3.click"/>          
+<set xlink:href="#t4pre" attributeType="CSS" attributeName="display" to="block" begin="t3.click"/>          
+<set xlink:href="#t4pre2" attributeType="CSS" attributeName="display" to="block" begin="t3.click"/>          
+<set xlink:href="#str" attributeType="CSS" attributeName="display" to="block" begin="t3.click"/>          
+<set xlink:href="#t4str" attributeType="CSS" attributeName="display" to="block" begin="t3.click"/>          
+<set xlink:href="#t4head" attributeType="CSS" attributeName="display" to="block" begin="t3.click"/>          
+<set xlink:href="#t4special" attributeType="CSS" attributeName="display" to="block" begin="t3.click"/>          
+<set xlink:href="#t4emph" attributeType="CSS" attributeName="display" to="block" begin="t3.click"/> 
+<set xlink:href="#t4emph2" attributeType="CSS" attributeName="display" to="block" begin="t3.click"/>          
+<set xlink:href="#t4img" attributeType="CSS" attributeName="display" to="block" begin="t3.click"/>          
+<set xlink:href="#img" attributeType="CSS" attributeName="display" to="block" begin="t3.click"/>          
+
+
+<set xlink:href="#t4" attributeType="CSS" attributeName="display" to="none" begin="t4.click"/>
+<set xlink:href="#t5" attributeType="CSS" attributeName="display" to="block" begin="t4.click"/> 
+<set xlink:href="#t5non" attributeType="CSS" attributeName="display" to="block" begin="t4.click"/>  
+
+
+
+<set xlink:href="#t5" attributeType="CSS" attributeName="display" to="none" begin="t5.click"/>
+<set xlink:href="#t4head" attributeType="CSS" attributeName="display" to="none" begin="t5.click"/>
+<set xlink:href="#t4layout" attributeType="CSS" attributeName="display" to="none" begin="t5.click"/>
+<set xlink:href="#t4emph" attributeType="CSS" attributeName="display" to="none" begin="t5.click"/>
+<set xlink:href="#t5non" attributeType="CSS" attributeName="display" to="none" begin="t5.click"/>
+<set xlink:href="#t6non" attributeType="CSS" attributeName="display" to="block" begin="t5.click"/>   
+<set xlink:href="#t6" attributeType="CSS" attributeName="display" to="block" begin="t5.click"/>          
+<set xlink:href="#layout" attributeType="CSS" attributeName="display" to="block" begin="t5.click"/>          
+<set xlink:href="#t6head" attributeType="CSS" attributeName="display" to="block" begin="t5.click"/>          
+<set xlink:href="#t6layout" attributeType="CSS" attributeName="display" to="block" begin="t5.click"/> 
+<set xlink:href="#t6layout2" attributeType="CSS" attributeName="display" to="block" begin="t5.click"/>         
+<set xlink:href="#t6emph" attributeType="CSS" attributeName="display" to="block" begin="t5.click"/>  
+<set xlink:href="#t6emph2" attributeType="CSS" attributeName="display" to="block" begin="t5.click"/>         
+<set xlink:href="#generic" attributeType="CSS" attributeName="display" to="block" begin="t5.click"/>          
+<set xlink:href="#t6generic" attributeType="CSS" attributeName="display" to="block" begin="t5.click"/>          
+<set xlink:href="#form" attributeType="CSS" attributeName="display" to="block" begin="t5.click"/>          
+<set xlink:href="#t6form" attributeType="CSS" attributeName="display" to="block" begin="t5.click"/>          
+
+
+
+
+
+         
+
+<set xlink:href="#t6" attributeType="CSS" attributeName="display" to="none" begin="t6.click"/>
+<set xlink:href="#t6head" attributeType="CSS" attributeName="display" to="none" begin="t6.click"/>
+<set xlink:href="#t6non" attributeType="CSS" attributeName="display" to="none" begin="t6.click"/>
+<set xlink:href="#t7non" attributeType="CSS" attributeName="display" to="block" begin="t6.click"/> 
+<set xlink:href="#t7" attributeType="CSS" attributeName="display" to="block" begin="t6.click"/>          
+<set xlink:href="#t7head" attributeType="CSS" attributeName="display" to="block" begin="t6.click"/>  
+<set xlink:href="#t7head2" attributeType="CSS" attributeName="display" to="block" begin="t6.click"/>  
+<set xlink:href="#t7head3" attributeType="CSS" attributeName="display" to="block" begin="t6.click"/>  
+<set xlink:href="#t7special" attributeType="CSS" attributeName="display" to="block" begin="t6.click"/>  
+<set xlink:href="#t7emph" attributeType="CSS" attributeName="display" to="block" begin="t6.click"/>  
+<set xlink:href="#t7table" attributeType="CSS" attributeName="display" to="block" begin="t6.click"/> 
+<set xlink:href="#table" attributeType="CSS" attributeName="display" to="block" begin="t6.click"/> 
+
+
+
+<set xlink:href="#t7" attributeType="CSS" attributeName="display" to="none" begin="t7.click"/>
+ 
+<set xlink:href="#t4img" attributeType="CSS" attributeName="display" to="none" begin="t7.click"/>   
+<set xlink:href="#t7head2" attributeType="CSS" attributeName="display" to="none" begin="t7.click"/>  
+<set xlink:href="#t7special" attributeType="CSS" attributeName="display" to="none" begin="t7.click"/>  
+<set xlink:href="#t7emph" attributeType="CSS" attributeName="display" to="none" begin="t7.click"/> 
+<set xlink:href="#t7non" attributeType="CSS" attributeName="display" to="none" begin="t7.click"/>
+<set xlink:href="#t8non" attributeType="CSS" attributeName="display" to="block" begin="t7.click"/>  
+<set xlink:href="#t8" attributeType="CSS" attributeName="display" to="block" begin="t7.click"/>  
+<set xlink:href="#t8head" attributeType="CSS" attributeName="display" to="block" begin="t7.click"/>  
+<set xlink:href="#t8generic" attributeType="CSS" attributeName="display" to="block" begin="t7.click"/>  
+<set xlink:href="#t8emph" attributeType="CSS" attributeName="display" to="block" begin="t7.click"/> 
+<set xlink:href="#t8emph2" attributeType="CSS" attributeName="display" to="block" begin="t7.click"/>  
+<set xlink:href="#t8emph3" attributeType="CSS" attributeName="display" to="block" begin="t7.click"/> 
+<set xlink:href="#t8link" attributeType="CSS" attributeName="display" to="block" begin="t7.click"/>  
+<set xlink:href="#t8img" attributeType="CSS" attributeName="display" to="block" begin="t7.click"/>  
+<animate xlink:href="#t4pre2"  attributeName="y" from="45" to="-300" begin="t7.click" dur="2s" fill="freeze"/>
+<animate xlink:href="#t4pre2"  attributeName="x" from="80" to="660" begin="t7.click" dur="2s" fill="freeze"/>
+
+
+
+
+        
+
+<set xlink:href="#t8" attributeType="CSS" attributeName="display" to="none" begin="t8.click"/>
+<set xlink:href="#t8head" attributeType="CSS" attributeName="display" to="none" begin="t8.click"/>
+<set xlink:href="#t6form" attributeType="CSS" attributeName="display" to="none" begin="t8.click"/>
+<set xlink:href="#t8img" attributeType="CSS" attributeName="display" to="none" begin="t8.click"/>
+<set xlink:href="#t7table" attributeType="CSS" attributeName="display" to="none" begin="t8.click"/>
+<set xlink:href="#t8non" attributeType="CSS" attributeName="display" to="none" begin="t8.click"/>
+<set xlink:href="#t9non" attributeType="CSS" attributeName="display" to="block" begin="t8.click"/>
+<set xlink:href="#t9" attributeType="CSS" attributeName="display" to="block" begin="t8.click"/>
+ 
+<set xlink:href="#t9head" attributeType="CSS" attributeName="display" to="block" begin="t8.click"/> 
+<set xlink:href="#t9img" attributeType="CSS" attributeName="display" to="block" begin="t8.click"/> 
+<set xlink:href="#t9img2" attributeType="CSS" attributeName="display" to="block" begin="t8.click"/> 
+<set xlink:href="#t9table" attributeType="CSS" attributeName="display" to="block" begin="t8.click"/> 
+<set xlink:href="#t9form" attributeType="CSS" attributeName="display" to="block" begin="t8.click"/> 
+<set xlink:href="#t9emph" attributeType="CSS" attributeName="display" to="block" begin="t8.click"/> 
+<set xlink:href="#t9emph2" attributeType="CSS" attributeName="display" to="block" begin="t8.click"/> 
+<set xlink:href="#frame" attributeType="CSS" attributeName="display" to="block" begin="t8.click"/> 
+<animate xlink:href="#t3list2"  attributeName="y" from="45" to="-140" begin="t8.click" dur="2s" fill="freeze"/>
+<animate xlink:href="#t3list2"  attributeName="x" from="120" to="660" begin="t8.click" dur="2s" fill="freeze"/>
+
+
+<set xlink:href="#t9" attributeType="CSS" attributeName="display" to="none" begin="t9.click"/>
+<set xlink:href="#frame" attributeType="CSS" attributeName="display" to="none" begin="t9.click"/>
+<set xlink:href="#t10" attributeType="CSS" attributeName="display" to="block" begin="t9.click"/> 
+<animate xlink:href="#t7head3" attributeName="x" from="140" to="660" begin="t9.click" dur="2s" fill="freeze"/>
+<animate xlink:href="#t7head3" attributeName="y" from="45" to="35" begin="t9.click" dur="2s" fill="freeze"/>  
+<animate xlink:href="#t8link" attributeName="x" from="50" to="660" begin="t9.click" dur="2s" fill="freeze"/>
+<animate xlink:href="#t8link" attributeName="y" from="45" to="-170" begin="t9.click" dur="2s" fill="freeze"/> 
+<animate xlink:href="#t8emph2" attributeName="x" from="10" to="810" begin="t9.click" dur="2s" fill="freeze"/>
+<animate xlink:href="#t8emph2" attributeName="y" from="105" to="-410" begin="t9.click" dur="2s" fill="freeze"/> 
+<animate xlink:href="#t4emph2" attributeName="x" from="160" to="810" begin="t9.click" dur="2s" fill="freeze"/>
+<animate xlink:href="#t4emph2" attributeName="y" from="45" to="-390" begin="t9.click" dur="2s" fill="freeze"/> 
+<animate xlink:href="#t8generic" attributeName="x" from="80" to="560" begin="t9.click" dur="2s" fill="freeze"/>
+<animate xlink:href="#t8generic" attributeName="y" from="45" to="-250" begin="t9.click" dur="2s" fill="freeze"/>        
+
+<set xlink:href="#t10" attributeType="CSS" attributeName="display" to="none" begin="t10.click"/>
+<set xlink:href="#t3list" attributeType="CSS" attributeName="display" to="none" begin="t10.click"/>
+<set xlink:href="#t4pre" attributeType="CSS" attributeName="display" to="none" begin="t10.click"/>
+<set xlink:href="#form" attributeType="CSS" attributeName="display" to="none" begin="t10.click"/>
+<set xlink:href="#t9emph" attributeType="CSS" attributeName="display" to="none" begin="t10.click"/>
+<set xlink:href="#t11" attributeType="CSS" attributeName="display" to="block" begin="t10.click"/>          
+<set xlink:href="#t10list" attributeType="CSS" attributeName="display" to="block" begin="t10.click"/> 
+<set xlink:href="#t10pre" attributeType="CSS" attributeName="display" to="block" begin="t10.click"/> 
+<set xlink:href="#t10sect" attributeType="CSS" attributeName="display" to="block" begin="t10.click"/> 
+<set xlink:href="#t10table" attributeType="CSS" attributeName="display" to="block" begin="t10.click"/> 
+<set xlink:href="#t10img" attributeType="CSS" attributeName="display" to="block" begin="t10.click"/> 
+<set xlink:href="#t10emph" attributeType="CSS" attributeName="display" to="block" begin="t10.click"/> 
+
+<animate xlink:href="#t2sect2" attributeName="x" from="40" to="860" begin="t10.click" dur="2s" fill="freeze"/>
+<animate xlink:href="#t2sect2" attributeName="y" from="45" to="-110" begin="t10.click" dur="2s" fill="freeze"/>        
+<animate xlink:href="#t9img2" attributeName="x" from="100" to="560" begin="t10.click" dur="2s" fill="freeze"/>
+<animate xlink:href="#t9img2" attributeName="y" from="45" to="0" begin="t10.click" dur="2s" fill="freeze"/>        
+<animate xlink:href="#t9emph2" attributeName="x" from="60" to="800" begin="t10.click" dur="2s" fill="freeze"/>
+<animate xlink:href="#t9emph2" attributeName="y" from="125" to="-330" begin="t10.click" dur="2s" fill="freeze"/>        
+<animate xlink:href="#t6emph2" attributeName="x" from="140" to="800" begin="t10.click" dur="2s" fill="freeze"/>
+<animate xlink:href="#t6emph2" attributeName="y" from="45" to="-310" begin="t10.click" dur="2s" fill="freeze"/>        
+
+<animate xlink:href="#t8emph3" attributeName="x" from="110" to="850" begin="t10.click" dur="2s" fill="freeze"/>
+<animate xlink:href="#t8emph3" attributeName="y" from="85" to="-310" begin="t10.click" dur="2s" fill="freeze"/>        
+<animate xlink:href="#t6layout2" attributeName="x" from="40" to="640" begin="t10.click" dur="2s" fill="freeze"/>
+<animate xlink:href="#t6layout2" attributeName="y" from="45" to="-180" begin="t10.click" dur="2s" fill="freeze"/> 
+
+
+</defs>
+
+
+
+
+
+
+
+
+
+</g>
+
+</svg>
+ 
+ 

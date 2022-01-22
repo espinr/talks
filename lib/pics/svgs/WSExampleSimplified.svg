@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 150 800 350">
+    <style type="text/css">
+    line.arrow {
+					stroke-width:4 !important; 
+					marker-start:url(#ArrowBegin) !important; 
+					marker-end: url(#ArrowEnd) !important;
+			}
+    line.arrowwsdl {
+			    stroke: blue !important;
+					fill: none;
+					stroke-width:3 !important; 
+					marker-start:url(#ArrowBeginWSDL) !important; 
+					stroke-dasharray:15 10;
+			}
+			path.arrowwsdl {
+			    stroke: none !important;
+					fill: blue !important;
+			}
+			text.c, tspan.c { text-anchor:middle }			
+  </style>
+    <defs>
+        <marker id="ArrowBegin" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="5" orient="auto">
+            <desc>Arrowhead for the beginning of the line (a reversed triangle)</desc>
+            <path class="arrow" d="M 10 0 L 0 5 L 10 10 z"/>
+        </marker>
+        <marker id="ArrowBeginWSDL" viewBox="0 0 10 10" refX="10" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="5" orient="auto">
+            <desc>Arrowhead for the beginning of the line (a reversed triangle)</desc>
+            <path class="arrowwsdl" d="M 10 0 L 0 5 L 10 10 z"/>
+        </marker>
+        <marker id="ArrowEnd" viewBox="0 0 10 10" refX="0" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="5" orient="auto">
+            <desc>Arrowhead for the end of a line (a triangle)</desc>
+            <path class="arrow" d="M 0 0 L 10 5 L 0 10 z"/>
+        </marker>
+        <image id="user" width="150" height="150" xlink:href="../svgClipArt/UserMan.svg"/>
+        <g id="ClientApp">
+            <rect class="yellowish" width="150" height="140"/>
+            <rect class="blueish" width="10" height="30" x="150" y="55"/>
+            <text class="minor c" x="75" y="60">Service
+                <tspan class="minor c" x="75" dy="30">Requestor</tspan>
+            </text>
+            <ellipse class="darkYellowish" style="stroke-width:1" cx="20" cy="130" rx="60" ry="20"/>
+            <text class="centre" style="fill:black" x="20" y="135">Client</text>
+            <ellipse class="darkYellowish" style="stroke-width:1" cx="130" cy="0" rx="60" ry="20"/>
+            <text class="centre" style="fill:black" x="130" y="5">Discovery</text>
+        </g>
+        <g id="TravelWsdl">
+            <rect class="blueish" style="stroke:none" width="70" height="90"/>
+            <text class="whitish c" x="35" y="35">Service
+                <tspan class="whitish c" x="35" dy="20">desc.</tspan>
+            </text>
+            
+        </g>
+        <g id="WSTravel">
+            <rect class="blueish" width="150" height="140"/>
+            <rect class="blueish" width="10" height="30" x="-10" y="55"/>
+            <text class="minor whitish c" x="75" y="60">Service 
+				      <tspan class="minor whitish c" x="75" dy="30">Provider</tspan>
+            </text>
+            <ellipse class="darkBlueish" style="stroke-width:1" cx="130" cy="130" rx="60" ry="20"/>
+            <text class="centre" style="fill:white" x="130" y="135">Service</text>
+        </g>
+    </defs>
+    <use xlink:href="#user" transform="translate(20,300)"/>
+    <g transform="translate(100,0)">
+        <use xlink:href="#ClientApp" transform="translate(100,300)"/>
+        <use xlink:href="#WSTravel" transform="translate(500,300)"/>
+        <line class="arrow" x1="285" y1="370" x2="465" y2="370"/>
+        <text class="minor centre" x="375" y="410">Interaction</text>
+        <use xlink:href="#TravelWsdl" transform="translate(350,200)"/>
+        <line class="arrowwsdl" x1="310" y1="293" x2="340" y2="280"/>
+        <line class="arrowwsdl" x1="475" y1="310" x2="430" y2="280"/>
+        <text class="minor centre" x="385" y="180">Publish</text>
+    </g>
+</svg>

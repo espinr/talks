@@ -1,0 +1,162 @@
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg viewBox="0 0 600 500" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<style type="text/css">
+<![CDATA[
+rect   { fill: white; stroke: black;
+         stroke-width: 1
+}
+circle { fill: red; stroke: black;
+         stroke-width: 1
+}
+path   { fill: white; stroke: black;
+         stroke-width: 1
+}
+text {font-family:Arial;font-size:14}
+]]>
+
+</style>
+
+  <defs>
+    <g id="terminal">
+      <g id="monitorStand" transform="translate(40,100)">
+        <rect width="80" height="20" x="0" y="0" />
+        <path d="m0,0 S 10 10 40 12" />
+        <path d="m80,0 S 70 10 40 12" />
+        <path d="m0,20 L 10 10 S 40 12 70 10 L 80 20z" />
+      </g>
+
+      <g id="monitor" transform="translate(0 -20)">
+        <rect width="160" height="120" />
+        <rect width="138" height="95" x="11" y="12" />
+      </g>
+
+      <g id="processor" transform="translate(0 120)">
+        <rect width="160" height="60" />
+
+        <g id="discDrive" transform="translate(70,10)">
+          <rect class="disc" width="58" height="3" x="12" y="8" />
+          <rect class="light" width="8" height="2" x="12" y="15" />
+        </g>
+
+        <circle cx="135" cy="40" r="5" />
+      </g>
+    </g>
+
+    <symbol id="microphone">
+      <g>
+        <rect width="15" height="30" style="fill:red" />
+
+        <path d="M0,0 C-6,-25 21,-25 15,0"
+        style="fill:white;stroke:black" />
+
+        <path d="M8,30 C4,25 3,58 -10,50"
+        style="fill:none;stroke:black" />
+      </g>
+    </symbol>
+
+    <symbol id="speakers">
+      <g>
+        <rect width="20" height="20" style="fill:lavender" />
+
+        <rect x="50" width="20" height="20"
+        style="fill:oldlace" />
+
+        <line x1="20" y1="10" x2="50" y2="10"
+        style="stroke-weight:4;stroke:black" />
+      </g>
+    </symbol>
+
+    <symbol id="text">
+      <g>
+        <rect width="50" height="60" style="fill:white" />
+
+        <text style="font-size:6">
+          <tspan x="5" dy="10">Some text</tspan>
+
+          <tspan x="5" dy="10">and some</tspan>
+
+          <tspan x="5" dy="10">more text</tspan>
+
+          <tspan x="5" dy="10">and even more</tspan>
+
+          <tspan x="5" dy="10">of this text</tspan>
+        </text>
+      </g>
+    </symbol>
+
+    <symbol id="image">
+      <g>
+        <image width="95" height="58"
+        xlink:href="../jpgs/prtapic.gif" />
+      </g>
+    </symbol>
+  </defs>
+
+  <g transform="translate(20,280)">
+    <use xlink:href="#terminal" />
+
+    <text x="40" y="30" style="fill:blue;font-size:24">
+    Private</text>
+    <text x="40" y="60" style="fill:blue;font-size:24">
+    Format</text>
+
+    <rect x="0" y="-260" width="180" height="180"
+    style="fill:lemonchiffon;stroke:blue" />
+
+    <g transform="translate(30,-140)">
+      <use xlink:href="#microphone" />
+    </g>
+
+    <g transform="translate(60,-140)">
+      <use xlink:href="#speakers" />
+    </g>
+
+    <g transform="translate(110,-240)">
+      <use xlink:href="#text" />
+    </g>
+
+    <g transform="translate(4,-240)">
+      <use xlink:href="#image" />
+    </g>
+
+    <line x1="90" y1="-80" x2="90" y2="-20"
+    style="fill:red;stroke:red;stroke-width:4" />
+  </g>
+
+  <g transform="translate(320,280)">
+    <use xlink:href="#terminal" />
+
+    <text x="50" y="50" style="fill:blue;font-size:24">
+    SMIL</text>
+
+    <g transform="translate(-20,-100)">
+      <use xlink:href="#microphone" />
+    </g>
+
+    <g transform="translate(180,-100)">
+      <use xlink:href="#speakers" />
+    </g>
+
+    <g transform="translate(130,-200)">
+      <use xlink:href="#text" />
+    </g>
+
+    <g transform="translate(20,-200)">
+      <use xlink:href="#image" />
+    </g>
+
+    <line x1="-10" y1="-65" x2="20" y2="-20"
+    style="fill:red;stroke:red;stroke-width:4" />
+
+    <line x1="40" y1="-140" x2="50" y2="-20"
+    style="fill:red;stroke:red;stroke-width:4" />
+
+    <line x1="150" y1="-130" x2="80" y2="-20"
+    style="fill:red;stroke:red;stroke-width:4" />
+
+    <line x1="210" y1="-75" x2="110" y2="-20"
+    style="fill:red;stroke:red;stroke-width:4" />
+  </g>
+</svg>
+

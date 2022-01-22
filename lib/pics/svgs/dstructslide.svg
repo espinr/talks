@@ -1,0 +1,68 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 850 576">
+  <title>Usage of Styling</title>
+	<desc>There is a box with pure content, a representation of an xml tree for structure and
+	a box with styled text. As a result of animation control click a set of arrow connect the former two
+	with the latter</desc>
+  <rect width="850" height="576" class="background" />
+  <defs>
+    <animate xlink:href="#XSL" attributeType="CSS" attributeName="opacity" from="0"
+    to="1" dur="1s" restart="never" fill="freeze" begin="c_anim.click" />
+  </defs>
+  <circle cx="830" cy="20" r="10" class="animationControl" id="c_anim" />
+	<!-- Animation ends -->
+	
+  <g transform="scale(0.9) translate(0,-110)">
+    <g transform="translate(10,110)">
+      <g transform="translate(20,20)">
+    	  <desc>Pure Content</desc>
+        <rect class="empty" width="350" height="100" />
+        <text x="10" y="20" class="whitish">A Thought: All those things for</text>
+        <text x="10" y="45" class="whitish">which we have no words are</text>
+        <text x="10" y="70" class="whitish">lost - Annie Dillard</text>
+      </g>
+      <text x="40" y="170" class="onBackground">Content</text>
+
+      <g transform="translate(450,20)">
+			  <desc>Tree structure</desc>
+        <g transform="scale(2.0)">
+          <rect class="yellowish" x="50" y="10" width="20" height="20" />
+          <rect class="yellowish" x="10" y="80" width="20" height="20" />
+          <rect class="yellowish" x="50" y="80" width="20" height="20" />
+          <rect class="yellowish" x="90" y="80" width="20" height="20" />
+          <line class="yellowish" x1="58" y1="30" x2="20" y2="80" />
+          <line class="yellowish" x1="60" y1="30" x2="60" y2="80" />
+          <line class="yellowish" x1="62" y1="30" x2="100" y2="80" />
+        </g>
+        <text x="180" y="110" class="onBackground">XML Structure</text>
+      </g>
+
+      <g id="XSL" style="visibility:visible; opacity:0">
+			  <desc>Lines with a formatter box. This group is switched on interactively</desc>
+        <line x1="230" y1="120" x2="230" y2="240" />
+        <line x1="580" y1="220" x2="580" y2="240" />
+        <line x1="230" y1="240" x2="580" y2="240" />
+        <line x1="340" y1="240" x2="340" y2="280" />
+        <g transform="translate(210,280)">
+          <rect class="yellowish" width="260" height="40" />
+          <text x="10" y="34" class="major">Formatter: XSL</text>
+        </g>
+        <line x1="340" y1="320" x2="340" y2="400" />
+      </g>
+
+      <g transform="translate(200,400)">
+				<desc>Styled text</desc>
+        <rect class="yellowish" width="280" height="200" />
+        <text x="140" y="40" class="minor" style="text-anchor:middle">A Thought</text>
+        <text x="10" y="75" class="greenish">All those things for which</text>
+        <text x="10" y="95" class="greenish">we have no words are lost</text>
+        <text x="140" y="140" class="centre reddish"
+        style="font-size:24; font-style:italic">Annie Dillard</text>
+      </g>
+      <text x="500" y="500" class="onBackground">Presentation</text>
+    </g>
+  </g>
+</svg>
+

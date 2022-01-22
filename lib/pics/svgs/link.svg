@@ -1,0 +1,166 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg viewBox="0 0 600 550"  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Example for extended link usage</title>
+	<desc>An example for a link table; the slide includes example code, too</desc>
+
+  <g transform="scale(0.8)">
+    <g transform="translate(200,10)">
+		  <desc>Link table example: a group of nodes representing 
+			student records, a group representing courses, marks, and advisors. Links
+			are set up from the student records to courses and to advisors, and from mark
+			to students.</desc>
+      <rect class="empty" width="500" height="370" />
+			
+			<g>
+			  <desc>Three student records</desc>
+        <g transform="translate(10,10)">
+          <rect class="yellowish" width="80" height="60" />
+          <text x="10" y="20" class="pinkish" style="font-size:16">Christie</text>
+          <text x="10" y="40" class="pinkish" style="font-size:16">SR1001</text>
+        </g>
+  
+        <g transform="translate(30,60)">
+          <rect class="yellowish" width="80" height="60" />
+          <text x="10" y="20" class="pinkish" style="font-size:16">Upfield</text>
+          <text x="10" y="40" class="pinkish" style="font-size:16">SR1002</text>
+        </g>
+  
+        <g transform="translate(50,110)">
+          <rect class="yellowish" width="80" height="60" />
+          <text x="10" y="20" class="pinkish">Barr</text>
+          <text x="10" y="40" class="pinkish" style="font-size:16">SR1003</text>
+        </g>
+			</g>
+
+			<g>
+			  <desc>Course records</desc>
+        <g transform="translate(300,10)">
+          <rect class="yellowish" width="90" height="60" />
+          <text x="10" y="20" class="reddish" style="font-size:16">Course</text>
+          <text x="10" y="40" class="reddish" style="font-size:16">CS5010A</text>
+        </g>
+  
+        <g transform="translate(320,60)">
+          <rect class="yellowish" width="90" height="60" />
+          <text x="10" y="20" class="reddish" style="font-size:16">Course</text>
+          <text x="10" y="40" class="reddish" style="font-size:16">CS5011A</text>
+        </g>
+  
+        <g transform="translate(340,110)">
+          <rect class="yellowish" width="90" height="60" />
+          <text x="10" y="20" class="reddish" style="font-size:16">Course</text>
+          <text x="10" y="40" class="reddish" style="font-size:16">CS5012A</text>
+        </g>
+			</g>
+			<g>
+			  <desc>Advisor nodes</desc>
+        <g transform="translate(300,200)">
+          <rect class="yellowish" width="90" height="60" />
+          <text x="10" y="20" class="darkBlueish" style="font-size:16">Advisor</text>
+          <text x="10" y="40" class="darkBlueish" style="font-size:16">Smith</text>
+        </g>
+  
+        <g transform="translate(320,250)">
+          <rect class="yellowish" width="90" height="60" />
+          <text x="10" y="20" class="darkBlueish" style="font-size:16">Advisor</text>
+          <text x="10" y="40" class="darkBlueish" style="font-size:16">Jones</text>
+        </g>
+  
+        <g transform="translate(340,300)">
+          <rect class="yellowish" width="90" height="60" />
+          <text x="10" y="20" class="darkBlueish" style="font-size:16">Advisor</text>
+          <text x="10" y="40" class="darkBlueish" style="font-size:16">Davies</text>
+        </g>
+			</g>
+
+      <g transform="translate(20,250)">
+			  <desc>A separate node on marks</desc>
+        <rect class="yellowish" width="90" height="60" />
+        <text x="20" y="35" class="pinkish2" style="font-size:16">Marks</text>
+      </g>
+
+			<g>
+			  <desc>A set of arrows connecting the student node 'Barr' to
+				two courses and to advisor 'Smith', plus an arrow from marks to the
+				student box 'Barr'</desc>
+				
+        <line x1="130" y1="130" x2="320" y2="90" />
+        <g transform="translate(320,90)">
+          <g transform="rotate(-10)">
+            <line x1="0" y1="0" x2="-10" y2="-10" />
+            <line x1="0" y1="0" x2="-10" y2="10" />
+          </g>
+        </g>
+
+        <line x1="130" y1="140" x2="340" y2="140" />
+        <g transform="translate(340,140)">
+          <g transform="rotate(0)">
+            <line x1="0" y1="0" x2="-10" y2="-10" />
+  
+            <line x1="0" y1="0" x2="-10" y2="10" />
+          </g>
+        </g>
+
+        <line x1="130" y1="150" x2="300" y2="220" />
+        <g transform="translate(300,220)">
+          <g transform="rotate(20)">
+            <line x1="0" y1="0" x2="-10" y2="-10" />
+  
+            <line x1="0" y1="0" x2="-10" y2="10" />
+          </g>
+        </g>
+
+        <line x1="65" y1="250" x2="90" y2="170" />
+        <g transform="translate(90,170)">
+          <g transform="rotate(-80)">
+            <line x1="0" y1="0" x2="-10" y2="-10" />
+  
+            <line x1="0" y1="0" x2="-10" y2="10" />
+          </g>
+				</g>
+      </g>
+    </g>
+    <g transform="scale(0.8)">
+		  <desc>Example XML code for what is shown on the figure</desc>
+      <g transform="translate(10,500)">
+        <rect class="empty" width="640" height="300" />
+        <text x="10" y="24" class="whitish">&lt;workplan
+        xlink:title="Nevada Barr's workplan"&gt;</text>
+
+        <text x="30" y="54" class="whitish">&lt;relation
+        xlink:from = "student" xlink:to = "course"/&gt;</text>
+
+        <text x="30" y="84" class="whitish">&lt;relation
+        xlink:from = "student" xlink:to = "advisor"/&gt;</text>
+
+        <text x="30" y="114" class="whitish">&lt;relation
+        xlink:from = "marks" xlink:to = "student"/&gt;</text>
+
+        <text x="30" y="144" class="whitish">&lt;student
+        xlink:href = "http://brunel.ac.uk/sr1003.xml"
+        /&gt;</text>
+
+        <text x="30" y="174" class="whitish">&lt;course
+        xlink:href = "http://brunel.ac.uk/cs5011A.xml"
+        /&gt;</text>
+
+        <text x="30" y="204" class="whitish">&lt;course
+        xlink:href = "http://brunel.ac.uk/cs5012A.xml"
+        /&gt;</text>
+
+        <text x="30" y="234" class="whitish">&lt;advisor
+        xlink:href = "http://brunel.ac.uk/advisor/smith.xml"
+        /&gt;</text>
+
+        <text x="30" y="264" class="whitish">&lt;marks xlink:href
+        = "marks.html" /&gt;</text>
+
+        <text x="10" y="294" class="whitish">
+        &lt;/workplan&gt;</text>
+      </g>
+    </g>
+  </g>
+</svg>
+

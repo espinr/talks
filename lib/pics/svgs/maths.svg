@@ -1,0 +1,119 @@
+<?xml version="1.0" standalone="no"?>
+<!-- Generator: Mayura Draw 3.6 -->
+<svg xml:space="preserve" viewBox="0 0 580 421">
+  <desc>A small animated image for the definition of an integral: a coarse and a somewhat finer approximation of the
+  area below the curve is shown, then the area itself. A set of animation object makes the transition of the
+  approximations toward the final integral value</desc>
+  <style type="text/css"><![CDATA[
+		text             {font-family:Arial;
+		                  font-size:24;
+		                  font-style:italic }
+		path.curve       {stroke:#000000;
+		                  stroke-width:1;
+		                  fill:none; }
+		path.closedCurve {stroke:none;
+		                  stroke-width:1;
+		                  fill:gold;}
+		rect.st1         {stroke:black;
+		                  stroke-width:1;
+		                  fill: yellowgreen} 
+		rect.st0         {stroke:black;
+		                  stroke-width:1;
+		                  fill: turquoise}
+		path.st0         {stroke:black;
+		                  stroke-width:1;
+		                  fill: black}
+		
+	]]></style>
+  <defs>
+    <animate id="firstOut" fill="freeze" attributeName="opacity" from="1" to="0" begin="coordinates.click" dur="3s" xlink:href="#first"/>
+    <set fill="freeze" attributeName="opacity" from="1" to="0" begin="firstOut.begin" xlink:href="#integral"/>
+    <animate id="secondIn" fill="freeze" attributeName="opacity" from="0" to="1" begin="firstOut.begin" dur="3s" xlink:href="#second"/>
+    <animate id="secondOut" fill="freeze" attributeName="opacity" from="1" to="0" begin="secondIn.end+3s" dur="3s" xlink:href="#second"/>
+    <animate id="thirdIn" fill="freeze" attributeName="opacity" from="0" to="1" begin="secondOut.begin" dur="3s" xlink:href="#integral"/>
+  </defs>
+  <g id="coordinates">
+    <desc>The Coordinate axes, with the label for x and y, and a label on the curve for f(x)</desc>
+    <path class="st0" d="M25 36 l0 375"/>
+    <path style="stroke:none;fill:#000000" d="M25 36 l0.5 0 2.5 9 -6 0 2.5 -9 z"/>
+    <path class="st0" d="M10 396 l525 0 "/>
+    <path style="stroke:none;fill:#000000" d="M535 396 l0 0.5 -9 2.5 0 -6 9 2.5 z"/>
+    <text transform="matrix(1 0 0 1 -41 52.44)">
+      <tspan x="582" y="350.28">x</tspan>
+    </text>
+    <text transform="matrix(1 0 0 1 -38 -691.6)">
+      <tspan x="57" y="722.28">y</tspan>
+    </text>
+    <text transform="matrix(1 0 0 1 7 -451.6)">
+      <tspan x="237" y="596.28">f(x)</tspan>
+    </text>
+  </g>
+  <g id="first" opacity="1">
+    <desc>A rough approximation of the integral with a set of rectangles</desc>
+    <rect class="st1" transform="matrix(1 0 0 -1 -35 771)" x="120" y="375" width="30" height="234"/>
+    <rect class="st1" transform="matrix(1 0 0 -1 -35 771)" x="150" y="375" width="30" height="240"/>
+    <rect class="st1" transform="matrix(1 0 0 -1 -35 771)" x="180" y="375" width="30" height="231"/>
+    <rect class="st1" transform="matrix(1 0 0 -1 -35 771)" x="210" y="375" width="30" height="198"/>
+    <rect class="st1" transform="matrix(1 0 0 -1 -35 771)" x="240" y="375" width="30" height="210"/>
+    <rect class="st1" transform="matrix(1 0 0 -1 -35 771)" x="270" y="375" width="30" height="225"/>
+    <rect class="st1" transform="matrix(1 0 0 -1 -35 771)" x="300" y="375" width="30" height="222"/>
+    <rect class="st1" transform="matrix(1 0 0 -1 -35 771)" x="330" y="375" width="30" height="240"/>
+    <rect class="st1" transform="matrix(1 0 0 -1 -35 771)" x="360" y="375" width="30" height="297"/>
+    <rect class="st1" transform="matrix(1 0 0 -1 -35 771)" x="390" y="375" width="30" height="306"/>
+    <rect class="st1" transform="matrix(1 0 0 -1 -35 771)" x="420" y="375" width="30" height="291"/>
+    <rect class="st1" transform="matrix(1 0 0 -1 -35 771)" x="450" y="375" width="30" height="270"/>
+    <rect class="st1" transform="matrix(1 0 0 -1 -35 771)" x="480" y="375" width="30" height="201"/>
+    <rect class="st1" transform="matrix(1 0 0 -1 -35 771)" x="510" y="375" width="27" height="210"/>
+  </g>
+  <g id="second" opacity="0">
+    <desc>A finer approximation of the integral with a set of rectangles</desc>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="120" y="375" width="15" height="225"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="135" y="375" width="15" height="234"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="150" y="375" width="15" height="243"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="165" y="375" width="15" height="240"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="180" y="375" width="15" height="234"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="195" y="375" width="15" height="222"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="210" y="375" width="15" height="201"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="225" y="375" width="15" height="195"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="240" y="375" width="15" height="204"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="255" y="375" width="15" height="213"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="270" y="375" width="15" height="222"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="285" y="375" width="15" height="225"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="300" y="375" width="15" height="219"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="315" y="375" width="15" height="222"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="330" y="375" width="15" height="234"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="345" y="375" width="15" height="261"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="360" y="375" width="15" height="294"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="375" y="375" width="15" height="303"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="390" y="375" width="15" height="309"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="405" y="375" width="15" height="306"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="420" y="375" width="15" height="297"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="435" y="375" width="15" height="288"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="450" y="375" width="15" height="267"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="465" y="375" width="15" height="249"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="480" y="375" width="15" height="195"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="495" y="375" width="15" height="186"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="510" y="375" width="15" height="195"/>
+    <rect class="st0" transform="matrix(1 0 0 -1 -35 771)" x="525" y="375" width="12" height="207"/>
+  </g>
+  <g>
+    <desc>The function curve itself</desc>
+    <path class="curve" d="M85 174 c16.963 -9.35 24.463 -16.1 30 -18 3.367 -1.155 11.182 -3.351 15 -3 8.064 0.74 23.646 7.012 30 12
+                         5.075 3.984 10.706 16.706 15 21 4.294 4.294 12.73 14.745 21 15 9.07 0.28 18.361 -11.837 24 -15
+                         6.683 -3.748 21.437 -13.853 30 -15 7.811 -1.046 21.424 8.597 30 6 11.893 -3.601 24.527 -21.352 30 -30
+                         5.753 -9.091 6.447 -33.121 15 -42 9.295 -9.65 30.969 -19.461 45 -18 15.657 1.63 36.019 20.499 45 30
+                         9.826 10.395 24.346 38.566 30 51 4.532 9.968 0.189 40.105 15 45 6.966 2.302 13.222 -0.73 22.788 -11.909
+                         2.21 -2.583 34.212 -33.091 19.212 -18.091"/>
+  </g>
+  <g>
+    <desc>The close area under the curve, ie, the integral value</desc>
+    <path id="integral" opacity="0" class="closedCurve" d="M85 396
+                               L85 174 c16.963 -9.35 24.463 -16.1 30 -18 3.367 -1.155 11.182 -3.351 15 -3 8.064 0.74 23.646 7.012 30 12
+                               5.075 3.984 10.706 16.706 15 21 4.294 4.294 12.73 14.745 21 15 9.07 0.28 18.361 -11.837 24 -15
+                               6.683 -3.748 21.437 -13.853 30 -15 7.811 -1.046 21.424 8.597 30 6 11.893 -3.601 24.527 -21.352 30 -30
+                               5.753 -9.091 6.447 -33.121 15 -42 9.295 -9.65 30.969 -19.461 45 -18 15.657 1.63 36.019 20.499 45 30
+                               9.826 10.395 24.346 38.566 30 51 4.532 9.968 0.189 40.105 15 45 6.966 2.302 13.222 -0.73 22.788 -11.909
+                               2.21 -2.583 34.212 -33.091 19.212 -18.091 l0 213 z
+                              "/>
+  </g>
+</svg>

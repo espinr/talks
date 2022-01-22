@@ -1,0 +1,176 @@
+<?xml version="1.0" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg viewBox="0 0 922 576">
+  <title>Example for XPointer/XPath usage</title>
+	<desc>The slide has a an example (XML) tree on the left with a set of node surrounded by an ellipse
+	which should be target of an xpointer statement. The slide contains textual version of the 
+	same example.
+	</desc>
+  <rect width="922" height="576" class="background" />
+
+  <g transform="scale(0.9) translate(0,-100)">
+    <g transform="translate(10,100)">
+		  <g>
+			  <desc>Graphical representation of a tree
+				root with four children (cd), third cd has title three children
+				(artist, title, playlist) the last one contains three 
+				work children which are the target of the selection.
+				</desc>
+        <ellipse class="emptyGray"  cx="450" cy="510" rx="280" ry="80" />
+        <g transform="translate(200,20)">
+          <text class="recOnBackground">root</text>
+          <line y1="5" y2="50" />
+        </g>
+  
+        <g transform="translate(200,90)">
+          <text class="recOnBackground">cdlist</text>
+          <line y1="5" y2="50" />
+        </g>
+  
+        <line x1="50" y1="140" x2="350" y2="140" />
+        <line x1="50" y1="140" x2="50" y2="170" />
+        <line x1="150" y1="140" x2="150" y2="170" />
+        <line x1="250" y1="140" x2="250" y2="170" />
+        <line x1="350" y1="140" x2="350" y2="170" />
+  
+        <g transform="translate(50,190)">
+          <text class="recOnBackground">cd</text>
+          <line y1="5" y2="50" />
+        </g>
+  
+        <g transform="translate(150,190)">
+          <text class="recOnBackground">cd</text>
+          <line y1="5" y2="50" />
+        </g>
+  
+        <g transform="translate(250,190)">
+          <text class="recOnBackground">cd</text>
+          <line y1="5" y2="90" />
+        </g>
+  
+        <g transform="translate(350,190)">
+          <text class="recOnBackground">cd</text>
+          <line y1="5" y2="50" />
+        </g>
+  
+        <line x1="50" y1="280" x2="450" y2="280" />
+        <line x1="50" y1="280" x2="50" y2="310" />
+        <line x1="250" y1="280" x2="250" y2="310" />
+        <line x1="450" y1="280" x2="450" y2="310" />
+        <g transform="translate(50,330)">
+          <text class="recOnBackground">artist</text>
+          <line y1="5" y2="50" />
+        </g>
+  
+        <g transform="translate(50,400)">
+          <text class="recOnBackground">Billie Holiday</text>
+        </g>
+  
+        <g transform="translate(250,330)">
+          <text class="recOnBackground">title</text>
+          <line y1="5" y2="50" />
+        </g>
+  
+        <g transform="translate(250,400)">
+          <text class="recOnBackground">Greatest Hits</text>
+        </g>
+  
+        <g transform="translate(450,330)">
+          <text class="recOnBackground">playlist</text>
+          <line y1="5" y2="90" />
+        </g>
+  
+        <line x1="250" y1="420" x2="650" y2="420" />
+        <line x1="250" y1="420" x2="250" y2="450" />
+        <line x1="450" y1="420" x2="450" y2="450" />
+        <line x1="650" y1="420" x2="650" y2="450" />
+  			
+        <g transform="translate(250,470)">
+          <text class="recOnBackground">work</text>
+          <line y1="5" y2="50" />
+        </g>
+  
+        <g transform="translate(450,470)">
+          <text class="recOnBackground">work</text>
+          <line y1="5" y2="50" />
+        </g>
+  
+        <g transform="translate(650,470)">
+          <text class="recOnBackground">work</text>
+          <line y1="5" y2="50" />
+        </g>
+  
+        <g transform="translate(250,540)">
+          <text class="recOnBackground">Sweet Lorraine</text>
+        </g>
+  
+        <g transform="translate(450,540)">
+          <text class="recOnBackground">Mandy is Two</text>
+        </g>
+  
+        <g transform="translate(650,540)">
+          <text class="recOnBackground">Strange Fruit</text>
+        </g>
+      </g>
+			
+			<g>
+			  <desc>Textual version of the xpath statements</desc>
+        <text class="onBackgroundMinor" x="290" y="40">Location Path:</text>
+        <rect x="465" y="10" width="430" height="40" class="empty" />
+        <text class="onBackgroundMinor" x="470" y="40">/cdlist/cd[position()=3] /playlist/work</text>
+				<g>
+				  <desc>The xpath expression in words</desc>
+          <text class="onBackgroundMinor" x="315" y="80">Selects the work element children of the playlist nodes</text>
+          <text class="onBackgroundMinor" x="315" y="110">of the 3rd cd in the cdlist</text>
+				</g>
+			</g>
+
+      <g transform="translate(730,90)">
+			  <desc>A specific example for the target of xpointer with a label 'XPointer'
+				</desc>
+        <rect x="-10" width="280" height="380" />
+        <text y="30">- - -</text>
+        <text y="60">- - -</text>
+        <text class="greenish"  y="90">Billie Holiday</text>
+        <text class="greenish" y="120">Greatest Hits</text>
+        <text x="10" style="color:red" y="150">Playlist</text>
+        <text y="180">Sweet Lorraine</text>
+        <text y="210">Mandy is Two</text>
+        <text y="240">Stange Fruit</text>
+        <text class="darkBlueish" y="280">Sarah Vaughan</text>
+        <text class="greenish" y="310">Sarah Vaughan with - - -</text>
+        <text y="340">- - -</text>
+        <text y="370">- - -</text>
+        <text class="major reddish"  x="880" y="325"> XPointer</text>
+      </g>
+      <rect class="yellowish" style="opacity:0.4" x="725" y="250" width="240" height="90"  />
+
+
+      <g>
+			  <desc>
+				  The caller for the link, labeled by 'XLink'
+				</desc>  			
+        <text class="onBackground" x="500" y="180">XLink</text>
+        <g transform="translate(500,190)">
+          <rect x="-10" width="170" height="100" />
+          <text y="20">Some of Billie's</text>
+          <text class="reddish" style="text-decoration:underline" y="40">greatest hits</text>
+          <text y="60">can be found</text>
+          <text y="80">on the CD .....</text>
+        </g>
+			</g>
+
+			<g>
+			  <desc>An arrow connecting the xlink to the xpointer example above</desc>
+        <line class="arrow" x1="600" y1="220" x2="710" y2="290" />
+        <g transform="translate(710,290)">
+          <g transform="rotate(40)">
+            <path class="arrow" d="M0,0l-10-10v20z" />
+          </g>
+        </g>
+			</g>
+    </g>
+  </g>
+</svg>
+

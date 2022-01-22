@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-2 -2 1000 520">
+  <title>CC/PP client profile example</title>
+  <desc>A detailed RDF graph picture of the UProf example from the CC/PP document</desc>
+  <defs>
+    <path id="arrowhead" class="yellowish" d="M0 0 L -10 10 L -10 -10 z"/>
+	  <g id="arrow">
+	    <line x1="0" y1="0" x2="330" y2="0" class="yellowish" style="stroke-width:3"/>
+	    <use xlink:href="#arrowhead" x="330" y="0"/>
+	  </g>
+
+	  <g id="component">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="darkBlueish" style="text-anchor:end" x="300" y="-10">ccpp:component</text>
+	  </g> 
+
+	  <g id="rdfType">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="darkBlueish" style="text-anchor:end" x="300" y="-10">rdf:type</text>
+	  </g> 
+	  <g id="display">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="yellowish" style="text-anchor:end" x="300" y="-10">display</text>
+	  </g> 
+	  <g id="name">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="yellowish" style="text-anchor:end" x="300" y="-10">name</text>
+	  </g> 
+	  <g id="version">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="yellowish" style="text-anchor:end" x="300" y="-10">version</text>
+	  </g> 
+	  <g id="vendor">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="yellowish" style="text-anchor:end" x="300" y="-10">vendor</text>
+	  </g> 
+	  <g id="htmlVersion">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="yellowish" style="text-anchor:end" x="300" y="-10">htmlVersionSupported</text>
+	  </g> 
+	  <g id="rBag">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="darkBlueish" style="text-anchor:end" x="300" y="-10">rdf:Bag</text>
+	  </g> 
+	  <g id="r_1">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="darkBlueish" style="text-anchor:end" x="300" y="-10">_1</text>
+	  </g> 
+	  <g id="r_2">
+	    <use xlink:href="#arrow" x="0" y="0"/>
+	    <text class="darkBlueish" style="text-anchor:end" x="300" y="-10">_2</text>
+	  </g> 
+
+
+
+	 <!-- ============================================================================ -->
+    <g id="resource">
+      <ellipse class="lightGreenish" style="stroke:none" cx="0" cy="0" rx="130" ry="20"/>
+    </g>
+    <g id="literal">
+      <rect class="lightGreenish" style="stroke:none" x="-130" y="-20" width="260" height="40"/>
+    </g>
+    <g id="My" transform="translate(130,20)">
+      <use xlink:href="#resource"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">Client Profile</text>
+    </g>
+    <!-- ============================================================================ -->
+    <g id="R_TH" transform="translate(130,20)">
+      <use xlink:href="#resource"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">Terminal Hardware</text>
+    </g>
+    <g id="R_TS" transform="translate(130,20)">
+      <use xlink:href="#resource"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">Terminal Software</text>
+    </g>
+    <g id="R_TB" transform="translate(130,20)">
+      <use xlink:href="#resource"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">Terminal Browser</text>
+    </g>
+    <!-- ============================================================================ -->
+    <g id="R_HP" transform="translate(130,20)">
+      <use xlink:href="#resource"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">Hardware Platform</text>
+    </g>
+    <g id="L_320" transform="translate(130,20)">
+      <use xlink:href="#literal"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">320x200</text>
+    </g>
+    <g id="R_SP" transform="translate(130,20)">
+      <use xlink:href="#resource"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">Software Platform</text>
+    </g>
+    <g id="L_Epoc" transform="translate(130,20)">
+      <use xlink:href="#literal"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">EPOC</text>
+    </g>
+    <g id="L_20" transform="translate(130,20)">
+      <use xlink:href="#literal"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">2.0</text>
+    </g>
+    <g id="L_Symbian" transform="translate(130,20)">
+      <use xlink:href="#literal"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">Symbian</text>
+    </g>
+    <g id="R_Browser" transform="translate(130,20)">
+      <use xlink:href="#resource"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">BrowserUA</text>
+    </g>
+    <g id="L_Mozilla" transform="translate(130,20)">
+      <use xlink:href="#literal"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">Opera</text>
+    </g>
+    <g id="L_50" transform="translate(130,20)">
+      <use xlink:href="#literal"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">5.0</text>
+    </g>
+
+	 <!-- ========================================================================== -->
+    <g id="R_Bag" transform="translate(130,20)">
+      <use xlink:href="#resource"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">RDF:Bag</text>
+    </g>
+    <g id="L_30" transform="translate(130,20)">
+      <use xlink:href="#literal"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">3.0</text>
+    </g>
+    <g id="L_40" transform="translate(130,20)">
+      <use xlink:href="#literal"/>
+      <text class="reddish" style="text-anchor:middle" x="0" y="5">4.0</text>
+    </g>
+
+  </defs>
+  <g transform="scale(0.6)">
+    <use xlink:href="#My" transform="translate(0,0)"/>
+    <use xlink:href="#component" transform="translate(130,60)"/>
+    <use xlink:href="#component" transform="translate(130,210)"/>
+    <use xlink:href="#component" transform="translate(130,460)"/>
+	  <line x1="130" y1="40" x2="130" y2="460" class="yellowish" style="stroke-width:3"/>
+    <g transform="translate(460,40)">
+      <use xlink:href="#R_TH"/>
+      <use xlink:href="#rdfType" transform="translate(130,60)"/>
+      <use xlink:href="#display" transform="translate(130,110)"/>
+	    <line x1="130" y1="40" x2="130" y2="110" class="yellowish" style="stroke-width:3"/>
+
+      <use xlink:href="#R_TS" transform="translate(0,150)" />
+      <use xlink:href="#rdfType" transform="translate(130,210)"/>
+      <use xlink:href="#name" transform="translate(130,260)"/>
+      <use xlink:href="#version" transform="translate(130,310)"/>
+      <use xlink:href="#vendor" transform="translate(130,360)"/>
+	    <line x1="130" y1="190" x2="130" y2="360" class="yellowish" style="stroke-width:3"/>
+
+
+      <use xlink:href="#R_TB" transform="translate(0,400)"/>
+      <use xlink:href="#rdfType" transform="translate(130,460)"/>
+      <use xlink:href="#name" transform="translate(130,510)"/>
+      <use xlink:href="#version" transform="translate(130,560)"/>
+      <use xlink:href="#vendor" transform="translate(130,610)"/>
+      <use xlink:href="#htmlVersion" transform="translate(130,660)"/>
+	    <line x1="130" y1="440" x2="130" y2="660" class="yellowish" style="stroke-width:3"/>
+    </g>
+    <g transform="translate(920,80)">
+      <use xlink:href="#R_HP" transform="translate(0,0)" />
+      <use xlink:href="#L_320" transform="translate(0,50)" />
+      <use xlink:href="#R_SP" transform="translate(0,150)" />
+      <use xlink:href="#L_Epoc" transform="translate(0,200)" />
+      <use xlink:href="#L_20" transform="translate(0,250)" />
+      <use xlink:href="#L_Symbian" transform="translate(0,300)" />
+      <use xlink:href="#R_Browser" transform="translate(0,400)" />
+      <use xlink:href="#L_Mozilla" transform="translate(0,450)" />
+      <use xlink:href="#L_50" transform="translate(0,500)" />
+      <use xlink:href="#L_Symbian" transform="translate(0,550)" />
+      <use xlink:href="#resource" transform="translate(0,600) translate(130,20)" />
+      <use xlink:href="#rBag" transform="translate(130,660)"/>
+      <use xlink:href="#r_1" transform="translate(130,710)"/>
+      <use xlink:href="#r_2" transform="translate(130,760)"/>
+	    <line x1="130" y1="640" x2="130" y2="760" class="yellowish" style="stroke-width:3"/>
+      
+    </g>
+    <g transform="translate(1380,160)">
+      <use xlink:href="#R_Bag" transform="translate(0,550)" />
+      <use xlink:href="#L_30" transform="translate(0,600)" />
+      <use xlink:href="#L_50" transform="translate(0,650)" />
+    </g>
+  </g>
+</svg>

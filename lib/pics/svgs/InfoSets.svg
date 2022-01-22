@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 768">
+  <title>XML Infosets</title>
+  <desc>
+    The slide shows the various XML Infoset entries, with the corresponding properties.
+  </desc>
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:axsvg="http://www.w3.org/2001/svgRdf/axsvg-schema.rdf#">
+      <rdf:Description rdf:ID="FullSlide">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#Document"/>
+            <rdf:li rdf:resource="#Element"/>
+            <rdf:li rdf:resource="#Attribute"/>
+            <rdf:li rdf:resource="#ProcessingInstruction"/>
+            <rdf:li rdf:resource="#UnexpandedEntity"/>
+            <rdf:li rdf:resource="#Character"/>
+            <rdf:li rdf:resource="#Comment"/>
+            <rdf:li rdf:resource="#DocumentType"/>
+            <rdf:li rdf:resource="#UnparsedEntity"/>
+            <rdf:li rdf:resource="#Notation"/>
+            <rdf:li rdf:resource="#Namespace"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <!-- Document Metadata -->
+      <rdf:Description rdf:about="#Document">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#DocumentProperties"/>
+            <rdf:li rdf:resource="#DocumentII"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <rdf:Description rdf:about="#DocumentProperties">
+        <axsvg:Labelled>true</axsvg:Labelled>
+        <axsvg:AnimatedBy rdf:resource="#DocumentAnimation"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#DocumentII">
+        <axsvg:Labelled>true</axsvg:Labelled>
+      </rdf:Description>
+      <rdf:Description rdf:ID="#DocumentAnimation">
+        <desc>The #DocumentProperties block appears only when the mouse is over #DocumentII</desc>
+        <rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#AnimationDescription"/>
+        <axsvg:AnimationBegins>User moves the cursor over #DocumentII</axsvg:AnimationBegins>
+        <axsvg:AnimationSubject rdf:resource="#DocumentProperties"/>
+      </rdf:Description>
+      <!-- Element Metadata -->
+      <rdf:Description rdf:about="#Element">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#ElementProperties"/>
+            <rdf:li rdf:resource="#ElementII"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <rdf:Description rdf:about="#ElementProperties">
+        <axsvg:Labelled>true</axsvg:Labelled>
+        <axsvg:AnimatedBy rdf:resource="#ElementAnimation"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#ElementII">
+        <axsvg:Labelled>true</axsvg:Labelled>
+      </rdf:Description>
+      <rdf:Description rdf:ID="#ElementAnimation">
+        <desc>The #ElementProperties block appears only when the mouse is over #ElementII</desc>
+        <rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#AnimationDescription"/>
+        <axsvg:AnimationBegins>User moves the cursor over #ElementII</axsvg:AnimationBegins>
+        <axsvg:AnimationSubject rdf:resource="#ElementProperties"/>
+      </rdf:Description>
+      <!--Attribute Metadata -->
+      <rdf:Description rdf:about="#Attribute">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#AttributeProperties"/>
+            <rdf:li rdf:resource="#AttributeII"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <rdf:Description rdf:about="#AttributeProperties">
+        <axsvg:Labelled>true</axsvg:Labelled>
+        <axsvg:AnimatedBy rdf:resource="#AttributeAnimation"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#AttributeII">
+        <axsvg:Labelled>true</axsvg:Labelled>
+      </rdf:Description>
+      <rdf:Description rdf:ID="#AttributeAnimation">
+        <desc>The #AttributeProperties block appears only when the mouse is over #AttributeII</desc>
+        <rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#AnimationDescription"/>
+        <axsvg:AnimationBegins>User moves the cursor over #AttributeII</axsvg:AnimationBegins>
+        <axsvg:AnimationSubject rdf:resource="#AttributeProperties"/>
+      </rdf:Description>
+      <!--Processing Instruction Metadata -->
+      <rdf:Description rdf:about="#ProcessingInstruction">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#ProcessingInstructionProperties"/>
+            <rdf:li rdf:resource="#ProcessingInstructionII"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <rdf:Description rdf:about="#ProcessingInstructionProperties">
+        <axsvg:Labelled>true</axsvg:Labelled>
+        <axsvg:AnimatedBy rdf:resource="#ProcessingInstructionAnimation"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#ProcessingInstructionII">
+        <axsvg:Labelled>true</axsvg:Labelled>
+      </rdf:Description>
+      <rdf:Description rdf:ID="#ProcessingInstructionAnimation">
+        <desc>The #ProcessingInstructionProperties block appears only when the mouse is over #ProcessingInstructionII</desc>
+        <rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#AnimationDescription"/>
+        <axsvg:AnimationBegins>User moves the cursor over #ProcessingInstructionII</axsvg:AnimationBegins>
+        <axsvg:AnimationSubject rdf:resource="#ProcessingInstructionProperties"/>
+      </rdf:Description>
+      <!--Unxpanded Entity Metadata -->
+      <rdf:Description rdf:about="#UnexpandedEntity">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#UnexpandedEntityProperties"/>
+            <rdf:li rdf:resource="#UnexpandedEntityII"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <rdf:Description rdf:about="#UnexpandedEntityProperties">
+        <axsvg:Labelled>true</axsvg:Labelled>
+        <axsvg:AnimatedBy rdf:resource="#UnexpandedEntityAnimation"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#UnexpandedEntityII">
+        <axsvg:Labelled>true</axsvg:Labelled>
+      </rdf:Description>
+      <rdf:Description rdf:ID="#UnexpandedEntityAnimation">
+        <desc>The #ElementProperties block appears only when the mouse is over #UnexpandedEntityII</desc>
+        <rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#AnimationDescription"/>
+        <axsvg:AnimationBegins>User moves the cursor over #UnexpandedEntityII</axsvg:AnimationBegins>
+        <axsvg:AnimationSubject rdf:resource="#UnexpandedEntityProperties"/>
+      </rdf:Description>
+      <!-- Character Metadata -->
+      <rdf:Description rdf:about="#Character">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#CharacterProperties"/>
+            <rdf:li rdf:resource="#CharacterII"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <rdf:Description rdf:about="#CharacterProperties">
+        <axsvg:Labelled>true</axsvg:Labelled>
+        <axsvg:AnimatedBy rdf:resource="#CharacterAnimation"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#CharacterII">
+        <axsvg:Labelled>true</axsvg:Labelled>
+      </rdf:Description>
+      <rdf:Description rdf:ID="#CharacterAnimation">
+        <desc>The #CharacterProperties block appears only when the mouse is over #CharacterII</desc>
+        <rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#AnimationDescription"/>
+        <axsvg:AnimationBegins>User moves the cursor over #CharacterII</axsvg:AnimationBegins>
+        <axsvg:AnimationSubject rdf:resource="#CharacterProperties"/>
+      </rdf:Description>
+      <!-- CommentMetadata -->
+      <rdf:Description rdf:about="#Comment">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#CommentProperties"/>
+            <rdf:li rdf:resource="#CommentII"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <rdf:Description rdf:about="#CommentProperties">
+        <axsvg:Labelled>true</axsvg:Labelled>
+        <axsvg:AnimatedBy rdf:resource="#CommentAnimation"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#CommentII">
+        <axsvg:Labelled>true</axsvg:Labelled>
+      </rdf:Description>
+      <rdf:Description rdf:ID="#CommentAnimation">
+        <desc>The #CommentProperties block appears only when the mouse is over #CommentII</desc>
+        <rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#AnimationDescription"/>
+        <axsvg:AnimationBegins>User moves the cursor over #CommentII</axsvg:AnimationBegins>
+        <axsvg:AnimationSubject rdf:resource="#CommentProperties"/>
+      </rdf:Description>
+      <!-- Document Type Metadata -->
+      <rdf:Description rdf:about="#DocumentType">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#DocumentTypeProperties"/>
+            <rdf:li rdf:resource="#DocumentTypeII"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <rdf:Description rdf:about="#DocumentTypeProperties">
+        <axsvg:Labelled>true</axsvg:Labelled>
+        <axsvg:AnimatedBy rdf:resource="#DocumentTypeAnimation"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#DocumentTypeII">
+        <axsvg:Labelled>true</axsvg:Labelled>
+      </rdf:Description>
+      <rdf:Description rdf:ID="#DocumentTypeAnimation">
+        <desc>The #DocumentTypeProperties block appears only when the mouse is over #DocumentTypeII</desc>
+        <rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#AnimationDescription"/>
+        <axsvg:AnimationBegins>User moves the cursor over #DocumentTypeII</axsvg:AnimationBegins>
+        <axsvg:AnimationSubject rdf:resource="#DocumentTypeProperties"/>
+      </rdf:Description>
+      <!-- Unparsed Entity Metadata -->
+      <rdf:Description rdf:about="#UnparsedEntity">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#UnparsedEntityProperties"/>
+            <rdf:li rdf:resource="#UnparsedEntityII"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <rdf:Description rdf:about="#UnparsedEntityProperties">
+        <axsvg:Labelled>true</axsvg:Labelled>
+        <axsvg:AnimatedBy rdf:resource="#UnparsedEntityAnimation"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#UnparsedEntityII">
+        <axsvg:Labelled>true</axsvg:Labelled>
+      </rdf:Description>
+      <rdf:Description rdf:ID="#UnparsedEntityAnimation">
+        <desc>The #UnparsedEntityProperties block appears only when the mouse is over #UnparsedEntityII</desc>
+        <rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#AnimationDescription"/>
+        <axsvg:AnimationBegins>User moves the cursor over #UnparsedEntityII</axsvg:AnimationBegins>
+        <axsvg:AnimationSubject rdf:resource="#UnparsedEntityProperties"/>
+      </rdf:Description>
+      <!-- Notation Metadata -->
+      <rdf:Description rdf:about="#Notation">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#NotationProperties"/>
+            <rdf:li rdf:resource="#NotationII"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <rdf:Description rdf:about="#NotationProperties">
+        <axsvg:Labelled>true</axsvg:Labelled>
+        <axsvg:AnimatedBy rdf:resource="#NotationAnimation"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#NotationII">
+        <axsvg:Labelled>true</axsvg:Labelled>
+      </rdf:Description>
+      <rdf:Description rdf:ID="#NotationAnimation">
+        <desc>The #NotationProperties block appears only when the mouse is over #NotationII</desc>
+        <rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#AnimationDescription"/>
+        <axsvg:AnimationBegins>User moves the cursor over #NotationII</axsvg:AnimationBegins>
+        <axsvg:AnimationSubject rdf:resource="#NotationProperties"/>
+      </rdf:Description>
+      <!-- Namespace Metadata -->
+      <rdf:Description rdf:about="#Namespace">
+        <axsvg:Contains>
+          <rdf:Bag>
+            <rdf:li rdf:resource="#NamespaceProperties"/>
+            <rdf:li rdf:resource="#NamespaceII"/>
+          </rdf:Bag>
+        </axsvg:Contains>
+      </rdf:Description>
+      <rdf:Description rdf:about="#NamespaceProperties">
+        <axsvg:Labelled>true</axsvg:Labelled>
+        <axsvg:AnimatedBy rdf:resource="#NamespaceAnimation"/>
+      </rdf:Description>
+      <rdf:Description rdf:about="#NamespaceII">
+        <axsvg:Labelled>true</axsvg:Labelled>
+      </rdf:Description>
+      <rdf:Description rdf:ID="#NamespaceAnimation">
+        <desc>The #NamespaceProperties block appears only when the mouse is over #NamespaceII</desc>
+        <rdf:type rdf:resource="http://www.w3.org/2001/svgRdf/axsvg-resource.rdf#AnimationDescription"/>
+        <axsvg:AnimationBegins>User moves the cursor over #NamespaceII</axsvg:AnimationBegins>
+        <axsvg:AnimationSubject rdf:resource="#NamespaceProperties"/>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <!-- The real meat... -->
+  <style type="text/css"><![CDATA[
+		rect.doc    {stroke:gray; fill:lightgreen}
+		rect.prop   {stroke:gray; stroke-width: 1; fill:#fff8dc}
+		line.prop   {stroke:gray; stroke-width: 1; }
+		line.correspondence {stroke:lightGray; stroke-width: 1; }
+		path.shadow {stroke:none; fill:lightGray }
+		text,tspan  {font-family:Arial, Helvetica, sans-serif; font-size:20;  fill:#0C469C; stroke:none; text-anchor:middle; }
+  ]]></style>
+  <defs>
+    <g id="properties">
+      <rect width="400" height="200" x="-200" y="-100" class="prop"/>
+      <line x1="-200" y1="-33.3" x2="200" y2="-33.3" class="prop"/>
+      <line x1="-200" y1="33.3" x2="200" y2="33.3" class="prop"/>
+      <line x1="-66.6" y1="-100" x2="-66.6" y2="100" class="prop"/>
+      <line x1="66.6" y1="-100" x2="66.6" y2="100" class="prop"/>
+      <!-- The 9 coordinates for the text, row by row, left to right, top to bottom:
+      -133.2, -60; 0, -60; 133.2, -60
+      -133.2, 4;  0, 4;  133.2, 4
+      -133.2, 70; 0, 70; 133.2, 70
+      -->
+    </g>
+  </defs>
+  <g transform="translate(512 384) scale(1.3) ">
+    <!-- your graphic here -->
+    <g id="Document">
+      <desc>Document Information Item and its properies</desc>
+      <g id="DocumentProperties" style="visibility:hidden">
+        <desc>List of Document properties in a table. The "document" and "children" labels are linked to the #Element resource, the "notation" label to #Notation resource, and the "Unparsed Entities" to the #UnparsedEntity resource.</desc>
+        <use xlink:href="#properties"/>
+        <path d="M-65 -225 L-200 -100 L200 -100 L65 -225z" class="shadow"/>
+        <line x1="0" y1="-80" x2="189.22" y2="-210.31" class="correspondence"/>
+        <line x1="133.2" y1="-80" x2="189.22" y2="-210.31" class="correspondence"/>
+        <line x1="-133.2" y1="-80" x2="-318.37" y2="-103.85" class="correspondence"/>
+        <line x1="-133.2" y1="-20" x2="-346.44" y2="35.58" class="correspondence"/>
+        <text x="-133.2" y="-60">Notations</text>
+        <text x="0" y="-60">Document</text>
+        <text x="133.2" y="-60">Children</text>
+        <text>
+          <tspan x="-133.2" y="-10">Unparsed</tspan>
+          <tspan x="-133.2" dy="30">Entities</tspan>
+        </text>
+        <text x="0" y="4">Base URI</text>
+        <text>
+          <tspan x="133.2" y="-10">Encoding</tspan>
+          <tspan x="133.2" dy="30">Scheme</tspan>
+        </text>
+        <text x="-133.2" y="70">Standalone</text>
+        <text>
+          <tspan x="0" y="60">Declarations</tspan>
+          <tspan x="0" dy="30">Processed</tspan>
+        </text>
+        <text x="133.2" y="70">Version</text>
+      </g>
+      <g id="DocumentII" transform="translate( 0.00 -250.00)">
+        <rect class="doc" x="-65" y="-25" width="130" height="50"/>
+        <text y="7">Document</text>
+        <set attributeName="visibility" attributeType="CSS" to="visible" begin="DocumentII.mouseover" xlink:href="#DocumentProperties"/>
+        <set attributeName="visibility" attributeType="CSS" to="hidden" begin="DocumentII.mouseout" xlink:href="#DocumentProperties"/>
+      </g>
+    </g>
+    <g id="Element">
+      <desc>Element Information Item and its properies</desc>
+      <g id="ElementProperties" style="visibility:hidden">
+        <desc>List of Element properties in a table. The "parent" labels is linked to the #Element resource, the "children" label to #Element, #ProcessingInstruction, #UnparsedEntity, #Character and #Comment resources, and the "Attributes" to the #Attribute resource, the 'In-scope Namespaces' label to the #Namespace resource, and the 'Namespace Attributes' to the #Attribute resource.</desc>
+        <use xlink:href="#properties"/>
+        <path d="M124.22 -185.31 L-200 -100 L200 -100 L254.22 -185.31z" class="shadow"/>
+        <line x1="-133.2" y1="-80" x2="189.22" y2="-210.31" class="correspondence"/>
+        <text x="-133.2" y="-60">Parent</text>
+
+        <line x1="0" y1="-80" x2="189.22" y2="-210.31" class="correspondence"/>
+        <line x1="0" y1="-80" x2="346.44" y2="35.58" class="correspondence"/>
+        <line x1="0" y1="-80" x2="264.51" y2="163.72" class="correspondence"/>
+        <line x1="0" y1="-80" x2="98.61" y2="239.87" class="correspondence"/>
+        <line x1="0" y1="-80" x2="-98.61" y2="239.87" class="correspondence"/>
+        <text x="0" y="-60">Children</text>
+
+
+        <line x1="133.2" y1="-80" x2="318.37" y2="-103.85" class="correspondence"/>
+        <text x="133.2" y="-60">Attributes</text>
+
+
+        <line x1="-133.2" y1="0" x2="-189.22" y2="-210.31" class="correspondence"/>
+        <text>
+          <tspan x="-133.2" y="-10">In-scope</tspan>
+          <tspan x="-133.2" dy="30">Namespaces</tspan>
+        </text>
+        <text x="0" y="4">Base URI</text>
+
+        <line x1="133.2" y1="0" x2="318.37" y2="-103.85" class="correspondence"/>
+        <text>
+          <tspan x="133.2" y="-10">Namespace</tspan>
+          <tspan x="133.2" dy="30">Attributes</tspan>
+        </text>
+        <text x="-133.2" y="70">Namespace</text>
+        <text x="0" y="70">Local Name</text>
+        <text x="133.2" y="70">Prefix</text>
+      </g>
+      <g id="ElementII" transform="translate(189.22 -210.31)">
+        <rect class="doc" x="-65" y="-25" width="130" height="50"/>
+        <text y="7">Element</text>
+        <set attributeName="visibility" attributeType="CSS" to="visible" begin="ElementII.mouseover" xlink:href="#ElementProperties"/>
+        <set attributeName="visibility" attributeType="CSS" to="hidden" begin="ElementII.mouseout" xlink:href="#ElementProperties"/>
+      </g>
+    </g>
+    <g id="Attribute">
+      <desc>Attribute Information Item and its properies</desc>
+      <g id="AttributeProperties" style="visibility:hidden">
+        <desc>List of Attribute properties in a table. The "References" label is linked to the #Element, #UnparsedEntity, and #Notation resources, the "Owner Element" label to #Element resource.</desc>
+        <use xlink:href="#properties"/>
+        <path d="M253.37 -128.85 L200 -100 L200 100 L253.37 -78.85z" class="shadow"/>
+        <line x1="-133.2" y1="-80" x2="189.22" y2="-210.31" class="correspondence"/>
+        <line x1="-133.2" y1="-80" x2="-346.44" y2="35.58" class="correspondence"/>
+        <line x1="-133.2" y1="-80" x2="-318.37" y2="-103.85" class="correspondence"/>
+        <text x="-133.2" y="-60">References</text>
+        <text x="0" y="-60">Type</text>
+        <text x="133.2" y="-60">Specified</text>
+        <line x1="-133.2" y1="0" x2="189.22" y2="-210.31" class="correspondence"/>
+        <text>
+          <tspan x="-133.2" y="-10">Owner</tspan>
+          <tspan x="-133.2" dy="30">Element</tspan>
+        </text>
+        <text>
+          <tspan x="133.2" y="-10">Normalized</tspan>
+          <tspan x="133.2" dy="30">Value</tspan>
+        </text>
+        <text x="-133.2" y="70">Namespace</text>
+        <text x="0" y="70">Local Name</text>
+        <text x="133.2" y="70">Prefix</text>
+      </g>
+      <g id="AttributeII" transform="translate(318.37 -103.85)">
+        <rect class="doc" x="-65" y="-25" width="130" height="50"/>
+        <text y="7">Attribute</text>
+        <set attributeName="visibility" attributeType="CSS" to="visible" begin="AttributeII.mouseover" xlink:href="#AttributeProperties"/>
+        <set attributeName="visibility" attributeType="CSS" to="hidden" begin="AttributeII.mouseout" xlink:href="#AttributeProperties"/>
+      </g>
+    </g>
+    <g id="ProcessingInstruction">
+      <desc>Processing Instruction Information Item and its properies</desc>
+      <g id="ProcessingInstructionProperties" style="visibility:hidden">
+        <desc>List of Processing Instruction properties in a table. The "Notation" is linked to the #Notation resource, the "parent" label to #Element, #Document and #DocumentType resources.</desc>
+        <use xlink:href="#properties"/>
+        <path d="M281.37 10.38 L200 -100 L200 100 L281.37 60.385z" class="shadow"/>
+
+        <line x1="-133.2" y1="-80" x2="-318.37" y2="-103.85" class="correspondence"/>
+        <text x="-133.2" y="-60">Notation</text>
+
+        <line x1="133.2" y1="-80" x2="0" y2="-225" class="correspondence"/>
+        <line x1="133.2" y1="-80" x2="189.22" y2="-210.31" class="correspondence"/>
+        <line x1="133.2" y1="-80" x2="-264.51" y2="163.72" class="correspondence"/>
+        <text x="133.2" y="-60">Parent</text>
+
+        <text x="0" y="4">Base URI</text>
+        <text x="-133.2" y="70">Target</text>
+        <text x="133.2" y="70">Content</text>
+      </g>
+      <g id="ProcessingInstructionII" transform="translate(346.44 35.58)">
+        <rect class="doc" x="-65" y="-25" width="130" height="50"/>
+        <text y="-4">Processing</text>
+        <text y="16">Instruction</text>
+        <set attributeName="visibility" attributeType="CSS" to="visible" begin="ProcessingInstructionII.mouseover" xlink:href="#ProcessingInstructionProperties"/>
+        <set attributeName="visibility" attributeType="CSS" to="hidden" begin="ProcessingInstructionII.mouseout" xlink:href="#ProcessingInstructionProperties"/>
+      </g>
+    </g>
+    <g id="UnexpandedEntity">
+      <desc>Unexpanded Entity Information Item and its properies</desc>
+      <g id="UnexpandedEntityProperties" style="visibility:hidden">
+        <desc>List of Unexpanded Entity properties in a table. The "parent" label is linked to the #Element resource.</desc>
+        <use xlink:href="#properties"/>
+        <path d="M199.51 138.72 L-200 100 L200 100 L329.51 138.72z" class="shadow"/>
+
+
+        <text x="-133.2" y="-60">Name</text>
+
+        <line x1="133.2" y1="-80" x2="189.22" y2="-210.31" class="correspondence"/>
+        <text x="133.2" y="-60">Parent</text>
+
+        <text>
+          <tspan x="0" y="-14">Declaration</tspan>
+          <tspan x="0" dy="30">Base URI</tspan>
+        </text>
+        <text>
+          <tspan x="-133.2" y="60">System</tspan>
+          <tspan x="-133.2" dy="30">Identifier</tspan>
+        </text>
+        <text>
+          <tspan x="133.2" y="60">Public</tspan>
+          <tspan x="133.2" dy="30">Identifier</tspan>
+        </text>
+      </g>
+      <g id="UnexpandedEntityII" transform="translate(264.51 163.72)">
+        <rect class="doc" x="-65" y="-25" width="130" height="50"/>
+        <text y="-4">Unexpanded</text>
+        <text y="16">Entity</text>
+        <set attributeName="visibility" attributeType="CSS" to="visible" begin="UnexpandedEntityII.mouseover" xlink:href="#UnexpandedEntityProperties"/>
+        <set attributeName="visibility" attributeType="CSS" to="hidden" begin="UnexpandedEntityII.mouseout" xlink:href="#UnexpandedEntityProperties"/>
+      </g>
+    </g>
+    <g id="Character">
+      <desc>Character Information Item and its properies</desc>
+      <g id="CharacterProperties" style="visibility:hidden">
+        <desc>List of Character properties in a table. The "parent" label is linked to the #Element resource.</desc>
+        <use xlink:href="#properties"/>
+        <path d="M33.61 214.87 L-200 100 L200 100 L163.61 214.87z" class="shadow"/>
+
+        <line x1="0" y1="-80" x2="189.22" y2="-210.31" class="correspondence"/>
+        <text x="0" y="-60">Parent</text>
+
+        <text>
+          <tspan x="0" y="-14">Character</tspan>
+          <tspan x="0" dy="30">Code</tspan>
+        </text>
+        <text>
+          <tspan x="0" y="60">Element</tspan>
+          <tspan x="0" dy="30">Whitespace</tspan>
+        </text>
+      </g>
+      <g id="CharacterII" transform="translate(98.61 239.87)">
+        <rect class="doc" x="-65" y="-25" width="130" height="50"/>
+        <text y="7">Character</text>
+        <set attributeName="visibility" attributeType="CSS" to="visible" begin="CharacterII.mouseover" xlink:href="#CharacterProperties"/>
+        <set attributeName="visibility" attributeType="CSS" to="hidden" begin="CharacterII.mouseout" xlink:href="#CharacterProperties"/>
+      </g>
+    </g>
+    <g id="Comment">
+      <desc>Comment Information Item and its properies</desc>
+      <g id="CommentProperties" style="visibility:hidden">
+        <desc>List of Comment properties in a table. The "parent" label is linked to the #Element resource.</desc>
+        <use xlink:href="#properties"/>
+        <path d="M-163.61 214.87 L-200 100 L200 100 L-33.61 214.87z" class="shadow"/>
+        <line x1="0" y1="-80" x2="189.22" y2="-210.31" class="correspondence"/>
+        <text x="0" y="-60">Parent</text>
+        <text>
+          <tspan x="0" y="80">Content</tspan>
+        </text>
+      </g>
+      <g id="CommentII" transform="translate(-98.61 239.87)">
+        <rect class="doc" x="-65" y="-25" width="130" height="50"/>
+        <text y="7">Comment</text>
+        <set attributeName="visibility" attributeType="CSS" to="visible" begin="CommentII.mouseover" xlink:href="#CommentProperties"/>
+        <set attributeName="visibility" attributeType="CSS" to="hidden" begin="CommentII.mouseout" xlink:href="#CommentProperties"/>
+      </g>
+    </g>
+    <g id="DocumentType">
+      <desc>Document Type Information Item and its properies</desc>
+      <g id="DocumentTypeProperties" style="visibility:hidden">
+        <desc>List of Document Type properties in a table. The "children" labels is linked to the #ProcessingInstruction resource, the "parent" label to #Document resource.</desc>
+        <use xlink:href="#properties"/>
+        <path d="M-329.51 138.72 L-200 100 L200 100 L-199.51 138.72z" class="shadow"/>
+
+        <line x1="133.2" y1="-80" x2="346.44" y2="35.58" class="correspondence"/>
+        <text x="133.2" y="-60">Children</text>
+
+        <line x1="-133.2" y1="-80" x2="0" y2="-210.31" class="correspondence"/>
+        <text x="-133.2" y="-60">Parent</text>
+
+        <text>
+          <tspan x="-133.2" y="60">System</tspan>
+          <tspan x="-133.2" dy="30">Identifier</tspan>
+        </text>
+        <text>
+          <tspan x="133.2" y="60">Public</tspan>
+          <tspan x="133.2" dy="30">Identifier</tspan>
+        </text>
+      </g>
+      <g id="DocumentTypeII" transform="translate(-264.51 163.72)">
+        <rect class="doc" x="-65" y="-25" width="130" height="50"/>
+        <text y="-4">Document</text>
+        <text y="16">Type</text>
+        <set attributeName="visibility" attributeType="CSS" to="visible" begin="DocumentTypeII.mouseover" xlink:href="#DocumentTypeProperties"/>
+        <set attributeName="visibility" attributeType="CSS" to="hidden" begin="DocumentTypeII.mouseout" xlink:href="#DocumentTypeProperties"/>
+      </g>
+    </g>
+    <g id="UnparsedEntity">
+      <desc>Unparsed Entity Information Item and its properies</desc>
+      <g id="UnparsedEntityProperties" style="visibility:hidden">
+        <desc>List of Unparsed Entityproperties in a table. The "Notation" and "children" labels are linked to the #Notation.</desc>
+        <use xlink:href="#properties"/>
+        <path d="M-281.44 10.58 L-200 -100 L-200 +100 L-281.44 60.58z" class="shadow"/>
+
+        <line x1="-133.2" y1="-80" x2="-318.37" y2="-103.85" class="correspondence"/>
+        <text x="-133.2" y="-60">Notation</text>
+        <text x="0" y="-60">Name</text>
+        <text>
+          <tspan x="133.2" y="-70">Notation</tspan>
+          <tspan x="133.2" dy="30">Name</tspan>
+        </text>
+        <text>
+          <tspan x="0" y="60">Declaration</tspan>
+          <tspan x="0" dy="30">Base URI</tspan>
+        </text>
+        <text>
+          <tspan x="-133.2" y="60">System</tspan>
+          <tspan x="-133.2" dy="30">Identifier</tspan>
+        </text>
+        <text>
+          <tspan x="133.2" y="60">Public</tspan>
+          <tspan x="133.2" dy="30">Identifier</tspan>
+        </text>
+      </g>
+      <g id="UnparsedEntityII" transform="translate(-346.44 35.58)">
+        <rect class="doc" x="-65" y="-25" width="130" height="50"/>
+        <text y="-4">Unparsed</text>
+        <text y="16">Entity</text>
+        <set attributeName="visibility" attributeType="CSS" to="visible" begin="UnparsedEntityII.mouseover" xlink:href="#UnparsedEntityProperties"/>
+        <set attributeName="visibility" attributeType="CSS" to="hidden" begin="UnparsedEntityII.mouseout" xlink:href="#UnparsedEntityProperties"/>
+      </g>
+    </g>
+    <g id="Notation">
+      <desc>Notation Information Item and its properies</desc>
+      <g id="NotationProperties" style="visibility:hidden">
+        <desc>List of Notationproperties in a table.</desc>
+        <use xlink:href="#properties"/>
+        <path d="M-253.37 -128.85 L-200 -100 L-200 +100 L-253.37 -78.85z" class="shadow"/>
+        <text x="0" y="-60">Name</text>
+        <text>
+          <tspan x="0" y="60">Declaration</tspan>
+          <tspan x="0" dy="30">Base URI</tspan>
+        </text>
+        <text>
+          <tspan x="-133.2" y="60">System</tspan>
+          <tspan x="-133.2" dy="30">Identifier</tspan>
+        </text>
+        <text>
+          <tspan x="133.2" y="60">Public</tspan>
+          <tspan x="133.2" dy="30">Identifier</tspan>
+        </text>
+      </g>
+      <g id="NotationII" transform="translate(-318.37 -103.85)">
+        <rect class="doc" x="-65" y="-25" width="130" height="50"/>
+        <text y="7">Notation</text>
+        <set attributeName="visibility" attributeType="CSS" to="visible" begin="NotationII.mouseover" xlink:href="#NotationProperties"/>
+        <set attributeName="visibility" attributeType="CSS" to="hidden" begin="NotationII.mouseout" xlink:href="#NotationProperties"/>
+      </g>
+    </g>
+    <g id="Namespace">
+      <desc>Namespace Information Item and its properies</desc>
+      <g id="NamespaceProperties" style="visibility:hidden">
+        <desc>List of Namespace properties in a table.</desc>
+        <use xlink:href="#properties"/>
+        <path d="M-254.22 -185.31 L-200 -100 L200 -100 L-124.22 -185.31z" class="shadow"/>
+        <text>
+          <tspan x="-133.2" y="-4">Prefix</tspan>
+        </text>
+        <text>
+          <tspan x="133.2" y="-10">Namespace</tspan>
+          <tspan x="133.2" dy="30">Name</tspan>
+        </text>
+      </g>
+      <g id="NamespaceII" transform="translate(-189.22 -210.31)">
+        <rect class="doc" x="-65" y="-25" width="130" height="50"/>
+        <text y="7">Namespace</text>
+        <set attributeName="visibility" attributeType="CSS" to="visible" begin="NamespaceII.mouseover" xlink:href="#NamespaceProperties"/>
+        <set attributeName="visibility" attributeType="CSS" to="hidden" begin="NamespaceII.mouseout" xlink:href="#NamespaceProperties"/>
+      </g>
+    </g>
+  </g>
+</svg>

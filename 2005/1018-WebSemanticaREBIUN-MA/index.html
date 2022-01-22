@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0 plus SVG 1.1//EN"
+      "http://www.w3.org/2002/04/xhtml-math-svg/xhtml-math-svg.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Introducción a la Web Semántica</title>
+    <link href="http://purl.org/dc" rel="schema.dc" />
+    <meta content="Introducción a la Web Semántica" name="dc.title" />
+    <meta content="Martín Alvarez" name="dc.creator" />
+    <meta content="2005-10-17" name="dc.date" />
+    <meta content="W3C Oficina Española" name="dc.publisher" />
+    <meta content="http://www.w3.org/Consortium/Legal/copyright-documents" name="dc.rights" />
+    <meta name="copyright" content="Copyright © 2005 W3C Oficina Española" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="../../lib/Slidy/css/show.css" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="../../lib/Slidy/css/w3c-blue.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../lib/Slidy/css/print.css" />
+    <script type="text/javascript" src="../../lib/Slidy/js/slidy.js">
+    </script>
+    <style type="text/css">
+        .center {
+            text-align: center;
+        }
+        
+        .imagen-left {
+            float: left;
+        }
+        
+        .imagen-right {
+            float: right;
+            margin-right: 1em;
+        }
+        
+        dl {
+            margin-left: 2em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <img id="head-icon" alt="Gráfico con 4 cuadrados coloreados" src="../../lib/Slidy/img/icon-blue.png" /> <object id="head-logo" title="W3C logo" type="image/svg+xml" data="../../lib/Slidy/img/w3c-logo-blue.svg">
+  <img alt="W3C logo" id="head-logo-fallback"
+  src="../../lib/Slidy/img/w3c-logo-blue.gif" /></object>
+    </div>
+    <!-- La principal -->
+
+    <div class="slide cover">
+        <img src="../../lib/Slidy/img/keys.jpg" alt="Imagen de la portada (teclas W3C)" class="cover" /> <br />
+
+
+        <h1>Introducción a la Web Semántica</h1>
+
+        <p><a href="http://bibliotecnica.upc.es/rebiun/workshop5/" title="Página principal del V Workshop REBIUN">V Workshop <acronym
+title="Red de Bibliotecas Universitarias">REBIUN</acronym></a> sobre proyectos digitales</p>
+
+        <p><a href="mailto:mlvarez@w3.org" title="Envío de un correo electrónico a Martín Álvarez Espinar">Martín
+Álvarez Espinar</a></p>
+    </div>
+    <!-- Fin de la diapo principal -->
+
+    <div class="slide">
+        <h1>V Workshop REBIUN</h1>
+
+        <p><strong><a href="http://bibliotecnica.upc.es/rebiun/workshop5/"
+title="Página principal del V Workshop REBIUN">V Workshop <acronym
+title="Red de Bibliotecas Universitarias">REBIUN</acronym></a></strong> sobre proyectos digitales</p>
+
+        <p>La <strong>biblioteca digital</strong> y el acceso a nuevos contenidos<br /> Barcelona 17, 18 y 19 de octubre de 2005 <a href="www.upc.es" hreflang="es-CA" xml:lang="es-CA">Universitat Politècnica de Catalunya</a> (UPC)
+        </p>
+    </div>
+
+    <div class="slide">
+        <h1>Objetivos</h1>
+        <ul>
+            <li>Obtener un vistazo general sobre <strong>qué es la Web
+    Semántica</strong></li>
+            <li>Qué es lo que motiva su <strong>aparición</strong></li>
+            <li>Conocer las <strong>mejoras que aporta</strong> a la biblioteca digital
+            </li>
+            <li><strong>Cómo funciona</strong>. Mecanismos existentes</li>
+            <li><strong>Ejemplos</strong> de aplicaciones</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Origen de la Web</h1>
+        <ul>
+            <li>Tim Berners-Lee en 1989 realizó un modelo acerca de la gestión de la información del CERN</li>
+            <li>Solución basada en un sistema distribuido de <em>hipertexto</em></li>
+        </ul>
+
+        <p class="center"><img alt="Propuesta de Gestión de la Información de Tim Berners-Lee" src="./img/proposal_tim.gif" /></p>
+
+        <p class="center"><span xml:lang="en-us">Information Management: A Proposal,
+Tim Berners-Lee, CERN, March 1989, May 1990</span>, <a hreflang="en-us" href="http://www.w3.org/History/1989/proposal.html">http://www.w3.org/History/1989/proposal.html</a></p>
+    </div>
+
+    <div class="slide">
+        <h1>Necesidad de Evolución</h1>
+
+        <div class="imagen-right">
+            <img src="./img/busqueda_yahoo.jpg" alt="Evolución de la Web" /></div>
+        <ul>
+            <li>Crecimiento de
+                <ul>
+                    <li>Usuarios</li>
+                    <li>Información</li>
+                </ul>
+            </li>
+            <li>Surgen <strong>nuevas tecnologías</strong></li>
+            <li>¿<strong>Buscadores ineficientes</strong>?
+                <ul>
+                    <li>Posiblemente no les ofrezcamos los medios necesarios</li>
+                    <li>Usuarios descontentos</li>
+                    <li>Los "engañamos"</li>
+                </ul>
+            </li>
+            <li>Recursos con <strong>distintos formatos</strong> (multimedia)
+                <ul>
+                    <li>Vídeos</li>
+                    <li>Imágenes</li>
+                    <li>Textos digitales</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Adaptación a las Nuevas Tecnologías</h1>
+        <ul>
+            <li><strong>Evolución</strong> de la Web</li>
+        </ul>
+
+        <p class="center"><img src="./img/WebEvolution.png" alt="Evolución de la Web" /></p>
+    </div>
+
+    <div class="slide">
+        <h1>Buscadores ineficientes</h1>
+        <ul>
+            <li><strong>Información oculta</strong> en la Web</li>
+        </ul>
+
+        <p class="center"><img src="./img/hotel.jpg" alt="Ejemplo de metadatos ocultos" /><br />
+            <a href="ejemplos/hotel.html.txt" title="Código fuente de la página mostrada">Código fuente de la
+página</a></p>
+    </div>
+
+    <div class="slide">
+        <h1>Recursos Digitales en la Web</h1>
+        <ul>
+            <li>Incremento del <strong>coste</strong> de almacenamiento y de adquisición de los documentos (libros, periódicos, textos científicos, memorias de organizaciones, etc.)</li>
+            <li><strong>Creciente demanda</strong> de servicios asociados a la información
+            </li>
+            <li>Servicios <strong>remotos</strong></li>
+            <li>Capacidad de intercambio rápido y prácticamente sin coste asociado
+            </li>
+            <li>Almacenamiento distribuido</li>
+            <li>Compartir recursos documentales</li>
+            <li>Gran importancia en los <strong>sistemas de teleformación (<span
+    xml:lang="en">e-learning</span>)</strong></li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Lenguaje de Personas, no para Máquinas</h1>
+        <ul>
+            <li>La Web se escribe con <strong>lenguaje natural</strong></li>
+            <li>Con la Web tradicional, no es posible una capacidad de razonamiento en las máquinas</li>
+            <li><strong>Ambigüedad</strong></li>
+            <li>Los equipos informáticos <strong>no comprenden</strong> el texto que incluimos
+                <pre><code>&lt;font face="Arial" size="5"&gt;
+    V Workshop REBIUN sobre proyectos digitales &lt;br/&gt;
+    La biblioteca digital y el acceso a nuevos contenidos 
+&lt;/font&gt;</code></pre>
+                <p class="center"><img src="./img/rebiun_main.jpg" alt="Página principal del V Workshop de REBIUN" /></p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Objetivos deseados</h1>
+        <ul>
+            <li>Buscamos establecer un sentido a los contenidos
+                <ul>
+                    <li>Facilitar a las máquinas la <strong>comprensión de lo que
+        queremos representar</strong></li>
+                </ul>
+            </li>
+            <li>Permitir una conexión entre los recursos de la Web
+                <ul>
+                    <li>Extender los <em>hiperenlaces</em> a <strong>relaciones
+        semánticas</strong></li>
+                </ul>
+            </li>
+            <li>Gestión "inteligente" de los recursos
+                <ul>
+                    <li>Búsquedas de información</li>
+                    <li>Extracción de contenidos</li>
+                    <li>Integración de recursos heterogéneos</li>
+                </ul>
+            </li>
+            <li><strong>Interoperabilidad Semántica</strong></li>
+            <li>Al fin y al cabo: tener una Web más útil
+                <ul>
+                    <li>El botón "Voy a Tener Suerte" de Google</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Dotando de semántica a la Web</h1>
+        <ul>
+            <li>Web Semántica
+                <ul>
+                    <li><strong>Evolución</strong> de la Web tradicional</li>
+                    <li>Infraestructura basada en metadatos que permite el
+                        <strong>razonamiento</strong> en la Web</li>
+                </ul>
+            </li>
+            <li>Semántica básica
+                <pre><code>&lt;h1&gt;Título principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;p&gt;...Contenido de la página...&lt;/p&gt;</code></pre>
+            </li>
+            <li>Inclusión de metadatos</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Metadatos</h1>
+        <ul>
+            <li>Recursos que proveen <strong>información acerca de sí
+  mismos</strong></li>
+            <li>Deben estar en un <em>formato común</em> y <em>procesable por las
+    máquinas</em></li>
+            <li>Los <em>vocabularios</em> de estos metadatos deben estar <em>definidos
+    perfectamente</em></li>
+            <li>Las aplicaciones analizarán esos metadatos
+                <ul>
+                    <li>Buscadores</li>
+                    <li>Catalogos</li>
+                    <li>Portales</li>
+                    <li>etc.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Generación de los metadatos</h1>
+        <ul>
+            <li>Los metadatos existen en las aplicaciones que utilizamos para generar los contenidos
+                <ul>
+                    <li>Editores gráficos</li>
+                    <li>Procesadores de textos</li>
+                    <li>etc.</li>
+                </ul>
+            </li>
+            <li>Finalmente se genera información para el usuario y se pierden</li>
+            <li>Ejemplos
+                <p class="imagen-right"><img src="./img/membership.png" alt="Tabla de la distribución de los miembros del W3C por paises" /></p>
+                <ul>
+                    <li>Ofrecer altenativa a la representación de la imagen</li>
+                    <li>Informar de lo que hay en ella</li>
+                    <li>Creador</li>
+                    <li>Fecha</li>
+                    <li>etc.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo de Metadatos</h1>
+        <ul>
+            <li>Son <strong>enunciados</strong> acerca del recurso que representa:
+                <p class="imagen-right"><img src="./img/membership.png" alt="Tabla de la distribución de los miembros del W3C por paises" /></p>
+                <ul>
+                    <li>el <strong>tipo de imagen</strong> es un gráfico estadístico, y el tipo de gráfico es "circular"</li>
+                    <li>el gráfico está etiquetado con elementos de texto</li>
+                    <li>el gráfico consiste de leyenda, sectores con valores porcentuales sobre el total del círculo</li>
+                    <li>los sectores describen los porcentajes de los Miembros afiliados al W3C distribuidos por paises</li>
+                    <li>ha sido <strong>creado</strong> el 14 de Octubre de 2005</li>
+                    <li>ha sido <strong>publicado</strong> por la Oficina Española de W3C
+                    </li>
+                    <li>...</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Necesidades para el procesamiento de estos metadatos</h1>
+        <ul>
+            <li>Recursos definidos unívocamente (<abbr title="Universal Resource Identifiers">URIs</abbr>)
+                <ul>
+                    <li>p.e. <a href="http://www.w3.org/2004/09/StatImages/membership-s.png">http://www.w3.org/2004/09/StatImages/membership-s.png</a></li>
+                </ul>
+            </li>
+            <li>Vocabularios controlados (<em>Ontologías</em>)</li>
+            <li>Formato común para expresar esos metadatos (<acronym title="Resource Description Framework"><em>RDF</em></acronym>)
+                <ul>
+                    <li>E infraestructuras para acceder a esa información</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Bibliotecas Digitales</h1>
+        <ul>
+            <li>Se pretende la recopilación de información (catalogación)
+                <ul>
+                    <li>Diversas localizaciones</li>
+                </ul>
+            </li>
+            <li>Posteriormente se realiza una publicación de esa información
+                <ul>
+                    <li>Creación de movimientos como <acronym title="Open Archives Initiative">OAI</acronym> (<a href="http://www.openarchives.org/" title="Open Archives Initiative" hreflang="en">http://www.openarchives.org/</a>)
+                        <ul>
+                            <li>Promueve los estándares de interoperabilidad</li>
+                            <li>Permiten preservar y diseminar las publicaciones</li>
+                            <li>Centra sus esfuerzos en conseguir acceso a los archivos electrónicos para mejorar la comunicación.</li>
+                            <li>Posee un protocolo propio para recolección de metadatos:
+                                <acronym title="Open Archives Initiative Protocol Metadata Harvesting" xml:lang="en">OAI-PMH</acronym></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo de Aplicación de estos principios</h1>
+        <ul>
+            <li><a href="http://www.nla.gov.au/" hreflang="en">Biblioteca Nacional de
+    Australia</a>
+                <p class="imagen-right"><img src="./img/NLA_search.jpg" alt="Página principal del catálogo de imágenes de la Biblioteca Nacional de Australia" /></p>
+                <ul>
+                    <li>Catalogación de recursos
+                        <ul>
+                            <li>Periódicos</li>
+                            <li>Manuscritos</li>
+                            <li>Imágenes</li>
+                            <li>Mapas</li>
+                            <li>Libros</li>
+                            <li>...</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="http://www.nla.gov.au/catalogue/pictures/index.html" xml:lang="en">Catálogo de Imágenes</a>
+                <ul>
+                    <li>Sobre 740.000 Imágenes disponibles</li>
+                    <li>Búsqueda de un cuadro (titulado Dancing Boy, Martin Boyd)</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo: Metadatos asociados a un recurso</h1>
+
+        <p class="center"><img src="./img/NLA_result_metadata.jpg" alt="Resultado de la búsqueda del óleo de Martin Boyd, Dancing Boy" /></p>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo: Identificador del recurso</h1>
+        <ul>
+            <li>Mediante <acronym title="Universal Resource Identifier"><strong>URIs</strong></acronym>
+                <p class="center"><img src="./img/NLA_result_id_resource.jpg" alt="Resultado de la búsqueda del óleo de Martin Boyd, Dancing Boy" /></p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo: Asociación de recursos</h1>
+        <ul>
+            <li>Otras instituciones/empresas <em>realizan recopilaciones de los
+    metadatos</em> de la Biblioteca nacional de Australia:
+                <ul>
+                    <li>Google</li>
+                    <li>Otras bibliotecas</li>
+                    <li>Universidades (<a href="http://www.umich.edu" hreflang="en">Universidad de Michigan</a>)</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Proyecto de la Universidad de Michigan: OAIster</h1>
+
+        <p class="imagen-right"><img src="./img/OAIster_search.jpg" alt="Pantalla de búsqueda de la plataforma OAI" /></p>
+        <ul>
+            <li><a hreflang="en" href="http://oaister.umdl.umich.edu">http://oaister.umdl.umich.edu</a></li>
+            <li>Orientado al <span xml:lang="en">e-learning</span> y al ámbito educativo
+            </li>
+            <li>Acceso a todos los alumnos a los contenidos electrónicos</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>OAIster. Resultado de una búsqueda</h1>
+        <ul>
+            <li>Identifica al mismo recurso (<a title="Dancing Boy, de Martin Boyd" href=" http://nla.gov.au/nla.pic-an3328617-v">http://nla.gov.au/nla.pic-an3328617-v</a>)
+                <p class="center"><img src="./img/OAIster_result.jpg" alt="Pantalla de resultado de una búsqueda en la plataforma OAI" /></p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>¿Qué aporta la Web Semántica a las Bibliotecas Digitales?</h1>
+        <ul>
+            <li>Mecanismos para
+                <ul>
+                    <li><strong>Catalogación</strong>
+                        <ul>
+                            <li>Siguiendo un modelo de <strong>metadatos</strong> comunes para describir los campos</li>
+                            <li>Recuperar la información catalogada de forma eficiente</li>
+                        </ul>
+                    </li>
+                    <li><strong>Creación</strong> y <strong>publicación</strong> de los vocabularios controlados para que puedan ser utilizados por todos (Ontologías)
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Metadatos para las Bibliotecas Digitales</h1>
+
+        <p class="imagen-right"><img src="./img/dc_logo.gif" alt="Logo Dublin Core" /></p>
+        <ul>
+            <li>Iniciativas independientes que crean vocabularios específicos
+                <ul>
+                    <li><strong>Dublin Core Metadata Initiative</strong> <a href="http://dublincore.org/">http://dublincore.org/</a>
+                        <ul>
+                            <li>Colección de campos comprensibles por las máquinas</li>
+                            <li>Pautas de uso</li>
+                        </ul>
+                    </li>
+                    <li><strong>MARC</strong>
+                        <ul>
+                            <li><a href="http://www.loc.gov/standards/marcxml/">Fomato MARC</a> de la Biblioteca del Congreso (<abbr title="Estados Unidos">EE.UU.</abbr>)</li>
+                        </ul>
+                    </li>
+                    <li><strong><a
+        href="http://www.editeur.org/onix.html">ONIX</a></strong> para Libros
+                        <ul>
+                            <li>Estándar internacional para la representación y comunicación de información de productos de la industria bibliográfica en formato electrónico</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Mecanismos básicos en Web Semántica</h1>
+        <ul>
+            <li><strong>RDF</strong> (Infraestructura para Definición de Recursos)
+                <ul>
+                    <li>Modelo simple para la representación de los metadatos</li>
+                </ul>
+            </li>
+            <li><strong>Ontologías</strong>
+                <ul>
+                    <li>Definen términos y relaciones</li>
+                    <li>Lenguajes de Ontologías:
+                        <ul>
+                            <li>RDF-Schema</li>
+                            <li>OWL</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Reglas de <strong>búsqueda y consulta</strong></li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>RDF (Resource Description Framework)</h1>
+        <ul>
+            <li>Permite definir información sobre <strong>cualquier
+  dominio</strong></li>
+            <li>Todo lo que se describen son recursos (identificados por URIs)</li>
+            <li>Es un gráfico</li>
+            <li>Definido como una tripleta (s,p,o)
+                <ul>
+                    <li><strong>Sujeto</strong> - Recurso (http://www.w3c.es/Personal/Martin)
+                    </li>
+                    <li><strong>Predicado</strong> - Propiedad (creador)</li>
+                    <li><strong>Objeto</strong> - Literal ("Martín Álvarez")</li>
+                </ul>
+            </li>
+            <li><code>&lt;sujeto&gt; TIENE &lt;predicado&gt; &lt;objeto&gt;</code>
+                <p class="center"><img src="./img/rdf-base.png" alt="Ejemplo de tripleta RDF: Martín Álvarez es el creador de un recurso" /></p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1><acronym title="Resource Description Framework" xml:lang="en">RDF</acronym>/<acronym title="Extensible Markup Language" xml:lang="en">XML</acronym></h1>
+        <ul>
+            <li>Utiliza el Lenguaje de Marcado Extensible (<strong>XML</strong>) para la codificación</li>
+            <li><strong>Facilita</strong> la creación e intercambio de los metadatos
+            </li>
+            <li>Debemos pensar en los gráficos</li>
+        </ul>
+        <pre class="imagen-right">&lt;rdf:RDF&gt;
+    &lt;rdf:Description about="http://www.w3c.es/Personal/Martin"&gt;
+         &lt;s:type&gt;text/html&lt;/s:type&gt;
+         &lt;s:date&gt;2005-10-01&lt;/s:date&gt;
+         &lt;s:title&gt;Página personal de Martín Álvarez&lt;/s:title&gt;
+    &lt;/rdf:Description&gt;
+&lt;/rdf:RDF&gt;</pre>
+
+        <p><img src="./img/rdf-base3.png" alt="Descripción de los metadatos de una página web, en un gráfico." /></p>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo de <acronym title="Resource Description Framework" xml:lang="en">RDF</acronym></h1>
+
+        <p class="imagen-right"><img src="./img/rdf-base2.png" alt="Ejemplo de tripleta RDF: Martín Álvarez es el creador de un recurso. Con más propiedades" /></p>
+        <ul>
+            <li><strong>Extensibilidad</strong> incremental</li>
+            <li><strong>Relacionarse</strong> con otros recursos</li>
+            <li>"<strong>Mezclar</strong>" definiciones</li>
+            <li>Proporcionar múltiples presentaciones aprovechando el trabajo de otros
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>RDF Schema</h1>
+
+        <p class="imagen-right"><img src="./img/rdfSchema-clases.png" alt="Ejemplo de tres clases definidas en RDF Schema: Equipo, persona y recurso" /></p>
+        <ul>
+            <li>Lenguaje de Descripción de Vocabularios</li>
+            <li><strong>Modelo de datos</strong> para RDF</li>
+            <li>Permite enriquecer las <strong>descripciones semánticas</strong> (procesables por las máquinas)
+                <ul>
+                    <li>Clases / subclases</li>
+                    <li>Relaciones entre las clases y propiedades</li>
+                    <li>Descripciones para los humanos (etiquetas, descripciones, etc.)</li>
+                </ul>
+            </li>
+            <li>Facilita la <em>combinación de sentencias RDF</em>, a través de los URIs
+            </li>
+            <li>Ofrece <em>la base para poder realizar razonamientos</em> o deducciones sobre nueva información</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Limitaciones de RDF Schema</h1>
+        <ul>
+            <li>No indica la <strong>cardinalidad</strong></li>
+            <li><strong>Tipos</strong> de datos</li>
+            <li>Restricciones de rangos simples para las propiedades</li>
+            <li>No se pueden derivar tipos por <strong>unión o
+  intersección</strong></li>
+            <li>Necesidad de relaciones de clases o propiedades más ricas</li>
+            <li>...</li>
+            <li>Surgen <strong>extensiones <a
+    href="http://www.w3.org/TR/daml+oil-reference"
+    title="Referencia de DAML+OIL" xml:lang="en"
+    hreflang="en">DAML+OIL</a></strong></li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1><acronym title="DARPA Agent Markup Language" xml:lang="en">DAML</acronym> + <acronym title="Ontology Inferecence Layer" xml:lang="en">OIL</acronym></h1>
+        <ul>
+            <li><acronym title="Defense Advanced Research Projects Agency" xml:lang="en">DARPA</acronym> Agent Markup Language
+                <ul>
+                    <li>Lenguaje de marcado semántico para recursos Web</li>
+                    <li>Definición de ontologías</li>
+                    <li>Comienza en el 2000</li>
+                    <li>Soluciona las carencias detectadas</li>
+                    <li>Ejemplo: Un macho es un animal y no puede ser una hembra
+                        <pre>&lt;daml:Class rdf:ID="Macho"&gt;
+    &lt;rdfs:subClassOf rdf:resource="#Animal"/&gt;
+    &lt;daml:disjointWith rdf:resource="#Hembra"/&gt;
+&lt;/daml:Class&gt;		</pre>
+                    </li>
+                </ul>
+            </li>
+            <li>Ontology Inference Layer
+                <ul>
+                    <li>Permite realizar inferencias sobre el conocimiento</li>
+                    <li>Razonamiento gracias a las descripciones lógicas</li>
+                    <li><a href="http://www.w3.org/TR/daml+oil-reference" hreflang="en">DAML+OIL</a> Marzo de 2001</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1><acronym title="Web Ontology Language">OWL</acronym></h1>
+        <ul>
+            <li><strong>Lenguaje de Ontologías Web</strong> (Recomendación Febrero 2004)
+            </li>
+            <li>Los lenguajes anteriores estaban destinados a comunidades específicas
+                <ul>
+                    <li>Comercio Electrónico</li>
+                    <li>Entornos científicos</li>
+                </ul>
+            </li>
+            <li><a href="http://www.w3.org/2004/OWL/" hreflang="en">OWL</a> <strong>se
+    adapta</strong> a la arquitectura de la WWW y a la Web Semántica</li>
+            <li>Mejoras respecto a lenguajes anteriores:
+                <ul>
+                    <li>Capacidad de ser distribuidas a través de varios sistemas</li>
+                    <li>Escalable ante las necesidades de la Web</li>
+                    <li>Compatible con los estándares Web de accesibilidad e internacionalización
+                    </li>
+                    <li>Abierto y extensible</li>
+                </ul>
+            </li>
+            <li>Permite una interoperabilidad entre las ontologías</li>
+            <li>Los sistemas que usan DAML, OIL, DAML+OIL están migrando a OWL
+                <ul>
+                    <li>Herramientas que lo permiten sencillamente</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Por qué usar ontologías</h1>
+        <ul>
+            <li><strong>Descripción formal</strong> de un dominio
+                <ul>
+                    <li>Definición de clases, propiedades y relaciones entre ellas</li>
+                </ul>
+            </li>
+            <li>Interoperabilidad semántica
+                <ul>
+                    <li>Integración entre metadatos de <strong>distintos
+        vocabularios/esquemas</strong></li>
+                    <li>Facilita y ofrece mayor precisión ante búsquedas de información
+                        <ul>
+                            <li>Portales (reglas de categorización para los recursos)</li>
+                            <li>Colecciones multimedia (medios no textuales)</li>
+                            <li>Sitios web corporativos (organización taxonómica de documentos)
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Relaciona recursos, servicios, dispositivos, bases de datos a través de la asociación de las estructuras del conocimiento y su
+                        <strong>combinación</strong>.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--div class="slide">
+<h1>Lenguajes de consulta de ontologías</h1>
+<ul>
+  <li>Permiten realizar búsquedas entre el conocimiento</li>
+  <li>Reglas de inferencia</li>
+</ul>
+</div-->
+
+    <div class="slide">
+        <h1>Ontologías Existentes</h1>
+        <ul>
+            <li>Repositorios de Ontologías
+                <ul>
+                    <li><a href="http://www.schemaweb.info/">SchemaWeb</a></li>
+                    <li><a href="http://www.daml.org/ontologies/">DAML Ontology
+      Library</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Sistemas de Organización del Conocimiento</h1>
+
+        <p class="imagen-right"><img src="./img/dmoz.jpg" alt="Pantalla de DMOZ" /></p>
+        <ul>
+            <li>Vocabularios Controlados
+                <ul>
+                    <li>Clasificaciones</li>
+                    <li>Tesauros</li>
+                    <li>Terminologías</li>
+                    <li>Glosarios</li>
+                    <li>...</li>
+                </ul>
+            </li>
+            <li><a href="http://www.w3.org/2004/02/skos/"><acronym
+    title="Simple Knowledge Organisation System"
+    xml:lang="en">SKOS</acronym></a>
+                <ul>
+                    <li>Conjunto de especificaciones de <strong>formatos estándar y
+        herramientas</strong> para usar los Sistemas de Organización del Conocimento (<strong>KOS</strong>) dentro de la infraestructura de la Web Semántica</li>
+                    <li>Ejemplos de estructuras del conocimiento existentes
+                        <ul>
+                            <li><a href="http://dmoz.org/"><abbr
+            title="Directory Mozilla">DMOZ</abbr></a> (Open Directory Project)
+                            </li>
+                            <li><a href="http://europa.eu.int/celex/eurovoc/">EUROVOC
+            Thesaurus</a></li>
+                            <li><a href="http://pci204.cindoc.csic.es/tesauros/index.html">Tesauros
+            del <abbr
+            title="Centro de Información y Documentación Dientífica">CINDOC</abbr>
+            (<acronym
+            title="Consejo Superior de Investigaciones Científicas">CSIC</acronym>)</a>
+                                <ul>
+                                    <li>Alimentos</li>
+                                    <li>Economía</li>
+                                    <li>Urbanismo</li>
+                                    <li>...</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo: Entradas en un Glosario (1)</h1>
+        <dl>
+            <dt>Hoja</dt>
+            <dd>(i) Cada una de las láminas, generalmente verdes, planas y delgadas, de que se visten los vegetales, unidas al tallo o a las ramas por el pecíolo o, a veces, por una parte basal alargada, en las que principalmente se realizan las funciones
+                de transpiración y fotosíntesis. (ii) Cada una de las capas delgadas en que se suele dividir la masa; como en los hojaldres</dd>
+            <dt>Raíz</dt>
+            <dd>(i) Órgano que crece en dirección inversa a la del tallo, carece de hojas e, introducido en tierra o en otros cuerpos, absorbe de estos o de aquella las materias necesarias para el crecimiento y desarrollo del vegetal y le sirve de sostén.
+                (ii) Bien inmueble, finca, tierra, edificio, etc.</dd>
+            <dt>Tallo</dt>
+            <dd>(i) Órgano que se prolonga en sentido contrario al de la raíz y sirve de sustentáculo a las hojas, flores y frutos en las plantas. (ii) Renuevo de las plantas</dd>
+        </dl>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo: Entradas en un Glosario (2)</h1>
+
+        <p class="center"><img src="./img/entrada_glosario.png" alt="Ejemplo de entrada en un glosario representado mediante SKOS" /></p>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo: Entradas en un Glosario (3)</h1>
+
+        <p class="center"><img src="./img/entrada_glosario2.png" alt="Ejemplo de entrada en un glosario representado mediante SKOS" /></p>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo: Taxonomías</h1>
+
+        <p class="imagen-right"><img src="./img/taxonomias.png" alt="Ejemplo de representación de taxonomías mediante SKOS" /></p>
+        <ul>
+            <li>Artes (dmoz)
+                <ul>
+                    <li>Literatura</li>
+                    <li>Arquitectura</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo: Tesauros (1)</h1>
+        <dl>
+            <dt>Término</dt>
+            <dd>Estadística</dd>
+            <dt>Usado por</dt>
+            <dd>Metodología estadística</dd>
+            <dt>Términos relacionados</dt>
+            <dd>Matemáticas</dd>
+            <dt>Términos especializados (reducidos)</dt>
+            <dd>Datos estadísticos</dd>
+            <dd>Estadísticas médicas</dd>
+            <dt>Notas del ámbito</dt>
+            <dd>Usar cuando se refiere a la ciencia de la estadística. Para colecciones de estadísticas, usar "datos estadísticos" o un descriptor más específico.</dd>
+        </dl>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplo: Tesauros (2)</h1>
+
+        <p class="imagen-right"><img src="./img/tesauros.png" alt="Ejemplo de representación de un tesauro mediante SKOS" /></p>
+        <dl>
+            <dt>Término</dt>
+            <dd>Estadística</dd>
+            <dt>Usado por</dt>
+            <dd>Metodología estadística</dd>
+            <dt>Términos relacionados</dt>
+            <dd>Matemáticas</dd>
+            <dt>Términos especializados (reducidos)</dt>
+            <dd>Datos estadísticos</dd>
+            <dd>Estadísticas médicas</dd>
+            <dt>Notas del ámbito</dt>
+            <dd>Usar cuando se refiere a la ciencia de la estadística. Para colecciones de estadísticas, usar "datos estadísticos" o un descriptor más específico.</dd>
+        </dl>
+    </div>
+
+    <div class="slide">
+        <h1>Ejemplos de Aplicación</h1>
+
+        <p class="imagen-right"><img src="./img/vodafone.jpg" alt="Pantalla de Vodafone Live" /></p>
+        <ul>
+            <li>La Iniciativa de Archivos Abiertos (OAI) <a href="http://www.openarchives.org/">http://www.openarchives.org/</a></li>
+            <li><a href="http://www.foaf-project.org/"><acronym
+    title="Friend Of A Friend" xml:lang="en">FOAF</acronym></a>
+                <ul>
+                    <li><a href="http://xml.mfd-consult.dk/foaf/explorer/" title="Proyecto FOAF Explorer">FOAF Explorer</a> (<a href="ejemplos/FoaF_explorer.html" title="Ejemplo de FOAF Explorer">Ejemplo</a>), <a href="http://www.foafnaut.org/">FOAFNaut!</a>...</li>
+                </ul>
+            </li>
+            <li><a href="http://usefulinc.com/doap"><acronym
+    title="Description of a Project" xml:lang="en">DOAP</acronym></a></li>
+            <li>Directorio Medioambiental <a href="http://www.swed.org.uk/swed/index.html">SWED</a></li>
+            <li><a href="http://simile.mit.edu/">SIMILE</a>
+                <ul>
+                    <li>Aumentar la inter-operabilidad entre los recursos, vocabularios/ontologías/esquemas, metadatos y servicios</li>
+                </ul>
+            </li>
+            <li><a href="http://www.sculpteurweb.org/">The SCULPTEUR R&amp;D
+  Project</a></li>
+            <li>Portales
+                <ul>
+                    <li>Vodafone Live
+                        <ul>
+                            <li>Basado en RDF - Mejoradas las búsquedas</li>
+                            <li>Incremento de las descargas de tonos 20% en 2 meses</li>
+                        </ul>
+                    </li>
+                    <li>Portal de Nokia</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h1>Más información</h1>
+        <dl>
+            <dt>Estas transparencias están en</dt>
+            <dd><a href="https://espinr.github.io/talks/2005/1018-WebSemanticaREBIUN-MA/">http://www.w3c.es/Presentaciones/2005/1018-WebSemanticaREBIUN-MA/</a></dd>
+            <dt>Página principal de la Web Semántica</dt>
+            <dd><a href="http://www.w3.org/2001/sw/">http://www.w3.org/2001/sw</a></dd>
+            <dt>Oficina Española del W3C</dt>
+            <dd><a href="http://www.w3c.es/">http://www.w3c.es</a></dd>
+            <dt>Escríbeme</dt>
+            <dd><a href="mailto:mlvarez@w3.org">mlvarez@w3.org</a></dd>
+        </dl>
+    </div>
+</body>
+
+</html>

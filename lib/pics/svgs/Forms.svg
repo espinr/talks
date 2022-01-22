@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/css" href="slide.css" ?>
+<!-- <?xml-stylesheet type="text/css" href="http://www.w3.org/Consortium/Offices/Presentations/svgs/slide.css" ?> -->
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 800">
+    <title>Just a full slide with XForm text</title>
+    <desc>probably unused in the future</desc>
+	<g transform="translate(-50,30)" id="tspanSlide">
+		<text>
+			<tspan dy="0" x="0" class="major">&#8226; Originally an activity in XHTML; became a separate working group</tspan>
+			<tspan dy="40" x="0" class="major">&#8226; Some upcoming features:</tspan>
+			<tspan dy="40" x="30" class="minor">&#8226; Separation of:</tspan>			
+			<tspan dy="40" x="60" class="minor">&#183; Data model</tspan>
+			<tspan dy="40" x="60" class="minor">&#183; Instances</tspan>
+			<tspan dy="40" x="60" class="minor">&#183; User interface</tspan>
+			<tspan dy="40" x="30" class="minor">&#8226; Save and restore forms, download multi-page forms</tspan>
+			<tspan dy="40" x="30" class="minor">&#8226; More client-side checking</tspan>
+			<tspan dy="40" x="30" class="minor">&#8226; Signed forms</tspan>
+			<tspan dy="40" x="30" class="minor">&#8226; Data transferred in XML</tspan>
+			<tspan dy="40" x="0" class="major">&#8226; Parts can be used independently</tspan>
+		</text>
+		<image x="800" y="50" xlink:href="../jpgs/xformArch.jpg" height="313" width="202">
+			<desc>Architectural picture of XForms</desc>
+		</image>
+	</g>
+</svg>
