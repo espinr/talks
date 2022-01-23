@@ -1,0 +1,82 @@
+@font-face {
+	font-family: 'heydings';
+	src: url('../fonts/heydings-controls/heydings_controls.ttf') format('truetype');
+}	
+
+@font-face {
+	font-family: 'destroy';
+	src: url('../fonts/destroy.ttf') format('truetype');
+}	
+
+.symbol {
+	font-family: 'heydings';
+}
+
+.caption { font-size: 40% !important; color: #888888 !important; }
+.caption a { opacity: 0.4;}
+
+pre.nostandard code { border-left: 10px red solid; }
+pre.nostandard:before { content: "NO ESTÁNDAR"; color: red; }
+
+
+/* Ejemplo de los bordes */
+
+@font-face {
+	font-family: 'JottFLFBold';
+	src: url('../fonts/JottFLF/JottFLF-Bold.woff') format('woff');
+}
+@font-face {
+	font-family: 'EnglandHandDB';
+	src: url('../fonts/england/england.woff') format('woff');
+}
+@font-face {
+	font-family: 'ProclamateLight';
+	src: url('../fonts/proclamate/proclamate_light.woff') format('woff');
+}
+
+blockquote#fuentes > *:first-child:before { content: "“ "; display: inline; white-space: pre; }
+blockquote#fuentes > *:first-child:lang(fr):before { content: "« "; display: inline; white-space: pre; font-family: Arial; }
+blockquote#fuentes > *:first-child:after { content: " ”"; display: inline; white-space: pre;}
+blockquote#fuentes > *:first-child:lang(fr):after { content: " »"; display: inline; white-space: pre; font-family: Arial;}
+blockquote#fuentes > *:first-child { border: 1em solid black; -moz-border-image: url("../img/border2.png") 35 round round; -webkit-border-image: url("../img/border2.png") 35 round round; -o-border-image: url("../img/border2.png") 35 round round; border-image: url("../img/border2.png") 35 round round; padding: 2ex; font-family: EnglandHandDB; text-shadow: white 3px 3px 1px; }
+blockquote#fuentes *:first-child span { font-family: ProclamateLight; }
+blockquote#fuentes p:last-child { text-align: right; font-size: smaller;font-family: JottFLFBold; }
+blockquote#fuentes { background-image: url('../img/background_cons.png'); background-repeat: repeat; padding: 1em; -moz-border-radius: 2em;-webkit-border-radius: 2em;-o-border-radius: 2em;border-radius: 2em;  border: none; text-shadow: none; color: black; -moz-box-shadow: rgba(0,0,0,0.4) 10px 10px 10px; -webkit-box-shadow: rgba(0,0,0,0.4) 10px 10px 10px; box-shadow: rgba(0,0,0,0.4) 10px 10px 10px;}
+#fuentes em { font-weight: bold; text-decoration: underline; }  
+
+blockquote#borde > *:first-child { border: double red 1em; -moz-border-image: url("../img/border.png") 27 round stretch; -webkit-border-image: url("../img/border.png") 27 round stretch; -o-border-image: url("../img/border.png") 27 round stretch; border-image: url("../img/border.png") 27 round stretch; padding: 1ex; }
+blockquote#borde > *:last-child {text-align: right; }
+blockquote#borde { border: 2px solid black; padding: 1em; -moz-border-radius: 3em;-webkit-border-radius: 3em;-o-border-radius: 3em;border-radius: 3em; }
+
+/* Ejemplo de los selectores */
+table#selectores  { font-size: 50%; color: #000000; width: 100% }
+table#selectores  thead { padding-bottom: 1em; color: #888888; }
+table#selectores  td { text-align: right;}
+table#selectores  td:nth-child(2),
+table#selectores  td:nth-child(3) { text-align: left; }
+table#selectores  tbody tr:nth-child(odd) { background: #aaaaaa; }
+table#selectores  tbody tr:nth-child(even) { background: #888888; }
+table#selectores  tr *:first-child { border-left: none; }
+table#selectores  tr *:last-child { border-right: none; }
+table#selectores  td:nth-child(4), table#selectores  td:nth-child(5), table#selectores  td:nth-child(6) { font-family: monospace; color: red}
+table#selectores  td:nth-child(6) { font-weight: bold;}
+table#selectores  tbody tr:nth-child(4) td:nth-child(4) { border: 8px rgba(255,0,0,0.8) dashed !important; }
+table#selectores  tbody tr:nth-child(6) td:nth-child(2n+2) { background-color: #986dff; }
+
+
+/* Ejemplos selectores  */
+h2#siblingSel ~ :nth-child(5) { background-color: gray; color: black; }   
+#selectorsSample2 a:not(.externo) { background-color: pink; }
+#selectorsSample2, #selectorsSample3 { color:#888888; }
+#selectorsSample3 strong:last-of-type { border-bottom: 2px red solid; }
+table#selectorsSample4  { font-size: 50%; color: #000000; width: 100% }
+table#selectorsSample4  tbody tr:nth-child(odd) { background: #aaaaaa; }
+table#selectorsSample4  tbody tr:nth-child(even) { background: #888888; }
+table#selectorsSample4  tbody td:empty { background: rgba(255,0,0,0.5); }
+input#selectorSample5:checked + label { color: yellow; }
+
+/* Transiciones */
+#transitionSample ul { text-align: right; width: 700px; color: #000}
+#transitionSample li { border:1px gray solid; background: #ff9600; width:100px; height:100px; border-radius:100px; margin:20px; padding:30px; list-style:none;}
+#transitionSample li:hover { width: 500px; background:forestgreen; }
+#transitionSample li.transicion { -webkit-transition: 1s; transition: 1s; transition-timing-function: ease; }

@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+
+<head>
+    <title>W3C y la Plataforma Web Abierta</title>
+    <meta name="copyright" content="W3C &#169; 2013 (MIT, ERCIM, Keio, Beihang)" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--meta name="duration" content="5" / -->
+    <link rel="stylesheet" type="text/css" media="screen, projection, print" href="../../lib/Slidy/css/slidy.css" />
+    <script src="../../lib/Slidy/js/slidy.js" charset="utf-8" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" media="screen, projection, print" href="../../lib/Slidy/css/w3c-black.css" />
+    <style type="text/css">
+        div.slide ul li {
+            list-style: none;
+            background-image: none
+        }
+        
+        .image-center {
+            text-align: center;
+        }
+        
+        .image-right {
+            float: right;
+            margin: 0 1em 1em 1em;
+        }
+        
+        .image-left {
+            float: left;
+            margin: 0 1em 1em 1em;
+        }
+        
+        .xl {
+            font-size: 200%;
+            line-height: 1em;
+        }
+        
+        .l {
+            font-size: 150%;
+        }
+        
+        h1 del {
+            color: #eee;
+        }
+        
+        .caption,
+        .caption-soft {
+            font-size: 60%;
+            text-align: center;
+            color: #aaa;
+            display: block;
+            margin-top: -1em
+        }
+        
+        .caption-soft a {
+            color: #bbb;
+        }
+        
+        .buzzwords li {
+            display: inline;
+        }
+        
+        blockquote#borde>*:first-child {
+            border: double red 1em;
+            -moz-border-image: url("img/border.png") 27 round stretch;
+            -webkit-border-image: url("img/border.png") 27 round stretch;
+            -o-border-image: url("img/border.png") 27 round stretch;
+            border-image: url("img/border.png") 27 round stretch;
+            padding: 1ex;
+        }
+        
+        blockquote#borde>*:last-child {
+            text-align: right;
+        }
+        
+        blockquote#borde {
+            border: 2px solid black;
+            padding: 1em;
+            -moz-border-radius: 3em;
+            -webkit-border-radius: 3em;
+            -o-border-radius: 3em;
+            border-radius: 3em;
+        }
+        
+        table {
+            font-size: 14px;
+            font-family: Arial;
+            color: black;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: none;
+        }
+        
+        td {
+            border: 1px solid black;
+            padding-right: 0.5ex;
+            padding-left: 0.5ex;
+            white-space: pre
+        }
+        
+        th {
+            border: 1px solid black;
+            background: #33cc4c;
+            color: black;
+            text-shadow: rgba(255, 255, 255, 0.8) 2px 2px 2px;
+            text-align: left;
+        }
+        
+        thead th {
+            padding-right: 1em;
+            padding-left: 1em;
+        }
+        
+        div.slide h1 {
+            padding-left: 1em;
+        }
+        
+        @font-face {
+            font-family: 'JottFLFBold';
+            src: url('fonts/JottFLF/JottFLF-Bold.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'EnglandHandDB';
+            src: url('fonts/england/england.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'ProclamateLight';
+            src: url('fonts/proclamate/proclamate_light.woff') format('woff');
+        }
+        
+        blockquote#fuentes>*:first-child:before {
+            content: "“ ";
+            display: inline;
+            white-space: pre;
+        }
+        
+        blockquote#fuentes>*:first-child:lang(fr):before {
+            content: "« ";
+            display: inline;
+            white-space: pre;
+            font-family: Arial;
+        }
+        
+        blockquote#fuentes>*:first-child:after {
+            content: " ”";
+            display: inline;
+            white-space: pre;
+        }
+        
+        blockquote#fuentes>*:first-child:lang(fr):after {
+            content: " »";
+            display: inline;
+            white-space: pre;
+            font-family: Arial;
+        }
+        
+        blockquote#fuentes>*:first-child {
+            border: 1em solid black;
+            -moz-border-image: url("img/border2.png") 35 round round;
+            -webkit-border-image: url("img/border2.png") 35 round round;
+            -o-border-image: url("img/border2.png") 35 round round;
+            border-image: url("img/border2.png") 35 round round;
+            padding: 2ex;
+            font-family: EnglandHandDB;
+            text-shadow: white 3px 3px 1px;
+        }
+        
+        blockquote#fuentes *:first-child span {
+            font-family: ProclamateLight;
+        }
+        
+        blockquote#fuentes p:last-child {
+            text-align: right;
+            font-size: smaller;
+            font-family: JottFLFBold;
+        }
+        
+        blockquote#fuentes {
+            background-image: url('img/background_cons.png');
+            background-repeat: repeat;
+            padding: 1em;
+            -moz-border-radius: 2em;
+            -webkit-border-radius: 2em;
+            -o-border-radius: 2em;
+            border-radius: 2em;
+            border: none;
+            text-shadow: none;
+            color: black;
+            -moz-box-shadow: rgba(0, 0, 0, 0.4) 10px 10px 10px;
+            -webkit-box-shadow: rgba(0, 0, 0, 0.4) 10px 10px 10px;
+            box-shadow: rgba(0, 0, 0, 0.4) 10px 10px 10px;
+        }
+        
+        #fuentes em {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        
+        body {
+            background: transparent url("img/adwyscon1_watermark.png") 290px 570px no-repeat;
+        }
+        
+        pre em {
+            color: #E42020;
+        }
+        
+        .verde {
+            color: #51C105;
+        }
+        
+        .name {
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- background -->
+    <div class="background">
+        <object id="head-logo" title="W3C logo" type="image/svg+xml" data="../../lib/Slidy/graphics/CTIC_CT-W3C_blanco.svg">
+	<img src="../../lib/Slidy/graphics/CTIC_CT-W3C_blanco.png" alt="W3C España - CTIC Centro Tecnológico" id="head-logo-fallback" />
+  </object>
+    </div>
+    <!-- Cover -->
+    <div class="slide cover">
+        <div style="float:left; z-index:-10000; bottom:-20%; left: -15%; position: absolute">
+            <object style="width: 200%; height:200%;" title="HTML5" type="image/svg+xml" data="img/HTML5_Badge.svg">HTML5</object>
+        </div>
+
+        <h1>W3C y la Plataforma Web Abierta</h1>
+        <p class="subtitle"><a href="/Personal/Martin">Martín Álvarez-Espinar</a> <em>(<a href="http://www.w3c.es">W3C Spain Office</a> &ndash; <a href="http://ct.ctic.es/web/contenidos/en">CTIC</a>)</em></p>
+    </div>
+    <!-- Content -->
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Un mundo en transición</h1>
+        <object title="I've seen the future, it's in my browser" data="img/HTML5_sticker.svg" type="image/svg+xml" class="svg" type="image/svg+xml" style="width: 90%; height:80%;">I've seen the future, it's in my browser</object>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Historia de la Web</h1>
+        <p style="width:100%; overflow: hidden;">
+            <a href="http://www.w3.org/2005/01/timelines/description"><img alt="Historia del W3C" src="img/timeline-w3c.png" /></a>
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>La "Web" en 1989</h1>
+        <p style="width:100%; overflow: hidden;">
+            <a href="http://www.w3.org/2005/01/timelines/description"><img alt="Historia del W3C (señalado 1989)" src="img/timeline-w3c_1989.png" /></a>
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>(1989) El primer boceto</h1>
+        <p class="center"><img alt="Propuesta de organización de la información de Tim Berners-Lee" src="img/proposal.gif" /><span class="caption"><a href="http://www.w3.org/History/1989/proposal.html">Information Management: A Proposal &mdash; Tim Berners-Lee, CERN</a></span></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>La Web en 1990</h1>
+        <p style="width:100%; overflow: hidden;">
+            <a href="http://www.w3.org/2005/01/timelines/description"><img alt="Historia del W3C (señalado 1990)" src="img/timeline-w3c_1990.png" /></a>
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>(1990) WorldWideWeb</h1>
+        <p class="image-center" style="margin:0"><img height="550" alt="Pantallazo del WorldWideWeb, primer navegador de la historia" src="img/worldwideweb.gif" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>La Web crece</h1>
+        <p style="width:100%; overflow: hidden;">
+            <a href="http://www.w3.org/2005/01/timelines/description"><img alt="Historia del W3C (señalado 1994)" src="img/timeline-w3c_1994.png" /></a>
+        </p>
+    </div>
+    <!-- =========================================== -->
+    <div class="slide">
+        <h1><span xml:lang="en" lang="en">World Wide Web Consortium</span></h1>
+        <p class="image-right"><img alt="Tim Berners-Lee" src="img/timbl.png" </p>
+            <ul class="l">
+                <li>Organismo <strong class="xl">neutro</strong> fundado en 1994 por <a href="http://www.w3.org/People/Berners-Lee/" title="Información sobre Tim Berners-Lee">Tim Berners-Lee</a></li>
+                <li><span class="xl">60</span> personas en el <a href="http://www.w3.org/People" hreflang="en">Team</a></li>
+                <li><span class="xl">382</span> <a href="http://www.w3.org/Consortium/Member/List" title="Lista de Miembros" hreflang="en">Miembros</a></li>
+                <li><span class="xl">+70</span> <a href="http://www.w3.org/2003/02/W3COrg.svg" title="Gráfico sobre las actividades y grupos del W3C">Grupos del W3C</a> (con más de <span class="xl">1.500</span> investigadores)</li>
+                <li>Relaciones con otros organismos estandarizadores</li>
+            </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Miembros en España</h1>
+        <div class="center">
+            <img src="img/es_members.png" alt="20 Miembros en España" />
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Realmente <span xml:lang="en" lang="en" style="font-style:italic">WorldWide</span></h1>
+        <div class="center">
+            <img src="img/w3c-world.png" alt="El mundo, con puntos que indican las sedes centrales y las oficinas" />
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>W3C.es @ CTIC</h1>
+        <p class="image-center"><img alt="Vista del edificio de CTIC donde se encuentra la Oficina del W3C en España" src="img/oficinaW3C.jpg" /></p>
+    </div>
+    <!-- =========================================== -->
+    <div class="slide">
+        <h1>¿Qué hace el <abbr title="World Wide Web Consortium" xml:lang="en" lang="en">W3C</abbr>?</h1>
+        <p>Especificaciones, directrices y herramientas:</p>
+        <p id="especificaciones" style="margin:1em 0 1em 0; min-width: 800px;  min-height: 300px; background-color: #FFFFFF;  text-align: justify;  "><a href="http://www.w3.org/Voice/" style="font-size: 33px; color: #FF6600; text-decoration: none;">Voice</a> <a href="http://www.w3.org/Graphics/WebCGM/" style="font-size: 33px; color: #FF6666; text-decoration: none;">WebCGM</a> <a href="http://www.w3.org/PICS/"
+                style="font-size: 33px; color: #80ff80; text-decoration: none;">PICS</a> <a href="http://www.w3.org/People/Raggett/tidy/" style="font-size: 41px; color: #FF6600; text-decoration: none;">HTMLTidy</a>
+            <a href="http://www.w3.org/2002/ws/databinding/" style="font-size: 46px; color: #FF6666; text-decoration: none;">Databinding</a>
+            <a href="http://www.w3.org/2001/sw/WebOnt/" style="font-size: 33px; color: #80ff80; text-decoration: none;">WebOntology</a>
+            <a href="http://www.w3.org/html/" style="font-size: 50px; color: #FF6666; text-decoration: none;">HTML</a> <a href="http://www.w3.org/2004/CDF/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">CompoundDocumentFormats</a>
+            <a href="http://www.w3.org/TR/rdf-sparql-query/" style="font-size: 33px; color: #80ff80; text-decoration: none;">SPARQL</a> <a href="http://www.w3.org/WAI/" style="font-size: 33px; color: #FF6600; text-decoration: none;">WAI</a> <a href="http://www.w3.org/2006/webapi/"
+                style="font-size: 33px; color: #80ff80; text-decoration: none;">Web APIs</a>
+            <a href="http://www.w3.org/Library/" style="font-size: 33px; color: #FF6666; text-decoration: none;">Libwww</a> <a href="http://www.w3.org/2001/ppwg/" style="font-size: 33px; color: #80ff80; text-decoration: none;">PatentPolicy</a>
+            <a href="http://www.w3.org/2004/OWL/" style="font-size: 33px; color: #FF6666; text-decoration: none;">OWL</a> <a href="http://www.w3.org/AudioVideo/TT/" style="font-size: 33px; color: #80ff80; text-decoration: none;">TimedText</a>
+            <a href="http://www.w3.org/Encryption/2001/" style="font-size: 33px; color: #FF6666; text-decoration: none;">XMLEncryption</a>
+            <a href="http://www.w3.org/2002/mmi/" style="font-size: 33px; color: #FF6600; text-decoration: none;">Multimodal</a>
+            <a href="http://www.w3.org/XML/" style="font-size: 50px; color: #46aaf1; text-decoration: none;">XML</a> <a href="http://www.w3.org/2006/rwc/" style="font-size: 35px; color: #80ff80; text-decoration: none;">RichWebClients</a>
+            <a href="http://www.w3.org/XML/Processing/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">XMLProcessing</a>
+            <a href="http://www.w3.org/2001/di/" style="font-size: 42px; color: #FF6600; text-decoration: none;">DeviceIndependence</a>
+            <a href="http://www.w3.org/Addressing/" style="font-size: 33px; color: #FF6666; text-decoration: none;">URI/URL</a>
+            <a href="http://www.w3.org/DOM/" style="font-size: 44px; color: #FF6600; text-decoration: none;">DOM</a> <a href="http://www.w3.org/Protocols/" style="font-size: 50px; color: #80ff80; text-decoration: none;">HTTP</a> <a href="http://www.w3.org/WAI/"
+                style="font-size: 50px; color: #FF6666; text-decoration: none;">Accessibility</a>
+            <a href="http://www.w3.org/RDF/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">RDF</a> <a href="http://www.w3.org/2006/appformats/" style="font-size: 33px; color: #80ff80; text-decoration: none;">WebApplicationFormats</a>
+            <a href="http://www.w3.org/XML/Linking" style="font-size: 33px; color: #FF6666; text-decoration: none;">XMLBase</a>
+            <a href="http://www.w3.org/Jigsaw/" style="font-size: 50px; color: #80ff80; text-decoration: none;">Jigsaw</a> <a href="http://www.w3.org/XML/Linking" style="font-size: 33px; color: #FF6666; text-decoration: none;">XLink</a> <a href="http://www.w3.org/International/"
+                style="font-size: 35px; color: #FF6600; text-decoration: none;">I18N</a> <a href="http://www.w3.org/P3P/" style="font-size: 33px; color: #80ff80; text-decoration: none;">P3P</a> <a href="http://www.w3.org/QA/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">QualityAssurance</a>
+            <a href="http://www.w3.org/2001/XKMS/" style="font-size: 33px; color: #FF6666; text-decoration: none;">XMLKeyManagement</a>
+            <a href="http://www.w3.org/UbiWeb/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">UbiquitousWeb</a>
+            <a href="http://www.w3.org/2002/mmi/ink" style="font-size: 37px; color: #FF6600; text-decoration: none;">InkML</a> <a href="http://www.w3.org/2005/Incubator/" style="font-size: 39px; color: #46aaf1; text-decoration: none;">Incubator</a>
+            <a href="http://www.w3.org/XML/Linking" style="font-size: 33px; color: #FF6600; text-decoration: none;">XPath</a> <a href="http://www.w3.org/2002/ws/" style="font-size: 33px; color: #80ff80; text-decoration: none;">WebServices</a>
+            <a href="http://www.w3.org/MarkUp/Forms/" style="font-size: 33px; color: #FF6666; text-decoration: none;">XForms</a> <a href="http://www.w3.org/Style/CSS/" style="font-size: 48px; color: #46aaf1; text-decoration: none;">CSS</a> <a href="http://www.w3.org/2000/xp/Group/"
+                style="font-size: 50px; color: #FF6600; text-decoration: none;">SOAP</a> <a href="http://www.w3.org/Mobile/" style="font-size: 33px; color: #80ff80; text-decoration: none;">Mobile</a> <a href="http://www.w3.org/AudioVideo/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">SMIL</a>            <a href="http://www.w3.org/2005/rules/" style="font-size: 33px; color: #FF6666; text-decoration: none;">Rules</a> <a href="http://www.w3.org/Graphics/SVG/" style="font-size: 33px; color: #80ff80; text-decoration: none;">SVG</a> <a href="http://www.w3.org/Amaya/"
+                style="font-size: 50px; color: #46aaf1; text-decoration: none;">Amaya</a> <a href="http://www.w3.org/2001/sw/" style="font-size: 33px; color: #FF6666; text-decoration: none;">SemanticWeb</a>
+            <a href="http://www.w3.org/Math/" style="font-size: 33px; color: #80ff80; text-decoration: none;">MathML</a>
+        </p>
+        <blockquote>
+            Recomendaciones tecnológicas <strong>abiertas</strong> del W3C, probablemente con la <a href="http://www.w3.org/Consortium/Patent-Policy/" hreflang="en-us">política de patentes</a> más
+            <strong>transparente</strong> en Internet </blockquote>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>+200 Estándares</h1>
+        <div class="center">
+            <img src="img/timeline_recs.png" alt="Más de 200 recomendaciones o estándares en estos últimos 20 años del W3C" />
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>W3C #1 out of MIT150</h1>
+        <div class="center"><img src="img/mit150.png" alt="Los 150 del MIT" /></div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Los fundamentos de la Web</h1>
+        <ul>
+            <li>La Web se basa en una gran <strong>diversidad de tecnologías</strong></li>
+            <li>Ninguna tecnología puede pretender cubrir todas las necesidades de la Web</li>
+            <li>La <em>construcción</em> de los cimientos de la Web requiere seguir un <strong>proceso claro y efectivo</strong></li>
+            <li>Es imprescindible asegurar la <strong>interoperabilidad</strong> de las tecnologías</li>
+            <li><strong>La Web debe ser universal y para todo el mundo</strong></li>
+            <li>Ojo con las patentes de tecnologías (<a href="http://www.w3.org/Consortium/Patent-Policy/" hreflang="en-us">Política de Patentes W3C</a>)</li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Beneficios de los estándares</h1>
+        <ul class="l">
+            <li><em><span class="xl">Ahorro de costes</span> para las empresas</em>
+                <ul>
+                    <li>Cooperación con los <strong>mejores expertos de la Web</strong> - ahorro de consultorías</li>
+                    <li><strong>Compartir inversión I+D</strong>: más allá de los recursos de una sola organización</li>
+                    <li>Intercambio de <strong>ideas y experiencias</strong></li>
+                    <li>Las mejores especificaciones gracias a una <strong>amplia revisión</strong></li>
+                    <li><strong>Libres de derechos y gratuitos</strong></li>
+                    <li><strong>Compartir el coste de las pruebas</strong> de desarrollo</li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Beneficios de los estándares</h1>
+        <ul class="l">
+            <li><em>Aumento de <span class="xl">venta de productos y servicios</span></em>
+                <ul>
+                    <li>Los estándares abiertos <strong>aumentan la innovación y la competencia</strong></li>
+                    <li>Incremento del crecimiento gracias a la <strong>confianza del mercado</strong></li>
+                    <li>Los clientes <strong>tienen más confianza</strong> en soluciones basadas en estándares propietarias</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Cómo se construyen</h1>
+        <div class="center">
+            <object title="Proceso de creación de las Recomendaciones del W3C, vete a http://www.w3.org/Consortium/Process/ para más detalles" data="img/documentProcess.svg" height="80.00%" type="image/svg+xml" class="svg"></object></div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>La Web evoluciona</h1>
+        <p class="l">Desde la <strong>Web de documentos</strong> (1.0) hacia una Web...</p>
+        <ul>
+            <li>de los <strong>creadores y consumidores</strong> (2.0)</li>
+            <li>de la <strong>interacción</strong></li>
+            <li>de los <strong>datos y servicios</strong> (3.0)</li>
+            <li>...(X.0)</li>
+        </ul>
+        <p class="incremental xl">Pero con un objetivo claro</p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Una Web única y universal</h1>
+        <p class="xl">
+            ...ofrece la <strong>misma información y servicios</strong> a los usuarios, independientemente de <strong>quienes</strong> son, <strong>donde</strong> están, los <strong>sistemas</strong> que usan o la forma mediante la que se conectan
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Acceso universal</h1>
+        <div style="float:left; width: 50%">
+            <p class="xl">Independiente de <strong>las características de los <span>dispositivos de acceso</span></strong></p>
+            <ul>
+                <li>PCs, teléfonos, TVs, PDAs, dispositivos en
+                    <em>electrodomésticos</em> o <em>en automóviles</em>...</li>
+                <li>limitación en: ancho de banda, pantalla, colores, sonido...</li>
+            </ul>
+        </div>
+        <div style="float:left; width: 48%">
+            <img src="img/toylet.png" alt="Urinario conectado a un videojuego" /><br/><span class="caption-soft">Toylet - Foto: <a href="http://www.wired.com/images_blogs/gamelife/2011/01/toylet.png">Wired</a></span>
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>...independientemente de...</h1>
+        <div style="float:left; width: 50%">
+            <ul>
+                <li><strong class="xl">...las “discapacidades” de los usuarios</strong>
+                    <ul>
+                        <li>distinción de colores, ceguera, ...</li>
+                        <li>dificultades de manejo de teclados, ratón, ...</li>
+                        <li>dislexia, dificultades cognitivas o neurológicas, ...</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <p style="float:right;">
+            <img src="img/braille_note.jpg" alt="Portátil con teclado Braille" height="400" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>...independientemente de...</h1>
+        <div style="float:left; width: 50%">
+            <ul>
+                <li><strong class="xl">...diferencias culturales, geográficas o
+    lingüísticas</strong>
+                    <ul>
+                        <li>sentidos de escritura, diferentes tipos de teclados, ...</li>
+                        <li>formato de fechas, números de teléfono, códigos postales, IDs,...</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <p style="float:right; width: 40%; padding-right: 2%" ">
+  <img src="img/nikkei.jpg " alt="Panel informativo sobre un mercado de valores " height="380 " /></p>
+</div>
+<!-- ====================================================================== -->
+<div class="slide ">
+<h1>Muy importante la Web Móvil</h1>
+<p style="float:left; margin: 0; margin-top: -1.3em; width:100%; overflow: hidden ">
+  <img src="img/desierto.jpg " alt="En el desierto con el móvil " /><a class="caption-soft " href="http://www.flickr.com/photos/dos82/4045946783/ ">http://www.flickr.com/photos/dos82/4045946783/</a></p>
+</div>
+<!-- ====================================================================== -->
+<div class="slide ">
+<h1>Y cada vez más</h1>
+<p class="center " >
+  <img src="img/mobile.jpg " alt="Crecimiento del número de dispositivos conectados en el mundo " /></p>
+</div>
+<!-- ====================================================================== -->
+<div class="slide ">
+<h1>¿Por qué estándares?</h1>
+<div class="center " >
+  <img alt="Firefox OS, iOS, Android, Tizen "
+  src="img/mobile_OS.jpg "
+  />
+</div>
+</div>
+<!-- ====================================================================== -->
+<div class="slide ">
+<h1>La solución</h1>
+<div><img src="img/openwebplatform1.png " width="1000 " alt="La Plataforma Web Abierta como base de todos los sectores "  /></div>
+</div>
+<!-- ====================================================================== -->
+<div class="slide ">
+    <h1>La Plataforma Web Abierta</h1>
+	 <ul>
+    	<li><strong class="xl ">Interfaces</strong>: Geo-localización, giroscopios, cámaras, NFC, …</li>
+		<li><strong class="xl ">Multimedia</strong>: Audio y vídeo, gráficos, animaciones, fuentes de alta calidad, …</li>
+		<li><strong class="xl ">Multidispositivo</strong>: varias resoluciones, táctil, teclados, voz, vibración, …</li>
+		<li><strong class="xl ">Comunicaciones</strong>: cliente-servidor, real-time, p2p, sockets, …</li>
+		<li><strong class="xl ">Sociedad</strong>: privacidad, seguridad, multilingüe, accesibilidad</li>
+    	<li><strong class="xl ">Procesam. automático</strong>: semántica, interoperabilidad,  …</li>
+    </ul>
+</div>
+<!-- ====================================================================== -->
+<div class="slide ">
+    <h1>Interacción con la Web</h1>
+	<p class="l "><strong>Interfaz de usuario avanzada</strong> para mejorar la interacción</p>
+	<ul class="incremental l ">
+		<li>Mejorando el lenguaje de primera generación, <em>HTML</em></li>
+		<li>Integrando otras tecnologías:
+			<ul>
+				<li>CSS (<strong>estilos</strong> atractivos)</li>
+				<li>SVG (<strong>gráficos</strong> interactivos)</li>
+				<li>MathML (representaciones <strong>matemáticas</strong>)</li>
+				<li><strong>Vídeo, Canvas, Geolocalización</strong>, ...</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<!-- ====================================================================== -->
+<div class="slide ">
+    <h1>HTML5: la estrella</h1>
+	<div class="center "><img src="img/html5-topper.png " alt="HTML5 "/></div>
+</div>
+<!-- ====================================================================== -->
+<div class="slide ">
+    <h1>HTML5, no sólo presentación</h1>
+	<p><strong class="l ">Semántica en los documentos</strong> (RDFa)</p>
+	<p class="image-center ">
+		<img src="img/presentation-vs-semantics.png " width="700 " alt="2 Documentos donde se incluye información de presentación en uno y en el otro información semántica (capítulo, autor, etc.) " />
+	</p>
+</div>
+<!-- ====================================================================== -->
+<div class="slide ">
+    <h1>Las máquinas lo entienden</h1>
+	<p class="image-center " style="margin-top:-1em ">
+		<img src="img/avatar.png "  alt="Búsqueda de la palabra AVATAR en Google, con un resultado adecuado a la película " />
+	</p>
+</div>
+<!-- ====================================================================== -->
+<div class="slide ">
+    <h1>Las máquinas lo entienden</h1>
+	<p class="image-center " style="margin-top:-1em ">
+		<img src="img/montevideo.png "  alt="Resultado de la búsqueda Montevideo en Yahoo, donde interpreta que es una ciudad " />
+	</p>
+</div>
+<!-- ====================================================================== -->
+<div class="slide ">
+    <h1>(Meta)datos en los Documentos</h1>
+	<ul>
+		<li class="xl ">RDFa</li>
+	</ul>
+	<br/>
+<pre>
+&lt;p typeof="<span class="verde">foaf:Person</span>" xmlns:foaf="http://xmlns.com/foaf/0.1/"&gt;
+            <strong class="name">Este es el sitio web de</strong> &lt;em property="<span class="verde">foaf:name</span>"&gt;<strong class="name">John Smith</strong>&lt;/em&gt; <strong class="name">y...</strong> &lt;/p&gt;
+            </pre>
+            <br/>
+            <ul>
+                <li><strong>Transparente</strong> para los usuarios y muy útil para las máquinas</li>
+            </ul>
+    </div>
+    <!-- =========================================== -->
+    <div class="slide">
+        <h1>Llevar la semántica a la Web</h1>
+        <p class="center"><img alt="Las aplicaciones podrán intercambiar datos comprendiendo su concepto" src="img/SemWebAppMetro.png" /></p>
+    </div>
+    <!-- =========================================== -->
+    <div class="slide">
+        <h1>El futuro en tu navegador</h1>
+        <p style="float: right"><img alt="Vehículo de la película Regreso al futuro" src="img/delorean.jpg" /></p>
+        <ul class="xl">
+            <li>Vídeo, Audio, Gráficos (2D/3D)</li>
+            <li>Rendimiento, Interacción multimodal</li>
+            <li>…</li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+
+        <script type="text/javascript">
+            var vid = null;
+            var play = null;
+            var pause = null;
+            var rewind = null;
+
+            function init() {
+                vid = document.getElementById("vid");
+                play = document.getElementById("play");
+                pause = document.getElementById("pause");
+                rewind = document.getElementById("rewind");
+            }
+
+            function playVideo() {
+                vid.play();
+                play.style.color = 'black';
+                pause.style.color = '#999';
+                rewind.style.color = '#999';
+            }
+
+            function pauseVideo() {
+                vid.pause();
+                play.style.color = '#999';
+                pause.style.color = 'black';
+                rewind.style.color = '#999';
+            }
+
+            function rewindVideo() {
+                vid.currentTime = 0;
+                play.style.color = '#999';
+                pause.style.color = '#999';
+                rewind.style.color = 'black';
+            }
+        </script>
+        <h1><code>&lt;video&gt;</code> de forma natural</h1>
+        <pre>
+&lt;video src='myMovie' id='vid' /&gt;
+	
+var vid = document.getElementById("vid");
+<span id='play' onMouseOver="playVideo();" style='cursor: pointer; color: #999;'>vid.play();</span>
+<span id='pause' onMouseOver="pauseVideo();" style='cursor: pointer; color: #999;'>vid.pause();</span>
+<span id='rewind' onMouseOver="rewindVideo();" style='cursor: pointer; color: black;'>vid.currentTime = 0;</span>
+	</pre>
+
+        <p style='text-align: left; position: absolute; width: 320px; height:240px; left: 30%; top: 50%; z-index: 2; '>
+            Párrafo HTML sobre el vídeo
+        </p>
+        <p style='text-align: right; position: absolute; width: 320px; height:240px; left: 30%; top: 65%; z-index: 0; color: red'>
+            <span style="background-color: yellow">La opacidad de CSS permite al vídeo ser transparente parcialmente.</span>
+        </p>
+
+        <video style='opacity: 0.5; position: absolute; top: 50%; left: 40%; width: 320px; height:240px; z-index: 1' src='video/A_New_Computer--small.ogg' width='360' height='240' id="vid">
+	    <p>Este vídeo no puede ser visualizado, el navegador no soporta HTML 5</p>
+	</video>
+        <p style='clear:both;font-size: x-small;text-align:right'>Pasa el ratón por encima de <code>vid.play()</code> para controlar (arrancar/pausar/detener) el vídeo [<a href="http://www.polycrystal.org/lego/movies.html">http://www.polycrystal.org/lego/movies.html</a>].</p>
+        <script>
+            init();
+        </script>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1><code>&lt;canvas&gt;</code> en el documento</h1>
+        <script type="text/javascript">
+            function evalcanvas() {
+                canvas = document.getElementById('canvas_live');
+                textarea = document.getElementById('textarea');
+                ctx = canvas.getContext('2d');
+                eval(textarea.value);
+            }
+        </script>
+
+        <canvas id='canvas_live' width='500' height='400' style='border: 3px solid white; margin:10px;background:#aaaaaa;'>
+	</canvas>
+        <div style='width: 40%; float: right'>
+            <textarea rows='15' cols='45' id='textarea'>
+ctx.fillStyle = "rgb(0, 162, 232)";
+ctx.fillRect(135, 85, 125, 125);
+
+ctx.beginPath();
+ctx.lineWidth = 5;  
+ctx.strokeStyle = "rgb(0, 0, 0)";
+ctx.arc(143, 280, 80, 0, 2*Math.PI, false);
+ctx.stroke();
+
+ctx.fillStyle = "rgba(255, 255, 0, 0.75)";
+ctx.fillRect(210, 180, 125, 125);
+	</textarea>
+            <br />
+            <button onclick='evalcanvas();'>Execute</button>
+        </div>
+        <p>Ejemplos: <a href="ejemplos/canvas.html">Gantt</a>, <a href="ejemplos/canvas/index.html">Canvas Painter</a>, <a href="http://9elements.com/io/projects/html5/canvas/">Canvas and Audio</a></p>
+
+    </div>
+
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Interacción</h1>
+        <div class="center"><img src="img/clock.png" alt="Reloj con el visor de la webcam integrado" /></div>
+        <p style="text-align:center; font-size:60%"><a href="http://www.shinydemos.com/clock/">shinydemos.com/clock/</a></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>HTML5 <code>&lt;canvas&gt;</code> + <code>&lt;video&gt;</code></h1>
+        <div class="center"><img width="900" src="img/fuel.png" alt="Interacción con ratón sobre una pantalla con luces" /></div>
+        <p style="text-align:center; font-size:60%"><a href="http://field-project.com">field-project.com</a>, <a href="ejemplos/canvasvideo.html">Video Destruction</a></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>WebGL + Web Workers + Video + ...</h1>
+        <div class="center"><img width="800" src="img/webgl.png" alt="Histagrama de los colores captados por la webcam" /></div>
+        <p style="text-align:center; font-size:60%"><a href="http://www.shinydemos.com/3d-color-histogram/">shinydemos.com/3d-color-histogram/</a></p>
+    </div>
+
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>No todo es HTML5</h1>
+        <div class="center"><img src="img/openwebplatform.png" alt="Technologías de la Open Web Platform" /></div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>CSS3</h1>
+        <div>
+            <object title="Tecnologías CSS" data="img/CSS-diagram.svg" type="image/svg+xml" class="svg"></object>
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1><abbr title="Web Open Font Format">WOFF</abbr></h1>
+        <pre>
+@font-face {
+  font-family: 'Pretty';
+  src: url('Pretty.woff') format('woff') url('Pretty.eot') format('eot'); }
+</pre>
+        <blockquote lang='es' id="fuentes">
+            <p>
+                <span>En un lugar de la Mancha</span>, de cuyo nombre no quiero acordarme, no ha mucho que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor. Una olla algo más de vaca que carnero, salpicón las
+                más noches, duelos y quebrantos los sábados, lentejas los viernes y algún palomino de añadidura los domingos, consumían tres partes de su hacienda.
+            </p>
+            <p>(Don Quijote de La Mancha. Primera parte)</p>
+        </blockquote>
+        <p>Ofrece un formato de fuente común para los navegadores Web</p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>MathML</h1>
+        <div style='width: 45%; float: right'>
+            <pre>&lt;math>
+  &lt;mrow>
+    &lt;munderover>
+      &lt;mo>&#x02211;&lt;/mo>
+      &lt;mrow>&lt;mi>i&lt;/mrow>
+      &lt;mi>p&lt;/mi>
+    &lt;/munderover>
+    &lt;msub>
+      &lt;mi>a&lt;/mi>
+      &lt;mrow>
+        &lt;mi>i&lt;/mi>
+        &lt;mi>j&lt;/mi>
+      &lt;/mrow>
+    &lt;/msub>
+    &lt;msub>
+      &lt;mi>b&lt;/mi>
+      &lt;mrow>
+        &lt;mi>j&lt;/mi>
+        &lt;mi>k&lt;/mi>
+      &lt;/mrow>
+    &lt;/msub>
+  &lt;/mrow>
+&lt;/math></pre>
+        </div>
+        <div style='width: 45%'>
+            <ul>
+                <li><math mode="display" xmlns="http://www.w3.org/1998/Math/MathML">
+	  <mrow>
+	    <munderover>
+	      <mo>&#x02211;</mo>
+	      <mrow>
+	        <mi>i</mi>
+	        <mo>=</mo>
+	        <mn>1</mn>
+	      </mrow>
+	      <mi>p</mi>
+	    </munderover>
+	    <munderover>
+	      <mo>&#x02211;</mo>
+	      <mrow>
+	        <mi>j</mi>
+	        <mo>=</mo>
+	        <mn>1</mn>
+	      </mrow>
+	      <mi>q</mi>
+	    </munderover>
+	
+	    <munderover>
+	      <mo>&#x02211;</mo>
+	      <mrow>
+	        <mi>k</mi>
+	        <mo>=</mo>
+	        <mn>1</mn>
+	      </mrow>
+	      <mi>r</mi>
+	    </munderover>
+	    <msub>
+	      <mi>a</mi>
+	      <mrow>
+	        <mi>i</mi>
+	        <mi>j</mi>
+	      </mrow>
+	    </msub>
+	    <msub>
+	      <mi>b</mi>
+	      <mrow>
+	        <mi>j</mi>
+	        <mi>k</mi>
+	      </mrow>
+	    </msub>
+	    <msub>
+	      <mi>c</mi>
+	      <mrow>
+	        <mi>k</mi>
+	        <mi>i</mi>
+	      </mrow>
+	    </msub>
+	  </mrow>
+	</math>
+                </li>
+                <li>
+                    <math mode="display" xmlns="http://www.w3.org/1998/Math/MathML">
+	  <mrow>
+	    <mi>f</mi>
+	    <mo stretchy="false">(</mo>
+	
+	    <mi>x</mi>
+	    <mo stretchy="false">)</mo>
+	    <mo>=</mo>
+	    <mrow>
+	      <mo>{</mo>
+	      <mtable>
+	        <mtr>
+	
+	          <mtd columnalign="center">
+	            <mrow>
+	              <mn>1</mn>
+	              <mo>/</mo>
+	              <mn>3</mn>
+	            </mrow>
+	          </mtd>
+	
+	          <mtd columnalign="left">
+	            <mrow>
+	              <mtext>if</mtext>
+	              <mn>0</mn>
+	              <mo>&#x02264;</mo>
+	              <mi>x</mi>
+	              <mo>&#x02264;</mo>
+	
+	              <mn>1</mn>
+	              <mo>;</mo>
+	            </mrow>
+	          </mtd>
+	        </mtr>
+	        <mtr>
+	          <mtd columnalign="center">
+	            <mrow>
+	
+	              <mn>2</mn>
+	              <mo>/</mo>
+	              <mn>3</mn>
+	            </mrow>
+	          </mtd>
+	          <mtd columnalign="center">
+	            <mrow>
+	
+	              <mtext>if</mtext>
+	
+	              <mn>3</mn>
+	              <mo>&#x02264;</mo>
+	              <mi>x</mi>
+	              <mo>&#x02264;</mo>
+	              <mn>4</mn>
+	
+	              <mo>;</mo>
+	            </mrow>
+	          </mtd>
+	        </mtr>
+	        <mtr>
+	          <mtd columnalign="center">
+	            <mn>0</mn>
+	          </mtd>
+	
+	          <mtd columnalign="left">
+	            <mtext>elsewhere.</mtext>
+	          </mtd>
+	        </mtr>
+	      </mtable>
+	    </mrow>
+	  </mrow>
+	</math>
+                </li>
+
+                <li>
+                    <math mode="display" xmlns="http://www.w3.org/1998/Math/MathML">
+	  <mrow>
+	    <mo>det</mo>
+	    <mo>|</mo>
+	    <mtable>
+	      <mtr>
+	        <mtd columnalign="center">
+	          <msub>
+	
+	            <mi>c</mi>
+	            <mn>0</mn>
+	          </msub>
+	        </mtd>
+	        <mtd columnalign="center">
+	          <msub>
+	            <mi>c</mi>
+	
+	            <mn>1</mn>
+	          </msub>
+	        </mtd>
+	        <mtd columnalign="center">
+	          <msub>
+	            <mi>c</mi>
+	            <mn>2</mn>
+	
+	          </msub>
+	        </mtd>
+	        <mtd columnalign="center">
+	          <mo>&#8230;</mo>
+	        </mtd>
+	        <mtd columnalign="center">
+	          <msub>
+	            <mi>c</mi>
+	
+	            <mi>n</mi>
+	          </msub>
+	        </mtd>
+	      </mtr>
+	      <mtr>
+	        <mtd columnalign="center">
+	          <msub>
+	            <mi>c</mi>
+	
+	            <mn>1</mn>
+	          </msub>
+	        </mtd>
+	        <mtd columnalign="center">
+	          <msub>
+	            <mi>c</mi>
+	            <mn>2</mn>
+	
+	          </msub>
+	        </mtd>
+	
+	        <mtd columnalign="center">
+	          <msub>
+	            <mi>c</mi>
+	            <mn>3</mn>
+	          </msub>
+	
+	        </mtd>
+	
+	        <mtd columnalign="center">
+	          <mo>&#8230;</mo>
+	        </mtd>
+	        <mtd columnalign="center">
+	          <msub>
+	            <mi>c</mi>
+	            <mrow>
+	
+	              <mi>n</mi>
+	              <mo>+</mo>
+	              <mn>1</mn>
+	            </mrow>
+	          </msub>
+	        </mtd>
+	      </mtr>
+	
+	      <mtr>
+	        <mtd columnalign="center">
+	          <msub>
+	            <mi>c</mi>
+	            <mn>2</mn>
+	          </msub>
+	        </mtd>
+	        <mtd columnalign="center">
+	
+	          <msub>
+	            <mi>c</mi>
+	            <mn>3</mn>
+	          </msub>
+	        </mtd>
+	        <mtd columnalign="center">
+	          <msub>
+	            <mi>c</mi>
+	
+	            <mn>4</mn>
+	          </msub>
+	        </mtd>
+	        <mtd columnalign="center">
+	          <mo>&#8230;</mo>
+	        </mtd>
+	        <mtd columnalign="center">
+	          <msub>
+	
+	            <mi>c</mi>
+	            <mrow>
+	              <mi>n</mi>
+	              <mo>+</mo>
+	              <mn>2</mn>
+	            </mrow>
+	          </msub>
+	
+	        </mtd>
+	      </mtr>
+	      <mtr>
+	        <mtd columnalign="center">
+	          <mo>&#x022EE;</mo>
+	        </mtd>
+	        <mtd columnalign="center">
+	          <mo>&#x022EE;</mo>
+	        </mtd>
+	
+	        <mtd columnalign="center">
+	          <mo>&#x022EE;</mo>
+	        </mtd>
+	        <mtd columnalign="center"></mtd>
+	        <mtd columnalign="center">
+	          <mo>&#x022EE;</mo>
+	        </mtd>
+	      </mtr>
+	      <mtr>
+	
+	        <mtd columnalign="center">
+	          <msub>
+	            <mi>c</mi>
+	            <mi>n</mi>
+	          </msub>
+	        </mtd>
+	        <mtd columnalign="center">
+	          <msub>
+	
+	            <mi>c</mi>
+	            <mrow>
+	              <mi>n</mi>
+	              <mo>+</mo>
+	              <mn>1</mn>
+	            </mrow>
+	          </msub>
+	
+	        </mtd>
+	        <mtd columnalign="center">
+	          <msub>
+	            <mi>c</mi>
+	            <mrow>
+	              <mi>n</mi>
+	              <mo>+</mo>
+	
+	              <mn>2</mn>
+	            </mrow>
+	          </msub>
+	        </mtd>
+	        <mtd columnalign="center">
+	          <mo>&#8230;</mo>
+	        </mtd>
+	        <mtd columnalign="center">
+	
+	          <msub>
+	            <mi>c</mi>
+	            <mrow>
+	              <mn>2</mn>
+	              <mi>n</mi>
+	            </mrow>
+	          </msub>
+	
+	        </mtd>
+	      </mtr>
+	    </mtable>
+	    <mo>|</mo>
+	    <mo>&gt;</mo>
+	    <mn>0</mn>
+	  </mrow>
+	</math>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1><abbr title="Scalable Vector Graphics">SVG</abbr>: Gráficos Vectoriales</h1>
+        <div style="height:70%">
+            <object title="W3C Spain" data="img/eslogo-short-v.svg" type="image/svg+xml" class="svg">W3C Spain</object>
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1><abbr title="Scalable Vector Graphics">SVG</abbr>: Gráficos Vectoriales</h1>
+        <div style="height:250%; margin:-50%;">
+            <object style="float:left" title="W3C Spain" data="img/eslogo-short-v.svg" type="image/svg+xml" class="svg">W3C Spain</object>
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Geolocation API</h1>
+        <p class="image-center">
+            <a href="http://www.w3.org/TR/geolocation-API/"><img src="img/geo.png" alt="Logo Geo del W3C" /><br /> http://www.w3.org/TR/geolocation-API
+            </a>
+        </p>
+        <pre>
+function showMap(position) {
+  // Muestra un mapa centrado en:
+  // - position.coords.latitude
+  // - position.coords.longitude
+}
+
+// Petición de posicionamiento
+navigator.geolocation.getCurrentPosition(showMap);
+	</pre>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>System Applications WG</h1>
+        <p class="center"><a href="http://www.w3.org/2012/sysapps/">www.w3.org/2012/sysapps/</a></p>
+        <ul class="l">
+            <li>Contactos</li>
+            <li>Mensajería</li>
+            <li>Teléfono</li>
+            <li>Calendario ...</li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Juegos en la Plataforma Web Abierta</h1>
+        <div style="float: left"><img src="img/nvidia-shield-640x353.jpg" alt="Consola portatil de videojuegos con soporte de GamePAD API" /></div>
+        <ul class="xl">
+            <li><q>Code once run everywhere</q></li>
+            <li><a href="http://www.w3.org/TR/gamepad/">GamePAD API</a></li>
+            <li>…</li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Exclusivo para juegos</h1>
+        <div style="text-align: center; margin-top: 2em"><img src="img/nickelodeon-m-orange.png" alt="Nickelodeon" /></div>
+        <p style="padding: 1em 10em"><q class="xl">Technologies like HTML 5 allow us to create games and content that are playable across multiple platforms.</q>
+            <small>Dhimiter Bozo, Vice President Engineering, Nickelodeon Group</small></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Grandes usuarios</h1>
+        <p style="text-align: center"><img src="img/amazonhtml5.png" alt="Amazon HTML5" /><br>Kindle permite constucción de apps usando HTML5, JavaScript y CSS</p>
+    </div>
+    <div class="slide">
+        <h1>Grandes usuarios</h1>
+        <p style="text-align: center"><img src="img/netflix.jpg" alt="Netflix (imagen obtenida de Netflix.com)" /><br>Opta por el uso de HTML5 en lugar de Microsoft Siverlight</p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Muchas más piezas...</h1>
+        <ul class="buzzwords">
+            <li>HTML 5</li>
+            <li>CSS 2.1</li>
+            <li>CSS 3 Selectors</li>
+            <li>CSS 3 Media Queries</li>
+            <li>CSS 3 Text</li>
+            <li>CSS 3 Backgrounds and Borders</li>
+            <li>CSS 3 Colors</li>
+
+            <li>CSS 3 2D Transformations</li>
+            <li>CSS 3 3D Transformations</li>
+            <li>CSS 3 Transitions</li>
+            <li>CSS 3 Animations</li>
+            <li>CSS 3 Multi-Columns</li>
+            <li>CSS Namespaces</li>
+
+            <li>SVG 1.1</li>
+            <li><strong>WAI-ARIA 1.0</strong></li>
+            <li>MathML 2.0</li>
+            <li>ECMAScript 5</li>
+            <li>2D Context</li>
+            <li>WebGL</li>
+
+            <li>Web Storage</li>
+            <li>Indexed Database</li>
+            <li>Web Workers</li>
+            <li>Web Sockets Protocol/API</li>
+            <li>Geolocation</li>
+            <li>Server-Sent Events</li>
+
+            <li>Element Traversal</li>
+            <li>DOM Level 3 Events</li>
+            <li>Media Fragments</li>
+            <li>XMLHttpRequest</li>
+            <li>Selectors API</li>
+            <li>CSSOM View Module</li>
+
+            <li>Cross-Origin Resource Sharing</li>
+            <li>File API</li>
+            <li>RDFa</li>
+            <li>Microdata</li>
+            <li>WOFF</li>
+            <li>HTTP 1.1 part 1 to part 7</li>
+
+            <li>TLS 1.2 (updated)</li>
+            <li>IRI (updated)</li>
+            <li>&hellip;</li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Participa en el W3C</h1>
+        <p style="float:right; margin: 2em 3em 0 0;">
+            <a href="http://twitter.com/w3ces"><img src="img/twitter-bird.png" alt="Twitter" /></a>
+        </p>
+        <ul class="xl">
+            <li><a href="http://lists.w3.org/" hreflang="en">Listas de correo</a></li>
+            <li><a href="http://www.w3.org/community/" hreflang="en">Grupos de Comunidad</a></li>
+            <li>Revisión de <a href="http://www.w3.org/TR/">especificaciones</a></li>
+            <li><a href="http://www.w3.org/Consortium/Translation/#volunteer" hreflang="en">Traducciones de los estándares</a></li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Algunos ya están dentro…</h1>
+        <div class="center"><img src="img/zinga.jpg" alt="Zinga" /></div>
+        <p class="center xl"><a href="http://company.zynga.com/news/engineering-blog/zynga-joins-w3c-core-mobile-web-platform-community-group"><q>We’re believers in open web game development</q></a></p>
+    </div>
+
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Nuevas actividades en W3C</h1>
+        <p class="xl" style="margin:0 1em 0 0; float: right;"><a href="http://www.w3.org/dpub/">Publicación Digital</a></p>
+        <p style="float:right; position:absolute; bottom:0"><img src="img/digitalpub.png" alt="Tableta mostrando contenidos digitales" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Nuevas actividades en W3C</h1>
+        <p class="xl" style="margin:0 1em 0 0; float: right;"><a href="http://www.w3.org/community/autowebplatform/">Plataforma Web y Automóviles</a></p>
+        <p style="text-align: center; clear: right; padding-top: 2em;"><img src="img/auto.png" alt="Velocidades de un automóvil describiendo: mobile, safety, html5..." /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Nuevas actividades en W3C</h1>
+        <p class="xl" style="margin:0 1em 0 0; float: right;"><a href="http://www.w3.org/community/webpayments/">Pagos en la Web</a></p>
+        <p style="float:left; margin: -1em 0 0 -2em"><img src="img/pay.jpg" alt="Paga ahora" /><span class="caption-soft"><a href="http://www.flickr.com/photos/recreahq/9269432364/">http://www.flickr.com/photos/recreahq/9269432364/</a></span></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Nuevas actividades en W3C</h1>
+        <p class="xl" style="margin:0 1em 0 0; float: right;"><a href="http://www.w3.org/2011/webtv/">Web & TV</a></p>
+        <p class="center"><img src="img/webandtv.png" alt="Web and TV con conjuntos donde se intersecan: Web, Content, Broadcasting, Device" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Nuevas actividades en W3C</h1>
+        <p class="xl" style="margin:0 1em 1em 0; float: right;"><a href="http://www.w3.org/community/oilgaschem/">Oil, Gas and Chemicals</a></p>
+        <p class="center"><img src="img/oil_gas.jpg" width="800" alt="Petróleo" /><span class="caption-soft"><a href="http://www.flickr.com/photos/gpmarsh/477502736/">http://www.flickr.com/photos/gpmarsh/477502736/</a></span></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Muchos otros grupos</h1>
+        <p>
+            <strong class="xl">Working Groups</strong> Audio, Authoring Tool Accessibility Guidelines, Browser Testing and Tools, Cascading Style Sheets (CSS), Device APIs, Education and Outreach, Efficient XML Interchange, Evaluation and Repair Tools,
+            Forms, Geolocation, Government Linked Data, HTML, Independent User Interface (Indie UI), Internationalization, Linked Data Platform (LDP), Math, Media Annotations, Media Fragments, Model-Based User Interfaces, MultilingualWeb-LT, Multimodal
+            Interaction, Near Field Communications, Pointer Events, Protocols and Formats, RDF, RDFa, Research and Development, SVG, System Applications, Timed Text, Tracking Protection, User Agent Accessibility Guidelines, Voice Browser, Web Application
+            Security, Web Applications, Web Content Accessibility Guidelines, Web Cryptography, Web Events, Web Notification, Web Performance, Web Real-Time Communications, WebFonts, XML Core, XML Processing Model, XML Query, XML Security, XSLT
+            <strong class="xl">Interest Groups</strong>, Digital Publishing, HTML5 Chinese, HTML5 Japanese, HTML5 Korean, Internationalization (I18n), Internationalization Tag Set (ITS), Patents and Standards, Privacy, Semantic Web Health Care and Life
+            Sciences, Semantic Web, WAI, Web Security, Web Testing, Web and Mobile, Web and TV
+            <strong class="xl">Coordination Groups</strong>, Hypertext, Semantic Web, WAI, XML
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>WebPlatform.org</h1>
+        <p class="image-center"><img src="img/webplatform.jpg" width="500" alt="WebPlatform.org" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>W3DevCampus</h1>
+        <p class="image-center"><img src="img/w3devcampus.png" width="500" alt="W3DevCampus" /></p>
+        <p class="xl">Cursos oficiales W3C para desarrolladores</p>
+        <ul>
+            <li>Mobile Web Best Practices</li>
+            <li>HTML5</li>
+            <li class="l">Ahora en español</li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Suite de validación de estándares</h1>
+        <div style="height:100%; text-align:center;">
+            <object title="W3C Suite Validator" data="img/validator.svg" type="image/svg+xml" class="svg" type="image/svg+xml" style="width: 90%; height:80%;">W3C Suite Validator</object>
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>¡Muchas Gracias!</h1>
+        <div style="margin-left: 10%; text-align:center; float: left; ">
+            <img src="img/agendaqr.png" width="600" title="Código QR que lleva a http://www.w3c.es/Eventos/2013/DiaW3C/" />
+        </div>
+
+        <p style="margin-top: 0; float:right; text-align:right; background-color: yellow;">
+            <a href="https://www.linkedin.com/in/espinr/" style="color:#AB1122" class="l">martin@w3.org</a>&nbsp;&nbsp;&nbsp;<a style="color:#444" ref="http://twitter.com/espinr">@espinr</a><br/> http://www.w3c.es/Presentaciones
+        </p>
+        <p style="color: #585858; float: left; width: 30%; margin: 5em 0 0 5em" class="l">¡Nos vemos en el <a href="http://www.w3c.es/Eventos/2013/DiaW3C/"><span class="l">Día W3C en España</span></a>!<br/>(próximo miércoles 18)</p>
+
+    </div>
+
+    <!-- End of content -->
+</body>
+
+</html>

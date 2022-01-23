@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Apertura y reutilización de datos públicos</title>
+
+    <meta name="description" content="W3C Spain Office Presentation">
+    <meta name="author" content="Martin Alvarez-Espinar">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../../lib/reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../../lib/reveal.js/css/theme/w3c.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../../lib/reveal.js/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = '../../lib/reveal.js/css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+		<script src="../../lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+
+    <!-- Custom syles -->
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1 style="font-size:250%">Apertura y reutilización de datos públicos</h1>
+                <div style="text-align: right;">
+                    <p><a href="http://premsa.gencat.cat/pres_fsvp/AppJava/notapremsavw/detall.do?id=276536" lang="ca">Presentació del llibre "Obertura i reutilització de dades públiques"</a><br/>
+                        <span style="color:#888888">Palau Robert, Barcelona 17 Nov 2014</span></p>
+                    <p style="text-align: right;">
+                        <small><a href="/Personal/Martin">Martín Álvarez-Espinar</a> (<a href="http://twitter.com/espinr">@espinr</a>)<br><em><a href="http://www.w3c.es">W3C Spain Office</a> – <a href="http://ct.ctic.es/web/contenidos/en">CTIC</a></em></small>
+                    </p>
+                </div>
+                <p style="margin-top:2em">
+                    Descárgatela en formato <a href="https://espinr.github.io/talks/2014/1117-OpenData_Gencat-MA/1117-OpenData_Gencat-MA.pdf">PDF</a> (69 MBytes)</li>
+                </p>
+            </section>
+
+
+        </div>
+
+    </div>
+
+    <script src="../../lib/reveal.js/lib/js/head.min.js"></script>
+    <script src="../../lib/reveal.js/js/reveal.min.js"></script>
+
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [{
+                src: '../../lib/reveal.js/lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: '../../lib/reveal.js/plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../../lib/reveal.js/plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../../lib/reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: '../../lib/reveal.js/plugin/zoom-js/zoom.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }, {
+                src: '../../lib/reveal.js/plugin/notes/notes.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }]
+        });
+    </script>
+
+</body>
+
+</html>

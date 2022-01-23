@@ -1,0 +1,1212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Mejora de la Experiencia de Usuario sobre la Plataforma Web Abierta</title>
+
+    <meta name="description" content="W3C Spain Office Presentation">
+    <meta name="author" content="Martin Alvarez-Espinar">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../../lib/reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../../lib/reveal.js/css/theme/w3c.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../../lib/reveal.js/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = '../../lib/reveal.js/css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+		<script src="../../lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+
+    <!-- Custom syles -->
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>La Plataforma Web Abierta</h1>
+                <h3>Para la mejora de la <abbr title="User Experience">UX</abbr></h3>
+                <div style="text-align: right;">
+                    <p><a href="http://medialab-prado.es/article/edcd">#edcd. I Encuentro de Diseño y Cultura Digital</a></p>
+                    <p style="color:#888888">Madrid, 8 abril 2014</p>
+                    <p style="text-align: right;">
+                        <small><a href="/Personal/Martin">Martín Álvarez-Espinar</a> (<a href="http://twitter.com/espinr">@espinr</a>)<br><em><a href="http://www.w3c.es">W3C Spain Office</a> – <a href="http://ct.ctic.es/web/contenidos/en">CTIC</a></em></small>
+                    </p>
+            </section>
+
+            <section>
+                <h2>Un mundo en constante cambio</h2>
+                <p>
+                    <object class="svg" type="image/svg+xml" data="img/HTML5_sticker.svg" title="I've seen the future, it's in my browser">I've
+        seen the future, it's in my browser</object>
+                </p>
+                <aside class="notes">
+                    Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+                </aside>
+            </section>
+
+            <!-- Example of nested vertical slides -->
+            <section>
+                <section>
+                    <h2>(pre)Historia de la Web</h2>
+                    <p>
+                        <a href="http://www.w3.org/2005/01/timelines/description"><img src="img/timeline-w3c.png" alt="Historia del W3C" /></a>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>La "Web" en 1989</h2>
+                    <p>
+                        <a href="http://www.w3.org/2005/01/timelines/description"><img src="img/timeline-w3c_1989.png" alt="Historia del W3C (señalado 1989)" /></a>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>(1989) El primer boceto</h2>
+                    <p>
+                        <img src="img/proposal.gif" alt="Propuesta de organización de la información de Tim Berners-Lee" />
+                        <br><small class="caption"><a
+            href="http://www.w3.org/History/1989/proposal.html">Information
+            Management: A Proposal — Tim Berners-Lee, CERN</a></small>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>La Web en 1990</h2>
+                    <p>
+                        <a href="http://www.w3.org/2005/01/timelines/description"><img src="img/timeline-w3c_1990.png" alt="Historia del W3C (señalado 1990)" /></a>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>(1990) WorldWideWeb</h2>
+                    <p>
+                        <img src="img/worldwideweb.gif" alt="Pantallazo del WorldWideWeb, primer navegador de la historia" /></p>
+                </section>
+
+                <section>
+                    <h2>La Web crece</h2>
+                    <p>
+                        <a href="http://www.w3.org/2005/01/timelines/description"><img src="img/timeline-w3c_1994.png" alt="Historia del W3C (señalado 1993)" /></a>
+                    </p>
+                </section>
+            </section>
+
+
+            <section>
+                <section>
+                    <h2><span lang="en">W3C?</span></h2>
+                </section>
+
+                <section>
+                    <h2><span lang="en">World Wide Web Consortium</span></h2>
+                    <p><img src="img/timbl.png" alt="Tim Berners-Lee" />
+                    </p>
+                    <ul>
+                        <li>Organismo <strong class="xl">neutro</strong> fundado en 1994 por <a title="Información sobre Tim Berners-Lee" href="http://www.w3.org/People/Berners-Lee/">Tim
+	        Berners-Lee</a></li>
+                        <li><strong>60</strong> personas en el <a hreflang="en" href="http://www.w3.org/People">Team</a></li>
+                        <li><strong>382</strong> <a hreflang="en" title="Lista de Miembros" href="http://www.w3.org/Consortium/Member/List">Miembros</a></li>
+                        <li><strong>+70</strong> <a title="Gráfico sobre las actividades y grupos del W3C" href="http://www.w3.org/2003/02/W3COrg.svg">Grupos
+	        del W3C</a> (con más de <strong>1.500</strong> investigadores)
+                        </li>
+                        <li><small>Relaciones con otros organismos estandarizadores</small></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Miembros en España</h2>
+                    <p> <img alt="20 Miembros en España" src="img/es_members.png" /></p>
+                </section>
+
+                <section>
+                    <h2>Realmente <span lang="en">WorldWide</span></h2>
+                    <p> <img alt="El mundo, con puntos que indican las sedes centrales y las oficinas" src="img/w3c-world.png" /></p>
+                </section>
+
+                <section>
+                    <h2>W3C.es @ CTIC</h2>
+                    <p><img src="img/oficinaW3C.jpg" alt="Vista del edificio de CTIC donde se encuentra la Oficina del W3C en España" /></p>
+                </section>
+            </section>
+
+            <section>
+                <h2>¿Qué hace el <abbr lang="en" title="World Wide Web Consortium">W3C</abbr>?</h2>
+                <p style="text-align: justify;"><a style="font-size: 33px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/Voice/">Voice</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/Graphics/WebCGM/">WebCGM</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/PICS/">PICS</a>
+                    <a style="font-size: 41px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/People/Raggett/tidy/">HTMLTidy</a>
+                    <a style="font-size: 46px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/2002/ws/databinding/">Databinding</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2001/sw/WebOnt/">WebOntology</a>
+                    <a style="font-size: 50px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/html/">HTML</a>
+                    <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/2004/CDF/">CompoundDocumentFormats</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/TR/rdf-sparql-query/">SPARQL</a>
+                    <a style="font-size: 33px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/WAI/">WAI</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2006/webapi/">Web
+      APIs</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/Library/">Libwww</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2001/ppwg/">PatentPolicy</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/2004/OWL/">OWL</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/AudioVideo/TT/">TimedText</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/Encryption/2001/">XMLEncryption</a>
+                    <a style="font-size: 33px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/2002/mmi/">Multimodal</a>
+                    <a style="font-size: 50px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/XML/">XML</a>
+                    <a style="font-size: 35px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2006/rwc/">RichWebClients</a>
+                    <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/XML/Processing/">XMLProcessing</a>
+                    <a style="font-size: 42px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/2001/di/">DeviceIndependence</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/Addressing/">URI/URL</a>
+                    <a style="font-size: 44px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/DOM/">DOM</a>
+                    <a style="font-size: 50px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/Protocols/">HTTP</a>
+                    <a style="font-size: 50px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/WAI/">Accessibility</a>
+                    <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/RDF/">RDF</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2006/appformats/">WebApplicationFormats</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/XML/Linking">XMLBase</a>
+                    <a style="font-size: 50px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/Jigsaw/">Jigsaw</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/XML/Linking">XLink</a>
+                    <a style="font-size: 35px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/International/">I18N</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/P3P/">P3P</a>
+                    <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/QA/">QualityAssurance</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/2001/XKMS/">XMLKeyManagement</a>
+                    <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/UbiWeb/">UbiquitousWeb</a>
+                    <a style="font-size: 37px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/2002/mmi/ink">InkML</a>
+                    <a style="font-size: 39px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/2005/Incubator/">Incubator</a>
+                    <a style="font-size: 33px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/XML/Linking">XPath</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2002/ws/">WebServices</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/MarkUp/Forms/">XForms</a>
+                    <a style="font-size: 48px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/Style/CSS/">CSS</a>
+                    <a style="font-size: 50px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/2000/xp/Group/">SOAP</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/Mobile/">Mobile</a>
+                    <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/AudioVideo/">SMIL</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/2005/rules/">Rules</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/Graphics/SVG/">SVG</a>
+                    <a style="font-size: 50px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/Amaya/">Amaya</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/2001/sw/">SemanticWeb</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/Math/">MathML</a>
+                </p>
+                <p><small>Especificaciones, directrices y herramientas <strong>abiertas</strong> con la <a hreflang="en-us" href="http://www.w3.org/Consortium/Patent-Policy/">política
+      de patentes</a> más <strong>transparente</strong> en Internet</small></p>
+            </section>
+
+            <section>
+                <h2>+200 Recomendaciones</h2>
+                <div> <img alt="Más de 200 recomendaciones o estándares en estos últimos 20 años del W3C" src="img/timeline_recs.png" />
+                </div>
+            </section>
+
+            <section>
+
+                <section>
+                    <h2>Una Web universal</h2>
+                    <blockquote>
+                        ...ofrece la <strong>misma información y servicios</strong> a los usuarios, independientemente de <strong>quienes</strong> son, <strong>donde</strong> están, los <strong>sistemas</strong> que usan o la forma mediante la que se
+                        conectan
+                    </blockquote>
+                </section>
+
+                <section>
+                    <h2>...independientemente de la forma de acceso</h2>
+                    <ul>
+                        <li>PCs, teléfonos, TVs, PDAs, dispositivos en <em>electrodomésticos</em> o <em>en automóviles</em>...</li>
+                        <li>limitación en: ancho de banda, pantalla, colores, sonido...</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p> <img alt="Urinario conectado a un videojuego" src="img/toylet.png" /><br />
+                        <small>Toylet - Foto: <a href="http://www.wired.com/images_blogs/gamelife/2011/01/toylet.png">Wired</a></small>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>...independientemente de "discapacidades"...</h2>
+                    <ul>
+                        <li>distinción de colores, ceguera, ...</li>
+                        <li>dificultades de manejo de teclados, ratón, ...</li>
+                        <li>dislexia, dificultades cognitivas o neurológicas, ...</li>
+                    </ul>
+                </section>
+                <section>
+                    <p> <img alt="Portátil con teclado Braille" src="img/braille_note.jpg" /></p>
+                </section>
+
+                <section>
+                    <h2>...teniendo en cuenta ls diferencias culturales</h2>
+                    <ul>
+                        <li>sentidos de escritura, diferentes tipos de teclados, ...</li>
+                        <li>formato de fechas, números de teléfono, códigos postales, IDs,...
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p><img alt="Panel informativo sobre un mercado de valores" src="img/nikkei.jpg" /></p>
+                </section>
+            </section>
+
+            <section data-background="img/openwebplatform1.png" data-background-transition="slide">
+                <h2 style="color:#000000">Una única Web</h2>
+            </section>
+
+            <section data-background="img/mobile_OS.jpg" data-background-transition="slide">
+                <h2 style="color:#000000">Los estándares son clave</h2>
+            </section>
+
+            <section>
+                <h2>Construyendo la Plataforma Web Abierta</h2>
+                <ul>
+                    <li class="fragment roll-in"><strong>Interfaces</strong>: Geo-localización, giroscopios, cámaras, NFC, …</li>
+                    <li class="fragment roll-in"><strong>Multimedia</strong>: Audio y vídeo, gráficos, animaciones, fuentes de alta calidad, …</li>
+                    <li class="fragment roll-in"><strong>Multidispositivo</strong>: varias resoluciones, táctil, teclados, voz, vibración, …</li>
+                    <li class="fragment roll-in"><strong>Comunicaciones</strong>: cliente-servidor, real-time, p2p, sockets, …</li>
+                    <li class="fragment roll-in"><strong>Sociedad</strong>: privacidad, seguridad, multilingüe, accesibilidad</li>
+                    <li class="fragment roll-in"><strong>Procesam. automático</strong>: semántica, interoperabilidad, …</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>La estrella</h2>
+                <p><img alt="HTML5" src="img/html5-topper.png" /></p>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Nuevos elementos y atributos</h2>
+                    <h3>Más semántica</h3>
+                </section>
+
+                <section>
+                    <h2>Nuevos Formularios Web</h2>
+                    <ul>
+                        <li><input type='range' min='3' max='18' value='10'> <code style="font-size: 70%">&lt;input type='range' min='3' max='18'&gt;</code> </li>
+                        <li><input type='search' placeholder="Busca aquí"> <code style="font-size: 70%">&lt;input type='search' placeholder="Busca aquí"&gt;</code></li>
+                        <li><input type='tel' value='+34.984.390.616'> <code style="font-size: 70%">&lt;input type='tel' &gt;</code> </li>
+                        <li><input type='url' value='http://www.w3c.es/'> <code style="font-size: 70%">&lt;input type='url' &gt;</code> </li>
+                        <li><input type='email' value='martin@w3.org'> <code style="font-size: 70%">&lt;input type='email' &gt;</code> </li>
+                        <li><input type='date' value='2011-02-23'> <code style="font-size: 70%">&lt;input type='date' &gt;</code> </li>
+                        <li><input type='time' value='08:55'> <code style="font-size: 70%">&lt;input type='time' &gt;</code> </li>
+                        <li><input type='color' value='#000000'> <code style="font-size: 70%">&lt;input type='color' &gt;</code> </li>
+                        <li><input type='number' value='10'> <code style="font-size: 70%">&lt;input type='number' &gt;</code> </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>HTML5 + RDFa</h1>
+                    <p>El navegador comprende lo que aparece</p>
+                    <p><img src="img/license.png" alt="Dos páginas enlazadas mediante la propiedad license" /></p>
+                </section>
+
+                <section>
+                    <h2>Semántica en la estructura</h2>
+                    <pre><code>&lt;body>
+  &lt;header>
+   &lt;hgroup>
+    &lt;h1>W3C&lt;/h1>
+    &lt;h2>Llevando la Web a su máximo potencial&lt;/h2>
+   &lt;/hgroup>
+
+   &lt;nav>
+      Menú de navegación&hellip;
+   &lt;/nav>
+  &lt;/header>
+
+  &lt;section>
+  
+   &lt;article>
+     &lt;h1>El W3C participa&hellip;&lt;/h1>
+     &lt;section>
+       Contenido&hellip;
+     &lt;/section>
+   &lt;/article>
+
+   &lt;article>
+     &lt;header>
+       &lt;h1>Título&lt;/h1>
+     &lt;/header>
+     &lt;section>
+        &lt;figure>
+          &lt;img src='&hellip;' alt='&hellip;'>
+          &lt;figcaption>Ilustración&hellip;&lt;/figcaption>
+        &lt;/figure>
+     &lt;/section>
+   &lt;/article>
+
+  &lt;/section>
+
+  &lt;aside>
+   Enlaces superiores
+  &lt;/aside>
+
+  &lt;footer>
+   Copyright&hellip;
+  &lt;/footer>
+
+&lt;/body>
+		</code></pre>
+                </section>
+
+                <section>
+                    <h2>@contenteditable</h2>
+                    <pre><code>&lt;p contenteditable='true'&gt;</code></pre>
+                    <p contenteditable='true'><small>Esto es un párrafo editable (prueba).</small></p>
+                    <pre><code>&lt;table contenteditable='true'&gt;</code></pre>
+                    <table style="width: 100%; border:2px #ffffff solid; font-size: 70%" contenteditable='true'>
+                        <thead>
+                            <tr>
+                                <th><span>Date</span></th>
+                                <th><span>Description</span></th>
+                                <th><span>Transfer</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10/08/2004</td>
+                                <td>Restaurant</td>
+                                <td>Expenses:Foods</td>
+                            </tr>
+                            <tr>
+                                <td>10/10/2004</td>
+
+                                <td>Market</td>
+                                <td>Expenses:Groceries</td>
+                            </tr>
+                            <tr>
+                                <td>10/11/2004</td>
+                                <td>Gas</td>
+                                <td>Expenses:Car</td>
+
+                            </tr>
+                            <tr>
+                                <td>10/12/2004</td>
+                                <td>Payroll</td>
+                                <td>Income:Salary</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+            </section>
+
+            <section>
+                <h2><code>&lt;video&gt;</code> de forma natural</h2>
+
+                <pre><code>&lt;video src='myMovie' id='vid' /&gt;</code></pre>
+                <pre><code data-trim contenteditable>var vid = document.getElementById("vid");
+vid.play();
+vid.pause();
+vid.currentTime = 0;
+</code></pre>
+
+                <p style="position: absolute; z-index: 0; margin-top: 2em; color:#aaaaaa">
+                    Permite la integración con otros elementos del documento…</p>
+
+                <p>
+                    <video width="360" height="240" id="vid" src="video/A_New_Computer--small.ogg" style="opacity: 0.8; z-index: 1">
+      </video>
+                    <br>
+                    <span style="cursor:pointer; font-family: heydings" onclick="playVideo();" id="play"><abbr title="Play">P</abbr></span>
+                    <span style="cursor:pointer; font-family: heydings" onclick="pauseVideo();" id="pause"><abbr title="Pause">u</abbr></span>
+                    <span style="cursor:pointer; font-family: heydings" onclick="rewindVideo();" id="rewind"><abbr title="Rewind">p</abbr></span></p>
+                <p class="caption"><a href="http://www.polycrystal.org/lego/movies.html">http://www.polycrystal.org/lego/movies.html</a></p>
+            </section>
+
+            <section>
+                <section>
+                    <h2><code>&lt;canvas&gt;</code></h2>
+                    <canvas style="border: 3px solid white; margin:10px; background:#aaaaaa;" height="300" width="500" id="canvas_live">Formas geométricas</canvas>
+                    <p><textarea id="textarea" cols="55" rows="10">	ctx.fillStyle = "rgb(0, 162, 232)";
+	ctx.fillRect(135, 85, 125, 125);
+	ctx.beginPath();
+	ctx.lineWidth = 5; ctx.strokeStyle = "rgb(0, 0, 0)";
+	ctx.arc(143, 280, 80, 0, 2*Math.PI, false);
+	ctx.stroke();
+	ctx.fillStyle = "rgba(255, 255, 0, 0.75)";
+	ctx.fillRect(210, 180, 125, 125); </textarea>
+                        <abbr style="cursor:pointer; font-family: heydings" onclick="evalcanvas();" title="Play">P</abbr></p>
+
+                    <p><small><a href="#/14/1">Más ejemplos <abbr style="cursor:pointer; font-family: heydings" title="Gráficos">g</abbr></a></small></p>
+                </section>
+
+                <section>
+                    <script src="ejemplos/RGraph/libraries/RGraph.common.js"></script>
+                    <script src="ejemplos/RGraph/libraries/RGraph.gantt.js"></script>
+                    <h2><code>&lt;canvas&gt;</code> Gantt</h2>
+                    <p>
+                        <canvas id="gantt1" width="700" height="300" style="background-color: #ffffff">Diagrama gantt</canvas></p>
+                </section>
+
+                <section>
+                    <h2><code>&lt;canvas&gt;</code> Painter</h2>
+                    <iframe height="450" width="800" src="ejemplos/canvas/index.html" style="background-color:#ffffff">Ejemplo de aplicación "Paint" hecha con canvas</iframe>
+                </section>
+
+                <section>
+                    <h2><code>&lt;canvas&gt;</code> Cycle</h2>
+                    <p><img src="img/canvascycle.png" alt="Paisaje hecho con Canvas" /><br>
+                        <small class="caption"><a href="http://www.effectgames.com/demos/canvascycle/">http://www.effectgames.com/demos/canvascycle/</a></small>
+                </section>
+
+                <section>
+                    <h2><code>&lt;canvas&gt;</code> y Realidad Aumentada</h2>
+                    <p><img src="img/remixing-reality.png" alt="Ejemplo de realidad aumentada con canvas" /><br>
+                        <small class="caption"><a href="https://developer.mozilla.org/en-US/demos/detail/remixing-reality/launch">https://developer.mozilla.org/en-US/demos/detail/remixing-reality/launch</a></small>
+                </section>
+
+                <section>
+                    <h2><code>&lt;canvas&gt;</code> y Audio</h2>
+                    <p><img src="img/audiocanvas.png" alt="Ejemplo de realidad aumentada donde partículas se mezclan a ritmo de la música" /><br>
+                        <small class="caption"><a href="http://9elements.com/io/projects/html5/canvas/">http://9elements.com/io/projects/html5/canvas/</a></small>
+                </section>
+
+                <section>
+                    <h2><code>&lt;canvas&gt;</code> Maze</h2>
+                    <p><img src="img/canvas_maze.png" alt="Ejemplo de juego de laberinto hecho con canvas" /><br>
+                        <small class="caption"><a href="http://www.spacegoo.com/maze/">http://www.spacegoo.com/maze/</a></small>
+                </section>
+            </section>
+
+            <section>
+                <h2>HTML5 + <code>&lt;canvas&gt;</code> + <code>&lt;video&gt;</code></h2>
+                <div style="display:none">
+                    <video id="destruction_sourcevid" loop>
+	      <source src="video/trailer.mp4" type="video/mp4">
+	      <source src="video/trailer.ogv" type="video/ogg">
+	  </video>
+                    <canvas id="destruction_sourcecopy" width="800" height="400"> </canvas>
+                </div>
+                <div>
+                    <canvas id="destruction_output" width="1000" height="500" onmousedown="dropBomb(event, this)">Canvas donde se mostrará el vídeo procesado</canvas>
+                </div>
+                <p><abbr style="cursor:pointer; font-family: heydings" title="Play" id="play_destruction" onclick="playVideoDestruction()">P</abbr>
+                    <abbr style="cursor:pointer; font-family: heydings" title="Pause" id="pause_destruction" onclick="pauseVideoDestruction()">u</abbr><br/> <small class="caption">By <a href="http://www.craftymind.com/2010/04/20/blowing-up-html5-video-and-mapping-it-into-3d-space/">Sean Christmann</a></small></p>
+            </section>
+
+            <section>
+                <h2>Interacción con el dispositivo</h2>
+                <p><img alt="Reloj con el visor de la webcam integrado" height="500" src="img/camera_fari.png" /><br>
+                    <small class="caption"><a href="http://shinydemos.com/clock/">shinydemos.com/clock/</a></small></p>
+            </section>
+
+            <section>
+                <h2>WebGL + Web Workers + Video + ...</h2>
+                <p><img alt="Histagrama de los colores captados por la webcam" src="img/webgl.png" />><br>
+                    <small class="caption"><a href="http://www.shinydemos.com/3d-color-histogram/">shinydemos.com/3d-color-histogram/</a></small></p>
+            </section>
+
+            <section>
+                <h2>No todo es HTML5</h2>
+                <p><img src="img/openwebplatform.png" alt="Technologías de la Open Web Platform" /></p>
+            </section>
+
+
+            <section>
+                <section>
+                    <h2>Web API</h2>
+                    <h3>Interacción con los documentos</h3>
+                </section>
+
+                <section>
+                    <h2>Web API</h2>
+                    <ul>
+                        <li>Web DOM Core API</li>
+                        <li>Drag Drop API</li>
+                        <li>Text Selection API</li>
+
+                        <li>Undo History API</li>
+                        <li>2D Context API</li>
+                        <li><strong>Web Storage API</strong></li>
+                        <li>WebSockets API</li>
+                        <li>Web Workers API</li>
+                        <li>Web Messaging API</li>
+                        <li><strong>Geolocation API</strong></li>
+                        <li>Indexed Database API</li>
+                        <li>Microdata API</li>
+
+                        <li>RDFa API</li>
+                        <li>Element Traversal API</li>
+                        <li><strong>XMLHttpRequest API</strong></li>
+                        <li>Web Notification API</li>
+                        <li>DOM Level 3 Events API</li>
+                        <li>Navigation Timing API</li>
+                        <li>Multi-touch Events API</li>
+                        <li>CSSOM View Module API</li>
+                        <li>Selectors API</li>
+                        <li>File API</li>
+
+                        <li>WebGL API</li>
+                        <li>Resource Timing API</li>
+                        <li>User Timing API</li>
+                        <li>Messaging API</li>
+                        <li>Device API</li>
+                        <li>&hellip;</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Ejemplo: Geolocation</h2>
+                    <pre><code>function showMap(position) {
+	  // Muestra un mapa centrado en:
+	  // - position.coords.latitude
+	  // - position.coords.longitude
+	}
+	
+	// Pide posicionamiento
+	navigator.geolocation.getCurrentPosition(showMap);</code></pre>
+                </section>
+
+                <section>
+                    <h2>System Applications WG</h2>
+                    <p class="center"><a href="http://www.w3.org/2012/sysapps/">www.w3.org/2012/sysapps/</a></p>
+                    <ul class="l">
+                        <li>Contactos</li>
+                        <li>Mensajería</li>
+                        <li>Teléfono</li>
+                        <li>Calendario ...</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <h2>
+                    <object type="image/svg+xml" data="img/CSS-diagram.svg" title="Tecnologías CSS">Tecnologías CSS</object>
+                </h2>
+            </section>
+
+            <section>
+                <h2>Bordes</h2>
+                <p>
+                    <img src="img/border.png" alt='border' style='border: 1px solid black; padding: 0;' />
+                </p>
+                <pre><code>border-image: url("img/border.png") 27 round stretch;</code></pre>
+                <blockquote id="borde">
+                    <p style="font-size:60%;"><span>En un lugar de la Mancha</span>, de cuyo nombre no quiero acordarme, no ha mucho que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor. Una olla algo más de vaca que carnero, salpicón
+                        las más noches, duelos y quebrantos los sábados, lentejas los viernes y algún palomino de añadidura los domingos, consumían tres partes de su hacienda.
+                        <br>(Don Quijote de La Mancha. Primera parte)</p>
+                </blockquote>
+            </section>
+
+            <section>
+                <section>
+                    <h2 style="font-family: destroy;text-shadow: 4px 4px 4px #aaa;">Fuentes en la Web</h2>
+                </section>
+
+                <section>
+                    <h2 style="font-family: 'destroy'; text-shadow: 4px 4px 4px #aaa;">Web Fonts</h2>
+                    <pre><code>@font-face {
+   font-family: 'headings';
+   src: url('fonts/destroy.ttf') format('truetype');
+   font-style: normal;
+   font-weight: bold; 
+}</code></pre>
+                    <pre><code>p { 
+   font-family: 'headings', 'franklin gothic medium', arial; 
+   text-shadow: 4px 4px 4px #aaa; 
+}</code></pre>
+                </section>
+
+                <section>
+                    <h2><abbr title="Web Open Font Format">WOFF</abbr> + Bordes</h2>
+                    <blockquote id="fuentes">
+                        <p><span>En un lugar de la Mancha</span>, de cuyo nombre no quiero acordarme, no ha mucho que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor.Una olla algo más de vaca que carnero, salpicón
+                            las más noches, duelos y quebrantos los sábados, lentejas los viernes y algún palomino de añadidura los domingos, consumían tres partes de su hacienda. </p>
+                        <p>(Don Quijote de La Mancha. Primera parte)</p>
+                    </blockquote>
+                    <p><small class="caption"><a href="http://www.w3.org/TR/css-fonts-3/">CSS
+	      Fonts Module Level 3</a></small></p>
+                </section>
+
+                <section>
+                    <h2>Formatos aceptados</h2>
+                    <ul>
+                        <li><code class="l">.eot</code> Embedded Open Type Font</li>
+                        <li><code class="l">.ttf</code> True Type Font</li>
+                        <li><code class="l">.otf</code> Open Type Font</li>
+                        <li><code class="l">.svg</code> Scalable Vector Graphic</li>
+                        <li class="xl"><code class="l">.woff</code> Web Open Font Format</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Por si acaso…</h2>
+                    <p>Para asegurarnos el soporte en varios browsers, declaramos varios formatos:</p>
+                    <pre><code>@font-face {
+   font-family: 'MyWebFont';
+   src: url('webfont.eot') format('embedded-opentype'), 
+        url('webfont.woff') format('woff'),                    
+        url('webfont.ttf')  format('truetype'),                
+        url('webfont.svg#svgFontName') format('svg');         
+ }</code></pre>
+                    <p class="caption"><a href="http://www.fontsquirrel.com/tools/webfont-generator">Webfont Generator</a></p>
+                </section>
+
+            </section>
+
+            <section>
+                <section>
+                    <h2>CSS3: nuevos selectores</h2>
+
+                    <pre><code>E ~ F, :first-child, :last-child, :nth-child(odd), :nth-child(3), :target</code></pre>
+                </section>
+
+
+
+                <section>
+                    <h2 id="siblingSel">Elementos hermanos</h2>
+                    <pre><code>&lt;h2 id="siblingSel"&gt;Elementos hermanos&lt;/h2&gt;
+&lt;p&gt;Párrafo 1&lt;/p&gt;
+&lt;p&gt;Párrafo 2&lt;/p&gt;
+&lt;p&gt;Párrafo 3&lt;/p&gt;</code></pre>
+                    <pre><code>h2#siblingSel ~ p:nth-child(2) { background-color: gray; color: black; }</code></pre>
+                    <p><samp>Párrafo 1 </samp></p>
+                    <p><samp>Párrafo 2 </samp></p>
+                    <p><samp>Párrafo 3 </samp></p>
+                </section>
+
+                <section>
+                    <h2><code>:not()</code></h2>
+                    <pre><code>a:not(.externo) { background-color: pink; }</code></pre>
+                    <pre><code>[…]
+tenderloin <a href="#" class="externo">drumstick</a> landjaeger pig short loin sirloin 
+rump capicola jowl t-bone swine meatloaf <a href="#">beef</a> Pork belly […]</code></pre>
+                    <p><q id="selectorsSample2">Bacon ipsum dolor sit amet shoulder tenderloin <a href="#" class="externo">drumstick</a> landjaeger pig short loin sirloin rump capicola jowl t-bone swine meatloaf <a href="#">beef</a> Pork belly doner beef ribs ribeye bresaola shank, chuck bacon. Bresaola chuck jowl pig pork belly corned beef, sirloin meatloaf cow. Hamburger pork chop <a href="#" class="externo">turkey</a> andouille swine landjaeger beef ribs. <a href="#" class="externo">Hamburger</a> capicola biltong andouille doner. Prosciutto fatback meatloaf boudin.</q></p>
+                </section>
+
+                <section>
+                    <h2><code>:last-of-type</code></h2>
+                    <pre><code>strong:last-of-type { border-bottom: 2px red solid; }</code></pre>
+                    <pre><code>[…]
+tenderloin <strong>drumstick</strong> landjaeger pig short 
+loin sirloin rump capicola jowl t-bone swine meatloaf <strong>beef</strong> Pork belly doner beef ribs ribeye bresaola shank, chuck bacon. 
+Bresaola chuck jowl pig pork belly corned beef, sirloin meatloaf cow. Hamburger pork chop <strong>turkey</strong> andouille 
+swine landjaeger beef ribs. <strong>Hamburger</strong> capicola […]</code></pre>
+                    <p><q id="selectorsSample3">Bacon ipsum dolor sit amet shoulder tenderloin <strong>drumstick</strong> landjaeger pig short 
+			loin sirloin rump capicola jowl t-bone swine meatloaf <strong>beef</strong> Pork belly doner beef ribs ribeye bresaola shank, chuck bacon. 
+			Bresaola chuck jowl pig pork belly corned beef, sirloin meatloaf cow. Hamburger pork chop <strong>turkey</strong> andouille 
+			swine landjaeger beef ribs. <strong>Hamburger</strong> capicola biltong andouille doner. Prosciutto fatback meatloaf boudin.</q></p>
+                </section>
+
+                <section>
+                    <h2><code>:checked</code></h2>
+                    <pre><code>input:checked + label { color: yellow; }</code></pre>
+                    <form>
+                        <input type="checkbox" id="selectorSample5" /> <label for="selectorSample5">Checkbox</label>
+                    </form>
+                </section>
+
+                <section>
+                    <h2><code>:empty</code></h2>
+                    <pre><code>td:empty { background: rgba(255,0,0,0.5); }</code></pre>
+                    <table id="selectorsSample4">
+                        <colgroup>
+                            <colgroup span='2'>
+                                <colgroup span='3'>
+                                    <thead>
+
+                                        <tr>
+                                            <th><span>Date</span></th>
+                                            <th><span>Description</span></th>
+                                            <th><span>Transfer</span></th>
+                                            <th><span>Deposit</span></th>
+                                            <th><span>Withdrawal</span></th>
+
+                                            <th><span>Balance</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>10/08/2004</td>
+                                            <td>Restaurant</td>
+
+                                            <td>Expenses:Foods</td>
+                                            <td></td>
+                                            <td>38.14</td>
+                                            <td>440.67</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10/10/2004</td>
+
+                                            <td>Market</td>
+                                            <td>Expenses:Groceries</td>
+                                            <td></td>
+                                            <td>123.14</td>
+                                            <td>317.53</td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>10/11/2004</td>
+                                            <td>Gas</td>
+                                            <td>Expenses:Car</td>
+                                            <td></td>
+                                            <td>40.00</td>
+                                            <td>277.53</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>10/12/2004</td>
+                                            <td>Payroll</td>
+                                            <td>Income:Salary</td>
+                                            <td>2,000.00</td>
+                                            <td></td>
+
+                                            <td>2277.53</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10/12/2004</td>
+                                            <td>Home depot</td>
+                                            <td>Expenses:House Supplies</td>
+                                            <td></td>
+
+                                            <td>41.14</td>
+                                            <td>2236.39</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10/14/2004</td>
+                                            <td>Dentist</td>
+                                            <td>Expenses:Medical</td>
+
+                                            <td></td>
+                                            <td>166.20</td>
+                                            <td>2070.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10/15/2004</td>
+                                            <td>Electricity</td>
+
+                                            <td>Expenses:Utilities</td>
+                                            <td></td>
+                                            <td>27.88</td>
+                                            <td>2042.31</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10/16/2004</td>
+
+                                            <td>Filene's Basement</td>
+                                            <td>Expenses:Grooming</td>
+                                            <td></td>
+                                            <td>31.93</td>
+                                            <td>2010.38</td>
+                                        </tr>
+                                    </tbody>
+                    </table>
+                </section>
+
+                <section>
+                    <h2><code>:nth-child()</code></h2>
+                    <pre><code>tr:nth-child(odd) { background: #aaaaaa; }
+tr:nth-child(even) { background: #888888; }
+tr *:first-child { border-left: none; }
+tr *:last-child { border-left: none; }
+td:nth-child(6) { font-family: monospace; color: red}
+tr:nth-child(4) td:nth-child(4) { border: 8px rgba(255,0,0,0.8) dashed; }
+tr:nth-child(6) td:nth-child(2n+2) { background-color: #986dff; }
+</code></pre>
+                    <table id="selectores">
+                        <colgroup>
+                            <colgroup span='2'>
+                                <colgroup span='3'>
+                                    <thead>
+
+                                        <tr>
+                                            <th><span>Date</span></th>
+                                            <th><span>Description</span></th>
+                                            <th><span>Transfer</span></th>
+                                            <th><span>Deposit</span></th>
+                                            <th><span>Withdrawal</span></th>
+
+                                            <th><span>Balance</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>10/08/2004</td>
+                                            <td>Restaurant</td>
+
+                                            <td>Expenses:Foods</td>
+                                            <td></td>
+                                            <td>38.14</td>
+                                            <td>440.67</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10/10/2004</td>
+
+                                            <td>Market</td>
+                                            <td>Expenses:Groceries</td>
+                                            <td></td>
+                                            <td>123.14</td>
+                                            <td>317.53</td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>10/11/2004</td>
+                                            <td>Gas</td>
+                                            <td>Expenses:Car</td>
+                                            <td></td>
+                                            <td>40.00</td>
+                                            <td>277.53</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>10/12/2004</td>
+                                            <td>Payroll</td>
+                                            <td>Income:Salary</td>
+                                            <td>2,000.00</td>
+                                            <td></td>
+
+                                            <td>2277.53</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10/12/2004</td>
+                                            <td>Home depot</td>
+                                            <td>Expenses:House Supplies</td>
+                                            <td></td>
+
+                                            <td>41.14</td>
+                                            <td>2236.39</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10/14/2004</td>
+                                            <td>Dentist</td>
+                                            <td>Expenses:Medical</td>
+
+                                            <td></td>
+                                            <td>166.20</td>
+                                            <td>2070.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10/15/2004</td>
+                                            <td>Electricity</td>
+
+                                            <td>Expenses:Utilities</td>
+                                            <td></td>
+                                            <td>27.88</td>
+                                            <td>2042.31</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10/16/2004</td>
+
+                                            <td>Filene's Basement</td>
+                                            <td>Expenses:Grooming</td>
+                                            <td></td>
+                                            <td>31.93</td>
+                                            <td>2010.38</td>
+                                        </tr>
+                                    </tbody>
+                    </table>
+                </section>
+
+            </section>
+
+
+            <section id="transitionSample">
+                <h2>Transiciones</h2>
+                <p>Para que el estilo se aplique lentamente.</p>
+                <pre><code>li:hover { width: 500px; background: forestgreen; }
+li.transicion { transition: 1s;}</code></pre>
+                <ul>
+                    <li>Sin transición</li>
+                    <li class="transicion">Con transición</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Mucho más</h2>
+                <h3>Más fácil, más atractivo, estándar</h3>
+            </section>
+
+            <section>
+                <h2>Muy importante la Web Móvil</h2>
+                <p><img alt="En el desierto con el móvil" src="img/desierto.jpg" />
+                    <small class="caption"><a href="http://www.flickr.com/photos/dos82/4045946783/"
+      class="caption-soft">http://www.flickr.com/photos/dos82/4045946783/</a></small></p>
+            </section>
+
+            <section id="themes" data-background="img/openwebplatform1.png">
+                <h2 style="color:#000">No sólo <em>smartphones</em></h2>
+            </section>
+
+
+            <section>
+                <h2>Responsive Web Design</h2>
+                <p>A tener en cuenta</p>
+                <ul>
+                    <li class="fragment">¿Cuál es la resolución de un móvil?</li>
+                    <li class="fragment">¿Cuál es el tamaño de un móvil?</li>
+
+                </ul>
+                <p class="fragment">Ya no hay distinción clara entre ordenador y dispositivo móvil –tablets?–
+                </p>
+            </section>
+
+            <section>
+                <h2>Media Types</h2>
+                <pre><code>@import url("fancyfonts.css") screen;
+
+@media handheld {
+  /* Estilos para dispositivo de mano */
+}</code></pre>
+                <p>No es nada nuevo... (<a href="http://www.w3.org/TR/CSS2/media.html">CSS 2.1</a>)</p>
+            </section>
+
+            <section>
+                <h2>Media Queries</h2>
+                <p>Aplicar estilos de forma independiente del tipo de medio</p>
+                <div class="fragment roll-in">
+                    <p><small>Pantallas con un ancho mayor de 420px</small></p>
+                    <pre><code>@media all and (min-width: 420px) {
+ …
+}</code></pre>
+                </div>
+                <div class="fragment roll-in">
+                    <p><small>Pantallas pequeñas</small></p>
+                    <pre><code>@media all and (max-device-width: 240px) {
+… }</code></pre>
+                </div>
+                <div class="fragment roll-in">
+                    <p><small>Pantallas con orientación horizontal</small></p>
+                    <pre><code>@media all and (orientation: landscape) {
+…}</code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h2>El concepto de viewport</h2>
+                <pre class="nostandard"><code>&lt;meta name="viewport" content="width=500"&gt;</code></pre>
+                <pre class="nostandard"><code>&lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;</code></pre>
+                <p>En la CSS (combinado con Media Queries)</p>
+                <pre><code>@media all and (min-width:37em) {
+   @viewport {
+       zoom: 2;
+   }
+ }</code></pre>
+                <p class="caption"><a href="http://www.w3.org/TR/css-device-adapt/">CSS Device Adaptation</a></p>
+            </section>
+
+            <section>
+                <h2>Diseño adaptado para móviles</h2>
+                <ul>
+                    <li class="fragment roll-in">Diseño lineal en mente <br><small>antes que multi-columnas</small></li>
+                    <li class="fragment roll-in">Diseño líquido (basado en <em>%</em>) <br><small>al menos elástico (en <em>ems</em>)</small></li>
+                    <li class="fragment roll-in">Usar tablas únicamente para representar datos tabulares <br><small>hacerlas pequeñas</small></li>
+                    <li class="fragment roll-in">Evitar uso de imágenes grandes <br><small>menores que la menor pantalla</small></li>
+                    <li class="fragment roll-in">Diseño ligero <br><small>HTML lo más sencillo posible</small></li>
+                    <li class="fragment roll-in">Usar propiedades de CSS básicas incrementando a medida que las necesitamos
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Líquido?</h2>
+                <p><small>Ancho relativo al viewport</small></p>
+                <p> <img height="300" alt="Pantallazo de repositorio de sinfonías de Beethoven a tres columnas" src="img/beethoven3.png" style="border: #000 2px solid; margin-right:0.2em" />
+                    <img class="fragment roll-in" height="300" alt="Pantallazo de repositorio de sinfonías de Beethoven a dos columnas" src="img/beethoven2.png" style="border: #000 2px solid; margin-right:0.2em" />
+                    <img class="fragment roll-in" height="300" alt="Pantallazo de repositorio de sinfonías de Beethoven a una columna" src="img/beethoven1.png" style="border: #000 2px solid" />
+                </p>
+                <p class="caption"><a href="http://responsive.webdemos.nl/demos/02-responsive-beethoven#">http://responsive.webdemos.nl/demos/02-responsive-beethoven#</a></p>
+            </section>
+
+            <section>
+                <h2>Técnicas basadas en CSS</h2>
+                <ul>
+                    <li><a href="http://www.w3.org/TR/css3-multicol/">CSS Multi-column Layout
+          Module</a></li>
+                    <li><a href="http://www.w3.org/TR/css3-flexbox/">CSS Flexible Box Layout
+          Module</a></li>
+                    <li><a href="http://www.w3.org/TR/css3-grid-layout/">Grid Layout</a></li>
+                    <li><a href="http://dev.w3.org/csswg/css-regions/">CSS Regions</a></li>
+                </ul>
+                <aside class="notes"> Column Layout mentioned above, and allows you to arbitrarily place (empty) containers in the HTML at places where you want content to flow through depending the different viewport sizes.</aside>
+            </section>
+
+            <section>
+                <h2>Navegación Responsive</h2>
+                <p>En cuenta los distintos modos de interación posibles</p>
+                <ul>
+                    <li>Basado en foco (tabulador)</li>
+                    <li>Puntero</li>
+                    <li>Táctil</li>
+                </ul>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Imágenes responsive</h2>
+                    <p>Ofrecer la imagen adaptada lo más posible al viewport</p>
+                    <ul>
+                        <li>Ahorro de batería,</li>
+                        <li>ancho de banda,</li>
+                        <li>agilidad en carga de la página</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Propuesta para responsive images</h2>
+                    <p>Del grupo de comunidad <a href="http://responsiveimages.org">responsiveimages.org</a><br><small>(no estándar)</small></p>
+                    <pre class="nostandard"><code>&lt;img src-1="(max-width: 400px) pic-small.jpg"
+    src-2="(max-width: 1000px) pic-medium.jpg"
+    src="pic-large.jpg"
+	alt="Paisaje espectacular"&gt;</code></pre>
+                    <pre class="nostandard"><code>&lt;picture width="500" height="500"&gt;
+   &lt;source media="(min-width: 45em)" src="large.jpg"&gt;
+   &lt;source media="(min-width: 18em)" src="med.jpg"&gt;
+   &lt;source src="small.jpg"&gt;
+   &lt;img src="small.jpg" alt="description of image" lazyload&gt;
+   &lt;p&gt;Accessible text&lt;/p&gt;
+&lt;/picture&gt;</code></pre>
+                </section>
+
+                <section>
+                    <h2>Propuesta para responsive images</h2>
+                    <ul>
+                        <li>Soluciones basadas implementación en servidor <small>(p.e. <a href="http://adaptive-images.com">adaptive-images.com</a>)</small></li>
+                        <li>Trucos mediante CSS (<a href="http://css-tricks.com/which-responsive-images-solution-should-you-use/">ejemplos</a>)</li>
+                        <li>¿La mejor solución?… Toca esperar a que HTML5 lo soporte.</li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <h2>La Pregunta:</h2>
+                <h3>¿Qué puedo/debo usar de HTML5 y CSS3?</h3>
+                <p class="fragment"><a href="http://www.w3.org/Mobile/mobile-web-app-state/">http://www.w3.org/Mobile/mobile-web-app-state/</a></p>
+            </section>
+
+
+            <section>
+                <h2>Participa en el W3C</h2>
+                <ul>
+                    <li><a hreflang="en" href="http://lists.w3.org/">Listas de correo</a></li>
+                    <li><a hreflang="en" href="http://www.w3.org/community/">Grupos de
+            Comunidad</a></li>
+                    <li>Revisión de <a href="http://www.w3.org/TR/">especificaciones</a></li>
+                    <li><a hreflang="en" href="http://www.w3.org/Consortium/Translation/#volunteer">Traducciones
+            de los estándares</a></li>
+                </ul>
+            </section>
+
+            <section data-background="img/slide-html5.png">
+                <h2>WebPlatform.org</h2>
+                <p><img alt="WebPlatform.org" src="img/WebPlatform.jpg" /></p>
+                <p class="caption"><a href="http://webplatform.org">webplatform.org</a></p>
+            </section>
+
+            <section data-background="img/slide-w3dev.png">
+                <h2><img style="border:none; background-color:transparent" width="500" alt="W3DevCampus" src="img/w3devcampus.png" /></h2>
+                <p>Cursos oficiales W3C para desarrolladores</p>
+                <ul>
+                    <li>Responsive Web Design</li>
+                    <li>Mobile Web Best Practices</li>
+                    <li>HTML5</li>
+                    <li><strong>Ahora en español</strong></li>
+                </ul>
+                <p class="caption"><a href="http://www.w3devcampus.com/">w3devcampus.com</a></p>
+            </section>
+
+            <section data-background="img/slide-w3dev.png">
+                <h2>Suite de validación de estándares</h2>
+                <p> <object class="svg" type="image/svg+xml" data="img/validator.svg" title="W3C Suite Validator">W3C
+          Suite Validator</object> </p>
+                <p class="caption"><a href="https://validator-suite.w3.org/">validator-suite.w3.org</a></p>
+            </section>
+
+            <section data-background="img/slide-w3c.png">
+                <h2>¡Muchas Gracias!</h2>
+                <p><a href="https://www.linkedin.com/in/espinr/">martin@w3.org</a> <a style="color:#ff9600" href="http://twitter.com/espinr">@espinr</a></p>
+
+                <p class="caption"><a href="https://espinr.github.io/talks/2014/0408-Responsive-MediaLab-MA">http://www.w3c.es/Presentaciones/2014/0408-Responsive-MediaLab-MA</a></p>
+                <p class="caption"><a href="http://www.w3.org/Talks/2013/1001-CSS-Lyon/">http://www.w3.org/Talks/2013/1001-CSS-Lyon/</a></p>
+                <p class="caption"><a href="http://www.w3.org/Talks/2013/0128-CSS-Utrecht/">http://www.w3.org/Talks/2013/0128-CSS-Utrecht/</a></p>
+            </section>
+
+
+
+
+
+            </div>
+
+        </div>
+
+        <script src="../../lib/reveal.js/lib/js/head.min.js"></script>
+        <script src="../../lib/reveal.js/js/reveal.min.js"></script>
+
+        <script>
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [{
+                    src: '../../lib/reveal.js/lib/js/classList.js',
+                    condition: function() {
+                        return !document.body.classList;
+                    }
+                }, {
+                    src: '../../lib/reveal.js/plugin/markdown/marked.js',
+                    condition: function() {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                }, {
+                    src: '../../lib/reveal.js/plugin/markdown/markdown.js',
+                    condition: function() {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                }, {
+                    src: '../../lib/reveal.js/plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function() {
+                        hljs.initHighlightingOnLoad();
+                    }
+                }, {
+                    src: '../../lib/reveal.js/plugin/zoom-js/zoom.js',
+                    async: true,
+                    condition: function() {
+                        return !!document.body.classList;
+                    }
+                }, {
+                    src: '../../lib/reveal.js/plugin/notes/notes.js',
+                    async: true,
+                    condition: function() {
+                        return !!document.body.classList;
+                    }
+                }]
+            });
+        </script>
+
+        <script src="./js/ejemplos.js"></script>
+
+</body>
+
+</html>

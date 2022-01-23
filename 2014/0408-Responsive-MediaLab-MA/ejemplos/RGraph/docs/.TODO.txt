@@ -1,0 +1,5 @@
+ TODO
+ ====
+  o [PROGRESS] Add "in bar" label (level indicator)
+  o [SCATTER] Add chart.ymin
+  o [MISC] Check chart.zoom.background is fully documented

@@ -1,0 +1,43 @@
+@font-face {
+	font-family: 'heydings';
+	src: url('../fonts/heydings-controls/heydings_controls.ttf') format('truetype');
+}	
+
+@font-face {
+	font-family: 'destroy';
+	src: url('../fonts/destroy.ttf') format('truetype');
+}	
+
+.symbol {
+	font-family: 'heydings';
+}
+
+.caption { font-size: 40% !important; color: #888888 !important; }
+.caption a { opacity: 0.4;}
+
+pre.nostandard code { border-left: 10px red solid; }
+pre.nostandard:before { content: "NO ESTÁNDAR"; color: red; }
+
+
+/* Ejemplo de los bordes */
+
+@font-face {
+	font-family: 'JottFLFBold';
+	src: url('../fonts/JottFLF/JottFLF-Bold.woff') format('woff');
+}
+@font-face {
+	font-family: 'EnglandHandDB';
+	src: url('../fonts/england/england.woff') format('woff');
+}
+@font-face {
+	font-family: 'ProclamateLight';
+	src: url('../fonts/proclamate/proclamate_light.woff') format('woff');
+}
+
+table.economic td, table.economic th {
+	border: 2px orange solid;
+}
+
+strong.xl {
+	font-size: 200%;
+}

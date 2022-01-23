@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Efficient Reuse of Public Transport Information in the City of Gijon</title>
+
+    <meta name="description" content="Presentation: Efficient Reuse of Public Transport Information in the City of Gijon">
+    <meta name="author" content="Martin Alvarez-Espinar">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../../lib/reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../../lib/reveal.js/css/theme/w3c.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../../lib/reveal.js/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = '../../lib/reveal.js/css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+		<script src="../../lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+
+    <!-- Custom syles -->
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section data-background="img/sharepsi.png">
+                <h1>Efficient Reuse of Public Transport Information</h1>
+                <h3>in the City of Gijon</h3>
+                <div style="text-align: right;">
+                    <p><a href="https://www.w3.org/2013/share-psi/workshop/samos/">Samos Workshop: Uses of Open Data Within Government for Innovation and Efficiency</a></p>
+                    <p style="color:#888888">Samos, 30<sup>th</sup> June 2014</p>
+                    <p style="text-align: right;">
+                        <small><a href="/Personal/Martin">Martín Álvarez-Espinar</a> (<a href="http://twitter.com/espinr">@espinr</a>)<br><em><a href="http://ct.ctic.es/web/contenidos/en">CTIC</a> – <a href="http://www.w3c.es">W3C Spain Office</a></em></small>
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <section>
+                    <h2>City of Gijón</h2>
+                    <p><abbr title="Also Known As">AKA</abbr> <a href="http://en.wikipedia.org/wiki/Gij%C3%B3n">Xixón</a> <em>[ʃiˈʃoŋ]</em></p>
+                </section>
+
+                <section data-background="img/map.png">
+                    <h2 style="color:#333">North of Spain</h2>
+                </section>
+
+
+                <section data-background="img/gijon.jpg">
+                    <h2>Gijón</h2>
+                    <p>Population: 275,000</p>
+                    <p>Very active in eGovernment</p>
+                    <p><a href="http://datos.gijon.es">datos.gijon.es</a> launched in 2010</p>
+                </section>
+            </section>
+
+            <section data-background="img/marquee.jpg">
+                <h2>Released a Web Service with Public Transport Information</h2>
+                <ul>
+                    <li>timetables,</li>
+                    <li>lines (routes, status, origin, destination),</li>
+                    <li>stops (location, arrivals, departures),</li>
+                    <li>and coaches (status, position, journey)</li>
+                </ul>
+            </section>
+
+            <section data-background="img/display.jpg">
+                <h2>Reuse Started</h2>
+            </section>
+
+            <section>
+                <h2>by Developers/Citizens</h2>
+                <p><img height="500" src="img/marquesina_iphone.png" alt="Screenshot of an application showing the status of a bus stop" /></p>
+                <p class="caption"><a href="http://url.ctic.es/marquesina">url.ctic.es/marquesina</a></p>
+            </section>
+
+
+            <section>
+                <section>
+                    <h2>by the Industry</h2>
+                    <p><img height="500" src="img/layar_vertical.png" alt="Screenshot of an augmented reality application showing bus stops" /></p>
+                    <p class="caption">Layar App</p>
+                </section>
+
+                <section>
+                    <h2>by the Industry</h2>
+                    <p><img height="500" src="img/busgijon-app.png" alt="Screenshot of an application showing bus routes" /></p>
+                    <p class="caption"><a href="https://itunes.apple.com/es/app/bus-gijon/id657054796?mt=8">Bus Gijón for iOS</a></p>
+                </section>
+                <section data-background="img/realtime.png">
+                    <h2 style="background-color: rgba(0,0,0,0.5)">Realtime visualizations!</h2>
+                    <p class="caption"><a href="http://datos.gijon.es/aplicaciones/busgijon/busgijon.jsp">http://datos.gijon.es/aplicaciones/busgijon/busgijon.jsp</a></p>
+                </section>
+
+
+            </section>
+
+            <section>
+                <h2>by Artists</h2>
+                <p><img src="img/xixonsound2.jpg" alt="Screenshot of Allegreto para flotilla de Autobuses" /></p>
+                <p>Multimedia setup based on geolocation, data visualization, electronic music, interaction, and animation</p>
+                <p class="caption">Xixón Sound. V01 – allegretto para flotilla de autobuses</p>
+            </section>
+
+
+            <section>
+                <section>
+                    <h2>by Local Businesses</h2>
+                    <p><img src="img/stop-reconquista.jpg" alt="Bus stoping in front of a cafe" /></p>
+                </section>
+
+                <section>
+                    <h2>The same open app in a cafe</h2>
+                    <p><img src="img/reconquista-in.jpg" alt="Cafe with tablet runnig an app showing the status of the bus stop" /></p>
+                </section>
+
+                <section>
+                    <h2>Showing the status of the bus stop</h2>
+                    <p><img src="img/detalle.png" alt="Tablet runnig an app showing the status of the bus stop" /></p>
+                </section>
+
+            </section>
+
+            <section>
+                <section>
+                    <h2>by the City Council?</h2>
+                    <p><img src="img/displayout.jpg" alt="Display at a bus stop showing the next coaches to stop there" /></p>
+                </section>
+
+                <section>
+                    <h2>Cheaper, huh?</h2>
+                    <p><img src="img/displayindoor.jpg" alt="The same application can be run on a cheap computer" /></p>
+                </section>
+
+                <section>
+                    <h2>Installed in public facilities</h2>
+                    <p><img src="img/hospital.jpg" alt="The same application on a display within the local Hospital" /></p>
+                </section>
+
+                <section>
+                    <h2>Even recycling old computers</h2>
+                    <p><img src="img/ctic.jpg" alt="The same application on a display within a public building" /></p>
+                </section>
+
+                <section>
+                    <h2>Hospital, railway station, university…</h2>
+                    <p><img src="img/railway.jpg" alt="The same application on a display within the local railway station" /></p>
+                </section>
+
+                <section>
+                    <h2>Not only social benefits</h2>
+                    <br/>
+                    <table class="economic">
+                        <thead>
+                            <tr>
+                                <th style="border:none"></th>
+                                <th>Standard display</th>
+                                <th>PC-based equipment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Unit cost</td>
+                                <td style="text-align: right">€3,900</td>
+                                <td style="text-align: right">€1,000</td>
+                            </tr>
+                            <tr>
+                                <td>284 units*</td>
+                                <td style="text-align: right">€1M</td>
+                                <td style="text-align: right">€300,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="caption">* Public facilities with feasability to install these systems</p>
+                    <br/>
+                    <p>Excluding installation costs!!!</p>
+                </section>
+
+                <section>
+                    <h2>Direct savings for the government</h2>
+                    <p>Open data without additional cost (Web Service already existed)</p>
+                    <p>Free app made by others (reuse of basic HTML App)</p>
+                    <br/>
+                    <p><strong class="xl">€0.8 million</strong> (4% annual budget)</p>
+                </section>
+
+            </section>
+
+
+            <section data-background="img/sharepsi.png">
+                <h2>Thanks!</h2>
+                <p><a href="https://www.linkedin.com/in/espinr/">martin@w3.org</a> <br> <a style="color:#ff9600" href="http://twitter.com/espinr">@espinr</a></p>
+
+                <p class="caption">This presentation: <a href="https://espinr.github.io/talks/2014/0630-EfficientPSIReuse_Samos-MA">http://www.w3c.es/Presentaciones/2014/0630-EfficientPSIReuse_Samos-MA</a></p>
+                <p class="caption">Paper: <a href="http://datos.fundacionctic.org/recursos/2014/05/transport_gijon_sharepsi.pdf">http://datos.fundacionctic.org/recursos/2014/05/transport_gijon_sharepsi.pdf</a></p>
+            </section>
+
+
+
+
+
+        </div>
+
+    </div>
+
+    <script src="../../lib/reveal.js/lib/js/head.min.js"></script>
+    <script src="../../lib/reveal.js/js/reveal.min.js"></script>
+
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [{
+                src: '../../lib/reveal.js/lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: '../../lib/reveal.js/plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../../lib/reveal.js/plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../../lib/reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: '../../lib/reveal.js/plugin/zoom-js/zoom.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }, {
+                src: '../../lib/reveal.js/plugin/notes/notes.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }]
+        });
+    </script>
+
+    <script src="./js/ejemplos.js"></script>
+
+</body>
+
+</html>
