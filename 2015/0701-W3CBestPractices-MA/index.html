@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Ofimática y HTML Básico</title>
+    <meta name="description" content="Presentation:Estándares Web. W3C la Oficina Española">
+    <meta name="author" content="Martin Alvarez-Espinar">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../lib/2015/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../lib/2015/reveal.js/css/theme/black.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../../lib/2015/reveal.js/lib/css/zenburn.css">
+    <!--link rel="stylesheet" href="./css/custom.css" -->
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = '../../lib/2015/reveal.js/css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+    <!--[if lt IE 9]>
+		<script src="../../lib/js/html5shiv.js"></script>		<![endif]-->
+    <!-- Custom syles -->
+    <link rel="stylesheet" href="css/custom.css" />
+</head>
+
+<body>
+
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides takahashi">
+
+            <section>
+                <h1>Ofimática y HTML Básico</h1>
+            </section>
+
+            <section data-background="img/email.gif">
+                <div>
+                    <h2>El Email</h2>
+                </div>
+            </section>
+
+            <section>
+                <h2>Las opciones</h2>
+                <img src="img/options.png" alt="Mensaje" />
+            </section>
+
+            <section data-background="img/email_html.png">
+                <div>
+                    <h2>¿HTML… Por qué?</h2>
+                </div>
+            </section>
+
+            <section data-background="img/firma.png">
+                <div>
+                    <h2>¿Y la firma?</h2>
+                </div>
+            </section>
+
+            <section>
+                <p><img src="img/email_details.png" alt="" /></p>
+            </section>
+
+            <section data-background="img/doodle.gif">
+                <div>
+                    <h2>¿Como mejorar el posicionamiento?</h2>
+                </div>
+            </section>
+
+            <section data-background="img/google.png">
+                <div>
+                    <h2>semantic web ctic</h2>
+                </div>
+            </section>
+
+            <section data-background="img/priesca.png">
+                <div>
+                    <h2>Pablo Priesca en CTIC</h2>
+                </div>
+            </section>
+
+
+            <section data-background="img/andres.jpeg">
+                <div>
+                    <h2>Sabemos mucho de esto (accesibilidad)</h2>
+                </div>
+            </section>
+
+            <section data-background="img/jose.jpg">
+                <div>
+                    <h2>Buenas prácticas en Web Móvil</h2>
+                </div>
+            </section>
+
+            <section data-background="img/404.gif">
+                <div>
+                    <h2>Buen uso del HTTP (y de las URLs)</h2>
+                </div>
+            </section>
+
+
+            <section data-background="img/scary.gif">
+                <div>
+                    <h2>Buen uso del HTML…</h2>
+                </div>
+            </section>
+
+            <section>
+                <h2>Los elementos por su significado</h2>
+                <ul>
+                    <li>Encabezados adecuados, enlaces con texto/títulos adecuados…</li>
+                    <li>Nuevos elementos:
+                        <ul>
+                            <li><code>article</code></li>
+                            <li><code>section</code></li>
+                            <li><code>header</code></li>
+                            <li><code>footer</code></li>
+                            <li><code>aside</code></li>
+                            <li><code>nav</code></li>
+                            <li><code>figure</code></li>
+                            <li><code>figcaption</code>…</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section data-background="img/monkey.gif">
+                <div>
+                    <h2>Darle a Google lo que quiere</h2>
+                </div>
+            </section>
+
+            <section data-background="img/embed.gif">
+                <div>
+                    <h2 style="text-transform:none">RDFa = RDF EN EL HTML</h2>
+                </div>
+            </section>
+
+
+            <section>
+                <div>
+                    <h2>¿Qué es RDF?</h2>
+                </div>
+
+                <p style="margin-top: 3em"><img src="img/fig04_tripletas.png" alt="" /></p>
+            </section>
+
+            <section>
+                <div>
+                    <h2>Descripción de "cosas"</h2>
+                </div>
+
+                <p style="margin-top: 3em"><img src="img/fig05_grafo_per.png" alt="" /></p>
+            </section>
+
+
+            <section>
+                <div>
+                    <h2>Formando grafos</h2>
+                </div>
+
+                <p style="margin-top: 3em"><img src="img/fig06_grafo_org.png" alt="" /></p>
+            </section>
+
+            <section>
+                <div>
+                    <h2>Grafos infinitos</h2>
+                </div>
+
+                <p style="margin-top: 3em"><img src="img/fig07_super-grafo.png" alt="" /></p>
+            </section>
+
+            <section>
+                <div>
+                    <h2>Lo incrustamos en el HTML</h2>
+                </div>
+
+                <p style="margin-top: 3em"><img src="img/cod05_rdfa.png" alt="" /></p>
+            </section>
+            <section>
+                <h2>Schema.org</h2>
+                <ul>
+                    <li>Creative works: <a href="../CreativeWork">CreativeWork</a>, <a href="../Book">Book</a>, <a href="../Movie">Movie</a>, <a href="../MusicRecording">MusicRecording</a>, <a href="../Recipe">Recipe</a>, <a href="../TVSeries">TVSeries</a>                        ...</li>
+                    <li>Embedded non-text objects: <a href="../AudioObject">AudioObject</a>, <a href="../ImageObject">ImageObject</a>, <a href="../VideoObject">VideoObject</a></li>
+                    <li><a href="../Event">Event</a></li>
+                    <li><a href="meddocs.html">Health and medical types</a></li>
+                    <li><a href="../Organization">Organization</a>, <a href="../Person">Person</a></li>
+                    <li><a href="../Place">Place</a>, <a href="../LocalBusiness">LocalBusiness</a>, <a href="../Restaurant">Restaurant</a> ...</li>
+                    <li><a href="../Product">Product</a>, <a href="../Offer">Offer</a>, <a href="../AggregateOffer">AggregateOffer</a></li>
+                    <li><a href="../Review">Review</a>, <a href="../AggregateRating">AggregateRating</a></li>
+                    <li><a href="../Action">Action</a></li>
+                </ul>
+            </section>
+
+
+            <section>
+                <div>
+                    <h2>¿Qué obtenemos?</h2>
+                </div>
+
+                <p style="margin-top: 3em"><img src="img/frozen.png" alt="" /></p>
+            </section>
+
+            <section data-background="img/success.gif">
+                <div>
+                    <h2>Estar siempre arriba (en los buscadores)</h2>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+
+    <script src="../../lib/2015/reveal.js/lib/js/head.min.js"></script>
+    <script src="../../lib/2015/reveal.js/js/reveal.js"></script>
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+
+            controls: false,
+            progress: true,
+            slideNumber: true,
+            history: true,
+            keyboard: true,
+            overview: true,
+            center: false,
+            touch: true,
+            loop: false,
+            rtl: false,
+            fragments: true,
+            embedded: false,
+            help: true,
+
+            // Number of milliseconds between automatically proceeding to the next slide
+            // by using a data-autoslide attribute on your slides
+            autoSlide: 20000,
+            // Stop auto-sliding after user input
+            autoSlideStoppable: true,
+
+            mouseWheel: false,
+            hideAddressBar: true,
+            previewLinks: false,
+            transition: 'convex', // none/fade/slide/convex/concave/zoom
+            transitionSpeed: 'default', // default/fast/slow
+            backgroundTransition: 'convex', // none/fade/slide/convex/concave/zoom
+            viewDistance: 3,
+
+            // Parallax background image
+            parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+            parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+            dependencies: [{
+                src: '../../lib/2015/reveal.js/lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: '../../lib/2015/reveal.js/plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../../lib/2015/reveal.js/plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../../lib/2015/reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: '../../lib/2015/reveal.js/plugin/zoom-js/zoom.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }, {
+                src: '../../lib/2015/reveal.js/plugin/notes/notes.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }]
+        });
+    </script>
+</body>
+
+</html>

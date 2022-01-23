@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Estándares Web en la industria editorial</title>
+    <meta name="description" content="Presentation: Estándares Wen en la industria editorial">
+    <meta name="author" content="Martin Alvarez-Espinar">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../lib/2015/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../lib/2015/reveal.js/css/theme/w3c.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../../lib/2015/reveal.js/lib/css/zenburn.css">
+    <!--link rel="stylesheet" href="./css/custom.css" -->
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = '../../lib/2015/reveal.js/css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+    <!--[if lt IE 9]>
+		<script src="../../lib/js/html5shiv.js"></script>		<![endif]-->
+    <!-- Custom syles -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <img style="position: absolute; top: -5px; right: 1em; border: 0; width: 8%; z-index: -100" src="img/ribon_w3c_ctic.png" alt="W3C España + CTIC" />
+
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+
+                <h1>Estándares Web</h1>
+                <h3>en la industria editorial</h3>
+                <div style="text-align: right;">
+                    <p><a href="http://www.ebookspain.org/eventos/ebookspain-open-sevilla/">I #ebookspain open</a></p>
+                    <p>Sevilla, 26 Febrero 2015</p>
+                    <p style="text-align: right;"> <small><a href="/Personal/Martin">Martín
+                  Álvarez-Espinar</a> (<a href="http://twitter.com/espinr">@espinr</a>)<br>
+                <em><a href="http://ct.ctic.es/web/contenidos/en">CTIC</a> – <a
+                    href="http://www.w3c.es">W3C
+                    Spain Office</a></em></small> </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Un mundo en constante cambio</h2>
+                <p>
+                    <object class="svg" type="image/svg+xml" data="img/HTML5_sticker.svg" title="I've seen the future, it's in my browser">I've
+                seen the future, it's in my browser</object>
+                </p>
+                <aside class="notes">
+                </aside>
+            </section>
+
+            <!-- Example of nested vertical slides -->
+            <section>
+                <section>
+                    <h2>25 años de Web</h2>
+                </section>
+                <section>
+                    <h2>(pre)Historia de la Web</h2>
+                    <p>
+                        <a href="http://www.w3.org/2005/01/timelines/description"><img src="img/timeline-w3c.png" alt="Historia del W3C" /></a>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>La "Web" en 1989</h2>
+                    <p>
+                        <a href="http://www.w3.org/2005/01/timelines/description"><img src="img/timeline-w3c_1989.png" alt="Historia del W3C (señalado 1989)" /></a>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>(1989) El primer boceto</h2>
+                    <p>
+                        <img src="img/proposal.gif" alt="Propuesta de organización de la información de Tim Berners-Lee" />
+                        <br><small class="caption"><a
+                    href="http://www.w3.org/History/1989/proposal.html">Information
+                    Management: A Proposal — Tim Berners-Lee, CERN</a></small>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>La Web en 1990</h2>
+                    <p>
+                        <a href="http://www.w3.org/2005/01/timelines/description"><img src="img/timeline-w3c_1990.png" alt="Historia del W3C (señalado 1990)" /></a>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>(1990) WorldWideWeb</h2>
+                    <p>
+                        <img src="img/worldwideweb.gif" alt="Pantallazo del WorldWideWeb, primer navegador de la historia" /></p>
+                </section>
+
+                <section>
+                    <h2>La Web crece</h2>
+                    <p>
+                        <a href="http://www.w3.org/2005/01/timelines/description"><img src="img/timeline-w3c_1994.png" alt="Historia del W3C (señalado 1993)" /></a>
+                    </p>
+                </section>
+            </section>
+
+
+            <section>
+                <section data-background="img/w3c.svg">
+                    <h2 lang="en">¿W3C?</h2>
+                </section>
+
+                <section>
+                    <h2><span lang="en">World Wide Web Consortium</span></h2>
+                    </p>
+                    <ul>
+                        <li>Organismo <strong class="xl">neutro</strong></li>
+                        <li>Fundado en 1994 por <a title="Información sobre Tim Berners-Lee" href="http://www.w3.org/People/Berners-Lee/">Tim
+                  Berners-Lee</a></li>
+                        <li><strong>82</strong> personas en el <a hreflang="en" href="http://www.w3.org/People">Team</a></li>
+                        <li><strong>382</strong> <a hreflang="en" title="Lista de Miembros" href="http://www.w3.org/Consortium/Member/List">Miembros</a></li>
+                        <li><strong>+70</strong> <a title="Gráfico sobre las actividades y grupos del W3C" href="http://www.w3.org/2003/02/W3COrg.svg">Grupos
+                  del W3C</a> (con más de <strong>1.500</strong> investigadores)
+                        </li>
+                        <li><small>Relaciones con otros organismos estandarizadores</small></li>
+                    </ul>
+                </section>
+
+                <section data-background="img/aviones.png" class="onimage">
+                    <h2>4.632 personas en los grupos de comunidad del W3C</h2>
+                    <p><a href="http://www.w3.org/blog/2015/01/2014-in-figures/"><small>Ocuparían 24,5 aviones</small></a></p>
+                </section>
+
+                <section>
+                    <h2>Realmente <span lang="en">WorldWide</span></h2>
+                    <p> <img alt="El mundo, con puntos que indican las sedes centrales y las oficinas" src="img/w3c-world.png" /></p>
+                </section>
+
+                <section>
+                    <h2>Miembros en España</h2>
+                    <p> <img alt="17 Miembros en España" src="img/miembros_es.png" /></p>
+                </section>
+
+                <section>
+                    <h2>W3C.es @ CTIC</h2>
+                    <p><img src="img/oficinaW3C.jpg" alt="Vista del edificio de CTIC donde se encuentra la Oficina del W3C en España" /></p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>¿Qué hace el <abbr lang="en" title="World Wide Web Consortium">W3C</abbr>?</h2>
+                    <p style="text-align: justify;"><a style="font-size: 33px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/Voice/">Voice</a>
+                        <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/Graphics/WebCGM/">WebCGM</a>
+                        <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/PICS/">PICS</a>
+                        <a style="font-size: 41px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/People/Raggett/tidy/">HTMLTidy</a>
+                        <a style="font-size: 46px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/2002/ws/databinding/">Databinding</a>
+                        <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2001/sw/WebOnt/">WebOntology</a>
+                        <a style="font-size: 50px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/html/">HTML</a>
+                        <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/2004/CDF/">CompoundDocumentFormats</a>
+                        <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/TR/rdf-sparql-query/">SPARQL</a>
+                        <a style="font-size: 33px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/WAI/">WAI</a>
+                        <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2006/webapi/">Web
+                APIs</a>
+                        <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/Library/">Libwww</a>
+                        <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2001/ppwg/">PatentPolicy</a>
+                        <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/2004/OWL/">OWL</a>
+                        <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/AudioVideo/TT/">TimedText</a>
+                        <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/Encryption/2001/">XMLEncryption</a>
+                        <a style="font-size: 33px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/2002/mmi/">Multimodal</a>
+                        <a style="font-size: 50px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/XML/">XML</a>
+                        <a style="font-size: 35px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2006/rwc/">RichWebClients</a>
+                        <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/XML/Processing/">XMLProcessing</a>
+                        <a style="font-size: 42px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/2001/di/">DeviceIndependence</a>
+                        <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/Addressing/">URI/URL</a>
+                        <a style="font-size: 44px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/DOM/">DOM</a>
+                        <a style="font-size: 50px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/Protocols/">HTTP</a>
+                        <a style="font-size: 50px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/WAI/">Accessibility</a>
+                        <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/RDF/">RDF</a>
+                        <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2006/appformats/">WebApplicationFormats</a>
+                        <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/XML/Linking">XMLBase</a>
+                        <a style="font-size: 50px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/Jigsaw/">Jigsaw</a>
+                        <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/XML/Linking">XLink</a>
+                        <a style="font-size: 35px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/International/">I18N</a>
+                        <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/P3P/">P3P</a>
+                        <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/QA/">QualityAssurance</a>
+                        <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/2001/XKMS/">XMLKeyManagement</a>
+                        <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/UbiWeb/">UbiquitousWeb</a>
+                        <a style="font-size: 37px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/2002/mmi/ink">InkML</a>
+                        <a style="font-size: 39px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/2005/Incubator/">Incubator</a>
+                        <a style="font-size: 33px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/XML/Linking">XPath</a>
+                        <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2002/ws/">WebServices</a>
+                        <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/MarkUp/Forms/">XForms</a>
+                        <a style="font-size: 48px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/Style/CSS/">CSS</a>
+                        <a style="font-size: 50px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/2000/xp/Group/">SOAP</a>
+                        <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/Mobile/">Mobile</a>
+                        <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/AudioVideo/">SMIL</a>
+                        <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/2005/rules/">Rules</a>
+                        <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/Graphics/SVG/">SVG</a>
+                        <a style="font-size: 50px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/Amaya/">Amaya</a>
+                        <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/2001/sw/">SemanticWeb</a>
+                        <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/Math/">MathML</a>
+                    </p>
+                    <p><small>Especificaciones, directrices y herramientas <strong>abiertas</strong> con la <a hreflang="en-us" href="http://www.w3.org/Consortium/Patent-Policy/">política
+                de patentes</a> más <strong>transparente</strong> en Internet</small></p>
+                </section>
+
+                <section>
+                    <h2>+330 Recomendaciones</h2>
+                    <div> <img alt="330 recomendaciones (estándares) en estos últimos 20 años del W3C" src="img/timeline_recs.png" />
+                    </div>
+                </section>
+
+                <section>
+                    <h2>¿Cómo se construyen?</h2>
+                    <p>
+                        <object title="Proceso de creación de las Recomendaciones del W3C, vete a http://www.w3.org/Consortium/Process/ para más detalles" style="width: 80%" data="img/documentProcess.svg" height="60.00%" type="image/svg+xml" class="svg"></object>
+                    </p>
+                </section>
+            </section>
+
+            <section data-background="img/openwebplatform1.png">
+                <h2>La Plataforma Web Abierta</h2>
+            </section>
+            <section data-background="img/html5-topper.png">
+                <h2 style="display:none">HTML5</h2>
+            </section>
+
+
+            <section>
+                <section>
+                    <h2>¿Edición digital y W3C?</h2>
+                </section>
+
+                <section>
+                    <h2>Un usuario avanzado</h2>
+                    <p>La <strong>industria editorial es posiblemente el segundo usuario más importante</strong> de las tecnologías W3C después de los tradicionales navegadores</p>
+                    <ul class="bullets">
+                        <li>Casi todas las <strong>revistas, periódicos, publicaciones técnicas</strong> tienen una versión online
+                            <li>Las <strong>publicaciones académicas</strong> necesitan de la Web
+                                <li><strong>EPUB es, en esencia, un sitio web estático y empaquetado</strong>
+                    </ul>
+                </section>
+                <section>
+                    <h2><strong>Espectativas</strong> y requisitos</h2>
+                    <ul>
+                        <li>Calidad de los tipos de <strong>fuentes</strong>, <strong>gráficos</strong>,…
+                            <li>Nuevas formas de publicación basadas en <strong>multimedia</strong> y con <strong>interacción</strong> avanzada…
+                                <li>Publicación de <strong>datos asociados</strong> a los documentos
+                    </ul>
+                </section>
+                <section>
+                    <h2>En modo "pasivo"</h2>
+                    <p>Tradicionalmente esta industria ha permanecido "pasiva" frente las tecnologías Web</p>
+                    <ul>
+                        <li><strong>No participación</strong> en el desarrollo de tecnologías Web básicas
+                            <li>Los organismos estandarizadores como <strong>W3C apenas conocen estos requisitos</strong>
+                                <li><em>Web—Editoriales</em> son mundos completamente separados
+                    </ul>
+                </section>
+                <section>
+                    <h2>Consecuencia</h2>
+                    <p>Los Grupos de Trabajo del W3C <strong>no tienen en cuenta las necesidades de este sector</strong> a la hora de establecer las prioridades</p>
+                    <p>:-[</p>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Origen de DPUB @ W3C</h2>
+                </section>
+                <section>
+                    <h2>Origen de DPUB @ W3C</h2>
+                    <ul>
+                        <li>(2012) W3C e IDPF organizaron varios <strong>talleres para buscar las sinergias</strong>
+                            <li>(2013) W3C crea la <a href="http://www.w3.org/dpub/">Actividad sobre Edición Digital</a> y el <a href="https://www.w3.org/dpub/IG/"><abbr title="Grupo 
+              de Interés">IG</abbr> sobre Edición Digital (DPUB IG)</a>
+                                <ul>
+                                    <li>Se celebran teleconferencias semanales y
+                                        <li>Reuniones presenciales semestrales (próxima en mayo'15 en NYC)
+                                </ul>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Misión del DPUB IG</h2>
+
+                    <blockquote>The mission of the Digital Publishing Interest Group (DPUB IG)&nbsp;[…]&nbsp;<strong>a forum for experts</strong> in the digital publishing ecosystem&nbsp;[…]&nbsp;for <strong>technical discussions</strong>, <strong>gathering use cases and requirements to align the existing formats and technologies</strong>                        (e.g., for electronic books) with those used by the Open Web Platform&nbsp;[…]&nbsp;</blockquote>
+                </section>
+
+                <section>
+                    <h2>Esto, pero explicado</h2>
+                    <ul>
+                        <li>Los <strong>expertos</strong> de la industria de la edición digital <strong>identifican las carencias de la Plataforma Web Abierta</strong>
+                            <li>Estos requisitos se lanzan a los <strong>grupos de trabajo del W3C</strong> para actualizar (o desarrollar) las especificaciones
+                                <li>El <strong>DPUB IG tiene grupos especiales</strong> que se coordinan con otros grupos de trabajo
+                    </ul>
+                    <p>Más en el <a href="https://www.w3.org/dpub/IG/wiki/Main_Page">sitio web oficial</a></p>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>¿Quién hace el trabajo?</h2>
+                </section>
+                <section>
+                    <h2>Todo el mundo trabaja</h2>
+                    <ul>
+                        <li><a href="http://idpf.org/">IDPF</a> ha estado creando <strong>especificaciones basadas en estándares del W3C</strong> desde hace más de 15 años
+                            <li><a href="http://www.w3.org/dpub/IG/wiki/Main_Page">DPUB IG</a> destaca <strong>los problemas de la Plataforma Web Abierta que no cumplen sus necesidades</strong>
+                                <li>Los <a href="http://www.w3.org/Consortium/activities">Grupos de Trabajo del W3C</a> <strong>actualizan las especificaciones</strong> para reflejar estas necesidades
+                    </ul>
+                </section>
+                <section>
+                    <h2>Grupos especiales dentro de DPUB IG</h2>
+                    <ul>
+                        <li><a href="https://www.w3.org/dpub/IG/wiki/Task_Forces/Annotation">Anotaciones</a>
+                            <li><a href="https://www.w3.org/dpub/IG/wiki/Task_Forces/Latinreq">Maquetación y estilos</a>
+                                <li><a href="https://www.w3.org/dpub/IG/wiki/Task_Forces/Metadata">Metadatos</a>
+                                    <li><a href="https://www.w3.org/dpub/IG/wiki/Task_Forces/Content_and_Markup">Contenido y etiquetado</a>
+                                        <li><a href="https://www.w3.org/dpub/IG/wiki/Task_Forces/Accessibility">Accesibilidad</a>
+                                            <li><a href="https://www.w3.org/dpub/IG/wiki/Task_Forces/STEM">STEM</a> (Science, Technology, Engineering, Maths)
+                    </ul>
+                </section>
+            </section>
+
+            <section data-background="img/anotaciones.jpg" class="onimage">
+                <h2>Anotaciones</h2>
+                <ul>
+                    <li>Publicados <a href="http://w3c.github.io/dpub-annotation/">Casos de Uso sobre anotaciones</a>
+                        <li>Actualmente, el <a href="http://www.w3.org/annotation/">Grupo de Trabajo sobre Anotaciones Web</a> desarrolla un estándar para anotaciones en cualquier documento Web (desde navegadores Web o eBooks)
+                </ul>
+                <p class="caption"><a href="https://www.flickr.com/photos/chemheritage/14785964707">foto: Chemical Heritage Foundation</a></p>
+            </section>
+
+            <section data-background="img/Two-column-layout.png" class="onimage">
+                <h2>Maquetación y estilos</h2>
+                <ul>
+                    <li>Publicados <a href="http://www.w3.org/TR/dpub-latinreq/">Casos de Uso de paginación y maquetado latino</a>
+                        <ul>
+                            <li>Requisitos para impresión y edición digital sobre HTML y CSS usando el alfabeto latino
+                        </ul>
+                        <li>Colaborando con el Grupo de Trabajo de CSS para publicar <a href="http://www.w3.org/TR/2014/WD-css-inline-3-20141218/">CSS Inline Layout Module Level 3</a>
+                </ul>
+                <p class="caption"><a href="http://commons.wikimedia.org/wiki/File:Two-column-layout.png">foto: Wikimedia Commons</a></p>
+            </section>
+
+            <section data-background="img/metadatos.png" class="onimage">
+                <h2>Metadatos</h2>
+                <ul>
+                    <li>Reuniones con expertos en metadatos de publicación
+                        <li>Publicado el <a href="http://w3c.github.io/dpub-metadata/">Informe del Grupo Especial de Metadatos:</a>
+                            <ul>
+                                <li>Resumen de las entrevistas
+                                    <li>Descubierto que la <strong>OWP tiene herramientas</strong> (pero los editores no están familiarizados)
+                                        <li>Ayudar a la industria editorial en el uso de herramientas para <strong>implementar vocabularios</strong> existentes
+                            </ul>
+                </ul>
+                <small class="caption"><a href="http://www.loc.gov/pictures/item/2003655489/">Ficha de publicación en la Library of Congress</a></small>
+            </section>
+
+            <section data-background="img/markup.png" class="onimage">
+                <h2>Contenido y etiquetado</h2>
+                <ul>
+                    <li>Objetivo: estructura lógica estándar sobre (y compatible con) HTML <small>p.e., identificación de distintos tipos de secciones, términos de indexación, glosarios,…</small>
+                    </li>
+                    <li>Trabajando con un Grupo de Trabajo del W3C para extensiones de accesibilidad (<a href="http://www.w3.org/WAI/intro/aria.php">ARIA</a>)
+                        <li>Lista de <strong>términos preliminares</strong> como módulo de ARIA
+                            <ul>
+                                <li>Términos que ofrecen a los elementos HTML significado semántico
+                                    <li>Objetivo: <strong>incrementar la accesibilidad</strong>
+                            </ul>
+                            </li>
+                </ul>
+            </section>
+
+            <section data-background="img/headphones.jpg" class="onimage">
+                <h2>Accesibilidad</h2>
+                <ul>
+                    <li>Casos de uso relativos a <strong>accesibilidad y personalización</strong></li>
+                    <li>Revisión de las <a href="http://www.w3.org/WAI/intro/uaag.php">UAAG</a>, <a href="http://www.w3.org/WAI/intro/wcag">WCAG</a> y <a href="http://www.w3.org/WAI/intro/atag.php">ATAG</a> para alinearlas con la edición digital</li>
+                </ul>
+            </section>
+
+            <section data-background="img/math-formulas.jpg" class="onimage">
+                <h2>STEM</h2>
+                <p><em>Science, Technology, Engineering, Maths</em></p>
+                <ul>
+                    <li>Primeras entrevistas con expertos para comprender los <strong>puntos críticos</strong></li>
+                    <li><strong>Preparando una encuesta</strong> para refinar esa información</li>
+                </ul>
+                <p class="caption"><a href="http://blivingrock.com/">foto: Be Living Rock</a></p>
+            </section>
+
+            <section>
+                <h2>Próximos pasos</h2>
+                <ul>
+                    <li>Continuar con los <a href="http://www.w3.org/dpub/IG/wiki/Main_Page">grupos especiales</a> en sus alcances</li>
+                    <li>Involucrar a los miembros del DPUB IG en la <strong>planificación y desarrollo</strong> de <a href="http://w3c.github.io/epubweb/">EPUB-WEB</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <section>
+                    <h2>EPUB-WEB</h2>
+                </section>
+
+                <section>
+                    <h2>El futuro de la edición digital</h2>
+                    <p>Descrito por IDPF y W3C en<br> "<strong>Advancing Portable Documents for the Open Web Platform: EPUB-WEB</strong>"</p>
+                    <ul>
+                        <li>Documento en: <a href="http://w3c.github.io/epubweb/">http://w3c.github.io/epubweb/</a></li>
+                        <li>Tu feedback en: <a href="https://github.com/w3c/epubweb/issues">https://github.com/w3c/epubweb/issues</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>EPUB-WEB</h2>
+                    <p>Una visión de futuro</p>
+                    <p><img src="img/epubweb.png" title="Same content used in different states. Contenido distribuido entre equipos contectados y desconectados" /></p>
+                </section>
+
+                <section>
+                    <h2>Documentos <em>portátiles</em> llevados a la Web</h2>
+                    <ul>
+                        <li>Evitar distinción entre <em>online</em> (la Web) y lo portátil (EPUB)</li>
+                        <li>Dicho de una forma sencilla:
+                            <ul style="font-size:80%">
+                                <li>El contenido creado para uso <em>offline</em> puede ser usado directamente con un navegador</li>
+                                <li>El contenido creado para uso <em>online</em> puede ser guardado para uso <em>offline</em></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Publicación y consumo</h2>
+                    <ul>
+                        <li>Los editores pueden <strong>elegir el modo de publicación</strong></li>
+                        <li>Los usuarios podrán seleccionar los <strong>modos de consumo</strong></li>
+                        <li><strong>Características esenciales</strong> comunes para los modos <em>online</em> y <em>offline</em>
+                            <ul style="font-size:80%">
+                                <li>Referencias cruzadas, anotaciones, acceso a BBDD en línea</li>
+                                <li>Gestión de derechos de autor y licencias</li>
+                                <li>…</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Ejemplo: un libro en un navegador</h2>
+                    <p>Desde el escritorio, leemos un libro como una página Web:</p>
+                    <ul class="bullets">
+                        <li>con <strong>enlaces externos</strong> al libro</li>
+                        <li>crear <strong>marcadores</strong> dentro de una página del libro</li>
+                        <li>usar <strong>plugins y herramientas</strong> específicos del navegador</li>
+                        <li>crear <strong>anotaciones</strong></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Pero...</h2>
+                    <ul>
+                        <li>Podemos necesitar <strong>poder de computación del equipo</strong> <small>(p.e., para contenido 3D interactivo)</small></li>
+                        <li>Otras veces necesitaremos usar nuestro lector dedicado <strong>para llevarlo a la playa</strong></li>
+                    </ul>
+                    <p class="fragment"><strong>Todo esto en el mismo libro</strong> (sin conversiones entre formatos)</p>
+                </section>
+            </section>
+
+            <section>
+                <h2>Casos de uso <em>offline</em> y <em>online</em></h2>
+                <ul class="bullets">
+                    <li>Publicaciones <strong>académicas</strong>: datos, audio, vídeo, programas, etc.</li>
+                    <li>Publicaciones <strong><em>inhouse</em></strong>: compañías (IBM, Boeing, Renault, etc.) publican documentos con alta frecuencia de actualización y los necesitan <em>online</em> y <em>offline</em>.</li>
+                    <li><strong>Archivo y preservación</strong> de documentos Web completos</li>
+                    <li>Materiales <strong>educativos</strong>: contenido de libros, tareas interactivas, animaciones, aplicaciones para resultados, datos para demos,…</li>
+                </ul>
+            </section>
+
+            <section>
+                <section>
+                    <h2>¿Cómo conseguimos esto (técnicamente)?</h2>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Retos tecnológicos</h2>
+                    <ul>
+                        <li><strong>Formato de empaquetado</strong> adaptado a las necesidades de la Web (p.e., <em>streaming</em>), ver borrador de trabajo <a href="http://w3ctag.github.io/packaging-on-the-web/">Packaging on the Web</a> </li>
+                        <li><strong>Estructura de los documentos</strong>: la estructura actual de EPUB3 (p.e., la portada) puede ser adaptado a los navegadores Web y permitirá interacción con los usuarios</li>
+                        <li><strong>Identificación</strong>: IDs para los documentos en la Web, IDs para los fragmentos <strong>dentro</strong> de los documentos</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Retos tecnológicos</h2>
+                    <ul>
+                        <li><strong>Metadatos</strong>: uso de métodos de la Web para identificar, describir documentos EPUB-WEB</li>
+                        <li>Mejoras en <strong>estilos y paginación</strong></li>
+                        <li>Seguridad, control de acceso y privacidad</li>
+                        <li><strong>Control de presentación</strong>: personalización del usuario (p.e., tamaño de fuente)</li>
+                    </ul>
+                </section>
+            </section>
+
+
+            <section>
+                <h2>DPUB IG y EPUB-WEB</h2>
+                <p>Grupos dedicados <strong>ya trabajan</strong> sobre algunos de estos retos</p>
+                <ul>
+                    <li>El grupo contribuirá a la formulación de los requisitos para EPUB-WEB<br>
+                        <small>Posiblemente se creen nuevos grupos especiales</small></li>
+
+                    <li><strong>EPUB-WEB guiará el trabajo del grupo</strong></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Sin embargo…</h2>
+                <ul>
+                    <li><strong>EPUB-WEB no sustituye EPUB3</strong> (ni al próximo EPUB3.1)</li>
+                    <li>Muchas de las nuevas características serán parte del EPUB3.1 <small>(p.e., la estructura semántica)</small></li>
+                </ul>
+                <p>Se espera una <strong>convergencia entre las especificaciones EPUB3.x y EPUB-WEB</strong></p>
+            </section>
+
+
+            <section>
+                <h2>Referencias</h2>
+                <dl>
+                    <dt>DPUB IG Wiki</dt>
+                    <dd><a href="https://www.w3.org/dpub/IG/wiki/Main_Page">https://www.w3.org/dpub/IG/wiki/Main_Page</a></dd>
+                    <dt>EPUB-WEB White paper</dt>
+                    <dd><a href="http://w3c.github.io/epubweb/">http://w3c.github.io/epubweb/</a></dd>
+                    <dt>EPUB-WEB Issues</dt>
+                    <dd><a href="https://github.com/w3c/epubweb/issues">https://github.com/w3c/epubweb/issues</a></dd>
+                    <dt>Presentación original</dt>
+                    <dd><a href="http://w3c.github.io/dpub/ebookcraft-2015-03/">http://w3c.github.io/dpub/ebookcraft-2015-03/</a></dd>
+                </dl>
+            </section>
+
+            <section data-background="#444444">
+                <section data-background="img/slide-w3c.png">
+                    <h2>Muchas gracias</h2>
+                    <dl>
+                        <dt>Escríbenos:</dt>
+                        <dd><a href="https://www.linkedin.com/in/espinr/">martin@w3.org</a></dd>
+                        <dd><a href="http://twitter.com/espinr">@espinr</a></dd>
+                        <dt>Esta presentación:</dt>
+                        <dd><a href="https://espinr.github.io/talks/2015/0226-PublicacionDigital-MA/">http://www.w3c.es/Presentaciones/2015/0226-PublicacionDigital-MA</a></dd>
+                    </dl>
+                </section>
+            </section>
+
+
+        </div>
+    </div>
+
+    <script src="../../lib/2015/reveal.js/lib/js/head.min.js"></script>
+    <script src="../../lib/2015/reveal.js/js/reveal.js"></script>
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+
+            controls: true,
+            progress: true,
+            slideNumber: true,
+            history: true,
+            keyboard: true,
+            overview: true,
+            center: true,
+            touch: true,
+            loop: false,
+            rtl: false,
+            fragments: true,
+            embedded: false,
+            help: true,
+
+            // Number of milliseconds between automatically proceeding to the next slide
+            // by using a data-autoslide attribute on your slides
+            autoSlide: 0,
+            // Stop auto-sliding after user input
+            autoSlideStoppable: true,
+
+            mouseWheel: false,
+            hideAddressBar: true,
+            previewLinks: false,
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+            transitionSpeed: 'default', // default/fast/slow
+            backgroundTransition: 'slide', // none/fade/slide/convex/concave/zoom
+            viewDistance: 3,
+
+            // Parallax background image
+            parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+            parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+            dependencies: [{
+                src: '../../lib/2015/reveal.js/lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: '../../lib/2015/reveal.js/plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../../lib/2015/reveal.js/plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../../lib/2015/reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: '../../lib/2015/reveal.js/plugin/zoom-js/zoom.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }, {
+                src: '../../lib/2015/reveal.js/plugin/notes/notes.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }]
+        });
+    </script>
+</body>
+
+</html>

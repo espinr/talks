@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Una Web para todos</title>
+
+    <meta name="description" content="W3C Spain Office Presentation">
+    <meta name="author" content="Martin Alvarez-Espinar">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../../lib/reveal.js/css/reveal.min.css">
+    <link rel="stylesheet" href="../../lib/reveal.js/css/theme/w3c.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../../lib/reveal.js/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = '../../lib/reveal.js/css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+		<script src="../../lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+
+    <!-- Custom syles -->
+    <link rel="stylesheet" href="css/custom.css">
+
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>Una Web para todos</h1>
+                <h3>RETOS DEL SECTOR TURÍSTICO: UN TURISMO PARA TODOS</h3>
+                <div style="text-align: right;">
+                    <p><a href="http://www.uimp.es/agenda-link.html?id_actividad=626X&amp;anyaca=2014-15">Seminario <abbr title="Universidad Internacional Menéndez Pelayo">UIMP</abbr></a></p>
+                    <p style="color:#888888">Santander, 8 julio 2014</p>
+                    <p style="text-align: right;">
+                        <small><a href="/Personal/Martin">Martín Álvarez-Espinar</a> (<a href="http://twitter.com/espinr">@espinr</a>)<br><em><a href="http://www.w3c.es">W3C Spain Office</a> – <a href="http://ct.ctic.es/web/contenidos/en">CTIC</a></em></small>
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Un mundo en constante cambio</h2>
+                <p>La Web ha transformado nuestras vidas</p>
+                <ul>
+                    <li>Comercio</li>
+                    <li>Turismo</li>
+                    <li>Procesos industriales</li>
+                    <li>AAPP</li>
+                    <li>Conocimiento…</li>
+                </ul>
+                <!-- aside class="notes">
+		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+	</aside -->
+            </section>
+
+            <!-- Example of nested vertical slides -->
+            <section>
+                <section>
+                    <h2>(pre)Historia de la Web</h2>
+                    <p>
+                        <a href="http://www.w3.org/2005/01/timelines/description"><img src="img/timeline-w3c.png" alt="Historia del W3C" /></a>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>La "Web" en 1989</h2>
+                    <p>
+                        <a href="http://www.w3.org/2005/01/timelines/description"><img src="img/timeline-w3c_1989.png" alt="Historia del W3C (señalado 1989)" /></a>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>(1989) El primer boceto</h2>
+                    <p>
+                        <img src="img/proposal.gif" alt="Propuesta de organización de la información de Tim Berners-Lee" />
+                        <br><small class="caption"><a
+            href="http://www.w3.org/History/1989/proposal.html">Information
+            Management: A Proposal — Tim Berners-Lee, CERN</a></small>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>La Web en 1990</h2>
+                    <p>
+                        <a href="http://www.w3.org/2005/01/timelines/description"><img src="img/timeline-w3c_1990.png" alt="Historia del W3C (señalado 1990)" /></a>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>(1990) WorldWideWeb</h2>
+                    <p>
+                        <img src="img/worldwideweb.gif" alt="Pantallazo del WorldWideWeb, primer navegador de la historia" /></p>
+                </section>
+
+                <section>
+                    <h2>La Web crece</h2>
+                    <p>
+                        <a href="http://www.w3.org/2005/01/timelines/description"><img src="img/timeline-w3c_1994.png" alt="Historia del W3C (señalado 1993)" /></a>
+                    </p>
+                </section>
+            </section>
+
+
+            <section>
+                <section>
+                    <h2><span lang="en">W3C?</span></h2>
+                </section>
+
+                <section>
+                    <h2><span lang="en">World Wide Web Consortium</span></h2>
+                    <p><img src="img/timbl.png" alt="Tim Berners-Lee" />
+                    </p>
+                    <ul>
+                        <li>Organismo <strong class="xl">neutro</strong> fundado en 1994 por <a title="Información sobre Tim Berners-Lee" href="http://www.w3.org/People/Berners-Lee/">Tim
+	        Berners-Lee</a></li>
+                        <li><strong>60</strong> personas en el <a hreflang="en" href="http://www.w3.org/People">Team</a></li>
+                        <li><strong>382</strong> <a hreflang="en" title="Lista de Miembros" href="http://www.w3.org/Consortium/Member/List">Miembros</a></li>
+                        <li><strong>+70</strong> <a title="Gráfico sobre las actividades y grupos del W3C" href="http://www.w3.org/2003/02/W3COrg.svg">Grupos
+	        del W3C</a> (con más de <strong>1.500</strong> investigadores)
+                        </li>
+                        <li><small>Relaciones con otros organismos estandarizadores</small></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Realmente <span lang="en">WorldWide</span></h2>
+                    <p> <img alt="El mundo, con puntos que indican las sedes centrales y las oficinas" src="img/w3c-world.png" /></p>
+                </section>
+
+                <section>
+                    <h2>W3C.es @ CTIC</h2>
+                    <p><img src="img/oficinaW3C.jpg" alt="Vista del edificio de CTIC donde se encuentra la Oficina del W3C en España" /></p>
+                </section>
+            </section>
+
+            <section>
+                <h2>¿Qué hace el <abbr lang="en" title="World Wide Web Consortium">W3C</abbr>?</h2>
+                <p style="text-align: justify;"><a style="font-size: 33px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/Voice/">Voice</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/Graphics/WebCGM/">WebCGM</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/PICS/">PICS</a>
+                    <a style="font-size: 41px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/People/Raggett/tidy/">HTMLTidy</a>
+                    <a style="font-size: 46px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/2002/ws/databinding/">Databinding</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2001/sw/WebOnt/">WebOntology</a>
+                    <a style="font-size: 50px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/html/">HTML</a>
+                    <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/2004/CDF/">CompoundDocumentFormats</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/TR/rdf-sparql-query/">SPARQL</a>
+                    <a style="font-size: 33px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/WAI/">WAI</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2006/webapi/">Web
+      APIs</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/Library/">Libwww</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2001/ppwg/">PatentPolicy</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/2004/OWL/">OWL</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/AudioVideo/TT/">TimedText</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/Encryption/2001/">XMLEncryption</a>
+                    <a style="font-size: 33px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/2002/mmi/">Multimodal</a>
+                    <a style="font-size: 50px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/XML/">XML</a>
+                    <a style="font-size: 35px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2006/rwc/">RichWebClients</a>
+                    <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/XML/Processing/">XMLProcessing</a>
+                    <a style="font-size: 42px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/2001/di/">DeviceIndependence</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/Addressing/">URI/URL</a>
+                    <a style="font-size: 44px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/DOM/">DOM</a>
+                    <a style="font-size: 50px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/Protocols/">HTTP</a>
+                    <a style="font-size: 50px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/WAI/">Accessibility</a>
+                    <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/RDF/">RDF</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2006/appformats/">WebApplicationFormats</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/XML/Linking">XMLBase</a>
+                    <a style="font-size: 50px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/Jigsaw/">Jigsaw</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/XML/Linking">XLink</a>
+                    <a style="font-size: 35px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/International/">I18N</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/P3P/">P3P</a>
+                    <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/QA/">QualityAssurance</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/2001/XKMS/">XMLKeyManagement</a>
+                    <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/UbiWeb/">UbiquitousWeb</a>
+                    <a style="font-size: 37px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/2002/mmi/ink">InkML</a>
+                    <a style="font-size: 39px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/2005/Incubator/">Incubator</a>
+                    <a style="font-size: 33px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/XML/Linking">XPath</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/2002/ws/">WebServices</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/MarkUp/Forms/">XForms</a>
+                    <a style="font-size: 48px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/Style/CSS/">CSS</a>
+                    <a style="font-size: 50px; color: #FF6600; text-decoration: none;" href="http://www.w3.org/2000/xp/Group/">SOAP</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/Mobile/">Mobile</a>
+                    <a style="font-size: 33px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/AudioVideo/">SMIL</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/2005/rules/">Rules</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/Graphics/SVG/">SVG</a>
+                    <a style="font-size: 50px; color: #46aaf1; text-decoration: none;" href="http://www.w3.org/Amaya/">Amaya</a>
+                    <a style="font-size: 33px; color: #FF6666; text-decoration: none;" href="http://www.w3.org/2001/sw/">SemanticWeb</a>
+                    <a style="font-size: 33px; color: #80ff80; text-decoration: none;" href="http://www.w3.org/Math/">MathML</a>
+                </p>
+                <p><small>Especificaciones, directrices y herramientas <strong>abiertas</strong> con la <a hreflang="en-us" href="http://www.w3.org/Consortium/Patent-Policy/">política
+      de patentes</a> más <strong>transparente</strong> en Internet</small></p>
+            </section>
+
+            <section>
+                <h2>+200 Recomendaciones</h2>
+                <div> <img alt="Más de 200 recomendaciones o estándares en estos últimos 20 años del W3C" src="img/timeline_recs.png" />
+                </div>
+            </section>
+
+            <section>
+                <h2>Una Web universal</h2>
+                <blockquote>
+                    ...ofrece la <strong>misma información y servicios</strong> a los usuarios, independientemente de <strong>quienes</strong> son, <strong>donde</strong> están, los <strong>sistemas</strong> que usan o la forma mediante la que se conectan
+                </blockquote>
+            </section>
+
+
+            <section>
+                <section>
+                    <h2>...independientemente de la forma de acceso</h2>
+                    <ul>
+                        <li>PCs, teléfonos, TVs, PDAs, dispositivos en <em>electrodomésticos</em> o <em>en automóviles</em>...</li>
+                        <li>limitación en: ancho de banda, pantalla, colores, sonido...</li>
+                    </ul>
+                </section>
+
+                <section data-background="img/Wikipedia_Kindle_Fire_iPad_1439.jpg">
+                    <h2>¿Escritorio o móvil?</h2>
+                    <p>Cada vez más difícil esa distinción</p>
+                    <p class="caption">http://en.wikipedia.org/wiki/Tablet_computer</p>
+                </section>
+
+
+                <section>
+                    <p> <img alt="Urinario conectado a un videojuego" src="img/toylet.png" /><br />
+                        <small>Toylet - Foto: <a href="http://www.wired.com/images_blogs/gamelife/2011/01/toylet.png">Wired</a></small>
+                    </p>
+                </section>
+
+            </section>
+
+            <section>
+
+                <section>
+                    <h2>...independientemente de "discapacidades"...</h2>
+                    <ul>
+                        <li>distinción de colores, ceguera, ...</li>
+                        <li>dificultades de manejo de teclados, ratón, ...</li>
+                        <li>dislexia, dificultades cognitivas o neurológicas, ...</li>
+                    </ul>
+                </section>
+                <section>
+                    <p> <img alt="Portátil con teclado Braille" src="img/braille_note.jpg" /></p>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>...teniendo en cuenta ls diferencias culturales</h2>
+                    <ul>
+                        <li>sentidos de escritura, diferentes tipos de teclados, ...</li>
+                        <li>formato de fechas, números de teléfono, códigos postales, IDs,...
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p><img alt="Panel informativo sobre un mercado de valores" src="img/nikkei.jpg" /></p>
+                </section>
+            </section>
+
+
+            <section data-background="img/openwebplatform1.png" data-background-transition="slide">
+                <h2 style="color:#000000">Una única Web</h2>
+            </section>
+
+            <section data-background="img/mobile_OS.jpg" data-background-transition="slide">
+                <h2 style="color:#000000">Los estándares son clave</h2>
+            </section>
+
+            <section>
+                <h2>Construyendo la Plataforma Web Abierta</h2>
+                <ul>
+                    <li class="fragment roll-in"><strong>Interfaces</strong>: Geo-localización, giroscopios, cámaras, NFC, …</li>
+                    <li class="fragment roll-in"><strong>Multimedia</strong>: Audio y vídeo, gráficos, animaciones, fuentes de alta calidad, …</li>
+                    <li class="fragment roll-in"><strong>Multidispositivo</strong>: varias resoluciones, táctil, teclados, voz, vibración, …</li>
+                    <li class="fragment roll-in"><strong>Comunicaciones</strong>: cliente-servidor, real-time, p2p, sockets, …</li>
+                    <li class="fragment roll-in"><strong>Sociedad</strong>: privacidad, seguridad, multilingüe, accesibilidad</li>
+                    <li class="fragment roll-in"><strong>Procesam. automático</strong>: semántica, interoperabilidad, …</li>
+                </ul>
+            </section>
+
+            <section data-background="img/desierto.jpg">
+                <h2 style="color:black">Iniciativa de Web Móvil</h2>
+                <p class="caption"><span><a href="https://www.flickr.com/photos/dos82/4045946783/">https://www.flickr.com/photos/dos82/4045946783/</a></span></p>
+            </section>
+
+            <section>
+                <h2>Iniciativa de Accesibilidad Web</h2>
+                <p>Transversal a todos los Grupos de Trabajo</p>
+            </section>
+
+            <section>
+                <h2>WCAG 2.0</h2>
+                <ul>
+                    <li class="fragment roll-in">Web Content Accessibility Guidelines</li>
+                    <li class="fragment roll-in">Base para la normativa española</li>
+                    <li class="fragment roll-in">Normativa UNE 139803:2012
+                        <ul>
+                            <li>(Requisitos de accesibilidad para contenidos en la Web )
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="fragment roll-in">A - <strong>AA</strong> - AAA</li>
+                    <li class="fragment roll-in">AA es el mínimo para este sector</li>
+                </ul>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Open Data: el futuro del turismo</h2>
+                    <p class="fragment roll-in">Turismo como sector prioritario</p>
+                    <p class="fragment roll-in">Un nuevo canal para llegar al turista</p>
+                    <p class="fragment roll-in">Multiplicación de servicios</p>
+                </section>
+
+                <section data-background="img/marquee.jpg">
+                    <h2>Ejemplo: transporte urbano</h2>
+                    <p>Open Data Gijón</p>
+                </section>
+
+                <section data-background="img/display.jpg">
+                    <h2>Infinidad de (potenciales) usos</h2>
+                </section>
+
+                <section>
+                    <h2>Primeros desarrollos</h2>
+                    <p><img src="img/marquesina_iphone.png" alt="Aplicación mostrando el estado de una parada" height="500"></p>
+                    <p class="caption"><a href="http://url.ctic.es/marquesina">url.ctic.es/marquesina</a></p>
+                </section>
+
+                <section>
+                    <h2>Innovación</h2>
+                    <p><img src="img/layar_vertical.png" alt="Aplicación basada en realidad aumentada" height="500"></p>
+                    <p class="caption">Layar App</p>
+                </section>
+                <section>
+                    <h2>Infinitas posiblidades</h2>
+                    <p><img src="img/busgijon-app.png" alt="Aplicación iOS de transporte en Gijón" height="500"></p>
+                    <p class="caption"><a href="https://itunes.apple.com/es/app/bus-gijon/id657054796?mt=8">Bus
+        Gijón para iOS</a></p>
+                </section>
+
+                <section>
+                    <h2>Diferentes audiencias…</h2>
+                    <p><img src="img/stop-reconquista.jpg" alt="Bus parando frente a una cafetería"></p>
+                </section>
+                <section>
+                    <h2>Servicios a ciudadanos/turistas</h2>
+                    <p><img src="img/reconquista-in.jpg" alt="Cafetería con una tablet mostrando el estado de la parada de autobús"></p>
+                </section>
+                <section>
+                    <h2>Aprovechando recursos públicos</h2>
+                    <p><img src="img/detalle.png" alt="Tablet mostrando el estado de la parada de autobús"></p>
+                </section>
+            </section>
+
+            <section>
+                <h2>W3C evoluciona con la sociedad</h2>
+                <p>La Web como plataforma ubícua que cumple los derechos fundamentales</p>
+                <p class="fragment roll-in">
+                    <object class="svg" type="image/svg+xml" data="img/HTML5_sticker.svg" title="I've seen the future, it's in my browser">I've
+        seen the future, it's in my browser</object>
+                </p>
+            </section>
+
+            <section data-background="img/slide-w3c.png">
+                <h2>¡Muchas Gracias!</h2>
+                <p><a href="https://www.linkedin.com/in/espinr/">martin@w3.org</a> <a style="color:#ff9600" href="http://twitter.com/espinr">@espinr</a></p>
+
+                <p class="caption"><a href="https://espinr.github.io/talks/2014/0708-Accesibilidad_UIMP-MA">http://www.w3c.es/Presentaciones/2014/0708-Accesibilidad_UIMP-MA</a></p>
+            </section>
+
+        </div>
+
+    </div>
+
+    <script src="../../lib/reveal.js/lib/js/head.min.js"></script>
+    <script src="../../lib/reveal.js/js/reveal.min.js"></script>
+
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [{
+                src: '../../lib/reveal.js/lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: '../../lib/reveal.js/plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../../lib/reveal.js/plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../../lib/reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: '../../lib/reveal.js/plugin/zoom-js/zoom.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }, {
+                src: '../../lib/reveal.js/plugin/notes/notes.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }]
+        });
+    </script>
+
+</body>
+
+</html>

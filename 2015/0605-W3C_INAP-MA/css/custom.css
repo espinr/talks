@@ -1,0 +1,89 @@
+
+.caption { font-size: 40% !important; color: #888888 !important; }
+.caption a { opacity: 0.4;}
+
+pre.nostandard code { border-left: 10px red solid; }
+pre.nostandard:before { content: "NO ESTÁNDAR"; color: red; }
+
+
+strong.xl {
+	font-size: 200%;
+}
+
+section > ul > li {
+	list-style: none;
+	margin-top: 0.75em !important;
+}
+
+ul.bullets > li {
+	list-style: disc;
+}
+
+.contrast {
+	background: rgba(0,0,0,0.7); 
+	color: #fff;
+}
+
+.contrast a, .contrast a:hover, .contrast a:link, .contrast a:active, .contrast a:visited {
+	color: #fff;
+}
+
+section.onimage {
+	background: rgba(255,255,255,0.9);
+}
+
+section.onimage h2 {
+	padding: 1em 1em 0 1em;
+}
+
+section.onimage p, section.onimage ul {
+	padding: 0 0.5em 0 0.5em;
+}
+
+@font-face {
+font-family: 'JottFLFBold';
+src: url('../fonts/JottFLF/JottFLF-Bold.woff') format('woff');
+}
+
+@font-face {
+font-family: 'EnglandHandDB';
+src: url('../fonts/england/england.woff') format('woff');
+}
+@font-face {
+font-family: 'ProclamateLight';
+src: url('../fonts/proclamate/proclamate_light.woff') format('woff');
+}
+
+
+blockquote#fuentes > *:first-child:before { content: "“ "; display: inline; white-space: pre; }
+blockquote#fuentes > *:first-child:lang(fr):before { content: "« "; display: inline; white-space: pre; font-family: Arial; }
+blockquote#fuentes > *:first-child:after { content: " ”"; display: inline; white-space: pre;}
+blockquote#fuentes > *:first-child:lang(fr):after { content: " »"; display: inline; white-space: pre; font-family: Arial;}
+blockquote#fuentes > *:first-child { border: 1em solid black; -moz-border-image: url("../img/border2.png") 35 round round; -webkit-border-image: url("../img/border2.png") 35 round round; -o-border-image: url("../img/border2.png") 35 round round; border-image: url("../img/border2.png") 35 round round; padding: 2ex; font-family: EnglandHandDB; text-shadow: white 3px 3px 1px; }
+blockquote#fuentes *:first-child span { font-family: ProclamateLight; }
+blockquote#fuentes p:last-child { text-align: right; font-size: smaller;font-family: JottFLFBold; }
+blockquote#fuentes { background-image: url('../img/background_cons.png'); background-repeat: repeat; padding: 1em; -moz-border-radius: 2em;-webkit-border-radius: 2em;-o-border-radius: 2em;border-radius: 2em;  border: none; text-shadow: none; color: black; -moz-box-shadow: rgba(0,0,0,0.4) 10px 10px 10px; -webkit-box-shadow: rgba(0,0,0,0.4) 10px 10px 10px; box-shadow: rgba(0,0,0,0.4) 10px 10px 10px;}
+#fuentes em { font-weight: bold; text-decoration: underline; }  
+
+
+/*********************************************
+ * TAKAHASHI STYLE
+ *********************************************/
+.reveal .slides.takahashi, .reveal .slides.takahashi section {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.reveal .slides.takahashi section div {
+  background-color: black; 
+  color: white;
+  bottom: 0;
+  float: left;
+  height: 3em;
+  padding: 0.5em 1em 0.5em 2em;
+  width: 100%;
+  text-align: left;
+  position: absolute;
+}
+
+
