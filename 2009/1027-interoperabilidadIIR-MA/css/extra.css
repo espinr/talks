@@ -1,0 +1,24 @@
+.center { text-align: center; }
+.imagen-left {float:left;}
+.imagen-right {float:right;margin-right:0.2em;clear:both;}
+dl {margin-left: 2em;}
+strong {color:#B22222;}
+p.cita-right {float:right;width:15em;margin-right:1em;background-color:#FFD700;padding:0.5em;}
+p.cita-right cite {font-weight:bold;}
+samp {color: Green;font-weight:bold;}
+h1 {clear:both;}
+ul.ejemplo-i18n li {font-size:65%; margin: 0;background: transparent;}
+ul.ejemplo-i18n li:before { content: "[" attr(lang) "] : "; color: grey; }
+.figura {text-align:center;margin-top:1em;}
+em {color: rgb(102,0,0);}
+.reference {font-size: 30%;text-align: right;}
+.resource {font-size:70%;}
+
+
+div.slide {font-size: 115%;}  
+  .mini {font-size: 50%;}
+  .xl {font-size: 2em;}
+  p.xl {line-height: 1em;}
+  .xl li {background: transparent url(../img/bullet.png) no-repeat 5px 35px;}
+  .oculto {visibility: collapse;display: none;}
+

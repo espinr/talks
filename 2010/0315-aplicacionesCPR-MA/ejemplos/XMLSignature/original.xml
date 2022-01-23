@@ -1,0 +1,21 @@
+<datosPersonales>
+	
+	<nombre>Martin Alvarez</nombre>
+	
+	<organizacion>W3C</organizacion>
+	
+	<tarjeta>
+		<numero>1234 5645 5456 6456</numero>
+		<caducidad>12-2006</caducidad>
+	</tarjeta>
+	
+	<direccion>
+		<calle>13 Rue del Percebe</calle>
+		<cp>112233</cp>
+		<localidad>Madrid</localidad>
+		<provincia>Madrid</provincia>
+		<pais>Spain</pais>
+	</direccion>
+	
+	<otros>...</otros>
+</datosPersonales>

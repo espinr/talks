@@ -1,0 +1,260 @@
+/* Los estilos básicos */
+body {
+	margin: 0;
+	font:100%/1.7 Arial, Verdana, Helvetica, Geneva, sans-serif;
+	background-color: #fff;
+	color: #585858;
+	min-height: 100%;
+}
+a img {
+	border: none;
+}
+img {
+	border: 1px #585858 solid;
+}
+a {
+	text-decoration: none;
+	border-bottom: 1px #4D5373 dashed;
+	color: #4D5373;
+	background-color: #fff;
+}
+a:link, a:visited {
+	color: #4D5373;
+	background-color: transparent;
+}
+a:hover, a:active {
+	color: #222;
+	background-color: transparent;
+}
+abbr, acronym {
+	cursor: help;
+}
+.invisible {
+	display: none;
+}
+.subrayado {
+	text-decoration: underline;
+}
+.right {
+	text-align: right;
+}
+.center {
+	text-align: center;
+}
+h2 {
+	background-color: #fff;
+	/*color: #185068;*/
+	color: #3B1587;
+	font-size: 2em;
+	font-weight: bolder;
+	line-height:1.1;
+	letter-spacing: 0.1em;
+}
+h3 {
+	background-color: #fff;
+	/*color: #6C4A52;*/
+	color: #585858;
+	font-weight: bolder;
+	letter-spacing: 0.2em;
+	border-bottom: medium #f1f1f1 solid;
+	margin-top: 2em;
+}
+/* Si tiene enlaces los h3, los muestra igual que los h3 */
+h3 a, h3 a:link, h3 a:visited {
+	background-color: #fff;
+	color: #585858;
+	border-bottom: none;
+}
+h3 a:hover, h3 a:active {
+	background-color: #fff;
+	color: #000;
+}
+p {
+	text-align: justify;
+}
+.irrelevante {
+	font-size: 90%;
+	font-style: italic;		
+}
+em {
+	font-weight: bolder;
+}
+.linkActivo {
+	font-weight: bolder;
+}
+address {
+	padding: 0.5em 0 0 1em;
+}
+dl dt {
+	margin-top: 1em;
+}
+li {
+	list-style: square;
+}
+ul {
+    margin-left: 0;
+}
+/* ============ La cabecera de la página =========== */
+div#cabecera {
+	width: 100%;
+	position: absolute;
+	top: 2em;
+	left: 0;
+	padding: 0;
+	margin: 0;
+}
+div#cabecera h1 {
+	margin: 0;
+	font-size: 100%;
+	padding: 2em 0 0 2em;
+	height: 167px;	
+}
+* html div#cabecera h1 {
+    margin-bottom: 1em;
+}
+div#cabecera h1 a {
+	border-bottom: none;
+}
+div#cabecera div.subtitulo {
+	display: block;
+	font-size: 100%;
+	width: 100%;
+	padding: 0;
+	height: 2em;
+	line-height: 2em;
+	margin: 1.5em 0 0 0;
+	vertical-align: middle;
+}
+div#cabecera div.subtitulo p {
+	font-size: 90%;
+	font-weight: bold;
+	background-color: #585858;
+	color: #fff;
+	padding: 0 0 0 2em; 
+}
+/* --- Lista de los patrocinadores --- */
+div#cabecera #patrocinadores {
+	width: 13em;
+	min-width: 13em;
+	position: absolute;
+	top: 2em;
+	right: 0;
+	font-size: 70%;	
+}
+div#cabecera #patrocinadores p {
+	margin-top: 2em;
+}
+div#cabecera #patrocinadores ul li {
+	list-style: none;
+	text-align: right;
+	margin-right: 1em;
+}
+div#cabecera #patrocinadores ul {
+	margin: 0;
+	padding: 0 0 0 0;
+}
+div#cabecera #patrocinadores a, div#cabecera #patrocinadores a:link, div#cabecera #patrocinadores a:visited {
+    color: #585858;
+    background-color: #fff;
+    border-bottom: 1px #585858 dotted;
+}
+div#cabecera #patrocinadores a:hover, div#cabecera #patrocinadores a:active {
+    color: #000;
+    background-color: #eee;    
+    border-bottom: 1px #000 dotted;
+}
+
+/* ================ Herramientas ================= */
+ul#herramientas {
+	display: block;
+	background-color: #585858;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 2em;	
+	text-align: center;
+}
+ul#herramientas li {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	line-height: 2em;
+	height: 2em;	
+	border-right: 1px #fff solid;
+}
+/* Este elemento se declara aquí para que funcione en el IE */
+ul#herramientas li.linkActivo {
+	color: #FFEF19;
+	background-color: #3B1587;
+	font-weight: bold;
+}
+ul#herramientas li a, ul#herramientas li {
+	display: block;
+	height: 2em;
+	padding: 0;	
+	text-decoration: none;
+	width: 8em;
+	border-bottom: none;
+}
+ul#herramientas li a:link, ul#herramientas li a:visited {
+	background-color: #585858;
+	color: #fff;
+}
+ul#herramientas li a:hover, ul#herramientas li a:active {
+	background-color: #fff;
+	color: #585858;
+}
+/* Enlace activo del menú */
+ul#herramientas li.linkActivo {
+	display: block;
+	height: 2em;
+	padding: 0;	
+	width: 8em;
+	font-style: italic;
+	color: #FFEF19;
+	background-color: #3B1587;
+	font-weight: bold;
+}
+
+#herramientas .subrayado {
+	font-weight: bolder;
+}
+/* ------------- El selector del idioma -------------- */
+.selector-idioma {
+	position: absolute;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	height: 2em;	
+	text-align: center;	
+	right: 0;
+	border-left: 1px #fff solid;
+}
+
+/* ================ Contenedor para los contenidos, pies y navegación ========= */
+div#contenedor {
+	position: absolute;
+	top: 167px;  
+	/* El alto del logo y le mete un margen adicional: herramientas + márgenes */
+	margin: 8em 0 0 0;
+	min-width: 20em;
+	min-height: 10em;
+	width: 100%;
+}
+/* ============ El contenido principal de la página =========== */
+div#contenido {
+	padding: 0 13em 0 0; 
+	margin-left: 2em;
+	min-width: 30em;
+}
+/* Para el IE */
+* html div#contenido {
+    padding: 0;
+    margin-right: 15em;
+}
+
+

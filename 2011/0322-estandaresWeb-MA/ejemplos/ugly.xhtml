@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<head>
+    <title>Documentos Compuestos</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" type="text/css" media="screen, projection, print" href="../../../lib/Slidy/css/slidy.css" />
+    <script src="../../../lib/Slidy/js/slidy.js" charset="utf-8" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" media="screen, projection, print" href="../../../lib/Slidy/css/w3c-blue.css" />
+
+    <script>
+        < ![CDATA[
+            var play_state = false;
+
+            function play() {
+                if (play_state) {
+                    // pause
+                    document.getElementById("stop").disabled = true;
+                    play_state = false;
+                    try {
+                        document.getElementById("vid").pause();
+                    } catch (e) {}
+                    document.getElementById("play").textContent = "Reaunudar";
+                } else {
+                    document.getElementById("stop").disabled = false;
+                    play_state = true;
+                    document.getElementById("play").textContent = "Pausar";
+                    try {
+                        document.getElementById("vid").play();
+                    } catch (e) {}
+                }
+            }
+
+            function stop() {
+                play_state = false;
+                document.getElementById("stop").disabled = true;
+                try {
+                    document.getElementById("vid").pause();
+                    document.getElementById("vid").currentTime = 0;
+                } catch (e) {}
+                document.getElementById("play").innerHTML = "<span style='color:red'>P</span><span style='color:green'>l</span>a<span style='color:blue'>y</span>";
+            }
+            rotation = 10; color = 1;
+
+            function changeRotation() {
+                var elementStyle = document.getElementById("rotate").style;
+                var rotext = "rotate(" + rotation + "deg)";
+                elementStyle.setProperty("-moz-transform", rotext, "");
+                elementStyle.setProperty("-webkit-transform", rotext, "");
+                elementStyle.setProperty("-o-transform", rotext, "");
+                elementStyle.setProperty("transform", rotext, "");
+                scolor = "blue";
+                if (color == 0) {
+                    scolor = "green";
+                } else if (color == 1) {
+                    scolor = "blue";
+                } else if (color == 2) {
+                    scolor = "red";
+                } else if (color == 3) {
+                    scolor = "yellow";
+                }
+                document.getElementById("rotate").style.setProperty("color",
+                    scolor, "");
+
+                rotation += 10;
+
+                if (color == 4) {
+                    color = 0;
+                } else {
+                    color += 1;
+                }
+            }
+            var videoRotation = 5;
+
+            function rotateVideo() {
+                var vid = document.getElementById("vid");
+                if (vid.currentTime > 10) {
+                    var elementStyle = vid.style;
+                    var rotext = "rotate(" + (videoRotation += 2) + "deg)";
+                    elementStyle.setProperty("-moz-transform", rotext, "");
+                    elementStyle.setProperty("-o-transform", rotext, "");
+                    elementStyle.setProperty("-webkit-transform", rotext, "");
+                    elementStyle.setProperty("transform", rotext, "");
+                }
+            }
+
+            function changeMath() {
+                row = document.getElementById("row");
+                msup = row.parentNode;
+                msqrt = document.createElementNS("http://www.w3.org/1998/Math/MathML", "msqrt");
+                msqrt.appendChild(row);
+                msup.parentNode.replaceChild(msqrt, msup);
+            }
+            var stdDeviation = 0.5;
+
+            function modifySVG() {
+                document.getElementById("gauss").setAttribute("stdDeviation", stdDeviation);
+                stdDeviation = stdDeviation + 0.5;
+            }
+
+            function updateSVG() {
+                document.getElementById("svgText").textContent = document.getElementById("input").value;
+            }
+
+            function RDFAHighlight() {
+                __RDFA_BASE = 'http://www.w3.org/2006/07/SWD/RDFa/impl/js/';
+                if (document.getElementById('rdfa_highlight_bm%20')) {
+                    alert('only once!');
+                } else {
+                    s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    s.id = 'rdfa_highlight_bm';
+                    s.src = 'http://www.w3.org/2006/07/SWD/RDFa/impl/js/highlight-metadata.js';
+                    document.getElementsByTagName('head')[0].appendChild(s);
+                }
+            };
+
+            function resetDemo() {
+                stdDeviation = 0.01;
+                modifySVG();
+
+                document.getElementById("svgText").textContent = document.getElementById("input").value = "Esto es SVG";
+
+                row = document.getElementById("row");
+                msqrt = row.parentNode;
+                msup = document.createElementNS("http://www.w3.org/1998/Math/MathML", "msup");
+                mi = document.createElementNS("http://www.w3.org/1998/Math/MathML", "mi");
+                mi.textContent = "e";
+                msup.appendChild(mi);
+                msup.appendChild(row);
+                msqrt.parentNode.replaceChild(msup, msqrt);
+
+                rotation = 0;
+                color = 0;
+                changeRotation();
+                stop();
+            }
+        ]] >
+    </script>
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0
+        }
+        
+        body,
+        button {
+            font-size: 20pt
+        }
+        
+        @font-face {
+            font-family: 'GregorianFLF';
+            src: url('http://www.w3.org/2010/Talks/0117-next-web-plh/GregorianFLF/GregorianFLF.eot');
+            src: local('GregorianFLF Regular'), local('GregorianFLF/GregorianFLF'), url('/2010/Talks/0117-next-web-plh/GregorianFLF/GregorianFLF.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'JustOldFashionRegular';
+            src: url('http://www.w3.org/2010/Talks/0117-next-web-plh/JustOldFashion/JustOldFashion.eot');
+            src: local('JustOldFashion Regular'), local('JustOldFashion'), url('http://www.w3.org/2010/Talks/0117-next-web-plh/JustOldFashion/JustOldFashion.woff') format('woff'), url('http://www.w3.org/2010/Talks/0117-next-web-plh/JustOldFashion/JustOldFashion.ttf') format('truetype'), url('http://www.w3.org/2010/Talks/0117-next-web-plh/JustOldFashion/JustOldFashion.svg#JustOldFashion') format('svg');
+        }
+        
+        @font-face {
+            font-family: 'EnglandHandDBRegular';
+            src: url('http://www.w3.org/2010/Talks/0117-next-web-plh/england/england.eot');
+            src: local('England Hand DB Regular'), local('england/EnglandHandDB'), url('http://www.w3.org/2010/Talks/0117-next-web-plh/england/england.ttf') format('truetype');
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="background">
+        <img id="head-icon" alt="graphic with four colored squares" src="../../../lib/Slidy/graphics/icon-blue.png" />
+        <object id="head-logo" title="W3C logo" type="image/svg+xml" data="../../../lib/Slidy/graphics/CTIC_CT-W3C_blanco.svg">
+	<img src="../../../lib/Slidy/graphics/CTIC_CT-W3C_blanco.png" alt="W3C España - CTIC Centro Tecnológico" id="head-logo-fallback" />
+  </object>
+    </div>
+
+    <div class="slide">
+
+        <h1>Documentos Compuestos</h1>
+
+        <div style='position: fixed; top: 13%; left: 12%; width: 88%'>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 282.7771 84.714764" width="70%" height="70%" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <filter id="f-filter2446">
+      <feGaussianBlur id="gauss" stdDeviation="0.01" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g style="filter:url(#f-filter2446)">
+    <text style="font-size:40px;fill:#000000;fill-opacity:1;stroke:none;font-family: GregorianFLF;" ><textPath xlink:href="#f-path3374"><tspan id='svgText'>Esto es SVG</tspan></textPath></text>
+    <path style="fill:none;fill-rule:evenodd" d="M 31.438511,68.020106 L 99.128956,33.059107 L 150.45468,64.300851 L 195.82959,50.911532 L 230.79059,60.581596 L 258.31308,37.522213"  id="f-path3374"/>
+    <path style="fill-opacity:0.5;fill:#ff0000;fill-rule:evenodd;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"  d="M 29.754046,32.686872 C 30.872911,33.805738 28.797846,34.747089 27.894418,34.546499 C 25.446183,34.002915 25.052615,30.867031 26.034792,28.967616 C 27.791676,25.570008 32.353921,25.17198 35.33293,27.107991 C 39.704747,29.949165 40.11067,36.102591 37.192554,40.125385 C 33.303165,45.487137 25.509773,45.897274 20.455905,41.985008 C 14.096129,37.06182 13.683635,27.607986 18.596283,21.529103 C 24.546158,14.166762 35.670958,13.752845 42.771443,19.669482 C 51.139118,26.642034 51.553955,39.443938 44.631063,47.563897 C 36.638311,56.938712 22.155407,57.354174 13.017393,49.423516 C 2.6342,40.412199 2.218294,24.245663 11.157775,14.090591 C 21.18652,2.6981342 39.038554,2.2819028 50.209956,12.230974 C 62.612327,23.276328 63.028807,42.815226 52.069572,55.00241"/>
+    <path style="opacity:0.5;fill:#4fe64d;stroke:#0b97f1;stroke-opacity:1"  d="M 111.57766,58.72166 C 76.153183,86.555178 144.20291,71.54 100.35499,61.197943 C 56.507077,50.855885 110.67472,94.697497 91.421733,53.967644 C 72.168757,13.23779 71.664977,82.922564 91.504813,42.475325 C 111.34466,2.028086 56.548817,45.081967 100.54167,35.374938 C 144.53453,25.66791 76.709003,9.6704458 111.72737,38.013218 C 146.74573,66.35599 116.96452,3.353599 116.63884,48.403487 C 116.31316,93.453374 147.00214,30.888141 111.57766,58.72166 z"/>
+    <path style="opacity:0.3;fill:#4e4de6;stroke:#e92525;stroke-width:0.78779298;stroke-opacity:1"  d="M 229.69976,69.418008 C 210.67082,66.314725 249.55795,67.807146 235.85589,71.01375 C 222.15385,74.220354 229.68777,60.024225 225.74392,76.902606 C 221.80006,93.780986 200.88656,32.73867 198.78891,52.200453 C 196.69125,71.662236 170.77954,92.663803 175.67102,72.971525 C 180.56252,53.279247 213.12552,63.488956 188.59271,58.675007 C 164.05991,53.861058 224.67078,68.536086 220.59052,61.668568 C 216.51028,54.80105 172.30843,52.55863 184.37339,40.879455 C 196.43836,29.200281 174.40062,20.034246 199.32521,33.944684 C 224.24982,47.855122 169.94231,47.383713 190.58578,68.558297 C 211.22925,89.732883 248.7287,72.521292 229.69976,69.418008 z"/>
+  </g>
+</svg>
+        </div>
+        <div style='width: 50%; position: fixed; top: 20%; left: 1%; -moz-transform:rotate(-10deg) skew(-5deg, -5deg);-webkit-transform:rotate(-10deg) skew(-5deg, -5deg);-o-transform:rotate(-10deg) skew(-5deg, -5deg);transform:rotate(-10deg) skew(-5deg, -5deg);'>
+            <h3 style='font-family:EnglandHandDBRegular;padding-bottom: 1em;-moz-transform:rotate(-5deg);-webkit-transform:rotate(-5deg);-o-transform:rotate(-5deg);transform:rotate(-5deg)'>Vídeo</h3>
+            <div style='float: left; margin-left: 2%'>
+                <video width="320px" height='240px' id='vid' controls='true' ontimeupdate='rotateVideo();' autobuffer='true'>
+    <source src="../video/trailer.ogv" type="video/ogg; codecs=&quot;theora, vorbis&quot;" />
+    <source src="../video/trailer.mp4" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"/>
+    <p>El navegador no soporta vídeo</p>
+  </video>
+            </div>
+        </div>
+        <div id='math' style='position: fixed; top:30%; left: 65%; right: 2%; width: 45ex; -moz-transform:rotate(25deg);-o-transform:rotate(25deg);-webkit-transform:rotate(25deg);transform:rotate(25deg);'>
+            <p style='font-weight: bold; font-family: cursive;'>MathML:</p>
+            <math xmlns="http://www.w3.org/1998/Math/MathML" style='font-size: 130%;'>
+  <mrow>
+    <mi>G</mi>
+    <mfenced> 
+      <mi id='x1'>x</mi> 
+      <mi id='y1'>y</mi> 
+    </mfenced> 
+  </mrow>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>	    
+    <mrow>
+      <mn>2</mn>
+      <mi>&#960;</mi>
+      <msup>
+	<mi>&#963;</mi>
+	<mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <msup>
+    <mi id='e'>e</mi>
+    <mrow id='row'>
+      <mo form="infix">-</mo>
+      <mfrac>
+	<mrow>
+	  <msup>
+	    <mi id='x2'>x</mi>
+	    <mn>2</mn>	    
+	  </msup>
+          <mo>+</mo>
+	  <msup>
+	    <mi id='y2'>y</mi>
+	    <mn>2</mn>
+	  </msup>
+	</mrow>
+	<mrow>
+	  <mn>2</mn>
+          <msup>
+	    <mi>&#963;</mi>
+            <mn>2</mn>
+          </msup>
+	</mrow>
+      </mfrac>
+    </mrow>
+  </msup>
+</math>
+        </div>
+        <input id='input' onkeyup='updateSVG(); return true;' type='text' style='font-family: Steve, cursive; font-size: 100%; color: blue; position: fixed; top:55%; right: 8%; -moz-transform:rotate(-10deg) skew(0, -20deg);-webkit-transform:rotate(-10deg) skew(0, -20deg);-o-transform:rotate(-10deg) skew(0, -20deg);transform:rotate(-10deg) skew(0, -20deg)'
+            size='20' value='Esto es SVG' />
+        <button id='play' onclick='play();' style='font-family: JustOldFashionRegular;border: 1px solid red; background: transparent; -moz-border-radius: 10px; -webkit-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; font-size: 150%; font-weight: bold;position: fixed; top:35%; left: 50%; -moz-transform:rotate(30deg);-webkit-transform:rotate(30deg);-o-transform:rotate(30deg);transform:rotate(30deg)'><span style='color:red'>I</span><span style='color:green'>n</span>i<span style='color:brown'>c</span><span style='color:blue'>i</span>ar</button>
+        <button id='stop' onclick='stop();' disabled='true' style='position: fixed; top:35%; left: 60%; -moz-transform:rotate(10deg);-webkit-transform:rotate(10deg);-o-transform:rotate(10deg);transform:rotate(10deg);'>Parar</button>
+        <button onclick='modifySVG();' style='position: fixed; top: 80%; left: 60%; -moz-transform:rotate(-20deg);-webkit-transform:rotate(-20deg);-o-transform:rotate(-20deg);transform:rotate(-20deg);'>Añade Desenfoque Gaussiano</button>
+        <button onclick='resetDemo();' style='position: fixed; top: 75%; left: 30%; -moz-transform:rotate(20deg);-webkit-transform:rotate(20deg);-o-transform:rotate(20deg);transform:rotate(20deg);'>Reinicia la Demo</button>
+        <button id='rotate' onclick='changeRotation();' style='font-family: Steve, cursive; position: fixed; top:50%; left: 45%; color:green'>Rótame</button>
+        <button onclick='changeMath();' style='font-family: Steve, cursive; position: fixed; top:60%; left: 30%; -moz-transform:rotate(10deg);-webkit-transform:rotate(10deg);-o-transform:rotate(10deg);transform:rotate(10deg);'>Cambia la fórmula</button>
+
+
+    </div>
+
+    <p class="right" style="position:absolute;right:0;bottom:0">Original: <a href="http://www.w3.org/2010/Talks/0119-next-web-plh/ugly.xhtml">http://www.w3.org/2010/Talks/0119-next-web-plh/ugly.xhtml</a></p>
+
+</body>
+
+</html>

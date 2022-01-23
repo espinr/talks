@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Aplicaciones Web: orden en el caos</title>
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="../../lib/Slidy/css/show.css" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="../../lib/Slidy/css/w3c-blue2.css" />
+    <link rel="stylesheet" type="text/css" media="print" href="../../lib/Slidy/css/print.css" />
+    <link rel="stylesheet" type="text/css" media="screen, projection, print" href="css/extra.css" />
+    <script type="text/javascript" src="../../lib/Slidy/js/slidy.js">
+    </script>
+
+    <style type="text/css">
+        video {
+            padding: 2px;
+            background-image: url();
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            border: 3px outset blue;
+        }
+        
+        div.header p em {
+            color: #D8E4F8;
+        }
+        
+        .image-full {
+            margin: -0.5em;
+            height: 590px;
+            overflow: hidden;
+        }
+        
+        .image-right {
+            float: right;
+            text-align: center;
+            margin: 1em;
+            font-size: 50%;
+            font-style: italic;
+        }
+        
+        .image-center {
+            text-align: center;
+            margin: 1em auto;
+            font-size: 50%;
+            font-style: italic;
+        }
+        
+        .verde {
+            color: #50af50;
+        }
+        
+        .buzzwords li {
+            display: inline;
+        }
+        /* Las imágenes */
+        
+        #frigo {
+            float: left;
+        }
+        
+        #salpicadero {
+            margin: 0 0 0 1em;
+            float: left;
+        }
+        
+        #urinario {
+            margin: 1em 0 0 20%;
+            float: left;
+        }
+        
+        #videocast {
+            float: left;
+            position: absolute;
+            left: 10%;
+            margin-top: 0
+        }
+        
+        #tracking {
+            float: left;
+            position: absolute;
+            margin-top: 2em;
+            left: 15%;
+        }
+        
+        @media print {
+            p#especificaciones a {
+                font-size: small !important;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- La principal -->
+
+    <div class="background">
+
+        <div class="header">
+        </div>
+        <img src="../../lib/Slidy/img/bullet.png" alt="hidden bullet" />
+
+        <div class="footer">
+            <object id="w3c-logo" data="../../lib/pics/svgs/w3c-logo-blue.svg" type="image/svg+xml" title="W3C logo">
+  <a href="http://www.w3.org/"><img alt="W3C logo" id="w3c-logo-fallback"
+  src="../../lib/pics/w3c-logo-blue.gif" /></a> </object>
+            <!-- modify the following text as appropriate -->
+            Aplicaciones Web: orden en el caos<br />
+            <strong><abbr title="Centro del Profesorado y de Recursos">CPR</abbr> Oviedo</strong>, 15 <abbr title="Marzo">Mar</abbr> 2010
+        </div>
+    </div>
+    <!-- =========================================== -->
+    <div class="slide cover">
+        <div class="header">
+            <h1>Aplicaciones Web: orden en el caos</h1>
+            <p><a href="http://www.w3c.es/Personal/Martin/">Martín Álvarez Espinar</a>, &lt;
+                <a href="https://www.linkedin.com/in/espinr/">martin@w3.org</a>&gt;</p>
+        </div>
+        <img src="../../lib/pics/keys.jpg" class="cover" alt="Letras W3C en tres teclas de un teclado" />
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Aplicaciones Web: orden en el caos</h1>
+        <p style="margin-top: 6em; text-align:right">
+            <strong><abbr title="Centro del Profesorado y de Recursos">CPR</abbr> Oviedo</strong><br /> Oviedo, 15 <abbr title="Marzo">Mar</abbr> 2010
+        </p>
+    </div>
+    <!-- =========================================== -->
+    <div class="slide">
+        <h1><span xml:lang="en" lang="en">World Wide Web Consortium</span></h1>
+        <p><img style="margin-top:3em" class="imagen-right" alt="Mapa del mundo" src="img/world_white_s.jpg" /></p>
+        <ul>
+            <li>Organismo <strong>neutro</strong></li>
+            <li>Fundado en 1994 por <a href="http://www.w3.org/People/Berners-Lee/" title="Información sobre Tim Berners-Lee">Tim Berners-Lee</a></li>
+            <li><a href="http://www.w3.org/2003/02/W3COrg.svg" title="Gráfico sobre las actividades y grupos del W3C">Actividades y
+    Grupos del W3C</a>
+                <ul>
+                    <li>60 personas en el <a href="http://www.w3.org/People" hreflang="en">Team</a></li>
+                    <li>349 <a href="http://www.w3.org/Consortium/Member/List" title="Lista de Miembros" hreflang="en">miembros</a></li>
+                    <li>23 Actividades
+                        <ul>
+                            <li>+60 grupos: de Trabajo, Interés y Coordinación (con más de 1.500 investigadores)</li>
+                        </ul>
+                    </li>
+                    <li>Más de 40 relaciones con otros organismos estandarizadores</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Realmente <span xml:lang="en" lang="en" style="font-style:italic">WorldWide</span></h1>
+        <div class="center">
+            <object width="90" height="70" type="image/svg+xml" data="img/WorldMapW3C.svg" title="El mundo, con puntos que indican las sedes centrales y las oficinas">
+  <img src="img/WorldMapW3C.png" alt="El mundo, con puntos que indican las sedes centrales y las oficinas"  />
+</object> </div>
+    </div>
+    <!-- =========================================== -->
+    <div class="slide">
+        <h1>¿Qué hace el <abbr title="World Wide Web Consortium" xml:lang="en" lang="en">W3C</abbr>?</h1>
+        <p>Especificaciones, directrices y herramientas:</p>
+        <p id="especificaciones" style="margin:1em 0 1em 0; min-width: 800px;  min-height: 300px; background-color: #FFFFFF;  text-align: justify;  "><a href="http://www.w3.org/Voice/" style="font-size: 33px; color: #FF6600; text-decoration: none;">Voice</a> <a href="http://www.w3.org/Graphics/WebCGM/" style="font-size: 33px; color: #FF6666; text-decoration: none;">WebCGM</a> <a href="http://www.w3.org/PICS/"
+                style="font-size: 33px; color: #80ff80; text-decoration: none;">PICS</a> <a href="http://www.w3.org/People/Raggett/tidy/" style="font-size: 41px; color: #FF6600; text-decoration: none;">HTMLTidy</a>
+            <a href="http://www.w3.org/2002/ws/databinding/" style="font-size: 46px; color: #FF6666; text-decoration: none;">Databinding</a>
+            <a href="http://www.w3.org/2001/sw/WebOnt/" style="font-size: 33px; color: #80ff80; text-decoration: none;">WebOntology</a>
+            <a href="http://www.w3.org/html/" style="font-size: 50px; color: #FF6666; text-decoration: none;">HTML</a> <a href="http://www.w3.org/2004/CDF/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">CompoundDocumentFormats</a>
+            <a href="http://www.w3.org/TR/rdf-sparql-query/" style="font-size: 33px; color: #80ff80; text-decoration: none;">SPARQL</a> <a href="http://www.w3.org/WAI/" style="font-size: 33px; color: #FF6600; text-decoration: none;">WAI</a> <a href="http://www.w3.org/2006/webapi/"
+                style="font-size: 33px; color: #80ff80; text-decoration: none;">Web APIs</a>
+            <a href="http://www.w3.org/Library/" style="font-size: 33px; color: #FF6666; text-decoration: none;">Libwww</a> <a href="http://www.w3.org/2001/ppwg/" style="font-size: 33px; color: #80ff80; text-decoration: none;">PatentPolicy</a>
+            <a href="http://www.w3.org/2004/OWL/" style="font-size: 33px; color: #FF6666; text-decoration: none;">OWL</a> <a href="http://www.w3.org/AudioVideo/TT/" style="font-size: 33px; color: #80ff80; text-decoration: none;">TimedText</a>
+            <a href="http://www.w3.org/Encryption/2001/" style="font-size: 33px; color: #FF6666; text-decoration: none;">XMLEncryption</a>
+            <a href="http://www.w3.org/2002/mmi/" style="font-size: 33px; color: #FF6600; text-decoration: none;">Multimodal</a>
+            <a href="http://www.w3.org/XML/" style="font-size: 50px; color: #46aaf1; text-decoration: none;">XML</a> <a href="http://www.w3.org/2006/rwc/" style="font-size: 35px; color: #80ff80; text-decoration: none;">RichWebClients</a>
+            <a href="http://www.w3.org/XML/Processing/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">XMLProcessing</a>
+            <a href="http://www.w3.org/2001/di/" style="font-size: 42px; color: #FF6600; text-decoration: none;">DeviceIndependence</a>
+            <a href="http://www.w3.org/Addressing/" style="font-size: 33px; color: #FF6666; text-decoration: none;">URI/URL</a>
+            <a href="http://www.w3.org/DOM/" style="font-size: 44px; color: #FF6600; text-decoration: none;">DOM</a> <a href="http://www.w3.org/Protocols/" style="font-size: 50px; color: #80ff80; text-decoration: none;">HTTP</a> <a href="http://www.w3.org/WAI/"
+                style="font-size: 50px; color: #FF6666; text-decoration: none;">Accessibility</a>
+            <a href="http://www.w3.org/RDF/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">RDF</a> <a href="http://www.w3.org/2006/appformats/" style="font-size: 33px; color: #80ff80; text-decoration: none;">WebApplicationFormats</a>
+            <a href="http://www.w3.org/XML/Linking" style="font-size: 33px; color: #FF6666; text-decoration: none;">XMLBase</a>
+            <a href="http://www.w3.org/Jigsaw/" style="font-size: 50px; color: #80ff80; text-decoration: none;">Jigsaw</a> <a href="http://www.w3.org/XML/Linking" style="font-size: 33px; color: #FF6666; text-decoration: none;">XLink</a> <a href="http://www.w3.org/International/"
+                style="font-size: 35px; color: #FF6600; text-decoration: none;">I18N</a> <a href="http://www.w3.org/P3P/" style="font-size: 33px; color: #80ff80; text-decoration: none;">P3P</a> <a href="http://www.w3.org/QA/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">QualityAssurance</a>
+            <a href="http://www.w3.org/2001/XKMS/" style="font-size: 33px; color: #FF6666; text-decoration: none;">XMLKeyManagement</a>
+            <a href="http://www.w3.org/UbiWeb/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">UbiquitousWeb</a>
+            <a href="http://www.w3.org/2002/mmi/ink" style="font-size: 37px; color: #FF6600; text-decoration: none;">InkML</a> <a href="http://www.w3.org/2005/Incubator/" style="font-size: 39px; color: #46aaf1; text-decoration: none;">Incubator</a>
+            <a href="http://www.w3.org/XML/Linking" style="font-size: 33px; color: #FF6600; text-decoration: none;">XPath</a> <a href="http://www.w3.org/2002/ws/" style="font-size: 33px; color: #80ff80; text-decoration: none;">WebServices</a>
+            <a href="http://www.w3.org/MarkUp/Forms/" style="font-size: 33px; color: #FF6666; text-decoration: none;">XForms</a> <a href="http://www.w3.org/Style/CSS/" style="font-size: 48px; color: #46aaf1; text-decoration: none;">CSS</a> <a href="http://www.w3.org/2000/xp/Group/"
+                style="font-size: 50px; color: #FF6600; text-decoration: none;">SOAP</a> <a href="http://www.w3.org/Mobile/" style="font-size: 33px; color: #80ff80; text-decoration: none;">Mobile</a> <a href="http://www.w3.org/AudioVideo/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">SMIL</a>            <a href="http://www.w3.org/2005/rules/" style="font-size: 33px; color: #FF6666; text-decoration: none;">Rules</a> <a href="http://www.w3.org/Graphics/SVG/" style="font-size: 33px; color: #80ff80; text-decoration: none;">SVG</a> <a href="http://www.w3.org/Amaya/"
+                style="font-size: 50px; color: #46aaf1; text-decoration: none;">Amaya</a> <a href="http://www.w3.org/2001/sw/" style="font-size: 33px; color: #FF6666; text-decoration: none;">SemanticWeb</a>
+            <a href="http://www.w3.org/Math/" style="font-size: 33px; color: #80ff80; text-decoration: none;">MathML</a>
+        </p>
+        <blockquote>
+            Recomendaciones tecnológicas <strong>abiertas</strong> del W3C, probablemente con la <a href="http://www.w3.org/Consortium/Patent-Policy/" hreflang="en-us">política de patentes</a> más
+            <strong>transparente</strong> en Internet </blockquote>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Historia de la Web</h1>
+        <p class="image-full">
+            <img src="img/web.jpg" width="1024" alt="Frosty Morning Web, foxypar4" />
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Prehistoria de la Web: Vannevar Bush</h1>
+        <div class="image-center">
+            <img src="img/Vannevar_Bush_portrait.jpg" width="400" alt="Vannevar Bush en su escritorio" /><br /> Foto: <a href="http://es.wikipedia.org/wiki/Vannevar_Bush">http://es.wikipedia.org/wiki/Vannevar_Bush</a>
+        </div>
+        <ul>
+            <li>Consejero científico de Roosevelt</li>
+            <li>Publicó <em>"As We May Think"</em> (julio 1945)
+                <ul>
+                    <li>Concepto de máquina (<strong>Memex</strong>) que almacenaba gran cantidad de información enlazada</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Prehistoria de la Web: Douglas Engelbart</h1>
+
+        <div class="image-right">
+            <img src="img/engelbart_douglas.jpg" alt="Douglas Engelbart" /><br /> Foto: <a href="http://www.cs.umd.edu/class/spring2002/cmsc434-0101/MUIseum/applications/hypertext.html">University of Maryland</a>
+        </div>
+
+        <div class="image-center">
+            <img src="img/Firstmouseunderside.jpg" alt="Primer ratón informático" /><br /> Foto: <a href="http://en.wikipedia.org/wiki/Douglas_Engelbart">http://en.wikipedia.org/wiki/Douglas_Engelbart</a>
+        </div>
+        <ul>
+            <li>Inventor del <em>ratón</em></li>
+            <li>Inspirado por <em>"As We May Think"</em></li>
+            <li>Líder del trabajo sobre <strong>hipertexto</strong></li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Prehistoria de la Web: Ted Nelson</h1>
+        <div class="image-center">
+            <img src="img/tednelson.jpg" width="400" alt="Ted Nelson" />
+        </div>
+        <ul>
+            <li>Acuñó el término <em><strong>hipertexto</strong></em> (1965)</li>
+            <li>Proyecto <em>Xanadu</em> (1960)
+                <ul>
+                    <li>Red con un interfaz de usuario sencillo</li>
+                    <li>Base de datos de documentos basados en hipertexto</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Nacimiento de la Web: CERN</h1>
+        <div class="image-full">
+            <img src="img/lhc_cern.jpg" width="1024" alt="LHC en el CERN" />
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Nacimiento de la Web: el padre</h1>
+        <div class="image-right">
+            <img src="img/TimBL-bw-big-notie-400.jpeg" width="300" alt="Tim Berners-Lee" />
+        </div>
+        <ul>
+            <li>Tim Berners-Lee</li>
+            <li>Desarrolló <strong>ENQUIRE</strong>, un sistema básico de hipertexto (1980)</li>
+            <li>...</li>
+        </ul>
+        <p class="image-center" style="margin-top:2em"><img src="img/800px-First_Web_Server.jpg" width="300" alt="El equipo NeXT utilizado para ejecutar WorldWideWeb" /><br /> Foto: <a href="http://en.wikipedia.org/wiki/File:First_Web_Server.jpg">http://en.wikipedia.org/wiki/File:First_Web_Server.jpg</a></p>
+
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>La propuesta inicial (1989)</h1>
+        <ul>
+            <li>Modelo de gestión de información en el CERN</li>
+            <!-- li>Solución basada en un sistema distribuido de <em>hipertexto</em></li -->
+        </ul>
+        <p class="center" style="margin-top:0"><img alt="Propuesta de Gestión de la Información de Tim Berners-Lee" src="img/proposal_tim.gif" />
+            <br />
+            <span class="mini" xml:lang="en-us" lang="en-us">Information Management: A Proposal, Tim Berners-Lee, CERN, March
+1989, May 1990, [<a hreflang="en-us"
+href="http://www.w3.org/History/1989/proposal.html">http://www.w3.org/History/1989/proposal.html</a>]</span></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Un Espacio de Información Global</h1>
+        <div style="margin-top:5em">
+            <q>Suppose all the information stored on computers everywhere were linked, I thought. 
+Suppose I could program my computer to create a space in which anything could be linked to anything. 
+All the bits of information in every computer at CERN, and on the planet, would be available to me and to anyone else. 
+<em>There would be a single, global information space</em>.</q>
+            <p style="text-align:right">Tim Berners-Lee, <em>Weaving the Web</em></p>
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>WorldWideWeb (1990)</h1>
+        <p class="center">
+            <a href="http://www.w3.org/People/Berners-Lee/WorldWideWeb.html"><img style="width:62%; border:2px #000 solid;" alt="Pantalla del primer navegador-editor de páginas web: Worldwideweb" src="img/worldwideweb.gif" /></a>
+        </p>
+        <p class="center"><a href="http://info.cern.ch/hypertext/WWW/TheProject.html">http://info.cern.ch/hypertext/WWW/TheProject.html</a></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Hypertext'91 (sólo un póster)</h1>
+        <p class="image-center"><img style="width:80%" alt="Póster sobre la WWW en la conferencia presentado por TBL" src="img/poster.jpg" /><br />Hypertext '91 Conference, San Antonio, Texas (EEUU)</p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Versión simple del HTML</h1>
+        <ul>
+            <li>Simplicidad del <strong>HTML</strong></li>
+            <li>Direccionamiento basado en <strong>HTTP</strong> y <strong>URLs</strong></li>
+        </ul>
+
+        <pre>
+&lt;a href=&quot;http://example.com/libro/capitulo1/&quot;
+     rel=&quot;includes&quot;&gt;Capítulo 1&lt;/a&gt;
+</pre>
+        <ul>
+            <li>Pensado para que cualquiera lo pudiese utilizar</li>
+            <li>Se va enriqueciendo...</li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Evolución de los Navegadores (1993+)</h1>
+        <ul class="xl">
+            <li><em>Midas</em>, <em>Erwise</em>, <em>Viola</em> y <em>Lynx</em></li>
+            <li><abbr title="National Center for Supercomputing Applications">NCSA</abbr> lanza la primera versión <em>Mosaic</em> para X Windows</li>
+            <li>...</li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>La Web de por entonces... (Web 1.0)</h1>
+        <p class="image-center" style="margin-top:-1em"><img alt="Pantallazo del Navegador Mosaic (1993) navegando por una página de Yahoo!" src="img/netscape.jpg" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Web 1.0</h1>
+        <p class="image-right"><img width="450" alt="Pantallazo del Navegador Mosaic (1993) navegando por una página de Yahoo!" src="img/netscape.jpg" /><br />NCSA Mosaic pasó a ser Netscape</p>
+        <p>Una Web para navegar</p>
+        <ul class="incremental">
+            <li><em>HTTP</em> + <em>URL</em> + <em>HTML</em></li>
+            <li>Ancho de banda limitado</li>
+            <li>Dispositivos limitados (de escritorio)</li>
+            <li>No era posible la interacción con el documento</li>
+            <li class="xl"><strong>Experiencia de usuario &ldquo;pasiva&rdquo;</strong></li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Nacimiento del W3C (1994)</h1>
+        <p>Árbitro para conseguir consenso</p>
+        <p>Recomendaciones</p>
+        <ul class="xl incremental">
+            <li><strong><em>PNG</em></strong> (1996)</li>
+            <li><strong><em>HTML 3.2</em></strong> (1997)</li>
+            <li>Desde entonces... &ldquo;Guiando la Web a su máximo potencial&rdquo;</li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Base del comercio electrónico (1995)</h1>
+        <p class="image-center"><img height="540" alt="Pantallazo de Amazon.com en 1995" src="img/amazon_1995.gif" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Comienza el fenómeno &ldquo;blog&rdquo; (1999)</h1>
+        <p class="image-center"><img height="540" alt="Pantallazo de la primera versión de Blogger, de Pyra Labs" src="img/pyra_blogger.png" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Servicios Web (2002)</h1>
+        <ul>
+            <li>W3C crea la Actividad de Servicios Web</li>
+            <li>Interoperabilidad entre máquinas (fenómeno <strong>XML</strong>)</li>
+        </ul>
+        <p class="image-center"><img alt="Esquema de interacción de una agencia de viajes" src="img/serviciosWeb1.png" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Web 2.0 (2004 ... hoy)</h1>
+        <p class="image-full"><img alt="Nube de etiquetas con la palabra web2.0 en el centro y otros términos relacionados" src="img/1000px-Web_2.0_Map.svg.png" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Web 2.0</h1>
+        <p>Una web para <del>navegar</del> <strong>interactuar</strong></p>
+        <ul class="incremental">
+            <li>HTTP + URL + HTML + <em>CSS</em> + <em>Javascript</em> + ... + <em>Flash</em></li>
+            <li>Mayor ancho de banda y mejores dispositivos</li>
+            <li>Más dispositivos (teléfonos, PDAs, ordenadores portátiles,...)</li>
+        </ul>
+        <p class="incremental xl">Experiencia de usuario &ldquo;interactiva&rdquo;<br />(blogs, wikis, tweets, vídeos, fotos...)</p>
+        <p class="image-center"><img alt="Web 2.0" src="img/Web20_logo.png" /></p>
+
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>La Web de los Creadores y Consumidores</h1>
+        <div style="float: left; background: transparent url(img/logos_web20.jpg) repeat-x; width:100%; height:70%; text-indent:-1000px;">Web 2.0</div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Surgen retos: una Web de confianza</h1>
+        <p style="float:left; margin:0"><img height="580" src="img/logos_web20.jpg" alt="Logos Web 2.0" /></p>
+        <div style="float: left;">
+            <p>Promover</p>
+            <ul class="incremental">
+                <li>...<strong>confianza</strong></li>
+
+                <li>...responsabilidad</li>
+                <li>...seguridad</li>
+                <li>...confidencialidad</li>
+            </ul>
+            <div class="incremental">
+                <p><strong>Entorno colaborativo</strong></p>
+                <ul>
+                    <li>Privacidad (P3P)</li>
+                    <li>Seguridad XML</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Desde cualquier lugar, cualquier dispositivo</h1>
+        <p class="center" style="margin-top: -0.5em"><img height="560" src="img/mobile_train_xl.jpg" alt="Usuario de la Web Móvil consultando su dispositivo dentro de un tren" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>...desde cualquier lugar</h1>
+        <p class="center"><img src="img/mobile_desert.jpg" height="550" alt="Persona comunicándose con un teléfono móvil en el desierto" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>...desde cualquier dispositivo</h1>
+        <p><img class="incremental" id="frigo" src="img/nevera.jpg" alt="Frigorífico con un navegador web" />
+            <img class="incremental" width="400" id="salpicadero" src="img/car_browser.jpg" alt="Navegador en un salpicadero de un automóvil" />
+            <img class="incremental" id="urinario" src="img/urinario.jpg" alt="Urinarios tecnológicos" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>La estandarización es importante</h1>
+        <div style="text-align:center">
+            <img src="img/mobilechristmas2004.jpg" height="550" alt="Muchos dispositivos móviles de diversos tipos" /> </div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Importancia del mercado Móvil</h1>
+        <p class="center">
+            <a href="http://www.itu.int/newsroom/press_releases/2009/39.html"><img src="img/pr-39-graph.jpg" alt="Porcentajes globales de las líneas telefónicas y conexiones a Internet por años" /></a>
+        </p>
+        <ul>
+            <li>Mercado extremadamente dinámico</li>
+            <li>Muchos <strong>usuarios potenciales</strong></li>
+            <li>&gt; 4.600M de conexiones de telefonía móvil en el mundo (finales 2009)</li>
+            <li class="incremental">...67% de la población mundial</li>
+        </ul>
+        <p style="float:right; margin-top:-1.5em"><span class="mini">Fuente: <a href="http://www.itu.int/newsroom/press_releases/2009/39.html"><abbr title="International Telecommunication Union">ITU</abbr> World Telecommunication/ICT Indicators Database</a>. Datos de 2009 estimados</span></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Mercado Móvil: las Economías Emergentes</h1>
+        <!-- p style="margin:2em 2em 0 0;float:right"><a
+href="http://www.w3.org/Mobile"><img src="../../lib/pics/W3C-MWI.png"
+alt="W3C | Mobile Web Initiative" /></a></p -->
+        <ul>
+            <li>Implantación de <strong>redes inalámbricas</strong></li>
+            <li>Suscripciones de banda ancha móvil por regiones (ojo a Asia y Pacífico):</li>
+        </ul>
+        <p class="mini" style="text-align:center;"><img width="500" src="img/distribucion_telefonia_movil.png" alt="Distribución de abonados de telefonía móvil por regiones en el mundo" /> <br /><em>(<a href="http://www.itu.int/net/TELECOM/World/2009/newsroom/pdf/stats_ict200910.pdf">ITU World Telecommunication/ICT Indicators Database</a>)</em>            * Estimación</p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Limitaciones de los dispositivos móviles</h1>
+        <p style="float:right; margin: 0 1em 1em 1em;" class="center"><img height="550" style="border:2px #000 solid" src="img/svg_phone.jpg" alt="SVG en un teléfono móvil" /><br />
+            <em class="mini">(<a href="http://www.flickr.com/photos/mac/2876062502/">SVG Population Pyramid on iPhone</a>)</em></p>
+        <ul class="incremental">
+            <li>Debe tenerse en cuenta:
+                <ul>
+                    <li><strong>Pantalla reducida</strong></li>
+                    <li><strong>Coste</strong> del tráfico de datos</li>
+                    <li><strong>Tiempo limitado</strong> del usuario</li>
+                </ul>
+            </li>
+            <li>El diseño debe adecuarse a un <strong>contexto</strong>
+                <ul>
+                    <li>Sitios Web Móviles (Pautas)</li>
+                    <li>Adecuación al dispositivo (<abbr title="Repositorios de Descripción de Dispositivo">DDR</abbr>)</li>
+                    <li>Geolocalización</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>La Iniciativa de Web Móvil</h1>
+        <p>El <strong>acceso</strong> a la Web desde un dispositivo móvil tan <strong>simple, fácil y adecuado</strong> como el acceso desde un dispositivo de escritorio</p>
+        <p class="center" style="margin: 0;"><img height="450" style="border:2px #000 solid" src="img/iphone.jpg" alt="Comparación de la vista de un navegador móvil y un navegador de escritorio con la misma página" /><br />
+            <em class="mini">(<a href="http://www.efront.com.au/web-design-melbourne/uploaded_images/iphone-776924.jpg">http://www.efront.com.au/web-design-melbourne/uploaded_images/iphone-776924.jpg</a>)</em></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Nuevas Aplicaciones Web (Ubícuas)</h1>
+
+        <p id="videocast"><img height="500" style="border:2px #000 solid" src="img/videocast.jpg" alt="Aplicación de Videocast desde el móvil" /></p>
+
+        <p id="tracking"><img style="border:2px #000 solid" class="incremental" height="500" src="img/tracking.jpg" alt="Aplicación de fotografías subidas desde el móvil y posicionadas en un mapa" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Web 3.0 - La Web de los Datos y Servicios</h1>
+        <p>Web 3.0, término acuñado por <a href="http://www.nytimes.com/2006/11/12/business/12web.html?ex=1320987600&amp;en=254d697964cedc62&amp;ei=5088">J. Markoff, NYT Nov 2006</a></p>
+        <p class="center" style="margin-top: 2em"><img src="img/SemWebAppMetro.png" alt="Mapa de líneas de metro, donde se representan conceptos y la unión entre distintos servicios que comparten datos" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>La Web Tradicional, para humanos</h1>
+        <ul>
+            <li>Representa la información usando
+                <ul>
+                    <li><strong>lenguaje natural</strong> (español, inglés, chino,...),</li>
+                    <li>gráficos, multimedia, diseños de las páginas</li>
+                </ul>
+            </li>
+            <li>Los humanos podemos procesar esta información (fácilmente)
+                <ul>
+                    <li><strong>Deducimos hechos</strong> desde información parcial</li>
+                    <li>Creamos <strong>asociaciones mentales</strong></li>
+                    <li>Asimilamos información desde <strong>distintos sentidos</strong>
+                        <ul>
+                            <li>aunque, existen personas con ciertas limitaciones</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="incremental">Ejemplo...</li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Deseamos organizar un viaje a Milán...</h1>
+        <p class="center" style="margin:-0.2em; padding:0">
+            <img src="img/viaje_iberia.png" alt="Pantalla de elección de vuelos de Iberia" />
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>...seleccionamos la aerolínea italiana</h1>
+        <p class="center" style="margin-top:-0.2em; padding:0">
+            <img src="img/viaje_alitalia.png" alt="Pantalla de elección de vuelos de Alitalia" />
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>...la de bajo coste</h1>
+        <p class="center" style="margin-top:-0.2em; padding:0">
+            <img src="img/viaje_easyjet.png" alt="Pantalla de elección de vuelos de Easyjet" />
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>...o con ayuda de un buscador</h1>
+        <p class="center" style="margin-top:-0.2em; padding:0">
+            <img src="img/viaje_kayak.png" alt="Pantalla de elección de vuelos de Kayak" />
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Buscamos alojamiento... barato</h1>
+        <p class="center" style="margin-top:-0.2em; padding:0">
+            <img src="img/viaje_hotel1.png" alt="Pantalla de elección de hoteles en Cheaper Than Hotels" />
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>... o a través de una agencia (italiana)</h1>
+        <p class="center" style="margin-top:-0.2em; padding:0">
+            <img src="img/viaje_hotel2.png" alt="Pantalla de elección de hoteles en InItalia.it" />
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>... o algo de confianza</h1>
+        <p class="center" style="margin-top:-0.2em; padding:0">
+            <img src="img/viaje_hotel3.png" alt="Pantalla de elección de hoteles en TripAdvisor" />
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>¿Y si nuestro viaje no se acaba ahí?</h1>
+        <p class="center" style="margin-top:-0.2em; padding:0">
+            <img src="img/viaje_tren.png" alt="Pantalla de elección de trenes en TrenItalia" />
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Integración de la información</h1>
+        <ul>
+            <li>Hemos buscado
+                <ul>
+                    <li>Diversa información,</li>
+                    <li>en <strong>distintas fuentes</strong>,</li>
+                    <li>desde diferentes servicios,</li>
+                    <li>con representación distinta (<strong>distintos formatos</strong>),</li>
+                    <li>incluso, en <strong>distintos idiomas</strong></li>
+                </ul>
+            </li>
+            <li>Podemos integrar esta información</li>
+            <li>Proceso tedioso y dependiente de nuestra pericia</li>
+            <li class="incremental">Muchos otros casos cotidianos...</li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Ciencias de la Salud</h1>
+        <p class="center"><img src="img/proteins.jpg" height="570" alt="Capturas de tres sitios web superpuestos, con información médica sobre proteinas" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Redes Sociales</h1>
+        <p style="float:right;"><img src="img/logos_web20_cortado.png" alt="logos de aplicaciones sociales" /></p>
+        <ul>
+            <li><strong>Omnipresentes</strong> en estos días
+                <ul>
+                    <li>LinkedIn, eConozco, Friendster, Facebook,...</li>
+                </ul>
+            </li>
+            <li>Los datos no son intercambiables
+                <ul>
+                    <li>¿Cuántas veces has tenido que introducir los contactos?</li>
+                </ul>
+            </li>
+            <li>Las aplicaciones deberían poder <strong>intercambiar los datos de una forma estándar</strong></li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Integración de Bases de Datos</h1>
+        <ul>
+            <li>Las <abbr title="Bases de Datos">BBDD</abbr> son <strong>diferentes</strong> en estructura y en contenidos</li>
+            <li>Muchas aplicaciones necesitan manejar <strong>varias</strong> <abbr title="Bases de Datos">BBDD</abbr>
+                <ul>
+                    <li>Tras la fusión de compañías</li>
+                    <li>Combinación de información administrativa (e-Government)</li>
+                    <li>Investigación bioquímica, genética, farmacéutica</li>
+                    <li>...</li>
+                </ul>
+            </li>
+            <li>El caso es que la mayoría de estos datos están en la Web
+                <ul>
+                    <li>(aunque no necesariamente públicos)</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <!--div class="slide">
+<h1>Semántica en los Servicios Web</h1>
+<ul>
+    <li>Las tecnologías de los <em>Servicios Web</em> es muy buena</li>
+    <li>Pero, como los servicios son ubícuos, llegan los <strong>problemas de la búsqueda</strong>:
+        <ul>
+            <li><q>búscame el mejor servicio para solucionar ecuaciones diferenciales</q></li>
+            <li><q>comprueba si puedo combinarlo con el servicio de impresión de gráficos tridimensionales</q></li>
+        </ul>
+    </li>
+    <li>Es necesario <strong>caracterizar el servicio</strong>
+        <ul>
+            <li>No sólo definirlo en función de sus parámetros de entrada y salida,</li>
+            <li>... también, en términos de su semántica</li>
+        </ul>
+    </li>
+    <li></li>
+</ul>
+</div-->
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Objetivo: La Web de los Datos</h1>
+        <p>Usar los datos en la Web de la misma forma que los documentos:</p>
+        <ul>
+            <li><strong>Enlazar</strong> los datos entre sí</li>
+            <li><strong>Usar</strong> los datos como queramos (visualizarlos, combinarlos, etc)</li>
+            <li>Cualquier <strong>aplicación debería poder interpretar</strong> cada parte del dato</li>
+        </ul>
+        <p class="xl">¡Interoperabilidad!</p>
+        <p class="incremental">¿Esto no es lo que ya hacen los "mashups"?...</p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Ejemplo de "mashup"</h1>
+        <p class="center" style="margin-top:-0.2em; padding:0">
+            <img src="img/mashup_tripit.png" alt="Pantalla de viaje presentado por Tripit" />
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Ejemplo de "mashup"</h1>
+        <p class="image-center">
+            <img src="img/seats.png" width="850" alt="Pantallazo de sugerencias de selección de asientos" />
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>... en parte, sí (Interoperabilidad ad-hoc)</h1>
+        <ul>
+            <li>Explotan <strong>la potencia de la Web de Datos</strong></li>
+            <li>Pero están forzados a buscar soluciones <em>ad-hoc</em>
+                <ul>
+                    <li>Servicios Web exponiendo los datos</li>
+                    <li><strong>Distintas APIs, distinta estructura</strong></li>
+                    <li>No se usa una forma estándar para acceder a los datos</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p class="incremental">La "Web de Datos" se debería comportar como la "Web de los Documentos"
+            <strong>...de una forma estándar</strong></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Pero... las máquinas son ignorantes</h1>
+        <ul>
+            <li>La <strong>información parcial</strong> es inútil</li>
+            <li>Hacer que ciertos <strong>recursos tengan sentido</strong> es difícil (multimedia)</li>
+            <li><strong>Describir analogías</strong> automáticamente es difícil</li>
+            <li>La <strong>combinación</strong> de información automáticamente es difícil
+                <ul>
+                    <li>¿Es igual <code>&lt;b1:creator&gt;</code>, que <code>&lt;b2:author&gt;</code>, o que <code>&lt;b3:autor&gt;</code>?</li>
+                    <li>¿Cómo combinar distintos niveles jerárquicos del XML?</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- =========================================== -->
+    <div class="slide">
+        <h1>Evolución de la Web Tradicional...</h1>
+        <ul>
+            <li>Los humanos podemos entenderlo (más o menos)</li>
+        </ul>
+
+        <p class="center"><img alt="Representación de la Web tradicional como un conjunto de enlaces a documentos" src="img/OldWebLinks.png" /></p>
+    </div>
+    <!-- =========================================== -->
+    <div class="slide">
+        <h1>... a la Web Semántica</h1>
+        <ul>
+            <li>Lo entendemos nosotros y las máquinas</li>
+        </ul>
+        <p class="center"><img alt="Relaciones entre recursos que tienen incluida semántica" src="img/SemWebRelations.png" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>¿Cómo funciona esto?</h1>
+        <ol>
+            <li>Se aplica el <strong>potencial de las URIs a conceptos</strong></li>
+            <li><strong>Modelado</strong> de las cosas reales (conceptos y sus relaciones)
+                <ul>
+                    <li>no documentos ni tablas de las bases de datos</li>
+                </ul>
+            </li>
+            <li>Se <strong>enlazan los datos entre sí</strong></li>
+            <li>Se <strong>exponen</strong></li>
+        </ol>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Web Semántica: Todo tiene un URI</h1>
+        <ul>
+            <li>No digas "<em>Nueva York</em>"
+                <ul>
+                    <li>ni "<em xml:lang="es" lang="es">La Gran Manzana</em>",</li>
+                    <li>ni "<em xml:lang="en" lang="en">New York</em>",</li>
+                    <li>ni "<em xml:lang="ca" lang="ca">Nova York</em>",</li>
+                    <li>ni "<em xml:lang="ko" lang="ko">뉴욕</em>",</li>
+                    <li>...</li>
+                </ul>
+            </li>
+        </ul>
+        <p class="incremental center"><a href="http://dbpedia.org/resource/New_York_City">http://dbpedia.org/resource/New_York_City</a></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Modelado estándar de los datos</h1>
+        <p style="float:right; margin: 1em 1em 0 0;"><img height="500" src="img/rdf_open_data.png" alt="Tripleta obtenida con los datos de los servidores, gráficos y de los documentos XHTML" /></p>
+        <ul>
+            <li>Hacer accesible lo que quieras ...
+                <ul>
+                    <li>... dentro de una organización o entre varias ... </li>
+                    <li>... <strong><em>en la Web</em></strong></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Las Bases de Datos clásicas</h1>
+        <p class="center" style="margin-top:3em"><img alt="Una fila, columna y celda de una base de datos, que se corresponden con un sujeto, propiedad y un valor." src="img/bd_relational.png" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>El elemento de la Web Semántica</h1>
+        <p class="center"><img alt="El origen de la flecha es el sujeto, el cuerpo es la propiedad y el destino es el valor" src="img/rdf_triple.png" /></p>
+        <ul>
+            <li><strong>Simplicidad y consistencia</strong> matemática</li>
+            <li>Resource Description Framework (<abbr title="Resource Description Framework" xml:lang="en" lang="en">RDF</abbr>)
+                <ul>
+                    <li>RDF -&gt; Datos</li>
+                    <li>HTML -&gt; Documentos</li>
+                </ul>
+            </li>
+            <li>Se puede codificar en XML</li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Ejemplo de tripleta RDF</h1>
+        <div class="center" style="margin-top:2em">
+            <object title="Ejemplo de tripleta página creada por un autor" data="img/example_triple.svg" width="90" type="image/svg+xml" class="svg">
+  <img src="img/example_triple.svg" alt="Ejemplo de tripleta página creada por un autor"/></object></div>
+        <ul style="margin-top:4em">
+            <li>Sujeto: <a href="http://example.org/info.html">http://example.org/info.html</a></li>
+            <li>Predicado o propiedad: <a href="http://purl.org/dc/terms/creator">http://purl.org/dc/terms/creator</a></li>
+            <li>Valor: <a href="http://www.w3c.ec/Personal/Martin">http://www.w3c.ec/Personal/Martin</a></li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>La Web Semántica incluye tablas,...</h1>
+        <p class="center" style="margin-top:5em"><img alt="Las flechas pueden construir una tabla, una flecha desde cada fila hacia cada valor" src="img/rdf_tables.png" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>...árboles</h1>
+        <p class="center" style="margin-top:4em"><img alt="Las flechas pueden componer un árbol. De los nodos salen flechas hacia los otros, haciendo un árbol" src="img/rdf_trees.png" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>... cualquier cosa</h1>
+        <p class="center" style="margin-top:3em"><img alt="Las flechas pueden componer grafos, tablas, árboles, todo compuesto" src="img/rdf_graph.png" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Materializando la Web Semántica</h1>
+        <p style="float:right; margin:0"><img alt="Pila de tecnologías de la Web Semántica de Tim (2006)" src="img/sw_stack_2006a.png" /></p>
+        <ul>
+            <li><strong>Mecanismos</strong> específicos para las máquinas:
+                <ul>
+                    <li>Evita la ambigüedad en la <strong>identificación</strong> (
+                        <a href="http://www.w3.org/Addressing/">URI</a>)</li>
+
+                    <li>Describir los <strong>recursos</strong> (<a href="http://www.w3.org/RDF/">RDF</a>)</li>
+                    <li>Modelar <strong>ontologías</strong> (<a href="http://www.w3.org/2001/sw/WebOnt/">OWL</a>)</li>
+                    <li>Realizar búsquedas (<a href="http://www.w3.org/2001/sw/DataAccess/">SPARQL</a>)</li>
+                    <li>Expresar reglas y su intercambio (<a href="http://www.w3.org/2005/rules/">RIF</a>)</li>
+                    <li>establecer lógica, comprobaciones, certificados de confianza, etc.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Evitar el aislamiento</h1>
+        <p class="center" style="margin:-1em; height:590px; overflow:hidden;">
+            <img src="img/duchclouds.jpg" width="1024" alt="Nube en el cielo" />
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Proyecto LinkingOpenData</h1>
+        <ul>
+            <li>Objetivo:
+                <ul>
+                    <li><strong>Exponer</strong> conjuntos de datos (RDF)</li>
+                    <li><strong>Enlazar</strong> distintos conjuntos de datos</li>
+                    <li>Posiblemente establecer <strong>puntos de consulta</strong> (SPARQL)</li>
+                </ul>
+            </li>
+            <li>Miles de millones de tripletas, cientos de millones de enlaces...</li>
+            <li>La base para la <em><strong>Web de Datos</strong></em></li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Nube de Linked Open Data (marzo 2008)</h1>
+        <p class="center">
+            <img src="img/lod_cloud_03_2008.png" alt="Nube de datasets enlazados, Marzo 2008" />
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Nube de Linked Open Data (septiembre 2008)</h1>
+        <p class="center" style="margin-top:-1em;">
+            <img src="img/lod_cloud_09_2008.png" alt="Nube de datasets enlazados, Septiembre 2008" />
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Nube de Linked Open Data (julio 2009)</h1>
+        <p class="center" style="margin-top:-1em;">
+            <img src="img/lod_cloud_07_2009.png" alt="Nube de datasets enlazados, Julio 2009" />
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <!--div class="slide">
+<h1>Adaptación entre Bases de Datos Relacionales SQL</h1>
+    <p>Se mantienen los SGBD + interfaces RDF:</p>
+
+    <p class="center" style="margin-top:-1em"><img alt="Integración RDF de sistemas de gestión de bases de datos relacionales" src="img/rdf_bus_relational_db.png" />
+    </p>
+    
+    <p class="reference"><a href="http://www.w3.org/2005/Talks/0517-boit-tbl/#[18]">Comprueba los conceptos de interfaz de la Web Semántica para ver otro tipo de fuentes de datos (Tim Berners-Lee)</a></p>
+</div-->
+    <!-- ====================================================================== -->
+    <!--div class="slide">
+    <h1>Ejemplo: FOAFCorp (Corporate Friends of Friends)</h1>
+    <p class="center"><a href="http://www.theyrule.net" title="TheyRule, una aplicación donde se utiliza la información FOAF de directivos de empresas e instituciones"><img src="img/ejemplo_ws_theyrule.png" alt="Pantallazo de un navegador de directivos de empresas e instituciones" /></a></p>
+    <ul><li><a href="http://xml.mfd-consult.dk/foaf/explorer/?foaf=http%3A%2F%2Fwww.w3c.es%2FPersonal%2FMartin%2Ffoaf.rdf">FOAF Explorer</a></li></ul>
+</div-->
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Pero... ¿todo esto funciona?</h1>
+        <p class="incremental" style="font-size:10em">¡Sí!</p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Buscadores semánticos</h1>
+        <p class="image-full">
+            <a href="http://dbpedia.neofonie.de/browse/~:oviedo/" title="Buscador semántico de la DBPedia, con la búsqueda de un objeto etiquetado como catalunya"><img src="img/dbpedia.png" alt="Pantallazo del buscador semántico de la DBPedia con la consulta del objeto Oviedo" /></a>
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Búsqueda inteligente para servicios online</h1>
+        <p class="center" style="margin:-25px 0 0 -15px">
+            <a href="http://www.zaragoza.es/tramites" title="Trámites del Ayuntamiento de Zaragoza"><img src="img/sw_zaragoza.jpg" alt="Pantallazo del buscador de servicios al ciudadano del Ayto. de Zaragoza" /></a>
+        </p>
+        <ul style="font-size:50%">
+            <li><a hreflang="en" href="http://www.w3.org/2001/sw/sweo/public/UseCases/Zaragoza/">Case Study: An Intelligent Search Engine for Online Services for Public Administrations</a></li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Mejora de las búsquedas (<abbr title="Boletín Oficial del Principado de Asturias">BOPA</abbr>)</h1>
+        <p class="center" style="margin:0">
+            <a href="http://www.w3.org/2001/sw/sweo/public/UseCases/CTIC/" title="Caso de uso de la Web Semántica"><img src="img/bopa_s.png" alt="Pantallazo del buscador del BOPA" /></a>
+        </p>
+        <ul style="font-size:50%">
+            <li><a hreflang="en" href="http://www.w3.org/2001/sw/sweo/public/UseCases/CTIC/">Use Case: Enhancing Web Searches within the Principality of Asturias</a></li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Recomendaciones de Turismo en Zaragoza</h1>
+        <p class="center" style="margin:0">
+            <a href="http://www.w3.org/2001/sw/sweo/public/UseCases/Zaragoza-2/" title="Caso de uso de la Web Semántica en Turismo de Zaragoza"><img src="img/turruta.png" alt="Pantallazo de CRUZAR" /></a>
+        </p>
+        <ul style="font-size:50%">
+            <li><a hreflang="en" href="http://www.w3.org/2001/sw/sweo/public/UseCases/Zaragoza-2/">(Caso de uso SWEO: Cruzar)</a></li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Integración de conocimiento de Medicina China</h1>
+        <p style="float:right; margin:0">
+            <a href="http://www.w3.org/2001/sw/sweo/public/UseCases/UniZheijang/"><img src="img/chinese.jpg" alt="Pantallazo de la aplicación de integración del conocimiento de la Medicina China" /></a>
+        </p>
+        <ul>
+            <li>Sobre 80 bases de datos, con 200.000 registros en cada una</li>
+            <li>Usa una capa semántica</li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Hacia la Web x.0</h1>
+        <ul class="xl">
+            <li>Una Web de Datos</li>
+            <li><strong>Una Web de Interacción</strong></li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Mejorando la interacción en la Web</h1>
+
+        <p>Modelando la interfaz de usuario</p>
+        <ul class="incremental">
+            <li>Mejorando el lenguaje de primera generación, HTML</li>
+            <li>Integrando las tecnologías de segunda generación:
+                <ul>
+                    <li>CSS (estilos atractivos)</li>
+                    <li>SVG (gráficos interactivos)</li>
+                    <li>MathML (representaciones matemáticas)</li>
+                    <li>Vídeo, Canvas, Geolocalización, ...</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Historia del HTML5</h1>
+        <ul class="xl">
+            <li>HTML4, XHTML1, (XHTML2)...</li>
+            <li>2009, <strong>finaliza</strong> Grupo de Trabajo de XHTML</li>
+            <li>Todos los esfuerzos sobre <strong>HTML5</strong></li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>HTML5: ¿HTML o XML?</h1>
+        <ul>
+            <li>Se permite:
+                <ul>
+                    <li>HTML (<code>text/html</code>) y</li>
+                    <li>XML (<code>application/xhtml+xml</code>)</li>
+                </ul>
+            </li>
+            <li>Incorpora
+                <ul>
+                    <li>SVG y MathML</li>
+                    <li>DOM Core y DOM HTML</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Datos en los Documentos HTML5</h1>
+        <p>Representación e integración de datos en la Web</p>
+        <ul>
+            <li>Microdatos</li>
+        </ul>
+        <pre>
+&lt;div itemscope&gt;
+  &lt;p&gt;<strong>Nombre:</strong> &lt;span itemprop=&quot;<span class="verde">name</span>&quot;&gt;<strong>Amanda</strong>&lt;/span&gt;&lt;/p&gt;
+  &lt;p&gt;<strong>Banda:</strong> 
+    &lt;span itemprop=&quot;<span class="verde">band</span>&quot; itemscope&gt;
+        &lt;span itemprop=&quot;<span class="verde">name</span>&quot;&gt;<strong>Los Grandes del Jazz</strong>&lt;/span&gt; 
+        <strong>(</strong>&lt;span itemprop=&quot;<span class="verde">size</span>&quot;&gt;<strong>12</strong>&lt;/span&gt;<strong> integrantes)</strong>
+    &lt;/span&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+</pre>
+        <ul>
+            <li>RDFa</li>
+        </ul>
+        <pre>
+&lt;p typeof="<span class="verde">foaf:Person</span>" xmlns:foaf="http://xmlns.com/foaf/0.1/"&gt;
+  <strong>Mi nombre es</strong> &lt;em property="<span class="verde">foaf:name</span>"&gt;<strong>Alice</strong>&lt;/em&gt; <strong>y...</strong>
+&lt;/p&gt;	
+</pre>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>HTML5+RDFa, no sólo presentación</h1>
+        <p class="image-center"><img src="img/presentation-vs-semantics.png" alt="2 Documentos donde se incluye información de presentación en uno y en el otro información semántica (capítulo, autor, etc.)" />
+            <br /> Lo que ven los navegadores (izquierda) y lo que ven los humanos (derecha)
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>HTML5+RDFa. Ahora el navegador sí lo entiende</h1>
+        <p class="image-center"><img src="img/license.png" alt="Dos páginas enlazadas mediante la propiedad license" />
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+
+        <script type="text/javascript">
+            var vid = null;
+            var play = null;
+            var pause = null;
+            var rewind = null;
+
+            function init() {
+                vid = document.getElementById("vid");
+                play = document.getElementById("play");
+                pause = document.getElementById("pause");
+                rewind = document.getElementById("rewind");
+            }
+
+            function playVideo() {
+                vid.play();
+                play.style.color = 'black';
+                pause.style.color = '#999';
+                rewind.style.color = '#999';
+            }
+
+            function pauseVideo() {
+                vid.pause();
+                play.style.color = '#999';
+                pause.style.color = 'black';
+                rewind.style.color = '#999';
+            }
+
+            function rewindVideo() {
+                vid.currentTime = 0;
+                play.style.color = '#999';
+                pause.style.color = '#999';
+                rewind.style.color = 'black';
+            }
+        </script>
+        <h1>HTML5 <code>&lt;video&gt;</code></h1>
+        <pre>
+&lt;video src='myMovie' id='vid' /&gt;
+	
+var vid = document.getElementById("vid");
+<span id='play' onMouseOver="playVideo();" style='cursor: pointer; color: #999;'>vid.play();</span>
+<span id='pause' onMouseOver="pauseVideo();" style='cursor: pointer; color: #999;'>vid.pause();</span>
+<span id='rewind' onMouseOver="rewindVideo();" style='cursor: pointer; color: black;'>vid.currentTime = 0;</span>
+	</pre>
+
+        <p style='text-align: left; position: absolute; width: 320px; height:240px; left: 30%; top: 50%; z-index: 2'>
+            Párrafo en HTML sobre el vídeo
+        </p>
+        <p style='text-align: left; position: absolute; width: 320px; height:240px; left: 30%; top: 65%; z-index: 0'>
+            La opacidad de CSS permite al vídeo ser transparente parcialmente.
+        </p>
+
+        <video style='opacity: 0.5; position: absolute; top: 50%; left: 40%; width: 320px; height:240px; z-index: 1' src='video/A_New_Computer--small.ogg' width='360' height='240' id="vid">
+	    <p>Este vídeo no puede ser visualizado, el navegador no soporta HTML 5</p>
+	</video>
+        <p style='clear:both;font-size: x-small;text-align:right'>Pasa el ratón por encima de <code>vid.play()</code> para controlar (arrancar/pausar/detener) el vídeo [<a href="http://www.polycrystal.org/lego/movies.html">http://www.polycrystal.org/lego/movies.html</a>].</p>
+        <script>
+            init();
+        </script>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>HTML5 <code>&lt;video&gt;</code></h1>
+        <p style="text-align:center"><img src="img/html5_video.png" alt="Ejemplo de utilización del elemento video en HTML5" /></p>
+        <p class="center"><a href="http://chikuyonok.ru/ambilight">http://chikuyonok.ru/ambilight</a></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>HTML5 + CSS3 + SVG + MathML</h1>
+        <p>Ejemplos <span style="font-size:small">(Philippe Le Hégaret)</span>:</p>
+        <ul>
+            <li><a href="http://www.w3.org/2010/Talks/0119-next-web-plh/Gaussian.xhtml">Gaussian Blur</a></li>
+            <li><a href="ejemplos/ugly.xhtml">Documentos Compuestos</a></li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>HTML5 <code>&lt;canvas&gt;</code></h1>
+        <pre>
+// canvas es una referencia a un elemento de tipo &lt;canvas&gt;
+var context = canvas.getContext('2d');
+context.fillRect(0,0,50,50);
+canvas.setAttribute('width', '300'); // limpia el canvas
+context.fillRect(100,0,50,50);       // sólo permanece éste ... 
+                                     // ... rectángulo	
+</pre>
+        <p class="image-center">
+            <a href="ejemplos/canvas.html"><img src="img/canvas.png" alt="Diagrama de Gantt" /></a>
+        </p>
+        <p>Ejemplos: <a href="ejemplos/canvas/index.html">Canvas Painter</a>, <a href="http://9elements.com/io/projects/html5/canvas/">Canvas and Audio</a></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Widgets</h1>
+        <ul>
+            <li>Basados en estándares (<strong>HTML</strong> + <strong>CSS</strong> + <strong>Javascript</strong>)</li>
+        </ul>
+        <p class="image-center"><img src="img/widgets_iphone.jpg" alt="Widgets de Yahoo! en un dispositivo móvil" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Widgets</h1>
+        <p class="image-full"><img src="img/widgets.png" width="1024" alt="Widgets en el escritorio de un sistema operativo" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Geolocation API</h1>
+        <p class="image-center">
+            <a href="http://www.w3.org/TR/geolocation-API/"><img src="img/geo.png" alt="Logo Geo del W3C" /><br /> http://www.w3.org/TR/geolocation-API
+            </a>
+        </p>
+        <pre>
+function showMap(position) {
+  // Muestra un mapa centrado en:
+  // - position.coords.latitude
+  // - position.coords.longitude
+}
+
+// Petición de posicionamiento
+navigator.geolocation.getCurrentPosition(showMap);
+	</pre>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>APIs y Política de Dispositivos</h1>
+        <p class="center"><a href="http://www.w3.org/2009/dap">http://www.w3.org/2009/dap</a></p>
+        <ul>
+            <li>Cámara</li>
+            <li>Contactos</li>
+            <li>Mensajería</li>
+            <li>Calendario</li>
+            <li>...</li>
+        </ul>
+        <p>No está restringido a dispositivos móviles</p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Muchas más piezas</h1>
+        <ul class="buzzwords">
+            <li>HTML 5</li>
+            <li>CSS 2.1</li>
+            <li>CSS 3 Selectors</li>
+            <li>CSS 3 Media Queries</li>
+            <li>CSS 3 Text</li>
+            <li>CSS 3 Backgrounds and Borders</li>
+            <li>CSS 3 Colors</li>
+
+            <li>CSS 3 2D Transformations</li>
+            <li>CSS 3 3D Transformations</li>
+            <li>CSS 3 Transitions</li>
+            <li>CSS 3 Animations</li>
+            <li>CSS 3 Multi-Columns</li>
+            <li>CSS Namespaces</li>
+
+            <li>SVG 1.1</li>
+            <li>WAI-ARIA 1.0</li>
+            <li>MathML 2.0</li>
+            <li>ECMAScript 5</li>
+            <li>2D Context</li>
+            <li>WebGL</li>
+
+            <li>Web Storage</li>
+            <li>Indexed Database</li>
+            <li>Web Workers</li>
+            <li>Web Sockets Protocol/API</li>
+            <li>Geolocation</li>
+            <li>Server-Sent Events</li>
+
+            <li>Element Traversal</li>
+            <li>DOM Level 3 Events</li>
+            <li>Media Fragments</li>
+            <li>XMLHttpRequest</li>
+            <li>Selectors API</li>
+            <li>CSSOM View Module</li>
+
+            <li>Cross-Origin Resource Sharing</li>
+            <li>File API</li>
+            <li>RDFa</li>
+            <li>Microdata</li>
+            <li>WOFF</li>
+            <li>HTTP 1.1 part 1 to part 7</li>
+
+            <li>TLS 1.2 (updated)</li>
+            <li>IRI (updated)</li>
+            <li>&hellip;</li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Línea de tiempo de los estándares del W3C</h1>
+        <div class="center">
+            <img src="img/recsslide.png" style="width:100%" alt="Evolución de todos los estándares del W3C con el tiempo, vete a http://www.w3.org/TR para más detalles" /></div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Cómo se construye un estándar</h1>
+        <div class="center">
+            <object title="Proceso de creación de las Recomendaciones del W3C, vete a http://www.w3.org/Consortium/Process/ para más detalles" data="img/documentProcess.svg" height="73" width="95" type="image/svg+xml" class="svg">
+  <img src="img/documentProcess.png"
+  alt="Proceso de creación de las Recomendaciones del W3C"
+  /></object></div>
+        <p class="center"><a href="http://www.w3.org/Consortium/Process/">http://www.w3.org/Consortium/Process/</a></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Los &ldquo;ladrillos&rdquo; de la Web</h1>
+        <div class="center"><object title="Pila de las tecnologías de W3C, vete a http://www.w3.org/Consortium/techstack-desc.html para más detalles" data="../../lib/pics/svgs/2005_tech-stack.svg" height="70" width="90" type="image/svg+xml" class="svg">
+  <img src="../../lib/pics/2005_tech-stack.png"
+  alt="Pila de las tecnologías de W3C, vete a http://www.w3.org/Consortium/techstack-desc.html para más detalles"/></object></div>
+        <p class="center"><a href="http://www.w3.org/Consortium/techstack-desc.html">http://www.w3.org/Consortium/techstack-desc.html</a></p>
+    </div>
+
+
+
+
+
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>¡Muchas gracias!</h1>
+        <dl>
+            <dt>Esta presentación</dt>
+            <dd><a href="https://espinr.github.io/talks/2010/0315-aplicacionesCPR-MA">http://www.w3c.es/Presentaciones/2010/0315-aplicacionesCPR-MA</a></dd>
+            <dt>Escríbeme</dt>
+            <dd><a href="https://www.linkedin.com/in/espinr/">martin@w3.org</a></dd>
+
+            <dt class="resource">Recursos</dt>
+            <dd class="resource"><a href="http://www.w3.org/2004/Talks/w3c10-HowItAllStarted">How It All Started</a> (Tim Berners-Lee)</dd>
+            <dd class="resource"><a href="http://www.w3.org/2010/Talks/0119-next-web-plh/">The Next Open Web Platform</a> (Philippe Le Hégaret)</dd>
+            <dd class="resource"><a href="http://www.w3.org/2009/Talks/0829-Nanjing-IH/">Introduction to the Semantic Web</a> (Ivan Herman)</dd>
+            <dd class="resource">Fotos:
+                <a href="http://www.flickr.com/photos/meyshanworld/2217849999/">World Paper Map</a>,
+                <a href="http://www.flickr.com/photos/foxypar4/2124673642/">Frosty Morning Web</a>,
+                <a href="http://www.sxc.hu/photo/501261/" title="Foto de thera">Dutch Clouds</a>,
+                <a href="http://www.flickr.com/photos/kitta/212566890/">Widgets</a>,
+                <a href="http://www.flickr.com/photos/niallkennedy/2783584578/">Yahoo! Widget Gallery home screen</a></dd>
+        </dl>
+    </div>
+
+</body>
+
+</html>

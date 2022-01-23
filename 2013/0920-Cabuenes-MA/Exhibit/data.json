@@ -1,0 +1,16 @@
+{ 
+  "items" : [
+  {
+    "label":"PERICONES ADULTOS",
+    "id":"PERICONES+ADULTOS",
+    "ln":"43.5281713300176,-5.65847619448554",
+    "descripcion":"prueba"
+  },
+  {
+    "label":"FABRICA DE LOZA ADULTOS",
+    "id":"FABRICA+DE+LOZA+ADULTOS",
+    "ln":"43.5381499347026,-5.68714968407511",
+    "descripcion":"prueba"
+  }
+  ]
+}

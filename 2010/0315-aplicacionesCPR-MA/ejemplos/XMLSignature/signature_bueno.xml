@@ -1,0 +1,77 @@
+<datosPersonales>
+	
+	<nombre>Martin Alvarez</nombre>
+	
+	<organizacion>W3C</organizacion>
+	
+	<tarjeta>
+		<numero>1234 5645 5456 6456</numero>
+		<caducidad>12-2006</caducidad>
+	</tarjeta>
+	
+	<direccion>
+		<calle>13 Rue del Percebe</calle>
+		<cp>112233</cp>
+		<localidad>Madrid</localidad>
+		<provincia>Madrid</provincia>
+		<pais>Spain</pais>
+	</direccion>
+	
+	<otros>...</otros>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#WithComments"></ds:CanonicalizationMethod>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"></ds:SignatureMethod>
+<ds:Reference URI="">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></ds:Transform>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#WithComments"></ds:Transform>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></ds:DigestMethod>
+<ds:DigestValue>OTm+EK2+nHfSwwoFWD9ldeo4jY8=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>DcZf1iA2B32yzRKkQQLcqvXY0yxZlTJnE6P35BA5R1USILb7KfBT0w==</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:X509Data>
+<ds:X509Certificate>
+MIIDLDCCAuwCBEVrCrEwCQYHKoZIzjgEAzB+MQswCQYDVQQGDAJFUzERMA8GA1UECAwIQXN0dXJp
+YXMxDjAMBgNVBAcMBUdpam9uMRcwFQYDVQQKDA5GdW5kYWNpb24gQ1RJQzESMBAGA1UECwwJVzND
+IFNwYWluMR8wHQYDVQQDDBZNYXJ0aW4gQWx2YXJleiBFc3BpbmFyMB4XDTA2MTEyNzE1NTYzM1oX
+DTA2MTEyODE1NTYzM1owfjELMAkGA1UEBgwCRVMxETAPBgNVBAgMCEFzdHVyaWFzMQ4wDAYDVQQH
+DAVHaWpvbjEXMBUGA1UECgwORnVuZGFjaW9uIENUSUMxEjAQBgNVBAsMCVczQyBTcGFpbjEfMB0G
+A1UEAwwWTWFydGluIEFsdmFyZXogRXNwaW5hcjCCAbcwggEsBgcqhkjOOAQBMIIBHwKBgQD9f1OB
+HXUSKVLfSpwu7OTn9hG3UjzvRADDHj+AtlEmaUVdQCJR+1k9jVj6v8X1ujD2y5tVbNeBO4AdNG/y
+ZmC3a5lQpaSfn+gEexAiwk+7qdf+t8Yb+DtX58aophUPBPuD9tPFHsMCNVQTWhaRMvZ1864rYdcq
+7/IiAxmd0UgBxwIVAJdgUI8VIwvMspK5gqLrhAvwWBz1AoGBAPfhoIXWmz3ey7yrXDa4V7l5lK+7
++jrqgvlXTAs9B4JnUVlXjrrUWU/mcQcQgYC0SRZxI+hMKBYTt88JMozIpuE8FnqLVHyNKOCjrh4r
+s6Z1kW6jfwv6ITVi8ftiegEkO8yk8b6oUZCJqIPf4VrlnwaSi2ZegHtVJWQBTDv+z0kqA4GEAAKB
+gEsow6yMD4J0US8zO4cV8NhyCyWu8x54KNPwo7YtGxuoiM0dui2I6kTZOYY+TqN4rg/D4e7Pm3NT
+u7Jxkk3Ym41CZTOwxm9ASLos/meq4q5phPRcT03HPm7OWo7DbxY0fvEX3/Ze2vG90fqoY44rO7no
+FL5uhW41Xx6AzB0S66MRMAkGByqGSM44BAMDLwAwLAIUd10SzpH8V4zmtjpSCYQ9/Q3OcSUCFCD0
+iVmuQkcYP277iCZWhw9tlakC
+</ds:X509Certificate>
+</ds:X509Data>
+<ds:KeyValue>
+<ds:DSAKeyValue>
+<ds:P>
+/X9TgR11EilS30qcLuzk5/YRt1I870QAwx4/gLZRJmlFXUAiUftZPY1Y+r/F9bow9subVWzXgTuA
+HTRv8mZgt2uZUKWkn5/oBHsQIsJPu6nX/rfGG/g7V+fGqKYVDwT7g/bTxR7DAjVUE1oWkTL2dfOu
+K2HXKu/yIgMZndFIAcc=
+</ds:P>
+<ds:Q>l2BQjxUjC8yykrmCouuEC/BYHPU=</ds:Q>
+<ds:G>
+9+GghdabPd7LvKtcNrhXuXmUr7v6OuqC+VdMCz0HgmdRWVeOutRZT+ZxBxCBgLRJFnEj6EwoFhO3
+zwkyjMim4TwWeotUfI0o4KOuHiuzpnWRbqN/C/ohNWLx+2J6ASQ7zKTxvqhRkImog9/hWuWfBpKL
+Zl6Ae1UlZAFMO/7PSSo=
+</ds:G>
+<ds:Y>
+SyjDrIwPgnRRLzM7hxXw2HILJa7zHngo0/Cjti0bG6iIzR26LYjqRNk5hj5Oo3iuD8Ph7s+bc1O7
+snGSTdibjUJlM7DGb0BIuiz+Z6rirmmE9FxPTcc+bs5ajsNvFjR+8Rff9l7a8b3R+qhjjis7uegU
+vm6FbjVfHoDMHRLroxE=
+</ds:Y>
+</ds:DSAKeyValue>
+</ds:KeyValue>
+</ds:KeyInfo>
+</ds:Signature>
+</datosPersonales>

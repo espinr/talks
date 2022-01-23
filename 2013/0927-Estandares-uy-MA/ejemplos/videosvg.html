@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reproductor de vídeo HTML5/SVG</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" media="screen, projection, print" href="../../../lib/Slidy/css/slidy.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen, projection, print" href="../../../lib/Slidy/css/w3c-blue.css" />
+    <style>
+        [role="button"],
+        [role="slider"] {
+            cursor: pointer;
+        }
+        
+        div.dfxp {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            min-height: 3em;
+            margin-left: 4px;
+            width: 322px;
+        }
+        
+        div.dfxp div,
+        div.dfxp p,
+        div.dfxp span {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script type="text/javascript" src='../javascript/HTML5_player.js'></script>
+
+    <script>
+        // <![CDATA[
+
+        var svp_videoElement = null;
+        var svp_slideElement = null;
+        var svp_volumeSlideElement = null;
+        var svp_timeElement = null;
+
+        function svp_formatTime(time) {
+            function svp_formatNumber(n) {
+                if (n < 10) {
+                    return "0" + n;
+                } else {
+                    return n;
+                }
+            }
+
+            if (time == NaN) return "00:00";
+
+            var t = parseInt(time);
+            var hours = parseInt(t / 3600);
+            var minutes = parseInt(t / 60);
+            var seconds = t - ((hours * 3600) + (minutes * 60));
+            if (hours > 0) {
+                return svp_formatNumber(hours) + ":" + svp_formatNumber(minutes) + ":" + svp_formatNumber(seconds);
+            } else {
+                return svp_formatNumber(minutes) + ":" + svp_formatNumber(seconds);
+            }
+        }
+
+        svp_init = function(e) {
+            svp_videoElement = document.getElementById("VideoResource");
+            svp_slideElement = document.getElementById("s-SliderTile");
+            svp_volumeSlideElement = document.getElementById("v-VolumeTile");
+            svp_timeElement = document.getElementById("s-time");
+
+            svp_videoElement.hasCaptions = false;
+            svp_videoElement.captionVisible = false;
+            try {
+                init_captions();
+            } catch (e) {}
+
+            // save the full size of the slider tile
+            svp_slideElement.totalWidth = parseInt(svp_slideElement.getAttribute("width"));
+            // set the size of the slider tile to 0
+            svp_slideElement.setAttribute("width", 0);
+            // set the progress bar to 0
+            document.getElementById("s-ProgressTile").setAttribute("width", 0);
+
+            // Save some values for the volume button
+            svp_volumeSlideElement.start = parseFloat(document.getElementById("v-Slide").getAttribute("y")) -
+                parseFloat(document.getElementById("v-VolumeBack").getAttribute("y"));
+            svp_volumeSlideElement.totalHeight = parseInt(document.getElementById("v-Slide").getAttribute("height")) - 2;
+            svp_volumeSlideElement.volumeObject = document.getElementById("volume");
+            svp_volumeSlideElement.timer = 0;
+            svp_volumeSlideElement.visible = false;
+            svp_volumeSlideElement.offScreen = function() {
+                svp_volumeSlideElement.volumeObject.style.display = "none";
+                document.getElementById("v-VolumeBack").setAttribute("aria-hidden", "true");
+                document.getElementById("s-VolumeBack").setAttribute("aria-label", "Activate the volume slider");
+                svp_volumeSlideElement.visible = false;
+                svp_volumeSlideElement.timer = 0;
+            }
+            svp_volumeSlideElement.onScreen = function() {
+                if (svp_volumeSlideElement.timer != 0) {
+                    clearTimeout(svp_volumeSlideElement.timer);
+                    svp_volumeSlideElement.timer = 0;
+                }
+                svp_volumeSlideElement.volumeObject.style.top = (document.getElementById("controls").offsetTop - 102) + "px";
+                svp_volumeSlideElement.volumeObject.style.left = (document.getElementById("controls").offsetLeft + 261.5) + "px";
+                svp_volumeSlideElement.volumeObject.style.display = "block";
+                svp_volumeSlideElement.visible = true;
+                document.getElementById("v-VolumeBack").setAttribute("aria-hidden", "false");
+                document.getElementById("s-VolumeBack").setAttribute("aria-label", "Mute or unmute the video");
+            }
+
+            svp_videoElement.addEventListener("timeupdate", svp_timeupdate, false);
+            svp_videoElement.addEventListener("durationchange", svp_durationchange, false);
+            svp_videoElement.addEventListener("volumechange", svp_volumechange, false);
+            svp_videoElement.addEventListener("play", svp_play, false);
+            svp_videoElement.addEventListener("ended", svp_ended, false);
+            svp_videoElement.addEventListener("pause", svp_pause, false);
+            svp_videoElement.addEventListener("progress", svp_progress, false);
+
+            document.getElementById("s-RewindBack").addEventListener("click", svp_rewindButton, false);
+            document.getElementById("s-PlayBack").addEventListener("click", svp_playButton, false);
+            document.getElementById("s-VolumeBack").addEventListener("click", svp_volumeButton, false);
+            document.getElementById("s-SliderBack").addEventListener("click", svp_seekSlide, false);
+            document.getElementById("v-VolumeBack").addEventListener("click", svp_seekVolumeSlide, false);
+            document.getElementById("s-CaptionBack").addEventListener("click", svp_captionButton, false);
+
+            // document.getElementById("s-PlayBack").addEventListener("DOMActivate", svp_activate, false);
+            // document.getElementById("s-VolumeBack").addEventListener("DOMActivate", svp_volumeButton, false);
+            // document.getElementById("s-SliderBack").addEventListener("DOMActivate", svp_seekSlide, false);
+            // document.getElementById("v-VolumeBack").addEventListener("DOMActivate", svp_seekVolumeSlide, false);
+            // document.getElementById("s-CaptionBack").addEventListener("DOMActivate", svp_captionButton, false);
+
+
+            document.getElementById("v-VolumeBack").addEventListener("mouseout", svp_outVolumeSlide, false);
+            document.getElementById("v-VolumeBack").addEventListener("mouseover", svp_overVolumeSlide, false);
+            document.getElementById("s-VolumeBack").addEventListener("mouseout", svp_outVolumeSlide, false);
+            document.getElementById("s-VolumeBack").addEventListener("mouseover", svp_overVolumeSlide2, false);
+
+            // can't rely on durationchange being invoke at startup, so we call it explicitly
+            svp_durationchange(null);
+        }
+        window.addEventListener("load", svp_init, false);
+
+        svp_durationchange = function(e) {
+            var duration = svp_videoElement.duration;
+            if (typeof duration == "undefined") {
+                return;
+            }
+
+            document.getElementById("s-duration").textContent = svp_formatTime(duration);
+            document.getElementById("s-SliderBack").setAttribute("aria-valuemax", duration);
+            svp_slideElement.setAttribute("aria-valuemax", duration);
+        }
+        svp_volumechange = function(e) {
+            if (svp_videoElement.muted) {
+                document.getElementById("s-muted").style.setProperty("display", "inline", "");
+                document.getElementById("s-VolumeBack").setAttribute("aria-pressed", "true");
+                svp_volumeSlideElement.setAttribute("transform", "translate(0," + svp_volumeSlideElement.totalHeight + ")");
+                svp_volumeSlideElement.volumeObject.setAttribute("aria-valuenow", 0);
+            } else {
+                document.getElementById("s-muted").style.setProperty("display", "none", "");
+                document.getElementById("s-VolumeBack").setAttribute("aria-pressed", "false");
+                newHeight = (1 - svp_videoElement.volume) * svp_volumeSlideElement.totalHeight;
+                svp_volumeSlideElement.setAttribute("transform", "translate(0," + newHeight + ")");
+                svp_volumeSlideElement.volumeObject.setAttribute("aria-valuenow", svp_videoElement.volume);
+            }
+        }
+        svp_timeupdate = function(e) {
+            var t = svp_videoElement.currentTime;
+            var duration = svp_videoElement.duration;
+            var newWidth = (t / duration) * svp_slideElement.totalWidth;
+            if (newWidth <= svp_slideElement.totalWidth) {
+                svp_timeElement.textContent = svp_formatTime(t);
+                svp_slideElement.setAttribute("width", newWidth);
+                svp_slideElement.setAttribute("aria-valuenow", t);
+                document.getElementById("s-SliderBack").setAttribute("aria-valuenow", t);
+            }
+        }
+        svp_play = function(e) {
+            document.getElementById("s-PauseLogo").style.setProperty("display", "inline", "");
+            document.getElementById("s-PlayLogo").style.setProperty("display", "none", "");
+            document.getElementById("s-PlayBack").setAttribute("aria-pressed", "true");
+            document.getElementById("s-PlayBack").setAttribute("aria-label", "Pause the video");
+        }
+        svp_pause = function(e) {
+            document.getElementById("s-PauseLogo").style.setProperty("display", "none", "");
+            document.getElementById("s-PlayLogo").style.setProperty("display", "inline", "");
+            document.getElementById("s-PlayBack").setAttribute("aria-pressed", "false");
+            document.getElementById("s-PlayBack").setAttribute("aria-label", "Play the video");
+        }
+        svp_ended = function(e) {
+            svp_pause(null);
+        }
+
+        svp_progress = function(e) {
+            var p = document.getElementById("s-ProgressTile");
+            var now = 0;
+            var max = svp_videoElement.duration;
+
+            if (svp_videoElement.buffered) {
+                var range = svp_videoElement.buffered;
+                // @@FIXME. You can have more than one range!
+                if (range.length > 0) {
+                    if (range.start(0) == 0) {
+                        now = range.end(0);
+                    }
+                }
+            } else {
+                // @@CHANGEME deprecated!
+                now = e.loaded;
+                max = e.total;
+            }
+
+            p.setAttribute("width", (now / max) * svp_slideElement.totalWidth);
+            p.setAttribute("aria-valuenow", now);
+            p.setAttribute("aria-valuemax", max);
+        }
+
+
+        svp_rewindButton = function(e) {
+            svp_videoElement.currentTime = 0;
+            svp_videoElement.pause();
+        }
+        svp_playButton = function(e) {
+            if (svp_videoElement.paused) {
+                svp_videoElement.play();
+            } else {
+                svp_videoElement.pause();
+            }
+        }
+        svp_volumeButton = function(e) {
+            if (svp_volumeSlideElement.visible) {
+                svp_videoElement.muted = !(svp_videoElement.muted);
+            } else {
+                svp_volumeSlideElement.onScreen();
+            }
+        }
+        svp_captionButton = function(e) {
+            if (!svp_videoElement.hasCaptions) return;
+            if (svp_videoElement.captionVisible) {
+                document.getElementById("s-nocaption").style.setProperty("display", "inline", "");
+                document.getElementById("s-CaptionBack").setAttribute("aria-pressed", "false");
+                svp_videoElement.captionContainer.style.setProperty("display", "none", "");
+                svp_videoElement.captionVisible = false;
+            } else {
+                document.getElementById("s-nocaption").style.setProperty("display", "none", "");
+                document.getElementById("s-CaptionBack").setAttribute("aria-pressed", "true");
+                svp_videoElement.captionContainer.style.setProperty("display", "inline", "");
+                svp_videoElement.captionVisible = true;
+            }
+        }
+        svp_seekSlide = function(e) {
+            var pos = e.pageX - e.target.getBoundingClientRect().left;
+            // @@ need to wait to make sure the duration is available
+            var duration = svp_videoElement.duration;
+            if (pos > svp_slideElement.totalWidth) {
+                pos = svp_slideElement.totalWidth;
+            } else if (pos < 0) {
+                pos = 0;
+            }
+            svp_videoElement.currentTime = duration * (pos / svp_slideElement.totalWidth);
+        }
+        svp_seekVolumeSlide = function(e) {
+            var pos = e.pageY - (e.target.getBoundingClientRect().top + svp_volumeSlideElement.start);
+            // sanity check
+            if (pos > svp_volumeSlideElement.totalHeight) {
+                pos = svp_volumeSlideElement.totalHeight;
+            } else if (pos < 0) {
+                pos = 0;
+            }
+            svp_videoElement.muted = false;
+            svp_videoElement.volume = ((svp_volumeSlideElement.totalHeight - pos) / svp_volumeSlideElement.totalHeight);
+        }
+        svp_outVolumeSlide = function(e) {
+            svp_volumeSlideElement.timer = setTimeout(svp_volumeSlideElement.offScreen, 1500);
+        }
+        svp_overVolumeSlide = function(e) {
+            svp_volumeSlideElement.onScreen();
+        }
+        svp_overVolumeSlide2 = function(e) {
+            if (svp_volumeSlideElement.visible) {
+                // keep it visible
+                svp_volumeSlideElement.onScreen();
+            }
+        }
+
+        // ]]>
+    </script>
+
+</head>
+
+<body>
+
+    <div class="background">
+        <img id="head-icon" alt="graphic with four colored squares" src="../../../lib/Slidy/graphics/icon-blue.png" />
+        <object id="head-logo" title="W3C logo" type="image/svg+xml" data="../../../lib/Slidy/graphics/CTIC_CT-W3C_blanco.svg">
+	<img src="../../../lib/Slidy/graphics/CTIC_CT-W3C_blanco.png" alt="W3C España - CTIC Centro Tecnológico" id="head-logo-fallback" />
+  </object>
+    </div>
+
+
+    <div class="slide">
+        <h1>Reproductor de vídeo HTML5/SVG</h1>
+
+        <div style='width: 330px; border: 2px solid #888; background: #555; margin-left: auto; margin-right: auto;'>
+            <video id='VideoResource' style='border: black 1px solid;margin-left: 4px; margin-top: 4px; margin-bottom: 0px;' poster='../video/coffee.png'>
+      <source src="../video/ThisisCo1961_tiny.mp4" type="video/mp4" />
+	  <source src="../video/ThisisCo1961_tiny.ogv" type="video/ogg" />      
+
+      <text lang='en' type="application/ttaf+xml" src="../video/ThisIsCoffee61_captions.xml"></text>
+      <div style='width: 320px; height: 240px; color: white'>
+	<p>No Video Support.</p>
+      </div>
+    </video>
+            <!--
+   <video id='VideoResource' src='foo.ogv' style='border: black 1px solid;margin-left: 4px; margin-top: 4px'
+       poster='coffee.png'>
+      <div style='width: 320px; height: 240px'>
+	<p>No Video Support.</p>
+      </div>
+    </video>
+-->
+
+            <div id='controls' style='margin-left:4px; z-index: 2'>
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 322 32" width="322" height="32" id='SVGVideoControls'>
+
+	<defs>
+	  <linearGradient id="s-gradient">
+	    <stop style="stop-color:white;stop-opacity:0;" offset="0.3"/>
+	    <stop style="stop-color:white;stop-opacity:0.5;" offset="1"/>
+	  </linearGradient>
+	  
+	  <linearGradient xlink:href="#s-gradient" id="s-rewindHover" x1="21.280642" y1="21.24128" x2="3.3594518" y2="3.3200893" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.0828571,0,0,1.0828572,-1.0906634,-1.0480396)"/>
+	  <linearGradient xlink:href="#s-gradient" id="s-playHover" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.3046327,0,0,1.0762007,22.99566,-0.9443892)" x1="21.280642" y1="21.24128" x2="3.3594518" y2="3.3200893"/>
+	  <linearGradient xlink:href="#s-gradient" id="s-captionHover" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.0828571,0,0,1.0828572,289.00374,-1.0480407)" x1="21.280642" y1="21.24128" x2="3.3594518" y2="3.3200893"/>
+	  <linearGradient xlink:href="#s-gradient" id="s-volumeHover" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.0828571,0,0,1.0828572,263.93915,-1.048041)" x1="21.280642" y1="21.24128" x2="3.3594518" y2="3.3200893"/>
+
+	  <filter id="shadow">
+	    <feGaussianBlur stdDeviation="1" in="SourceAlpha"/>
+	    <feOffset dx="0" dy="0" result="result0"/>
+	    <feMerge>
+	      <feMergeNode in="result0"/>
+	      <feMergeNode in="SourceGraphic"/>
+	    </feMerge>
+	  </filter>
+	</defs>
+
+	<style type="text/css">
+    #SVGVideoControls [role="button"] { fill: #777777; fill-opacity: 0.01; stroke:none; }
+
+    #s-RewindBack:hover { fill: url(#s-rewindHover);fill-opacity: 1; }
+    #s-PlayBack:hover { fill: url(#s-playHover);fill-opacity: 1; }
+    #s-VolumeBack:hover { fill: url(#s-volumeHover);fill-opacity: 1; }
+    #s-CaptionBack:hover { fill: url(#s-captionHover);fill-opacity: 1; }
+
+    #s-PauseLogo, #s-muted { display: none }
+    #SVGVideoControls text  { font-size:11px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial }
+	</style>
+	<g>
+	  <rect style="fill:black;fill-opacity:1;stroke:none;" width="322" height="32" x="0" y="0" />
+	  <rect style="fill:#777;fill-opacity:1;stroke:none" width="318" height="28" x="2" y="2" />
+	  <g id="s-RewindButton">
+	    <g style="filter:url(#shadow)" id="s-RewindLogo">
+	      <rect style="fill:#ffffff;fill-opacity:1" width="3.5" height="12.5" x="8.9" y="9.6"/>
+
+	      <path style="fill:#ffffff;fill-opacity:1" d="M 20.6,9.6 L 20.6,21.9 L 12.4,15.8 L 20.6,9.6 z"/>
+	    </g>
+	    <rect id="s-RewindBack" y="2" x="2" height="28" width="28" role='button' aria-label='Rewind the video to its beginning' pointer-events="all"/>
+	  </g>
+	  <rect style='fill: black; fill-opacity: 1' y="2" x="30" height="28" width="1" />
+	  <g id="s-PlayButton">
+	    <path id="s-PlayLogo" style="fill:#ffffff;fill-opacity:1;filter:url(#shadow)" d="M 43,10 L 43,22 L 53,16 L 43,10 z"/>
+	    <g id="s-PauseLogo" style="filter:url(#shadow);">
+	      <rect y="10" x="49" height="12.5" width="3.5" style="fill:#ffffff;fill-opacity:1"/>
+
+	      <rect y="10" x="42" height="12.5" width="3.5" style="fill:#ffffff;fill-opacity:1"/>
+	    </g>
+	    <rect y="2" x="31" height="28" width="32" id="s-PlayBack" role='button' aria-pressed='false' aria-label='Play the video'  pointer-events="all"/>
+	  </g>
+	  <rect style='fill: black; fill-opacity: 1' y="2" x="63" height="28" width="1"/>
+	  <rect style='fill: black; fill-opacity: 1' y="2" x="262" height="28" width="1"/>
+	  <g id="s-Volume">
+	    <path id="s-VolumeLogo" d="M 281,9.5 L 274,13.5 L 271,13.5 L 271,19 L 274,19 L 281,22 L 281,8.5 z" style="fill:#ffffff;fill-opacity:1;filter:url(#shadow)"/>
+	    <g id="s-muted">
+
+	      <rect
+		  transform="matrix(0.7,0.7,-0.7,0.7,0,0)"
+		  y="-194" x="208"
+		  height="14.6" width="2.5"
+		  style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+	      <rect
+		  transform="matrix(0.7,-0.7,0.7,0.7,0,0)"
+		  y="202" x="185"
+		  height="14.6" width="2.5"
+		  style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+	    </g>
+	    <rect id="s-VolumeBack" width="28" height="28" x="263" y="2" role='button' aria-pressed='false' aria-haspopup="true" aria-owns="volume" aria-label='Audio Controls'  pointer-events="all"/>
+	  </g>
+	  <rect style='fill: black; fill-opacity: 1' y="2" x="291" height="28" width="1" />
+	  <g id="s-Caption">
+	    <text style='font-size: 12px; font-weight: bold;' id="s-CCLogo" y="21" x="298.5">CC</text>
+
+	    <g id="s-nocaption" style='display: none'>
+	      <rect
+		  transform="matrix(0.7,0.7,-0.7,0.7,0,0)"
+		  y="-215" x="229"
+		  height="14.6" width="2.5"
+		  style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+	      <rect
+		  transform="matrix(0.7,-0.7,0.7,0.7,0,0)"
+		  y="223" x="206"
+		  height="14.6" width="2.5"
+		  style="opacity:1;fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+	    </g>
+	    <rect id="s-CaptionBack" width="28" height="28" x="292" y="2" role='button' aria-pressed="false" aria-label='Activate captions'  pointer-events="all"/>
+	  </g>
+	  <text xml:space='preserve' x="73" y="19.5" id="s-time" aria-label='Current time in the video'>00:00</text>
+	  <text xml:space='preserve' x="229" y="19.5" id="s-duration" aria-label='Duration of the video'>00:00</text>
+
+	  <g id="s-Slider">
+	    <rect y="10" x="108" height="12" width="115" style="fill:black;fill-opacity:1;stroke:none"/>
+	    <rect y="11" x="109" height="10" width="113" style="fill:#4d4d4d;fill-opacity:1;stroke:none"/>
+	    <rect y="11" x="109" height="10" width="113" id="s-ProgressTile" style="fill:#AAA;fill-opacity:1;stroke:none" role='progressbar' aria-valuemax='0' aria-valuemin='0' aria-valuenow='0' aria-label='Progress of the video download'/>
+	    <rect y="11" x="109" height="10" width="113" id="s-SliderTile" style="fill:white;fill-opacity:1;stroke:none" role='progressbar' aria-valuemax='0' aria-valuemin='0' aria-valuenow='0' aria-label='Progress of the time'/>
+	    <rect y="11" x="109" height="10" width="113" id="s-SliderBack" style="fill:white;fill-opacity:0.01;stroke:none" role='slider' aria-valuemax='0' aria-valuemin='0' aria-valuenow='0' aria-label='Seek in time'  pointer-events="all"/>
+	  </g>
+	</g>
+      </svg>
+
+            </div>
+            <div style='padding:0;margin:0;position: absolute; top: 0; left: 0px; display: none; z-index: 2' id='volume'>
+                <svg xmlns="http://www.w3.org/2000/svg" id='VolumeControl' viewBox="0 0 30 102" width="30" height="102">
+	<g>
+	  <rect style="fill:black;" width="30" height="102" x="0" y="0"/>
+	  <rect style="fill:#777" width="28" height="100" x="1" y="1"/>
+	  <rect style="fill:black" width="12" height="90" x="9" y="6"/>
+	  <rect id='v-Slide' style="fill:white" width="10" height="88" x="10" y="7"/>
+	  <g id='v-VolumeTile' transform='translate(0, 0)'>
+
+	    <rect rx="1" ry="1" style="fill:black;" width="26" height="10" x="2" y="2"/>
+	    <rect rx="1" ry="1" style="fill:#555;" width="24" height="8" x="3" y="3"/>
+	    <rect rx="1" ry="1" style='fill: black;' width="16" height="5" x="7" y="4.5"/>
+	    <rect rx="1" ry="1" style='fill: #777;' width="14" height="3" x="8" y="5.5"/>
+	    <rect style='fill: black;' width="12" height="2" x="9" y="6"/>
+	    <rect style='fill: white;' width="10" height="2" x="10" y="6"/>
+	  </g>
+	  <rect  id="v-VolumeBack" style="opacity:0.01;fill:white" width="30" height="102" x="0" y="0" pointer-events="all"
+		 role='slider' aria-valuemin='0.0' aria-valuemax='1.0' aria-valuenow='1.0' aria-label='Audio volume' aria-hidden='true'/>
+	</g>
+
+      </svg>
+            </div>
+        </div>
+
+</body>
+
+</html>

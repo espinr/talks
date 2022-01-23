@@ -1,0 +1,108 @@
+1
+00:00:00,696 --> 00:00:01,774
+¡Buenos días!
+
+2
+00:00:01,799 --> 00:00:05,223
+Quiero darles la bienvenida
+
+3
+00:00:05,223 --> 00:00:09,440
+en este Día del W3C en Granada.
+
+4
+00:00:09,526 --> 00:00:14,665
+Antes de nada me gustaría disculparme por no estar hoy con vosotros,
+
+5
+00:00:14,974 --> 00:00:16,415
+pero estáis en muy buenas manos
+
+6
+00:00:16,415 --> 00:00:20,829
+con nuestro equipo español del W3C.
+
+7
+00:00:21,751 --> 00:00:26,247
+Este Día del W3C es el ejemplo perfecto
+
+8
+00:00:26,815 --> 00:00:29,392
+de las actividades del W3C
+
+9
+00:00:29,546 --> 00:00:33,397
+Hoy podréis recibir muchísima información
+
+10
+00:00:33,871 --> 00:00:36,754
+sobre la evolución de la Web.
+
+11
+00:00:37,438 --> 00:00:43,381
+Como sabréis, el Consorcio W3C es una organización sin ánimo de lucro,
+
+12
+00:00:44,006 --> 00:00:47,299
+y nuestro poder, es el poder de nuestros Miembros
+
+13
+00:00:47,289 --> 00:00:50,319
+porque vosotros hacéis posible el W3C.
+
+14
+00:00:51,425 --> 00:00:57,539
+Como Miembros del W3C tenéis la posibilidad de involucraros en el desarrollo de la Web
+
+15
+00:00:58,034 --> 00:01:02,238
+y tener una gran visibilidad a nivel internacional.
+
+16
+00:01:03,023 --> 00:01:08,207
+Nuestros más de 350 Miembros representan a toda la industria
+
+17
+00:01:08,669 --> 00:01:12,286
+y éstos están detás de todos los nuevos desarrollos de la Web.
+
+18
+00:01:13,262 --> 00:01:15,438
+Como ya sabéis, la Web está en todos lados
+
+19
+00:01:15,908 --> 00:01:20,124
+y el W3C dirige esta evolución con vuestra ayuda.
+
+20
+00:01:20,934 --> 00:01:23,144
+El W3C es una gran oportunidad
+
+21
+00:01:24,031 --> 00:01:27,095
+para que seáis vistos como líderes tecnológicos,
+
+22
+00:01:27,269 --> 00:01:28,963
+para promover vuestra imagen,
+
+23
+00:01:29,419 --> 00:01:32,031
+y para formar parte de un equipo de vanguardia
+
+24
+00:01:32,131 --> 00:01:34,181
+y así incrementar el valor de vuestra compañía.
+
+25
+00:01:34,725 --> 00:01:37,101
+Deseo que tengáis un muy buen día
+
+26
+00:01:37,407 --> 00:01:39,015
+y espero veros pronto.
+
+27
+00:01:39,103 --> 00:01:40,612
+Adiós
+

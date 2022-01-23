@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Parques para adultos en Gijón</title>
+    <meta content="Martin Alvarez-Espinar" name="author">
+    
+
+    <script src="http://datos.fundacionctic.org/sandbox/lib/simile-widgets/exhibit/2.2.0/exhibit-api.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://datos.fundacionctic.org/sandbox/lib/simile-widgets/exhibit/2.2.0/extensions/map/map-extension.js?gmapkey=ABQIAAAADsRpJvvF0sNcpzsLDU9NthQ8dwazzI0P68T4loP2Mh30A9O8HhSIblefwDPyEXT1Ihw1veGRfkAIZg"></script>
+
+    <link href="./data_2.json" type="application/json" rel="exhibit-data" />
+  	<style>
+  		#sidebar { width: 30%; float:left; background-color: #eee;}
+  		#content { width: 68%; float:right; background-color: #fff; margin: 0 1% 0 0;}
+  		body {width: 100%;}
+  	</style>
+  
+  </head>
+  <body>
+
+    <h1>Parques para adultos en Gijón</h1>
+    
+        <div id="sidebar">
+             <div ex:role="exhibit-facet" ex:expression=".label" ex:facetLabel="Nombre" ex:height="4em"></div>
+
+        </div>
+        
+        <div id="content">
+	        <div ex:role="viewPanel">
+        
+				<div ex:role="view" 
+   					ex:viewClass="Map" 
+				   ex:lat=".latitud" ex:lng=".longitud"
+				   ex:zoom="2" ex:center="20.0,10.0" ex:mapHeight="460">
+				</div>
+				
+				<div ex:role="view" 
+			ex:viewClass="Tabular"  
+			ex:columns=".label, .descripcion" 
+			ex:columnLabels="Nombre, Descripción"
+			ex:border="0" ex:cellSpacing="0" ex:cellPadding="0"
+			ex:sortColumn="0"
+			ex:sortAscending="false"></div>
+
+          	</div>
+        </div>
+  
+  
+  </body>
+</html>

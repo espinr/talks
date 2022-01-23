@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+
+<head>
+    <title>Estándares Web W3C</title>
+    <meta name="copyright" content="W3C &#169; 2010 (MIT, ERCIM, Keio)" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--meta name="duration" content="5" / -->
+    <link rel="stylesheet" type="text/css" media="screen, projection, print" href="../../lib/Slidy/css/slidy.css" />
+    <script src="../../lib/Slidy/js/slidy.js" charset="utf-8" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" media="screen, projection, print" href="../../lib/Slidy/css/w3c-blue2.css" />
+    <style type="text/css">
+        .image-center {
+            text-align: center;
+        }
+        
+        .image-right {
+            float: right;
+            margin: 0 1em 1em 1em;
+        }
+        
+        .image-left {
+            float: left;
+            margin: 0 1em 1em 1em;
+        }
+        
+        .xl {
+            font-size: 200%;
+            line-height: 1em;
+        }
+        
+        .l {
+            font-size: 150%;
+        }
+        
+        h1 del {
+            color: #eee;
+        }
+        
+        .caption {
+            font-size: 40%;
+            text-align: center;
+            color: #aaa;
+            display: block;
+        }
+        
+        .buzzwords li {
+            display: inline;
+        }
+        
+        blockquote#borde>*:first-child {
+            border: double red 1em;
+            -moz-border-image: url("img/border.png") 27 round stretch;
+            -webkit-border-image: url("img/border.png") 27 round stretch;
+            -o-border-image: url("img/border.png") 27 round stretch;
+            border-image: url("img/border.png") 27 round stretch;
+            padding: 1ex;
+        }
+        
+        blockquote#borde>*:last-child {
+            text-align: right;
+        }
+        
+        blockquote#borde {
+            border: 2px solid black;
+            padding: 1em;
+            -moz-border-radius: 3em;
+            -webkit-border-radius: 3em;
+            -o-border-radius: 3em;
+            border-radius: 3em;
+        }
+        
+        table {
+            font-size: 14px;
+            font-family: Arial;
+            color: black;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: none;
+        }
+        
+        td {
+            border: 1px solid black;
+            padding-right: 0.5ex;
+            padding-left: 0.5ex;
+            white-space: pre
+        }
+        
+        th {
+            border: 1px solid black;
+            background: #33cc4c;
+            color: black;
+            text-shadow: rgba(255, 255, 255, 0.8) 2px 2px 2px;
+            text-align: left;
+        }
+        
+        thead th {
+            padding-right: 1em;
+            padding-left: 1em;
+        }
+        
+        table#selectores thead {
+            padding-bottom: 1em;
+        }
+        
+        table#selectores td {
+            text-align: right;
+        }
+        
+        table#selectores td:nth-child(2),
+        table#selectores td:nth-child(3) {
+            text-align: left;
+        }
+        
+        table#selectores tbody tr:nth-child(odd) {
+            background: #ccff99;
+        }
+        
+        table#selectores tbody tr:nth-child(even) {
+            background: #99ffcc;
+        }
+        
+        table#selectores tr *:first-child {
+            border-left: none;
+        }
+        
+        table#selectores tr *:last-child {
+            border-right: none;
+        }
+        
+        table#selectores td:nth-child(4),
+        table#selectores td:nth-child(5),
+        table#selectores td:nth-child(6) {
+            font-family: monospace;
+        }
+        
+        table#selectores td:nth-child(6) {
+            font-weight: bold;
+        }
+        
+        table#selectores colgroup:nth-child(3) {
+            border: 8px rgba(255, 0, 0, 0.5) dashed;
+        }
+        
+        @font-face {
+            font-family: 'JottFLFBold';
+            src: url('fonts/JottFLF/JottFLF-Bold.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'EnglandHandDB';
+            src: url('fonts/england/england.woff') format('woff');
+        }
+        
+        @font-face {
+            font-family: 'ProclamateLight';
+            src: url('fonts/proclamate/proclamate_light.woff') format('woff');
+        }
+        
+        blockquote#fuentes>*:first-child:before {
+            content: "“ ";
+            display: inline;
+            white-space: pre;
+        }
+        
+        blockquote#fuentes>*:first-child:lang(fr):before {
+            content: "« ";
+            display: inline;
+            white-space: pre;
+            font-family: Arial;
+        }
+        
+        blockquote#fuentes>*:first-child:after {
+            content: " ”";
+            display: inline;
+            white-space: pre;
+        }
+        
+        blockquote#fuentes>*:first-child:lang(fr):after {
+            content: " »";
+            display: inline;
+            white-space: pre;
+            font-family: Arial;
+        }
+        
+        blockquote#fuentes>*:first-child {
+            border: 1em solid black;
+            -moz-border-image: url("img/border2.png") 35 round round;
+            -webkit-border-image: url("img/border2.png") 35 round round;
+            -o-border-image: url("img/border2.png") 35 round round;
+            border-image: url("img/border2.png") 35 round round;
+            padding: 2ex;
+            font-family: EnglandHandDB;
+            text-shadow: white 3px 3px 1px;
+        }
+        
+        blockquote#fuentes *:first-child span {
+            font-family: ProclamateLight;
+        }
+        
+        blockquote#fuentes p:last-child {
+            text-align: right;
+            font-size: smaller;
+            font-family: JottFLFBold;
+        }
+        
+        blockquote#fuentes {
+            background-image: url('img/background_cons.png');
+            background-repeat: repeat;
+            padding: 1em;
+            -moz-border-radius: 2em;
+            -webkit-border-radius: 2em;
+            -o-border-radius: 2em;
+            border-radius: 2em;
+            border: none;
+            text-shadow: none;
+            color: black;
+            -moz-box-shadow: rgba(0, 0, 0, 0.4) 10px 10px 10px;
+            -webkit-box-shadow: rgba(0, 0, 0, 0.4) 10px 10px 10px;
+            box-shadow: rgba(0, 0, 0, 0.4) 10px 10px 10px;
+        }
+        
+        #fuentes em {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        
+        pre em {
+            color: #E42020;
+        }
+        
+        .verde {
+            color: #51C105;
+        }
+        
+        .name {
+            color: #000000;
+        }
+        
+        h1.certificacion {
+            background: transparent url("img/top-secret_s.gif") 50px 10px no-repeat !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- background -->
+    <div class="background">
+        <img id="head-icon" alt="graphic with four colored squares" src="../../lib/Slidy/graphics/icon-blue.png" />
+        <object id="head-logo" title="W3C logo" type="image/svg+xml" data="../../lib/Slidy/graphics/CTIC_CT-W3C_blanco.svg">
+	<img src="../../lib/Slidy/graphics/CTIC_CT-W3C_blanco.png" alt="W3C España - CTIC Centro Tecnológico" id="head-logo-fallback" />
+  </object>
+    </div>
+    <!-- Cover -->
+    <div class="slide cover">
+        <img style="float:right; margin:0; padding:0;" src="../../lib/Slidy/graphics/keys2.jpg" alt="Teclas W 3 C" class="cover" />
+        <p style="float:left;"><a href="http://msdn.microsoft.com/es-es/gg594177">Make Web Not War - Madrid</a></p>
+
+        <h1 style="clear:both; margin-top: 0; margin-bottom: 0; padding-bottom: 0">Estándares Web W3C</h1>
+        <p style="margin-top: -1em;"><a href="/Personal/Martin">Martín Álvarez-Espinar</a> <em>(<a href="http://www.w3c.es">Oficina W3C España</a> &ndash; <a href="http://ct.ctic.es/web/contenidos/en">CTIC</a>)</em></p>
+    </div>
+    <!-- Content -->
+    <!-- ====================================================================== -->
+    <!-- div class="slide">
+    <h1>Estándares Web W3C</h1>
+    <p class="center"><a href="http://msdn.microsoft.com/es-es/gg594177">Make Web Not War - Barcelona</a></p> 
+    <p>Madrid, 5 de abril de 2011</p>
+</div -->
+    <!-- =========================================== -->
+    <div class="slide">
+        <h1><span xml:lang="en" lang="en">World Wide Web Consortium</span></h1>
+        <p class="image-right"><img alt="Mapa del mundo" src="img/world_white.jpg" width="500" />
+            <span class="caption"><a href="http://www.flickr.com/photos/meyshanworld/2217849999/">World Paper Map</a></span>
+        </p>
+        <ul>
+            <li>Organismo <strong>neutro</strong></li>
+            <li>Fundado en 1994 por <a href="http://www.w3.org/People/Berners-Lee/" title="Información sobre Tim Berners-Lee">Tim Berners-Lee</a></li>
+            <li><a href="http://www.w3.org/2003/02/W3COrg.svg" title="Gráfico sobre las actividades y grupos del W3C">Actividades y
+    Grupos del W3C</a>
+                <ul>
+                    <li>60 personas en el <a href="http://www.w3.org/People" hreflang="en">Team</a></li>
+                    <li>325 <a href="http://www.w3.org/Consortium/Member/List" title="Lista de Miembros" hreflang="en">Miembros</a></li>
+                    <li>23 Actividades
+                        <ul>
+                            <li>60+ grupos: de Trabajo, Interés y Coordinación (con más de 1.500 investigadores)</li>
+                        </ul>
+                    </li>
+                    <li>Más de 40 relaciones con otros organismos estandarizadores</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Realmente <span xml:lang="en" lang="en" style="font-style:italic">WorldWide</span></h1>
+        <div class="center">
+            <object style="width:95%" type="image/svg+xml" data="img/WorldMapW3C.svg" title="El mundo, con puntos que indican las sedes centrales y las oficinas">
+  <img src="img/WorldMapW3C.png" alt="El mundo, con puntos que indican las sedes centrales y las oficinas"  />
+</object> </div>
+    </div>
+    <!-- =========================================== -->
+    <div class="slide">
+        <h1>¿Qué hace el <abbr title="World Wide Web Consortium" xml:lang="en" lang="en">W3C</abbr>?</h1>
+        <p>Especificaciones, directrices y herramientas:</p>
+        <p id="especificaciones" style="margin:1em 0 1em 0; min-width: 800px;  min-height: 300px; background-color: #FFFFFF;  text-align: justify;  "><a href="http://www.w3.org/Voice/" style="font-size: 33px; color: #FF6600; text-decoration: none;">Voice</a> <a href="http://www.w3.org/Graphics/WebCGM/" href="http://www.w3.org/PICS/" style="font-size: 33px; color: #80ff80; text-decoration: none;">PICS</a>            <a href="http://www.w3.org/People/Raggett/tidy/" style="font-size: 41px; color: #FF6600; text-decoration: none;">HTMLTidy</a>
+            <a href="http://www.w3.org/2002/ws/databinding/" style="font-size: 46px; color: #FF6666; text-decoration: none;">Databinding</a>
+            <a href="http://www.w3.org/2001/sw/WebOnt/" style="font-size: 33px; color: #80ff80; text-decoration: none;">WebOntology</a>
+            <a href="http://www.w3.org/html/" style="font-size: 50px; color: #FF6666; text-decoration: none;">HTML</a> <a href="http://www.w3.org/2004/CDF/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">CompoundDocumentFormats</a>
+            <a href="http://www.w3.org/TR/rdf-sparql-query/" style="font-size: 33px; color: #80ff80; text-decoration: none;">SPARQL</a> <a href="http://www.w3.org/WAI/" style="font-size: 33px; color: #FF6600; text-decoration: none;">WAI</a> <a href="http://www.w3.org/2006/webapi/"
+                style="font-size: 33px; color: #80ff80; text-decoration: none;">Web APIs</a>
+            <a href="http://www.w3.org/Library/" style="font-size: 33px; color: #FF6666; text-decoration: none;">Libwww</a> <a href="http://www.w3.org/2001/ppwg/" style="font-size: 33px; color: #80ff80; text-decoration: none;">PatentPolicy</a>
+            <a href="http://www.w3.org/2004/OWL/" style="font-size: 33px; color: #FF6666; text-decoration: none;">OWL</a> <a href="http://www.w3.org/AudioVideo/TT/" style="font-size: 33px; color: #80ff80; text-decoration: none;">TimedText</a>
+            <a href="http://www.w3.org/Encryption/2001/" style="font-size: 33px; color: #FF6666; text-decoration: none;">XMLEncryption</a>
+            <a href="http://www.w3.org/2002/mmi/" style="font-size: 33px; color: #FF6600; text-decoration: none;">Multimodal</a>
+            <a href="http://www.w3.org/XML/" style="font-size: 50px; color: #46aaf1; text-decoration: none;">XML</a> <a href="http://www.w3.org/2006/rwc/" style="font-size: 35px; color: #80ff80; text-decoration: none;">RichWebClients</a>
+            <a href="http://www.w3.org/XML/Processing/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">XMLProcessing</a>
+            <a href="http://www.w3.org/2001/di/" style="font-size: 42px; color: #FF6600; text-decoration: none;">DeviceIndependence</a>
+            <a href="http://www.w3.org/Addressing/" style="font-size: 33px; color: #FF6666; text-decoration: none;">URI/URL</a>
+            <a href="http://www.w3.org/DOM/" style="font-size: 44px; color: #FF6600; text-decoration: none;">DOM</a> <a href="http://www.w3.org/Protocols/" style="font-size: 50px; color: #80ff80; text-decoration: none;">HTTP</a> <a href="http://www.w3.org/WAI/"
+                style="font-size: 50px; color: #FF6666; text-decoration: none;">Accessibility</a>
+            <a href="http://www.w3.org/RDF/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">RDF</a> <a href="http://www.w3.org/2006/appformats/" style="font-size: 33px; color: #80ff80; text-decoration: none;">WebApplicationFormats</a>
+            <a href="http://www.w3.org/XML/Linking" style="font-size: 33px; color: #FF6666; text-decoration: none;">XMLBase</a>
+            <a href="http://www.w3.org/Jigsaw/" style="font-size: 50px; color: #80ff80; text-decoration: none;">Jigsaw</a> <a href="http://www.w3.org/XML/Linking" style="font-size: 33px; color: #FF6666; text-decoration: none;">XLink</a> <a href="http://www.w3.org/International/"
+                style="font-size: 35px; color: #FF6600; text-decoration: none;">I18N</a> <a href="http://www.w3.org/P3P/" style="font-size: 33px; color: #80ff80; text-decoration: none;">P3P</a> <a href="http://www.w3.org/QA/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">QualityAssurance</a>
+            <a href="http://www.w3.org/2001/XKMS/" style="font-size: 33px; color: #FF6666; text-decoration: none;">XMLKeyManagement</a>
+            <a href="http://www.w3.org/UbiWeb/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">UbiquitousWeb</a>
+            <a href="http://www.w3.org/2002/mmi/ink" style="font-size: 37px; color: #FF6600; text-decoration: none;">InkML</a> <a href="http://www.w3.org/2005/Incubator/" style="font-size: 39px; color: #46aaf1; text-decoration: none;">Incubator</a>
+            <a href="http://www.w3.org/XML/Linking" style="font-size: 33px; color: #FF6600; text-decoration: none;">XPath</a> <a href="http://www.w3.org/2002/ws/" style="font-size: 33px; color: #80ff80; text-decoration: none;">WebServices</a>
+            <a href="http://www.w3.org/MarkUp/Forms/" style="font-size: 33px; color: #FF6666; text-decoration: none;">XForms</a> <a href="http://www.w3.org/Style/CSS/" style="font-size: 48px; color: #46aaf1; text-decoration: none;">CSS</a> <a href="http://www.w3.org/2000/xp/Group/"
+                style="font-size: 50px; color: #FF6600; text-decoration: none;">SOAP</a> <a href="http://www.w3.org/Mobile/" style="font-size: 33px; color: #80ff80; text-decoration: none;">Mobile</a> <a href="http://www.w3.org/AudioVideo/" style="font-size: 33px; color: #46aaf1; text-decoration: none;">SMIL</a>            <a href="http://www.w3.org/2005/rules/" style="font-size: 33px; color: #FF6666; text-decoration: none;">Rules</a> <a href="http://www.w3.org/Graphics/SVG/" style="font-size: 33px; color: #80ff80; text-decoration: none;">SVG</a> <a href="http://www.w3.org/Amaya/"
+                style="font-size: 50px; color: #46aaf1; text-decoration: none;">Amaya</a> <a href="http://www.w3.org/2001/sw/" style="font-size: 33px; color: #FF6666; text-decoration: none;">SemanticWeb</a>
+            <a href="http://www.w3.org/Math/" style="font-size: 33px; color: #80ff80; text-decoration: none;">MathML</a>
+        </p>
+        <blockquote>
+            Recomendaciones tecnológicas <strong>abiertas</strong> del W3C, probablemente con la <a href="http://www.w3.org/Consortium/Patent-Policy/" hreflang="en-us">política de patentes</a> más
+            <strong>transparente</strong> en Internet </blockquote>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>¿Qué aporta el W3C a la Web?</h1>
+        <div class="center">
+            <object title="Pila de las tecnologías de W3C, vete a http://www.w3.org/Consortium/techstack-desc.html para más detalles" data="img/tech-stack.svg" height="73.00%" width="90%" type="image/svg+xml" class="svg">
+  <img src="img/tech-stack.png"
+  alt="Pila de las tecnologías de W3C, vete a http://www.w3.org/Consortium/techstack-desc.html para más detalles"
+  /></object></div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>¿Por qué funcionan los estándares Web? (I)</h1>
+        <p class="xl">Ahorro de costes</p>
+        <ul class="incremental">
+            <li>Cooperación con los <strong>mejores expertos de la Web</strong> - ahorro de consultorías
+            </li>
+            <li><strong>Compartir inversión I+D</strong>: más allá de los recursos de una sola organización
+            </li>
+            <li>Intercambio de <strong>ideas y experiencias</strong></li>
+            <li>Las mejores especificaciones gracias a una <strong>amplia revisión</strong></li>
+
+            <li><strong>Libres de derechos</strong></li>
+            <li><strong>Compartir el coste de las pruebas</strong> de desarrollo</li>
+
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>¿Por qué funcionan los estándares Web? (II)</h1>
+        <p class="xl">Aumento de beneficios</p>
+        <ul class="incremental">
+            <li>Los estándares abiertos <strong>aumentan la innovación y la
+      competencia</strong></li>
+
+            <li>Incremento del crecimiento gracias a la <strong>confianza del mercado</strong></li>
+            <li>Los clientes <strong>tienen más confianza</strong> - no están sujetos a tecnologías propietarias
+            </li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>¿Por qué funcionan los estándares Web? (III)</h1>
+        <p class="xl center" style="margin-top:5em">¡Interoperabilidad!</p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>El proceso de construcción de los estándares</h1>
+        <p class="figura"><object data="../../lib/pics/svgs/documentProcess.svg" height="75.00%" width="90%" type="image/svg+xml" class="svg">
+  <img src="../../lib/pics/documentProcess.png"
+  alt="Fases del proceso de construcción de una recomendación en W3C"
+  /></object>
+        </p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Breve historia de la Web...</h1>
+        <p class="image-center" style="margin:-1em"><img width="1024" alt="Tela de araña húmeda" src="img/web.jpg" /><span class="caption"><a href="http://www.flickr.com/photos/foxypar4/2124673642/">Frosty Morning Web</a></span></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Web 0.1</h1>
+        <p class="image-center" style="margin:0"><img height="550" alt="Pantallazo del WorldWideWeb, primer navegador de la historia" src="img/worldwideweb.gif" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Web 1.0</h1>
+        <p class="image-center" style="margin:0"><img alt="Pantallazo del Navegador Mosaic (1993) navegando por una página de Yahoo!" src="img/netscape.jpg" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Web 1.0</h1>
+        <p class="image-right"><img width="450" alt="Pantallazo del Navegador AMosaic (1994)" src="img/Amosaic-screenshot.gif" /></p>
+        <p>Una Web para <strong>navegar</strong></p>
+
+        <ul>
+            <li><em>HTTP</em> + <em>URL</em> + <em>HTML</em></li>
+            <li>Ancho de banda <strong>limitado</strong></li>
+            <li>Dispositivos limitados (de <strong>escritorio</strong>)</li>
+            <li>No era posible la interacción con el documento</li>
+        </ul>
+        <p class="xl incremental" style="clear:both">...Experiencia de usuario &ldquo;pasiva&rdquo;</p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Web 2.0</h1>
+        <p class="image-right">
+            <a href="http://www.youtube.com/watch?v=9Pobuw7Wk2k"><img width="500" alt="Pantallazo de Youtube" src="img/youtube.png" /></a>
+        </p>
+        <p>Una Web para <strong>interactuar</strong></p>
+
+        <ul>
+            <li><em>HTTP</em> + <em>URL</em> + <em>HTML</em> + <em>Javascript</em> + <em>Flash</em></li>
+            <li>Mayor ancho de banda</li>
+            <li>Más potencia de computación</li>
+            <li>Más dispositivos (escritorio+móviles)</li>
+        </ul>
+        <p style="clear:both" class="xl incremental">...Experiencia de usuario &ldquo;interactiva&rdquo;</p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Web <del>3.0</del>... <del>4.0</del>... <strong>x.0</strong>...</h1>
+
+        <p class="l">Mejorando la Plataforma Web Abierta</p>
+
+        <p class="image-right"><img width="650" alt="Going to the Opera in the year 2000, by Albert Robida (1882)" src="img/robida_1882.jpg" /><span class="caption">Albert Robida, 1882</span></p>
+
+        <ul class="incremental">
+            <li>La Web de los <strong>Datos</strong></li>
+            <li>La Web de la <strong>Interacción</strong></li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>La Web de la Interacción</h1>
+        <p class="l">Modelando la <strong>interfaz de usuario</strong> para mejorar la interacción</p>
+        <ul class="incremental">
+            <li>Mejorando el lenguaje de primera generación, <em>HTML</em></li>
+            <li>Integrando las tecnologías de segunda generación:
+                <ul>
+                    <li>CSS (<strong>estilos</strong> atractivos)</li>
+                    <li>SVG (<strong>gráficos</strong> interactivos)</li>
+                    <li>MathML (representaciones <strong>matemáticas</strong>)</li>
+                    <li><strong>Vídeo, Canvas, Geolocalización</strong>, ...</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>HTML5: la estrella</h1>
+        <div class="center" style="margin-top:-1em"><img src="img/html5-topper.png" alt="HTML5" /></div>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>No es HTML5 todo lo que reluce</h1>
+        <div style="height:70%">
+            <object title="Diagrama con los módulos de CSS3" data="img/CSS-diagram.svg" type="image/svg+xml" class="svg"></object>
+        </div>
+        <p><a href="ejemplos/ugly.xhtml">The Ugly Slide :-)</a></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>Muchas más piezas...</h1>
+        <ul class="buzzwords">
+            <li>HTML 5</li>
+            <li>CSS 2.1</li>
+            <li>CSS 3 Selectors</li>
+            <li>CSS 3 Media Queries</li>
+            <li>CSS 3 Text</li>
+            <li>CSS 3 Backgrounds and Borders</li>
+            <li>CSS 3 Colors</li>
+
+            <li>CSS 3 2D Transformations</li>
+            <li>CSS 3 3D Transformations</li>
+            <li>CSS 3 Transitions</li>
+            <li>CSS 3 Animations</li>
+            <li>CSS 3 Multi-Columns</li>
+            <li>CSS Namespaces</li>
+
+            <li>SVG 1.1</li>
+            <li>WAI-ARIA 1.0</li>
+            <li>MathML 2.0</li>
+            <li>ECMAScript 5</li>
+            <li>2D Context</li>
+            <li>WebGL</li>
+
+            <li>Web Storage</li>
+            <li>Indexed Database</li>
+            <li>Web Workers</li>
+            <li>Web Sockets Protocol/API</li>
+            <li>Geolocation</li>
+            <li>Server-Sent Events</li>
+
+            <li>Element Traversal</li>
+            <li>DOM Level 3 Events</li>
+            <li>Media Fragments</li>
+            <li>XMLHttpRequest</li>
+            <li>Selectors API</li>
+            <li>CSSOM View Module</li>
+
+            <li>Cross-Origin Resource Sharing</li>
+            <li>File API</li>
+            <li>RDFa</li>
+            <li>Microdata</li>
+            <li>WOFF</li>
+            <li>HTTP 1.1 part 1 to part 7</li>
+
+            <li>TLS 1.2 (updated)</li>
+            <li>IRI (updated)</li>
+            <li>&hellip;</li>
+        </ul>
+    </div>
+    <!-- =========================================== -->
+    <div class="slide">
+        <h1>W3C España</h1>
+        <p class="center" style="margin-top:2em;"><img src="../../lib/pics/oficinaW3C.jpg" alt="Imagen del edificio de la Fundación CTIC de noche" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>W3C España a vuestro servicio</h1>
+        <ul class="incremental">
+            <li>Enlace W3C con España</li>
+            <li>Relación con Miembros W3C</li>
+            <li>Coordinación de Traducciones Autorizadas</li>
+            <li>Difusión
+                <ul>
+                    <li>17-18 Mayo... <a href="http://www.bilbaowebsummit.org">Bilbao Web Summit</a></li>
+                </ul>
+            </li>
+            <li>Formación</li>
+            <li>&hellip;</li>
+            <li class="xl">¡Certificación! (en unas semanas)</li>
+        </ul>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1 class="certificacion">Certificación W3C España</h1>
+        <p>Certificación de personal</p>
+
+        <ul class="incremental">
+            <li>Sobre <strong>Tecnologías W3C</strong></li>
+            <li>Aval de conocimientos dentro del ámbito de un perfil profesional</li>
+            <li>Ejemplo: Diseñador Web</li>
+        </ul>
+        <p class="incremental center"><img height="300" src="img/disenador_web.png" alt="Diagrama de los conocimientos que tiene un diseñador Web" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1 class="certificacion">Certificación W3C España</h1>
+        <p class="center"><img src="img/cert_front_end.png" alt="Diagrama de certificación de conocimientos de diseñador Web" /></p>
+        <p class="center"><a href="http://www.w3c.es/Servicios/Certificacion">http://www.w3c.es/Servicios/Certificacion</a></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1 class="certificacion">Certificación W3C España</h1>
+        <p class="center"><img height="550" src="img/certificaciones.png" alt="Diagrama de la evolución de las certificaciones en el tiempo" /></p>
+    </div>
+    <!-- ====================================================================== -->
+    <div class="slide">
+        <h1>¡Muchas gracias!</h1>
+        <dl>
+            <dt>Esta presentación</dt>
+            <dd><a href="https://espinr.github.io/talks/2011/0405-estandaresWeb-MA">http://www.w3c.es/Presentaciones/2011/0405-estandaresWeb-MA</a></dd>
+            <dt>¿Certificación?</dt>
+            <dd><a href="http://www.w3c.es/Servicios/Certificacion">http://www.w3c.es/Servicios/Certificacion</a></dd>
+            <dt>Bilbao Web Summit</dt>
+            <dd><a href="http://www.bilbaowebsummit.org">http://www.bilbaowebsummit.org</a></dd>
+            <dt>Yo</dt>
+            <dd><a href="https://www.linkedin.com/in/espinr/">martin@w3.org</a></dd>
+        </dl>
+    </div>
+
+    <!-- End of content -->
+</body>
+
+</html>

@@ -1,0 +1,551 @@
+/* Los estilos básicos */
+body {
+	margin: 0;
+	font:100%/1.7 Arial, Verdana, Helvetica, Geneva, sans-serif;
+	background-color: #fff;
+	color: #585858;
+	min-height: 100%;
+}
+a img {
+	border: none;
+}
+img {
+	border: 1px #585858 solid;
+}
+a {
+	text-decoration: none;
+	border-bottom: 1px #4D5373 dashed;
+	color: #4D5373;
+	background-color: #fff;
+}
+a:link, a:visited {
+	color: #4D5373;
+	background-color: transparent;
+}
+a:hover, a:active {
+	color: #222;
+	background-color: transparent;
+}
+abbr, acronym {
+	cursor: help;
+}
+.invisible {
+	display: none;
+}
+.subrayado {
+	text-decoration: underline;
+}
+.right {
+	text-align: right;
+}
+.center {
+	text-align: center;
+}
+h2 {
+	background-color: #fff;
+	/*color: #185068;*/
+	color: #3B1587;
+	font-size: 2em;
+	font-weight: bolder;
+	line-height:1.1;
+	letter-spacing: 0.1em;
+}
+h3 {
+	background-color: #fff;
+	/*color: #6C4A52;*/
+	color: #585858;
+	font-weight: bolder;
+	letter-spacing: 0.2em;
+	border-bottom: medium #f1f1f1 solid;
+	margin-top: 2em;
+}
+/* Si tiene enlaces los h3, los muestra igual que los h3 */
+h3 a, h3 a:link, h3 a:visited {
+	background-color: #fff;
+	color: #585858;
+	border-bottom: none;
+}
+h3 a:hover, h3 a:active {
+	background-color: #fff;
+	color: #000;
+}
+p {
+	text-align: justify;
+}
+.irrelevante {
+	font-size: 90%;
+	font-style: italic;		
+}
+em {
+	font-weight: bolder;
+}
+.linkActivo {
+	font-weight: bolder;
+}
+address {
+	padding: 0.5em 0 0 1em;
+}
+dl dt {
+	margin-top: 1em;
+}
+li {
+	list-style: square;
+}
+ul {
+    margin-left: 0;
+}
+/* ============ La cabecera de la página =========== */
+div#cabecera {
+	width: 100%;
+	position: absolute;
+	top: 2em;
+	left: 0;
+	padding: 0;
+	margin: 0;
+}
+div#cabecera h1 {
+	margin: 0;
+	font-size: 100%;
+	padding: 2em 0 0 2em;
+	height: 167px;	
+}
+* html div#cabecera h1 {
+    margin-bottom: 1em;
+}
+div#cabecera h1 a {
+	border-bottom: none;
+}
+div#cabecera div.subtitulo {
+	display: block;
+	font-size: 100%;
+	width: 100%;
+	padding: 0;
+	height: 2em;
+	line-height: 2em;
+	margin: 1.5em 0 0 0;
+	vertical-align: middle;
+}
+div#cabecera div.subtitulo p {
+	font-size: 90%;
+	font-weight: bold;
+	background-color: #585858;
+	color: #fff;
+	padding: 0 0 0 2em; 
+}
+/* --- Lista de los patrocinadores --- */
+div#cabecera #patrocinadores {
+	width: 13em;
+	min-width: 13em;
+	position: absolute;
+	top: 2em;
+	right: 0;
+	font-size: 70%;	
+}
+div#cabecera #patrocinadores p {
+	margin-top: 2em;
+}
+div#cabecera #patrocinadores ul li {
+	list-style: none;
+	text-align: right;
+	margin-right: 1em;
+}
+div#cabecera #patrocinadores ul {
+	margin: 0;
+	padding: 0 0 0 0;
+}
+div#cabecera #patrocinadores a, div#cabecera #patrocinadores a:link, div#cabecera #patrocinadores a:visited {
+    color: #585858;
+    background-color: #fff;
+    border-bottom: 1px #585858 dotted;
+}
+div#cabecera #patrocinadores a:hover, div#cabecera #patrocinadores a:active {
+    color: #000;
+    background-color: #eee;    
+    border-bottom: 1px #000 dotted;
+}
+
+/* ================ Herramientas ================= */
+ul#herramientas {
+	display: block;
+	background-color: #585858;
+	color: #fff;
+	position: absolute;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 2em;	
+	text-align: center;
+}
+ul#herramientas li {
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	line-height: 2em;
+	height: 2em;	
+	border-right: 1px #fff solid;
+}
+/* Este elemento se declara aquí para que funcione en el IE */
+ul#herramientas li.linkActivo {
+	color: #FFEF19;
+	background-color: #3B1587;
+	font-weight: bold;
+}
+ul#herramientas li a, ul#herramientas li {
+	display: block;
+	height: 2em;
+	padding: 0;	
+	text-decoration: none;
+	width: 8em;
+	border-bottom: none;
+}
+ul#herramientas li a:link, ul#herramientas li a:visited {
+	background-color: #585858;
+	color: #fff;
+}
+ul#herramientas li a:hover, ul#herramientas li a:active {
+	background-color: #fff;
+	color: #585858;
+}
+/* Enlace activo del menú */
+ul#herramientas li.linkActivo {
+	display: block;
+	height: 2em;
+	padding: 0;	
+	width: 8em;
+	font-style: italic;
+	color: #FFEF19;
+	background-color: #3B1587;
+	font-weight: bold;
+}
+
+#herramientas .subrayado {
+	font-weight: bolder;
+}
+/* ------------- El selector del idioma -------------- */
+.selector-idioma {
+	position: absolute;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	height: 2em;	
+	text-align: center;	
+	right: 0;
+	border-left: 1px #fff solid;
+}
+/* ================ Menú de navegación ================= */
+ul#navegacion {
+	font-size: 100%;
+	width: 10em;
+	min-width: 10em;	
+	margin: 2em 1em 7em 0;	
+	float: right;
+}
+* html ul#navegacion {
+    width: 9em;	
+}
+ul#navegacion li {
+	list-style: none;
+}
+ul#navegacion li a {
+	text-decoration: none;
+	display: block;
+	vertical-align: middle;
+	line-height: 2.5em;
+	padding-left: 1em;
+	border: none;	
+}
+ul#navegacion li img {
+	vertical-align: middle;
+}
+ul#navegacion li a:link, ul#navegacion li a:visited {
+	background-color: #fff;
+	color: #585858;
+}
+ul#navegacion li a:hover, ul#navegacion li a:active {
+	background-color: #585858;
+	color: #fff;
+}
+ul#navegacion li.linkActivo {
+	display: block;
+	vertical-align: middle;
+	line-height: 2.5em;
+	color: #3B1587;
+	background-color: #fff;
+	padding-left: 1em;
+}
+/* Para el IE */
+* html ul#navegacion li.linkActivo {
+	padding-left: 0;
+}
+ul#navegacion li.linkActivo img {
+	border: none;
+}
+/* Para el IE */
+* html ul#navegacion li a {
+	padding: 0;
+	vertical-align: middle;
+	height: 32px;
+}
+* html ul#navegacion li {
+    margin-top: 0.5em;
+}
+/* -- El segundo nivel de los menús -- */
+ul#navegacion  li ul li a {
+	line-height: 1.5em;
+}
+/* Para el IE */
+* html ul#navegacion  li ul li a {
+	line-height: 1.5em;
+	height: 1.5em;
+}
+ul#navegacion li ul, ul#navegacion li.linkActivo ul {
+	padding-left: 2.5em;
+	margin-left: 0;
+}
+* html ul#navegacion li {
+	padding-left: 0;
+}
+ul#navegacion  li ul li{
+	list-style-type: square;
+	padding-left: 0;
+}
+* html ul#navegacion  li ul li{
+	padding-left: 0.2em;
+}
+ul#navegacion  li ul li.linkActivo {
+	display: list-item;
+	list-style-type: square;
+	line-height: 1.5em;
+	padding-left: 1em;
+}
+ul#navegacion li.linkActivo li {
+	font-weight: normal;
+	color: #585858;
+	background-color: #fff;
+}
+/* Para el IE */
+* html ul#navegacion li.linkActivo ul {
+	padding-left: 2.5em;
+}
+/* Para el IE */
+* html ul#navegacion li ul li.linkactivo{
+	padding-left: 0.2em;
+}
+
+/* ================ Contenedor para los contenidos, pies y navegación ========= */
+div#contenedor {
+	position: absolute;
+	top: 167px;  
+	/* El alto del logo y le mete un margen adicional: herramientas + márgenes */
+	margin: 8em 0 0 0;
+	min-width: 20em;
+	min-height: 10em;
+	width: 100%;
+}
+/* ============ El contenido principal de la página =========== */
+div#contenido {
+	padding: 0 13em 0 0; 
+	margin-left: 2em;
+	min-width: 30em;
+}
+/* Para el IE */
+* html div#contenido {
+    padding: 0;
+    margin-right: 15em;
+}
+div.item {
+	min-width: 30em;
+}
+div.item h3 {
+    clear: left;
+}
+/*
+div.item:hover, div.item:active {
+	background-color: #F5F5F5;
+	color: #4C4A52;
+}
+*/
+div.item h3 + p, div.item h4 + p  {
+	margin-top: -1em;
+}
+div.item p {
+	line-height: 1.2;
+}
+/* --- Las noticias ---- */
+div.item-news p {
+	margin: 0 0 0 3em;
+	padding-right: 1em;
+}
+div.item-news h3, div.item-news h4 {
+	color: #222;
+	background-color: #fff;
+	border-bottom: medium #f1f1f1 solid;
+}
+/* --- Los blogs --- */
+ul.lista-news {
+	margin-left: 0;
+	padding-left: 1.5em;
+}
+ul.lista-news li {
+	list-style: none;
+}
+ul.lista-news .fecha {
+	font-size: 90%;
+}
+div.item-news h4 {
+	margin-top: 2em;
+}
+/* -- Información sobre el RSS en la página principal -- */
+#info-RSS {
+	text-align: right;
+	margin: -2em 3em 0 0;
+	font-size: 90%;
+}
+
+/* ============= Las fechas ================== */
+.cal .date	{
+    display: block;
+	float: left; width: 2em; 
+	margin: 0.5em 1em 1em 0;
+	border-right: 1px solid #bbb; 
+	border-left: 1px solid #eee;
+	border-bottom: 1px solid #bbb;
+	border-top:  6px solid #bbb;
+	padding: .2em .5em .5em .5em; 
+	background: #fffff0; 
+	color: #444; 
+	text-align: center; 
+	line-height: 1.1em; 
+	font-family: sans-serif;
+	font-size: 70%; 
+}
+.cal .year {
+	display: none; 
+	position: absolute; 	
+	visibility: hidden; 
+	top: -10000px; width: 10%;
+	overflow: hidden; margin: 0; 
+	padding: 0; 
+}
+h3 .cal .date	{
+	font-size: 65%;
+}
+.item-news h3 {
+	letter-spacing: normal;
+}
+/* ------------ Los blogs incluyen una fuente (origen) ----------- */
+.fuente {
+	font-style: italic;
+}
+/* ================= Las páginas principales padres de subsecciones  ============== */
+div.item-block {
+	float: left;
+	width: 47%;
+	min-width: 20em;
+	background-color: #F5F5F5;
+	color: #4C4A52;
+}
+/* Para el IE */
+* html div.item-block {
+	width: 35%;
+}
+div.item-block:hover, div.item-block:active {
+	background-color: #F0F0F0;
+	color: #484848;
+}
+div.item-block h3 {
+	margin: 0;
+}
+.segunda-fila {
+	margin-top: 2em;
+}
+div.item-izquierda {
+	margin-right: 1em;
+	clear: left;
+}
+div.item-block li {
+	list-style: none;
+	font-size: 90%;
+}
+div.item-block ul {
+	margin-top: 0.5em;
+	padding-left: 0.5em;
+}
+* html div.item-block ul {
+	padding-left: 0;
+	margin-left: 0.5em;
+}
+div.item-block p {
+	font-size: 90%;
+	padding: 0 0.5em;
+}
+div.item-block ul.previo-blogs li {
+	font-size: 90%;
+	clear: left;
+	line-height: 1.5em;
+}
+div.item-block ul.previo-blogs li .fecha {
+    font-size: 80%;
+}
+div.item-block p.seccion {
+    text-align: center;
+    clear: left;
+    margin-top: 2.5em;
+}
+
+
+/* ============ El pie de la página =================*/
+div#pie {
+	clear: both;
+	width: 100%;
+	background-color: #585858;
+	color: #fff;
+	font-size: 100%;	
+	margin: 2em 0 0 0;
+	position: absolute;
+	left: 0;
+}
+div#pie p {
+	text-align: center;
+}
+div#pie a, div#pie a:link, div#pie a:visited {
+	color: #fff;
+	background-color: #585858;
+	border-bottom: 1px #fff dashed;	
+}
+div#pie a:hover, div#pie a:active {
+	background-color: #fff;
+	color: #585858;
+	border-bottom: 1px #fff dashed;
+}
+div#pie a.logo:hover, div#pie a.logo:active,  div#pie a.logo:link, div#pie a.logo:visited {
+	background-color: #585858;
+	color: #fff;
+	border-bottom: 0;
+}
+div#pie hr {
+	width: 100%;
+	background-color: #585858;
+	color: #585858;
+	font-size: 100%;
+	border: none;
+}
+.tecInfo, .copyright {
+   font-size: 0.8em;
+	margin-top: 0;
+}
+.copyright {
+	margin: 0;
+}
+a.logo {
+	border: none;
+}
+p.tecInfo-right {
+	float: right;
+}
+p.tecInfo-left {
+	float: left;
+}
+

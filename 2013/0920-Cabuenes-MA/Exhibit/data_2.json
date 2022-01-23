@@ -1,0 +1,172 @@
+{ 
+  "items" : [
+  {
+    "label":"PERICONES ADULTOS",
+    "id":"PERICONES+ADULTOS",
+    "latitud":43.5281713300176,
+    "longitud":-5.65847619448554,
+    "descripcion":""
+  },
+  {
+    "label":"FABRICA DE LOZA ADULTOS",
+    "id":"FABRICA+DE+LOZA+ADULTOS",
+    "latitud":43.5381499347026,
+    "longitud":-5.68714968407511,
+    "descripcion":""
+  },
+  {
+    "label":"SALVADOR ALLENDE ADULTOS",
+    "id":"SALVADOR+ALLENDE+ADULTOS",
+    "latitud":43.5177681876559,
+    "longitud":-5.68285706829161,
+    "descripcion":""
+  },
+  {
+    "label":"NARANJO BULNES ADULTOS",
+    "id":"NARANJO+BULNES+ADULTOS",
+    "latitud":43.5263144859961,
+    "longitud":-5.68158226762974,
+    "descripcion":"CALLE NARANJO DE BULNES_20 - 1"
+  },
+  {
+    "label":"AVDA. LLANO ADULTOS",
+    "id":"AVDA.+LLANO+ADULTOS",
+    "latitud":43.5233168812684,
+    "longitud":-5.66295622310559,
+    "descripcion":""
+  },
+  {
+    "label":"CERRO STA CATALINA ADULTOS",
+    "id":"CERRO+STA+CATALINA+ADULTOS",
+    "latitud":43.5489034657309,
+    "longitud":-5.66567907630057,
+    "descripcion":""
+  },
+  {
+    "label":"MONTEANA ADULTOS",
+    "id":"MONTEANA+ADULTOS",
+    "latitud":43.521805367959,
+    "longitud":-5.74900173694909,
+    "descripcion":""
+  },
+  {
+    "label":"ARBEYAL ADULTOS",
+    "id":"ARBEYAL+ADULTOS",
+    "latitud":43.5428993749772,
+    "longitud":-5.69308471097728,
+    "descripcion":""
+  },
+  {
+    "label":"SIMON BOLÍVAR ADULTOS",
+    "id":"SIMON+BOL%C3%95VAR+ADULTOS",
+    "latitud":43.5375465578048,
+    "longitud":-5.70086703722875,
+    "descripcion":""
+  },
+  {
+    "label":"TREMAÑES ADULTOS",
+    "id":"TREMA%E2%80%94ES+ADULTOS",
+    "latitud":43.5313583542757,
+    "longitud":-5.69822558078171,
+    "descripcion":"CALLE PORVENIR_2D - 1"
+  },
+  {
+    "label":"RUEDES ADULTOS",
+    "id":"RUEDES+ADULTOS",
+    "latitud":43.4638134551381,
+    "longitud":-5.70677153126139,
+    "descripcion":""
+  },
+  {
+    "label":"MOREDA ADULTOS",
+    "id":"MOREDA+ADULTOS",
+    "latitud":43.5372087606406,
+    "longitud":-5.67997751117195,
+    "descripcion":""
+  },
+  {
+    "label":"FABRICA LOZA ADULTOS",
+    "id":"FABRICA+LOZA+ADULTOS",
+    "latitud":43.5381569233389,
+    "longitud":-5.6872046347838,
+    "descripcion":""
+  },
+  {
+    "label":"CARLOS MARX ADULTOS",
+    "id":"CARLOS+MARX+ADULTOS",
+    "latitud":43.5369293779402,
+    "longitud":-5.67281662579986,
+    "descripcion":"AVDA  DE PORTUGAL_60 - 1"
+  },
+  {
+    "label":"PUERTO LEITARIEGOS ADULTOS",
+    "id":"PUERTO+LEITARIEGOS+ADULTOS",
+    "latitud":43.5324500252578,
+    "longitud":-5.67603791964933,
+    "descripcion":""
+  },
+  {
+    "label":"PALMERAS ADULTOS",
+    "id":"PALMERAS+ADULTOS",
+    "latitud":43.5207869603781,
+    "longitud":-5.66810245354148,
+    "descripcion":""
+  },
+  {
+    "label":"ISABEL LA CATÓLICA ADULTOS",
+    "id":"ISABEL+LA+CAT%E2%80%9DLICA+ADULTOS",
+    "latitud":43.5401827002216,
+    "longitud":-5.6440483518766,
+    "descripcion":""
+  },
+  {
+    "label":"BELARMINO TOMÁS",
+    "id":"BELARMINO+TOM%C2%A1S",
+    "latitud":43.5334871122854,
+    "longitud":-5.65152525638417,
+    "descripcion":"CALLE LOPE DE VEGA_1 - 1"
+  },
+  {
+    "label":"LA CAMOCHA ADULTOS",
+    "id":"LA+CAMOCHA+ADULTOS",
+    "latitud":43.4867240684778,
+    "longitud":-5.65169796842761,
+    "descripcion":"CALLE A ARTILLEROS_4 - 1"
+  },
+  {
+    "label":"C/ PALENCIA ADULTOS",
+    "id":"C%2F+PALENCIA+ADULTOS",
+    "latitud":43.5366918589922,
+    "longitud":-5.66192404560083,
+    "descripcion":"AVDA COSTA_30 - 1"
+  },
+  {
+    "label":"SEVERO OCHOA ADULTOS",
+    "id":"SEVERO+OCHOA+ADULTOS",
+    "latitud":43.5286164708353,
+    "longitud":-5.67332348432179,
+    "descripcion":""
+  },
+  {
+    "label":"C/ ELECTRA ADULTOS",
+    "id":"C%2F+ELECTRA+ADULTOS",
+    "latitud":43.5323998253871,
+    "longitud":-5.664512426163,
+    "descripcion":"CALLE SAAVEDRA_50 - 1"
+  },
+  {
+    "label":"CAMINO CALEROS ADULTOS",
+    "id":"CAMINO+CALEROS+ADULTOS",
+    "latitud":43.5177440556026,
+    "longitud":-5.67371492207235,
+    "descripcion":""
+  },
+  {
+    "label":"ANTONIO ORTEGA ADULTOS",
+    "id":"ANTONIO+ORTEGA+ADULTOS",
+    "latitud":43.5229228130322,
+    "longitud":-5.67683886968184,
+    "descripcion":""
+  }
+]
+}

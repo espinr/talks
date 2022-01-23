@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>@contenteditable</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" media="screen, projection, print" href="../../../lib/Slidy/css/slidy.css" />
+    <link rel="stylesheet" type="text/css" media="screen, projection, print" href="../../../lib/Slidy/css/w3c-blue.css" />
+    <style type="text/css">
+        table {
+            font-size: 14px;
+            font-family: Arial;
+            color: black;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: none;
+        }
+        
+        td {
+            border: 1px solid black;
+            padding-right: 0.5ex;
+            padding-left: 0.5ex;
+            white-space: pre
+        }
+        
+        th {
+            border: 1px solid black;
+            background: #33cc4c;
+            color: black;
+            text-shadow: rgba(255, 255, 255, 0.8) 2px 2px 2px;
+            text-align: left;
+        }
+        
+        thead th {
+            padding-right: 1em;
+            padding-left: 1em;
+        }
+        
+        thead th {
+            padding-right: 1em;
+            padding-left: 1em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="background">
+        <img id="head-icon" alt="graphic with four colored squares" src="../../../lib/Slidy/graphics/icon-blue.png" />
+        <object id="head-logo" title="W3C logo" type="image/svg+xml" data="../../../lib/Slidy/graphics/CTIC_CT-W3C_blanco.svg">
+	<img src="../../../lib/Slidy/graphics/CTIC_CT-W3C_blanco.png" alt="W3C España - CTIC Centro Tecnológico" id="head-logo-fallback" />
+  </object>
+    </div>
+
+
+    <div class="slide">
+        <h1>@contenteditable</h1>
+        <pre>
+ &lt;p contenteditable='true'>
+ &lt;table contenteditable='true'>
+	</pre>
+        <p contenteditable='true'>Esto es un párrafo.</p>
+        <table contenteditable='true'>
+            <thead>
+
+                <tr>
+                    <th><span>Date</span></th>
+                    <th><span>Description</span></th>
+                    <th><span>Transfer</span></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>10/08/2004</td>
+                    <td>Restaurant</td>
+                    <td>Expenses:Foods</td>
+                </tr>
+                <tr>
+                    <td>10/10/2004</td>
+
+                    <td>Market</td>
+                    <td>Expenses:Groceries</td>
+                </tr>
+                <tr>
+                    <td>10/11/2004</td>
+                    <td>Gas</td>
+                    <td>Expenses:Car</td>
+
+                </tr>
+                <tr>
+                    <td>10/12/2004</td>
+                    <td>Payroll</td>
+                    <td>Income:Salary</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</body>
+
+</html>

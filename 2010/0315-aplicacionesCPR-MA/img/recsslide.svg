@@ -1,0 +1,1721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg onload="recAnimationInit(evt)" viewBox="-10 -40 2820 1450" xmlns="http://www.w3.org/2000/svg" xmlns:appl="http://www.w3.org/2003/03/recsslide" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>
+      W3C Recommendations
+    </title>
+    <metadata>
+      
+		
+      <rdf:RDF xmlns:contact="http://www.w3.org/2000/10/swap/pim/contact#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+        
+			
+        <rdf:Description rdf:about="">
+          
+				
+          <dc:title xml:lang="en">
+            List of W3C Recommendations
+          </dc:title>
+          
+				
+          <dc:creator>
+            
+					
+            <contact:Person>
+              
+						
+              <contact:fullName>
+                Ivan Herman
+              </contact:fullName>
+              
+						
+              <contact:organization>
+                W3C - World Wide Web Consortium
+              </contact:organization>
+              
+						
+              <contact:emailAddress>
+                ivan@w3.org
+              </contact:emailAddress>
+              
+					
+            </contact:Person>
+            
+				
+          </dc:creator>
+          
+				
+          <dc:date>
+            21-Oct-2009
+          </dc:date>
+          
+				
+          <dc:format>
+            image/svg+xml
+          </dc:format>
+          
+				
+          <dc:publisher xml:lang="en">
+            W3C - World Wide Web Consortium
+          </dc:publisher>
+          
+				
+          <dc:language>
+            en
+          </dc:language>
+          
+				
+          <dc:rights rdf:resource="http://www.w3.org/Consortium/Legal/copyright-documents"/>
+          
+			
+        </rdf:Description>
+        
+		
+      </rdf:RDF>
+      
+	
+    </metadata>
+    <script type="text/ecmascript">
+<![CDATA[
+      // Parameters to control the animation:
+      var timerIncrement      = 8;    // timer delta (miliseconds)
+      var maxTime             = 15;  // full animation time (miliseconds)
+      var numberOfRecs        = 167;
+	  // -----------------------------------------------------------------
+	  var applNS = "http://www.w3.org/2003/03/recsslide";
+      // -----------------------------------------------------------------
+      // Global values, calculated only once
+      var Document;                 // the svg object
+      // Global variable, recalculated for each cycle
+      var current_rec  = 0;         // current rec group to massage
+      var timevalue    = 0;         // current time value
+      var recGroup;
+      // -----------------------------------------------------------------
+      function recAnimationInit(evt) {
+		   try
+		   {
+			  if ( -1 != getSVGViewerVersion().indexOf('ASV') )
+			  {
+				 return;
+			  }
+		   }
+		   catch(er) {}
+        // Get the DOM Document element, this is used for all kinds of generic functions...
+        Document = evt.target.ownerDocument;        
+        recGroup = Document.getElementById("rec_0")
+        // start animation after <timerIncrement>
+        setTimeout("animateRec()",timerIncrement);               
+      }
+            
+      function animateRec() {
+        timevalue    = timevalue + timerIncrement;        
+        if( timevalue >= maxTime ) {
+          // Put the current group to its final place and with final attributes
+		  if( recGroup != null ) {
+          	recGroup.setAttributeNS(null,"opacity",1);
+		  }
+          // Get the values for the next element to animate
+          current_rec +=1;
+          if( current_rec >= numberOfRecs ) {
+            return; // everything is done!
+          } else {
+            // Reset the timer
+            timevalue = 0;
+            recGroup = Document.getElementById("rec_" + current_rec)
+          }
+        } else {        
+          var opacity = (1.0/maxTime) * timevalue;
+          if( opacity > 1 ) opacity = 1;
+		  if( recGroup != null ) {
+          	recGroup.setAttributeNS(null,"opacity",opacity);
+		  }
+        }        
+        // recall the same function again after <timerIncrement>
+        setTimeout("animateRec()",timerIncrement)               
+      }    
+	  
+	  function popDetails(evt) {
+	     vTarget = evt.target.getAttributeNS(applNS,"target");
+		 gTarget = Document.getElementById(vTarget);
+		 vis = gTarget.getAttributeNS(null,"visibility");
+		 if ( vis == "hidden" ) {
+		     gTarget.setAttributeNS(null,"visibility","visible");
+		 } else {
+		     gTarget.setAttributeNS(null,"visibility","hidden");
+		 }
+	  }	  
+]]>    </script>
+    <style type="text/css">
+<![CDATA[
+     text { fill:green; stroke: none}
+	 text.Rrec	  {stroke:none; text-anchor: middle; font-size:19px; 
+					 font-family: Georgia, sans-serif; font-style:italic; fill green;}
+	 text.in		{fill:green; }
+	 text.arch	  {fill:green}
+	 text.ts		{fill:green}
+	 text.wai	   {fill:green}
+	 text.CR		{fill:gray}
+	 text.PR, text.PER {fill:gray; font-style:italic; font-weight: bold}
+	 text.date	  { font-size: 18px; font-style:italic; fill: blue }
+	 .Rcell		 {stroke: black; fill:none; stroke-opacity: 0.1}
+	 line.RGridLine {stroke: black; fill:none; stroke-opacity: 0.4}
+	 .evenYear	  {stroke: black; fill:#fbfdae; stroke-opacity: 0.1}
+	 .oddYear	   {stroke: black; fill:palegoldenrod; stroke-opacity: 0.1}
+	 text.caption   {fill:#048; stroke: none; font-size: 30px;text-anchor: middle;
+					 font-style: italic; font-family: Georgia, sans-serif}
+	 polygon[id ~= "groups"]  { fill:goldenrod; cursor:pointer}
+]]>    </style>
+    <defs>
+      <polygon id="groups" points="0,0 10,0 5,10"/>
+      <rect height="50" id="Rcell" width="200"/>
+    </defs>
+    <use class="evenYear" transform="translate(0)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(0, 50)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(0, 100)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(0, 150)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(200)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(200, 50)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(200, 100)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(400)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(400, 50)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(400, 100)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(400, 150)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(400, 200)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(400, 250)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(600)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(600, 50)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(600, 100)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(600, 150)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(600, 200)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(600, 250)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(600, 300)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(600, 350)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(600, 400)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(600, 450)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(600, 500)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(800)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(800, 50)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(800, 100)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(800, 150)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(800, 200)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(800, 250)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(800, 300)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(800, 350)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(800, 400)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1000)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1000, 50)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1000, 100)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1000, 150)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1000, 200)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1000, 250)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1000, 300)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1000, 350)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1000, 400)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1000, 450)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1000, 500)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1000, 550)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1000, 600)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1000, 650)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1000, 700)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1200)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1200, 50)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1200, 100)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1200, 150)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1200, 200)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1200, 250)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1200, 300)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1400)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1400, 50)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1400, 100)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1400, 150)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1400, 200)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1400, 250)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1400, 300)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1400, 350)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1400, 400)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1400, 450)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1400, 500)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1400, 550)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1400, 600)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1400, 650)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 50)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 100)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 150)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 200)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 250)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 300)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 350)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 400)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 450)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 500)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 550)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 600)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 650)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 700)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 750)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 800)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 850)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 900)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 950)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 1000)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 1050)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 1100)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 1150)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 1200)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 1250)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 1300)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(1600, 1350)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1800)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1800, 50)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1800, 100)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1800, 150)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1800, 200)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1800, 250)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1800, 300)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1800, 350)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(1800, 400)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2000)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2000, 50)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2000, 100)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2000, 150)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2000, 200)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2000, 250)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2000, 300)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2000, 350)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2000, 400)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 50)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 100)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 150)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 200)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 250)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 300)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 350)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 400)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 450)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 500)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 550)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 600)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 650)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 700)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 750)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 800)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 850)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 900)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 950)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 1000)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 1050)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 1100)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 1150)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 1200)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2200, 1250)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400, 50)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400, 100)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400, 150)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400, 200)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400, 250)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400, 300)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400, 350)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400, 400)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400, 450)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400, 500)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400, 550)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400, 600)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400, 650)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400, 700)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400, 750)" xlink:href="#Rcell"/>
+    <use class="evenYear" transform="translate(2400, 800)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2600)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2600, 50)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2600, 100)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2600, 150)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2600, 200)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2600, 250)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2600, 300)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2600, 350)" xlink:href="#Rcell"/>
+    <use class="oddYear" transform="translate(2600, 400)" xlink:href="#Rcell"/>
+    <g>
+      <g clip-path="url(#rec_cs_0_0)" id="rec_0" opacity="1" transform="translate(100, 19)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_0_0">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          PNG
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_0_1)" id="rec_1" opacity="1" transform="translate(100, 69)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_0_1">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          PICS Labels
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_0_2)" id="rec_2" opacity="1" transform="translate(100, 119)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_0_2">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          PICS Rating
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_0_3)" id="rec_3" opacity="1" transform="translate(100, 169)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_0_3">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          CSS 1
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_1_0)" id="rec_4" opacity="1" transform="translate(300, 19)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_1_0">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          HTML 3.2
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_1_1)" id="rec_5" opacity="1" transform="translate(300, 69)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_1_1">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          HTML 4.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_1_2)" id="rec_6" opacity="1" transform="translate(300, 119)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_1_2">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          PICSRules
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_2_0)" id="rec_7" opacity="1" transform="translate(500, 19)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_2_0">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XML 1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_2_1)" id="rec_8" opacity="1" transform="translate(500, 69)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_2_1">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          MathML 1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_2_2)" id="rec_9" opacity="1" transform="translate(500, 119)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_2_2">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          HTML 4.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_2_3)" id="rec_10" opacity="1" transform="translate(500, 169)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_2_3">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          PICS DSig
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_2_4)" id="rec_11" opacity="1" transform="translate(500, 219)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_2_4">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          SMIL 1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_2_5)" id="rec_12" opacity="1" transform="translate(500, 269)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_2_5">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          DOM 1
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_3_0)" id="rec_13" opacity="1" transform="translate(700, 19)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_3_0">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          CSS 1
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_3_1)" id="rec_14" opacity="1" transform="translate(700, 69)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_3_1">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          CSS 1
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_3_2)" id="rec_15" opacity="1" transform="translate(700, 119)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_3_2">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          Namespaces
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_3_3)" id="rec_16" opacity="1" transform="translate(700, 169)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_3_3">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          WebCGM
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_3_4)" id="rec_17" opacity="1" transform="translate(700, 219)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_3_4">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          RDF (Old Version)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_3_5)" id="rec_18" opacity="1" transform="translate(700, 269)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_3_5">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec wai" x="0" y="6">
+          WCAG 1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_3_6)" id="rec_19" opacity="1" transform="translate(700, 319)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_3_6">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          Style Sheets PI
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_3_7)" id="rec_20" opacity="1" transform="translate(700, 369)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_3_7">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          MathML 1.01
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_3_8)" id="rec_21" opacity="1" transform="translate(700, 419)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_3_8">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          XPath 1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_3_9)" id="rec_22" opacity="1" transform="translate(700, 469)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_3_9">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          XSLT 1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_3_10)" id="rec_23" opacity="1" transform="translate(700, 519)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_3_10">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          HTML 4.01
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_4_0)" id="rec_24" opacity="1" transform="translate(900, 19)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_4_0">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          XHTML 1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_4_1)" id="rec_25" opacity="1" transform="translate(900, 69)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_4_1">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec wai" x="0" y="6">
+          ATAG 1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_4_2)" id="rec_26" opacity="1" transform="translate(900, 119)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_4_2">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XML 1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_4_3)" id="rec_27" opacity="1" transform="translate(900, 169)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_4_3">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          DOM 2 Core
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_4_4)" id="rec_28" opacity="1" transform="translate(900, 219)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_4_4">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          DOM 2 Events
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_4_5)" id="rec_29" opacity="1" transform="translate(900, 269)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_4_5">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          DOM 2 Style
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_4_6)" id="rec_30" opacity="1" transform="translate(900, 319)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_4_6">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          DOM 2 Traversal
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_4_7)" id="rec_31" opacity="1" transform="translate(900, 369)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_4_7">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          DOM 2 Views
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_4_8)" id="rec_32" opacity="1" transform="translate(900, 419)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_4_8">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          XHTML Basic
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_5_0)" id="rec_33" opacity="1" transform="translate(1100, 19)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_5_0">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          MathML2
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_5_1)" id="rec_34" opacity="1" transform="translate(1100, 69)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_5_1">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          Canonical XML
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_5_2)" id="rec_35" opacity="1" transform="translate(1100, 119)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_5_2">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          Schema Primer
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_5_3)" id="rec_36" opacity="1" transform="translate(1100, 169)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_5_3">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          Schema Struct.
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_5_4)" id="rec_37" opacity="1" transform="translate(1100, 219)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_5_4">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          Schema Types
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_5_5)" id="rec_38" opacity="1" transform="translate(1100, 269)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_5_5">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          Ruby
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_5_6)" id="rec_39" opacity="1" transform="translate(1100, 319)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_5_6">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          XHTML 1.1
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_5_7)" id="rec_40" opacity="1" transform="translate(1100, 369)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_5_7">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XLink 1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_5_8)" id="rec_41" opacity="1" transform="translate(1100, 419)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_5_8">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XML Base
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_5_9)" id="rec_42" opacity="1" transform="translate(1100, 469)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_5_9">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          SMIL 2.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_5_10)" id="rec_43" opacity="1" transform="translate(1100, 519)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_5_10">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          SMIL Animation
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_5_11)" id="rec_44" opacity="1" transform="translate(1100, 569)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_5_11">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          SVG 1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_5_12)" id="rec_45" opacity="1" transform="translate(1100, 619)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_5_12">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          XSL 1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_5_13)" id="rec_46" opacity="1" transform="translate(1100, 669)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_5_13">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          Infoset
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_5_14)" id="rec_47" opacity="1" transform="translate(1100, 719)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_5_14">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          WebCGM
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_6_0)" id="rec_48" opacity="1" transform="translate(1300, 19)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_6_0">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          XML Sig.
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_6_1)" id="rec_49" opacity="1" transform="translate(1300, 69)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_6_1">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          P3P 1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_6_2)" id="rec_50" opacity="1" transform="translate(1300, 119)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_6_2">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          XML Canonicalization
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_6_3)" id="rec_51" opacity="1" transform="translate(1300, 169)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_6_3">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          XHTML 1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_6_4)" id="rec_52" opacity="1" transform="translate(1300, 219)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_6_4">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          XPath Filter
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_6_5)" id="rec_53" opacity="1" transform="translate(1300, 269)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_6_5">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          Decrypt Transform
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_6_6)" id="rec_54" opacity="1" transform="translate(1300, 319)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_6_6">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec wai" x="0" y="6">
+          UAAG1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_7_0)" id="rec_55" opacity="1" transform="translate(1500, 19)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_7_0">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          DOM-Level-2-HTML
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_7_1)" id="rec_56" opacity="1" transform="translate(1500, 69)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_7_1">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          SVG 1.1
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_7_2)" id="rec_57" opacity="1" transform="translate(1500, 119)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_7_2">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          SVG Mobile
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_7_3)" id="rec_58" opacity="1" transform="translate(1500, 169)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_7_3">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XPTR Element
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_7_4)" id="rec_59" opacity="1" transform="translate(1500, 219)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_7_4">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XPTR Framewk.
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_7_5)" id="rec_60" opacity="1" transform="translate(1500, 269)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_7_5">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XPTR Xmlns
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_7_6)" id="rec_61" opacity="1" transform="translate(1500, 319)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_7_6">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          SOAP Adjuncts
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_7_7)" id="rec_62" opacity="1" transform="translate(1500, 369)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_7_7">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          SOAP Framewk.
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_7_8)" id="rec_63" opacity="1" transform="translate(1500, 419)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_7_8">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          SOAP Primer
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_7_9)" id="rec_64" opacity="1" transform="translate(1500, 469)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_7_9">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          SOAP Tests
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_7_10)" id="rec_65" opacity="1" transform="translate(1500, 519)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_7_10">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          XForms 1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_7_11)" id="rec_66" opacity="1" transform="translate(1500, 569)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_7_11">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          XML Events
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_7_12)" id="rec_67" opacity="1" transform="translate(1500, 619)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_7_12">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          MathML 2.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_7_13)" id="rec_68" opacity="1" transform="translate(1500, 669)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_7_13">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          PNG (2nd)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_0)" id="rec_69" opacity="1" transform="translate(1700, 19)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_0">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          CC/PP
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_1)" id="rec_70" opacity="1" transform="translate(1700, 69)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_1">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          DOM 3 Validation
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_2)" id="rec_71" opacity="1" transform="translate(1700, 119)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_2">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          Infoset (2nd)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_3)" id="rec_72" opacity="1" transform="translate(1700, 169)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_3">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          Namespaces 1.1
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_4)" id="rec_73" opacity="1" transform="translate(1700, 219)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_4">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XML 1.0 (3rd)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_5)" id="rec_74" opacity="1" transform="translate(1700, 269)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_5">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XML 1.1
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_6)" id="rec_75" opacity="1" transform="translate(1700, 319)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_6">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          OWL Guide
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_7)" id="rec_76" opacity="1" transform="translate(1700, 369)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_7">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          OWL Overview
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_8)" id="rec_77" opacity="1" transform="translate(1700, 419)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_8">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          OWL Reference
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_9)" id="rec_78" opacity="1" transform="translate(1700, 469)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_9">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          OWL Semantics
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_10)" id="rec_79" opacity="1" transform="translate(1700, 519)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_10">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          OWL Tests
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_11)" id="rec_80" opacity="1" transform="translate(1700, 569)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_11">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          OWL Use Cases
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_12)" id="rec_81" opacity="1" transform="translate(1700, 619)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_12">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          RDF Concepts
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_13)" id="rec_82" opacity="1" transform="translate(1700, 669)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_13">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          RDF Primer
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_14)" id="rec_83" opacity="1" transform="translate(1700, 719)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_14">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          RDF Schema
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_15)" id="rec_84" opacity="1" transform="translate(1700, 769)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_15">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          RDF Semantics
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_16)" id="rec_85" opacity="1" transform="translate(1700, 819)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_16">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          RDF Test Cases
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_17)" id="rec_86" opacity="1" transform="translate(1700, 869)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_17">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          RDF/XML
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_18)" id="rec_87" opacity="1" transform="translate(1700, 919)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_18">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          Speech Recognition
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_19)" id="rec_88" opacity="1" transform="translate(1700, 969)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_19">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          VoiceXML 2.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_20)" id="rec_89" opacity="1" transform="translate(1700, 1019)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_20">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          DOM 3 Core
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_21)" id="rec_90" opacity="1" transform="translate(1700, 1069)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_21">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          DOM 3 L &amp; S
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_22)" id="rec_91" opacity="1" transform="translate(1700, 1119)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_22">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          Speech Synthesis
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_23)" id="rec_92" opacity="1" transform="translate(1700, 1169)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_23">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          Schema Primer (2nd)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_24)" id="rec_93" opacity="1" transform="translate(1700, 1219)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_24">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          Schema Struct. (2nd)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_25)" id="rec_94" opacity="1" transform="translate(1700, 1269)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_25">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          Schema Types (2nd)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_26)" id="rec_95" opacity="1" transform="translate(1700, 1319)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_26">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          WebArch
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_8_27)" id="rec_96" opacity="1" transform="translate(1700, 1369)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_8_27">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XInclude
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_9_0)" id="rec_97" opacity="1" transform="translate(1900, 19)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_9_0">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          RRSHB
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_9_1)" id="rec_98" opacity="1" transform="translate(1900, 69)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_9_1">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          SOAP MTOM
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_9_2)" id="rec_99" opacity="1" transform="translate(1900, 119)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_9_2">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XOP
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_9_3)" id="rec_100" opacity="1" transform="translate(1900, 169)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_9_3">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          Char Model
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_9_4)" id="rec_101" opacity="1" transform="translate(1900, 219)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_9_4">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          XKMS
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_9_5)" id="rec_102" opacity="1" transform="translate(1900, 269)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_9_5">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          XKMS Bindings
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_9_6)" id="rec_103" opacity="1" transform="translate(1900, 319)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_9_6">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          QA Framework
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_9_7)" id="rec_104" opacity="1" transform="translate(1900, 369)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_9_7">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          xml:id
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_9_8)" id="rec_105" opacity="1" transform="translate(1900, 419)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_9_8">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          SMIL 2.1
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_10_0)" id="rec_106" opacity="1" transform="translate(2100, 19)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_10_0">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          XForms 1.0 (2nd)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_10_1)" id="rec_107" opacity="1" transform="translate(2100, 69)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_10_1">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          WSA Core
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_10_2)" id="rec_108" opacity="1" transform="translate(2100, 119)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_10_2">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          WSA SOAP Binding
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_10_3)" id="rec_109" opacity="1" transform="translate(2100, 169)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_10_3">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          Namespaces 1.1 (2nd.)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_10_4)" id="rec_110" opacity="1" transform="translate(2100, 219)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_10_4">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XML 1.0 (4th)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_10_5)" id="rec_111" opacity="1" transform="translate(2100, 269)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_10_5">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XML 1.1 (2nd.)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_10_6)" id="rec_112" opacity="1" transform="translate(2100, 319)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_10_6">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          XHTML-Print
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_10_7)" id="rec_113" opacity="1" transform="translate(2100, 369)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_10_7">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XInclude (2nd)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_10_8)" id="rec_114" opacity="1" transform="translate(2100, 419)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_10_8">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XSL 1.1
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_0)" id="rec_115" opacity="1" transform="translate(2300, 19)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_0">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XPath 2.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_1)" id="rec_116" opacity="1" transform="translate(2300, 69)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_1">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XQuery 1.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_2)" id="rec_117" opacity="1" transform="translate(2300, 119)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_2">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XQuery Data Model
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_3)" id="rec_118" opacity="1" transform="translate(2300, 169)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_3">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XQuery Formal Semantics
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_4)" id="rec_119" opacity="1" transform="translate(2300, 219)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_4">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XQuery Functs. and Ops.
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_5)" id="rec_120" opacity="1" transform="translate(2300, 269)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_5">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XQuery Serialization
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_6)" id="rec_121" opacity="1" transform="translate(2300, 319)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_6">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XQueryX
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_7)" id="rec_122" opacity="1" transform="translate(2300, 369)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_7">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          XSLT 2.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_8)" id="rec_123" opacity="1" transform="translate(2300, 419)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_8">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          WebCGM 2.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_9)" id="rec_124" opacity="1" transform="translate(2300, 469)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_9">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          ITS
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_10)" id="rec_125" opacity="1" transform="translate(2300, 519)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_10">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          SISR
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_11)" id="rec_126" opacity="1" transform="translate(2300, 569)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_11">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          SOAP Adjuncts (2nd)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_12)" id="rec_127" opacity="1" transform="translate(2300, 619)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_12">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          SOAP Framewk. (2nd)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_13)" id="rec_128" opacity="1" transform="translate(2300, 669)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_13">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          SOAP Primer (2nd)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_14)" id="rec_129" opacity="1" transform="translate(2300, 719)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_14">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          SOAP Tests (2nd)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_15)" id="rec_130" opacity="1" transform="translate(2300, 769)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_15">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          VoiceXML 2.1
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_16)" id="rec_131" opacity="1" transform="translate(2300, 819)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_16">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          WSDL 2.0 Adjuncts
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_17)" id="rec_132" opacity="1" transform="translate(2300, 869)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_17">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          WSDL 2.0 Core
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_18)" id="rec_133" opacity="1" transform="translate(2300, 919)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_18">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          WSDL 2.0 Primer
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_19)" id="rec_134" opacity="1" transform="translate(2300, 969)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_19">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          SAWSDL
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_20)" id="rec_135" opacity="1" transform="translate(2300, 1019)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_20">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          WSA Metadata
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_21)" id="rec_136" opacity="1" transform="translate(2300, 1069)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_21">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          WSP 1.5 Attachment
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_22)" id="rec_137" opacity="1" transform="translate(2300, 1119)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_22">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec arch" x="0" y="6">
+          WSP 1.5 Framework
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_23)" id="rec_138" opacity="1" transform="translate(2300, 1169)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_23">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          GRDDL
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_24)" id="rec_139" opacity="1" transform="translate(2300, 1219)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_24">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          GRDDL Tests
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_11_25)" id="rec_140" opacity="1" transform="translate(2300, 1269)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_11_25">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          XForms 1.0 (3rd)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_0)" id="rec_141" opacity="1" transform="translate(2500, 19)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_0">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          SPARQL Language
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_1)" id="rec_142" opacity="1" transform="translate(2500, 69)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_1">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          SPARQL Protocol
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_2)" id="rec_143" opacity="1" transform="translate(2500, 119)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_2">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          SPARQL Return Format
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_3)" id="rec_144" opacity="1" transform="translate(2500, 169)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_3">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          Canonical XML 1.1
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_4)" id="rec_145" opacity="1" transform="translate(2500, 219)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_4">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec ts" x="0" y="6">
+          XML Sig. (2nd.)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_5)" id="rec_146" opacity="1" transform="translate(2500, 269)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_5">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          MobiWeb BP
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_6)" id="rec_147" opacity="1" transform="translate(2500, 319)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_6">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          XHTML Basic 1.1
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_7)" id="rec_148" opacity="1" transform="translate(2500, 369)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_7">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec in" x="0" y="6">
+          XHTML M12n 1.1
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_8)" id="rec_149" opacity="1" transform="translate(2500, 419)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_8">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          PLS
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_9)" id="rec_150" opacity="1" transform="translate(2500, 469)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_9">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          RDFa
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_10)" id="rec_151" opacity="1" transform="translate(2500, 519)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_10">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          XML 1.0 (5th)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_11)" id="rec_152" opacity="1" transform="translate(2500, 569)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_11">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          SMIL 3.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_12)" id="rec_153" opacity="1" transform="translate(2500, 619)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_12">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          DDR API
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_13)" id="rec_154" opacity="1" transform="translate(2500, 669)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_13">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          mobileOK tests
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_14)" id="rec_155" opacity="1" transform="translate(2500, 719)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_14">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          WCAG 2.0
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_15)" id="rec_156" opacity="1" transform="translate(2500, 769)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_15">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          Element Traversal
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_12_16)" id="rec_157" opacity="1" transform="translate(2500, 819)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_12_16">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          SVG Tiny 1.2
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_13_0)" id="rec_158" opacity="1" transform="translate(2700, 19)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_13_0">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          XML Base (2nd)
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_13_1)" id="rec_159" opacity="1" transform="translate(2700, 69)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_13_1">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          EMMA
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_13_2)" id="rec_160" opacity="1" transform="translate(2700, 119)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_13_2">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          SML
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_13_3)" id="rec_161" opacity="1" transform="translate(2700, 169)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_13_3">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          SML-IF
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_13_4)" id="rec_162" opacity="1" transform="translate(2700, 219)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_13_4">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          SKOS Reference
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_13_5)" id="rec_163" opacity="1" transform="translate(2700, 269)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_13_5">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          POWDER Grouping
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_13_6)" id="rec_164" opacity="1" transform="translate(2700, 319)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_13_6">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          POWDER Resources
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_13_7)" id="rec_165" opacity="1" transform="translate(2700, 369)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_13_7">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          POWDER Semantics
+        </text>
+      </g>
+      <g clip-path="url(#rec_cs_13_8)" id="rec_166" opacity="1" transform="translate(2700, 419)">
+        <clipPath clipPathUnits="userSpaceOnUse" id="rec_cs_13_8">
+          <use transform="translate(-100, -19)" xlink:href="#Rcell"/>
+        </clipPath>
+        <text class="Rrec " x="0" y="6">
+          XForms 1.1
+        </text>
+      </g>
+    </g>
+    <text class="caption" x="100" y="-15">
+      1996
+    </text>
+    <text class="caption" x="300" y="-15">
+      1997
+    </text>
+    <text class="caption" x="500" y="-15">
+      1998
+    </text>
+    <text class="caption" x="700" y="-15">
+      1999
+    </text>
+    <text class="caption" x="900" y="-15">
+      2000
+    </text>
+    <text class="caption" x="1100" y="-15">
+      2001
+    </text>
+    <text class="caption" x="1300" y="-15">
+      2002
+    </text>
+    <text class="caption" x="1500" y="-15">
+      2003
+    </text>
+    <text class="caption" x="1700" y="-15">
+      2004
+    </text>
+    <text class="caption" x="1900" y="-15">
+      2005
+    </text>
+    <text class="caption" x="2100" y="-15">
+      2006
+    </text>
+    <text class="caption" x="2300" y="-15">
+      2007
+    </text>
+    <text class="caption" x="2500" y="-15">
+      2008
+    </text>
+    <text class="caption" x="2700" y="-15">
+      2009
+    </text>
+    <text class="date" y="1372">
+      Date: 21-Oct-2009
+    </text>
+  </svg>

@@ -1,0 +1,63 @@
+body {
+		font-size: 3em;
+}
+/* Notas
+--------------------------------------------------------------------- */
+		#bio div#page_current #current .notas{
+   	   -moz-transform: scale(2);
+			display: block !important;
+			position: fixed;
+			z-index: 10000;
+			top: 0;
+			padding-left: 10px;
+			left: -75%;
+			margin: 0 !important;
+			width: 49%;
+			border: 1px solid;
+			background-color: #FFF;
+		}
+		body,#foot {
+		}
+		#bio div#page_current #current .notas p,
+		#bio div#page_current #current .notas li{
+			font-size: 19px !important
+		}
+		#bio div#page_current #current .notas ul{
+			margin: 0 0 0 1em;
+			padding: 0;
+		}
+		#bio div#page_current #current .notas h3{
+			font-size: 19px !important;
+		}
+		#bio div#page_current #current .notas h4{
+			font-size: 19px !important;
+		}
+#new_scroll_vert,
+#new_scroll_horz,
+#bio #prev-current.slide {
+	display: none;
+}
+#bio #prev-page_current.page,
+#bio #next-page_current.page {
+	left: 0
+}
+
+#bio #current,
+#bio #next-current {
+	-moz-transform: scale(0.5);
+    position: absolute !important;
+	top: -25% !important;
+	left: 25% !important;
+   border: 1px solid
+}
+#bio #next-current {
+	top: 25% !important;
+	left: 25% !important;
+}
+	#bio .page,
+	#bio .slide {
+		transition: none;
+		-moz-transition: none;
+		-o-transition: none;  
+		-webkit-transition: none;
+	}
