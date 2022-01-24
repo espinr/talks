@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<style media="screen" type="text/css">
+body {
+	display: grid;
+	grid: "head head head" 5em
+	      "nav  main ads"
+	      "foot foot foot" 2em
+	     / 1fr  auto 1fr;	
+         min-height: 100vh;
+}
+header { grid-area: head }
+footer { grid-area: foot }
+main   { grid-area: main }
+nav    { grid-area: nav }
+aside   { grid-area: ads }
+    
+    body { margin: 0; color: white; }
+    footer { background-color: #35235D;}
+    header { background-color: #DB2464;}
+    main { background-color: #CB2402; }
+    nav { background-color: #B8DC3C; }
+    aside { background-color: #A31A48; }
+    
+</style>
+</head>
+<body>
+  <header>&lt;header&gt;</header>
+  <main>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie pretium elit, ...</main>
+  <nav>&lt;nav&gt;</nav>
+  <aside>&lt;aside&gt;</aside>
+  <footer>&lt;footer&gt;</footer>
+</body>
+</html>
