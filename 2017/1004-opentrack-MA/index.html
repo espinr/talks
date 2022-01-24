@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Athletics Data Standardisation</title>
+
+    <meta name="description" content="Benefits, history and process to standardise Athletics Data">
+    <meta name="author" content="Martin Alvarez-Espinar">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="../../lib/reveal.js/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../lib/reveal.js/reveal.js/css/theme/white.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="../../lib/reveal.js/reveal.js/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? '../../lib/reveal.js/reveal.js/css/print/pdf.css' : '../../lib/reveal.js/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <style>
+        .slide ul li {
+            list-style: none;
+        }
+        
+        ul>li>ul {
+            font-size: 80%;
+        }
+        
+        .slide .xl {
+            font-size: 200%;
+        }
+        
+        .reveal section img {
+            border: none;
+            box-shadow: none;
+        }
+        
+        #w3c div {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        #whatwedo h2 {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        #opentrackcg h2 {
+            visibility: hidden;
+        }
+        
+        #olympicstadium h2 {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        #oficinaW3C h2 {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        #stakeholders h2 {
+            visibility: hidden;
+        }
+        
+        #thanks {
+            text-align: left;
+        }
+        
+        #thanks ul li {
+            font-size: 90%;
+        }
+    </style>
+    <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>Athletics Data</h1>
+                <h3>Standardisation</h3>
+                <p><small>Martin Alvarez-Espinar (CTIC/W3C Spain Office)</small></p>
+            </section>
+
+            <section>
+                <p><img src="img/standards.png" alt="We have too many standards (14), we need another one? Yes. Now we have 15 standards"></p>
+                <p><small><a href="https://xkcd.com/927/">https://xkcd.com/927/</a></small></p>
+            </section>
+
+            <section>
+                <section id="w3c" data-background="img/w3c.svg">
+                    <div>
+                        <h2>World Wide Web Consortium (W3C)</h2>
+                        <ul>
+                            <li><strong class="xl">Neutral</strong> world-wide organization</li>
+                            <li>Founded in 1994 by <a title="Información sobre Tim Berners-Lee" href="http://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a></li>
+                            <li><strong>+400</strong> <a hreflang="en" title="Lista de Miembros" href="http://www.w3.org/Consortium/Member/List">Member</a> organizations</li>
+                            <li><strong>+1,500</strong> researchers within <strong>+70</strong> <a title="Groups and Activities in W3C" href="http://www.w3.org/2003/02/W3COrg.svg">working groups</a></li>
+                        </ul>
+                        <blockquote>Leading the Web to its full potential.</blockquote>
+                    </div>
+                </section>
+
+                <section id="whatwedo" data-background="img/recs_cloud.png">
+                    <h2>What we do?</h2>
+                </section>
+                <section id="oficinaW3C" data-background="img/oficinaW3C.jpg">
+                    <h2>CTIC/W3C Spanish Office</h2>
+                </section>
+            </section>
+
+            <section id="opentrackcg" data-background="img/opentrackcg.png">
+                <h2>W3C OpenTrack Community Group</h2>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Objective: universal data <strong>interoperability</strong></h2>
+                </section>
+
+                <section id="stakeholders" data-background="img/interoperability.svg">
+                    <h2>Stakeholders</h2>
+                </section>
+
+                <section>
+                    <h2>Based on existing works</h2>
+                    <ul>
+                        <li>Official Rules:
+                            <ul>
+                                <li><a href="https://www.iaaf.org/download/download?filename=89ed4cba-6b5e-49fe-a43e-9f5487b77a84.pdf">IAAF's</a>, <a href="http://www.european-athletics.org/european-athletics/competition-regulations/">European Athletics's</a>,
+                                    <a href="http://www.world-masters-athletics.org/rules/competition/rulesofcompetition.pdf">WMA's</a>…</li>
+                            </ul>
+                        </li>
+                        <li>Existing standards
+                            <ul>
+                                <li><a href="http://www.bbc.co.uk/ontologies/sport">BBC Sports Ontology</a>, <a href="http://odf.olympictech.org/">IOC-ODF</a>, <a href="http://dev.iptc.org/SportsML">IPTC SportsML</a>, <a href="http://schema.org">Schema.org</a>,
+                                    <a href="http://dublincore.org/">Dublin Core</a>…</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Universal?</h2>
+                    <h3>How?</h3>
+                </section>
+
+                <section>
+                    <h2>IDs for “Things”</h2>
+                    <ul>
+                        <li><strong>Unique</strong> IDs for athletes, clubs, teams, event types…</li>
+                        <li class="fragment"><strong>Universal</strong> IDs</li>
+                    </ul>
+                    <p class="fragment">http://example.com/Athlete/ID</p>
+                </section>
+
+                <section>
+                    <h2>Semantics on the Web</h2>
+                    <ul>
+                        <li><strong>“Things”</strong> described on the Web
+                            <ul>
+                                <li class="fragment">Athlete (name, date of birth,…)</li>
+                                <li class="fragment">Competition, Results, Long Jump Trial,…</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Semantic relations</h2>
+                    <p>Logical <strong>relations</strong> between “Things”</p>
+                    <p><img src="img/linkeddata1.svg" alt="Athlete is affiliated to Sport Club, Athlete takes part in competition" /></p>
+                </section>
+
+                <section>
+                    <h2>Network Effect</h2>
+                    <p><strong>Linking data</strong> with external resources</p>
+                    <p><img src="img/linkeddata2.svg" alt="Athlete is affiliated to Sport Club, Athlete takes part in competition, Athlete has personal best managed in another external system" /></p>
+                </section>
+
+                <section>
+                    <h2>Graph of knowledge</h2>
+                    <p><strong>Infinite</strong> connections</p>
+                    <p><img src="img/linkeddata3.svg" alt="Athlete is affiliated to Sport Club, Athlete takes part in competition, Athlete has personal best managed in another external system, Competitions are held in external Venues" /></p>
+                </section>
+            </section>
+
+            <section id="olympicstadium" data-background="img/olympicstadium.png">
+                <h2>Machines already understand these concepts</h2>
+            </section>
+
+            <section>
+                <h2>Final Outcomes</h2>
+                <ul>
+                    <li>Vocabulary
+                        <ul>
+                            <li><strong>Entities</strong> (athlete, venue,…)</li>
+                            <li><strong>Properties</strong> to describe entities (name, location, email, …)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Taxonomies</strong> (countries, disciplines, …)</li>
+                    <li>Common IDs for “Things” (Web identifiers)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Challenges</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pros</th>
+                            <th>Cons</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Flexible</td>
+                            <td>Loose schema</td>
+                        </tr>
+                        <tr>
+                            <td>Extensible</td>
+                            <td>Hard to implement</td>
+                        </tr>
+                        <tr>
+                            <td>Standard</td>
+                            <td>Difficult to understand</td>
+                        </tr>
+                        <tr>
+                            <td>Universal</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>Proposal</h2>
+                <p>Reduced, tight schema</p>
+                <p><img src="img/proposal.svg" alt="OpenTrack Linked Data: Vocabulary + ID schema + taxonomies/ OpenTrack Lite: Minimum vocabulary subset and taxonomies"></p>
+            </section>
+
+
+            <section id="thanks">
+                <h1>Thank you!</h1>
+                <ul>
+                    <li>slides: <a href="https://espinr.github.io/talks/2017/1004-opentrack-MA/">http://w3c.es/Presentaciones/2017/1004-opentrack-MA/</a></li>
+                    <li>works: <a href="https://www.w3.org/community/opentrack/">https://www.w3.org/community/opentrack/</a></li>
+                    <li>me: <a href="https://www.linkedin.com/in/espinr/">martin@w3.org</a></li>
+                </ul>
+            </section>
+
+        </div>
+
+    </div>
+
+    <script src="../../lib/reveal.js/reveal.js/lib/js/head.min.js"></script>
+    <script src="../../lib/reveal.js/reveal.js/js/reveal.js"></script>
+
+    <script>
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [{
+                src: '../../lib/reveal.js/reveal.js/lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: '../../lib/reveal.js/reveal.js/plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../../lib/reveal.js/reveal.js/plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../../lib/reveal.js/reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: '../../lib/reveal.js/reveal.js/plugin/zoom-js/zoom.js',
+                async: true
+            }, {
+                src: '../../lib/reveal.js/reveal.js/plugin/notes/notes.js',
+                async: true
+            }]
+        });
+    </script>
+
+
+</body>
+
+</html>

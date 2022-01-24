@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "AnimaticSC";
+  src: url("fonts/AmaticSC/AmaticSC-Regular.ttf");
+}
+
+@font-face {
+  font-family: "ArchitectsDaughter";
+  src: url("fonts/ArchitectsDaughter/ArchitectsDaughter.ttf");
+}
+
+@font-face {
+  font-family: "Bangers";
+  src: url("fonts/Bangers/Bangers-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Josefin";
+  src: url("fonts/Josefin/JosefinSans-Light.ttf");
+}
+
+@font-face {
+  font-family: "Catamaran";
+  src: url("fonts/Catamaran/Catamaran-Regular.ttf");
+}
+
+
+#cover h2, .slide h2 {
+	font-family: 'Catamaran', serif;
+}
+
+.caption { font-size: 40% !important; color: #888888 !important; }
+.caption a { opacity: 0.4;}
+
+pre.nostandard code { border-left: 10px red solid; }
+pre.nostandard:before { content: "NO ESTÁNDAR"; color: red; }
+
+
+strong.xl {
+	font-size: 200%;
+}
+
+section > ul > li {
+	list-style: none;
+	margin-top: 0.75em !important;
+}
+
+ul.bullets > li {
+	list-style: disc;
+}
+
+section.contrast>h2, section.contrast>p, section.contrast>ul, section.contrast>blockquote {
+	color: #fff;
+}
+
+.contrast {
+	background: rgba(0,0,0,0.7); 
+}
+
+section.onimage {
+	background: rgba(255,255,255,0.9);
+}
+
+section.onimage h2 {
+	padding: 1em 1em 0 1em;
+}
+
+section.onimage p, section.onimage ul {
+	padding: 0 0.5em 0 0.5em;
+}
+
+
+
