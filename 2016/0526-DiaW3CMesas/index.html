@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Día W3C en España 2016</title>
+
+    <meta name="author" content="Martin Alvarez-Espinar">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../lib/2015/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../../lib/2015/reveal.js/css/theme/w3c.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../../lib/2015/reveal.js/lib/css/zenburn.css">
+    <!--link rel="stylesheet" href="./css/custom.css" -->
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = '../../lib/2015/reveal.js/css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+    <!--[if lt IE 9]>
+		<script src="../../lib/js/html5shiv.js"></script>		<![endif]-->
+    <!-- Custom syles -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <img style="position: absolute; top: -5px; right: 1em; border: 0; width: 10%; z-index: -100" src="img/ribon_w3c.png" alt="W3C Spain" />
+
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+
+            <section>
+                <section>
+                    <h2>La interoperabilidad en la Industria de las Cosas</h2>
+                    <img src="img/panel1.png" />
+                </section>
+
+                <section>
+                    <img src="img/wot.png" style="width:90%" />
+                </section>
+
+                <section>
+                    <img src="img/AF4_Arquitectura.jpg" style="width:80%" />
+                </section>
+
+                <section>
+                    <h2>La interoperabilidad en la Industria de las Cosas</h2>
+                    <img src="img/panel1.png" />
+                </section>
+
+            </section>
+
+            <section>
+                <h2>Los habilitadores digitales en el camino hacia la Industria 4.0</h2>
+                <img src="img/panel2.png" />
+            </section>
+
+            <section>
+                <h2>Ciberseguridad en el IoT</h2>
+                <img src="img/panel3.png" />
+            </section>
+
+            <section>
+                <h2>Cloud Computing + Data Analytics</h2>
+                <img src="img/panel4.png" />
+            </section>
+
+            <section>
+                <h2>Itinerarios de transformación digital hacia la Industria 4.0</h2>
+                <img src="img/panel5.png" />
+            </section>
+
+        </div>
+    </div>
+
+    <script src="../../lib/2015/reveal.js/lib/js/head.min.js"></script>
+    <script src="../../lib/2015/reveal.js/js/reveal.js"></script>
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+
+            controls: true,
+            progress: true,
+            slideNumber: true,
+            history: true,
+            keyboard: true,
+            overview: true,
+            center: true,
+            touch: true,
+            loop: false,
+            rtl: false,
+            fragments: true,
+            embedded: false,
+            help: true,
+
+            // Number of milliseconds between automatically proceeding to the next slide
+            // by using a data-autoslide attribute on your slides
+            autoSlide: 0,
+            // Stop auto-sliding after user input
+            autoSlideStoppable: true,
+
+            mouseWheel: false,
+            hideAddressBar: true,
+            previewLinks: false,
+            transition: 'convex', // none/fade/slide/convex/concave/zoom
+            transitionSpeed: 'default', // default/fast/slow
+            backgroundTransition: 'convex', // none/fade/slide/convex/concave/zoom
+            viewDistance: 3,
+
+            // Parallax background image
+            parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+            parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px"
+
+            dependencies: [{
+                src: '../../lib/2015/reveal.js/lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: '../../lib/2015/reveal.js/plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../../lib/2015/reveal.js/plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../../lib/2015/reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: '../../lib/2015/reveal.js/plugin/zoom-js/zoom.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }, {
+                src: '../../lib/2015/reveal.js/plugin/notes/notes.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }]
+        });
+    </script>
+</body>
+
+</html>

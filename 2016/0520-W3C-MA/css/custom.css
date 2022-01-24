@@ -1,0 +1,56 @@
+
+.caption { font-size: 40% !important; color: #888888 !important; }
+.caption a { opacity: 0.4;}
+
+pre.nostandard code { border-left: 10px red solid; }
+pre.nostandard:before { content: "NO ESTÁNDAR"; color: red; }
+
+
+strong.xl {
+	font-size: 200%;
+}
+
+section > ul > li {
+	list-style: none;
+	margin-top: 0.75em !important;
+}
+
+ul.bullets > li {
+	list-style: disc;
+}
+
+section.contrast>h2, section.contrast>p, section.contrast>ul, section.contrast>blockquote {
+	color: #fff;
+}
+
+.contrast {
+	background: rgba(0,0,0,0.7); 
+}
+
+section.onimage {
+	background: rgba(255,255,255,0.9);
+}
+
+section.onimage h2 {
+	padding: 1em 1em 0 1em;
+}
+
+section.onimage p, section.onimage ul {
+	padding: 0 0.5em 0 0.5em;
+}
+
+@font-face {
+font-family: 'JottFLFBold';
+src: url('../fonts/JottFLF/JottFLF-Bold.woff') format('woff');
+}
+
+@font-face {
+font-family: 'EnglandHandDB';
+src: url('../fonts/england/england.woff') format('woff');
+}
+@font-face {
+font-family: 'ProclamateLight';
+src: url('../fonts/proclamate/proclamate_light.woff') format('woff');
+}
+
+

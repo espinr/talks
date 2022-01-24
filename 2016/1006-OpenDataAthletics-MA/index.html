@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>OpenTrack: Data protection and privacy</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../lib/shower/themes/ctic/styles/screen-16x10.css">
+</head>
+
+<body class="shower list">
+    <header class="caption">
+        <h1>OpenTrack: Data protection and privacy</h1>
+    </header>
+    <section class="slide" id="cover">
+        <h2>OpenTrack: Data protection and privacy</h2>
+        <p><a href="https://www.eventbrite.co.uk/e/opentrack-open-data-open-standards-and-open-source-in-athletics-tickets-27538743122">OpenTrack: Open Data, Open Standards and Open Source in Athletics</a>, Madrid (6 October 2016)</p>
+        <p><a href="https://www.linkedin.com/in/espinr/">Martín Álvarez</a> (<a href="http://twitter.com/espinr">@espinr</a>)</p>
+        <img src="img/athletics.jpg" alt="Athletes" class="cover" />
+        <!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+        <style>
+            #cover h2 {
+                margin: 30px 0 0;
+                color: #000;
+                text-align: center;
+                font-size: 70px;
+            }
+            
+            #cover p {
+                margin: 10px 0 0;
+                text-align: center;
+                color: #000;
+                font-style: italic;
+                font-size: 20px;
+            }
+            
+            #cover p a {
+                color: #000;
+            }
+            
+            section#toopen li {
+                list-style: none;
+            }
+            
+            .caution {
+                color: brown;
+                font-weight: bold;
+            }
+            
+            #athletes img {
+                opacity: 0.2;
+            }
+            
+            #toopen img {
+                opacity: 0.2;
+            }
+            
+            #competitions img {
+                opacity: 0.2;
+            }
+            
+            #venues img {
+                opacity: 0.2;
+            }
+            
+            #roadmap * {
+                color: #fff;
+            }
+            
+            #thanks img {
+                opacity: 0.5;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2 class="shout shrink">We cannot publish personal data</h2>
+            <p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Protection of personal data</h2>
+            <ul>
+                <li><a href="http://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX:31995L0046">EU's Data Protection Directive</a>, transposed in all Member States with specific rules for the publication of personal data</li>
+                <li>+100 countries around the world have enacted data protection legislation
+                    <ul>
+                        <li>Acts are similar but not the same</li>
+                    </ul>
+                </li>
+                <li>The OECD publishes a <a href="http://www.oecd.org/sti/ieconomy/privacy.htm#newguidelines">Privacy Framework</a> with guidelines</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Personal data</h2>
+            <figure>
+                <blockquote>Data which relate to a <strong>living individual who can be identified</strong> (a) <strong>from those data</strong>, or (b) from those <strong>data and other information</strong> which is in the possession of the data controller, and
+                    includes opinion about the individual and the intentions of any person in respect of the individual.
+                </blockquote>
+                <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/key-definitions/">ICO key definitions</a>
+            </figure>
+        </div>
+    </section>
+
+
+    <section class="slide" id="toopen">
+        <div>
+            <h2>Data to open up</h2>
+            <img src="img/ria.jpg" alt="Athletes on a steeplechase competition" class="cover" />
+            <ul>
+                <li>Athletes</li>
+                <li>Competitions</li>
+                <li>Venues</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide" id="athletes">
+        <div>
+            <h2>Athletes</h2>
+            <img src="img/athletes.jpg" alt="Athletes" class="cover" />
+            <ul class="double">
+                <li class="caution">personal info</li>
+                <li>team</li>
+                <li>federation</li>
+                <li>coach</li>
+                <li>results (in <a href="#competitions">competitions</a>)</li>
+                <li>personal bests</li>
+                <li>…</li>
+                <!--li class="next caution">biological passport?</span></li-->
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide" id="competitions">
+        <div>
+            <h2>Competitions</h2>
+            <img src="img/roadrunner.jpg" alt="Road race" class="cover" />
+            <ul>
+                <li>participants (<a href="#athletes">athletes</a>, federations, teams)</li>
+                <li>schedule</li>
+                <li>(<a href="#athletes">athletes'</a>) results</li>
+                <li>records</li>
+                <li><a href="#venues">venue</a></li>
+                <li>…</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide" id="venues">
+        <div>
+            <h2>Venues</h2>
+            <img src="img/stadium.jpg" alt="Empty stadium" class="cover" />
+            <ul>
+                <li>type of venue (track and field stadium, road/<abbr title="Cross Country">XC</abbr> courses, <abbr title="etcetera">etc.</abbr></li>
+                <li>location (address, coordinates, …)</li>
+                <li>features (track radius, length, lanes number, <abbr title="etcetera">etc.</abbr>) </li>
+                <li>validated disciplines</li>
+                <li>management</li>
+                <li>…</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Anonymisation</h2>
+            <figure>
+                <blockquote>Anonymisation is the process of turning data into a form which does not identify individuals and where identification is not likely to take place.
+                </blockquote>
+                <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/key-definitions/">ICO key definitions</a>
+            </figure>
+            <br>
+            <p>There are some techniques, but avoiding specific personal fields would be enough.</p>
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <img class="cover" src="img/licencia.jpg" alt="Athlete's personal form" />
+        </div>
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>Another challenge: sensitive personal data</h2>
+            <figure>
+                <blockquote>Personal data consisting of information as to (a) the racial or ethnic origin of the data subject, (b) his political opinions, (c) his religious beliefs or other beliefs of a similar nature, (d) whether he is a member of a trade union,
+                    <strong class="caution">(e) his physical or mental health or condition</strong>, (f) his sexual life, (g) the commission or alleged commission by him of any offence, or (h) any proceedings for any offence committed […] by him […]
+                </blockquote>
+                <a href="https://ico.org.uk/for-organisations/guide-to-data-protection/key-definitions/">ICO key definitions</a>
+            </figure>
+        </div>
+    </section>
+
+    <section class="slide" id="roadmap">
+        <div>
+            <h2>Next steps</h2>
+            <img class="cover" src="img/road.jpg" alt="Empty road" />
+            <ul>
+                <li>Assessment on existing model</li>
+                <li>Check legal implications of publishing these data</li>
+                <li>Development of OpenTrack ontology</li>
+                <li>Choosing a right re-use license</li>
+                <li>Definition of a common privacy disclaimer for athletes to agree</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="slide" id="thanks">
+        <h2>Thanks!</h2>
+        <img class="cover" src="img/martin.jpg" alt="Martin on a dusty road" />
+        <p>Martín Álvarez (<a href="http://twitter.com/espinr">@espinr</a>)</p>
+        <ul>
+            <li>This presentation:<br/><a href="/Presentation/2016/1006-OpenDataAthletics-MA">http://www.w3c.es/Presentation/2016/1006-OpenDataAthletics-MA</a></li>
+            <li>eMail me: <a href="mailto:martin.alvarez@fundacionctic.org">martin.alvarez@fundacionctic.org</a></li>
+            <li>Learn more at: <a href="http://fundacionctic.org">www.fundacionctic.org</a> | <a href="http://www.w3c.es">www.w3c.es</a></li>
+        </ul>
+    </section>
+
+
+    <!--
+	<section class="slide">
+		<h2>Two columns if you like</h2>
+		<p class="double">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+	</section>
+	<section class="slide">
+		<h2>All kind of lists</h2>
+		<ol>
+			<li>Simple lists are marked with bullets</li>
+			<li>Ordered lists begin with a number</li>
+			<li>You can even nest lists one inside another
+				<ul>
+					<li>Or mix their types</li>
+					<li>But do not go too far</li>
+					<li>Otherwise audience will be bored</li>
+				</ul>
+			</li>
+			<li>Look, seven rows exactly!</li>
+		</ol>
+	</section>
+	<section class="slide">
+		<h2>Serious citations</h2>
+		<figure>
+			<blockquote>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+			</blockquote>
+			<figcaption>Marcus Tullius Cicero</figcaption>
+		</figure>
+	</section>
+	<section class="slide">
+		<h2>Code samples</h2>
+		<pre>
+			<code>&lt;!DOCTYPE html&gt;</code>
+			<code class="mark">&lt;html lang="en"&gt;</code>
+			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Comment--&gt;</span></code>
+			<code>    &lt;title&gt;Shower&lt;/title&gt;</code>
+			<code>    &lt;meta charset="<mark class="important">UTF-8</mark>"&gt;</code>
+			<code>    &lt;link rel="stylesheet" href="screen.css"&gt;</code>
+			<code><mark>&lt;/head&gt;</mark></code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Even tables</h2>
+		<table>
+		<tr>
+			<th scope="col">Locavore</th>
+			<th>Umami</th>
+			<th>Helvetica</th>
+			<th>Vegan</th>
+		</tr>
+		<tr>
+			<th scope="row">Fingerstache</th>
+			<td>Kale</td>
+			<td>Chips</td>
+			<td>Keytar</td>
+		</tr>
+		<tr>
+			<th scope="row">Sriracha</th>
+			<td>Gluten-free</td>
+			<td>Ennui</td>
+			<td>Keffiyeh</td>
+		</tr>
+		<tr>
+			<th scope="row">Thundercats</th>
+			<td>Jean</td>
+			<td>Shorts</td>
+			<td>Biodiesel</td>
+		</tr>
+		<tr>
+			<th scope="row">Terry</th>
+			<td>Richardson</td>
+			<td>Swag</td>
+			<td>Blog</td>
+		</tr>
+		</table>
+		<p>It’s good to have information organized.</p>
+	</section>
+	<section class="slide" id="picture">
+		<h2>Pictures</h2>
+		<img src="pictures/picture.jpg" alt="" class="cover">
+		<style>
+			#picture h2 {
+				color:#FFF;
+				}
+		</style>
+	</section>
+	<section class="slide">
+		<h2 class="shout shrink">You can even shout this way</h2>
+	</section>
+	<section class="slide">
+		<h2>Inner navigation</h2>
+		<ol>
+			<li>Lets you reveal list items one by one</li>
+			<li class="next">To keep some key points</li>
+			<li class="next">In secret from audience</li>
+			<li class="next">But it will work only once</li>
+			<li class="next">Nobody wants to see the same joke twice</li>
+		</ol>
+	</section>
+	<section class="slide grid">
+		<h2>All nicely aligned to grid</h2>
+	</section>
+	<section class="slide" id="see-more">
+		<h2 class="shout">
+			<img src="pictures/logo.svg" alt="Shower logo">
+			<a href="https://github.com/shower/shower">See more on GitHub</a>
+		</h2>
+		<style>
+			#see-more h2 {
+				font-size:100px
+				}
+			#see-more img {
+				width:0.72em;
+				height:0.72em;
+				}
+		</style>
+	</section>
+	<p class="badge">
+		<a href=".">Get the slides</a>
+	</p>
+	-->
+    <!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+    <div class="progress"></div>
+    <script src="../../lib/shower/shower.min.js"></script>
+    <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+    <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+
+</html>

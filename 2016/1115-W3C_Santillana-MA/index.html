@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>W3C y los estándares Web</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../lib/shower/themes/w3c/styles/screen-16x10.css">
+    <style>
+        #cover,
+        .subsection {
+            background: #232323;
+        }
+        
+        #cover h1,
+        h2 {
+            color: #FFF;
+        }
+        
+        .subsection h2 {
+            color: #FFF;
+        }
+        
+        #cover h2 {
+            margin: 30px 0 0;
+            color: #FFF;
+            text-align: center;
+            font-size: 70px;
+        }
+        
+        #cover p {
+            margin: 10px 0 0;
+            text-align: center;
+            color: #FFF;
+            font-style: italic;
+            font-size: 20px;
+        }
+        
+        #cover p a {
+            color: #FFF;
+        }
+        
+        #worldwideweb {
+            background-color: #000;
+        }
+        
+        #netscape p {
+            text-align: center;
+        }
+        
+        #future p {
+            text-align: center;
+        }
+        
+        .history h2 {
+            background-color: rgba(255, 255, 255, 0.6);
+            margin: -1.5em 0 0 -2em;
+            padding-left: 1em;
+        }
+        
+        .slide .xl {
+            font-size: 200%;
+            font-weight: bold;
+        }
+        
+        #wg p+p {
+            margin-top: -1em;
+        }
+        
+        #wg .groups {
+            -webkit-column-count: 3;
+            /* Chrome, Safari, Opera */
+            -moz-column-count: 3;
+            /* Firefox */
+            column-count: 3;
+            line-height: 0.8em;
+        }
+        
+        #wg .groups li {
+            font-size: 60%;
+        }
+        
+        #ig .groups {
+            -webkit-column-count: 3;
+            /* Chrome, Safari, Opera */
+            -moz-column-count: 3;
+            /* Firefox */
+            column-count: 3;
+            margin-top: 0;
+        }
+        
+        #ig .groups li {
+            font-size: 70%;
+            line-height: 1.5em;
+        }
+        
+        .s {
+            font-size: 40%;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        .right {
+            text-align: right;
+        }
+        
+        #worldwide {
+            background: #232323;
+        }
+        
+        #worldwideweb h2 {
+            display: none;
+        }
+        
+        #w3c h2 {
+            display: none;
+        }
+        
+        #recs h2 {
+            display: none;
+        }
+        
+        #members h2 {
+            display: none;
+        }
+        
+        #worldwide h2 {
+            color: #fff;
+        }
+        
+        #handsfree video {
+            width: 50%;
+        }
+        
+        #emmy h2,
+        #progress h2,
+        #tpac h2,
+        #tpac p {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        #culture {
+            color: white;
+            background-color: rgba(0, 0, 0, 0);
+        }
+        
+        #culture h2,
+        #culture ul {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        #openwebplatform h2 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="shower list">
+    <header class="caption">
+        <h1>W3C y los estándares Web</h1>
+        <p>Martín Álvarez-Espinar — Oficina W3C España</p>
+    </header>
+    <section class="slide" id="cover">
+        <h2>W3C y los estándares Web</h2>
+        <p><a href="">Santillana Technology Network Annual Event</a></p>
+        <p>Martín Álvarez-Espinar — Oficina W3C España</p>
+        <p>Madrid, 15 noviembre 2016</p>
+        <!--p><a href="https://www.linkedin.com/in/espinr/">Martín Álvarez</a></p-->
+        <video src="video/members.webm" preload autoplay loop class="cover"></video>
+    </section>
+
+
+    <section class="slide" id="future">
+        <h2>27 años de la Web</h2>
+        <p>
+            <img src="img/HTML5_sticker.svg" alt="I've seen the future, it's in my browser">
+        </p>
+    </section>
+    <section class="slide history">
+        <h2>(pre)Historia de la Web</h2>
+        <p>
+            <a href="http://www.w3.org/2005/01/timelines/description"><img class="cover" src="img/timeline-w3c.png" alt="Historia del W3C" /></a>
+        </p>
+    </section>
+    <section class="slide history">
+        <h2>La "Web" en 1989</h2>
+        <p>
+            <a href="http://www.w3.org/2005/01/timelines/description"><img src="img/timeline-w3c_1989.png" class="cover" alt="Historia del W3C (señalado 1989)" /></a>
+        </p>
+    </section>
+    <section class="slide history">
+        <h2>(1989) El primer boceto</h2>
+        <img src="img/proposal.gif" alt="Propuesta de organización de la información de Tim Berners-Lee" class="cover" />
+        <p class="s"><a href="http://www.w3.org/History/1989/proposal.html">Information
+            Management: A Proposal — Tim Berners-Lee, CERN</a>
+        </p>
+    </section>
+    <section class="slide history">
+        <h2>La Web en 1990</h2>
+        <p>
+            <a href="http://www.w3.org/2005/01/timelines/description"><img class="cover" src="img/timeline-w3c_1990.png" alt="Historia del W3C (señalado 1990)" /></a>
+        </p>
+    </section>
+    <section class="slide" id="worldwideweb">
+        <h2>(1990) WorldWideWeb</h2>
+        <p>
+            <img src="img/worldwideweb.gif" class="cover" alt="Pantallazo del WorldWideWeb, primer navegador de la historia" /></p>
+    </section>
+    <section class="slide history">
+        <h2>La Web crece</h2>
+        <p>
+            <a href="http://www.w3.org/2005/01/timelines/description"><img class="cover" src="img/timeline-w3c_1994.png" alt="Historia del W3C (señalado 1993)" /></a>
+        </p>
+    </section>
+    <section class="slide" id="netscape">
+        <h2>La guerra de los navegadores</h2>
+        <p>
+            <img src="img/netscape.gif" alt="Logo de Netscape" /></p>
+    </section>
+    <section class="slide" id="w3c">
+        <h2>¿W3C?</h2>
+        <img src="img/w3c.svg" alt="W3C" class="cover">
+    </section>
+
+    <section class="slide">
+        <div>
+            <h2>El <span lang="en">World Wide Web Consortium</span> (W3C)</h2>
+            <ul>
+                <li>Organismo <strong class="xl">neutro</strong> internacional</li>
+                <li>Fundado en 1994 por <a title="Información sobre Tim Berners-Lee" href="http://www.w3.org/People/Berners-Lee/">Tim
+            Berners-Lee</a> (el ˝Padre de la Web˝)</li>
+            </ul>
+            <blockquote>Con el objetivo de llevar a la Web a su máximo potencial.</blockquote>
+        </div>
+    </section>
+    <section class="slide">
+        <div>
+            <h2>¿Quién compone el W3C?</h2>
+            <ul>
+                <li><strong>+80</strong> personas en el <a hreflang="en" href="http://www.w3.org/People">Team</a></li>
+                <li><strong>+400</strong> organismos <a hreflang="en" title="Lista de Miembros" href="http://www.w3.org/Consortium/Member/List">Miembro</a> de todos los sectores y tamaños</li>
+                <li>El trabajo es desarrollado por <strong>+1.500 de los mejores investigadores</strong> de esos organismos Miembro dentro de <strong>+70 <a title="Gráfico sobre las actividades y grupos del W3C"
+            href="http://www.w3.org/2003/02/W3COrg.svg">grupos de trabajo</a></strong></li>
+            </ul>
+        </div>
+    </section>
+    <section class="slide" id="estandares">
+        <h2>¿Qué hace el W3C?</h2>
+        <p class="xl">Estándares</p>
+        <p>+260 <a href="http://www.w3.org/TR/">Especificaciones</a>, directrices y herramientas para la Web:</p>
+        <!--img src="img/wordcloud_standards.jpg" alt="Nube de palabras con todos los estándares" class="cover"/-->
+        <blockquote>
+            Estándares <strong>abiertos</strong> con la <a href="http://www.w3.org/Consortium/Patent-Policy/" hreflang="en-us">política de patentes</a> más
+            <strong>transparente</strong> en Internet </blockquote>
+    </section>
+    <section class="slide" id="recs">
+        <h2>Recommendations</h2>
+        <img src="img/recs_cloud.png" alt="wordcloud with name of popular standards" class="cover" />
+    </section>
+    <section class="slide">
+        <h2>Liderazgo internacional</h2>
+        <p>+400 organizaciones tecnológicas (públicas, privadas, academia) forman parte del W3C. Todos los sectores están representados.</p>
+        <ul>
+            <li><strong>Conocimiento privilegiado anticipado</strong>. <small class="s">Acceso a documentos estratégicos</small></li>
+            <li><strong>Posición en el mercado</strong>. <small class="s">Reputado <a href="http://archive.boston.com/news/education/higher/specials/mit150/mitlist/">prestigio</a> (Miembros W3C en notas de prensa, eventos, etc.)</small></li>
+            <li><strong>Definición de la estrategia interna</strong>. <small class="s">Acceso a documentos estratégicos sobre el futuro de la Web</small></li>
+            <li><strong>Influir sobre el desarrollo de tecnología</strong> <small class="s">de acuerdo con las necesidades internas</small></li>
+            <li><strong>Proyectos con las principales empresas</strong>. <small class="s">Colaboración entre equipos técnicos y de dirección</small></li>
+            <li><strong>Innovación</strong>. <small class="s">Implementaciones piloto de tecnologías futuras</small></li>
+        </ul>
+    </section>
+    <section class="slide" id="worldwide">
+        <h2>Realmente <span lang="en">WorldWide</span></h2>
+        <video src="video/members.webm" preload autoplay loop class="cover">El mundo, con todos los Miembros del W3C</video>
+    </section>
+    <section class="slide" id="members">
+        <h2>Miembros W3C</h2>
+        <img src="img/members_cloud.png" alt="wordcloud with name of members" class="cover" />
+    </section>
+
+    <section class="slide">
+        <h2>W3C Advisory Comittee (AC)</h2>
+        <p>Cada organización <em>Miembro</em> tiene <strong>un representante</strong> en el Comité Asesor</p>
+        <ul>
+            <li><strong>Decisiones basadas en consenso</strong>. <small class="s">En todos los aspectos técnicos y estratégicos</small></li>
+            <li><strong>Cualquier Miembro puede proponer</strong> nuevas actividades o tecnologías</li>
+            <li><strong>Decide la estrategia</strong> que seguirá el W3C. <small class="s">Roadmap</small></li>
+            <li><strong>Maneja información privilegiada</strong>. <small class="s">Estratégica y técnica</small></li>
+            <li>Representante del AC gestiona la participación de su organización en el W3C</li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h2>¿Cómo trabaja el W3C?</h2>
+        <p><strong>Distintos tipos de grupos</strong> que realizan el trabajo técnico</p>
+        <ul>
+            <li>Grupos compuestos por <strong>personal de los organismos <em>Miembro</em> y del W3C</strong></li>
+            <li><strong>Cualquier <em>Miembro</em> puede participar</strong> en cualquier grupo de trabajo</li>
+            <li>Grupos toman <strong>deciciones basadas en consenso</strong> de sus integrantes</li>
+            <li>Trabajo <strong>en remoto</strong> (teleconferencias, email, wiki, etc.)</li>
+            <li>Dos <strong>reuniones anuales</strong> presenciales (<i>face-to-face</i>)</li>
+            <li>Trabajo <strong>desarrollado en privado</strong> y posterior <strong>revisión del público</strong></li>
+        </ul>
+    </section>
+    <section class="slide" id="ig">
+        <h2>Grupos de Interés</h2>
+        <p>Buscan los <strong>requisitos y casos de usos</strong> de mercados concretos para posible estandarización de tecnología</p>
+        <p>Perfil <small class="s">del participante:</small> tecnólogo con conocimiento del <strong>negocio</strong> de la empresa</p>
+        <ul class="groups">
+            <li><strong>Digital Publishing</strong></li>
+            <li>HTML5 Chinese</li>
+            <li>Internationalization</li>
+            <li>Internationalization Tag Set (ITS)</li>
+            <li>Patents and Standards</li>
+            <li>Privacy</li>
+            <li>Semantic Web Health Care and Life Sciences</li>
+            <li>Semantic Web</li>
+            <li>Social</li>
+            <li>Web Accessibility Initiative</li>
+            <li><strong>Web and TV</strong></li>
+            <li><strong>Web of Things</strong></li>
+            <li><strong>Web Payments</strong></li>
+            <li><strong>Web Security</strong></li>
+            <li><a href="https://www.w3.org/Consortium/activities">todos</a></li>
+        </ul>
+    </section>
+    <section class="slide" id="wg">
+        <h2>Grupos de Trabajo</h2>
+        <p>Desarrollan <strong>estándares técnicos</strong> (especificaciones)</p>
+        <p>Perfil <small class="s">del participante:</small> <strong>ingeniero/experto</strong> en el área</p>
+        <ul class="groups">
+            <li>Accessible Platform Architectures</li>
+            <li>Accessible Rich Internet Applications</li>
+            <li><strong>Audio</strong></li>
+            <li>Automotive</li>
+            <li>Browser Testing and Tools</li>
+            <li>Cascading Style Sheets (CSS)</li>
+            <li><strong>Data on the Web Best Practices</strong></li>
+            <li>Device and Sensors</li>
+            <li>Education and Outreach</li>
+            <li>Efficient XML Interchange</li>
+            <li>Evaluation and Repair Tools</li>
+            <li>Geolocation</li>
+            <li>HTML Media Extensions</li>
+            <li><strong>Internationalization</strong></li>
+            <li>Multimodal Interaction</li>
+            <li>Permissions and Obligations Expression</li>
+            <li>Pointer Events</li>
+            <li>RDF Data Shapes</li>
+            <li><strong>Second Screen Presentation</strong></li>
+            <li>Social Web</li>
+            <li><strong>Spatial Data on the Web</strong></li>
+            <li>SVG</li>
+            <li>Timed Text</li>
+            <li>Tracking Protection</li>
+            <li>TV Control</li>
+            <li>Web Annotation</li>
+            <li>Web Application Security</li>
+            <li>Web Authentication</li>
+            <li>Web Content Accessibility Guidelines</li>
+            <li><strong>Web Cryptography</strong></li>
+            <li><strong>Web Payments</strong></li>
+            <li><strong>Web Performance</strong></li>
+            <li>Web Platform</li>
+            <li><strong>Web Real-Time Communications</strong></li>
+            <li>WebFonts</li>
+            <li>XML Core</li>
+            <li>XML Processing Model</li>
+            <li>XML Query</li>
+            <li>XML Security</li>
+            <li>XSLT</li>
+            <li><a href="https://www.w3.org/Consortium/activities">todos</a></li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h2 class="shout">Un objetivo</h2>
+        <blockquote>Llevar la Web a su máximo potencial</blockquote>
+    </section>
+    <section class="slide">
+        <h2>Acceso universal</h2>
+        <blockquote>...ofrecer la misma información y servicios a los usuarios, independientemente de quienes son, donde están, los sistemas que usan o la forma mediante la que se conectan</blockquote>
+    </section>
+    <section class="slide" id="handsfree">
+        <h2>Independiente del dispositivo</h2>
+        <ul>
+            <li>PCs, lectores de eBook, teléfonos, TVs, PDAs, dispositivos en electrodomésticos o en automóviles...</li>
+            <li>limitación en: ancho de banda, pantalla, colores, sonido...</li>
+        </ul>
+        <p class="center"><video src="video/hands-free.mp4" preload autoplay loop muted>Juego controlado por orina</video><br><a href="https://vimeo.com/117017332">video</a></p>
+    </section>
+
+    <section class="slide">
+        <h2>..."discapacidades" de los usuarios</h2>
+        <ul>
+            <li>distinción de colores, ceguera, ...</li>
+            <li>dificultades de manejo de teclados, ratón, ...</li>
+            <li>dislexia, dificultades cognitivas o neurológicas, ...</li>
+        </ul>
+        <p class="center"><img src="img/braille.jpg" alt="Braille Notebook"></p>
+    </section>
+
+    <section class="slide" id="culture">
+        <h2>..diferencias culturales, geográficas o lingüísticas</h2>
+        <img src="img/nikkei.jpg" alt="Personas pasando delante de indicadores de la bolsa japonesa" class="cover">
+        <ul>
+            <li>sentidos de escritura, diferentes tipos de teclados, ...</li>
+            <li>formato de fechas, números de teléfono, códigos postales, IDs,...</li>
+        </ul>
+        <p class="right s"><a href="https://www.flickr.com/photos/31029865@N06/6646814881">Photo: Dick Thomas Johnson</a></p>
+    </section>
+
+    <section class="slide" id="openwebplatform">
+        <div>
+            <h2>Open Web Platform</h2>
+            <img src="img/openwebplatform1.jpg" alt="El ecosistema de la Plataforma Web Abierta" class="cover">
+        </div>
+    </section>
+
+    <!--section class="slide" id="emmy"><div>
+      <h2 class="shout shrink">Emmy ® Award</h2>
+      <video src="video/emmy-short.mp4" preload autoplay muted loop class="cover"></video>
+  	</div></section-->
+
+    <section class="slide" id="contacto">
+        <h2 class="shout shrink">Gracias</h2>
+        <p><strong>Martín Álvarez Espinar</strong> <em>(Oficina W3C España)</em></p>
+        <p>
+            <a href="https://www.linkedin.com/in/espinr/">martin@w3.org</a> | <a href="http://www.w3c.es">www.w3c.es</a>
+        </p>
+    </section>
+
+    <!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+    <div class="progress"></div>
+    <script src="../../lib/shower/shower.min.js"></script>
+    <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+    <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+
+</html>
