@@ -1,133 +1,139 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-        <title>What Does it Take to Win the Open IoT Challenge 4.0?</title>
+    <title>What Does it Take to Win the Open IoT Challenge 4.0?</title>
 
-        <meta name="description" content="Presentation for the Eclipse IoT Meetup on 6th June 2018">
-        <meta name="author" content="Martin Alvarez-Espinar">
+    <meta name="description" content="Presentation for the Eclipse IoT Meetup on 6th June 2018">
+    <meta name="author" content="Martin Alvarez-Espinar">
 
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <link rel="stylesheet" href="../../lib/reveal.js/reveal.js-3.6.0/css/reveal.css">
-        <link rel="stylesheet" href="../../lib/reveal.js/reveal.js-3.6.0/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="../../lib/reveal.js/reveal.js-3.6.0/css/reveal.css">
+    <link rel="stylesheet" href="../../lib/reveal.js/reveal.js-3.6.0/css/theme/black.css" id="theme">
 
-        <!-- Theme used for syntax highlighting of code -->
-        <link rel="stylesheet" href="../../lib/reveal.js/reveal.js-3.6.0/lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../lib/reveal.js/reveal.js-3.6.0/lib/css/zenburn.css">
 
-        <!-- Printing and PDF exports -->
-        <script>
-            var link = document.createElement( 'link' );
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = window.location.search.match( /print-pdf/gi ) ? '../../lib/reveal.js/reveal.js-3.6.0/css/print/pdf.css' : '../../lib/reveal.js/reveal.js-3.6.0/css/print/paper.css';
-            document.getElementsByTagName( 'head' )[0].appendChild( link );
-        </script>
-        <style type="text/css">
-            a.eclipse, strong { color: orange; }
-            section.pictured { background-color: rgba(0,0,0,0.5); }
-        </style>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? '../../lib/reveal.js/reveal.js-3.6.0/css/print/pdf.css' : '../../lib/reveal.js/reveal.js-3.6.0/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <style type="text/css">
+        a.eclipse,
+        strong {
+            color: orange;
+        }
+        
+        section.pictured {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
 
-        <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
         <![endif]-->
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <div class="reveal">
+    <div class="reveal">
 
-            <!-- Any section element inside of this container is displayed as a slide -->
-            <div class="slides">
-                <section>
-                    <h1>Activ-IoTy Timekeeping</h3>
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1>Activ-IoTy Timekeeping</h3>
                     <p>
                         <small><a class="eclipse" href="https://www.meetup.com/Virtual-IoT/events/251201476/">What Does it Take to Win the Open IoT Challenge 4.0?</a> – 6<sup>th</sup> June, 2018 <br>
                         Martin Alvarez-Espinar <a href="http://twitter.com/espinr">@espinr</a></small>
                     </p>
-                </section>
+            </section>
 
+            <section>
                 <section>
-                    <section>
-                        <h2>about me</h2>
-                        <p>
-                            @espinr<br>#W3C.es<br>#CTIC
-                        </p>
-                    </section>
-                    <section class="pictured" data-background="img/treo.jpg">
-                        <h2>W3C Spain Office</h2>
-                        <p>
-                            <strong>Web Standards</strong> Engagement
-                        </p>
-                    </section>
-                    <section data-background-video="video/CTIC_brief.mp4" data-background-video-muted="true">
-                        <h2 style="visibility: hidden;">CTIC</h2>
-                    </section>
-                    <section>
-                        <h2>In brief…</h2>
-                        <p>IT engineer</p>
-                        <p class="fragment">Web standards <strong>consultant</strong> (eGov)</p>
-                        <p class="fragment">(bad) programmer</p>
-                        <p class="fragment">(very) basic Arduino skills</p>
-                    </section>
+                    <h2>about me</h2>
+                    <p>
+                        @espinr<br>#W3C.es<br>#CTIC
+                    </p>
+                </section>
+                <section class="pictured" data-background="../img/treo.jpg">
+                    <h2>W3C Spain Office</h2>
+                    <p>
+                        <strong>Web Standards</strong> Engagement
+                    </p>
+                </section>
+                <section data-background-video="../video/CTIC_brief.mp4" data-background-video-muted="true">
+                    <h2 style="visibility: hidden;">CTIC</h2>
                 </section>
                 <section>
-                    <h1>Activ-IoTy</h1>
-                    <p>I looked for a good name, but…</p>
+                    <h2>In brief…</h2>
+                    <p>IT engineer</p>
+                    <p class="fragment">Web standards <strong>consultant</strong> (eGov)</p>
+                    <p class="fragment">(bad) programmer</p>
+                    <p class="fragment">(very) basic Arduino skills</p>
+                </section>
+            </section>
+            <section>
+                <h1>Activ-IoTy</h1>
+                <p>I looked for a good name, but…</p>
+            </section>
+            <section>
+                <section>
+                    <h2>The context: Athletics</h2>
                 </section>
                 <section>
-                    <section>
-                        <h2>The context: Athletics</h2>
-                    </section>
-                    <section>
-                        <h2>The most popular sport</h2>
-                        <p><strong>Most followed</strong> discipline at Summer Olympic Games</p>
-                        <ul>
-                            <li>USA: 30,000+ running <strong>events</strong>; 47 million runners</li>
-                            <li>Denmark: 31% <strong>runners</strong></li>
-                            <li>Germany: 25% runners</li>
-                        </ul>
-                        <p><small><em>Source: Statista (2017); and Running across Europe The Rise and Size of one of the Largest Sport Markets (2015)</em></small></p>
-                    </section>
-                    <section data-background-video="video/rfid_solutions.mp4" data-background-video-muted="true" data-background-video-loop="true">
-                        <h2>First-class running events</h2>
-                        <p>Fully Automatic Timekeeping: video, RFID,…</p>
-                        <ul>
-                            <li>Reliable, real-time results, easy for organizers</li>
-                            <li><strong>Expensive</strong> solution; <strong>no standard</strong> exports</li>
-                        </ul>
-                    </section>
-                    <section data-background-video="video/kenyan_xc.mp4" data-background-video-muted="true">
-                    </section>
-                </section>
-                <section>
-                    <h2>My proposal</h2>
-                    <p>Timekeeping system for races</p> 
+                    <h2>The most popular sport</h2>
+                    <p><strong>Most followed</strong> discipline at Summer Olympic Games</p>
                     <ul>
-                        <li>Low cost</li>
-                        <li>Device independent</li>
-                        <li>Plug-and-play</li>
-                        <li>Open Data compliant (<strong>open</strong>, <strong>standard</strong> formats)</li> 
+                        <li>USA: 30,000+ running <strong>events</strong>; 47 million runners</li>
+                        <li>Denmark: 31% <strong>runners</strong></li>
+                        <li>Germany: 25% runners</li>
+                    </ul>
+                    <p><small><em>Source: Statista (2017); and Running across Europe The Rise and Size of one of the Largest Sport Markets (2015)</em></small></p>
+                </section>
+                <section data-background-video="../video/rfid_solutions.mp4" data-background-video-muted="true" data-background-video-loop="true">
+                    <h2>First-class running events</h2>
+                    <p>Fully Automatic Timekeeping: video, RFID,…</p>
+                    <ul>
+                        <li>Reliable, real-time results, easy for organizers</li>
+                        <li><strong>Expensive</strong> solution; <strong>no standard</strong> exports</li>
                     </ul>
                 </section>
-                <section>
-                    <h2>Runners + Checkpoints</h2>
-                    <p><img style="background-color: black; padding: 20px;" src="img/checkpoints-runners.png" alt="Runners and Checkpoints"></p>
+                <section data-background-video="../video/kenyan_xc.mp4" data-background-video-muted="true">
                 </section>
-                <section>
-                    <h2>MQTT 3.1.1</h2>
-                    <p style="float: left;"><img height="500" style="background-color: white;" src="img/checkpoints-runners-report.svg" alt="Runners and Checkpoints"></p>
+            </section>
+            <section>
+                <h2>My proposal</h2>
+                <p>Timekeeping system for races</p>
+                <ul>
+                    <li>Low cost</li>
+                    <li>Device independent</li>
+                    <li>Plug-and-play</li>
+                    <li>Open Data compliant (<strong>open</strong>, <strong>standard</strong> formats)</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Runners + Checkpoints</h2>
+                <p><img style="background-color: black; padding: 20px;" src="../img/checkpoints-runners.png" alt="Runners and Checkpoints"></p>
+            </section>
+            <section>
+                <h2>MQTT 3.1.1</h2>
+                <p style="float: left;"><img height="500" style="background-color: white;" src="../img/checkpoints-runners-report.svg" alt="Runners and Checkpoints"></p>
 
-                    <div style="float: left; text-align: left; margin-left: 2rem;">
-                        <p><strong>Checkpoints</strong>: [1..n] Publishers</p>
-                        <p><strong>Controller</strong>: Subscriber</p>
-                        <p><strong>QoS 1</strong> (At least once delivery)</p>
-                        <pre style="max-width: 500px; margin-left: 0;"><code>//topic: +/checkin
+                <div style="float: left; text-align: left; margin-left: 2rem;">
+                    <p><strong>Checkpoints</strong>: [1..n] Publishers</p>
+                    <p><strong>Controller</strong>: Subscriber</p>
+                    <p><strong>QoS 1</strong> (At least once delivery)</p>
+                    <pre style="max-width: 500px; margin-left: 0;"><code>//topic: +/checkin
 {
     "checkpoint" : { 
         "id" : "…",
@@ -138,57 +144,57 @@
     "timestamp"  : 0000000,
 }
 </code></pre>
-                    </div>
-                </section>
+                </div>
+            </section>
 
+            <section>
                 <section>
-                    <section>
-                        <h2>Low-Cost Checkpoints</h2>
-                        <p>DIY</p>
-                    </section>
-                    <section data-background-video="video/bibnumbers.mp4" data-background-video-muted="true">
-                        <h2><span style="background-color: rgba(0,0,0,0.5);">IR Remote Control</span></h2>
-                    </section>
-                    <section data-background-video="video/keyboard.mp4" data-background-video-muted="true">
-                        <h2><span style="background-color: rgba(0,0,0,0.5);">Bluetooth Keypad + RPi</span></h2>
-                    </section>
+                    <h2>Low-Cost Checkpoints</h2>
+                    <p>DIY</p>
+                </section>
+                <section data-background-video="../video/bibnumbers.mp4" data-background-video-muted="true">
+                    <h2><span style="background-color: rgba(0,0,0,0.5);">IR Remote Control</span></h2>
+                </section>
+                <section data-background-video="../video/keyboard.mp4" data-background-video-muted="true">
+                    <h2><span style="background-color: rgba(0,0,0,0.5);">Bluetooth Keypad + RPi</span></h2>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>RFID Checkpoint</h2>
+                </section>
+                <section data-background-video="../video/rfidreader.mp4" data-background-video-muted="true">
+                    <h2>RFID Reader</h2>
+                </section>
+                <section data-background="../img/testing_run.png">
+                    <h2><span style="background-color: rgba(0,0,0,0.5);">'bib' number + RFID tag</span></h2>
+                </section>
+            </section>
+            <section>
+                <section style="background-color: rgba(0,0,0,0.7);" data-background="../img/upsquared.jpg">
+                    <h2><span>The Controller</span></h2>
+                    <p>Meteor App (Node.js + Blaze + mongoDB)</p>
+                    <p><strong>MQTT-subscribed</strong> to <strong>+/ready</strong> and <strong>+/checkin</strong> topics</p>
+                    <p>Running in a Docker container on Linux <small>(on an Intel UpSquared)</small></p>
+                </section>
+                <section data-background-video="../video/controller_basic_features.mp4" data-background-video-muted="true">
+                </section>
+                <section data-background-video="../video/controller_race.mp4" data-background-video-muted="true">
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>OpenTrack</h2>
+                    <p><a href="https://w3c.github.io/opentrack-cg/">Vocabulary</a> to describe Athletics competitions</p>
+                    <ul>
+                        <li>Based on <a href="http://schema.org">schema.org</a> and JSON-LD</li>
+                        <li>Under development by <a href="https://w3c.github.io/opentrack-cg/">W3C Opentrack Community Group</a></li>
+                        <li>Objective: create standards to <strong>describe</strong> and <strong>publish Athletics data</strong> (calendars, results, competitors, etc.)</li>
+                    </ul>
                 </section>
                 <section>
-                    <section>
-                        <h2>RFID Checkpoint</h2>
-                    </section>
-                    <section data-background-video="video/rfidreader.mp4" data-background-video-muted="true">
-                        <h2>RFID Reader</h2>
-                    </section>
-                    <section data-background="img/testing_run.png">
-                        <h2><span style="background-color: rgba(0,0,0,0.5);">'bib' number + RFID tag</span></h2>
-                    </section>
-                </section>
-                <section>
-                    <section style="background-color: rgba(0,0,0,0.7);" data-background="img/upsquared.jpg">
-                        <h2><span>The Controller</span></h2>
-                        <p>Meteor App (Node.js + Blaze + mongoDB)</p>
-                        <p><strong>MQTT-subscribed</strong> to <strong>+/ready</strong> and <strong>+/checkin</strong> topics</p>
-                        <p>Running in a Docker container on Linux <small>(on an Intel UpSquared)</small></p>
-                    </section>
-                    <section data-background-video="video/controller_basic_features.mp4" data-background-video-muted="true">
-                    </section>
-                    <section data-background-video="video/controller_race.mp4" data-background-video-muted="true">
-                    </section>
-                </section>
-                <section>
-                    <section>
-                        <h2>OpenTrack</h2>
-                        <p><a href="https://w3c.github.io/opentrack-cg/">Vocabulary</a> to describe Athletics competitions</p>
-                        <ul>
-                            <li>Based on <a href="http://schema.org">schema.org</a> and JSON-LD</li>
-                            <li>Under development by <a href="https://w3c.github.io/opentrack-cg/">W3C Opentrack Community Group</a></li>
-                            <li>Objective: create standards to <strong>describe</strong> and <strong>publish Athletics data</strong> (calendars, results, competitors, etc.)</li>
-                        </ul> 
-                    </section>
-                    <section>
-                        <h2>Results in JSON-LD</h2>
-                        <pre><code>{
+                    <h2>Results in JSON-LD</h2>
+                    <pre><code>{
     "@context": "http://w3c.github.io/opentrack-cg/contexts/opentrack.jsonld",
     "@id": "http://activioty.ddns.net/race/ucGQA3quqyuhnmYfQ",
     "@type": "UnitRace",
@@ -228,74 +234,95 @@
     },
     ...
     </code></pre>
-                    </section>
                 </section>
+            </section>
 
+            <section>
                 <section>
-                    <section>
-                        <h1>Lessons learned</h1>
-                    </section>
-                    <section>
-                        <h2>from software development to hardware prototyping</h2>
-                        <p><strong>Many more variables</strong> than in a simple software project</p>
-                        <p>Debugging is a nightmare</p>
-                    </section>
-                    <section>
-                        <h2>The community is key to the growth of IoT</h2>
-                        <p>Available code for almost everything</p>
-                        <p><strong>Mosquitto</strong> and <strong>Paho</strong> are cool!</p>
-                    </section>
-                    <section data-background="img/rfid_reader_case_open3.jpg">
-                        <h2><span style="background-color: rgba(0,0,0,0.7);">Beautiful !== functional</span></h2>
-                    </section>
+                    <h1>Lessons learned</h1>
                 </section>
                 <section>
-                    <h2>Next step?</h2>
-                    <p>Keep working on it…</p>
-                    <p>A pilot for my friends</p>
+                    <h2>from software development to hardware prototyping</h2>
+                    <p><strong>Many more variables</strong> than in a simple software project</p>
+                    <p>Debugging is a nightmare</p>
                 </section>
-                <section style="text-align: left;">
-                    <h1>Thank you!!!</h1>
-                    <p>
-                        <a href="https://espinr.es">Martin Alvarez</a> <a href="https://twitter.com/espinr"><strong>@espinr</strong></a> <br>
-                        <a href="https://github.com/espinr/activioty">github.com/espinr/activioty</a> <br>
-                        <a href="https://ctic.es">CTIC.es</a> / <a href="https://w3c.es">W3C.es</a> <br>
-                        <a href="https://w3c.github.io/opentrack-cg/">w3c.github.io/opentrack-cg/</a> <br>
-                    </p>
+                <section>
+                    <h2>The community is key to the growth of IoT</h2>
+                    <p>Available code for almost everything</p>
+                    <p><strong>Mosquitto</strong> and <strong>Paho</strong> are cool!</p>
                 </section>
-
-            </div>
+                <section data-background="../img/rfid_reader_case_open3.jpg">
+                    <h2><span style="background-color: rgba(0,0,0,0.7);">Beautiful !== functional</span></h2>
+                </section>
+            </section>
+            <section>
+                <h2>Next step?</h2>
+                <p>Keep working on it…</p>
+                <p>A pilot for my friends</p>
+            </section>
+            <section style="text-align: left;">
+                <h1>Thank you!!!</h1>
+                <p>
+                    <a href="https://espinr.es">Martin Alvarez</a> <a href="https://twitter.com/espinr"><strong>@espinr</strong></a> <br>
+                    <a href="https://github.com/espinr/activioty">github.com/espinr/activioty</a> <br>
+                    <a href="https://ctic.es">CTIC.es</a> / <a href="https://w3c.es">W3C.es</a> <br>
+                    <a href="https://w3c.github.io/opentrack-cg/">w3c.github.io/opentrack-cg/</a> <br>
+                </p>
+            </section>
 
         </div>
 
-        <script src="../../lib/reveal.js/reveal.js-3.6.0/lib/js/head.min.js"></script>
-        <script src="../../lib/reveal.js/reveal.js-3.6.0/js/reveal.js"></script>
+    </div>
 
-        <script>
+    <script src="../../lib/reveal.js/reveal.js-3.6.0/lib/js/head.min.js"></script>
+    <script src="../../lib/reveal.js/reveal.js-3.6.0/js/reveal.js"></script>
 
-            // More info https://github.com/hakimel/reveal.js#configuration
-            Reveal.initialize({
-                controls: true,
-                progress: true,
-                history: true,
-                center: true,
-                controlsLayout: 'edges',
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            controlsLayout: 'edges',
 
-                transition: 'slide', // none/fade/slide/convex/concave/zoom
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-                // More info https://github.com/hakimel/reveal.js#dependencies
-                dependencies: [
-                    { src: '../../lib/reveal.js/reveal.js-3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                    { src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                    { src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/search/search.js', async: true },
-                    { src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/zoom-js/zoom.js', async: true },
-                    { src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/notes/notes.js', async: true }
-                ]
-            });
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [{
+                src: '../../lib/reveal.js/reveal.js-3.6.0/lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/search/search.js',
+                async: true
+            }, {
+                src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/zoom-js/zoom.js',
+                async: true
+            }, {
+                src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/notes/notes.js',
+                async: true
+            }]
+        });
+    </script>
 
-        </script>
+</body>
 
-    </body>
 </html>
