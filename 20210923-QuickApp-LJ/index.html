@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Quick App Example - Long Jump Competition</title>
+
+        <meta name="description" content="Presentation for the AthTech21, Sep 2021">
+        <meta name="author" content="Martin Alvarez-Espinar">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="../../lib/reveal.js/reveal.js-3.6.0/css/reveal.css">
+        <link rel="stylesheet" href="../../lib/reveal.js/reveal.js-3.6.0/css/theme/white.css" id="theme">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="../../lib/reveal.js/reveal.js-3.6.0/lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? '../../lib/reveal.js/reveal.js-3.6.0/css/print/pdf.css' : '../../lib/reveal.js/reveal.js-3.6.0/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <style type="text/css">
+            .reveal a, .reveal a:hover, .reveal a:link, .reveal a:visited, .reveal a:active, section strong { color: orange; }
+        </style>
+
+        <!--[if lt IE 9]>
+        <script src="../../lib/reveal.js/reveal.js-3.6.0/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>Long Jump Quick App</h1>
+                    <p>
+                        <small><a href="http://athtech.run/2021/">4<sup>th</sup> AthTech</a> – 23<sup>th</sup> Sep, 2021</small>
+                    </p>
+                    <p>Martin Alvarez <a href="https://quick-app-initiative.ow2.io/">Quick App Initiative</a></p>
+                </section>
+                <section>
+                    <h2>At the Stadium</h2>
+                    <div style="float:left; width:40%"><img style="border: none; box-shadow: none" src="img/stadium.png" alt="Stadium"/><br><small style="font-size: 20%">(stadium by parkjisun from the Noun Project</small></div>
+                    <div style="float:right; width:40%"><img style="border: none; box-shadow: none" src="img/qrcode.png" alt="Scan QR Code"/><br><small style="font-size: 20%">(QR Code by Jenie Tomboc from the Noun Project</small></div>                    
+                </section>
+                <section class="pictured">
+                    <p><video style="height: 85vh; box-shadow: 0 0 10px rgba(0, 0, 0, 0.95); border-radius: 15px" data-autoplay src="https://espinr.github.io/sandbox/quickapps/euro-champs-widget/images/quickapp-longjump.mp4"/></p>
+                </section>                
+            </div>
+
+        </div>
+
+        <script src="../../lib/reveal.js/reveal.js-3.6.0/lib/js/head.min.js"></script>
+        <script src="../../lib/reveal.js/reveal.js-3.6.0/js/reveal.js"></script>
+
+        <script>
+
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                autoPlayMedia: true,
+                controlsLayout: 'edges',
+
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: '../../lib/reveal.js/reveal.js-3.6.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/search/search.js', async: true },
+                    { src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/zoom-js/zoom.js', async: true },
+                    { src: '../../lib/reveal.js/reveal.js-3.6.0/plugin/notes/notes.js', async: true }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>
