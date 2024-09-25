@@ -35,7 +35,7 @@
        index mode and on the 2nd screen. If you keep it, you may want
        to add the class "duration=n" on BODY, where n is the initial
        number of minutes on the clock. Default is 30. -->
-  <div class=clock></div>
+  <!--div class=clock></div-->
 
   <!-- Alternative: Show also real time and elapsed time. -->
   <!-- <div class=fullclock></div> -->
@@ -48,7 +48,6 @@
 
   <section class="slide cover clear" id="s1">
     <h1>MiniApps <abbr title="Working Group">WG</abbr></h1>
-    <address>Martin Alvarez-Espinar</address>
     <p>TPAC 2024<br>
       Anaheim CA, USA<br>
       hybrid meeting<br>
@@ -76,7 +75,9 @@
     <h2>Logistics & Administrivia</h2>
     <ul>
       <li>Welcome!</li>
-      <li>Please, remember the <a href='https://www.w3.org/policies/code-of-conduct/'>W3C's Code of Conduct</a>.</li>
+      <li>Please, remind the W3C <a href="https://www.w3.org/Consortium/cepc/">Code of Ethics and Professional
+        Conduct</a> and the <a href="https://www.w3.org/policies/antitrust-2024/">Antitrust and Competition
+        Guidance</a></li>
       <li>IRC: <em>#miniapp</em> (you can use <a href="https://irc.w3.org">irc.w3.org</a>)
         <ul>
           <li>`q+` to add a question</li>
@@ -94,9 +95,6 @@
   <section class="slide" id="agenda-specs-1">
     <h2>Status of the specs</h2>
     <ul>
-      <li><em>MiniApp Lifecycle</em></li>
-      <li>MiniApp Addressing</li>
-      <li>MiniApp Widgets Requirements</li>
       <li>MiniApp Packaging</li>
       <li>MiniApp Manifest</li>
       <li>MiniApp Components</li>
@@ -107,7 +105,7 @@
      <p>Notes.</p>
    </section -->
 
-  <section class="slide" id="specs-lifecycle">
+  <!--section class="slide" id="specs-lifecycle">
     <h2>MiniApp Lifecycle</h2>
     <p>Specific <strong>events</strong> and an interface for the MiniApp object and its pages</p>
     <h3>MiniApp lifecycle:</h3>
@@ -131,7 +129,7 @@
       <li>MiniApp Manifest</li>
       <li>MiniApp Components</li>
     </ul>
-  </section>
+  </section -->
 
   <!-- section class="comment">
      <p>Notes.</p>
@@ -139,7 +137,7 @@
 
 
 
-  <section class="slide" id="specs-addressing">
+  <!--section class="slide" id="specs-addressing">
     <h2>MiniApp Addressing</h2>
     <h3>URIs for MiniApps</h3>
     <p class="note"><code>platform://miniapp/foo;version=1.0.1/pages/index?k=v#bar</code></p>
@@ -161,14 +159,14 @@
       <li>MiniApp Manifest</li>
       <li>MiniApp Components</li>
     </ul>
-  </section>
+  </section -->
 
   <!-- section class="comment">
      <p>Notes.</p>
    </section -->
 
 
-  <section class="slide" id="specs-widgets">
+  <!--section class="slide" id="specs-widgets">
     <h2>MiniApp Widgets Requirements</h2>
     <p>Scenarios and requirements for MiniApp Widgets (particular MiniApp pages)</p>
     <p>Placed in a specific area of a device</p>
@@ -177,7 +175,7 @@
       <li>Spec: <a href="https://www.w3.org/TR/miniapp-widget-req/">https://www.w3.org/TR/miniapp-widget-req/</a></li>
       <li>Repo: <a href="https://github.com/w3c/miniapp-widget-req">https://github.com/w3c/miniapp-widget-req</a></li>
     </ul>
-  </section>
+  </section-->
 
   <!-- section class="comment">
      <p>Notes.</p>
@@ -187,12 +185,8 @@
   <section class="slide" id="agenda-specs-4">
     <h2>Status of the specs</h2>
     <ul>
-      <li>MiniApp Lifecycle</li>
-      <li>MiniApp Addressing</li>
-      <li>MiniApp Widgets Requirements</li>
       <li><em>MiniApp Packaging</em></li>
       <li>MiniApp Manifest</li>
-      <li>MiniApp Components</li>
     </ul>
   </section>
 
@@ -208,7 +202,7 @@
     <ul>
       <li>Pages, components, styles,… </li>
       <li>Packaging format, file-system, directories…</li>
-      <li>Digital signatures (for developer, publishers, others…)</li>
+      <li>Digital signatures (for developer, publishers, others…) - <i>Optional</i></li>
     </ul>
     <h3>Status: <abbr title="Working Draft">WD</abbr></h3>
     <ul>
@@ -237,7 +231,7 @@
     <p>Current proposal: <em>based on Web Components</em></p>
   </section>
 
-  <section class="slide side r" id="packaging-filesystem">
+  <!--section class="slide side r" id="packaging-filesystem">
     <h2>File System</h2>
     <img class="side" width=498 height=700 src="./img/filesystem.png" alt="Filesystem structure of a miniapp package">
     <p>Homogeneous structure:</p>
@@ -248,7 +242,7 @@
       <li><code>common/</code>: shared media, script resources </li>
       <li><code>i18n/</code>: localization of content</li>
     </ul>
-  </section>
+  </section-->
 
   <!-- section class="comment">
      <p>Notes.</p>
@@ -284,12 +278,8 @@
   <section class="slide" id="agenda-specs-5">
     <h2>Status of the specs</h2>
     <ul>
-      <li>MiniApp Lifecycle</li>
-      <li>MiniApp Addressing</li>
-      <li>MiniApp Widgets Requirements</li>
       <li>MiniApp Packaging</li>
       <li><em>MiniApp Manifest</em></li>
-      <li>MiniApp Components</li>
     </ul>
   </section>
 
@@ -362,23 +352,20 @@
     <p class="note"><a href="https://github.com/w3c/miniapp-manifest/issues/42">Open discussion</a></p>
    </section-->
 
-  <section class="slide" id="agenda-specs-6">
+  <!--section class="slide" id="agenda-specs-6">
     <h2>Status of the specs</h2>
     <ul>
-      <li>MiniApp Lifecycle</li>
-      <li>MiniApp Addressing</li>
-      <li>MiniApp Widgets Requirements</li>
       <li>MiniApp Packaging</li>
       <li>MiniApp Manifest</li>
       <li><em>MiniApp Components</em></li>
     </ul>
-  </section>
+  </section-->
 
   <!-- section class="comment">
      <p>Notes.</p>
    </section -->
 
-  <section class="slide" id="specs-components">
+  <!--section class="slide" id="specs-components">
     <h2>MiniApp Components</h2>
     <p>Gap analysis of solutions in MiniApp implementations</p>
     <ul>
@@ -392,14 +379,14 @@
       <li>Spec: <a href="https://w3c.github.io/miniapp-components/">https://w3c.github.io/miniapp-components/</a></li>
       <li>Repo: <a href="https://github.com/w3c/miniapp-components/">https://github.com/w3c/miniapp-components/</a></li>
     </ul>
-  </section>
+  </section-->
 
   <!-- section class="comment">
      <p>Notes.</p>
    </section -->
 
 
-   <section class="slide" id="specs-iot">
+   <!--section class="slide" id="specs-iot">
     <h2>MiniApp for IoT</h2>
     <p>Use cases of MiniApp for IoT devices</p>
     <ul>
@@ -410,7 +397,7 @@
       <li>Spec: <a href="https://w3c.github.io/miniapp-iot/">https://w3c.github.io/miniapp-iot/</a></li>
       <li>Repo: <a href="https://github.com/w3c/miniapp-iot/">https://github.com/w3c/miniapp-iot/</a></li>
     </ul>
-  </section>
+  </section-->
 
   <!-- section class="comment">
      <p>Notes.</p>
@@ -420,7 +407,7 @@
     <h2>Next steps</h2>
     <ol>
       <li><em>MiniApp Elements & MiniApp API (Proposals)</em></li>
-      <li>MiniApp Object Model (Proposal)</li>
+      <li>MiniApp Performance (Discussion)</li>
     </ol>
   </section>
 
@@ -429,13 +416,13 @@
    </section -->
 
   <section class="slide" id="elements">
-    <h2>MiniApp HTML Profile (Proposal)</h2>
-    <p>Objective: define a subset of common HTML elements required by MiniApp user agents (e.g., media, EPUB).</p>
-    <ul>
-      <li>Minimum set of <em>standard HTML</em> elements present</li>
-      <li>Incubation in the <abbr title="Community  Group">CG</abbr>.</li>
-      <li>Based on the existing gap analysis (+ including other MiniApp implementations).</li>
-    </ul>
+    <h2>MiniApp HTML Elements and MiniApp API Baseline (Proposals)</h2>
+    <p>Objective: define a subset of common <em>HTML elements</em> and subset of <em>common APIs</em> required by MiniApp user agents (e.g., media, EPUB).</p>
+    <ol>
+      <li>Baseline for <em>standard HTML</em> elements</li> 
+      <li>Baseline for <em>Web APIs</em> elements</li>
+    </ol>
+    <p>Incubation in the <abbr title="Community  Group">CG</abbr>.</p>
     <p class="next">Comments?</p>
   </section>
 
@@ -447,7 +434,7 @@
     <h2>Next steps</h2>
     <ol>
       <li>MiniApp Elements and API (Proposals)</li>
-      <li><em>MiniApp Object Model (Proposal)</em></li>
+      <li><em>MiniApp Performance (Discussion)</em></li>
     </ol>
   </section>
 
@@ -457,11 +444,18 @@
 
 
   <section class="slide" id="objectmodel">
-    <h2>MiniApp Object Model (Proposal)</h2>
-    <p>Objective: define the document object model for MiniApps.</p>
+    <h2>MiniApp Performance (Discussion)</h2>
+    <p>Some comments, requirements:</p>
     <ul>
-      <li>Baidu? Tencent?</li>
+      <li>Cross-platform development is a strong demand: 
+        <ol>
+          <li>modifying and optimizing DOM and HTML;</li> 
+          <li>a new engine and runtime mechanism? prioritizing performance and experience with a dual-engine approach.</li>
+        </ol>
+      </li>
+      <li>There are many different MiniApp <abbr title='Domain Specific Languages'>DSLs</abbr></li>
     </ul>
+    <p class="incremental">Bytedance's Presentation</p>
     <p class="incremental">Comments?</p>
   </section>
 
