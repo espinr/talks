@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset=UTF-8>
+  <meta content="width=device-width" name="viewport">
+  <title>MiniApp Standardization - Opportunities and Security Challenges</title>
+  <link rel="stylesheet" href="../Templates/ACM-2024/slides.css">
+  <!-- To use the b6+ framework, include this: -->
+  <script src="../Templates/ACM-2024/b6plus.js"></script>
+  <!-- To use the Shower framework, remove b6plus above and add these two: -->
+  <!--   <script src="../Templates/ACM-2024/shower.js"></script>         -->
+  <!--   <script src="../Templates/ACM-2024/iframe-fixup.js"></script>   -->
+</head>
+
+<body class="shower fade-in duration=50">
+
+  <section class="long comment">
+    <!-- For b6plus: -->
+    <p>To start the slide show,
+      press ‘A’. Return to the index with ‘A’ or ‘Esc’. On a
+      touch screen, use a 3-finger touch. Double click to
+      open a specific slide. In slide mode, press ‘?’ (question mark) to
+      get a list of available commands.</p>
+  </section>
+
+  <!-- Remove this element if you don't want a progress bar: -->
+  <!-- div class=progress></div -->
+
+  <!-- Remove this element if you don't want the remaining time in
+       index mode and on the 2nd screen. If you keep it, you may want
+       to add the class "duration=n" on BODY, where n is the initial
+       number of minutes on the clock. Default is 30. -->
+  <!--div class=clock></div-->
+
+  <!-- Alternative: Show also real time and elapsed time. -->
+  <!-- <div class=fullclock></div> -->
+
+  <!-- What a screen reader should say on leaving slide mode,
+       instead of the default ‘Stopped.’ -->
+  <div role=region aria-live=assertive>
+    Leaving slide mode.
+  </div>
+
+  <section class="slide cover clear" id="s1">
+    <h1>MiniApp Standardization - Opportunities and Challenges</h1>
+    <h3>Martin Alvarez-Espinar</h3>
+    <p>ACM Workshop on Secure and Trustworthy Superapps (<abbr title="Secure and Trustworthy Superapps">SaTS</abbr>)<br>
+      Co-located with ACM CCS 2024<br>
+      Salt Lake City, USA<br>
+      14 October 2024</p>
+  </section>
+
+  <section class="slide" id="me">
+    <h2>Me</h2>
+    <p class="shout">#developer #interoperability #EU #w3c #huawei <em>#standards</em> </p>
+  </section>
+
+  <section class="slide">
+    <h2>Contents</h2>
+    <ol>
+      <li>How it all started</li>
+      <li>MiniApp standardization</li>
+      <li>Status of the specs</li>
+      <li>Challenges</li>
+    </ol>
+  </section>
+
+  <section class="slide clear">
+    <h2>Light apps ecosystem</h2>
+    <img class="side fit" src="img/miniapps_1.png" alt="Several MiniApp versions depending on SuperApps">
+   </section>
+
+   <section class="slide clear">
+    <h2>Light apps ecosystem</h2>
+    <img class="side fit" src="img/miniapps_2.png" alt="Incremental image from previous one, plus PWAs and Isolated Web Apps">
+   </section>
+
+   <section class="slide clear">
+    <h2>Light apps</h2>
+    <img class="side fit" src="img/miniapps_3.png" alt="Incremental image from previous one, plus some other apps like KaiOS apps">
+   </section>
+
+   <section class="slide clear">
+    <h2>Light apps</h2>
+    <img class="side fit" src="img/miniapps_4.png" alt="Incremental image from previous one, plus App Clips for iOS">
+   </section>
+
+   <section class="slide clear">
+    <h2>Light apps</h2>
+    <img class="side fit" src="img/miniapps_5.png" alt="Incremental image from previous one, plus Atomic Services for HarmonyOS">
+   </section>
+
+   <section class="slide clear">
+    <h2>Light apps</h2>
+    <img class="side fit" src="img/miniapps_all.png" alt="Incremental image from previous one, plus several for Android, including WebAPKs, Instant Apps, Quick Apps...">
+   </section>
+
+   <section class="slide">
+    <h2>Challenges</h2>
+    <ul class="incremental">
+      <li>Development: how <em>to code</em> my MiniApp for n+1 SuperApps
+        <ul>
+          <li>Specific elements, APIs, ...</li>
+          <li>Scripts, third-party libraries...</li>
+          <li>Architecture and performance</li>
+        </ul>
+      </li>
+      <li>Publication: how to <em>deliver it</em> on different platforms (i.e., registration, validation, maintenance)</li>
+      <li>Versioning and maintenance...</li>
+    </ul>
+  </section>
+
+  <section class="slide side right">
+    <h2>I wish...</h2>
+    <p class="shout">coding ~once, run everywhere...</p>
+    <div class="side"><iframe width="100" height="300" src="./iframe.html"></iframe></div>
+  </section>
+
+  <section class="slide">
+    <h2>Based on Web</h2>
+    <pre class="numbered">&lt;template&gt;
+  &lt;div class="main-page"&gt;
+    &lt;text class="title"&gt;{{title}}&lt;/text&gt;
+    &lt;input type="button" onclick="changeText" /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+   </section>
+
+   <section class="slide">
+    <h2>Based on Web</h2>
+    <pre class="numbered">&lt;template&gt;
+  &lt;div class="main-page"&gt;
+    &lt;text class="title"&gt;<em>{{title}}</em>&lt;/text&gt;
+    &lt;input type="button" onclick="changeText" /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+   </section>
+
+   <section class="slide">
+    <h2>But... we don't interact directly with DOM</h2>
+    <pre class="numbered">&lt;script&gt;
+  export default {
+    private: {
+      title: 'This is a quick app'
+    },
+    changeText () {
+      this.title = 'hello world'
+    }
+  }
+&lt;/script&gt;</pre>
+   </section>
+
+   <section class="slide">
+    <h2>But... we don't interact directly with DOM</h2>
+    <pre class="numbered">&lt;script&gt;
+  export default {
+    private: {
+      title: 'This is a quick app'
+    },
+    changeText () {
+      <em>this.title</em> = 'hello world'
+    }
+  }
+&lt;/script&gt;</pre>
+   </section>
+
+   <section class="slide">
+    <h2>And... Wait!</h2>
+    <pre class="numbered">&lt;template&gt;
+  &lt;div class="main-page"&gt;
+    <em>&lt;text</em> class="title"&gt;{{title}}&lt;/text&gt;
+    &lt;input type="button" onclick="changeText" /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;</pre>
+   </section>
+
+   <section class="slide ">
+    <h2>Architecture</h2>
+    <img width="420" src="img/architecture.png" alt="Different blocks in a layer from bottom to the top: OS and Hardware, a bridge, two engines and front-end framework">
+   </section>
+
+   <section class="slide ">
+    <h2>Execution environment</h2>
+    <img width="420" src="img/execution.png" alt="">
+   </section>
+
+   <section class="slide ">
+    <h2>Services and APIs</h2>
+    <img width="530" src="img/services.png" alt="">
+   </section>
+
+   <section class="slide">
+    <h2>Contents</h2>
+    <ol>
+      <li>How it all started</li>
+      <li><em>MiniApp standardization</em></li>
+      <li>Status of the specs</li>
+      <li>Challenges</li>
+    </ol>
+  </section>
+
+  <section class="slide side right">
+    <h2>We decided to create a homogeneous ecosystem</h2>
+    <img class="side" src="img/w3c-white-blue-circle.svg" alt="W3C">
+    <p>Standards to:</p>
+    <ul>
+      <li>Develop and distribute MiniApps</li>
+      <li>Develop MiniApp user agents (SuperApps)</li>
+      <li class="next"><em>Converge with the Web Platform</em></li>
+    </ul>
+   </section>
+
+  <section class="slide">
+    <h2>World Wide Web Consortium</h2>
+    <ul>
+        <li>Created <strong>30 years ago!</strong> by Sir Tim Berners-Lee (now W3C Inc.)</li>
+        <li><em>680+ standards</em><sup>*</sup> in 113 technology domains</li>
+        <li><em>364 Member</em> organizations</li>
+      </ul>
+      <h3>Organization</h3>
+      <ul>
+        <li><abbr>CEO</abbr> + Board of Directors + supporting Staff</li>
+        <li class="next">Advisory Committee or <abbr title="Advisory Committee">AC</abbr> - 364 <abbr title="representatives">reps.</abbr> (one member, one vote)</li>
+        <li class="next">Advisory Board or <abbr>AB</abbr>: strategy</li>
+        <li class="next"><em>Technical Architecture Group</em> or <abbr>TAG</abbr>: technical guidance</li>
+      </ul>
+
+      <p class="note">Technical Reports, including Recommendations and Group Notes</p>
+  </section>
+
+   <section class="slide">
+    <h2>How the work is done?</h2>
+      <h3>Members propose topics, work on them through</h3>
+      <ul>
+        <li>Interest Groups (10 <abbr>IG</abbr>): requirements (e.g., Web Payments Security IG)</li>
+        <li>Business Groups (2 <abbr>BG</abbr>): high-level reqs for verticals (e.g., Entertainment)</li>
+        <li>Working Groups (43 <abbr>WG</abbr>): technical standards (e.g., CSS WG)</li>
+        <li>Community Groups (143 <abbr>CG</abbr>): public incubation discussions (e.g., Web Incubation Community Group - <abbr title="Web Incubation Community Group">WICG</abbr>)</li>
+      </ul>
+      <h3>Liaisons with other <abbr title="Standard Development Organizations">SDOs</abbr></h3>
+      <p>Ecma International, FIDO, ISO...</p>
+  </section>
+
+  <section class="slide clear lightmode" >
+    <h2>MiniApps @ W3C back in 2019</h2>
+    <img class="fit" src="img/timeline-1.png" alt="Timeline from incubation (starting in 2019) to standardization (in progress today)">
+   </section>
+
+  <section class="slide" >
+    <h2><abbr>WG</abbr> Charter</h2>
+    <img width="500" src="img/charter.jpg" alt="Charter of MiniApps WG">
+   </section>
+
+  <section class="slide" >
+    <h2><abbr>WG</abbr> Charter: background</h2>
+    <img width="500" src="img/charter-background.jpg" alt="Section in the charter about background">
+   </section>
+
+  <section class="slide" >
+    <h2><abbr>WG</abbr> Charter: scope</h2>
+    <img width="500" src="img/doc-scope.jpg" alt="Section in the charter about scope">
+   </section>
+
+   <section class="slide" >
+    <h2><abbr>WG</abbr> Charter: deliverables</h2>
+    <img width="500" src="img/doc-deliverables.jpg" alt="Section in the charter about deliverables">
+   </section>
+
+   <section class="slide" >
+    <h2><abbr>WG</abbr> Charter: success</h2>
+    <img width="500" src="img/doc-success.jpg" alt="Section in the charter about success criteria">
+   </section>
+
+   <section class="slide" >
+    <h2><abbr>WG</abbr> Charter: Patent Policy</h2>
+    <img width="500" src="img/patent.jpg" alt="Section about patents and IPR and usage of the specs">
+   </section>
+
+   <section class="slide clear lightmode" >
+    <h2>Deliverables: Working Drafts</h2>
+    <img class="fit" src="img/timeline-2.png" alt="Timeline with some specifications published in 2021 onwards">
+    <p class="shout next">How do we create a new spec?</p>
+   </section>
+
+   <section class="slide" >
+    <h2>Always working in public</h2>
+    <img width="450" src="img/github.jpg" alt="Github repository for a MiniApp specification">
+   </section>
+
+   <section class="slide big side" >
+    <h2>First step for a new proposal: explainer </h2>
+    <img class="side" src="img/explainer.jpg" alt="Explainer document">
+    <p>Objectives, use cases, scope, first proposal...</p>
+   </section>
+
+   <section class="slide big right side" >
+    <h2>Definitions, processing algorithms, <abbr>WebIDL</abbr> descriptions...</h2>
+    <img class="side" src="img/spec-def.jpg" alt="Section in the specifications with definitions">
+   </section>
+
+   <section class="slide big right side" >
+    <h2>Also practical support</h2>
+    <img class="side" src="img/spec-notes.jpg" alt="Section in the specifications with notes for developers">
+    <p>Notes for developers to help implementations</p>
+   </section>
+
+  <section class="slide right big side" >
+    <h2><abbr title="Internationalization">I18n</abbr> and accessibility in every spec</h2>
+    <img class="side" src="img/doc-a11y.jpg" alt="Section in the specifications about Accessibility">
+    <p>Horizontal review to preserve the principle of <em>a Web for everyone</em> (i.e., independently of culture, physical, functional and cognitive capabilities of the users)</p>
+   </section>
+
+   <section class="slide big right side" >
+    <h2>Security in every spec</h2>
+    <img class="side" src="img/doc-security.jpg" alt="Section in the specifications about Security">
+    <p>Horizontal review to minimize the threats in every specification (i.e., sandbox, threat model...)</p>
+   </section>
+
+   <section class="slide big right side" >
+    <h2>Privacy in every spec</h2>
+    <img class="side" src="img/doc-privacy.jpg" alt="Section in the specifications about Privacy">
+    <p>Horizontal review to preserve user's privacy in every specification (i.e., keep sandboxed environment, avoid tracking users...)</p>
+   </section>
+
+   <section class="slide clear lightmode" >
+    <h2>Success criteria: we need tests</h2>
+    <img class="fit" src="img/timeline-3.png" alt="Timeline showing test suite at the end">
+   </section>
+   
+   <section class="slide" >
+    <h2>Process (stages of a spec)</h2>
+    <p>Specs are horizontally reviewed on <em><abbr>i18n</abbr></em>, <em><abbr>a11y</abbr></em>, <em>privacy</em> and <em>security</em>.</p>
+    <p>The <em>Technical Architecture Group</em> (<abbr>TAG</abbr>) plays an important role</p>
+    <img src="img/process.webp" alt="Specification different stages">
+   </section>
+
+   <!--
+   <section class="slide" id="why">
+    <h2>Why testing (specifications)?</h2>
+    <h3>Testing every feature in each specification as soon as possible</h3>
+    <blockquote cite="https://www.w3.org/2023/10/miniapps-wg-charter.html#success-criteria">
+     <h4>Success Criteria</h4>
+      <p>[...] In order to advance to Proposed Recommendation, <em>each normative specification must have an open test suite of every feature</em> defined in the specification.</p>
+      <p>There should be testing plans for each specification, <em>starting from the earliest drafts</em>.</p>
+     <footer>Extracted from the <cite>MiniApp WG Charter</cite></footer>
+    </blockquote>
+   </section>
+  -->
+
+  <section class="slide">
+    <h2>Contents</h2>
+    <ol>
+      <li>How it all started</li>
+      <li>MiniApp standardization</li>
+      <li><em>Status of the specs</em></li>
+      <li>Challenges</li>
+    </ol>
+  </section>
+
+
+  <section class="slide" id="specs-lifecycle">
+    <h2>MiniApp Lifecycle</h2>
+    <p>Specific <strong>events</strong> and an interface for the MiniApp object and its pages</p>
+    <h3>MiniApp lifecycle:</h3>
+    <p><code>launched</code>, <code>shown</code>, <code>hidden</code>, <code>error</code>…</p>
+    <h3>Page lifecycle:</h3>
+    <p><code>loaded</code>, <code>ready</code>, <code>shown</code>, <code>hidden</code>, <code>unloaded</code></p>
+    <h3>Status: <abbr title="Working Draft">WD</abbr></h3>
+    <ul>
+      <li>Spec: <a href="https://www.w3.org/TR/miniapp-lifecycle/">https://www.w3.org/TR/miniapp-lifecycle/</a></li>
+      <li>Repo: <a href="https://github.com/w3c/miniapp-lifecycle">https://github.com/w3c/miniapp-lifecycle</a></li>
+    </ul>
+  </section>
+
+  <section class="slide" id="specs-addressing">
+    <h2>MiniApp Addressing</h2>
+    <h3>URIs for MiniApps</h3>
+    <p class="note"><code>platform://miniapp/foo;version=1.0.1/pages/index?k=v#bar</code></p>
+    <p class="note"><code>https://platform.org/miniapp/foo;version=1.0.1/pages/index?k=v#bar</code></p>
+    <h3>Status: Group Draft Note</h3>
+    <ul>
+      <li>Spec: <a href="https://www.w3.org/TR/miniapp-addressing/">https://www.w3.org/TR/miniapp-addressing/</a></li>
+      <li>Repo: <a href="https://github.com/w3c/miniapp-addressing">https://github.com/w3c/miniapp-addressing</a></li>
+    </ul>
+  </section>
+
+  <section class="slide" id="specs-widgets">
+    <h2>MiniApp Widgets Requirements</h2>
+    <p>Scenarios and requirements for MiniApp Widgets (particular MiniApp pages)</p>
+    <p>Placed in a specific area of a device</p>
+    <h3>Status: Group Note</h3>
+    <ul>
+      <li>Spec: <a href="https://www.w3.org/TR/miniapp-widget-req/">https://www.w3.org/TR/miniapp-widget-req/</a></li>
+      <li>Repo: <a href="https://github.com/w3c/miniapp-widget-req">https://github.com/w3c/miniapp-widget-req</a></li>
+    </ul>
+  </section>
+
+  <section class="slide" id="specs-manifest">
+    <h2>MiniApp Manifest</h2>
+    <p>JSON document to <strong>describe</strong> a MiniApp</p>
+    <ul>
+      <li><strong>Based on Web App Manifest</strong> (<code>extends</code>)</li>
+      <li><strong>15 attributes</strong> with metadata for UA and publishers (icons, versions…)</li>
+      <li>Runtime configuration (themes, colors, orientation…)</li>
+      <li>Including <em>permissions</em> (i.e., sensors, network…) and discussing <em><abbr title="Content Security Policy">CSP</abbr></em></li>
+    </ul>
+    <h3>Status: <abbr title="Working Draft">WD</abbr></h3>
+    <ul>
+      <li>Spec: <a href="https://www.w3.org/TR/miniapp-manifest/">https://www.w3.org/TR/miniapp-manifest/</a></li>
+      <li>Repo: <a href="https://github.com/w3c/miniapp-manifest">https://github.com/w3c/miniapp-manifest</a></li>
+    </ul>
+  </section>
+
+  <section class="slide" id="manifest-open-csp">
+    <h2>Content Security Policy (<abbr title="Content Security Policy">CSP</abbr>)</h2>
+    <h3>Increase security and integrity of MiniApps</h3>
+    <ul>
+      <li>The system caches the MiniApp, and user agents do not always have access to HTTP headers.</li>
+      <li>We need to guarantee security and avoid content and scripts from non-trusted origins.</li>
+    </ul>
+  </section>
+
+
+  <section class="slide" id="manifest-open-csp-code">
+     <h2>Manifest <abbr>CSP</abbr></h2>
+     <h3>Reuse of ongoing <abbr>IWA</abbr> <a href="https://github.com/WICG/isolated-web-apps/blob/main/README.md">proposal</a>?</h3>
+    <pre>Content-Security-Policy: base-uri 'none';
+      default-src 'self';
+      object-src 'none';
+      frame-src 'self' https: blob: data:;
+      connect-src 'self' https: wss: blob: data:;
+      script-src 'self' 'wasm-unsafe-eval';
+      img-src 'self' https: blob: data:;
+      media-src 'self' https: blob: data:;
+      font-src 'self' blob: data:;
+      style-src 'self' 'unsafe-inline';
+      require-trusted-types-for 'script';
+    </pre>
+    <p class="note"><a href="https://github.com/w3c/miniapp-manifest/issues/42">Open discussion</a></p>
+   </section>
+
+
+  <section class="slide" id="specs-packaging">
+    <h2>MiniApp Packaging</h2>
+    <p>Describes the logical and physical <strong>structure</strong> of a MiniApp</p>
+    <ul>
+      <li>Pages, components, styles,… </li>
+      <li>Packaging format, file-system, directories…</li>
+      <li>Digital signatures (for developer, publishers, others…) - <i>Optional</i></li>
+    </ul>
+    <h3>Status: <abbr title="Working Draft">WD</abbr></h3>
+    <ul>
+      <li>Spec: <a href="https://www.w3.org/TR/miniapp-packaging/">https://www.w3.org/TR/miniapp-packaging/</a></li>
+      <li>Repo: <a href="https://github.com/w3c/miniapp-packaging">https://github.com/w3c/miniapp-packaging</a></li>
+    </ul>
+  </section>
+
+  <section class="slide side right big" id="packaging-image">
+    <h2>Types of Resources</h2>
+    <img class="side" width=498 height=700
+      src="https://w3c.github.io/miniapp-packaging/images/miniapp-pages-components.svg"
+      alt="Breakout of components in miniapp package">
+    <p>Pages &amp; Components</p>
+    <ul>
+      <li><strong>HTML</strong>: based on templates</li>
+      <li><strong>JS</strong>: ECMAScript profile</li>
+      <li><strong>CSS</strong>: CSS profile</li>
+      <li>Resources for <strong>i18n</strong></li>
+    </ul>
+    <p>Current proposal: <em>based on Web Components</em></p>
+  </section>
+
+  <section class="slide side r" id="packaging-filesystem">
+    <h2>File System</h2>
+    <img class="side" width=498 height=700 src="./img/filesystem.png" alt="Filesystem structure of a miniapp package">
+    <p>Homogeneous structure:</p>
+    <ul>
+      <li><code>manifest.json</code>: metadata, setup</li>
+      <li><code>app.js</code>, <code>app.css</code>: global logic, styles</li>
+      <li><code>pages/</code>: page resources</li>
+      <li><code>common/</code>: shared media, script resources </li>
+      <li><code>i18n/</code>: localization of content</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Contents</h2>
+    <ol>
+      <li>How it all started</li>
+      <li>MiniApp standardization</li>
+      <li>Status of the specs</li>
+      <li><em>Challenges</em></li>
+    </ol>
+  </section>
+
+
+  <section class="slide clear lightmode" >
+    <h2>Reviews raised concerns</h2>
+    <img class="fit" src="img/timeline-4.png" alt="Timeline highlighting challenges in security">
+   </section>
+
+   <section class="slide">
+    <h2>#1: ZIP container</h2>
+    <h3>Raised concern of lack of efficiencyß </h3>
+    <ul>
+      <li>Assessment based on existing implementations</li>
+      <li>Availability of tooling</li>
+      <li>Widely accepted format</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>#2: Origin model preservation</h2>
+    <ul>
+      <li>MiniApps can be distributed in different ways (i.e., other than <abbr>HTTP</abbr>)</li>
+    </ul>
+    <p class="shout">How to keep track of the origin?</p>
+  </section>
+
+  <section class="slide">
+    <h2>#2: (Origin model) discussions</h2>
+    <ul>
+      <li>UA <code>SHOULD</code> use <strong>SSL/TSL</strong> for distribution</li>
+      <li>Package <code>SHOULD</code> be <strong>signed by the origin</strong></li>
+      <li>UA <code>SHOULD</code> keep <strong>track of the origin</strong> (e.g., save it in manifest?, UA decides?)</li>
+    </ul>
+    <p class="shout">???</p>
+  </section>
+
+  <section class="slide">
+    <h2>#3: Guarantee secure context</h2>
+    <ul>
+      <li>MiniApps can be distributed in different ways (i.e., other than <abbr>HTTP</abbr>)</li>
+      <li><abbr title="User agent">UA</abbr> platforms usually control distribution (i.e., root of trust, versioning)</li>
+      <li><abbr>UA</abbr> platforms generally limit access to external resources.</li>
+    </ul>
+    <p class="shout">How to guarantee integrity?</p>
+  </section>
+  
+  <section class="slide">
+    <h2>#3: (Integrity) ongoing discussions</h2>
+    <h3>Based on the existing solution:</h3>
+    <ul>
+      <li>Package <code>SHOULD</code> be <strong>hashed</strong> (integrity); </li>
+      <li>and <code>SHOULD</code> be <strong>signed</strong> (e.g., developer + publisher)</li>
+      <li>Who does the rest? (e.g., the UA platform?)</li>
+    </ul>
+    <p class="note"><a href="https://github.com/w3c/miniapp-packaging/issues/64#issuecomment-1818561549">Ongoing
+      discussion</a>.</p>
+  </section>
+
+  <section class="slide" id="packaging-iwa">
+    <h2>Follow <abbr>IWA</abbr> approach?</h2>
+    <h3>New works on <a href="https://github.com/WICG/isolated-web-apps/blob/main/README.md">Isolated Web Apps</a> (<abbr title="Isolated Web Apps">IWA</abbr>)</h3>
+    <ul>
+      <li>CBOR-based container and distributed through HTTPS</li>
+      <li>Signed Web Bundles + proposing a new <em>Integrity Block</em></li>
+    </ul>
+  <pre style="font-size: small;">integrity-block = [
+    magic: h'F0 9F 96 8B F0 9F 93 A6',
+    version: bstr .size 4, ; Version value is '2\0\0\0' for release.
+    attributes: {
+      "webBundleId" => tstr
+    }
+    signature-list: [ +integrity-signature ]]</pre>
+  <p class="note">Also, defining permissions in manifest and <abbr title="Content Security Policy">CSP</abbr></p>
+  </section>
+
+  <!--
+  <section class="slide" id="elements">
+    <h2>MiniApp HTML Elements and MiniApp API Baseline (Proposals)</h2>
+    <p>Objective: define a subset of common <em>HTML elements</em> and subset of <em>common APIs</em> required by
+      MiniApp user agents (e.g., media, EPUB).</p>
+    <ol>
+      <li>Baseline for <em>standard HTML</em> elements</li>
+      <li>Baseline for <em>Web APIs</em> elements</li>
+    </ol>
+    <p>Incubation in the <abbr title="Community  Group">CG</abbr>.</p>
+    <p class="next">Comments?</p>
+  </section>
+
+  <section class="slide clear">
+    <h2>MiniApps on IoT devices</h2>
+    <img class="cover" src="img/iot.png" alt="IoT devices: thermostat, prototyping boards, kiosks, ...">
+   </section>
+   -->
+
+  <section class="slide final" id="final">
+    <h2>May we standardize a global security model for SuperApps?</h2>
+    <div class="columns">
+      <section>
+      <h3>We need your help!</h3>
+      <ol>
+        <li>Origin model preservation</li>
+        <li>Secure context (integrity)</li>
+        <li>Content security policy</li>
+        <li>Permission management</li>
+        <li>...</li>
+      </ol>  
+    </section>
+    <section>
+      <div class="next">
+        <p class="shout">Thank you!!</p>
+        <p>Martin Alvarez (<em>@espinr</em>)</p>
+      </div>
+    </section>
+    </div>
+  </section>
+
+  <!-- section class="comment">
+     <p>Notes.</p>
+   </section -->
+
+
+  <footer class="long comment">
+    <address>Slides designed on <a href="mailto:bert@w3.org">Bert Bos</a>'s template (11 December 2023) and modified by coralie.</address>
+  </footer>
+
+
+</body>
+
+</html>
+<!-- Local Variables: -->
+<!-- sgml-basic-offset: 1 -->
+<!-- End: -->
