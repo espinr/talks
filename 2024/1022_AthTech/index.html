@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset=UTF-8>
+  <meta content="width=device-width" name="viewport">
+  <title>W3C Open Athletics: standardization process and a success case</title>
+  <link rel="stylesheet" href="../Templates/Generic/slides.css">
+  <!-- To use the b6+ framework, include this: -->
+  <script src="../Templates/Generic/b6plus.js"></script>
+  <!-- To use the Shower framework, remove b6plus above and add these two: -->
+  <!--   <script src="../Templates/Generic/shower.js"></script>         -->
+  <!--   <script src="../Templates/Generic/iframe-fixup.js"></script>   -->
+</head>
+
+<body class="shower fade-in duration=50">
+
+  <section class="long comment">
+    <!-- For b6plus: -->
+    <p>To start the slide show,
+      press ‘A’. Return to the index with ‘A’ or ‘Esc’. On a
+      touch screen, use a 3-finger touch. Double click to
+      open a specific slide. In slide mode, press ‘?’ (question mark) to
+      get a list of available commands.</p>
+  </section>
+
+  <!-- Remove this element if you don't want a progress bar: -->
+  <!-- div class=progress></div -->
+
+  <!-- Remove this element if you don't want the remaining time in
+       index mode and on the 2nd screen. If you keep it, you may want
+       to add the class "duration=n" on BODY, where n is the initial
+       number of minutes on the clock. Default is 30. -->
+  <!--div class=clock></div-->
+
+  <!-- Alternative: Show also real time and elapsed time. -->
+  <!-- <div class=fullclock></div> -->
+
+  <!-- What a screen reader should say on leaving slide mode,
+       instead of the default ‘Stopped.’ -->
+  <div role=region aria-live=assertive>
+    Leaving slide mode.
+  </div>
+
+  <section class="slide cover clear" id="s1">
+    <h1>W3C Open Athletics: standardization process and a success case</h1>
+    <h3>Martin Alvarez-Espinar</h3>
+    <p>AthTech Data Conference<br>
+      Online Session<br>
+      22 October 2024</p>
+  </section>
+
+
+  <!-- section class="comment">
+     <p>Notes.</p>
+   </section -->
+
+  <section class="slide">
+    <h2>Contents</h2>
+    <ol>
+      <li>About W3C</li>
+      <li>DCAT as a success case</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>World Wide Web Consortium</h2>
+    <ul>
+      <li>Created <strong>30 years ago!</strong> by Sir Tim Berners-Lee (now W3C Inc.)</li>
+      <li><em>680+ standards</em><sup>*</sup> in 113 technology domains</li>
+      <li><em>364 Member</em> organizations</li>
+    </ul>
+    <h3>Organization</h3>
+    <ul>
+      <li><abbr>CEO</abbr> + Board of Directors + supporting Staff</li>
+      <li class="next">Advisory Committee or <abbr title="Advisory Committee">AC</abbr> - 364 <abbr
+          title="representatives">reps.</abbr> (one member, one vote)</li>
+      <li class="next">Advisory Board or <abbr>AB</abbr>: strategy</li>
+      <li class="next">Technical Architecture Group or <abbr>TAG</abbr>: technical guidance</li>
+    </ul>
+    <p class="note">Technical Reports, including Recommendations and Group Notes</p>
+  </section>
+
+  <section class="slide">
+    <h2>How the work is done?</h2>
+    <h3>Members propose topics, work on them through</h3>
+    <ul>
+      <li>Interest Groups (10 <abbr>IG</abbr>): requirements (e.g., Web Payments Security IG)</li>
+      <li>Business Groups (2 <abbr>BG</abbr>): high-level reqs for verticals (e.g., Entertainment)</li>
+      <li>Working Groups (43 <abbr>WG</abbr>): technical standards (e.g., CSS WG)</li>
+      <li><em>Community Groups (143 <abbr>CG</abbr>): public incubation discussions</em> (e.g., Open Athletics Community Group)</li>
+    </ul>
+    <h3>Liaisons with other <abbr title="Standard Development Organizations">SDOs</abbr></h3>
+    <p>Ecma International, FIDO, ISO...</p>
+  </section>
+
+  <section class="slide">
+    <h2><abbr>WG</abbr> Charter</h2>
+    <img width="500" src="img/charter.jpg" alt="Charter of MiniApps WG">
+  </section>
+
+  <section class="slide">
+    <h2><abbr>WG</abbr> Charter: background</h2>
+    <img width="500" src="img/charter-background.jpg" alt="Section in the charter about background">
+  </section>
+
+  <section class="slide">
+    <h2><abbr>WG</abbr> Charter: scope</h2>
+    <img width="500" src="img/doc-scope.jpg" alt="Section in the charter about scope">
+  </section>
+
+  <section class="slide">
+    <h2><abbr>WG</abbr> Charter: deliverables</h2>
+    <img width="500" src="img/doc-deliverables.jpg" alt="Section in the charter about deliverables">
+  </section>
+
+  <section class="slide">
+    <h2><abbr>WG</abbr> Charter: success</h2>
+    <img width="500" src="img/doc-success.jpg" alt="Section in the charter about success criteria">
+  </section>
+
+  <section class="slide">
+    <h2><abbr>WG</abbr> Charter: Patent Policy</h2>
+    <img width="500" src="img/patent.jpg" alt="Section about patents and IPR and usage of the specs">
+  </section>
+
+  <section class="slide">
+    <h2>Always working in public</h2>
+    <img width="450" src="img/github.jpg" alt="Github repository for a MiniApp specification">
+  </section>
+
+  <section class="slide">
+    <h2>Process (stages of a spec)</h2>
+    <p>Specs are horizontally reviewed on <em><abbr>i18n</abbr></em>, <em><abbr>a11y</abbr></em>, <em>privacy</em> and
+      <em>security</em>.</p>
+    <p>The <em>Technical Architecture Group</em> (<abbr>TAG</abbr>) plays an important role</p>
+    <img src="img/process.webp" alt="Specification different stages">
+  </section>
+
+  <section class="slide">
+    <h2>Contents</h2>
+    <ol>
+      <li>About W3C</li>
+      <li><em>DCAT as a success case</em></li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Back in 2009... Open Data</h2>
+    <img width="450" src="img/egov.png" alt="Document: Improving Access to Government through Better Use of the Web">
+  </section>
+
+  <section class="slide right big side">
+    <h2>Open data portals</h2>
+    <img class="side" src="img/datacatalogs.png" alt="Data catalogs portal">
+    <ul>
+      <li>So we compiled the portals</li>
+      <li>All kind of information (different domains, different formats)</li>
+      <li>Some of them had same APIs to export data...</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Heterogenous data, formats</h2>
+    <img src="img/bcn.png" alt="BCN Open Data portal">
+  </section>
+
+  <section class="slide">
+    <h2>(2011) Started the <del>trend</del> mess</h2>
+    <img src="img/catalogs.png" alt="List of 115 Data Catalog portal">
+  </section>
+
+  <section class="slide">
+    <h2>(2009...) Thinking in interoperability</h2>
+    <img src="img/ctic.png" alt="Early DCAT specification">
+  </section>
+
+  <section class="slide">
+    <h2>(2014) DCAT was published</h2>
+    <img src="img/dcat_original.png" alt="DCAT specification">
+  </section>
+
+  <section class="slide">
+    <h2>DCAT APs - Spain</h2>
+    <img src="img/nti.png" alt="DCAT AP for Spain">
+  </section>
+
+  <section class="slide">
+    <h2>DCAT APs - EU</h2>
+    <img src="img/dcatap.png" alt="DCAT AP in Interoperable Europe">
+  </section>
+
+  <section class="slide">
+    <h2>StatsDCAT APs - EU</h2>
+    <img src="img/statap.png" alt="DCAT AP for statistics">
+  </section>
+
+  <section class="slide">
+    <h2>DCAT for interoperability</h2>
+    <img src="img/semicdcat.png" alt="DCAT used for interoperability in European portals">
+    <p class="note">Figure by SEMIC Support Centre</p>
+  </section>
+
+  <section class="slide">
+    <h2>Federation of federations</h2>
+    <img src="img/datos.png" alt="Spanish Open Data portal">
+    <p class="note">https://datos.gob.es/en/catalogo</p>
+  </section>
+
+  <section class="slide">
+    <h2>250+ publishers!</h2>
+    <img src="img/datos2.png" alt="Spanish Open Data portal statistics">
+    <p class="note">https://datos.gob.es/en/catalogo</p>
+  </section>
+
+  <section class="slide">
+    <h2>Pan-European search</h2>
+    <img src="img/european.png" alt="Result of search of European Data Portal">
+    <p class="note">https://data.europa.eu/data/datasets?locale=en&query=sports+facilities&page=1</p>
+  </section>
+
+  <section class="slide">
+    <h2>European Data portal</h2>
+    <img src="img/stats.png" alt="Statistics of European Data portal">
+    <p class="note">https://data.europa.eu</p>
+  </section>
+
+  <section class="slide">
+    <h2>The standard for data spaces</h2>
+    <img src="img/dataspaces.png" alt="DCAT used for data spaces">
+    <p class="note">https://youtu.be/EVsMeKBrAxg</p>
+  </section>
+
+  <section class="slide cover final clear" id="final">
+    <h1>Questions?</h1>
+    <p class="shout glow">Thank you!</p>
+    <h3>Martin Alvarez-Espinar <a href='https://www.linkedin.com/in/espinr/'>@espinr</a></h3>
+  </section>
+
+
+  <!-- section class="comment">
+     <p>Notes.</p>
+   </section -->
+
+
+  <footer class="long comment">
+    <address>Slides designed on <a href="mailto:bert@w3.org">Bert Bos</a>'s template (11 December 2023) and modified by
+      coralie.</address>
+  </footer>
+
+
+</body>
+
+</html>
+<!-- Local Variables: -->
+<!-- sgml-basic-offset: 1 -->
+<!-- End: -->
