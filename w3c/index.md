@@ -146,7 +146,7 @@ Most of the original material at https://github.com/espinr/talks-archive/
     - by Martin Alvarez
     - At _XVIII Jornadas del Seminario de Gestión Pública Local_ (Gijón)
     
--(09 Jan) __[Gobierno Abierto y Open Data](http://web.archive.org/web/20170811200140/http://www.w3c.es/Presentaciones/2013/0109-OpenGov-Zaragoza-MA)__
+- (09 Jan) __[Gobierno Abierto y Open Data](http://web.archive.org/web/20170811200140/http://www.w3c.es/Presentaciones/2013/0109-OpenGov-Zaragoza-MA)__
     - by Martin Alvarez
     - At _Gobierno abierto en el Ayuntamiento de Zaragoza_ (Saragossa)
 
@@ -303,7 +303,7 @@ Most of the original material at https://github.com/espinr/talks-archive/
     - At _Conferencia IADIS Ibero Americana_ (Madrid)
 
 
-(21 Oct) __[La visión del W3C sobre la accesibilidad](http://web.archive.org/web/20170811200140/http://www.w3c.es/Presentaciones/2009/1021-accesibilidadCTIC-MA)__
+- (21 Oct) __[La visión del W3C sobre la accesibilidad](http://web.archive.org/web/20170811200140/http://www.w3c.es/Presentaciones/2009/1021-accesibilidadCTIC-MA)__
     - by Martin Alvarez
     - At _Workshop on WCAG 2.0_ (Madrid)
 
