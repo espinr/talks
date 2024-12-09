@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset=UTF-8>
+  <meta content="width=device-width" name="viewport">
+  <title>Standardization insights from the MiniApps activities</title>
+  <link rel="stylesheet" href="../Templates/Generic/slides.css">
+  <!-- To use the b6+ framework, include this: -->
+  <script src="../Templates/Generic/b6plus.js"></script>
+  <!-- To use the Shower framework, remove b6plus above and add these two: -->
+  <!--   <script src="../Templates/Generic/shower.js"></script>         -->
+  <!--   <script src="../Templates/Generic/iframe-fixup.js"></script>   -->
+</head>
+
+<body class="shower fade-in duration=50">
+
+  <section class="long comment">
+    <!-- For b6plus: -->
+    <p>To start the slide show,
+      press ‘A’. Return to the index with ‘A’ or ‘Esc’. On a
+      touch screen, use a 3-finger touch. Double click to
+      open a specific slide. In slide mode, press ‘?’ (question mark) to
+      get a list of available commands.</p>
+  </section>
+
+  <!-- Remove this element if you don't want a progress bar: -->
+  <!-- div class=progress></div -->
+
+  <!-- Remove this element if you don't want the remaining time in
+       index mode and on the 2nd screen. If you keep it, you may want
+       to add the class "duration=n" on BODY, where n is the initial
+       number of minutes on the clock. Default is 30. -->
+  <!--div class=clock></div-->
+
+  <!-- Alternative: Show also real time and elapsed time. -->
+  <!-- <div class=fullclock></div> -->
+
+  <!-- What a screen reader should say on leaving slide mode,
+       instead of the default ‘Stopped.’ -->
+  <div role=region aria-live=assertive>
+    Leaving slide mode.
+  </div>
+
+  <section class="slide cover clear" id="s1">
+    <h1>Standardization insights from the MiniApps activities</h1>
+    <h3>Martin Alvarez-Espinar</h3>
+    <p>High-performance Baseline WebApps Meeting<br>
+      09 December 2024</p>
+  </section>
+
+
+  <!-- section class="comment">
+     <p>Notes.</p>
+   </section -->
+
+  <section class="slide">
+    <h2>Contents</h2>
+    <ol>
+      <li>Challenges for MiniApps</li>
+      <li>Analysis of common needs</li>
+      <li>Similar activities</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Challenges for MiniApps</h2>
+    <ul>
+      <li class="next"><em>Portability</em>. Cross-platform MiniApps (native APIs, UI capabilities...)</li>
+      <li class="next"><em>Performance</em>. Hybrid content, pre-fetching, caching... </li>
+      <li class="next"><em>DevX</em>. Different frameworks, languages, APIs...</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Contents</h2>
+    <ol>
+      <li>Challenges for MiniApps</li>
+      <li><em>Analysis of common needs</em></li>
+      <li>Similar activities</li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>MiniApp Element Gap Analysis</h2>
+    <img src="img/elements.png" alt="Screenshot ot the gap analysis. Table with correspondence of HTML elements and MiniApp elements">
+    <p><small><a href="https://github.com/espinr/miniapp-components/blob/main/docs/gap-analysis-elements.md">MiniApp Element Gap Analysis working draft</a></small></p>
+  </section>
+
+  <section class="slide">
+    <h2>MiniApp APIs Gap Analysis</h2>
+    <img src="img/apis.png" alt="Screenshot ot the gap analysis. Table with correspondence of Web APIs and MiniApp APIs">
+    <p><small><a href="https://github.com/espinr/miniapp-components/blob/main/docs/gap-analysis-api.md">MiniApp APIs Gap Analysis working draft</a></small></p>
+  </section>
+
+  <section class="slide">
+    <h2>Existing Standards</h2>
+    <img src="img/html-dom-1.png" alt="Ecosystem of HTML elements by type, CSS modules, Web APIs and DOM interfaces">
+  </section>
+
+  <section class="slide">
+    <h2>MiniApp Common Needs</h2>
+    <img src="img/html-dom-2.png" alt="Ecosystem of MiniApp elements by type, CSS modules, Web APIs and DOM interfaces. Some of them are similar to the standard ones presented in the previous slide">
+  </section>
+
+  <section class="slide">
+    <h2>A baseline for MiniApps/Web?</h2>
+    <img src="img/html-dom-3.png" alt="Compilation of the minimum common elements into several profiles (or subsets of standards)">
+  </section>
+
+  <section class="slide">
+    <h2>Contents</h2>
+    <ol>
+      <li>Challenges for MiniApps</li>
+      <li>Analysis of common needs</li>
+      <li><em>Similar activities</em></li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>(e-books) EPUB</h2>
+    <ul>
+      <li><a href="https://www.w3.org/TR/epub-33/#sec-contentdocs">Content documents</a>
+      <ul>
+        <li><em>XHTML <a href="https://www.w3.org/TR/epub-33/#sec-xhtml">profile</a></em> with deviations, restrictions and extension</li>
+        <li>SVG</li>
+      </ul>
+      <li>Other resources: <a href="https://www.w3.org/TR/epub-33/#sec-css"><em>CSS</em> profile</a>, images, videos,...</li>
+      <li>Allows (limited) <a href='https://www.w3.org/TR/epub-33/#sec-scripted-content'><em>scripting</em></a></li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>(TV) Media Profiles</h2>
+    <ul>
+      <li>(2014, obsolete) <a href="https://www.w3.org/TR/css-tv/"><em>CSS TV Profile</em> 1.0</a>
+        <ul>
+          <li>CSS WG <a href="https://www.w3.org/TR/css-2018/#profiles">does not publish CSS profiles</a> since 2018</li>
+          <li>Now <code>tv</code> included as a <a href="https://drafts.csswg.org/mediaqueries-4/#valdef-media-tv">media type</a></li>
+        </ul>
+      </li>
+      <li>(2012, <abbr title="Editor's Draft">ED</abbr>) <a href="https://dvcs.w3.org/hg/webtv/raw-file/tip/media-profile/Overview.html#app-environment">Web Media Profile</a></li>
+      <li>(2018, CG Report) <a href="https://www.w3.org/2018/12/webmediaguidelines.html#web-app-structure">Web Media Application Developer Guidelines</a></li>
+      <li>(2024, CG Report) <a href="https://w3c.github.io/webmediaapi/">Web Media API</a> for <cite>writing portable media <em>web apps across browsers</em> on consumer products (e.g., smart TVs, game machines, set-top boxes)</cite></li>      
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Non-standard attempt: <abbr title="Accelerated Mobile Pages">AMP</abbr></h2>
+    <blockquote><a href="https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml">AMP</a> HTML is a subset of HTML for authoring content pages such as news articles in a way that guarantees certain baseline performance characteristics.
+    </blockquote>
+    <p><em>HTML, CSS minimized</em>, <em>JS limited</em>, <em>pre-fetching, caching</em>...</p>
+    <p>Also advanced components (PWA):</p>
+    <pre style="font-size: x-small"><code>&lt;amp-install-serviceworker
+  src="https://www.your-domain.com/serviceworker.js"
+  data-iframe-src="https://www.your-domain.com/install-serviceworker.html"
+  layout="nodisplay"&gt;
+&lt;/amp-install-serviceworker&gt;</code></pre>
+  </section>
+
+  <section class="slide side right">
+    <h2><abbr title="Web-interoperable Runtimes Community Group">WinterCG</abbr>'s Minimum Common API</h2>
+    <blockquote>The Minimum Common Web Platform API is a curated <em>subset of standardized Web Platform APIs</em> intended to define a minimum set of capabilities common to Browser and Non-Browser JavaScript-based runtime environments.</blockquote>
+    <img class="side" src="img/html-dom-4.png" alt="DOM interfaces and Web APIs">
+    <p class="note"><a href="https://min-common-api.proposal.wintercg.org/">Minimum Common API</a> Draft Community Group Report</p>
+  </section>
+
+
+  <section class="slide">
+    <h2>Standards Baseline?</h2>
+    <p>For specific cases like MiniApps...</p>
+    <div class="columns">
+      <section>
+        <h3>😊 good</h3>
+        <ul>
+          <li>WebView/browser ready</li>
+          <li class="next">DevX (existing knowledge)</li>
+          <li class="next">Use 3<sup>rd</sup>-party libraries in MiniApps</li>
+        </ul>
+      </section>
+      <section>
+        <h3>😟 not good</h3>
+        <ul>
+          <li class="next">Interoperability Full/Lite engines?</li>
+          <li class="next">New tooling is needed</li>
+          <li>Broken 3<sup>rd</sup>-party libraries</li>
+        </ul>
+      </section>
+    </div>
+  </section>
+
+  <section class="slide cover final clear" id="final">
+    <h1>Open Discussion...</h1>
+    <div>
+      <ol>
+        <li>Use case collection?</li>
+        <li>Quick prototype/benchmark?</li>
+        <li>...</li>
+      </ol>
+      <p class="next shout">Thank you!</p>
+      <h3>Martin Alvarez-Espinar <a href='https://www.linkedin.com/in/espinr/'>@espinr</a></h3>  
+    </div>
+  </section>
+
+
+  <!-- section class="comment">
+     <p>Notes.</p>
+   </section -->
+
+
+  <footer class="long comment">
+    <address>Slides designed on <a href="mailto:bert@w3.org">Bert Bos</a>'s template (11 December 2023) and modified by
+      coralie.</address>
+  </footer>
+
+
+</body>
+
+</html>
+<!-- Local Variables: -->
+<!-- sgml-basic-offset: 1 -->
+<!-- End: -->
