@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PWA Meta Tags -->
+    <meta name="description" content="SuperApp - Modern mobile application with offline capabilities">
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SuperApp">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Favicon and Icons -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="images/icon-384.png">
+    
+
+    <title>SuperApp Chat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            background-color: #07C160;
+            color: white;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .back-button {
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-name {
+            font-weight: 500;
+            font-size: 18px;
+        }
+        
+        .contact-status {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+        
+        .menu-button {
+            font-size: 20px;
+        }
+        
+        .tabs {
+            display: flex;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            font-weight: 500;
+            color: #666;
+            cursor: pointer;
+        }
+        
+        .tab.active {
+            color: #07C160;
+            border-bottom: 2px solid #07C160;
+        }
+        
+        .tab-content {
+            display: none;
+            flex: 1;
+            overflow-y: auto;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .chat-container {
+            height: 100%;
+            padding: 40px 25px;
+            margin-top: -60px;
+            background-color: #e5e5e5;
+        }
+        
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+        }
+        
+        .received {
+            justify-content: flex-start;
+        }
+        
+        .sent {
+            justify-content: flex-end;
+        }
+        
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .sent .avatar {
+            margin-right: 0;
+            margin-left: 10px;
+            background-color: #07C160;
+        }
+        
+        .message-content {
+            max-width: calc(70% - 50px);
+        }
+        
+        .message-bubble {
+            padding: 10px 15px;
+            border-radius: 18px;
+            position: relative;
+            word-wrap: break-word;
+        }
+        
+        .received .message-bubble {
+            background-color: white;
+            border-top-left-radius: 5px;
+        }
+        
+        .sent .message-bubble {
+            background-color: #95EC69;
+            border-top-right-radius: 5px;
+        }
+        
+        .message-time {
+            font-size: 11px;
+            color: #999;
+            margin-top: 5px;
+            text-align: right;
+        }
+        
+        .input-area {
+            padding: 10px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            border-top: 1px solid #ddd;
+        }
+        
+        .input-box {
+            flex: 1;
+            padding: 10px 15px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            background-color: white;
+            margin: 0 10px;
+        }
+        
+        .emoji-button, .send-button {
+            font-size: 24px;
+            color: #7d7d7d;
+        }
+        
+        .send-button {
+            color: #07C160;
+        }
+        
+        .date-divider {
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .date-divider span {
+            background-color: #d8d8d8;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            color: #555;
+        }
+        
+        /* Mini-apps grid */
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            background-color: white;
+        }
+        
+        .app-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .app-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #07C160;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            color: white;
+            font-size: 24px;
+            transition: transform 0.2s;
+        }
+        
+        .app-icon:hover .app-circle {
+            transform: scale(1.1);
+        }
+        
+        .app-name {
+            font-size: 12px;
+            color: #333;
+        }
+        
+        /* Mini-app overlay */
+        .mini-app-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .mini-app-container {
+            width: 95%;
+            height: 95%;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .mini-app-header {
+            padding: 15px;
+            background-color: #07C160;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .mini-app-title {
+            font-weight: 500;
+        }
+        
+        .close-mini-app {
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        .mini-app-frame {
+            flex: 1;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="back-button">←</div>
+        <div class="contact-info">
+            <div class="contact-name">Zhang Wei</div>
+            <div class="contact-status">Online</div>
+        </div>
+        <div class="menu-button">⋮</div>
+    </div>
+    
+    <div class="tabs">
+        <div class="tab active" onclick="switchTab('chat')">Chat</div>
+        <div class="tab" onclick="switchTab('discover')">MiniApps</div>
+    </div>
+    
+    <div class="tab-content active" id="chat-tab">
+        <div class="chat-container">
+            <div class="date-divider">
+                <span>Today</span>
+            </div>
+            
+            <div class="message received">
+                <div class="avatar">ZW</div>
+                <div class="message-content">
+                    <div class="message-bubble">Hey, are you coming to the meeting tomorrow?</div>
+                    <div class="message-time">10:15 AM</div>
+                </div>
+            </div>
+            
+            <div class="message sent">
+                <div class="message-content">
+                    <div class="message-bubble">Yes, I'll be there. What time does it start again?</div>
+                    <div class="message-time">10:16 AM</div>
+                </div>
+                <div class="avatar">ME</div>
+            </div>
+            
+            <div class="message received">
+                <div class="avatar">ZW</div>
+                <div class="message-content">
+                    <div class="message-bubble">10:30 at conference room. Don't forget your presentation!</div>
+                    <div class="message-time">10:17 AM</div>
+                </div>
+            </div>
+            
+            <div class="message sent">
+                <div class="message-content">
+                    <div class="message-bubble">Got it. I've been working on it all week.</div>
+                    <div class="message-time">10:18 AM</div>
+                </div>
+                <div class="avatar">ME</div>
+            </div>
+            
+            <div class="message received">
+                <div class="avatar">ZW</div>
+                <div class="message-content">
+                    <div class="message-bubble">Great!</div>
+                    <div class="message-time">10:20 AM</div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="input-area">
+            <div class="emoji-button">😊</div>
+            <input type="text" class="input-box" placeholder="Type a message">
+            <div class="send-button">↑</div>
+        </div>
+    </div>
+    
+    <div class="tab-content" id="discover-tab">
+        <div class="apps-grid">
+            <div class="app-icon" onclick="openMiniApp('My Best Coffee', 'miniapps/coffee.html')">
+                <div class="app-circle">☕</div>
+                <div class="app-name">My Best Coffee</div>
+            </div>
+            <div class="app-icon" onclick="openMiniApp('Tech Shop', 'miniapps/electronics.html')">
+                <div class="app-circle">💻</div>
+                <div class="app-name">Tech Shop</div>
+            </div>
+            <div class="app-icon" onclick="openMiniApp('Stock Market', 'miniapps/stock.html')">
+                <div class="app-circle">📈</div>
+                <div class="app-name">Stock Market</div>
+            </div>
+            <div class="app-icon" onclick="openMiniApp('Game Center', 'miniapps/other.html')">
+                <div class="app-circle">🎮</div>
+                <div class="app-name">Game Center</div>
+            </div>
+            <div class="app-icon" onclick="openMiniApp('Super Mall', 'miniapps/other.html')">
+                <div class="app-circle">🛒</div>
+                <div class="app-name">Super Mall</div>
+            </div>
+            <div class="app-icon" onclick="openMiniApp('Ride Hail', 'miniapps/other.html')">
+                <div class="app-circle">🚕</div>
+                <div class="app-name">Ride Hail</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mini-app overlay -->
+    <div class="mini-app-overlay" id="miniAppOverlay">
+        <div class="mini-app-container">
+            <div class="mini-app-header">
+                <div class="mini-app-title" id="miniAppTitle">Mini App</div>
+                <div class="close-mini-app" onclick="closeMiniApp()">×</div>
+            </div>
+            <iframe class="mini-app-frame" id="miniAppFrame" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Deactivate all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Activate selected tab
+            document.getElementById(tabName + '-tab').classList.add('active');
+            document.querySelector(`.tab[onclick="switchTab('${tabName}')"]`).classList.add('active');
+        }
+
+        function openMiniApp(name, url) {
+            document.getElementById('miniAppTitle').textContent = name;
+            document.getElementById('miniAppFrame').src = url;
+            document.getElementById('miniAppOverlay').style.display = 'flex';
+            
+            // Prevent scrolling of background content
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMiniApp() {
+            document.getElementById('miniAppOverlay').style.display = 'none';
+            document.getElementById('miniAppFrame').src = '';
+            
+            // Re-enable scrolling of background content
+            document.body.style.overflow = 'auto';
+        }
+
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // PWA Install Prompt
+        let deferredPrompt;
+        const installPrompt = document.getElementById('installPrompt');
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installPrompt.classList.add('show');
+        });
+
+        function installApp() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('User accepted the install prompt');
+                    }
+                    deferredPrompt = null;
+                    installPrompt.classList.remove('show');
+                });
+            }
+        }
+
+        function dismissInstall() {
+            installPrompt.classList.remove('show');
+            localStorage.setItem('installPromptDismissed', 'true');
+        }
+
+        // Online/Offline Status
+        function updateOnlineStatus() {
+            const statusDot = document.getElementById('statusDot');
+            const statusText = document.getElementById('statusText');
+            
+            if (navigator.onLine) {
+                statusDot.classList.remove('offline');
+                statusText.textContent = 'Online';
+            } else {
+                statusDot.classList.add('offline');
+                statusText.textContent = 'Offline';
+            }
+        }
+
+        window.addEventListener('online', updateOnlineStatus);
+        window.addEventListener('offline', updateOnlineStatus);
+        updateOnlineStatus();
+
+        // Chat Functionality
+        function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const message = input.value.trim();
+            
+            if (message) {
+                addMessage(message, true);
+                input.value = '';
+                
+                // Simulate response
+                setTimeout(() => {
+                    const responses = [
+                        "That's interesting!",
+                        "Tell me more about that",
+                        "Great point!",
+                        "I see what you mean",
+                        "Thanks for sharing!"
+                    ];
+                    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                    addMessage(randomResponse, false);
+                }, 1000);
+            }
+        }
+
+        function addMessage(text, isSent) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isSent ? 'sent' : 'received'}`;
+            
+            const now = new Date();
+            const time = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            
+            messageDiv.innerHTML = `
+                <div class="message-bubble">
+                    ${text}
+                    <div class="message-time">${time}</div>
+                </div>
+            `;
+            
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        // App Navigation
+        function openApp(appName) {
+            alert(`Opening ${appName} app... (This would navigate to the ${appName} module in a real SuperApp)`);
+        }
+
+        // Check if install prompt was previously dismissed
+        if (localStorage.getItem('installPromptDismissed')) {
+            installPrompt.classList.remove('show');
+        }
+    </script>    
+</body>
+</html>

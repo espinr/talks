@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZone Electronics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .app-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #fff;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,255,255,0.1) 0%, transparent 70%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .nav-tab {
+            flex: 1;
+            padding: 15px 5px;
+            text-align: center;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            color: #6c757d;
+            transition: all 0.3s ease;
+            position: relative;
+            font-size: 12px;
+        }
+        
+        .nav-tab.active {
+            color: #1a1a2e;
+            background: white;
+        }
+        
+        .nav-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1a1a2e, #00bcd4);
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 20px;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .product-item {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .product-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-color: #00bcd4;
+        }
+        
+        .product-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .laptop { background: linear-gradient(135deg, #2c3e50, #34495e); }
+        .smartphone { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+        .wearable { background: linear-gradient(135deg, #9b59b6, #8e44ad); }
+        .appliance { background: linear-gradient(135deg, #f39c12, #e67e22); }
+        
+        .product-info {
+            flex: 1;
+        }
+        
+        .product-item h3 {
+            font-size: 16px;
+            color: #1a1a2e;
+            margin-bottom: 5px;
+        }
+        
+        .product-item p {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 8px;
+        }
+        
+        .product-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #e74c3c;
+        }
+        
+        .add-btn {
+            background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+        }
+        
+        .add-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 188, 212, 0.6);
+        }
+        
+        .cart {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .cart:hover {
+            transform: translateX(-50%) translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+        }
+        
+        .location-item {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .location-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .location-item h3 {
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .location-item p {
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        .status.open {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status.closed {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .payment-method {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .payment-method:hover {
+            border-color: #00bcd4;
+            transform: translateY(-2px);
+        }
+        
+        .payment-method.selected {
+            border-color: #1a1a2e;
+            background: #f8f9ff;
+        }
+        
+        .payment-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+            color: white;
+        }
+        
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+        
+        .search-bar {
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+        
+        .search-bar input:focus {
+            outline: none;
+            border-color: #00bcd4;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.1);
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+            font-size: 18px;
+        }
+        
+        .category-banner {
+            background: linear-gradient(135deg, #1a1a2e 0%, #00bcd4 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .category-banner h2 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        
+        .specs {
+            font-size: 12px;
+            color: #95a5a6;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="floating-elements">
+            <div class="floating-element" style="top: 10%; left: 10%; font-size: 30px;">💻</div>
+            <div class="floating-element" style="top: 20%; right: 15%; font-size: 25px;">📱</div>
+            <div class="floating-element" style="top: 60%; left: 5%; font-size: 35px;">⌚</div>
+            <div class="floating-element" style="top: 80%; right: 10%; font-size: 28px;">🏠</div>
+        </div>
+        
+        <div class="header">
+            <h1>⚡ TechZone</h1>
+            <p>Electronics & Innovation Hub</p>
+        </div>
+        
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('laptops')">Laptops</button>
+            <button class="nav-tab" onclick="showTab('smartphones')">Phones</button>
+            <button class="nav-tab" onclick="showTab('wearables')">Wearables</button>
+            <button class="nav-tab" onclick="showTab('appliances')">Home</button>
+            <button class="nav-tab" onclick="showTab('stores')">Stores</button>
+            <button class="nav-tab" onclick="showTab('payment')">Payment</button>
+        </div>
+        
+        <div id="laptops" class="tab-content active">
+            <div class="category-banner">
+                <h2>💻 Laptops & Computers</h2>
+                <p>Power up your productivity</p>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search laptops, ultrabooks...">
+                <span class="search-icon">🔍</span>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-image laptop">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="12" width="34" height="22" rx="2" fill="white" opacity="0.9"/>
+                        <rect x="10" y="14" width="30" height="18" rx="1" fill="#1a1a2e" opacity="0.8"/>
+                        <rect x="6" y="34" width="38" height="4" rx="2" fill="white" opacity="0.9"/>
+                        <circle cx="25" cy="36" r="1" fill="#00bcd4" opacity="0.8"/>
+                        <rect x="20" y="20" width="10" height="6" rx="1" fill="#00bcd4" opacity="0.6"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>TechBook Pro 15</h3>
+                    <p class="specs">Intel Core i7 • 16GB RAM • 512GB SSD</p>
+                    <p>Premium ultrabook for professionals</p>
+                    <div class="product-price">$1,299</div>
+                </div>
+                <button class="add-btn" onclick="addToCart('TechBook Pro 15', 1299)">Add</button>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-image laptop">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="12" width="34" height="22" rx="2" fill="white" opacity="0.9"/>
+                        <rect x="10" y="14" width="30" height="18" rx="1" fill="#2c3e50" opacity="0.8"/>
+                        <rect x="6" y="34" width="38" height="4" rx="2" fill="white" opacity="0.9"/>
+                        <circle cx="25" cy="36" r="1" fill="#e74c3c" opacity="0.8"/>
+                        <rect x="18" y="18" width="14" height="8" rx="1" fill="#e74c3c" opacity="0.4"/>
+                        <circle cx="22" cy="22" r="1" fill="#e74c3c" opacity="0.8"/>
+                        <circle cx="28" cy="22" r="1" fill="#e74c3c" opacity="0.8"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>GameZone X1 Gaming</h3>
+                    <p class="specs">AMD Ryzen 7 • RTX 4060 • 16GB • 1TB SSD</p>
+                    <p>High-performance gaming laptop</p>
+                    <div class="product-price">$1,599</div>
+                </div>
+                <button class="add-btn" onclick="addToCart('GameZone X1 Gaming', 1599)">Add</button>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-image laptop">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="14" width="30" height="18" rx="2" fill="white" opacity="0.9"/>
+                        <rect x="12" y="16" width="26" height="14" rx="1" fill="#34495e" opacity="0.8"/>
+                        <rect x="8" y="32" width="34" height="3" rx="1.5" fill="white" opacity="0.9"/>
+                        <circle cx="25" cy="33.5" r="0.8" fill="#00bcd4" opacity="0.8"/>
+                        <rect x="20" y="22" width="10" height="4" rx="1" fill="#00bcd4" opacity="0.5"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>UltraSlim Air 13</h3>
+                    <p class="specs">Intel Core i5 • 8GB RAM • 256GB SSD</p>
+                    <p>Lightweight laptop for students</p>
+                    <div class="product-price">$899</div>
+                </div>
+                <button class="add-btn" onclick="addToCart('UltraSlim Air 13', 899)">Add</button>
+            </div>
+        </div>
+        
+        <div id="smartphones" class="tab-content">
+            <div class="category-banner">
+                <h2>📱 Smartphones</h2>
+                <p>Stay connected in style</p>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search smartphones, accessories...">
+                <span class="search-icon">🔍</span>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-image smartphone">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="15" y="8" width="20" height="34" rx="4" fill="white" opacity="0.9"/>
+                        <rect x="17" y="12" width="16" height="24" rx="2" fill="#1a1a2e" opacity="0.8"/>
+                        <circle cx="25" cy="38.5" r="1.5" fill="#e74c3c" opacity="0.8"/>
+                        <rect x="23" y="9.5" width="4" height="1" rx="0.5" fill="#6c757d" opacity="0.6"/>
+                        <circle cx="21" cy="10" r="0.5" fill="#e74c3c" opacity="0.8"/>
+                        <rect x="20" y="20" width="10" height="6" rx="2" fill="#e74c3c" opacity="0.3"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>NovaTech Pro Max</h3>
+                    <p class="specs">6.7" OLED • 128GB • 48MP Triple Camera</p>
+                    <p>Flagship smartphone with AI features</p>
+                    <div class="product-price">$999</div>
+                </div>
+                <button class="add-btn" onclick="addToCart('NovaTech Pro Max', 999)">Add</button>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-image smartphone">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="15" y="8" width="20" height="34" rx="4" fill="white" opacity="0.9"/>
+                        <rect x="17" y="12" width="16" height="24" rx="2" fill="#2c3e50" opacity="0.8"/>
+                        <circle cx="25" cy="38.5" r="1.5" fill="#00bcd4" opacity="0.8"/>
+                        <rect x="23" y="9.5" width="4" height="1" rx="0.5" fill="#6c757d" opacity="0.6"/>
+                        <circle cx="29" cy="10" r="0.5" fill="#00bcd4" opacity="0.8"/>
+                        <rect x="22" y="18" width="6" height="8" rx="1" fill="#00bcd4" opacity="0.4"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>ZenPhone Elite 5G</h3>
+                    <p class="specs">6.4" AMOLED • 256GB • 64MP Camera</p>
+                    <p>Premium design with 5G connectivity</p>
+                    <div class="product-price">$799</div>
+                </div>
+                <button class="add-btn" onclick="addToCart('ZenPhone Elite 5G', 799)">Add</button>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-image smartphone">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="16" y="10" width="18" height="30" rx="3" fill="white" opacity="0.9"/>
+                        <rect x="18" y="13" width="14" height="22" rx="1" fill="#34495e" opacity="0.8"/>
+                        <circle cx="25" cy="37" r="1.2" fill="#f39c12" opacity="0.8"/>
+                        <rect x="23.5" y="11" width="3" height="0.8" rx="0.4" fill="#6c757d" opacity="0.6"/>
+                        <rect x="21" y="19" width="8" height="10" rx="2" fill="#f39c12" opacity="0.3"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>EcoPhone Lite</h3>
+                    <p class="specs">6.1" LCD • 64GB • 32MP Camera</p>
+                    <p>Affordable smartphone for everyone</p>
+                    <div class="product-price">$399</div>
+                </div>
+                <button class="add-btn" onclick="addToCart('EcoPhone Lite', 399)">Add</button>
+            </div>
+        </div>
+        
+        <div id="wearables" class="tab-content">
+            <div class="category-banner">
+                <h2>⌚ Wearable Technology</h2>
+                <p>Smart accessories for smart living</p>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search smartwatches, earbuds...">
+                <span class="search-icon">🔍</span>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-image wearable">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="25" cy="25" rx="12" ry="10" fill="white" opacity="0.9"/>
+                        <ellipse cx="25" cy="25" rx="9" ry="7" fill="#1a1a2e" opacity="0.8"/>
+                        <path d="M13 25 Q13 15 20 15 Q30 15 30 15 Q37 15 37 25" stroke="white" stroke-width="3" fill="none" opacity="0.8"/>
+                        <path d="M13 25 Q13 35 20 35 Q30 35 30 35 Q37 35 37 25" stroke="white" stroke-width="3" fill="none" opacity="0.8"/>
+                        <circle cx="25" cy="25" r="3" fill="#9b59b6" opacity="0.8"/>
+                        <rect x="23" y="22" width="4" height="2" rx="1" fill="#9b59b6" opacity="0.6"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>SmartWatch Pro X</h3>
+                    <p class="specs">1.9" OLED • GPS • Heart Rate • 7-day battery</p>
+                    <p>Advanced fitness & health tracking</p>
+                    <div class="product-price">$329</div>
+                </div>
+                <button class="add-btn" onclick="addToCart('SmartWatch Pro X', 329)">Add</button>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-image wearable">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="18" cy="25" rx="6" ry="8" fill="white" opacity="0.9"/>
+                        <ellipse cx="32" cy="25" rx="6" ry="8" fill="white" opacity="0.9"/>
+                        <ellipse cx="18" cy="25" rx="4" ry="6" fill="#8e44ad" opacity="0.8"/>
+                        <ellipse cx="32" cy="25" rx="4" ry="6" fill="#8e44ad" opacity="0.8"/>
+                        <path d="M24 25 Q25 23 26 25" stroke="white" stroke-width="2" fill="none" opacity="0.6"/>
+                        <circle cx="18" cy="25" r="2" fill="#9b59b6" opacity="0.6"/>
+                        <circle cx="32" cy="25" r="2" fill="#9b59b6" opacity="0.6"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>AirPods Ultra</h3>
+                    <p class="specs">Active Noise Cancelling • 30hrs • Spatial Audio</p>
+                    <p>Wireless earbuds with premium sound</p>
+                    <div class="product-price">$249</div>
+                </div>
+                <button class="add-btn" onclick="addToCart('AirPods Ultra', 249)">Add</button>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-image wearable">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="18" y="20" width="14" height="10" rx="2" fill="white" opacity="0.9"/>
+                        <rect x="20" y="22" width="10" height="6" rx="1" fill="#1a1a2e" opacity="0.8"/>
+                        <path d="M15 25 Q18 20 18 25 Q18 30 15 25" stroke="white" stroke-width="2" fill="none" opacity="0.8"/>
+                        <path d="M35 25 Q32 20 32 25 Q32 30 35 25" stroke="white" stroke-width="2" fill="none" opacity="0.8"/>
+                        <rect x="24" y="24" width="2" height="2" rx="1" fill="#8e44ad" opacity="0.8"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>FitTracker Band</h3>
+                    <p class="specs">Heart Rate • Sleep • Steps • 10-day battery</p>
+                    <p>Essential fitness tracking band</p>
+                    <div class="product-price">$89</div>
+                </div>
+                <button class="add-btn" onclick="addToCart('FitTracker Band', 89)">Add</button>
+            </div>
+        </div>
+        
+        <div id="appliances" class="tab-content">
+            <div class="category-banner">
+                <h2>🏠 Home Appliances</h2>
+                <p>Smart solutions for modern homes</p>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search home appliances...">
+                <span class="search-icon">🔍</span>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-image appliance">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="12" y="15" width="26" height="20" rx="3" fill="white" opacity="0.9"/>
+                        <rect x="14" y="17" width="22" height="16" rx="2" fill="#2c3e50" opacity="0.8"/>
+                        <circle cx="35" cy="20" r="2" fill="#f39c12" opacity="0.8"/>
+                        <rect x="18" y="21" width="14" height="8" rx="2" fill="#f39c12" opacity="0.3"/>
+                        <rect x="20" y="24" width="4" height="2" rx="1" fill="#f39c12" opacity="0.8"/>
+                        <rect x="26" y="24" width="4" height="2" rx="1" fill="#f39c12" opacity="0.8"/>
+                        <path d="M12 35 L38 35" stroke="white" stroke-width="2" opacity="0.6"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>SmartMicrowave Pro</h3>
+                    <p class="specs">1200W • Voice Control • 30L Capacity</p>
+                    <p>AI-powered microwave with smart features</p>
+                    <div class="product-price">$299</div>
+                </div>
+                <button class="add-btn" onclick="addToCart('SmartMicrowave Pro', 299)">Add</button>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-image appliance">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="25" r="15" fill="white" opacity="0.9"/>
+                        <circle cx="25" cy="25" r="12" fill="#34495e" opacity="0.8"/>
+                        <circle cx="25" cy="25" r="8" fill="#f39c12" opacity="0.6"/>
+                        <circle cx="25" cy="25" r="4" fill="#e67e22" opacity="0.8"/>
+                        <rect x="23" y="10" width="4" height="6" rx="2" fill="white" opacity="0.8"/>
+                        <rect x="10" y="23" width="6" height="4" rx="2" fill="white" opacity="0.8"/>
+                        <rect x="34" y="23" width="6" height="4" rx="2" fill="white" opacity="0.8"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>RoboVac 360</h3>
+                    <p class="specs">LIDAR Navigation • App Control • 3000Pa Suction</p>
+                    <p>Smart robotic vacuum cleaner</p>
+                    <div class="product-price">$449</div>
+                </div>
+                <button class="add-btn" onclick="addToCart('RoboVac 360', 449)">Add</button>
+            </div>
+            
+            <div class="product-item">
+                <div class="product-image appliance">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="15" y="12" width="20" height="26" rx="4" fill="white" opacity="0.9"/>
+                        <rect x="17" y="14" width="16" height="22" rx="2" fill="#2c3e50" opacity="0.8"/>
+                        <rect x="19" y="16" width="12" height="8" rx="1" fill="#e67e22" opacity="0.3"/>
+                        <rect x="19" y="26" width="12" height="8" rx="1" fill="#f39c12" opacity="0.4"/>
+                        <circle cx="32" cy="18" r="1" fill="#e67e22" opacity="0.8"/>
+                        <rect x="21" y="18" width="8" height="2" rx="1" fill="#e67e22" opacity="0.6"/>
+                        <rect x="21" y="28" width="8" height="2" rx="1" fill="#f39c12" opacity="0.7"/>
+                    </svg>
+                </div>
+                <div class="product-info">
+                    <h3>ChillMax Smart Fridge</h3>
+                    <p class="specs">French Door • WiFi • Energy Star • 25 cu ft</p>
+                    <p>Connected refrigerator with touch display</p>
+                    <div class="product-price">$1,899</div>
+                </div>
+                <button class="add-btn" onclick="addToCart('ChillMax Smart Fridge', 1899)">Add</button>
+            </div>
+        </div>
+        
+        <div id="stores" class="tab-content">
+            <div class="category-banner">
+                <h2>🏪 Store Locations</h2>
+                <p>Visit us for hands-on experience</p>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search nearby stores...">
+                <span class="search-icon">📍</span>
+            </div>
+            
+            <div class="location-item">
+                <h3>TechZone Downtown</h3>
+                <p>📍 456 Tech Avenue, Downtown District</p>
+                <p>📞 (555) 987-6543</p>
+                <p>🕐 Mon-Sat: 9:00 AM - 9:00 PM, Sun: 10:00 AM - 7:00 PM</p>
+                <p>🎯 Full showroom with gaming zone</p>
+                <span class="status open">Open Now</span>
+            </div>
+            
+            <div class="location-item">
+                <h3>TechZone Mall Central</h3>
+                <p>📍 1200 Shopping Center Blvd, Level 2</p>
+                <p>📞 (555) 876-5432</p>
+                <p>🕐 Daily: 10:00 AM - 10:00 PM</p>
+                <p>🎯 Apple & Samsung certified service center</p>
+                <span class="status open">Open Now</span>
+            </div>
+            
+            <div class="location-item">
+                <h3>TechZone Express</h3>
+                <p>📍 789 Business Park Drive, Suite 150</p>
+                <p>📞 (555) 765-4321</p>
+                <p>🕐 Mon-Fri: 8:00 AM - 6:00 PM, Weekends: Closed</p>
+                <p>🎯 Corporate & bulk orders specialist</p>
+                <span class="status closed">Closed</span>
+            </div>
+            
+            <div class="location-item">
+                <h3>TechZone University</h3>
+                <p>📍 321 Campus Drive, Student Center</p>
+                <p>📞 (555) 654-3210</p>
+                <p>🕐 Mon-Thu: 9:00 AM - 8:00 PM, Fri-Sat: 9:00 AM - 6:00 PM</p>
+                <p>🎯 Student discounts & repair services</p>
+                <span class="status open">Open Now</span>
+            </div>
+        </div>
+        
+        <div id="payment" class="tab-content">
+            <div class="category-banner">
+                <h2>💳 Payment & Financing</h2>
+                <p>Flexible payment options available</p>
+            </div>
+            
+            <div class="payment-method selected" onclick="selectPayment(this)">
+                <div class="payment-icon">💳</div>
+                <div>
+                    <h3>Credit & Debit Cards</h3>
+                    <p>Visa, MasterCard, American Express, Discover</p>
+                </div>
+            </div>
+            
+            <div class="payment-method" onclick="selectPayment(this)">
+                <div class="payment-icon">📱</div>
+                <div>
+                    <h3>Digital Wallets</h3>
+                    <p>Apple Pay, Google Pay, Samsung Pay, PayPal</p>
+                </div>
+            </div>
+            
+            <div class="payment-method" onclick="selectPayment(this)">
+                <div class="payment-icon">🏦</div>
+                <div>
+                    <h3>Buy Now, Pay Later</h3>
+                    <p>Klarna, Affirm, Afterpay - 0% APR available</p>
+                </div>
+            </div>
+            
+            <div class="payment-method" onclick="selectPayment(this)">
+                <div class="payment-icon">🎁</div>
+                <div>
+                    <h3>Store Credit & Gift Cards</h3>
+                    <p>TechZone gift cards and store credit</p>
+                </div>
+            </div>
+            
+            <div class="payment-method" onclick="selectPayment(this)">
+                <div class="payment-icon">🏢</div>
+                <div>
+                    <h3>Business Accounts</h3>
+                    <p>Net terms, purchase orders, bulk pricing</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background: #f0f8ff; border-radius: 15px; border-left: 4px solid #00bcd4;">
+                <h3 style="color: #1a1a2e; margin-bottom: 10px;">⚡ Payment Benefits</h3>
+                <p style="color: #6c757d; font-size: 14px;">• Earn TechPoints rewards on every purchase</p>
+                <p style="color: #6c757d; font-size: 14px;">• Free shipping on orders over $99</p>
+                <p style="color: #6c757d; font-size: 14px;">• 30-day return policy on all electronics</p>
+                <p style="color: #6c757d; font-size: 14px;">• Extended warranty options available</p>
+                <p style="color: #6c757d; font-size: 14px;">• Price match guarantee</p>
+            </div>
+        </div>
+        
+        <div class="cart" onclick="viewCart()">
+            🛒 Cart (<span id="cart-count">0</span>) - $<span id="cart-total">0.00</span>
+        </div>
+    </div>
+    
+    <script>
+        let cart = [];
+        let cartCount = 0;
+        let cartTotal = 0;
+        
+        function showTab(tabName) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            const navTabs = document.querySelectorAll('.nav-tab');
+            navTabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        function addToCart(item, price) {
+            cart.push({name: item, price: price});
+            cartCount++;
+            cartTotal += price;
+            
+            document.getElementById('cart-count').textContent = cartCount;
+            document.getElementById('cart-total').textContent = cartTotal.toLocaleString('en-US', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+            
+            // Add animation effect
+            const button = event.target;
+            button.textContent = 'Added!';
+            button.style.background = 'linear-gradient(135deg, #27ae60 0%, #2ecc71 100%)';
+            
+            setTimeout(() => {
+                button.textContent = 'Add';
+                button.style.background = 'linear-gradient(135deg, #00bcd4 0%, #0097a7 100%)';
+            }, 1000);
+        }
+        
+        function viewCart() {
+            if (cartCount === 0) {
+                alert('Your cart is empty! Add some awesome tech products to get started.');
+                return;
+            }
+            
+            let cartItems = '🛒 Your TechZone Order:\n\n';
+            let totalPrice = 0;
+            
+            cart.forEach(item => {
+                cartItems += `${item.name} - ${item.price.toLocaleString()}\n`;
+                totalPrice += item.price;
+            });
+            
+            cartItems += `\n💰 Total: ${totalPrice.toLocaleString()}`;
+            cartItems += '\n\n⚡ Ready to checkout? Choose your payment method in the Payment tab!';
+            cartItems += '\n🚚 Free shipping on orders over $99!';
+            
+            alert(cartItems);
+        }
+        
+        function selectPayment(element) {
+            // Remove selected class from all payment methods
+            const paymentMethods = document.querySelectorAll('.payment-method');
+            paymentMethods.forEach(method => method.classList.remove('selected'));
+            
+            // Add selected class to clicked element
+            element.classList.add('selected');
+        }
+        
+        // Add some interactive animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate floating elements
+            const floatingElements = document.querySelectorAll('.floating-element');
+            floatingElements.forEach((element, index) => {
+                element.style.animationDelay = `${index * 0.5}s`;
+            });
+            
+            // Add search functionality
+            const searchInputs = document.querySelectorAll('.search-bar input');
+            searchInputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.style.transform = 'scale(1.02)';
+                });
+                
+                input.addEventListener('blur', function() {
+                    this.parentElement.style.transform = 'scale(1)';
+                });
+            });
+            
+            // Add product hover effects
+            const productItems = document.querySelectorAll('.product-item');
+            productItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.querySelector('.product-image').style.transform = 'scale(1.1)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.querySelector('.product-image').style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset=UTF-8>
+  <meta content="width=device-width" name="viewport">
+  <title>High-Performance Web Engines</title>
+  <link rel="stylesheet" href="../Templates/gosim/slides.css">
+  <!-- To use the b6+ framework, include this: -->
+  <script src="../Templates/gosim/b6plus.js"></script>
+  <!-- To use the Shower framework, remove b6plus above and add these two: -->
+  <!--   <script src="../Templates/Generic/shower.js"></script>         -->
+  <!--   <script src="../Templates/Generic/iframe-fixup.js"></script>   -->
+  <style>
+    table.small {
+      font-size: x-small; 
+      line-height: 1.3;
+    }
+    table.small td code, table.x-small td code {
+      font-size: smaller;
+      padding: 0; 
+    }
+    table.regular {
+      font-size: small; 
+      line-height: 1.3;
+    }
+    table.x-small {
+      font-size: xx-small; 
+    }
+    iframe.pureweb {
+      height: 800px;
+      width: 400px;
+      transform: scale(0.4); 
+      transform-origin: 0 0;
+      border: none;
+    }
+    .smartphone {
+      background: #000;
+      border-radius: 40px;
+      position: relative;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+    }
+  </style>
+
+</head>
+
+<body class="shower fade-in duration=50">
+
+  <section class="long comment">
+    <!-- For b6plus: -->
+    <p>To start the slide show,
+      press ‘A’. Return to the index with ‘A’ or ‘Esc’. On a
+      touch screen, use a 3-finger touch. Double click to
+      open a specific slide. In slide mode, press ‘?’ (question mark) to
+      get a list of available commands.</p>
+  </section>
+
+  <!-- Remove this element if you don't want a progress bar: -->
+  <!-- div class=progress></div -->
+
+  <!-- Remove this element if you don't want the remaining time in
+       index mode and on the 2nd screen. If you keep it, you may want
+       to add the class "duration=n" on BODY, where n is the initial
+       number of minutes on the clock. Default is 30. -->
+  <!--div class=clock></div-->
+
+  <!-- Alternative: Show also real time and elapsed time. -->
+  <!-- <div class=fullclock></div> -->
+
+  <!-- What a screen reader should say on leaving slide mode,
+       instead of the default ‘Stopped.’ -->
+  <div role=region aria-live=assertive>
+    Leaving slide mode.
+  </div>
+
+  <section class="slide cover" id="s1">
+    <h1>High-Performance Web Engines</h1>
+    <h3>Martin Alvarez-Espinar</h3>
+    <p><a href="https://hangzhou2025.gosim.org">GOSIM Hangzhou</a></p>
+    <p>Hangzhou (🇨🇳), 14 September 2025</p>
+  </section>
+
+  <section class="slide">
+    <h2>About this talk...</h2>
+    <p class="shout"><em>High-Performance</em> Engines for (AI) <em>Web</em> Apps</p>
+  </section>
+
+  <section class="slide">
+    <h2>High-Performance Web from two perspectives:</h2>
+    <ol style="font-size: xx-large">
+      <li>W3C High-Performance Web Apps <abbr title="Community Group">CG</abbr></li>
+      <li>W3C MiniApps <abbr title="Working Group">WG</abbr></li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>High-Performance Web from two perspectives:</h2>
+    <ol style="font-size: xx-large">
+      <li><em>W3C High-Performance Web Apps <abbr title="Community Group">CG</abbr></em></li>
+      <li>W3C MiniApps <abbr title="Working Group">WG</abbr></li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2 style="margin-left: 2em">High-Performance CG</h2>
+    <img class="cover" src="img/highperf.png" alt="High-performance Baseline for Web Apps">
+  </section>
+
+  <section class="slide" id="vic">
+    <h2>Looking for performance</h2>
+    <p>Current discussions for higher performance of Web (Vic Yao's <a href="https://www.w3.org/community/high-perf-baseline/2025/06/16/key-points-of-the-web-apps-proposal/">post</a>)</p>
+    <table class="striped regular">
+      <thead>
+        <tr><th>Tech</th><th>Rendering</th><th>Layout</th><th>Threading Model</th><th>Layout Stability</th><th></th></tr>
+      </thead>
+      <tr><td>Web</td><td>Web Engines</td><td>High flexible CSS</td><td>Single-thread model + Web Workers</td><td>Low</td><td></td></tr>
+      <tr><td>Native</td><td>Native pipelines</td><td>Optimized layout systems</td><td>UI + background threads</td><td>High</td><td></td></tr>
+      <tr><td>Mini Programs</td><td>WebViews</td><td>CSS Subset</td><td>Logic + view threads</td><td>Medium</td><td></td></tr>
+      <tr><td>React Native</td><td>Bridge to native UI</td><td>Consistent Yoga engine</td><td>Logic, UI, background threads</td><td>Medium-High</td><td></td></tr>
+      <tr><td>Flutter</td><td>Skia engine</td><td>Proprietary layout system</td><td>Multi-Isolate model</td><td>Very High</td><td></td></tr>
+    </table>
+  </section>
+  
+  <section class="slide" id="vic2">
+    <h2>More Performance on Web</h2>
+    <p>Vic Yao's <a href="https://www.w3.org/community/high-perf-baseline/2025/06/16/key-points-of-the-web-apps-proposal/">proposal</a>:</p>
+    <ul>
+      <li>Establishing a <em>new, complementary web core</em></li>
+      <li>Adopting a <em>packaging model</em>, like in MiniApps</li>
+      <li><em>New decoupled architecture</em> (rendering + logic)</li>
+      <li>Standardizing [native] mobile experience primitives</li>
+    </ul>
+    <p>Merging the W3C MiniApp WG and High-Performance CG</p>
+  </section>  
+
+  <section class="slide">
+    <h2>High-Performance Web from two perspectives:</h2>
+    <ol style="font-size: xx-large">
+      <li>W3C High-Performance Web Apps <abbr title="Community Group">CG</abbr></li>
+      <li><em>W3C MiniApps <abbr title="Working Group">WG</abbr></em></li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>Light apps ecosystem</h2>
+    <img class="side fit" src="img/miniapps00.png" alt="Several MiniApp versions from Chinese vendors">
+  </section>
+
+  <section class="slide">
+    <h2>Light apps ecosystem</h2>
+    <img class="side fit" src="img/miniapps01.png" alt="Several MiniApp versions depending on SuperApps">
+  </section>
+
+  <section class="slide">
+    <h2>Light apps</h2>
+    <img class="side fit" src="img/miniapps02.png"
+      alt="Incremental image from previous one, plus several for Android, including WebAPKs, Instant Apps, Quick Apps...">
+  </section>
+
+  <section class="slide">
+    <h2>Main challenges</h2>
+    <ul class="incremental">
+      <li>Development: how <em>to code</em> my MiniApp for n+1 SuperApps
+        <ul>
+          <li>Specific elements, APIs, ...</li>
+          <li>Scripts, third-party libraries...</li>
+          <li>Architecture and performance</li>
+        </ul>
+      </li>
+      <li>Publication: how to <em>deliver it</em> on different platforms (i.e., registration, validation, maintenance)
+      </li>
+      <li>Versioning and maintenance...</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Taro: Cross-Platform Framework</h2>
+    <div class="columns">
+      <section>
+        <h3>Conversion & distribution as…</h3>
+          <ul>
+            <li>HTML5</li>
+            <li>React Native</li>
+            <li>Mini-programs: WeChat, Jingdong, Baidu, Alipay, ByteDance, QQ, DingTalk, Alipay IOT...</li>
+          </ul> 
+      </section>
+      <section>
+        <p>Based on System’s <em>WebView</em> (or Tencent’s X5 WebView) or React Native <em>WebView</em></p>
+      </section>
+    </div>
+  </section>
+
+
+  <section class="slide side r">
+    <h2>Taro Sample Code</h2>
+    <img class="side" src="img/taro01.png" alt="Screenshot of an article with an image">
+    <pre style="font-size: xx-small;">&lt;View className='at-article'&gt;
+    &lt;View className='at-article__h1'&gt;
+      这是一级标题这是一级标题
+    &lt;/View&gt;
+    &lt;View className='at-article__info'&gt;
+      2017-05-07&nbsp;&nbsp;&nbsp;这是作者
+    &lt;/View&gt;
+    &lt;View className='at-article__content'&gt;
+      &lt;View className='at-article__section'&gt;
+        &lt;View className='at-article__h2'&gt;这是二级...&lt;/View&gt;
+        &lt;View className='at-article__h3'&gt;这是三级...&lt;/View&gt;
+        &lt;View className='at-article__p'&gt;
+          这是文本段落。这是文本段落。这是文本段落...
+        &lt;/View&gt;
+        &lt;View className='at-article__p'&gt;这是文本段落&lt;/View&gt;
+        &lt;Image className='at-article__img' src='https...'/&gt;
+      &lt;/View&gt;...</pre>
+  <p><a href="https://taro-ui.jd.com/#/docs/article">Source</a></p>
+  </section>
+  
+  <section class="slide">
+    <h2>What is rendered</h2>
+    <pre style="font-size: xx-small;">&lt;div class="taro_page" style="min-height: 100%;"&gt;
+    &lt;div class="page"&gt;
+      &lt;div class="doc-header"&gt;
+        &lt;div class="doc-header__title"&gt;Article 文章&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="doc-body"&gt;
+        &lt;div class="panel"&gt;
+          &lt;div class="panel__title"&gt;示例&lt;/div&gt;
+          &lt;div class="panel__content no-padding"&gt;
+            &lt;div class="at-article"&gt;
+              &lt;div class="at-article__h1"&gt;这是一级标题这是一级标题&lt;/div&gt;
+              &lt;div class="at-article__info"&gt;2017-05-07&nbsp;&nbsp;&nbsp;这是作者&lt;/div&gt;
+              &lt;div class="at-article__content"&gt;
+                &lt;div class="at-article__section"&gt;
+                  &lt;div class="at-article__h2"&gt;这是二级标题&lt;/div&gt;
+                  &lt;div class="at-article__h3"&gt;这是三级标题&lt;/div&gt;
+                  &lt;div class="at-article__p"&gt;这是文本段落。&lt;/div&gt;
+                  &lt;div class="taro-img"&gt;&lt;img class="taro-img" src="http..."&gt;...</pre>
+  </section>
+  
+  <section class="slide side r">
+    <h2>Another example</h2>
+    <img class="side" src="img/taro03.png" alt="List of timelines on a smartphone">
+    <pre style="font-size: xx-small;">&lt;div class="panel"&gt;
+  &lt;div class="panel__title"&gt;Custom colors&lt;/div&gt;
+  &lt;div class="panel__content"&gt;
+    &lt;div class="example-item"&gt;
+      &lt;div class="at-timeline"&gt;
+        &lt;div class="at-timeline-item"&gt;
+          &lt;div class="at-timeline-item__tail"&gt;&lt;/div&gt;
+          &lt;div class="at-timeline-item__dot"&gt;&lt;/div&gt;
+          &lt;div class="at-timeline-item__content"&gt;
+            &lt;div class="at-timeline-item__content-item"&gt;
+              Brush your teeth and wash your face
+            &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div 
+      class="at-timeline-item at-timeline-item--green"&gt;
+      ...</pre>
+  </section>
+  
+  <section class="slide side r">
+    <h2>Another Example: Divider &lt;hr&gt;</h2>
+    <img class="side" src="img/taro04.png" alt="Header dividers rendered in a smartphone">
+    <pre style="font-size: xx-small;">&lt;div class="at-divider"&gt;
+  &lt;div class="at-divider__content" 
+      style="color: red;"&gt;
+      No more
+    &lt;/div&gt;
+  &lt;div class="at-divider__line" 
+    style="background-color: red;"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      <p><small>Examples simplified for readability.</small></p>
+  </section>
+
+  <section class="slide">
+    <h2>(Some of us) can see it properly, but...</h2>
+    <p>Not optimal for:</p>
+    <ul class="incremental">
+      <li><em>AI</em>, <abbr title="Search Engine Optimization">SEO</abbr>: No semantics</li>
+      <li>Accessibility: No structure for assistive tools (e.g., screen reader)</li>
+      <li>Portability: What if I have a good and accessible H5 page?</li>
+      <li>Performance: Heavy CSS, markup files?</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Wait...</h2>
+    <p><br/>W3C Core Standards are optimal for:</p>
+    <ul>
+      <li>AI, <abbr title="Search Engine Optimization">SEO</abbr>: <del>No</del> <em><ins>Full</ins> semantics</em></li>
+      <li>Accessibility: <del>No</del> <em><ins>Full</ins> structure</em> for user assistants (e.g., screen reader)</li>
+      <li>Portability: I have a good and accessible H5 page. <em>Just share the URL</em></li>
+      <li>Performance: Heavy CSS, markup files? <em>Platform optimizations</em> based on standards</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Need for a Standard?</h2>
+    <p>In 2021, Taro proposed an <abbr title="Request For Comments">RFC</abbr> on common usage of markup to benefit of the directly use of HTML5 standards.</p>
+    <figure>
+      <q>
+          <p>We hope to reduce the cost of migrating [HTML5] applications to Mini Programs, and even run them directly in Mini Programs</p>
+      </q>
+      <figcaption><a href="https://github.com/NervJS/taro-rfcs/blob/html-support/rfcs/0004-rendering-html.md">Taro's <abbr >RFC</abbr></a></figcaption>
+    </figure>
+  </section>
+
+<section class="slide">
+  <h2>Taro’s H5/MiniApp Mapping</h2>
+  <table class="striped small" >
+    <thead>
+      <tr>
+        <th>HTML elements</th>
+        <th>Mini Program components</th>
+        <th>Difference in attributes</th>
+      </tr>
+    </thead>
+    <tr>
+        <td>Block-level text</td>
+        <td>view</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Inline text</td>
+        <td>text</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>span</td>
+        <td>view</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>img</td>
+        <td>image</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>a</td>
+        <td>navigator</td>
+        <td>href -&gt;url; target -&gt;openType</td>
+    </tr>
+    <tr>
+        <td>input</td>
+        <td>input</td>
+        <td>autofocus -&gt;focus; readonly -&gt;disabled; ...</td>
+    </tr>
+    <tr>
+        <td>input[&quot;type=checkbox&quot;]</td>
+        <td>checkbox</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>input[&quot;type=radio&quot;]</td>
+        <td>radio</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>button</td>
+        <td>button</td>
+        <td>type=submit -&gt;form-type=submit ...</td>
+    </tr>
+    <tr>
+        <td>textarea</td>
+        <td>textarea</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>progress</td>
+        <td>progress</td>
+        <td>value, max -&gt;percent</td>
+    </tr>
+    <tr>
+        <td>label</td>
+        <td>label</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>form</td>
+        <td>form</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>audio</td>
+        <td>audio</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>canvas</td>
+        <td>canvas</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>video</td>
+        <td>video</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>iframe</td>
+        <td>web-view</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>slot</td>
+        <td>slot</td>
+        <td></td>
+    </tr>
+</table>
+</section>
+
+<section class="slide">
+  <h2>Isn't it a Good Idea?</h2>
+  <p class="shout">Why not use existing (mature) standards?</p>
+</section>
+
+<section class="slide">
+  <h2>Case Study: MiniApps</h2>
+  <ul>
+    <li><strong>CSS</strong>: subset of <em>CSS3</em> (+a few additions)</li>
+    <li><strong>Scripting</strong>: <em>ECMAScript</em> with limited execution</li>
+    <li><strong>Markup</strong>: <em>~HTMLish</em> domain-specific language</li>
+    <li><strong>APIs</strong>: <em>platform-specific</em>, but similar functionality of Web APIs</li>
+  </ul>
+  <p>See the standards <a href="https://github.com/w3c/miniapp-components/blob/main/docs/gap-analysis-api.md">gap analysis of MiniApp APIs</a> and <a href="https://github.com/w3c/miniapp-components/blob/main/docs/gap-analysis-elements.md">MiniApp elements</a>.</p>
+</section>
+
+<section class="slide">
+  <h2>MiniApps APIs Gap</h2>
+  <table class="striped x-small">
+    <thead>
+    <tr>
+    <th>Type</th>
+    <th>API</th>
+    <th>Description</th>
+    <th>#1</th>
+    <th>#2</th>
+    <th>#3</th>
+    <th>#4</th>
+    <th>2+</th>
+    <th style="width: 10rem; overflow-x:hidden; ">Standard</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>Data management</td>
+    <td>Data storage</td>
+    <td>Get, set key=value pairs</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td><em><strong>Storage API</strong></em> (<em><strong>IndexedDB API</strong></em>), <em><strong>Web Storage API</strong></em></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>File system management</td>
+    <td>Storage, management in the local file system</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td><em><strong>File System API</strong></em>, <em><strong>File and Directory Entries API</strong></em></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Data exchange with other MiniApps</td>
+    <td>Data exchange between installed apps</td>
+    <td>yes</td>
+    <td></td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td><em><strong>Broadcast Channel API</strong></em>, <em><strong>Channel Messaging API</strong></em></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Compression/Decompression</td>
+    <td>ZIP file management</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td></td>
+    <td>yes</td>
+    <td>yes</td>
+    <td></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Clipboard</td>
+    <td>Clipboard set/get</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td><em><strong>Clipboard API</strong></em></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Cryptography</td>
+    <td>Encryption, decryption, random</td>
+    <td>yes</td>
+    <td></td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td><em><strong>Web Crypto API</strong></em></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Cache</td>
+    <td>Cache management (rules, cleaning, etc.)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>yes</td>
+    <td></td>
+    <td><em><strong>Content Index API</strong></em></td>
+    </tr>
+    <tr>
+    <td>Sensors</td>
+    <td>Accelerometer</td>
+    <td>Sensors</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td><em><strong>Sensor APIs (Accelerometer)</strong></em></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Compass</td>
+    <td>Sensors</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td><em><strong>Sensor APIs (Magnetometer)</strong></em></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Gyroscope</td>
+    <td>Sensors</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td><em><strong>Sensor APIs (Gyroscope)</strong></em></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Proximity sensor</td>
+    <td>Sensors</td>
+    <td>yes</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><em><strong>Proximity Sensor</strong></em></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Step counter</td>
+    <td>Sensors</td>
+    <td>yes</td>
+    <td></td>
+    <td>yes</td>
+    <td>yes</td>
+    <td>yes</td>
+    <td></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Ambient light sensor</td>
+    <td>Sensors</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><em><strong>Sensor APIs (Ambient Light)</strong></em></td>
+    </tr>
+    </tbody>
+    </table>
+</section>
+
+<section class="slide">
+  <h2>MiniApps Markup Elements</h2>
+  <table class="striped small">
+    <thead>
+    <tr>
+    <th>Type</th>
+    <th>Feature</th>
+    <th>Style?</th>
+    <th><abbr title="Functional">Funct.</abbr>?</th>
+    <th><abbr>Rec?</abbr></th>
+    <th>Standard solution?</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>Container</td>
+    <td>Content division</td>
+    <td></td>
+    <td></td>
+    <td><code>&lt;div&gt;</code></td>
+    <td>direct usage</td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Inline container</td>
+    <td></td>
+    <td></td>
+    <td><code>&lt;span&gt;</code></td>
+    <td>direct usage</td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Dialog</td>
+    <td></td>
+    <td></td>
+    <td><code>&lt;dialog&gt;</code></td>
+    <td>direct usage</td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Stacking container</td>
+    <td>yes</td>
+    <td></td>
+    <td><code>&lt;div&gt;</code><a href="#block-element">*</a></td>
+    <td>HTML + CSS (<code>div { position: relative; }</code>)</td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Slideshow (carousel)</td>
+    <td>yes</td>
+    <td></td>
+    <td><code>&lt;div&gt;</code><a href="#block-element">*</a></td>
+    <td>HTML + CSS Flexbox + <code>overscroll-behavior</code> + <code>scroll-behavior</code>...</td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Tabs</td>
+    <td>yes</td>
+    <td></td>
+    <td><code>&lt;nav&gt;&lt;section&gt;</code><a href="#block-element">*</a></td>
+    <td>(OpenUI) (<code>nav</code>s + <code>section</code> + CSS)</td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>List container</td>
+    <td>yes</td>
+    <td></td>
+    <td><code>&lt;ul&gt;&lt;li&gt;</code></td>
+    <td>HTML + CSS</td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Fixed container</td>
+    <td>yes</td>
+    <td></td>
+    <td><code>&lt;div&gt;</code><a href="#block-element">*</a></td>
+    <td>HTML + CSS</td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Scrolling container</td>
+    <td>yes</td>
+    <td></td>
+    <td><code>&lt;div&gt;</code><a href="#block-element">*</a></td>
+    <td>HTML + CSS</td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Grid layout</td>
+    <td>yes</td>
+    <td></td>
+    <td><code>&lt;div&gt;</code><a href="#block-element">*</a></td>
+    <td>HTML + CSS</td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Marquee</td>
+    <td>yes</td>
+    <td></td>
+    <td><code>&lt;marquee&gt;</code> (deprecated)<a href="#block-element">*</a></td>
+    <td>HTML + CSS</td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Drag and drop</td>
+    <td></td>
+    <td>yes</td>
+    <td><code>&lt;div&gt;</code><a href="#block-element">*</a></td>
+    <td>HTML + <em>Drag and Drop API</em></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Pull to refresh</td>
+    <td></td>
+    <td>yes</td>
+    <td><code>&lt;div&gt;</code><a href="#block-element">*</a></td>
+    <td>HTML + JS + CSS</td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Conditional block</td>
+    <td></td>
+    <td></td>
+    <td><code>@style</code></td>
+    <td>CSS media queries</td>
+    </tr>
+    <tr>
+    <td></td>
+    <td>Navigation Bar</td>
+    <td></td><td></td>
+    <td><code>&lt;nav&gt;</code></td>
+    <td>HTML + CSS</td>
+    </tr>
+    </tbody>
+    </table>
+</section>
+
+<section class="slide">
+  <h2>What About the Platform-Specific Components</h2>
+  <p class="shout">Better for developers and platform</p>
+  <p style="font-size: small;">Examples: <code>&lt;icon&gt;</code>, <code>&lt;scroll-list&gt;</code>, <code>&lt;map&gt;</code>, <code>&lt;ad&gt;</code>...</p>
+</section>
+
+<section class="slide">
+  <h2>Web Components</h2>
+  <p style="font-size: small;"> E.g., <a href="https://espinr.github.io/sandbox/miniapps/customelements/icon">&lt;icon&gt;</a></p>  
+  <iframe class="smartphone" src="./miniapps/customelements/icon.html" style="width: 100%; height: 300px; transform: scale(0.7); transform-origin: 0 0; border: none;">
+    Icon simulation
+  </iframe>
+</section>
+
+<!-- section class="slide">
+  <h2>Web Components</h2>
+  <p style="font-size: small;"><a href="https://espinr.github.io/sandbox/miniapps/customelements/scroll-view">https://espinr.github.io/sandbox/miniapps/customelements/scroll-view</a></p>
+  <iframe class="smartphone" src="./miniapps/customelements/scroll-view.html" style="width: 100%; height: 630px; transform: scale(0.4); transform-origin: 0 0; border: none">
+    scroll-view simulation
+  </iframe>
+</section -->
+
+<section class="slide side r">
+  <h2>A "Pure Web" SuperApp</h2>
+    <iframe class="side pureweb smartphone" src="./miniapps/pureweb/superapp.html" style="height: 750px; width: 400px;">
+      Superapp simulation
+    </iframe>
+    <p style="font-size: xx-small;"><a href="https://espinr.github.io/sandbox/miniapps/pureweb/superapp">https://espinr.github.io/sandbox/miniapps/pureweb/superapp</a></p>
+</section>
+
+
+<section class="slide">
+  <h2>Opportunities</h2>
+  <div class="columns">
+    <section>
+      <ul>
+        <li>MiniApps paradigm overseas is still unknown, but gaining traction</li>
+        <li>Web standards bring: security, internationalization, accessibility by default</li>
+        <li>MiniApps Working Group, ongoing and ready to continue</li>    
+      </ul>    
+    </section>
+    <section>
+      <h3>Technologies to consider</h3>
+      <ul>
+        <li><strong>Progressive Web Apps</strong>: installable, offline, ready worldwide</li>
+        <li><strong>Isolated Web Apps</strong>: packaging, distribution through HTTP</li>
+        <li><strong>High-Performance Engines</strong>: dedicate and performant web engines?</li>
+      </ul>  
+    </section>
+    </div>
+</section>
+
+<section class="slide">
+  <h2>Embedding Browsers for my SuperApp</h2>
+  <p class="shout">Do we need a full-fledged embedding browser?</p>
+</section>
+
+<section class="slide">
+  <h2>Use Case Optimization</h2>
+  <p  style="font-size: small;">Definition of priorities for developing new Web Engines based on scenarios</p>
+  <img src="img/standards2.svg" alt="Only subsets selected from the full set of standards">
+</section>
+
+<section class="slide">
+  <h2>Priorities for Use Cases</h2>
+  <img src="img/standards3.svg" alt="Only subsets selected from the full set of standards">
+</section>
+
+<section class="slide">
+  <h2>Web Application Profiles?</h2>
+  <p>Important: the objective is not to fragment the web, just to bring <em>new use cases</em> to the Web</p>
+  <ul>
+    <li>Support development of dedicated embedding browsers</li>
+    <li>Guarantee interoperability within use cases</li>
+    <li><em>Maximize engine performance</em> in concrete use cases</li>
+    <li>Support incremental development of full-fledged browsers (prioritize the features to implement)</li>
+  </ul>
+  <p>Successful use cases: <a href="https://www.w3.org/TR/epub-33/#sec-contentdocs">EPUB</a> and <a href="https://w3c.github.io/webmediaapi/">Web Media</a>.</p>
+</section>
+
+<section class="slide">
+  <h2>How to Develop Profiles?</h2>
+  <ul>
+    <li>Reference guidelines (for web engine developers) profiles of standards</li>
+    <li>"Web Features" to map profiles (MUST/SHOULD/MAY-Feature-profile)</li>
+    <li>Extending "Baseline" for "Web Profiles" (e.g., <em>AI Chatbot Web</em> Profile)</li>
+    <li>Creating specific documents in Open Web Docs</li>
+    <li>Extending CanIUse (CanIWebProfileUse)? for integration with toolsets (e.g., editors, frameworks)</li>
+  </ul>
+  <p>Where? High-Performance Web CG, MiniApps CG, Web DevX CG, WebViews CG...</li>
+</p>
+</section>
+
+<section class="slide">
+  <h2>Conclusions... for discussion</h2>
+  <p>The Web brings interoperability, security, <abbr title="internationalization">i18n</abbr>, accessibility by default</p>
+  <div class="columns">
+    <section>
+      <h3>New High-Performant Web</h3>
+      <ul>
+        <li>New Architecture</li>
+        <li>Leverage MiniApps</li>
+        <li>Packaging apps</li>
+        <li>Join the group now!</li>
+      </ul>    
+    </section>
+    <section>
+      <h3>Profiles for Use Cases (AI)</h3>
+      <ul>
+        <li>Web as a cross-platform tool</li>
+        <li>Support diversity of engines</li>
+        <li>Maximize performance</li>
+        <li>Apps run on any browsers</li>
+      </ul>  
+    </section>
+    </div>
+</section>
+
+<section class="slide final">
+  <h2>Thank you</h2>
+  <p style="margin-top: 9em">This presentation:<br><a style="color: aliceblue;" href="http://espinr.github.io/talks/2025/0914-High-Performance-GOSIM">http://espinr.github.io/talks/2025/0914-High-Performance-GOSIM</a></p>
+</section>
+
+  <!-- section class="comment">
+     <p>Notes.</p>
+   </section -->
+
+
+  <footer class="long comment">
+    <address>Slides based on the TPAC 2024 template by Bert Bos and Coralie.</address>
+  </footer>
+
+
+</body>
+
+</html>
+<!-- Local Variables: -->
+<!-- sgml-basic-offset: 1 -->
+<!-- End: -->

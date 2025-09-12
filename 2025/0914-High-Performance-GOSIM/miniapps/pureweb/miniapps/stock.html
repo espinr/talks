@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockTrader Pro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        
+        .app-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: linear-gradient(180deg, #1a1a3e 0%, #0f0f23 100%);
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2d1b69 0%, #1a237e 100%);
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(0,255,255,0.1) 50%, transparent 70%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .header p {
+            font-size: 12px;
+            opacity: 0.8;
+            color: #00e676;
+        }
+        
+        .market-overview {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .market-stat {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .market-stat:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+        
+        .market-stat .label {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-bottom: 5px;
+        }
+        
+        .market-stat .value {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        .positive { color: #00e676; }
+        .negative { color: #ff5252; }
+        .neutral { color: #ffd54f; }
+        
+        .chart-container {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .chart-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .time-selector {
+            display: flex;
+            gap: 5px;
+        }
+        
+        .time-btn {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .time-btn.active {
+            background: #2196f3;
+            border-color: #2196f3;
+        }
+        
+        .chart-wrapper {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 20px;
+            height: 280px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chart-svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .chart-grid {
+            stroke: rgba(255,255,255,0.1);
+            stroke-width: 1;
+        }
+        
+        .chart-line {
+            fill: none;
+            stroke-width: 2;
+            filter: drop-shadow(0 0 4px currentColor);
+        }
+        
+        .chart-area {
+            opacity: 0.1;
+        }
+        
+        .chart-dot {
+            r: 3;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .chart-dot.active {
+            opacity: 1;
+            r: 4;
+        }
+        
+        .price-tooltip {
+            position: absolute;
+            background: rgba(0,0,0,0.9);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            pointer-events: none;
+            opacity: 0;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .stocks-list {
+            padding: 0 20px 100px;
+        }
+        
+        .stocks-header {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .stock-item {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stock-item:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateX(5px);
+        }
+        
+        .stock-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .stock-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .apple { background: linear-gradient(135deg, #007AFF, #5856D6); }
+        .google { background: linear-gradient(135deg, #4285F4, #34A853); }
+        .microsoft { background: linear-gradient(135deg, #0078D4, #106EBE); }
+        .tesla { background: linear-gradient(135deg, #CC0000, #FF4444); }
+        .amazon { background: linear-gradient(135deg, #FF9900, #146EB4); }
+        
+        .stock-details h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        
+        .stock-details p {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+        
+        .stock-price {
+            text-align: right;
+        }
+        
+        .stock-price .current {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        
+        .stock-price .change {
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 8s ease-in-out infinite;
+            color: #00e676;
+        }
+        
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0.1;
+            }
+            50% { 
+                transform: translateY(-30px) rotate(180deg);
+                opacity: 0.3;
+            }
+        }
+        
+        .live-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 12px;
+            color: #00e676;
+        }
+        
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #00e676;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .refresh-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #2196f3, #1976d2);
+            color: white;
+            border: none;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(33, 150, 243, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .refresh-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(33, 150, 243, 0.6);
+        }
+        
+        .refresh-btn.spinning {
+            animation: spin 1s linear;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-element" style="top: 10%; left: 5%; font-size: 24px;">📈</div>
+        <div class="floating-element" style="top: 30%; right: 10%; font-size: 20px;">💰</div>
+        <div class="floating-element" style="top: 60%; left: 15%; font-size: 28px;">📊</div>
+        <div class="floating-element" style="top: 80%; right: 5%; font-size: 22px;">💹</div>
+        <div class="floating-element" style="top: 45%; left: 80%; font-size: 18px;">🚀</div>
+    </div>
+
+    <div class="app-container">
+        <div class="header">
+            <h1>📊 StockTrader Pro</h1>
+            <div class="live-indicator">
+                <div class="live-dot"></div>
+                Live Market Data
+            </div>
+        </div>
+        
+        <div class="market-overview">
+            <div class="market-stat">
+                <div class="label">S&P 500</div>
+                <div class="value positive" id="sp500">4,257.42</div>
+                <div class="change positive" id="sp500-change">+0.85%</div>
+            </div>
+            <div class="market-stat">
+                <div class="label">NASDAQ</div>
+                <div class="value positive" id="nasdaq">13,456.78</div>
+                <div class="change positive" id="nasdaq-change">+1.23%</div>
+            </div>
+            <div class="market-stat">
+                <div class="label">DOW JONES</div>
+                <div class="value negative" id="dow">33,892.15</div>
+                <div class="change negative" id="dow-change">-0.34%</div>
+            </div>
+            <div class="market-stat">
+                <div class="label">VIX</div>
+                <div class="value neutral" id="vix">18.42</div>
+                <div class="change positive" id="vix-change">+2.15%</div>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-header">
+                <div class="chart-title">AAPL - Apple Inc.</div>
+                <div class="time-selector">
+                    <button class="time-btn" onclick="changeTimeframe('1D')">1D</button>
+                    <button class="time-btn active" onclick="changeTimeframe('1W')">1W</button>
+                    <button class="time-btn" onclick="changeTimeframe('1M')">1M</button>
+                    <button class="time-btn" onclick="changeTimeframe('1Y')">1Y</button>
+                </div>
+            </div>
+            
+            <div class="chart-wrapper">
+                <svg class="chart-svg" id="chart">
+                    <!-- Grid lines -->
+                    <defs>
+                        <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00e676;stop-opacity:0.3" />
+                            <stop offset="100%" style="stop-color:#00e676;stop-opacity:0.0" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Grid -->
+                    <g id="grid"></g>
+                    
+                    <!-- Chart area -->
+                    <path id="chart-area" class="chart-area" fill="url(#chartGradient)"></path>
+                    
+                    <!-- Chart line -->
+                    <path id="chart-path" class="chart-line" stroke="#00e676"></path>
+                    
+                    <!-- Data points -->
+                    <g id="chart-dots"></g>
+                </svg>
+                
+                <div class="price-tooltip" id="tooltip">
+                    <div id="tooltip-price"></div>
+                    <div id="tooltip-time"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="stocks-list">
+            <div class="stocks-header">
+                📈 Top Stocks
+            </div>
+            
+            <div class="stock-item" onclick="selectStock('AAPL')">
+                <div class="stock-info">
+                    <div class="stock-icon apple">🍎</div>
+                    <div class="stock-details">
+                        <h3>Apple Inc.</h3>
+                        <p>AAPL</p>
+                    </div>
+                </div>
+                <div class="stock-price">
+                    <div class="current positive" id="aapl-price">$178.92</div>
+                    <div class="change positive" id="aapl-change">+2.45%</div>
+                </div>
+            </div>
+            
+            <div class="stock-item" onclick="selectStock('GOOGL')">
+                <div class="stock-info">
+                    <div class="stock-icon google">G</div>
+                    <div class="stock-details">
+                        <h3>Alphabet Inc.</h3>
+                        <p>GOOGL</p>
+                    </div>
+                </div>
+                <div class="stock-price">
+                    <div class="current positive" id="googl-price">$129.87</div>
+                    <div class="change positive" id="googl-change">+1.83%</div>
+                </div>
+            </div>
+            
+            <div class="stock-item" onclick="selectStock('MSFT')">
+                <div class="stock-info">
+                    <div class="stock-icon microsoft">Ⓜ</div>
+                    <div class="stock-details">
+                        <h3>Microsoft Corp.</h3>
+                        <p>MSFT</p>
+                    </div>
+                </div>
+                <div class="stock-price">
+                    <div class="current negative" id="msft-price">$342.15</div>
+                    <div class="change negative" id="msft-change">-0.67%</div>
+                </div>
+            </div>
+            
+            <div class="stock-item" onclick="selectStock('TSLA')">
+                <div class="stock-info">
+                    <div class="stock-icon tesla">⚡</div>
+                    <div class="stock-details">
+                        <h3>Tesla Inc.</h3>
+                        <p>TSLA</p>
+                    </div>
+                </div>
+                <div class="stock-price">
+                    <div class="current positive" id="tsla-price">$248.73</div>
+                    <div class="change positive" id="tsla-change">+3.21%</div>
+                </div>
+            </div>
+            
+            <div class="stock-item" onclick="selectStock('AMZN')">
+                <div class="stock-info">
+                    <div class="stock-icon amazon">📦</div>
+                    <div class="stock-details">
+                        <h3>Amazon.com Inc.</h3>
+                        <p>AMZN</p>
+                    </div>
+                </div>
+                <div class="stock-price">
+                    <div class="current positive" id="amzn-price">$143.28</div>
+                    <div class="change positive" id="amzn-change">+1.95%</div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="refresh-btn" onclick="refreshData()" id="refresh-btn">
+            🔄
+        </button>
+    </div>
+
+    <script>
+        let currentStock = 'AAPL';
+        let currentTimeframe = '1W';
+        let chartData = [];
+        let animationId;
+        
+        // Initial stock prices
+        const stockPrices = {
+            AAPL: { price: 178.92, change: 2.45 },
+            GOOGL: { price: 129.87, change: 1.83 },
+            MSFT: { price: 342.15, change: -0.67 },
+            TSLA: { price: 248.73, change: 3.21 },
+            AMZN: { price: 143.28, change: 1.95 }
+        };
+        
+        const marketIndices = {
+            SP500: { value: 4257.42, change: 0.85 },
+            NASDAQ: { value: 13456.78, change: 1.23 },
+            DOW: { value: 33892.15, change: -0.34 },
+            VIX: { value: 18.42, change: 2.15 }
+        };
+        
+        function generateChartData(basePrice, points = 50) {
+            const data = [];
+            let currentPrice = basePrice;
+            
+            for (let i = 0; i < points; i++) {
+                const volatility = 0.02; // 2% max change per point
+                const change = (Math.random() - 0.5) * volatility;
+                currentPrice = currentPrice * (1 + change);
+                
+                data.push({
+                    x: i,
+                    y: currentPrice,
+                    time: new Date(Date.now() - (points - i) * 60000).toLocaleTimeString()
+                });
+            }
+            
+            return data;
+        }
+        
+        function drawChart() {
+            const svg = document.getElementById('chart');
+            const chartPath = document.getElementById('chart-path');
+            const chartArea = document.getElementById('chart-area');
+            const dotsGroup = document.getElementById('chart-dots');
+            const gridGroup = document.getElementById('grid');
+            
+            // Clear existing content
+            dotsGroup.innerHTML = '';
+            gridGroup.innerHTML = '';
+            
+            if (chartData.length === 0) return;
+            
+            const svgRect = svg.getBoundingClientRect();
+            const width = 280;
+            const height = 200;
+            const padding = 20;
+            
+            // Calculate scales
+            const minPrice = Math.min(...chartData.map(d => d.y));
+            const maxPrice = Math.max(...chartData.map(d => d.y));
+            const priceRange = maxPrice - minPrice;
+            
+            const xScale = (width - 2 * padding) / (chartData.length - 1);
+            const yScale = (height - 2 * padding) / priceRange;
+            
+            // Draw grid
+            for (let i = 0; i <= 4; i++) {
+                const y = padding + (i * (height - 2 * padding) / 4);
+                const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                line.setAttribute('x1', padding);
+                line.setAttribute('y1', y);
+                line.setAttribute('x2', width - padding);
+                line.setAttribute('y2', y);
+                line.setAttribute('class', 'chart-grid');
+                gridGroup.appendChild(line);
+            }
+            
+            // Create path data
+            let pathData = '';
+            let areaData = '';
+            
+            chartData.forEach((point, index) => {
+                const x = padding + index * xScale;
+                const y = height - padding - (point.y - minPrice) * yScale;
+                
+                if (index === 0) {
+                    pathData += `M ${x} ${y}`;
+                    areaData += `M ${x} ${height - padding} L ${x} ${y}`;
+                } else {
+                    pathData += ` L ${x} ${y}`;
+                    areaData += ` L ${x} ${y}`;
+                }
+                
+                // Add data points
+                const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                dot.setAttribute('cx', x);
+                dot.setAttribute('cy', y);
+                dot.setAttribute('class', 'chart-dot');
+                dot.setAttribute('fill', '#00e676');
+                dot.setAttribute('data-price', point.y.toFixed(2));
+                dot.setAttribute('data-time', point.time);
+                
+                dot.addEventListener('mouseenter', showTooltip);
+                dot.addEventListener('mouseleave', hideTooltip);
+                
+                dotsGroup.appendChild(dot);
+            });
+            
+            // Close area path
+            const lastPoint = chartData[chartData.length - 1];
+            const lastX = padding + (chartData.length - 1) * xScale;
+            areaData += ` L ${lastX} ${height - padding} Z`;
+            
+            chartPath.setAttribute('d', pathData);
+            chartArea.setAttribute('d', areaData);
+        }
+        
+        function showTooltip(event) {
+            const tooltip = document.getElementById('tooltip');
+            const dot = event.target;
+            
+            dot.classList.add('active');
+            
+            document.getElementById('tooltip-price').textContent = `$${dot.getAttribute('data-price')}`;
+            document.getElementById('tooltip-time').textContent = dot.getAttribute('data-time');
+            
+            tooltip.style.opacity = '1';
+            tooltip.style.left = event.clientX - 50 + 'px';
+            tooltip.style.top = event.clientY - 60 + 'px';
+        }
+        
+        function hideTooltip(event) {
+            const tooltip = document.getElementById('tooltip');
+            const dot = event.target;
+            
+            dot.classList.remove('active');
+            tooltip.style.opacity = '0';
+        }
+        
+        function updateStockPrices() {
+            Object.keys(stockPrices).forEach(symbol => {
+                const stock = stockPrices[symbol];
+                const volatility = 0.003; // 0.3% max change per update
+                const change = (Math.random() - 0.5) * volatility;
+                
+                stock.price = stock.price * (1 + change);
+                stock.change = stock.change + (Math.random() - 0.5) * 0.1;
+                
+                // Update UI
+                const priceElement = document.getElementById(symbol.toLowerCase() + '-price');
+                const changeElement = document.getElementById(symbol.toLowerCase() + '-change');
+                
+                if (priceElement) {
+                    priceElement.textContent = `$${stock.price.toFixed(2)}`;
+                    changeElement.textContent = `${stock.change >= 0 ? '+' : ''}${stock.change.toFixed(2)}%`;
+                    
+                    // Update colors
+                    priceElement.className = `current ${stock.change >= 0 ? 'positive' : 'negative'}`;
+                    changeElement.className = `change ${stock.change >= 0 ? 'positive' : 'negative'}`;
+                }
+            });
+        }
+        
+        function updateMarketIndices() {
+            Object.keys(marketIndices).forEach(index => {
+                const market = marketIndices[index];
+                const volatility = 0.001; // Smaller volatility for indices
+                const change = (Math.random() - 0.5) * volatility;
+                
+                market.value = market.value * (1 + change);
+                market.change = market.change + (Math.random() - 0.5) * 0.05;
+                
+                // Update UI
+                let elementId = index.toLowerCase();
+                if (elementId === 'sp500') elementId = 'sp500';
+                else if (elementId === 'dow') elementId = 'dow';
+                
+                const valueElement = document.getElementById(elementId);
+                const changeElement = document.getElementById(elementId + '-change');
+                
+                if (valueElement) {
+                    valueElement.textContent = market.value.toLocaleString('en-US', {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    });
+                    changeElement.textContent = `${market.change >= 0 ? '+' : ''}${market.change.toFixed(2)}%`;
+                    
+                    // Update colors
+                    valueElement.className = `value ${market.change >= 0 ? 'positive' : 'negative'}`;
+                    changeElement.className = `change ${market.change >= 0 ? 'positive' : 'negative'}`;
+                }
+            });
+        }
+        
+        function addNewDataPoint() {
+            if (chartData.length === 0) return;
+            
+            const lastPoint = chartData[chartData.length - 1];
+            const volatility = 0.02;
+            const change = (Math.random() - 0.5) * volatility;
+            const newPrice = lastPoint.y * (1 + change);
+            
+            chartData.push({
+                x: chartData.length,
+                y: newPrice,
+                time: new Date().toLocaleTimeString()
+            });
+            
+            // Keep only last 50 points
+            if (chartData.length > 50) {
+                chartData.shift();
+                // Reindex x values
+                chartData.forEach((point, index) => {
+                    point.x = index;
+                });
+            }
+            
+            drawChart();
+        }
+        
+        function selectStock(symbol) {
+            currentStock = symbol;
+            const basePrice = stockPrices[symbol].price;
+            chartData = generateChartData(basePrice);
+            drawChart();
+            
+            // Update chart title
+            const companyNames = {
+                AAPL: 'AAPL - Apple Inc.',
+                GOOGL: 'GOOGL - Alphabet Inc.',
+                MSFT: 'MSFT - Microsoft Corp.',
+                TSLA: 'TSLA - Tesla Inc.',
+                AMZN: 'AMZN - Amazon.com Inc.'
+            };
+            
+            document.querySelector('.chart-title').textContent = companyNames[symbol];
+        }
+        
+        function changeTimeframe(timeframe) {
+            currentTimeframe = timeframe;
+            
+            // Update active button
+            document.querySelectorAll('.time-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Generate new data based on timeframe
+            let points;
+            switch(timeframe) {
+                case '1D': points = 24; break;
+                case '1W': points = 50; break;
+                case '1M': points = 30; break;
+                case '1Y': points = 365; break;
+                default: points = 50;
+            }
+            
+            const basePrice = stockPrices[currentStock].price;
+            chartData = generateChartData(basePrice, points);
+            drawChart();
+        }
+        
+        function refreshData() {
+            const refreshBtn = document.getElementById('refresh-btn');
+            refreshBtn.classList.add('spinning');
+            
+            setTimeout(() => {
+                refreshBtn.classList.remove('spinning');
+                
+                // Regenerate all data
+                const basePrice = stockPrices[currentStock].price;
+                chartData = generateChartData(basePrice);
+                drawChart();
+                updateStockPrices();
+                updateMarketIndices();
+            }, 1000);
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize chart
+            selectStock('AAPL');
+            
+            // Start real-time updates
+            setInterval(() => {
+                updateStockPrices();
+                updateMarketIndices();
+                addNewDataPoint();
+            }, 3000); // Update every 3 seconds
+            
+            // Add floating animation delays
+            const floatingElements = document.querySelectorAll('.floating-element');
+            floatingElements.forEach((element, index) => {
+                element.style.animationDelay = `${index * 0.5}s`;
+            });
+        });
+    </script>
+</body>
+</html>

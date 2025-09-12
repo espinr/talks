@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #585858;
+    background: white;
+}
+
+.content {
+}
+
+section {
+    margin: 1rem;
+}
+
+.container-component {
+    width: 450px;
+    background: lightgray;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+scroll-view {
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.scroll-view-item {
+    width: 400px;
+    height: 300px;
+}
+#red {
+    background-color: darkred;
+}
+#blue {
+    background-color: darkblue;
+}
+#green {
+    background-color: darkgreen;
+}
+#purple {
+    background-color: purple;
+}
+
+code, pre:has(code) {
+    color: lawngreen;
+    background-color: #585858;
+}
+
+@font-face {
+    font-family: "icons";
+    src: url("./fonts/JournalDingbats2.ttf");
+}
+
+miniapp-icon {
+    font-family: "icons";
+}
