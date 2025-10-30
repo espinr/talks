@@ -1,0 +1,92 @@
+{
+  "name": "SuperApp",
+  "short_name": "SuperApp",
+  "description": "A modern super application with chat",
+  "start_url": "https://espinr.github.io/sandbox/miniapps/pureweb/superapp.html",
+  "display": "fullscreen",
+  "orientation": "portrait-primary",
+  "theme_color": "#667eea",
+  "background_color": "#f7fafc",
+  "lang": "en",
+  "scope": "https://espinr.github.io/sandbox/miniapps/pureweb/",
+  "icons": [
+    {
+      "src": "images/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "social", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Open Chat",
+      "short_name": "Chat",
+      "description": "Open the chat interface",
+      "url": "/#chat",
+      "icons": [
+        {
+          "src": "images/icon-384.png",
+          "sizes": "384x384"
+        }
+      ]
+    }  ],
+  "screenshots": [
+    {
+      "src": "screenshot01.png",
+      "sizes": "1002x1562",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "SuperApp main interface"
+    },
+    {
+      "src": "screenshot02.png",
+      "sizes": "958x1520",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "SuperApp mobile view"
+    }
+  ]
+}
