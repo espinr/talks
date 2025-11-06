@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset=UTF-8>
+  <meta content="width=device-width" name="viewport">
+  <title>Proposals for WIGC @ TPAC</title>
+  <link rel="stylesheet" href="../Templates/TPAC25/slides.css">
+  <!-- To use the b6+ framework, include this: -->
+  <script src="../Templates/TPAC25/b6plus.js"></script>
+  <!-- To use the Shower framework, remove b6plus above and add these two: -->
+  <!--   <script src="../Templates/TPAC25/shower.js"></script>         -->
+  <!--   <script src="../Templates/TPAC25/iframe-fixup.js"></script>   -->
+
+  <style>
+    table.small {
+      font-size: x-small; 
+      line-height: 1.3;
+    }
+    table.small td code, table.x-small td code {
+      font-size: smaller;
+      padding: 0; 
+    }
+    table.x-small {
+      font-size: xx-small; 
+    }
+    iframe.pureweb {
+      height: 800px;
+      width: 400px;
+      transform: scale(0.4); 
+      transform-origin: 0 0;
+      border: none;
+    }
+    .smartphone {
+      background: #000;
+      border-radius: 40px;
+      position: relative;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body class="shower fade-in duration=15">
+
+  <section class="comment">
+    <p>This is a template for slides for <a href="https://www.w3.org/2025/11/TPAC/">TPAC 2025</a>.</p>
+
+ 
+    <p><strong>Reader(s):</strong>
+    <!-- For b6plus: -->
+    <span class="if-b6plus">To start the slide show, press ‘A’. Return to
+    the index with ‘A’ or ‘Esc’. On a touch screen, use a 3-finger
+    touch. Double click to open a specific slide. In slide mode, press
+    ‘?’ (question mark) to get a list of available commands.</span>
+    <!-- For Shower: -->
+    <span class="if-not-b6plus">To start the slide show, press Shift+F5
+    (Command+Enter on Mac). Return to the index by pressing ‘Esc’. You
+    can also click to open a specific slide.</span></p>
+ 
+    <p><strong>If it doesn't work:</strong> Slide mode requires a
+    recent browser with JavaScript. If you are using the <a href="https://noscript.net/">‘NoScript’</a> add-on (Firefox or the
+    Tor Browser), or changed the <a href="https://support.google.com/chrome/answer/114662?hl=en&amp;co=GENIE.Platform=Desktop">‘site settings’</a> (Chrome, Vivaldi, Opera, Brave and some other
+    browsers), or the ‘permissions for this site’ (Edge), you may have
+    to explicitly allow JavaScript on these slides. Internet Explorer
+    is not supported.</p>
+   </section>
+
+  <!-- Remove this element if you don't want a progress bar: -->
+  <div class=progress></div>
+
+  <!-- Remove this element if you don't want the remaining time in
+       index mode and on the 2nd screen. If you keep it, you may want
+       to add the class "duration=n" on BODY, where n is the initial
+       number of minutes on the clock. Default is 30. -->
+  <!--div class=clock></div-->
+
+  <!-- Alternative: Show also real time and elapsed time. -->
+  <!-- <div class=fullclock></div> -->
+
+  <!-- What a screen reader should say on leaving slide mode,
+       instead of the default ‘Stopped.’ -->
+  <div role=region aria-live=assertive>
+    Leaving slide mode.
+  </div>
+
+  <section class="slide cover clear" id="cover">
+    <h1>Proposals to <abbr title="Web Platform Incubator Community Group">WICG</abbr></h1>
+    <address>Liu Yaoming, Qin Wen Jun, Wang Hui, Martin Alvarez</address>
+    <p class="event">TPAC 2025<br>
+      Kobe, Japan &amp; online<br>
+      13 November 2025
+    </p>
+  </section>
+
+  <!-- section class="comment">
+     <p>Notes.</p>
+   </section -->
+
+  <section class="slide">
+    <h2>Proposals</h2>
+    <ol>
+      <li>Scrollbar Padding</li>
+      <li>Maximum Fling Speed</li>
+      <li>HTTP Headers in Speculation Rules</li>
+    </ol>
+  </section>
+
+  <!-- section class="comment">
+     <p>@yaomingliu</p>
+   </section -->
+
+   <section class="slide">
+    <h2>Proposals</h2>
+    <ol>
+      <li><em>Scrollbar Padding</em></li>
+      <li>Maximum Fling Speed</li>
+      <li>HTTP Headers in Speculation Rules</li>
+    </ol>
+  </section>
+
+  <section class="slide side r big" >
+    <h2>#1: Scrollbar Padding</h2>
+    <ul>
+      <li>Author: Liu Yaomin (<em>@yaomingliu</em>)</li>
+      <li>New CSS property: <code>scrollbar-padding</code> for a fine-grained control of the scrollbar</li>
+      <li>Complementary to <code>scrollbar-gutter</code></li>
+    </ul>
+    <img class="side" src="img/overlapping-scrollbar.png" alt="Two screenshots of a smartphone with the scrollbar overlaping the system bar (current time and batery status)">
+  </section>
+
+  <!-- section class="comment">
+     <p>Notes.</p>
+   </section -->
+
+  <section class="slide">
+    <h2>Safe distance from the viewport edges</h2>
+    <p>We can get the safe rectangle, where all content is visible</p>
+    <code>env(safe-area-inset-top)</code>, <code>-bottom</code>, <code>-left</code>, <code>-right</code></p>
+    <p>We can control the content box</p>
+    <p>However we <em>don't have fine-grained control of the scrollbar</em> offsets</p>
+  </section>
+
+  <section class="slide side r">
+    <h2>Declarative scrollbar padding</h2>
+    <pre style="font-size:x-small"><code>:root {
+  --safe-y: env(safe-area-inset-top);
+  --safe-x: env(safe-area-inset-right);
+}
+
+body {
+  scrollbar-padding-top: --safe-y;
+  scrollbar-padding-bottom: --safe-y;
+  scrollbar-padding-left: --safe-x;
+  scrollbar-padding-right: --safe-x;
+}
+</code></pre>
+    <img style="background-color: white;" class="side" src="img/scroll-padding.svg" alt="Round-shaped wiewport with paddings in the four corners of the content box to limit the reach of the scrollbar">
+  </section>
+
+  <section class="slide">
+    <h2>Your slide here</h2>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+    <p>Blah blah blah</p>
+  </section>
+
+  <section class="slide">
+    <h2>Proposals</h2>
+    <ol>
+      <li>Scrollbar Padding</li>
+      <li><em>Maximum Fling Speed</em></li>
+      <li>HTTP Headers in Speculation Rules</li>
+    </ol>
+  </section>
+
+  <section class="slide side r">
+    <h2>#2 Maximum Fling Speed</h2>
+    <p>Proposal by Qin Wen Jun <em>@xiaolongxia</em></p>
+    <h3>Challenge</h3>
+    <ul>
+      <li>Infinite-scrolling design</li>
+      <li>Large documents, with heavy content (e.g., media)</li>
+      <li>Rendering delays causing poor UX</li>
+    </ul>
+    <p class="side">Video here to show the challenge?</p>
+  </section>
+
+  <section class="slide">
+    <h2>Proposal: declarative viewport behavior for fling</h2>
+    <p>New &lt;meta name="viewport"&gt; attributes to control fling speed</p>
+    <p style="font-size: smaller;"><code>&lt;meta name="viewport" content="max-fling-speed-y=4500" &gt;</code></p>
+    <ul>
+      <li><code>max-fling-speed-x</code> for horizontal scrolling</li>
+      <li><code>and max-fling-speed-y</code> for vertical scrolling</li>
+      <li>Values to consider: <code>pixels/second</code> or similar</li>
+    </ul>
+    <p>This can be done programatically using a <code>scroll event</code> listener. More complex and might limit the performance</p>
+  </section>
+
+  <section class="slide">
+    <h2>Your slide here</h2>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+    <p>Blah blah blah</p>
+  </section>
+
+  <section class="slide">
+    <h2>Proposals</h2>
+    <ol>
+      <li>Scrollbar Padding</li>
+      <li>Maximum Fling Speed</li>
+      <li><em>HTTP Headers in Speculation Rules</em></li>
+    </ol>
+  </section>
+
+  <section class="slide">
+    <h2>#3 HTTP Headers in Speculation Rules API</h2>
+    <p>Proposal by Wang Hui (<em>@WangAoHui</em>)</p>
+    <ul>
+      <li>WebViews enable custom headers to HTTP requests for multiple purposes</li>
+      <li>Speculation Rules API for performance in future navigations</li>
+    </ul>
+    <pre style="font-size: x-small;">{
+  "prefetch": [
+    {
+      "urls": ["next.html", "next2.html"],
+      "requires": ["anonymous-client-ip-when-cross-origin"],
+      "referrer_policy": "no-referrer"
+    }
+  ]
+}</pre>
+  </section>
+
+  <section class="slide">
+    <h2>Need for HTTP Headers</h2>
+    <ul>
+      <li>Content Negotiation</li>
+      <li>Caching Controls</li>
+      <li>Versioning...</li>
+    </ul>
+    <pre style="font-size: x-small;">{
+  "prerender": [
+    {
+      "urls": ["next.html"],
+      "additional_headers": [
+          {"Custom-header-id": "2"}, 
+          {"Custom-header-Version":"1002"}, 
+          {"Custom-header-Locale": "es-ES"}
+      ]
+    }
+  ]
+}</pre>
+  </section>
+
+  <section class="slide">
+    <h2>Your slide here</h2>
+    <ol>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+    <p>Blah blah blah</p>
+  </section>
+
+  <section class="slide">
+    <h2>Summary</h2>
+    <ol>
+      <li><a href="https://github.com/WICG/proposals/issues/230">CSS Scrollbar Padding</a></li>
+      <li><a href="https://github.com/WICG/proposals/issues/234">Maximum Fling Speed</a></li>
+      <li><a href="https://github.com/WICG/proposals/issues/231">HTTP Headers in Speculation Rules</a></li>
+    </ol>
+    <p>Blah blah blah</p>
+  </section>
+
+  <!-- section class="comment">
+     <p>Notes.</p>
+   </section -->
+
+</body>
+
+</html>
+<!-- Local Variables: -->
+<!-- sgml-basic-offset: 1 -->
+<!-- End: -->
