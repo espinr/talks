@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset=UTF-8>
+  <meta content="width=device-width" name="viewport">
+  <title>Light Web-Based Apps: from chatbot's interactions to MiniApps</title>
+  <link rel="stylesheet" href="../../2025/Templates/Generic/slides.css">
+  <!-- To use the b6+ framework, include this: -->
+  <script src="../../2025/Templates/Generic/b6plus.js"></script>
+  <!-- To use the Shower framework, remove b6plus above and add these two: -->
+  <!--   <script src="../Templates/TPAC25/shower.js"></script>         -->
+  <!--   <script src="../Templates/TPAC25/iframe-fixup.js"></script>   -->
+
+  <style>
+    table.small {
+      font-size: x-small; 
+      line-height: 1.3;
+    }
+    table.small td code, table.x-small td code {
+      font-size: smaller;
+      padding: 0; 
+    }
+    table.x-small {
+      font-size: xx-small; 
+    }
+    iframe.pureweb {
+      height: 800px;
+      width: 400px;
+      transform: scale(0.4); 
+      transform-origin: 0 0;
+      border: none;
+    }
+    .smartphone {
+      background: #000;
+      border-radius: 40px;
+      position: relative;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body class="shower fade-in duration=15">
+
+  <section class="comment">
+ 
+    <p><strong>Reader(s):</strong>
+    <!-- For b6plus: -->
+    <span class="if-b6plus">To start the slide show, press ‘A’. Return to
+    the index with ‘A’ or ‘Esc’. On a touch screen, use a 3-finger
+    touch. Double click to open a specific slide. In slide mode, press
+    ‘?’ (question mark) to get a list of available commands.</span>
+    <!-- For Shower: -->
+    <span class="if-not-b6plus">To start the slide show, press Shift+F5
+    (Command+Enter on Mac). Return to the index by pressing ‘Esc’. You
+    can also click to open a specific slide.</span></p>
+ 
+    <p><strong>If it doesn't work:</strong> Slide mode requires a
+    recent browser with JavaScript. If you are using the <a href="https://noscript.net/">‘NoScript’</a> add-on (Firefox or the
+    Tor Browser), or changed the <a href="https://support.google.com/chrome/answer/114662?hl=en&amp;co=GENIE.Platform=Desktop">‘site settings’</a> (Chrome, Vivaldi, Opera, Brave and some other
+    browsers), or the ‘permissions for this site’ (Edge), you may have
+    to explicitly allow JavaScript on these slides. Internet Explorer
+    is not supported.</p>
+   </section>
+
+  <!-- Remove this element if you don't want a progress bar: -->
+  <div class=progress></div>
+
+  <!-- Remove this element if you don't want the remaining time in
+       index mode and on the 2nd screen. If you keep it, you may want
+       to add the class "duration=n" on BODY, where n is the initial
+       number of minutes on the clock. Default is 30. -->
+  <!--div class=clock></div-->
+
+  <!-- Alternative: Show also real time and elapsed time. -->
+  <!-- <div class=fullclock></div> -->
+
+  <!-- What a screen reader should say on leaving slide mode,
+       instead of the default ‘Stopped.’ -->
+  <div role=region aria-live=assertive>
+    Leaving slide mode.
+  </div>
+
+  <section class="slide cover clear" id="cover">
+    <h1>Light Web-Based Apps: from chatbot's interactions to MiniApps</h1>
+    <address>Martin Alvarez</address>
+    <p class="event">Breakout Days 2026<br>
+      online<br>
+      25 March 2026
+    </p>
+  </section>
+
+  <!-- section class="comment">
+     <p>Notes.</p>
+   </section -->
+
+  <section class="slide">
+    <h2>Agenda</h2>
+    <ol>
+      <li>Logistics</li>
+      <li>Current Challenges</li>
+      <li>MiniApps WG Extension/Re-Chartering</li>
+    </ol>
+  </section>
+
+  <!-- section class="comment">
+     <p>Notes.</p>
+   </section -->
+
+  <section class="slide" id="agenda-specs-1">
+    <h2>Logistics & Administrivia</h2>
+    <ul>
+      <li>Welcome!</li>
+      <li>Please, remind the W3C <a href="https://www.w3.org/Consortium/cepc/">Code of Ethics and Professional
+          Conduct</a> and the <a href="https://www.w3.org/policies/antitrust-2024/">Antitrust and Competition
+          Guidance</a></li>
+      <li>IRC: <a href="https://irc.w3.org/?channels=%23lightweight-apps"><em>#lightweight-apps</em></a>
+        <ul>
+          <li>`q+` to add a question</li>
+        </ul>
+      </li>
+      <li>Scribe?</li>
+    </ul>
+  </section>
+
+  <!-- section class="comment">
+     <p>Notes.</p>
+   </section -->
+
+   <section class="slide">
+    <h2>Agenda</h2>
+    <ol>
+      <li>Logistics</li>
+      <li><em>Current Challenges</em></li>
+      <li>MiniApps WG Extension/Re-Chartering</li>
+    </ol>
+  </section>
+
+  <!-- section class="comment">
+     <p>Notes.</p>
+   </section -->
+
+   <section class="slide">
+    <h2>Agenda</h2>
+    <ol>
+      <li>Logistics</li>
+      <li>Current Challenges</li>
+      <li><em>MiniApps WG Extension/Re-Chartering</em></li>
+    </ol>
+  </section>
+
+      <!-- section class="comment">
+     <p>Notes.</p>
+   </section -->
+
+
+   <section class="slide" id="specs">
+    <h2>MiniApps challenges</h2>
+    <table class="striped">
+      <tbody>
+        <tr><td>🧬</td><td>Lifecycle</td><td>installation, super-app context,..</td></tr>
+        <tr><td>📦</td><td>Distribution</td><td>compression, signatures, origin preservation...</td></tr>
+        <tr><td>🪧</td><td>Metadata</td><td>permissions, setup...</td></tr>
+        <tr><td>👩‍💻</td><td>Reusability</td><td>components, APIs</td></tr>
+        <tr><td>🔗</td><td>Addressing</td><td>versions, deeplinking...</td></tr>
+        <tr><td>🖼️</td><td>Widgets</td><td>across <abbr title="Operating Systems">OSs</abbr></td></tr>
+        <tr><td>♿</td><td>Accessibility</td><td>apps more inclusive</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+
+    <!-- section class="comment">
+     <p>Notes.</p>
+   </section -->
+
+   <section class="slide" id="specs">
+    <h2>How do we solve it?</h2>
+    <table class="striped">
+      <tbody>
+        <tr><th colspan="2">Challenge</th><th>MiniApps WG</th><th>Still Missing</th></tr>
+        <tr><td>🧬</td><td>Lifecycle</td><td>✅ DOM Events</td><td>🆘 non-standard</td></tr>
+        <tr><td>📦</td><td>Distribution</td><td>✅ ZIP + signatures</td><td>🆘 Origin model</td></tr>
+        <tr><td>🪧</td><td>Metadata</td><td>✅ Web App Manifest</td><td></td></tr>
+        <tr><td>👩‍💻</td><td>Reusability</td><td>❌ DSL, different APIs</td><td>🆘 HTML/API subsets</td></tr>
+        <tr><td>🔗</td><td>Addressing</td><td>✅ URL schema</td><td></td></tr>
+        <tr><td>♿</td><td>Accessibility</td><td>❌ <code><small>role</small></code></td><td>🆘 HTML semantics</td></tr>
+        <tr><td>🖼️</td><td>Widgets</td><td>❌ Requirements</td><td></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="slide" id="specs">
+    <h2>Consider other activities?</h2>
+    <table class="striped">
+      <tbody>
+        <tr><th colspan="2">Challenge</th><th>MiniApps WG</th><th>Still Missing</th><th>PWA+<abbr title='Isolated Web Apps'>IWA</abbr></th></tr>
+        <tr><td>🧬</td><td>Lifecycle</td><td>✅ DOM Events</td><td>🆘 non-standard</td><td>✅ Standards</td></tr>
+        <tr><td>📦</td><td>Distribution</td><td>✅ ZIP + sig.</td><td>🆘 Origin model</td><td>✅ <abbr title='Content Security Policy'>CSP</abbr></td></tr>
+        <tr><td>🪧</td><td>Metadata</td><td>✅ Manifest</td><td></td><td></td></tr>
+        <tr><td>👩‍💻</td><td>Reusability</td><td>❌ non-standard</td><td>🆘 HTML/APIs</td><td>✅ Standards</td></tr>
+        <tr><td>🔗</td><td>Addressing</td><td>✅ URL schema</td><td></td><td>✅ URL schema</td></tr>
+        <tr><td>♿</td><td>Accessibility</td><td>❌ <code><small>role</small></code></td><td>🆘 HTML semantics</td><td>✅ Standards</td></tr>
+        <tr><td>🖼️</td><td>Widgets</td><td>❌ Requirements</td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="slide side r">
+    <h2>Ongoing discussions...</h2>
+      <iframe class="side pureweb smartphone" src="../../2025/1114_MiniApps_TPAC/miniapps/pureweb/superapp.html" style="height: 750px; width: 400px;">
+        Superapp simulation
+      </iframe>
+    <ol>
+      <li><em>WebViews CG</em>: use cases for hybrid apps</li>
+      <li><em>WinterTC</em>: min. common APIs for JS Runtimes</li>
+      <li>PWA incubations (e.g., Web Install API)...</li>
+      <li>AI-generated apps?</li>
+      <li>...</li>
+    </ol>
+  </section>
+
+
+  <section class="slide side big r" id="charter">
+    <h2>MiniApps WG Re-Chartering</h2>
+    <img class="side" src="./img/miniapp-runtime-alternatives.png" alt="Different options to run MiniApps">
+    <ol>
+      <li>Objective: better alignment with standards</li>
+      <li>Changes in the scope?</li>
+      <li>Keep current specs?</li>
+      <li>Involve other solutions (e.g., IWA) to cover the gaps?</li>
+    </ol>
+  </section>
+
+
+  <section class="slide final">
+    <h2>Thank you</h2>
+    <p style="margin-top: 9em">This presentation:<br><a style="color: aliceblue;" href="http://espinr.github.io/talks/2026/0325_MiniApps_Breakout">http://espinr.github.io/talks/2026/0325_MiniApps_Breakout</a></p>
+  </section>
+
+  <section class="slide" id="latest-documents">
+    <h2>Latest discussions</h2>
+    <ol>
+      <li>Gap Analysis of web standards & <a href="https://github.com/w3c/miniapp-components/blob/main/docs/gap-analysis-api.md">MiniApp APIs</a> and <a href="https://github.com/w3c/miniapp-components/blob/main/docs/gap-analysis-elements.md">MiniApp elements</a></li>
+      <li>MiniApp's WebViews (<a href="https://www.w3.org/events/meetings/9363fa89-64f3-447c-80a7-c04409d60377/">Breakout session</a>)</li>
+    </ol>
+  </section>
+  
+</body>
+
+</html>
+<!-- Local Variables: -->
+<!-- sgml-basic-offset: 1 -->
+<!-- End: -->
