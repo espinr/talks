@@ -453,6 +453,9 @@
                     .catch(registrationError => {
                         console.log('SW registration failed: ', registrationError);
                     });
+                setTimeout(()=>{
+                    switchTab('discover')
+                }, 5000)
             });
         }
 
