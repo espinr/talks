@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset=UTF-8>
+  <meta content="width=device-width" name="viewport">
+  <title>Challenging how we see the web: The MiniApps Story</title>
+  <link rel="stylesheet" href="../../2026/Templates/AC-2026/slides.css">
+  <!-- To use the b6+ framework, include this: -->
+  <script src="../../2026/Templates/AC-2026/b6plus.js"></script>
+  <!-- To use the Shower framework, remove b6plus above and add these two: -->
+  <!--   <script src="../Templates/TPAC25/shower.js"></script>         -->
+  <!--   <script src="../Templates/TPAC25/iframe-fixup.js"></script>   -->
+
+  <style>
+    table tfoot,
+    .mynote {
+      margin-top: 1rem;
+      color: darkgrey;
+      font-size: x-small;
+    }
+
+    table.small {
+      font-size: x-small;
+      line-height: 1.3;
+    }
+
+    table.small td code,
+    table.x-small td code {
+      font-size: smaller;
+      padding: 0;
+    }
+
+    table.x-small {
+      font-size: xx-small;
+    }
+
+    iframe.pureweb {
+      height: 800px;
+      width: 400px;
+      transform: scale(0.4);
+      transform-origin: 0 0;
+      border: none;
+    }
+
+    .smartphone {
+      background: #000;
+      border-radius: 40px;
+      position: relative;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body class="shower fade-in duration=15">
+
+  <section class="comment">
+
+    <p><strong>Reader(s):</strong>
+      <!-- For b6plus: -->
+      <span class="if-b6plus">To start the slide show, press ‘A’. Return to
+        the index with ‘A’ or ‘Esc’. On a touch screen, use a 3-finger
+        touch. Double click to open a specific slide. In slide mode, press
+        ‘?’ (question mark) to get a list of available commands.</span>
+      <!-- For Shower: -->
+      <span class="if-not-b6plus">To start the slide show, press Shift+F5
+        (Command+Enter on Mac). Return to the index by pressing ‘Esc’. You
+        can also click to open a specific slide.</span>
+    </p>
+
+    <p><strong>If it doesn't work:</strong> Slide mode requires a
+      recent browser with JavaScript. If you are using the <a href="https://noscript.net/">‘NoScript’</a> add-on
+      (Firefox or the
+      Tor Browser), or changed the <a
+        href="https://support.google.com/chrome/answer/114662?hl=en&amp;co=GENIE.Platform=Desktop">‘site settings’</a>
+      (Chrome, Vivaldi, Opera, Brave and some other
+      browsers), or the ‘permissions for this site’ (Edge), you may have
+      to explicitly allow JavaScript on these slides. Internet Explorer
+      is not supported.</p>
+  </section>
+
+  <!-- Remove this element if you don't want a progress bar: -->
+  <div class=progress></div>
+
+  <!-- Remove this element if you don't want the remaining time in
+       index mode and on the 2nd screen. If you keep it, you may want
+       to add the class "duration=n" on BODY, where n is the initial
+       number of minutes on the clock. Default is 30. -->
+  <!--div class=clock></div-->
+
+  <!-- Alternative: Show also real time and elapsed time. -->
+  <!-- <div class=fullclock></div> -->
+
+  <!-- What a screen reader should say on leaving slide mode,
+       instead of the default ‘Stopped.’ -->
+  <div role=region aria-live=assertive>
+    Leaving slide mode.
+  </div>
+
+  <section class="slide cover clear" id="cover">
+    <h1>Challenging how we see the web:<br>The MiniApps Story</h1>
+    <address>Martin Alvarez</address>
+    <p class="event">AC 2026<br>
+      Hangzhou - 🇨🇳<br>
+      20 April 2026
+    </p>
+  </section>
+
+  <section class="comment">
+    <p>Notes.</p>
+  </section>
+
+  <section class="slide">
+    <h2>What is a MiniApp?</h2>
+    <div>
+      <blockquote>
+        <p>
+          [...] <em>hybrid application</em> format that <em>relies on Web</em> technologies (especially CSS and <abbr
+            title="JavaScript">JS</abbr>) and integrates <em>with native capabilities</em>, running in a
+          <em>sandboxed</em> environment (super-app, OS framework).
+        </p>
+      </blockquote>
+    </div>
+    <p><small class="mynote">Adaptation of the (<a
+          href="https://www.w3.org/TR/mini-app-white-paper/#what-is-miniapp">White Paper definition</a>)</small></p>
+  </section>
+
+  <section class="comment">
+    <p>Notes.</p>
+  </section>
+
+  <section class="slide">
+    <h2>MiniApp characteristics</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Features</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><em>Lightweight</em> (max a few MB)</td>
+        </tr>
+        <tr>
+          <td>Subset of <em><abbr>JS</abbr>, CSS, <i>HTML-ish</i></em></td>
+        </tr>
+        <tr>
+          <td>No (perceived) <em>installation</em></td>
+        </tr>
+        <tr>
+          <td>Rendered by <em>embedded engines</em></td>
+        </tr>
+        <tr>
+          <td>With (limited) <em>native features</em></td>
+        </tr>
+        <tr>
+          <td>Platform-controlled <em>distribution & security</em></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><small>Based on the <a href="https://www.w3.org/TR/mini-app-white-paper/#what-is-miniapp">White
+                Paper definition</a></small></td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <section class="comment">
+    <p>Notes.</p>
+  </section>
+
+  <section class="slide part">
+    <h1>The MiniApp Ecosystem Keeps Growing...</h1>
+  </section>
+
+
+  <section class="comment">
+    <p>Example of native super-apps with mini-app-like apps: WeChat (CN), Douyin (CN) Alipay (CN),  Baidu (CN),  360 (CN),  JD (CN),  QQ (CN),  Little Red Book (CN),  Taobao (CN),  Toutiao (CN),  Rappi (CO),  Meituan (CN),  DiDi (CN),  Grab (SG),  Grojek (ID),  Paytm (IN),  PhonePe (IN),  Tata Neu (IN),  KakaoTalk (KR),  Line (JP),  Zalo (VN),  Careem (AE),  Ayoba (ZA),  Revolut (GB),  Uber (US),  PayPal (US),  Instant Game (US),  Cash App (US),  Max (RU),  Telegram (AE)
+    </p>
+  </section>
+
+  <section class="slide clear">
+    <h2 style="text-align: end; padding-left: 60%;">Native Super-Apps</h2>
+    <img src="img/miniapps-01.png"
+      alt="Ecosystem of miniapps depending on super-apps (WeChat, Alipay, Baidu...), most of them from Asia, growing interest and some in the US are experimenting"
+      class="fit" height="400">
+  </section>
+
+  <section class="comment">
+    <p>PWA is the standard platform to deliver light apps to any platform, OS.</p>
+  </section>
+
+  <section class="slide clear">
+    <h2 style="text-align: end; padding-left:40%;">Browser ≅ Standard super-app?</h2>
+    <img src="img/miniapps-02.png"
+      alt="Ecosystem of miniapps depending on super-apps, now linked with the PWA (browser as a native super-app, based on standards)"
+      class="fit" height="400">
+  </section>
+
+  <section class="comment">
+    <p>PWA to Native: KaiOS apps, ChromeOS, WebAPK & TWA for Android, MSIX for Windows, Tizen...</p>
+  </section>
+
+  <section class="slide clear">
+    <h2 style="text-align: end; padding-left:40%;">PWA like Native</h2>
+    <img src="img/miniapps-03.png"
+      alt="Same ecosystem of miniapps, and PWA, and now PWA that can be wrapped as native apps"
+      class="fit" height="400">
+  </section>
+
+  <section class="comment">
+    <p>OS Light App Frameworks: QuickApp, HarmonyOS' Atomic Services, Apple's App Clips, and OS Widgets.</p>
+  </section>
+
+  <section class="slide clear">
+    <h2 style="text-align: end; padding-left:40%;">OS Light Apps</h2>
+    <img src="img/miniapps-04.png"
+      alt="Same ecosystem of miniapps, PWA, PWA to native, and new light apps for OS"
+      class="fit" height="400">
+  </section>
+
+  <section class="comment">
+    <p>Notes.</p>
+  </section>
+
+  <section class="slide">
+    <h2>What do they have in common?</h2>
+    <p class="shout">Should we refer to <em>Embedded Web Apps</em> instead?</p>
+  </section>
+
+
+  <section class="comment">
+    <p>Notes.</p>
+  </section>
+
+  <section class="slide">
+    <h2>Where is the Web here?</h2>
+    <table class="striped">
+      <thead>
+        <tr>
+          <th>Features</th>
+          <th>MiniApp</th>
+          <th>Web</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th><em>Lightweight</em></th>
+          <td title="yes">☑️</td>
+          <td title="yes">✅</td>
+        </tr>
+        <tr>
+          <th>Subset of <em><abbr>JS</abbr>, CSS, <i>HTML-ish</i></em></th>
+          <td title="yes">☑️</td>
+          <td title="yes">✅</td>
+        </tr>
+        <tr>
+          <th>No (perceived) <em>installation</em></th>
+          <td title="yes">☑️</td>
+          <td title="yes">✅</td>
+        </tr>
+        <tr>
+          <th>Rendered by <em>embedded engines</em></th>
+          <td title="yes">☑️</td>
+          <td title="yes">✅</td>
+        </tr>
+        <tr>
+          <th>With (limited) <em>native features</em></th>
+          <td title="yes">☑️</td>
+          <td title="no">❌</td>
+        </tr>
+        <tr>
+          <th>Platform-controlled <em>distribution & security</em></th>
+          <td title="yes">☑️</td>
+          <td title="Can be achieved">⚙️</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+  <section class="comment">
+    <p>Notes.</p>
+  </section>
+
+  <section class="slide">
+    <h2>Similar needs (ex: AI artifacts)</h2>
+    <table class="striped">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>MiniApp</th>
+          <th title="AI Generated User Interfaces">AI-G UI</th>
+          <th>Web</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th><em>Lightweight</em></th>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="yes">✅</td>
+        </tr>
+        <tr>
+          <th>Subset of <em><abbr>JS</abbr>, CSS, <i>HTML-ish</i></em></th>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="yes">✅</td>
+        </tr>
+        <tr>
+          <th>No (perceived) <em>installation</em></th>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="yes">✅</td>
+        </tr>
+        <tr>
+          <th>Rendered by <em>embedded engines</em></th>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="yes">✅</td>
+        </tr>
+        <tr>
+          <th>With (limited) <em>native features</em></th>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="no">❌</td>
+        </tr>
+        <tr>
+          <th>Platform-controlled <em>distribution & security</em></th>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="Can be achieved">⚙️</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+
+  <section class="comment">
+    <p>Notes.</p>
+  </section>
+
+  <section class="slide">
+    <h2>Other use cases in W3C?</h2>
+    <table class="striped">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>MiniApp</th>
+          <th title="AI Generated User Interfaces">AI-G UI</th>
+          <th title="Web of Things">WoT...</th>
+          <th>Web</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th><em>Lightweight</em></th>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="yes">✅</td>
+        </tr>
+        <tr>
+          <th>Subset of <em><abbr>JS</abbr>, CSS, <i>HTML-ish</i></em></th>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="yes">✅</td>
+        </tr>
+        <tr>
+          <th>No (perceived) <em>installation</em></th>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="yes">✅</td>
+        </tr>
+        <tr>
+          <th>Rendered by <em>embedded engines</em></th>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="yes">✅</td>
+        </tr>
+        <tr>
+          <th>With (limited) <em>native features</em></th>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="no">❌</td>
+        </tr>
+        <tr>
+          <th>Platform-controlled <em>distribution & security</em></th>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="yes">☑️</td>
+          <td title="Can be achieved">⚙️</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="comment">
+    <p>Notes.</p>
+  </section>
+
+  <section class="slide two-panes">
+    <div>
+      <h2>Key challenges</h2>
+      <p>Should we <em>leverage Web standards</em> or just create <em>new tooling</em>?</p>
+    </div>
+    <ul class="emerge">
+      <li>Distribution</li>
+      <li>Security model</li>
+      <li>Limited and enriched embedded browsers</li>
+    </ul>
+  </section>
+
+  <section class="comment">
+    <p>Notes.</p>
+  </section>
+
+  <!-- section class="slide lightmode clear" id="timeline">
+    <h2>MiniApp Activities in W3C</h2>
+    <img src="./img/timeline2026.jpg" class="fit" alt="Timeline of MiniApps Activities" />
+  </section>
+
+
+  <section class="comment">
+    <p>Notes.</p>
+  </section-->
+
+  <section class="comment">
+    <p>Notes.</p>
+  </section>
+
+  <section class="slide part">
+    <h1>Can our MiniApps activities help?</h1>
+  </section>
+
+  <section class="slide" id="specs">
+    <h2>Challenges we are solving</h2>
+    <table class="striped">
+      <tbody>
+        <tr>
+          <td>🧬 Lifecycle</td>
+          <td>installation, super-app context,..</td>
+        </tr>
+        <tr>
+          <td>📦 Distribution</td>
+          <td>compression, signatures, origin preservation...</td>
+        </tr>
+        <tr>
+          <td>🪧 Metadata</td>
+          <td>permissions, setup...</td>
+        </tr>
+        <tr>
+          <td>👩‍💻 Reusability</td>
+          <td>components, APIs</td>
+        </tr>
+        <tr>
+          <td>🔗 Addressing</td>
+          <td>versions, deeplinking...</td>
+        </tr>
+        <tr>
+          <td>🖼️ Widgets</td>
+          <td>across <abbr title="Operating Systems">OSs</abbr></td>
+        </tr>
+        <tr>
+          <td>♿ Accessibility</td>
+          <td>apps more inclusive</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+  <!--section class="comment">
+    <p>Notes.</p>
+  </section>
+
+  <section class="slide" id="specs">
+    <h2>How do we solve it?</h2>
+    <table class="striped">
+      <tbody>
+        <tr>
+          <th colspan="2">Challenge</th>
+          <th>MiniApps WG</th>
+          <th>Still Missing</th>
+        </tr>
+        <tr>
+          <td>🧬</td>
+          <td>Lifecycle</td>
+          <td>✅ +DOM Events</td>
+          <td>🆘 DOM (non-standard)</td>
+        </tr>
+        <tr>
+          <td>📦</td>
+          <td>Distribution</td>
+          <td>✅ ZIP + signatures</td>
+          <td>🆘 Origin model</td>
+        </tr>
+        <tr>
+          <td>🪧</td>
+          <td>Metadata</td>
+          <td>✅ Web App Manifest</td>
+          <td>+ Attributes</td>
+        </tr>
+        <tr>
+          <td>👩‍💻</td>
+          <td>Reusability</td>
+          <td>❌ <abbr title="Domain Specific Language">DSL</abbr>s, different APIs</td>
+          <td>🆘 HTML/API subset</td>
+        </tr>
+        <tr>
+          <td>🔗</td>
+          <td>Addressing</td>
+          <td>✅ URL schema</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>♿</td>
+          <td>Accessibility</td>
+          <td>❌ <code><small>role</small></code> attributes</td>
+          <td>🆘 Semantics</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="slide" id="specs">
+    <h2>Looking at similar challenges</h2>
+    <table class="striped">
+      <tbody>
+        <tr>
+          <th colspan="2">Challenge</th>
+          <th>MiniApps WG</th>
+          <th>Still Missing</th>
+          <th>PWA+<abbr title='Isolated Web Apps'>IWA</abbr></th>
+        </tr>
+        <tr>
+          <td>🧬</td>
+          <td>Lifecycle</td>
+          <td>✅ DOM Events</td>
+          <td>🆘 DOM (non-standard)</td>
+          <td>✅ Standard</td>
+        </tr>
+        <tr>
+          <td>📦</td>
+          <td>Distribution</td>
+          <td>✅ ZIP + <abbr title="signatures">sig.</abbr></td>
+          <td>🆘 Origin model</td>
+          <td>✅ <abbr title='Content Security Policy'>CSP</abbr></td>
+        </tr>
+        <tr>
+          <td>🪧</td>
+          <td>Metadata</td>
+          <td>✅ Manifest</td>
+          <td>+ Attributes</td>
+          <td>✅ Standard</td>
+        </tr>
+        <tr>
+          <td>👩‍💻</td>
+          <td>Reusability</td>
+          <td>❌ non-standard</td>
+          <td>🆘 HTML/APIs</td>
+          <td>✅ Standard</td>
+        </tr>
+        <tr>
+          <td>🔗</td>
+          <td>Addressing</td>
+          <td>✅ URL schema</td>
+          <td></td>
+          <td>✅ URL schema</td>
+        </tr>
+        <tr>
+          <td>♿</td>
+          <td>Accessibility</td>
+          <td>❌ <code><small>role</small></code></td>
+          <td>🆘 HTML semantics</td>
+          <td>✅ Standards</td>
+        </tr>
+      </tbody>
+    </table>
+  </section-->
+
+  <!--section class="comment">
+    <p>Notes.</p>
+  </section>
+
+  <section class="slide side r">
+    <h2>Ongoing talks with...</h2>
+    <iframe class="side pureweb smartphone" src="../../2025/1114_MiniApps_TPAC/miniapps/pureweb/superapp.html"
+      style="height: 750px; width: 400px;">
+      Super-app simulation
+    </iframe>
+    <ol>
+      <li><em>WebViews CG</em>: use cases for hybrid apps</li>
+      <li><em>WinterTC</em>: min. common APIs for JS Runtimes</li>
+      <li><em>PWA</em> incubations (e.g., Web Install API, <abbr title="Isolated Web Apps">IWA</abbr>)...</li>
+      <li>Lighter engines?</li>
+    </ol>
+  </section-->
+
+  <section class="comment">
+    <p>Notes.</p>
+  </section>
+
+  <section class="slide two-panes" id="s21">
+    <div>
+     <h2>Evolve MiniApps WG?</h2>
+    </div>
+    <ol>
+      <li><em>Embedded Web</em> Apps WG</li>
+      <li>New <em>Security Model</em></li>
+      <li>Adopt <em>IWA's models</em> (Web-Bundles, signed HTTP headers...)?</li>
+      <li><em>WinterTC</em> alignment (min. common APIs)</li>
+      <li>Consider <em>MiniAppMCP</em> and <em>GenUI</em>...</li>
+    </ol>
+   </section>
+
+   <section class="comment">
+    <p>Notes.</p>
+  </section>
+
+  <section class="slide final">
+    <h2>Thanks!</h2>
+    <p style="margin-top: 9em">This presentation:<br><a
+        href="http://espinr.github.io/talks/2026/0420_MiniApps_AC2026">http://espinr.github.io/talks/2026/0420_MiniApps_AC2026</a>
+    </p>
+  </section>
+
+</body>
+
+</html>
+<!-- Local Variables: -->
+<!-- sgml-basic-offset: 1 -->
+<!-- End: -->
